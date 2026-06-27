@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Three-Layer Decomposition of the Riemann Zeros}
+\fancyhead[R]{\small TR-2026-FF06f}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{observation}{Observation}
+
+\title{\textbf{Density, Positions, Spacings:\\
+A Three-Layer Decomposition of the Riemann Zeros,\\
+and the Operator-Side Confirmation of Form vs.\ Function}}
+\author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
+\date{\small Companion to TR-2026-FF06b' and TR-2026-FF06e \ ---\ SIP License v1.1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We decompose the first $10^5$ Riemann zeros into three structurally independent layers and identify the governor of each: the \emph{average density} is the smooth Riemann--von Mangoldt term (analysis, no arithmetic); the \emph{positions} (the fluctuation of the counting function about its mean) are owned by the primes via the explicit formula; and the \emph{local spacings} are pure GUE (the universality class, arithmetic-blind). The separation is sharp and scale-stable. On the full $10^5$ zeros with prime-powers to $3000$, the prime sum reconstructs the counting fluctuation at correlation $0.84$ and explained variance $0.71$, beating an amplitude-matched random-frequency control by $\mathbf{122\sigma}$; extending the prime-power sum drives explained variance monotonically from $0.64$ to $0.82$ with a white residual (lag-1 autocorrelation $0.057$), indicating the primes own the positions entirely in the limit, the residual being truncation and Gibbs ringing at the staircase steps. Independently, no arithmetic perturbation of a self-adjoint (GUE) operator moves its \emph{spacing} statistics toward the zeros at any strength: weak arithmetic is cosmetic, strong arithmetic breaks GUE toward Poisson, and there is no selection regime. The two findings are the same statement from opposite directions: the arithmetic is exclusively positional and invisible to the spacing law. This reproduces, from the operator/explicit-formula side and at the same $10^5$ scale, the \emph{form vs.\ function} categorisation obtained empirically in TR-2026-FF06e (spacing/counting/shape are form; the arithmetic witness is function), and it sharpens the Hilbert--P\'olya target accordingly.
+\end{abstract}
+
+\section{The decomposition}
+
+Write the exact zero-counting function as $N(T) = \langle N(T)\rangle + S(T)$, where the smooth mean is the Riemann--von Mangoldt term
+\[
+\langle N(T)\rangle = \frac{T}{2\pi}\log\frac{T}{2\pi} - \frac{T}{2\pi} + \frac{7}{8},
+\]
+and $S(T)$ is the fluctuation. The local level-spacing law is a separate object, obtained after unfolding by $\langle N\rangle$. These three --- mean density, fluctuation $S(T)$, and spacing law --- are structurally independent, and we find each has a different governor.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+layer & quantity & governor \\
+\midrule
+density & $\langle N(T)\rangle$ & smooth analysis (no arithmetic) \\
+\textbf{positions} & $S(T)$ fluctuation & \textbf{the primes} (explicit formula) \\
+\textbf{spacings} & unfolded gap law & \textbf{pure GUE} (universality class) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The two load-bearing claims are that the positions are prime-governed and the spacings are not. We establish both, and then note they are the same statement.
+
+\section{Positions are owned by the primes (T1)}
+
+The Riemann--von Mangoldt explicit formula gives the oscillatory part of the count as a sum over prime powers,
+\[
+S(T)\;\sim\;-\frac{1}{\pi}\sum_{p}\sum_{k\ge1}\frac{1}{k}\,p^{-k/2}\sin\!\big(kT\log p\big)+\cdots
+\]
+We evaluate the true fluctuation $S_{\mathrm{true}}(T)=N(T)-\langle N(T)\rangle$ on a dense grid and compare it to this prime sum.
+
+\textbf{Scaling on real data.} The reconstruction is flat in quality across a $50\times$ range in the number of zeros, while the significance against control grows with scale:
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+zeros $M$ & primes $<P$ & corr & expl.\ var & vs.\ random \\
+\midrule
+$2{,}000$ & $300$ & $0.840$ & $0.705$ & $+54\sigma$ \\
+$10{,}000$ & $1000$ & $0.848$ & $0.719$ & $+106\sigma$ \\
+$50{,}000$ & $2000$ & $0.838$ & $0.702$ & $+95\sigma$ \\
+$100{,}000$ & $3000$ & $0.840$ & $0.706$ & $\mathbf{+122\sigma}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{The control is decisive.} Replacing the log-prime frequencies $\log p$ with amplitude-matched random incommensurable frequencies gives correlation $0.004\pm0.019$ --- nothing. It is not that any oscillatory sum fits $S(T)$; it is specifically the prime frequencies, at $122\sigma$ over the matched null at full scale. The arithmetic does real, large selection work on the positions.
+
+\textbf{Completeness (T1$'$).} Extending the prime-power sum (more primes, higher $k$) drives the explained variance monotonically upward with no plateau:
+\[
+0.643 \to 0.697 \to 0.740 \to 0.776 \to 0.801 \to 0.822
+\]
+(primes to $3\times10^2,10^3,3\times10^3,10^4,3\times10^4,10^5$). The residual has lag-1 autocorrelation $0.057$ --- white. An unstructured, monotonically shrinking residual is the signature of a truncated convergent sum (with Gibbs ringing at the step discontinuities of the staircase), not a structural ceiling. We therefore read the limit as full reconstruction: \emph{the primes own the positions entirely}, with no non-prime residual to chase.
+
+\section{Spacings are pure GUE, arithmetic-blind (T2)}
+
+We test whether arithmetic, imposed on a self-adjoint operator, can move its \emph{spacing} statistics toward the zeros. Take a GUE core $H_0=(A+A^\dagger)/2$ and add a prime-log diagonal at strength $\varepsilon$, comparing the spacing-histogram distance to the true zeros against the noise band of pure-GUE draws.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$\varepsilon$ & distance to zeros & verdict \\
+\midrule
+$0$ (pure GUE) & $0.0455$ & baseline (in band) \\
+$0.05$--$0.2$ & $0.044$--$0.047$ & same as GUE (cosmetic) \\
+$0.4$ & $0.073$ ($+2.1\sigma$) & breaks toward Poisson \\
+$0.8$ & $0.312$ ($+18.7\sigma$) & breaks \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+There is \textbf{no selection regime}. Weak arithmetic leaves the spacing law indistinguishable from generic GUE; strong arithmetic destroys GUE toward clumping. The zeros' spacing statistics are reproduced by \emph{any} self-adjoint operator (GUE is generic) and carry no detectable arithmetic content. Two further controls corroborate the picture: (i) symmetrising a duality does not build the spacing law --- four natural finite encodings of the zeros--primes coupling all miss the GUE band, and balanced involutions imposed on a GUE core push it toward Poisson, so an externally imposed self-duality \emph{breaks} repulsion unless the involution already commutes with $H$; (ii) self-adjointness alone already yields the GUE band. The arithmetic is not in the spacings.
+
+\section{The two findings are one statement}
+
+Positions are prime-governed; spacings are arithmetic-blind GUE. Equivalently: \emph{the arithmetic content of the zeros lives entirely in where the levels sit, not in how they are spaced.} This is exactly the \textbf{form/function} split of TR-2026-FF06e, now derived from the operator/explicit-formula side at the same $10^5$ scale:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+& empirical (TR-2026-FF06e) & operator side (this note) \\
+\midrule
+\textbf{form} & spacing, counting, shape: $0.4$--$1.0\sigma$ & spacing law: pure GUE, arithmetic-blind \\
+\textbf{function} & arithmetic witness: $\sim\!11{,}500\sigma$ & positions: prime-governed, $122\sigma$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Two independent routes --- the marginal-matched surrogate battery and the explicit-formula position reconstruction --- land on identical structure: the spacing distribution is the universality class (form, shared by every GUE sequence), and the primes are the object-specific content (function), located in the positions. The agreement across methods at full scale is the principal evidence that the form/function cut is structural rather than an artifact of either method.
+
+\section{Consequence for the Hilbert--P\'olya operator}
+
+The decomposition characterises $H$ tightly, turning a string of negative results into a positive specification:
+
+\begin{observation}
+If a self-adjoint $H$ has the Riemann zeros as spectrum, then:
+\begin{enumerate}\setlength\itemsep{2pt}
+\item[(i)] \emph{Spacings come for free.} Self-adjointness alone yields GUE level statistics; the spacing law imposes no arithmetic constraint on $H$.
+\item[(ii)] \emph{Arithmetic enters through positions.} The eigenvalue positions (the counting fluctuation) are governed by the prime sum, completely (white residual). Any construction of $H$ must reproduce the prime-driven $S(T)$, not a spacing statistic.
+\item[(iii)] \emph{Self-duality is generated, not imposed.} An externally imposed balanced involution destroys GUE repulsion; only an involution that already commutes with $H$ preserves it. The self-dual structure is downstream of $H$, so $H$ cannot be obtained by symmetrising a duality brought to it.
+\end{enumerate}
+\end{observation}
+
+This selects the Berry--Keating--type position/counting route --- an operator whose eigenvalue locations carry the prime staircase while GUE owns the local spacings --- as the one consistent with every test, and rules out the symmetrisation and diagonal-perturbation routes. It does not construct $H$; it specifies which layer the arithmetic must inhabit (positions) and which constructions are dead ends.
+
+\section{Scope}
+
+The position reconstruction verifies the \emph{known} Riemann--von Mangoldt explicit formula at high significance and full scale; that part is verification, not a new theorem. What is established here as a result is the \emph{three-layer separation} and its consequence: that the arithmetic is exclusively positional and complete (white residual, no non-prime structure), that the spacing law admits no arithmetic selection at any perturbation strength, and that these two facts reproduce the independently-obtained form/function categorisation. The explained-variance limit of $1$ is inferred from the monotone climb and the white residual, not from summation to infinity; the reported figure at primes${}<10^5$ is $0.82$. All computations use the real first $10^5$ Riemann zeros and the canonical seed $20260423$.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small Accompanies TR-2026-FF06b' (\emph{Spectral Witness Survival}) and TR-2026-FF06e (\emph{Form, Function, and the Shuffle Knife}). SIP License v1.1.
+
+\end{document}

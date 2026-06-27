@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{physics}
+
+\title{\textbf{The ACS Deterministic AI Stack:}\\
+A Dynamical Epistemic Algebra over Finite Rewrite Orbits}
+\author{Formal Specification}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formalize the discrete operator geometry stack of the ACS Deterministic AI architecture. Rather than asserting a continuum geometric ontology or a strict categorical renormalization group, we rigorously define the system as a multi-parameter, non-commuting dynamical system on matrix-valued states, analyzed through iterated projection-valued observables. We explicitly construct the scheme-indexed action semigroup, the nonlinear observation functor, and the cross-scheme coherence obstruction tensor. In this framework, traditionally geometric quantities---such as curvature, renormalization flow, fixed points, and holonomy---are fully de-sublimated into rigorously computable secondary statistics on an orbit sheaf of measurement trajectories.
+\end{abstract}
+
+\section{The Mathematical Object}
+
+The system is fundamentally a controlled computational laboratory for studying non-commuting dynamical systems under nonlinear observation. It avoids the imposition of false invariants or unverified algebraic closure. It is formally specified by the tuple:
+\begin{equation}
+    \left( \mathcal{A}, \mathcal{S}, \{\mathcal{R}_\alpha\}_{\alpha \in \mathcal{S}}, \Phi \right)
+\end{equation}
+
+\subsection{State Space ($\mathcal{A}$)}
+The object space consists of finite, discrete operator-valued fields. Specifically, states $A \in \mathcal{A}$ are configurations of $O(4)$-valued matrices evaluated on a finite sampled grid of size $n_r \times n_n$:
+\begin{equation}
+    A : \Gamma \to O(4) \subset \mathbb{R}^{4 \times 4}
+\end{equation}
+No underlying continuum manifold or coordinate invariance is assumed.
+
+\subsection{The Rewrite Semigroup ($\{\mathcal{R}_\alpha\}$)}
+The dynamics are driven by a family of nonlinear update maps, indexed by a set of discretization schemes $\mathcal{S}$ (e.g., bilinear interpolation, Procrustes midpoint alignment). For each $\alpha \in \mathcal{S}$, there is an endomorphism:
+\begin{equation}
+    \mathcal{R}_\alpha : \mathcal{A} \to \mathcal{A}
+\end{equation}
+Crucially, these maps are \textit{not} required to compose coherently across schemes. The operations do not form a strict category or groupoid, as composition lacks guaranteed naturality ($\mathcal{R}_\alpha \circ \mathcal{R}_\beta \neq \mathcal{R}_{\alpha\beta}$). Instead, they generate a non-commutative semigroup action representing scheme-dependent rewrite operations.
+
+\subsection{The Observation Functor ($\Phi$)}
+Information about the state is extracted via a deliberately lossy, nonlinear projection map into a finite-dimensional measurement space:
+\begin{equation}
+    \Phi : \mathcal{A} \to \mathbb{R}^m
+\end{equation}
+In practice, $\Phi(A)$ extracts structural statistics such as the mean plaquette holonomy curvature across the discrete grid.
+
+\section{The Orbit Sheaf and Derived Statistics}
+
+Because the system lacks global functoriality, invariants do not exist as intrinsic geometric objects. Instead, the primitive output of the system is the ensemble of all possible measurement histories under the finite atlas of rewrite rules:
+\begin{equation}
+    \mathrm{Spec}_{\mathcal{S}}(A) = \left\{ \Phi\left(\mathcal{R}_{\alpha_k} \circ \cdots \circ \mathcal{R}_{\alpha_1}(A)\right) \;\middle|\; \alpha_i \in \mathcal{S},\; k \in \mathbb{N} \right\}
+\end{equation}
+All traditional ``physics-like'' quantities are rigorously recast as secondary statistical functionals on this orbit ensemble.
+
+\subsection{De-sublimation of Geometry}
+\begin{itemize}
+    \item \textbf{Curvature:} Not an intrinsic geometric property, but the measurable commutator defect of local update operators observed after projection.
+    \item \textbf{Renormalization (RG) Flow:} Not a physical energy scale trajectory, but the iterated composition statistics of non-linear maps ($\Phi(\mathcal{R}_\alpha^k(A))$) causing a drift in the induced measure on the $\Phi$-space.
+    \item \textbf{Fixed Points and Stability:} Not topological invariants of a state space, but standard attractors of the discrete dynamical system acting on the observable spectrum.
+    \item \textbf{Holonomy:} Not a loop in a continuous connection space, but loop compositions in the action semigroup evaluated at discrete vertices.
+\end{itemize}
+
+\section{The Coherence Obstruction Tensor}
+
+The final structural layer of the theory quantifies the exact conjugacy failure of the discretization schemes. Because the rewrite algebra is non-associative, we define the \textbf{coherence obstruction tensor} between any two schemes $\alpha$ and $\beta$ as the explicit commutator of their transformations:
+\begin{equation}
+    [\mathcal{R}_\alpha, \mathcal{R}_\beta](A) = \mathcal{R}_\alpha(\mathcal{R}_\beta(A)) - \mathcal{R}_\beta(\mathcal{R}_\alpha(A))
+\end{equation}
+
+When pushed forward through the observable functor, this yields the scheme dispersion metric:
+\begin{equation}
+    \Delta_{\text{scheme}}(A) = \mathrm{Var}_{\alpha \in \mathcal{S}} \left[ \Phi(\mathcal{R}_\alpha^k(A)) \right]
+\end{equation}
+This metric does not measure geometric curvature; it rigorously measures the \textit{non-commutativity of measurement orderings}. It explicitly encodes how information about a non-commutative dynamical system is distorted or destroyed under projection.
+
+\section{Conclusion}
+
+The ACS Deterministic AI Stack does not model an ontological continuum. It provides a formal, disciplined computational laboratory for measuring how nonlinear update rules collapse under partial observation. The mathematical frontier of this system lies not in adding geometric layers, but in characterizing the boundaries of observation: identifying the minimal generating set of schemes $\mathcal{S}_{\text{min}}$, probing the conditions for coherence restoration, and determining the sufficiency of $\Phi$ for classifying equivalence classes of rewrite histories.
+
+\end{document}

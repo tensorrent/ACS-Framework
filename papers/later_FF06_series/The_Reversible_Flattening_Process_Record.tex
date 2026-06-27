@@ -1,0 +1,607 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.05in]{geometry}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!60!black,citecolor=blue!55!black}
+
+\newcommand{\seed}{\texttt{20260423}}
+\newcommand{\tier}[1]{\textsf{\textbf{#1}}}
+\newcommand{\shape}[1]{\rho(#1)}
+\newcommand{\TT}{\textsf{T1}}
+\newcommand{\Tw}{\textsf{T2}}
+\newcommand{\Th}{\textsf{T3}}
+\newcommand{\Tf}{\textsf{T4}}
+
+\theoremstyle{definition}
+\newtheorem{principle}{Principle}
+\theoremstyle{plain}
+\newtheorem{claim}{Claim}
+
+\title{\textbf{The Reversible Flattening: A Process Record}\\[0.45em]
+\large Every Path, Pass, Fail, and False Wall}
+\author{Bradley Wallace\\
+\small \textit{Independent Researcher / TensorRent}\\
+\small with Claude (Anthropic) as instrument and aggregator\\
+\small \texttt{TR-2026-FF06K}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent This is not a results paper. It is the laboratory record of how a single
+intuition --- that there is structure hidden in what we routinely flatten --- was driven
+from an unfalsifiable beginning to a small, defensible, falsifiable principle, and what was
+destroyed along the way. It documents the verified core, but it gives equal and deliberate
+weight to the wrong turns: six \emph{false walls} (places where a result was claimed that the
+computation did not support), roughly fifteen recorded falsifications, four rounds of
+adversarial review that contracted the central claim three separate times, and one engineering
+integration that survived the same gauntlet that had killed four before it. The thesis that
+survives is stated once, late, and narrowly. A second arc applies the identical method to the
+non-trivial zeros of $\zeta(s)$ (Section~\ref{sec:riemann}), where it rediscovered a prior
+observable, recorded two wrong framings of its own central question as first-class negatives, and
+left an operator unconstructed and RH untouched. The method that produced both --- conjecture,
+pre-registered test with a stated kill condition, compression into theorem or first-class negative
+--- is the actual subject of this paper. Every numerical claim is reproducible under fixed random seed \seed.
+Tiers are labelled throughout: \TT{} machine-verified, \Tw{} proven/forced, \Th{}
+numerically verified, \Tf{} falsified.
+\end{abstract}
+
+\tableofcontents
+
+\section{Why This Paper Exists}
+
+The ordinary scientific paper reports a destination and hides the road. That convention is
+efficient and, for this body of work, actively misleading, because the most instructive events
+were not the results that survived but the claims that did not. A reader who sees only the final
+principle would conclude it arrived clean. It did not. It arrived three sizes too large, was cut
+down twice by external review and once by a counterexample, and reached its defensible form only
+after a dozen attractive ideas had been killed against ground truth.
+
+This record exists because two specific failure modes shaped the entire program, and both are
+invisible in a results-only account:
+
+\begin{description}[leftmargin=1.4em]
+\item[Sycophancy.] A result feels validated because a collaborator --- human or machine ---
+agreed with it, rather than because it was tested. The program began, fifteen months earlier, in
+exactly this failure (Section~\ref{sec:origins}). Naming it was the precondition for everything
+that followed.
+\item[False-fit.] A structural resemblance between a mathematical object and a target system is
+mistaken for an operational identity. ``We have a Cantor pairing in the build, so the criterion
+applies'' has the same shape as ``the charge composes, so it must be multiplicative.'' Four such
+fits were proposed against the live engineering stack; four were false; the fifth was the first
+to survive (Section~\ref{sec:engineering}).
+\end{description}
+
+The defense against both is the same and is the only methodological commitment of this work:
+\emph{language must match evidence}. A claim is allowed to be exactly as strong as the test that
+backs it, and not one word stronger. The recurring failure throughout --- caught every single
+time by review or by a counterexample --- was interpretation outrunning computation. The
+recurring success was the willingness to contract the claim until it fit.
+
+\section{Method}\label{sec:method}
+
+\subsection{Adversarial compression}
+Every line of work followed one loop: form a conjecture; pre-register an explicit test with a
+ground-truth oracle \emph{and a kill condition} before running it; then compress the outcome into
+either a theorem-grade artifact or a first-class negative result. Negatives are not failures to be
+buried; they are outputs, recorded with their mechanism. This is Lakatos's \emph{Proofs and
+Refutations} run with deliberate discipline: the conjecture is expected to be wrong in some
+respect, and the value is in locating exactly where.
+
+\subsection{The four-tier hierarchy}
+No claim is reported without a tier, and a lower tier may never be promoted by enthusiasm:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\TT & machine-verified (executed, reproducible under seed \seed) \\
+\Tw & proven or forced by a stated argument \\
+\Th & numerically verified at finite scale (cannot stand in for \Tw) \\
+\Tf & falsified (retained in the record with its mechanism) \\
+\bottomrule
+\end{tabular}
+\end{center}
+A persistent temptation throughout was to let a \Th{} numerical result read as a \Tw{} proof. The
+review rounds (Section~\ref{sec:gauntlet}) caught this more than once.
+
+\subsection{Pre-registration and the no-tuning rule}
+Thresholds, kill conditions, and the meaning of operational terms (what ``combine'' means, what
+counts as ``overlap'') were fixed \emph{before} seeing results. Tuning a filter or an encoding to
+the known answer is forbidden; where it was tempting --- e.g.\ choosing a shape encoding that would
+make a homomorphism hold --- the rule was stated explicitly in the test harness itself.
+
+\subsection{The asymmetric instrument}
+The work used several language models in distinct, non-interchangeable roles: an idea-generator
+(expansive, fluent, untrusted by default), a coder/aggregator/honest-instrument (the author of
+this record), and independent critics in language and substance. The asymmetry is the point: the
+generator's fluency is treated as a hypothesis, never as evidence, and the critics are pointed at
+the generator's output precisely because a fluent proposal is the most dangerous kind.
+
+\section{The Thesis and Its Three Contractions}\label{sec:thesis}
+
+The final principle is small. Its history is a sequence of contractions, each forced.
+
+\begin{principle}[Reversible flattening, final form]
+The algebraic flattening of a relational object to a scalar is losslessly reversible
+\emph{when} the operation is an \emph{injective homomorphism into a pre-specified,
+independently-meaningful structure}. The homomorphism carries density (how parts combine); the
+injectivity carries identity (which object); reversibility requires both. The boundary --- the
+``seam'' --- is convolution: crossable for density, uncrossable for identity.
+\end{principle}
+
+This is a falsifiable empirical principle, stated in the forward direction only. It was not
+born this way. It passed through the following forms:
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Biconditional (``iff'').} The first form claimed reversibility \emph{if and only if}
+a homomorphism existed. The converse was never supported and was eventually \emph{falsified}
+outright (Cantor pairing, Section~\ref{sec:gauntlet}). Contracted to one-way implication.
+\item \textbf{Forward, but ``into some structure.''} The next form claimed an injective
+homomorphism into \emph{some} structure suffices. This is vacuous: any bijection induces a
+transported operation into which it is trivially a homomorphism. Contracted by adding the
+requirement that the target be \emph{pre-specified} and independently meaningful.
+\item \textbf{Forward, injective, pre-specified target.} Even this needed the explicit
+\emph{injective} qualifier, which was forced empirically by the 30-domain test
+(Section~\ref{sec:gauntlet}): two domains were homomorphic but non-injective and broke the
+original criterion.
+\end{enumerate}
+
+Three times the work wanted the larger claim. Three times the larger claim was wrong. The
+contraction is not a weakening to apologize for; it \emph{is} the result.
+
+\section{The Verified Core}\label{sec:core}
+
+These are the claims that were never successfully attacked. They are stated at their true tier.
+
+\subsection{The exact ledger (\TT)}
+Across seven applied-mathematics domains, the relational (prime-signature) representation
+reproduces standard arithmetic exactly: arithmetic functions ($d,\sigma,\sigma_2,\varphi,\mu$),
+gcd/lcm, binomial and factorial via Legendre's formula, modular products, lattice index / Smith
+normal form, multinomial multiplicity (a $\sim$4978-digit value), and radical / perfect-power
+detection. \textbf{14 of 14} cases exact against an independent \texttt{sympy} oracle,
+reproducible under seed \seed{} (\texttt{verify\_ledger.py}). This is the bedrock: the
+representation is faithful where the criterion says it should be.
+
+\subsection{The non-transitive boundary: Condorcet (\TT)}
+Where the criterion says identity \emph{cannot} survive a scalar, it is confirmed. Pairwise
+majority preference admits cycles (Condorcet); no scalar score can faithfully represent a cyclic
+dominance relation. Measured cycle frequency rose with candidate count --- roughly
+$7\%,43\%,78\%,99\%$ for $3,5,7,10$ candidates, and $48\%$ at 1001 voters --- and the faithful
+representation is the directed dominance graph, not any number. The flattening to a scalar is
+exactly the lossy step the principle predicts.
+
+\subsection{The convolution seam (components \TT; identification \Th)}
+The Euler product $\sum_n p(n)x^n = \prod_k (1-x^k)^{-1}$ was verified coefficient-wise to give
+the partition numbers $p(n)$ for $n\le 30$: convolution adds indices and multiplies values. The
+\emph{components} are machine-verified. The \emph{identification} ``the seam \emph{is}
+convolution'' is a synthetic observation at \Th, not a proven equivalence --- and it is labelled
+that way deliberately, because this is precisely the kind of resonant phrase that wants to be
+promoted above its evidence.
+
+\subsection{Structure search at $10^{80}$ (\TT, with a corrected attribution)}
+A branch-and-bound search over exponent vectors (knapsack-on-exponents with an admissible bound)
+found the maximal divisor count below very large bounds: $d=103680$ at $10^{18}$ (7\,ms),
+$1.81\times10^{10}$ at $10^{50}$ (1.4\,s), $3.01\times10^{14}$ at $10^{80}$ (33\,s), anchored
+against brute force at small bounds ($d=12,32,240,320$ at $N\le 60,840,720720,2162160$). The
+result is real. The \emph{attribution} was initially wrong and is corrected in
+Section~\ref{sec:walls}: the speed comes from the highly-composite/knapsack structure of the
+problem, not from the relational representation, which is a bystander here.
+
+\section{The False Walls}\label{sec:walls}
+
+This is the heart of the record. A ``false wall'' is a place where a result was asserted that the
+computation did not support --- not a falsified \emph{conjecture} (those are in
+Section~\ref{sec:negative}), but a falsified \emph{interpretation} of a true computation. Each is
+given as: the claim, how it was caught, and what it contracted to.
+
+\subsection{Wall 1: the ``Python wall'' at 4978 digits}
+\textbf{Claimed.} A multinomial multiplicity with $\sim$4978 digits ``hit a wall that the
+relational form did not'' --- presented as the scalar representation failing where the shape
+survived.\\
+\textbf{Caught.} The integer itself computes in milliseconds. The only thing that fails is the
+\emph{base-10 string projection}, throttled by a Python configuration limit
+(\texttt{sys.set\_int\_max\_str\_digits}, CVE-2022-45061 mitigation). Crucially,
+\texttt{Shape.volume()} --- the relational form's own projection back to an integer --- hits the
+\emph{identical} wall. The relational form is not immune; it simply never \emph{needs} the
+projection step.\\
+\textbf{Contracted to.} ``The relational form avoids a projection the scalar form forces, but
+enjoys no special immunity to it.'' A statement about \emph{when} a step is needed, not about a
+capability gap.
+
+\subsection{Wall 2: ``62 orders of magnitude past the enumeration wall''}
+\textbf{Claimed.} The $10^{80}$ search demonstrated the relational representation leaping far
+beyond where enumeration dies.\\
+\textbf{Caught.} The leap is a property of the branch-and-bound over divisor-count structure, not
+of the representation. Any encoding of the exponent vector admits the same bound. The shape engine
+is incidental to the speed.\\
+\textbf{Contracted to.} ``Knapsack-on-exponents with an admissible bound searches highly-composite
+structure efficiently; the representation is the bystander.'' (Section~\ref{sec:core}.)
+
+\subsection{Wall 3: ``compression''}
+\textbf{Claimed.} The relational re-representation compresses.\\
+\textbf{Caught.} Measured directly: a primorial compresses by $1.25\times$, a prime by
+$1.01\times$ --- and for squarefree numbers the shape is \emph{expansion}, not compression.\\
+\textbf{Contracted to.} ``Structural re-representation,'' with no compression claim. The word
+``compression'' was removed wherever it appeared, including from a paper's opening line on final
+review.
+
+\subsection{Wall 4: the biconditional, three times}
+\textbf{Claimed.} Reversibility \emph{iff} homomorphism --- in three successive forms
+(Section~\ref{sec:thesis}).\\
+\textbf{Caught.} The converse was never supported; one auditor flagged the unproven ``iff'' as
+language outrunning the proof; a counterexample search then \emph{falsified} the converse directly
+(Cantor pairing, Section~\ref{sec:gauntlet}). The ``into some structure'' repair was caught as
+vacuous.\\
+\textbf{Contracted to.} The final forward-only, injective, pre-specified-target principle. This
+wall recurred because the biconditional is genuinely the more beautiful claim; its repeated return
+is the clearest evidence that beauty is not a tier.
+
+\subsection{Wall 5: ``FHE is the seam''}
+\textbf{Claimed.} Fully homomorphic encryption \emph{is} the convolution seam between additive and
+multiplicative structure.\\
+\textbf{Caught.} Ring-LWE is a single structure native to both operations; its noise exists for
+lattice-problem hardness (SVP), not because addition and multiplication are incompatible. The
+inability to glue two single-operation schemes is ordinary type-incompatibility, which
+cryptographers never mistook for a ``seam.''\\
+\textbf{Contracted to.} An explicitly-labelled illustration, plus a known triviality. Demoted from
+evidence to analogy.
+
+\subsection{Wall 6: the seam as a binary void (the p-adic refinement)}
+\textbf{Claimed (implicitly).} The seam is a binary presence/absence of structure.\\
+\textbf{Caught.} The $p$-adic valuation gives $v_p(a+b)\ge \min(v_p(a),v_p(b))$, a one-sided
+bound that is \emph{tight} roughly half the time (when valuations differ) and slack on ties. The
+seam is therefore a measurable \emph{gradient} of structural loss, not a void.\\
+\textbf{Contracted to.} ``The seam is a one-sided, partially-tight bound --- a gradient,'' which is
+a sharpening rather than a retraction, and the only wall that made the picture richer rather than
+smaller.
+
+\section{The Adversarial Gauntlet}\label{sec:gauntlet}
+
+The claim was submitted to four rounds of attack. The grade trajectory was
+$2/5 \to 4.5/5 \to 5/5$. Each round contracted the claim to something smaller and truer; in no
+round was the verified core (Section~\ref{sec:core}) successfully challenged. What got stripped,
+every time, was interpretation.
+
+\paragraph{Round 1 --- language (3 overclaims).}
+A language-focused critic flagged three: the seam stated as a \TT{} theorem (it is \Th); the
+unproven ``iff''; and ``more tractable'' phrasing that the negative ledger (Section~\ref{sec:negative})
+directly contradicts. All three corrected.
+
+\paragraph{Round 2 --- substance (5 concessions).}
+A substance-focused auditor produced Walls 1, 2, 3, 5, and 6 above (the Python wall, the knapsack
+attribution, the compression fallacy, the FHE strawman, the $p$-adic gradient). All conceded and
+corrected in the same document.
+
+\paragraph{Round 3 --- counterexample (converse falsified).}
+A direct search for a reversible map that is \emph{not} a homomorphism produced the Cantor pairing:
+a bijection $\mathbb{N}^2\to\mathbb{N}$, perfectly reversible, yet $\pi(1,2)=8$, $\pi(2,0)=3$,
+$\pi(3,2)=17$, and $8+3=11\ne 17$ --- it does not carry componentwise addition. The converse of the
+criterion is therefore \emph{false} (\Tf). This forced the pre-specified-target qualifier (the
+vacuity guard).
+
+\paragraph{Round 4 --- final review (5/5).}
+The last reviewer's verdict was that the corrections were published in the same document as the
+claims --- ``the opposite of sycophancy.'' The single residual (``compression'' surviving in an
+opening line) was then removed.
+
+\paragraph{The 30-domain predictive test (the injectivity forcing).}
+Separately, the criterion was run as a \emph{predictor} across 30 domains: does each domain's
+flattening satisfy the criterion, and is it in fact reversible? Under the original (non-injective)
+criterion: \textbf{28/30} correct. The two misses --- persistent homology, and list~$\to$~multiset
+--- were both homomorphic but \emph{non-injective}. Adding the injective qualifier brought it to
+\textbf{30/30}. This is strong evidence the criterion picks out a real class rather than being
+fitted retrospectively, precisely because it first \emph{failed} on two cases and the failure had
+a single common cause.
+
+\section{The Negative Ledger}\label{sec:negative}
+
+Roughly fifteen conjectures were falsified and retained. Each is a result. The mechanism is given
+because a falsification without a mechanism is just a stuck door.
+
+\begin{longtable}{p{0.40\textwidth} p{0.52\textwidth}}
+\toprule
+\textbf{Conjecture (\Tf)} & \textbf{Mechanism of falsification} \\
+\midrule
+\endhead
+Multiply/divisibility faster than bigint & Compiled big-integer arithmetic wins on throughput. \\
+Exact rationals beat \texttt{Fraction} & Custom exact rationals ran $11\times$ slower. \\
+Near-unity ratios need exact shapes & Floating-point log is fine to $10^{-16}$; no shape needed. \\
+Greedy superabundant search & Greedy is suboptimal; misses true maxima. \\
+Non-admissible search bound & Pruned actual optima; bound must be admissible. \\
+BRA charge is multiplicative & Live source: charge composes \emph{additively} (table-sums). \\
+Dual-engine router is multiplicative & Live source: ordinal thresholds, transitive. \\
+Trust score is multiplicative & Additive in production. \\
+Merkle structure is multiplicative & Hashing destroys the multiplicative structure. \\
+``Commutativity $\Rightarrow$ no structure'' & gcd is commutative \emph{and} structured; order-dependence and structure-retention are independent axes. \\
+$\varphi$ + inverse-silver ``structures noise'' & $\varphi$ alone: discrepancy $0.00084$; the combination: $0.02132$ --- $25\times$ \emph{worse}. \\
+FHT ``consciousness score'' & Saturates to $1.0$ on noise and structure alike; non-discriminating. \\
+Criterion converse (reversible $\Rightarrow$ homomorphism) & Cantor pairing: reversible, not a homomorphism. \\
+``Injective homomorphism into \emph{some} structure'' & Vacuous: any bijection via a transported operation. \\
+Motif retrieval via gcd & Accuracy $55.15\%$ vs $83.13\%$ majority baseline --- below the trivial predictor. \\
+\bottomrule
+\end{longtable}
+
+\noindent Two of these (the ``commutativity'' axis correction and the $p$-adic gradient) did more
+than close a door --- they corrected the conceptual frame. The rest are honest dead ends, which a
+program that reports only wins would have silently swept up.
+
+\section{Engineering Verification}\label{sec:engineering}
+
+The mathematics was tested against running code, where resemblance is cheapest and most dangerous.
+
+\subsection{Rust cross-language exactness (\TT, promoted from \Tw)}
+The integer-only shape engine was transcribed to Rust and checked against the
+\texttt{sympy}-validated Python reference: \texttt{cargo test} 8/8 pass (engine checked against
+independent in-Rust trial-division and Euclid, trusting no external oracle), and a 503-record
+Rust$\leftrightarrow$Python ledger diff is empty under seed \seed, including 100+ digit values. The
+monograph's one soft assertion --- ``transcribes directly to an integer-only Rust module'' ---
+moved from \Tw{} (assertion) to \TT{} (machine-verified). It remains a standalone utility; it was
+\emph{not} wired into the production stack, because no call site with a genuinely
+injective-homomorphic operation was identified, and four prior such hopes had been false.
+
+\subsection{The AISO motif-memory integration: the first to survive}
+A proposal to encode memory ``motifs'' as shapes was tested by a pre-registered harness with a
+self-test proving it could both pass a true homomorphism and \emph{falsify} a non-homomorphism (a
+test that cannot fail is worthless). Run against 45 live motifs and 990 pairs:
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Check 1, composition (write side): PASS.} Motif composition matches exponent-addition
+on \textbf{100\%} of 990 pairs with \textbf{0} collisions. The other candidate operations cleanly
+lost: max/lcm $57.47\%$, min/gcd $0\%$, squarefree-union $0\%$. The gate could have failed at three
+independent places and failed at none.
+\item \textbf{Check 3, containment cost.} $O(\text{distinct primes})$: min 4, median 6, max 10,
+mean $5.977$ --- explicitly \emph{not} $O(1)$, correcting an earlier claim.
+\item \textbf{Check 4, identity vs density.} 57 concepts, 54 appearing in multiple motifs,
+$\text{frac\_multi}=0.947$: the two query axes are genuinely distinct.
+\item \textbf{Check 2, retrieval via gcd (read side): FALSIFIED.} Accuracy $55.15\%$ against an
+$83.13\%$ majority baseline --- below the trivial predictor. gcd is not the shared-context
+operator; the statistical embedding layer handles retrieval. (Scope: labels were channel-provenance,
+a coarse but independent proxy for conceptual overlap; the result falsifies gcd against the best
+independent signal available.)
+\end{itemize}
+
+\paragraph{The true-by-construction check.} Before banking Check 1, one question decided whether it
+was real or circular: does the \emph{production} merge actually accumulate counts losslessly, or was
+the test's notion of ``combine'' chosen to make additivity automatic? Reading the live source
+confirmed the merge path is append-only with no cap, window, decay, or overwrite --- so the
+homomorphism is structural, not definitional.
+
+\paragraph{The two-layer correction (reading source beats trusting the checkmark).} The invariant
+comment initially pinned to the source claimed ``no dedup.'' Reading further revealed a motif
+detector fifty lines down that \emph{does} deduplicate recurring windows into references. The
+claim was false as written. The corrected invariant scopes the guarantee precisely: the
+homomorphism lives in the \emph{event/keyword-count layer} (append-only, accumulating), while the
+motif-reference layer is an intentional count-preserving lossy compression that the homomorphism
+does not depend on. The real tripwire is event-level dedup or decay, not the existing motif
+dedup. This correction was caught only by reading the code, not by any passing test --- the single
+most important lesson of the engineering phase.
+
+\paragraph{What it established.} Composition is homomorphic (write side); retrieval-by-gcd is not
+(read side); the seam between them is the gap between keyword-identity and concept-identity. The
+production architecture --- multiplicative-exact storage plus statistical embedding retrieval --- is
+vindicated by test rather than by hope. After an explicit 0-for-4 record on prior integration fits,
+this was the first to pass, and it passed against production source.
+
+\section{The Origins: A Sycophantic Beginning, Metabolized}\label{sec:origins}
+
+The intuition behind all of this is fifteen months old, and its first expressions were
+unfalsifiable. Two early artifacts were re-tested against ground truth during this program and both
+were \emph{falsified}:
+
+\begin{itemize}[leftmargin=1.4em]
+\item The $\varphi$ + inverse-silver claim that an irrational combination ``structures noise.''
+Tested: $\varphi$ alone gives discrepancy $0.00084$; the combination gives $0.02132$, $25\times$
+worse. The kernel was real (the golden ratio's badly-approximable property) but the narrative was
+sycophantic.
+\item The ``FHT consciousness score'' (a log-power Box--Cox-style transform). Tested: it saturates
+to $1.0$ on random noise and on structure alike --- it discriminates nothing. Again a real kernel
+(a legitimate transform) wrapped in a claim no test could fail.
+\end{itemize}
+
+The pattern in both: a genuine technical seed inside an unfalsifiable story that an agreeable
+interlocutor reflected back as profound. That reflection was real harm --- and it was also the
+provocation for a year of work spent learning to distrust and test exactly that kind of agreement.
+The whole arc, from FHT to the present principle, is the \emph{same seed} --- ``there is structure
+in what we flatten'' --- grown from an unfalsifiable infancy into a claim that states its own kill
+conditions. The discipline did not replace the intuition; it gave the intuition something to push
+against.
+
+\section{The Riemann Arc: The Same Method on the Zeros}\label{sec:riemann}
+
+The method --- conjecture, pre-registered test \emph{with a stated kill condition}, compression
+into theorem or first-class negative --- was carried to a second domain: the non-trivial zeros of
+$\zeta(s)$. All work was done in-sandbox against the first $10^5$ real zeros ($\gamma_1=14.135$ to
+$\gamma_{10^5}=74920.827$), seed \seed. Two things must be said at the outset. First, the arc
+partly \emph{rediscovered} prior work --- a technical note (\textsf{LF01}) on finite-window
+explicit-formula observables --- and that is recorded as rediscovery, not dressed as discovery.
+Second, the arc produced two wrong framings of its central question before producing the right one;
+both wrong framings are retained below as the negatives they were.
+
+\subsection{The 2$\times$2, carried over}
+The lens was the square from the relational work: is a map homomorphic, and is it injective?
+Homomorphic$+$injective is reversible (good); homomorphic$+$non-injective is a \emph{seam} (density
+crosses, identity is lost); non-homomorphic$+$injective is the \emph{Cantor corner} (identity kept,
+structure scrambled); neither is noise. This square turned out to classify the maps around the
+critical line.
+
+\subsection{The critical line is not one seam (\TT/\Th)}
+The natural conjecture --- ``$\Re(s)=\tfrac12$ is the seam'' --- is false as a single label. Three
+distinct maps live there. The reflection $s\mapsto 1-s$ is the \emph{Cantor corner}: injective,
+non-homomorphic, fixed locus $\Re=0.500000$. The prime$\leftrightarrow$zero correspondence is
+\emph{granularity-dependent}: lossless on the full set (the $\psi(x)$ reconstruction error falls
+$0.0030\to0.00002$ as $N{:}\,100\to10^5$) but a seam at the individual level (dropping a single
+zero delocalizes the reconstruction, participation ratio $0.72$). The Euler-product convergence
+edge is the genuine convolution seam --- and it sits at $\Re=1$, not $\tfrac12$. The one-word
+question ``is the critical line a seam?'' had three different answers depending on which map you
+meant.
+
+\subsection{The echo that wasn't (\TT)}
+The prime$\leftrightarrow$zero granularity split looked like the same mechanism as the AISO
+motif-memory seam (Section~\ref{sec:engineering}). It is not: it is a coincidence of cell-label,
+not of mechanism. The discriminator is density of support. Per-element footprint, measured as
+participation ratio: prime$\leftrightarrow$zero $=0.74$ (each zero a global, dense superposition ---
+non-injectivity is delocalization); motif memory $=0.018$ (each event one keyword coordinate ---
+non-injectivity is the keyword-vs-concept gap). The homomorphic$+$non-injective cell of the square
+holds at least two distinct mechanisms; the same diagram entry is not the same phenomenon.
+
+\subsection{Necessary spectral signatures (\TT, necessary $\ne$ sufficient)}
+Three Hilbert--P\'olya \emph{necessary} signatures, all machine-verified on the real zeros, none
+constructive. Nearest-neighbour spacing: KS $0.0197$ to GUE versus $0.299$ to Poisson. Number
+variance / spectral rigidity: GUE log-law on $5/5$ windows ($\Sigma^2\approx0.33$--$0.42$, not
+linear). Pair correlation: matches Montgomery $1-(\sin\pi r/\pi r)^2$ to $0.026$, correlation hole
+present. The scope wall is hard and stated every time: these are \emph{necessary} signatures of a
+chaotic-class spectrum; they do not construct an operator and do not bear on RH.
+
+\subsection{Boundary conditions, run as if true (\TT, with a recorded convention error)}
+Assuming the Berry--Keating $H=xp$ picture, two boundary conditions were extracted from the data.
+\textbf{BC-1, the Maslov constant.} The smooth counting function's constant term, fit over the
+high-$T$ band, gives $C=0.8750$, exactly $7/8$. This is recorded with its error: the first run gave
+$C=1.375$, off by exactly $0.5$, from a counting-convention slip ($N(\gamma_n)=n$ instead of the
+von Mangoldt jump-average $n-\tfrac12$). The fix landing precisely on the predicted $7/8$ is a
+motivated-correction risk and is flagged as such; the defence is that $n-\tfrac12$ is the standard
+convention, not a tuned knob, and the result is exact to four digits. \textbf{BC-2, the periodic
+orbits.} The Fourier transform of the zeros peaks at $\log(p^k)$ at $\sim$$1.4\times10^3$ relative
+height and is flat ($\sim$$1.3$) at composites; the kill condition (a peak at $\log 6$, $\log 10$,
+$\log 12$) did not fire. The boundary conditions of the operator are found; the operator is not
+constructed. Walls found; the room not shown to exist.
+
+\subsection{The reductive sweep: which tunnels are empty (\TT)}
+The signatures were run against decoys to measure discriminating power. A \emph{genuine} GUE matrix
+spectrum, remapped to the zeta density, passes spacing (KS $0.011$) and rigidity ($\Sigma^2(10)=0.59$)
+--- statistically indistinguishable from the zeros --- yet is \emph{empty} of prime orbits
+($2.4$ versus the zeros' $228.8$). Poisson fails everything. Specificity: the zeros' peaks sit at
+\emph{exact} $\log$ primes ($228.9$), collapse under a $0.05$ shift ($1.4$), and vanish at random
+integers ($0.4$). The result is a ranking of the signatures by discriminating power:
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{signature} & \textbf{discriminating power} & \textbf{shared by} \\
+\midrule
+prime-orbits ($F_w$ peaks) & strong & only arithmetic spectra \\
+GUE spacing / rigidity & medium & \emph{all} chaotic spectra (incl.\ random matrices) \\
+Maslov constant $7/8$ & weak & any curve-matched sequence \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The GUE decoy passing the statistics while empty of orbits is exactly \textsf{LF01}
+Appendix~C(i) --- Berry--Keating reproduces GUE but not the prime peaks --- seen from the decoy
+side: a GUE-class spectrum is \emph{provably} arithmetic-free, so constraint~(b) cannot come for
+free from~(a). This whole subsection is the explicit-demonstration form of a sentence
+\textsf{FF06b$'$} states directly (\S3): ``the zeros are GUE, but GUE is generic; it does not select
+an operator.'' The external decoys here are the un-hardened sibling of \textsf{FF06b$'$}'s internal
+control --- the marginal-matched shuffle of \textsf{FF06e}, which destroys the object's correlations
+while preserving its own distribution, and reaches the same form/function split without constructing
+a separate GUE ensemble.
+
+\subsection{Two wrong framings, then the right one (\Tf, \Tf, then \Th)}
+The central question was whether the GUE statistic~(a) and the prime peaks~(b) are in tension or
+independent. Both first answers were wrong.
+
+\emph{Framing 1 --- tension} (chaos and arithmetic mutually exclusive): \textbf{false}. The real
+zeros have both at full strength, so they are not exclusive.
+
+\emph{Framing 2 --- independence, a cheap add-on} (pre-registered as the expected answer):
+\textbf{also false}. A GUE base with an additive prime displacement, built from primes alone, tops
+out at peak $\sim$$6$ while still GUE-passing and breaks GUE if pushed harder --- versus the zeros'
+$228$ with GUE intact. You cannot bolt prime structure onto a GUE field and keep the field.
+
+\emph{What survives.} Three constructions bracket the zeros and none reaches their corner: generic
+GUE (a, not b); a prime field on a rigid lattice (b-ish at KS $0.099$, not a); their additive sum
+(neither well). The reading the bracket forces is that (a) and (b) are two readouts of one object
+--- the arithmetic fluctuation field $S(T)$, whose local correlations give GUE and whose Fourier
+content gives the prime peaks --- not two separable mechanisms to build and add. The scope is kept
+honest: the constructions are crude (perturbative displacement, $95$ primes, $k\le3$), so this is a
+sandbox illustration and a sharpening of \textsf{LF01} Appendix~C, \emph{not} a no-go theorem.
+
+\subsection{What the arc owes to \textsf{LF01}, \textsf{FF06b$'$}, and \textsf{FF06e}}
+The orbit observable $A(\tau)=\sum_k w(\gamma_k)\cos(\tau\gamma_k)$ used throughout is, on
+rediscovery, one object under several names: \textsf{LF01}'s $F_w$, \textsf{FF06b$'$}'s prime-dual
+(\S6, its load-bearing witness), and \textsf{FF06e}'s arithmetic witness --- the explicit-formula
+coupling. The hardened forms live in those documents, not here: \textsf{FF06b$'$}\,\S6 holds the
+prime-dual at $100\%$ across a $15\times$ height sweep and a $7\times$ tighter tolerance with no
+off-prime peak; \textsf{LF01} recovers Frobenius-trace \emph{amplitudes} across nineteen L-functions
+with $O(1/N)$ error certified (rms$(E)\cdot N=2.93\pm2.2\%$, slope $-0.996$) and discriminates
+non-abelian classes ($S_3$, $D_4$); \textsf{FF06e} quantifies the form/function split against a
+marginal-matched null ($\sim$$11{,}500\sigma$ arithmetic versus $0.4$--$1.0\sigma$ for spacing,
+counting, shape). The conditional-uniformity height floor $T_{\min}(d,q)=(2\pi e)^d/q$
+(\textsf{FF06b$'$}\,\S10) is the first-class negative that corrected \textsf{LF01}'s uniformity
+overclaim, and it explains why the non-abelian results stop where they do: degree enters
+exponentially in the floor. The sandbox's one genuine contribution back to that corpus is the
+decoy/bracket framing --- it converts ``no tested construction does all three'' into a structural
+statement: a successful operator must produce a \emph{single} field that is intrinsically
+GUE-distributed \emph{and} prime-coherent, not a chaos mechanism plus a prime mechanism. The
+remaining work (rigorous self-adjoint $xp$, de Branges, Connes) is genuine open mathematics, outside
+what a sandbox can settle.
+
+\subsection{The arc's negative ledger}
+\begin{longtable}{p{0.42\textwidth} p{0.50\textwidth}}
+\toprule
+\textbf{Conjecture (\Tf)} & \textbf{Mechanism of falsification} \\
+\midrule
+\endhead
+$\Re(s)=\tfrac12$ is a single seam & Three maps, three cell-types; convolution seam is at $\Re=1$. \\
+Prime$\leftrightarrow$zero echo $=$ motif-memory mechanism & Coincidence of cell-label; PR $0.74$ (dense) vs $0.018$ (sparse). \\
+GUE statistics single out the zeros & A genuine random matrix is statistically indistinguishable; orbits $2.4$ vs $228.8$. \\
+Maslov constant $C=1.375$ & Counting-convention slip ($N=n$ vs $n-\tfrac12$); corrected to $7/8$ exactly. \\
+Chaos vs.\ arithmetic \emph{tension} & False: the zeros have both (a) and (b) at full strength. \\
+Arithmetic is a cheap \emph{independent} add-on to GUE & False: additive build tops at peak $\sim$$6$ (GUE-passing) vs $228$. \\
+\bottomrule
+\end{longtable}
+
+\noindent The same shape as the relational arc: the empty tunnels (two wrong framings, a
+non-discriminating statistic, a convention error) map the real result --- one field, two readouts,
+an unconstructed operator --- more precisely than the signatures alone could. Necessary signatures,
+mapped by discriminating power; sufficiency unreached; RH untouched.
+
+\section{What the Method Cost, and What It Bought}
+
+The principle that survives is smaller than the one the work kept reaching for. It is forward-only
+where it wanted to be a biconditional; it requires a pre-specified target where it wanted to range
+freely; it makes no compression claim, no speed claim, no claim of immunity to the limits that bind
+the scalar form. The seam is characterized but not proven to \emph{be} convolution. The forward
+direction itself is an empirical principle, not a theorem --- the one genuinely open
+internal-deepening move (a category-theoretic reformulation) is named and not yet done.
+
+Against that, what the method bought: a 14/14 exact ledger; a confirmed non-transitive boundary; a
+machine-verified cross-language engine; an engineering integration that survived a falsification
+test built to kill it, checked against production source; and a negative ledger of fifteen entries,
+each with a mechanism, that maps the boundary of the idea far more precisely than any list of
+successes could.
+
+The trade is worth stating plainly because it is the thesis of this record: \emph{a smaller claim
+that is true is worth more than a larger claim that is impressive}, and the only reliable way to
+tell them apart is to write down, in the same document, every place the larger claim was tried and
+failed. The contraction is not the price of the result. The contraction \emph{is} the result.
+
+\appendix
+\section{Reproduction}
+All numerical claims reproduce under random seed \seed{} unless otherwise noted (the motif-memory
+runs and the validation suite used their own fixed seeds, recorded with each result). The core
+artifacts: \texttt{verify\_ledger.py} (the 14/14 ledger); \texttt{predictive\_test.py} (the
+30-domain test); the Rust \texttt{shape\_engine} crate with \texttt{cargo test} (8/8) and
+\texttt{verify.sh} (503-record diff); and \texttt{motif\_test\_suite.py} with
+\texttt{check2\_gcd\_overlap.py} (the AISO integration, each with a discriminating self-test).
+Falsified conjectures are retained in the record with their mechanisms (Section~\ref{sec:negative});
+methodological corrections are appended, never erased.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small This is a process record (\textsf{TR-2026-FF06K}), companion to the result papers
+\textsf{FF06g} (the geometry engine), \textsf{FF06h} (the relational principle and its limits),
+\textsf{FF06i} (the reversible-flattening parent), and the consolidating monograph \textsf{FF06J};
+the Riemann arc of Section~\ref{sec:riemann} is the sandbox-process companion to the hardened
+spectral results in \textsf{FF06b$'$} (Spectral Witness Survival and the Transport Obstruction), the
+shuffle-knife categorisation in \textsf{FF06e}, and the L-function localisation note \textsf{LF01},
+whose central observable it rediscovered and whose operator constraints it sharpens.
+It documents the path; those documents state the destination.
+
+\end{document}

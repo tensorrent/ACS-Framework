@@ -1,0 +1,397 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Empirical Observation}
+\newtheorem{definition}{Definition}
+\newtheorem*{emplaw}{Empirical Law}
+
+\title{The Prime Gap Transition Operator on $(\mathbb{Z}/m\mathbb{Z})^*$:\\
+Empirical Kernel Law, Compression Law, and Documented Falsifications}
+
+\author{Bradley Wallace\\
+Koba42 Research / TensorRent\\
+\texttt{bwallace@tensorrent.io}}
+
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the empirical second-order transition operator $T_m$ describing prime-gap dynamics on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$. Writing $T_m = T_0 + P_m$ where $T_0$ is the uniform transport respecting residue continuity, we establish two empirical laws verified across moduli $m$ with $\varphi(m) \leq 24$:
+
+\textbf{Kernel Law:} $\dim \ker(P_m) = \varphi(m)$ exactly, with kernel equal to the space of state-space functions depending only on the source residue class. A structural proposition (Section~\ref{sec:structural}) establishes that the source-only sector lies in $\ker(P_m)$ as a consequence of column stochasticity and residue continuity; the empirically nontrivial content is the exact dimensional saturation across all tested moduli with no excess kernel.
+
+\textbf{Compression Law (pre-asymptotic):} Over the tested range, the effective dynamical rank satisfies $r_{\text{eff}}(m) \sim \varphi(m)^{\beta}$ with $\beta \approx 1.6$, while the algebraic rank grows as $\varphi(m)(\varphi(m)-1)$. The ratio $r_{\text{eff}}/r_{\text{alg}}$ decays consistently with a power law of exponent $\approx -0.64$ on the tested range. The active spectrum is consistent with a heavy-tailed distribution. We make no asymptotic claim outside the tested range.
+
+We document three conjectures tested and falsified during the investigation: uniform spectral contraction $\rho(P_m) < 1$, full character-product block-diagonalization, and universal renormalized spectral law. Finally, Section~\ref{sec:bridge} records a phenomenological closure ansatz relating the variance floor in cross-residue transition statistics to the cross-correlation bound from \cite{WallaceB}; this is presented as a numerical match, not as a derived consequence, and is quarantined as interpretive material.
+
+Computational data covers $5.08 \times 10^7$ primes up to $10^9$ for low-modulus statistics and $1.27 \times 10^6$ primes up to $2 \times 10^7$ for the full operator-theoretic analysis.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+The distribution of prime gaps has been studied extensively through probabilistic models (Cram\'{e}r \cite{Cramer}, Granville \cite{Granville}) and through the explicit formula connecting primes to nontrivial zeros of the Riemann zeta function and Dirichlet $L$-functions. We approach the problem from a third angle: by constructing an explicit Markov-type transition operator on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$ and identifying its algebraic and spectral structure directly from empirical prime data.
+
+This note records the results of a sustained computational investigation of this operator. The investigation passed through three rounds of explicit falsification, each of which eliminated a conjectured structure and sharpened the remaining claims. We present here both the surviving empirical laws (the Kernel Law and the Compression Law of Sections~\ref{sec:kernel} and~\ref{sec:compression}) and the documented negative results (Section~\ref{sec:falsified}). The negative results are essential context: they constrain the theoretical interpretation of the surviving structure and rule out several natural conjectures.
+
+The connection to the existing ACS framework \cite{Wallace2026a, WallaceB, WallaceC} is limited and quarantined to Section~\ref{sec:bridge}: a phenomenological closure ansatz that matches the empirical variance floor of cross-residue transitions on the mod-6 hexagonal clock to Paper B's cross-correlation bound on the Riemann zero spectrum. The match is striking but is not a derivation; the operator-theoretic content of the present paper is independent of this material.
+
+\section{Setup}
+\label{sec:setup}
+
+Let $m \geq 2$ and $U_m = (\mathbb{Z}/m\mathbb{Z})^* = \{a \in \{1, \ldots, m-1\} : \gcd(a, m) = 1\}$, with $|U_m| = \varphi(m)$. Define the \emph{transition state space}
+\begin{equation}
+\mathcal{S}_m = \{(a, b) : a, b \in U_m\}
+\end{equation}
+with $|\mathcal{S}_m| = \varphi(m)^2$. For each prime gap $p_{i+1} - p_i$ with $p_i, p_{i+1} > m$ and $\gcd(p_i, m) = \gcd(p_{i+1}, m) = 1$, the pair $(p_i \bmod m, p_{i+1} \bmod m) \in \mathcal{S}_m$ is the \emph{transition class}.
+
+\subsection{The empirical operator}
+
+Construct the empirical second-order transition operator $T_m : \mathbb{C}^{\mathcal{S}_m} \to \mathbb{C}^{\mathcal{S}_m}$ by
+\begin{equation}
+T_m\bigl[(a',b'), (a,b)\bigr] = \frac{N\bigl((a,b) \to (a',b')\bigr)}{\sum_{(c,d)} N\bigl((a,b) \to (c,d)\bigr)}
+\end{equation}
+when $b = a'$ (residue continuity), and zero otherwise. Here $N((a,b) \to (a',b'))$ counts the number of times the transition pair $(a,b)$ is followed by $(a',b')$ in the empirical sequence of consecutive transitions among primes. $T_m$ is column-stochastic on its sparsity pattern.
+
+\subsection{The reference and the perturbation}
+
+The \emph{unbiased reference} $T_0$ assigns uniform $1/\varphi(m)$ probability to each consistent next state:
+\begin{equation}
+T_0\bigl[(b,c), (a,b)\bigr] = \frac{1}{\varphi(m)} \text{ for all } c \in U_m.
+\end{equation}
+
+The empirical perturbation is
+\begin{equation}
+P_m = T_m - T_0.
+\end{equation}
+By construction, the column sums of $P_m$ are zero, and $P_m$ is supported on the same sparsity pattern as $T_m$.
+
+\section{The Kernel Law}
+\label{sec:kernel}
+
+\begin{emplaw}[Kernel Law]
+\label{thm:kernel}
+For all tested moduli $m \in \{6, 10, 12, 14, 15, 18, 20, 24, 30, 42, 60, 66, 84, 90\}$:
+\begin{equation}
+\dim \ker(P_m) = \varphi(m).
+\end{equation}
+Moreover, the kernel equals the \emph{source sector}:
+\begin{equation}
+\ker(P_m) = \bigl\{f \in \mathbb{C}^{\mathcal{S}_m} : f(a, b) = g(a) \text{ for some } g : U_m \to \mathbb{C}\bigr\}.
+\end{equation}
+Dirichlet characters on $U_m$ furnish a canonical orthogonal basis for this sector, but the structural object is the source sector itself; the character basis is a coordinate choice on it.
+\end{emplaw}
+
+\subsection{Structural source invariance}
+\label{sec:structural}
+
+To delineate what is automatic from what is empirically nontrivial, we record a structural proposition.
+
+\begin{proposition}[Structural source invariance]
+\label{prop:structural}
+Let $T$ and $T_0$ be column-stochastic operators on $\mathbb{C}^{\mathcal{S}_m}$ such that:
+\begin{enumerate}
+\item (Residue continuity) Both $T$ and $T_0$ satisfy $T[(a',b'),(a,b)] = 0$ whenever $b \neq a'$.
+\item (Uniform reference) $T_0[(b,c),(a,b)] = 1/\varphi(m)$ for all $c \in U_m$.
+\end{enumerate}
+Then for any $f \in \mathbb{C}^{\mathcal{S}_m}$ of the form $f(a,b) = g(a)$ (source-only),
+\begin{equation}
+(T - T_0) f = 0
+\end{equation}
+in the sense that $(T-T_0)f$ is supported only on transitions inconsistent with residue continuity (which carry zero mass in both $T$ and $T_0$).
+\end{proposition}
+
+\begin{proof}[Sketch]
+Both $T$ and $T_0$ are forward-transport operators on transition pairs: they map an incoming state $(a,b)$ to an outgoing state $(b,c)$. A source-only function $f(a,b) = g(a)$ assigns value $g(a)$ to the incoming state and (by extension) value $g(b)$ to the outgoing state. Column stochasticity ensures $\sum_c T[(b,c),(a,b)] = 1$, so when $(T f)$ is evaluated at outgoing state $(b,c)$, the result depends only on the source coordinate $b$ of the outgoing state. The same holds for $T_0$. The difference $(T-T_0)f$ therefore evaluates to zero on every state consistent with residue continuity.
+\end{proof}
+
+Proposition~\ref{prop:structural} establishes that the source sector lies in $\ker(P_m)$ automatically; this is a coordinate-level consequence of the construction. The empirically nontrivial content of the Kernel Law is therefore not the existence of this invariant sector, but the \emph{exact dimensional saturation}: across all tested moduli, $\dim \ker(P_m) = \varphi(m)$ with no excess kernel beyond the source sector. The empirical perturbation $P_m$ is therefore an exact destination-only perturbation in the precise sense that no additional invariants emerge from the arithmetic data.
+
+\subsection{Verification}
+
+The dimension match $\dim \ker(P_m) = \varphi(m)$ holds across all 14 tested moduli with no exceptions. The explicit identification of the kernel as the source sector was verified at $m = 42$ ($\varphi(m) = 12$) by constructing all 12 Dirichlet characters $\chi_1, \ldots, \chi_{12}$ on $U_{42}$ and testing source-extension vectors $v_\chi(a, b) = \chi(a)$ and destination-extension vectors $w_\chi(a, b) = \chi(b)$.
+
+Result:
+\begin{itemize}
+\item $\|P_{42} v_\chi\| < 10^{-3}$ for all 12 source-extension vectors (numerical zero);
+\item $\|P_{42} w_\chi\| > 0.05$ for all 12 destination-extension vectors (clearly nonzero).
+\end{itemize}
+
+This confirms that the source sector is annihilated as predicted by Proposition~\ref{prop:structural} and that no excess kernel is present at this modulus.
+
+\subsection{The empirically nontrivial claim}
+
+The substantive empirical content of the Kernel Law is that $P_m$ exhibits no kernel dimension beyond the structural $\varphi(m)$-dimensional source sector. Equivalently: the empirical arithmetic data, when summarized as a transition operator, contains no additional invariants beyond those forced by the construction. This is a nontrivial constraint on the perturbation: there exist column-stochastic operators satisfying residue continuity for which $\dim \ker(P_m) > \varphi(m)$ (for instance, operators whose destination distributions also factor through source-coordinate symmetries). The empirical $P_m$ does not exhibit such factorizations across any tested modulus.
+
+\section{The Compression Law}
+\label{sec:compression}
+
+\begin{definition}
+The \emph{algebraic rank} of $P_m$ is $r_{\text{alg}}(m) = \mathrm{rank}(P_m) = \varphi(m)^2 - \varphi(m)$. The \emph{effective dynamical rank} (participation ratio) is
+\begin{equation}
+r_{\text{eff}}(m) = \frac{\bigl(\sum_i |\lambda_i|\bigr)^2}{\sum_i |\lambda_i|^2}
+\end{equation}
+where the sum runs over the nonzero eigenvalues of $P_m$.
+\end{definition}
+
+\begin{observation}[Empirical scaling, pre-asymptotic]
+\label{obs:scaling}
+Across the tested range:
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+$m$ & $\varphi(m)$ & $r_{\text{alg}}$ & $r_{\text{eff}}$ & $r_{\text{eff}}/r_{\text{alg}}$ \\
+\midrule
+6 & 2 & 2 & 1.53 & 0.767 \\
+12 & 4 & 12 & 7.07 & 0.589 \\
+30 & 8 & 56 & 15.33 & 0.274 \\
+42 & 12 & 132 & 36.52 & 0.277 \\
+60 & 16 & 240 & 42.98 & 0.179 \\
+90 & 24 & 552 & 100.48 & 0.182 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Log-log fits over the tested range $\varphi(m) \in \{2, 4, 8, 12, 16, 24\}$ yield:
+\begin{align}
+r_{\text{eff}}(m) &\approx 0.59 \cdot \varphi(m)^{\beta}, \quad \beta \approx 1.61,\\
+\frac{r_{\text{eff}}(m)}{r_{\text{alg}}(m)} &\approx 1.23 \cdot \varphi(m)^{-\delta}, \quad \delta \approx 0.64.
+\end{align}
+\end{observation}
+
+\textbf{Scope.} These exponents are pre-asymptotic fits over a small modulus range and should not be extrapolated to large $\varphi(m)$ without further verification. Within the tested range, the ratio $r_{\text{eff}}/r_{\text{alg}}$ is monotonically decreasing, and we report this as an empirical observation only. Whether the trend continues, saturates, or reverses for $\varphi(m) > 24$ is an open computational question.
+
+The qualitative content of the observation is that the active sector exhibits a substantial compression: while the algebraic rank of $P_m$ grows quadratically with $\varphi(m)$, only a sub-quadratic number of modes carries the dynamics over the tested range. The asymptotic regime is not established by the present data.
+
+\section{Spectral Concentration}
+\label{sec:spectrum}
+
+The distribution of nonzero eigenvalue magnitudes $|\lambda|$ of $P_m$ is concentrated on a small number of dominant modes. Combining data from $m \in \{42, 60, 90\}$ yields 924 nonzero eigenvalues. The quantiles are summarized below.
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Quantile & $|\lambda|$ \\
+\midrule
+50\% & 0.015 \\
+75\% & 0.025 \\
+90\% & 0.055 \\
+95\% & 0.124 \\
+99\% & 0.323 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The 99th percentile is approximately $20\times$ the median; the top 1\% of eigenvalues span a range larger than the entire bulk distribution. A small number of dominant modes carry most of the dynamical mass.
+
+A pure power-law fit on the top 30\% of eigenvalues gives a tail exponent in the neighborhood of $-1.2$. We do not present this as an established law: the sample is small, alternative parametric families (lognormal, stretched exponential) have not been distinguished, and goodness-of-fit testing has not been performed. The qualitative observation is that the distribution is consistent with a heavy tail and dominated by a small number of large modes; the precise functional form is open.
+
+This concentration pattern is consistent with the low-modulus anomalies on the mod-6 hexagonal clock that motivated the study. At $\varphi(m) = 2$, the active sector contains only one or two modes, all of them dominant; the strong empirical statistics at low modulus are the signature of these few modes operating with little background. At larger modulus, the dominant modes persist but are joined by a high-dimensional bulk of weakly active modes.
+
+\section{Phenomenological Closure Ansatz and the ACS Cross-Reference}
+\label{sec:bridge}
+
+This section records a numerical coincidence between the empirical variance floor of cross-residue transitions on the mod-6 hexagonal clock and the cross-correlation bound from \cite{WallaceB}. We present it as a phenomenological closure ansatz, not as a derived consequence. The material is interpretive and is included here to record the empirical match; readers concerned only with the operator-theoretic content of the paper may skip this section without loss.
+
+\textbf{The empirical numbers.} The investigation began with three statistical anomalies on the mod-6 hexagonal clock at $5 \times 10^7$ primes: a sign-reversed restoring force (gaps systematically shorten after multi-rotation events), a directional asymmetry (the $5 \to 1$ transition is 12.75\% faster than $1 \to 5$ at $10^7$, attenuating to 7.7\% at $10^9$), and a variance suppression of cross-class transitions to $0.292 \pm 0.003$ relative to the value expected under independent sampling (measured at window size $W = 100$ on the $10^9$ Rust sieve data, stable across $W \in [100, 500]$).
+
+\textbf{The ansatz.} For partially correlated indicators with pairwise correlation magnitude $C$ and effective number $N_{\text{eff}}$ of correlated pairs, a standard mean-field closure relates the variance of the empirical fraction to:
+\begin{equation}
+R = \frac{1}{1 + (N_{\text{eff}} - 1) \cdot |C|}.
+\label{eq:closure}
+\end{equation}
+This is a phenomenological relation: it is not derived from the explicit formula or any rigorous spectral identity. It is a standard mean-field closure that arises in many partially-correlated-sampling contexts.
+
+\textbf{The numerical match.} Substituting the empirical autocorrelation-derived value $N_{\text{eff}} = 56$ (extracted from the cross-class indicator autocorrelation on prime data, $W = 100$) and Paper B's cross-correlation bound $|C_N| = 0.044$ from the first 200 Riemann zeros \cite{WallaceB}:
+\begin{equation}
+R = \frac{1}{1 + 55 \times 0.044} = \frac{1}{3.42} = 0.292.
+\end{equation}
+This matches the empirical variance ratio to three significant figures.
+
+\textbf{What this is and what it is not.} The match is striking but is not a derivation. The closure formula~\eqref{eq:closure} is not derived from the Wronskian non-vanishing of \cite{WallaceB}; the identification of $N_{\text{eff}} = 56$ with a quantity computed from the Riemann zero spectrum is not established; and the appearance of $|C_N| = 0.044$ on both sides of the match is suggestive but not causal. A rigorous derivation would require deriving~\eqref{eq:closure} from the explicit formula and showing that the relevant $N_{\text{eff}}$ for the prime-gap autocorrelation in fact coincides with the spectral cross-correlation parameter. Neither step is performed in this paper.
+
+The cross-reference is included as a quantitative coincidence worth recording; it is not load-bearing for the Kernel Law or Compression Law, which stand independently as empirical results about $P_m$.
+
+The other two anomalies (sign-reversed spring-back, directional asymmetry) admit mechanistic identification with Dirichlet character corrections and zero-mode decoherence, respectively, but lack the same level of numerical match. These remain open problems (Section~\ref{sec:open}).
+
+\section{Three Falsified Conjectures}
+\label{sec:falsified}
+
+The investigation proposed and explicitly tested three conjectures that did not survive the data. We document them because their failure modes constrain the theoretical interpretation of the surviving structure.
+
+\subsection{Uniform spectral contraction (falsified)}
+
+\textbf{Conjecture:} $\rho(P_m) < 1$ uniformly in $m$, with $P_m$ behaving as a quasi-nilpotent contraction.
+
+\textbf{Falsification:}
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$m$ & $\varphi(m)$ & $\rho(P_m)$ \\
+\midrule
+6 & 2 & 0.145 \\
+30 & 8 & 0.341 \\
+60 & 16 & 0.586 \\
+90 & 24 & 0.745 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Power-law fit: $\rho(P_m) \approx 0.07 \cdot \varphi(m)^{0.75}$, predicting $\rho = 1$ near $\varphi(m) \approx 50$. The contraction principle holds in the low-modulus regime but does not extrapolate.
+
+\subsection{Character-product block-diagonalization (falsified)}
+
+\textbf{Conjecture:} $P_m$ acts block-diagonally in the basis $\{\chi_i(a) \overline{\chi_j(b)}\}$ of $\varphi(m)^2$ character products on the state space.
+
+\textbf{Falsification:} Define the \emph{left-preserved norm fraction} as the ratio of $\|P_m\|_F$ contributions from entries respecting left-character labels to the total $\|P_m\|_F$.
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+$m$ & Left-preserved fraction \\
+\midrule
+6 & 71\% \\
+12 & 53\% \\
+30 & 36\% \\
+42 & 29\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+The fraction \emph{decreases} with $\varphi(m)$. At $m = 42$, only 29\% of the perturbation norm respects left-character blocks. Character structure is exact at the kernel boundary (the Kernel Law) but does not extend to global block-diagonalization.
+
+\subsection{Universal renormalized spectral law (falsified)}
+
+\textbf{Conjecture:} The normalized operator $P_m / \rho(P_m)$ has a universal spectral distribution as $m \to \infty$.
+
+\textbf{Falsification:} The mean of $|\lambda|/\rho(P_m)$ over the nonzero spectrum:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$m$ & $\varphi(m)$ & Mean $|\lambda|/\rho$ \\
+\midrule
+6 & 2 & 0.645 \\
+12 & 4 & 0.402 \\
+30 & 8 & 0.126 \\
+60 & 16 & 0.054 \\
+90 & 24 & 0.040 \\
+\bottomrule
+\end{tabular}
+\end{center}
+The normalized mean decreases monotonically by a factor of 16. No universal renormalized law exists in this normalization. The spectrum becomes more concentrated on dominant modes as $\varphi(m)$ grows.
+
+\section{Open Problems}
+\label{sec:open}
+
+\subsection{Result hierarchy}
+
+To make the epistemic status of the various claims in this paper explicit, we record the tier classification used throughout:
+
+\begin{center}
+\begin{tabular}{p{0.42\textwidth}p{0.5\textwidth}}
+\toprule
+\textbf{Result} & \textbf{Status} \\
+\midrule
+$\dim \ker(P_m) = \varphi(m)$ (Kernel Law) & Verified across 14 moduli; Proposition~\ref{prop:structural} explains source-sector inclusion; the empirical saturation is non-trivial \\
+Source sector identified as kernel & Verified explicitly at $m = 42$, exhausting Dirichlet characters \\
+$r_{\text{eff}}(m) \sim \varphi(m)^{1.6}$ scaling & Empirical fit on tested range; not extrapolated \\
+Heavy-tail spectrum, exponent near $-1.2$ & Empirical observation; precise tail form open \\
+ACS variance-floor bridge (Section~\ref{sec:bridge}) & Phenomenological closure, numerical match only \\
+Uniform contraction $\rho(P_m) < 1$ & Falsified --- $\rho(P_m)$ grows with $\varphi(m)$ \\
+Character-product block-diagonalization & Falsified --- character separation holds only at kernel level \\
+Universal renormalized spectral law & Falsified --- distribution concentrates with $\varphi(m)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{The structural mystery}
+
+The deepest open question raised by the data is not the spectral radius behavior or the compression exponent. It is this:
+
+\begin{quote}
+\emph{Why does the operator $P_m$ preserve source-character invariants exactly while destroying character separability everywhere else?}
+\end{quote}
+
+The kernel is the source-character span, exactly. But on the orthogonal complement, the perturbation does \emph{not} respect the character-product basis $\{\chi_i(a) \overline{\chi_j(b)}\}$ --- as documented in Section~\ref{sec:falsified}, the left-preserved norm fraction drops to 29\% at $m = 42$. The operator therefore exhibits an asymmetric harmonic structure: complete invariance at the boundary of the kernel, near-complete mixing in the interior.
+
+This suggests $P_m$ may be best understood as a non-normal operator with arithmetic harmonic boundary conditions: a conditional-expectation-like structure on the source coordinate combined with non-semisimple mixing on the destination coordinate. Finding the right mathematical category --- whether this is a Markov dilation, an arithmetic Toeplitz structure, or something more exotic --- is the most promising direction for converting the empirical Kernel Law into a theorem.
+
+\subsection{Specific computational targets}
+
+\textbf{1. Derive the Kernel Law.} The empirical exactness of $\dim \ker(P_m) = \varphi(m)$ across all tested moduli, beyond Proposition~\ref{prop:structural}'s inclusion result, strongly suggests an algebraic theorem. A rigorous derivation would establish that no additional invariants arise from the arithmetic structure of the empirical transition data.
+
+\textbf{2. Constrain the Compression Law.} Whether $r_{\text{eff}} \sim \varphi(m)^{1.6}$ is a fundamental scaling or an intermediate asymptotic regime is open. Testing $\varphi(m) > 100$ would constrain extrapolation.
+
+\textbf{3. Connection to $L$-functions.} The dominant low-modulus mode at $m = 6$ has spectral radius 0.145, attenuation rate consistent with $1/\log(x)$ scaling, and is structurally compatible with the $L(s, \chi_3)$ explicit formula contribution to the Chebyshev bias. A rigorous derivation of mode eigenvalues from $L$-function zero spectra remains open.
+
+\textbf{4. Asymptotic spectral law.} The tail exponent near $-1.2$ should be measured at larger $m$ to distinguish a fixed limiting law from a slowly varying one.
+
+\textbf{5. Spring-back derivation.} The sign-reversed restoring force (gaps systematically shorten after multi-rotation events) is consistent with zero-mode decoherence --- the inability of the spectral components to maintain destructive alignment --- but lacks a quantitative bridge analogous to the variance floor. Its derivation likely requires local Gaussian Unitary Ensemble (GUE) zero-spacing statistics integrated with the global spectral structure.
+
+\section{Honest Scope Boundary}
+
+This note establishes empirical regularities of an operator constructed from prime-gap data. It does not constitute a proof of any number-theoretic theorem about primes. The Kernel Law is verified across 14 moduli and explicitly mechanism-tested at $m = 42$; it is presented as an empirical theorem awaiting rigorous proof. The Compression Law is a fitted scaling law; the underlying mechanism is open.
+
+The conjectures that did not survive — uniform contraction, character-product block-diagonalization, and universal renormalized law — were tested and explicitly rejected by the data. Their failure modes are documented because negative results constrain the theoretical interpretation of the positive results.
+
+\section{Data and Reproducibility}
+
+All computations use primes generated by the Sieve of Eratosthenes implemented in Python (up to $2 \times 10^7$) and Rust (up to $10^9$ for the low-modulus statistics). The Rust sieve is segmented and parallelized via Rayon; the Python implementation is single-threaded and suffices for the operator-theoretic range.
+
+The operator construction, kernel verification, and scaling-law extraction are deterministic and reproducible from the source primes.
+
+\section{Summary}
+
+The empirical prime-gap transition operator $P_m = T_m - T_0$ on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$ exhibits the following structure across moduli with $\varphi(m) \leq 24$:
+
+\emph{Kernel Law (verified across 14 moduli):} The kernel of $P_m$ is exactly $\varphi(m)$-dimensional and consists of source-residue-only functions. Proposition~\ref{prop:structural} accounts for the inclusion of the source sector in the kernel; the empirically nontrivial content is the exact dimensional saturation across all tested moduli, with no excess kernel beyond the source sector.
+
+\emph{Compression Observation (pre-asymptotic, tested range):} The effective dynamical rank satisfies $r_{\text{eff}}(m) \sim \varphi(m)^{\beta}$ with $\beta \approx 1.6$ over the fitted range; the algebraic rank grows as $\varphi(m)(\varphi(m) - 1)$. The active spectrum is concentrated on a small number of dominant modes, with the 99th percentile of $|\lambda|$ exceeding $20 \times$ the median. The precise functional form of the tail and its asymptotic behavior are open.
+
+\emph{Documented falsifications:} Uniform spectral contraction (the data instead shows $\rho(P_m)$ growing approximately as $\varphi(m)^{0.75}$), character-product block-diagonalization (only kernel-level character invariance survives), and universal renormalized spectral law (the renormalized distribution becomes progressively concentrated as $\varphi(m)$ grows).
+
+\emph{Phenomenological ansatz (Section~\ref{sec:bridge}, quarantined):} A mean-field closure relation matches the empirical variance floor of cross-class transitions to the cross-correlation bound from \cite{WallaceB}. This is recorded as a numerical match worth investigating, not as a derived relation.
+
+The structural content of the paper is the Kernel Law combined with Proposition~\ref{prop:structural}; the empirical scaling and concentration phenomena complement this with information about how $P_m$ behaves outside its kernel.
+
+\begin{thebibliography}{99}
+
+\bibitem{Wallace2026a}
+B.~Wallace,
+\emph{Colour from Gravity: Pati-Salam from the Palatini Bracket},
+TR-2026-FF06a, TensorRent, 2026.
+
+\bibitem{WallaceB}
+B.~Wallace,
+\emph{Information Asymmetry and the Riemann Spectral ACS},
+TR-2026-FF06b, TensorRent, 2026.
+
+\bibitem{WallaceC}
+B.~Wallace,
+\emph{The Inversion Arc: Holographic Resolution in ACS},
+TR-2026-FF06c, TensorRent, 2026.
+
+\bibitem{Cramer}
+H.~Cram\'{e}r,
+\emph{On the order of magnitude of the difference between consecutive prime numbers},
+Acta Arith. 2 (1936), 23--46.
+
+\bibitem{Granville}
+A.~Granville,
+\emph{Harald Cram\'{e}r and the distribution of prime numbers},
+Scand.\ Actuar.\ J.\ 1995, no.~1, 12--28.
+
+\end{thebibliography}
+
+\end{document}

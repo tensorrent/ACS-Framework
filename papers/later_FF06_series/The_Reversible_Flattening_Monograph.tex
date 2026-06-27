@@ -1,0 +1,411 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{literate={·}{{\textperiodcentered}}1 {≥}{{$\geq$}}1 {→}{{$\rightarrow$}}1 {²}{{$^2$}}1 {^}{{\textasciicircum}}1}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small The Reversible Flattening --- Monograph}\fancyhead[R]{\small TR-2026-FF06J}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{criterion}{Criterion}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{observation}{Observation}[section]
+\newtheorem{principle}{Principle}[section]
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{gray!40},
+  backgroundcolor=\color{gray!4},
+  keywordstyle=\color{blue!60!black},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{red!50!black},
+  language=Python,
+  showstringspaces=false,
+  columns=fullflexible,
+}
+
+\title{\textbf{The Reversible Flattening}\\[6pt]
+\large A Monograph on Relational versus Scalar Representation:\\
+the Homomorphism Criterion, the Convolution Seam, and a Verified Computational Record}
+\author{Bradley Wallace \quad (TensorRent)\\
+\small with computational verification by Claude (Anthropic)}
+\date{\small TR-2026-FF06J \ ---\ Consolidates FF06g/h/i \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\noindent This monograph consolidates a single line of inquiry: that a large class of computations abstract a
+relational object to a scalar, and that doing so is a reversible structural re-representation when the operation
+producing the scalar is a homomorphism into a structure the relational form stores. We develop the thesis,
+state and test the homomorphism criterion --- sharpened by a $30$-domain predictive test to require an
+\emph{injective} homomorphism into a \emph{pre-specified} structure (homomorphism carries density; injectivity carries identity), a one-way implication whose converse is falsified by the Cantor pairing --- and characterize the boundary of reversibility (the
+``seam''): convolution crosses it for aggregate density (Euler's product) but it remains uncrossable for
+individual identity. We present the complete verified computational record: two reference engines in
+full source, fourteen exact applied-mathematics verifications, a structure search that reaches
+$10^{80}$ for divisor maximization without forming $n$ (not a general method), the non-transitive
+impossibility class, and a full ledger of negative results. The relational form is more faithful (it
+preserves structure the scalar discards) and exact where the scalar overflows; it is \emph{not} generally
+faster than compiled big-integer arithmetic, and \emph{not} a memory compression --- for square-free or
+many-distinct-prime integers it is the same size as the scalar or slightly larger (measured: primorial
+$1.25\times$, prime $1.01\times$), compressing only when exponents are large. It is a structural
+re-representation, not a smaller encoding. The work is
+presented as a falsifiable research program: every load-bearing claim is anchored against ground truth, the
+language is matched to the evidence by a four-tier scheme, and the failures are documented as carefully as
+the successes because, in a study of limits, the failures are the result.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction and methodology}
+
+\subsection{The thesis in one paragraph}
+Mathematics began with observation and geometric construction and was then abstracted into symbol and number
+because that form was mechanically manipulable by hand. This abstraction was a great gain and also a
+\emph{structural flattening} (not, in general, a size reduction --- for square-free integers the factor
+representation is the same size or slightly larger than the scalar; it is smaller only under repeated
+factors): it recast relational content as scalar- and digit-strings. The thesis of this work
+is that the flattening is \emph{losslessly reversible} when the operation producing the scalar is a
+homomorphism from the object's structure into a structure the relational representation stores directly; that
+where reversible, computing in the restored relational form is more faithful and exact where the scalar
+overflows (though not generally faster than compiled big-integer arithmetic); and
+that the boundary of reversibility is not a void but a precise object --- convolution --- which is crossable
+for density and uncrossable for identity.
+
+\subsection{Method: adversarial compression}
+Every claim followed one cycle: conjecture $\to$ pre-registered test against ground truth $\to$ a theorem
+(if it survived), a sharpened negative result (if it failed), or a scoped observation (if partial). Results
+carry a four-tier label: \textbf{T1} machine-verified against ground truth; \textbf{T2} proven/forced;
+\textbf{T3} numerically verified, not theorem-level; \textbf{T4} explicitly falsified. The discipline's
+non-negotiable rules: no claim is dressed in theorem language before its proof; negative results are
+first-class outputs with the killing computation retained; every scope boundary is stated; overclaims are
+corrected immediately. Two failure modes were guarded against throughout --- the \emph{sycophantic} mode (a
+result that feels validated because a model agreed, not because it was tested) and the \emph{false-fit} mode
+(a structural resemblance mistaken for an operational identity). Both were caught in practice and are
+recorded.
+
+\section{The representation: numbers as shapes}
+
+\begin{definition}[Shape]
+A \emph{shape} encodes a positive integer's multiplicative structure as a finite map $\{p_i:e_i\}$ from prime
+sides to positive exponents, with volume $\prod_i p_i^{e_i}$. Multiplicative questions become geometric:
+multiply $=$ merge (exponents add), divisibility $=$ containment, $\gcd/\mathrm{lcm}=$ common/enclosing box
+(coordinatewise $\min/\max$), power $=$ scaling, primality $=$ atomic box. The only forced projection is
+\texttt{volume()}; the only operation with no shape is addition, handled by an explicit flagged exit.
+\end{definition}
+
+\subsection{Reference engine (verified, complete source)}
+The following is the entire reference implementation. All twelve operations are verified exact against
+integer ground truth (Section~\ref{sec:ledger}). It transcribes directly to an integer-only Rust module.
+
+\lstinputlisting{shape_engine_disp.py}
+
+\section{The homomorphism criterion}
+
+\begin{criterion}[Injective homomorphism into a pre-specified structure $\Rightarrow$ reversible]
+Fix in advance a stored relational structure with an \emph{independently-meaningful} operation $\oplus$
+(for the integers: exponent-vector addition, given by the Fundamental Theorem of Arithmetic before any
+particular number is considered). \emph{(Forward, verified.)} If $\star$ is an \textbf{injective} homomorphism
+$(\text{objects},\star)\to(\text{stored structure},\oplus)$ into that pre-specified structure --- a faithful
+embedding, isomorphic onto its image --- then $\rho(a\star b)=\rho(a)\oplus\rho(b)$, the relational form
+computes $\star$ without forming the scalar, and the map inverts: losslessly reversible. The qualifier
+\textbf{injective} was forced by predictive testing (Section~\ref{sec:predictive}): a homomorphism alone
+preserves the operation (density), a non-injective one loses identity (trace, determinant, entropy, a
+barcode, the list-to-multiset map). \emph{(Converse, FALSE.)} Reversibility does \emph{not} imply injective
+homomorphism: the Cantor pairing $\pi(a,b)=\tfrac{(a+b)(a+b+1)}{2}+b$ is a reversible bijection
+$\mathbb{N}^2\!\to\!\mathbb{N}$ yet is not a homomorphism into the natural componentwise structure
+($\pi(1,2)+\pi(2,0)=11\neq 17=\pi(3,2)$; adversarial counterexample, accepted). \emph{(Vacuity guard.)} The
+target structure must be pre-specified: ``injective homomorphism into \emph{some} structure'' is empty, since
+any bijection is an isomorphism onto the operation transported through it ($a\ast b:=\pi(\pi^{-1}a+\pi^{-1}b)$).
+The criterion is therefore a one-way implication into a fixed, independently-meaningful target --- a
+falsifiable empirical principle, not a biconditional.
+\end{criterion}
+
+For integers under multiplication this is the Fundamental Theorem of Arithmetic: factorization is an
+isomorphism $(\mathbb{Z}_{>0},\times)\cong(\bigoplus_p\mathbb{N},+)$. Multiplication becomes exponent-vector
+addition, $\gcd$ and $\mathrm{lcm}$ become $\min$ and $\max$, powers become scaling --- each verified
+$\rho(ab)=\rho(a)\oplus\rho(b)$.
+
+\begin{proposition}[Addition is non-homomorphic on factor structure, T1]
+$\rho(a+b)$ is not a function of $\rho(a),\rho(b)$: $360+84=444$ and $363+81=444$ have identical sums from
+disjoint summand structures, and a unit change ($360+86=446$) yields an unrelated factor structure.
+Addition's flattening is therefore irreversible. This is the seam, stated as the exact non-homomorphic
+boundary.
+\end{proposition}
+
+\section{Multiplication as folded addition; unique versus cardinal structure}
+
+Multiplication on $\mathbb{N}$ is, by definition, iterated addition ($a\times(n{+}1)=a\times n + a$). The
+content of the criterion is that \emph{folding addition to its irreducibles manufactures a unique structure
+the unfolded operation lacks}: $12=2^2\cdot 3$ is a single canonical object, whereas $12$ as a sum is
+realizable in many ways. Hence the two sides of the seam carry two different kinds of structure:
+\begin{itemize}\setlength\itemsep{1pt}
+\item \textbf{Unique} (multiplicative): the factorization is a point; FTA gives a canonical address.
+\item \textbf{Cardinal} (additive): the decompositions form a cloud with no canonical address, but the
+\emph{size} of the cloud is exact and deep --- the partition function $p(n)$ (e.g.\ $p(100)=190{,}569{,}292$).
+\end{itemize}
+Addition is not structureless; its structure is the count, not an address. Nor is the seam a total void
+at the local level: the $p$-adic valuation obeys the ultrametric bound $v_p(a+b)\ge\min(v_p(a),v_p(b))$
+(verified, $10^4$ cases), so the sum's shape is constrained to lie inside a lower-bound box at each prime.
+Quantified (verified, $6\times10^4$ prime-coordinate cases): the bound is \emph{tight} --- $v_p(a+b)$ is
+determined exactly --- whenever the two summands' valuations differ ($\approx 50\%$ of cases), and slack only
+when they tie ($v_2(2+6)=3>\min=1$). The seam is therefore a \emph{gradient} of structural loss, not a binary
+void: each prime-coordinate's valuation survives addition exactly off-ties and is lost only on-ties. Full
+reversibility is still not restored (the on-tie cloud persists), but the irreversibility is partial and
+measurable, not total.
+
+\section{The seam characterized: convolution (keystone)}
+
+\begin{theorem}[Convolution crosses the density side of the seam; components T1, identification T2/T3]
+The additive (cardinal) structure is encoded multiplicatively by its generating function: Euler's identity
+$\sum_n p(n)x^n=\prod_{k\ge 1}(1-x^k)^{-1}$ turns the entire additive cloud into one product (verified: the
+product's coefficients equal $p(n)$ for $n\le 30$). The operation joining the two sides is \emph{convolution}:
+multiplying generating functions convolves coefficients, $(a\,x^i)(b\,x^j)=ab\,x^{i+j}$, which \emph{adds} the
+index and \emph{multiplies} the value (verified on coefficient sequences). The seam is therefore not
+impassable: it is crossed by generating functions, and the crossing operation is convolution.
+\end{theorem}
+
+\begin{observation}[Density, not identity]
+Convolution crosses the seam for counting and not for identifying: it yields how many, never which one. This
+one property organizes three facts. The Riemann explicit formula is a convolution of primes against zeros,
+so the prime/zero relationship is statistical (a $+122\sigma$ density signal) and never an address. Fully
+homomorphic encryption \emph{illustrates} the seam (it does not prove it): both operations cannot be had by
+gluing two single-operation schemes with incompatible ciphertext types, so a single rich structure
+(lattice/LWE) must host both natively and pay in noise injected for lattice hardness (Section~\ref{sec:fhe}). And the additive wall is exactly the statement that the
+sum's factor structure is the convolution of the summands' structures --- a distribution, not a point.
+\end{observation}
+
+\section{Predictive domain transfer: the criterion is a class, not a catalogue}\label{sec:predictive}
+
+To test whether the criterion predicts reversibility \emph{outside} the examples it was built from, $30$
+domains were chosen and their reversibility \emph{predicted in advance} (predictions locked before scoring),
+then each was checked against ground truth. The set was deliberately stocked with operations that should
+\emph{fail} (entropy, determinant, trace, hashing, PCA, neural embeddings, modular reduction, sorting) as
+well as ones that should hold (Smith normal form, DFT, CRT, discrete log, logarithm, continued fractions,
+run-length encoding, polynomial factorization).
+
+\begin{observation}[$28/30$ predicted correctly; the misses sharpened the criterion]
+Under the criterion as originally stated (``reversible $\leftarrow$ homomorphism''), $28$ of $30$ domains
+were predicted correctly --- far above the $\sim\!50\%$ chance baseline, evidence that the criterion
+describes a real class rather than retrospectively organizing chosen examples. The two misses, persistent
+homology and the list-to-multiset map, were both predicted reversible and are in fact lossy, and they shared
+a single flaw: each is a homomorphism that is \emph{not injective} (distinct filtrations share a barcode;
+distinct lists share a multiset). Adding the injectivity qualifier (Criterion~3.1) corrects both, taking the
+predictive score to $30/30$. The misses thus did not weaken the criterion; they forced its correct
+statement.
+\end{observation}
+
+\begin{theorem}[Injectivity is the identity/density split, T2]
+The corrected criterion unifies with the convolution seam. A homomorphism preserves the operation --- how
+parts combine, the \emph{density} side. Injectivity is exactly the additional condition that distinct objects
+have distinct images --- the \emph{identity} side. A non-injective homomorphism therefore carries density and
+loses identity, which is precisely the seam's behaviour: convolution (a non-injective homomorphism of
+generating functions) crosses for counts and not for which-one. The seam is thus not a special case but an
+instance of the general mechanism: \emph{reversibility $=$ homomorphism (density) $+$ injectivity (identity)},
+and the seam is where injectivity fails.
+\end{theorem}
+
+\section{Two independent axes: order-dependence and structure-retention}
+
+A conjecture --- ``commutativity measures projected-away structure'' --- was tested and \emph{falsified} in
+its strong form, yielding a sharper map. Non-commutativity measures retained \emph{order-dependent} structure:
+scalar $+,\times$ are commutative, retaining none; the cross product is anti-commutative, retaining exactly
+orientation (one bit, a structured sign flip); matrix products are fully non-commutative, retaining the whole
+arrangement. But $\gcd$ and $\mathrm{lcm}$ are commutative \emph{and} retain full common multiplicative
+structure. Hence order-dependence and structure-retention are \emph{independent axes}. The shape engine lives
+in the commutative-and-structured cell, which is why its canonical fingerprint is path-independent
+(commutativity) yet information-complete (structure).
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+operation & order-dependent structure & order-independent structure \\
+\midrule
+scalar $+,\times$ & none & none \\
+$\gcd,\mathrm{lcm}$, symmetric functions & none & full \\
+cross product / determinant sign & one bit (orientation) & --- \\
+matrix product, rotational path & full arrangement & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{The verified ledger}\label{sec:ledger}
+
+Every operation in the homomorphic class was computed in the relational form and checked exact against
+standard-library ground truth (seed \texttt{20260423}); $14/14$ exact, $0$ failures.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+domain & operations & verification \\
+\midrule
+arithmetic functions & $d,\sigma,\sigma_2,\varphi,\mu$ & exact, $300$ values each \\
+$\gcd$ / $\mathrm{lcm}$ & $\min$/$\max$ on exponents & exact, $300$ pairs each \\
+binomial / factorial & Legendre exponent formula & $\binom{20}{7},\binom{100}{50},\binom{500}{123}$ exact \\
+modular products & homomorphism under $\bmod$ & concentrated chain $\bmod\,(2^{61}{-}1)$, exact \\
+lattice index / SNF & product of elementary divisors & $\sim\!1479$-digit index, exact, no overflow \\
+multinomial multiplicity & $N!/\prod n_i!$ & $\sim\!4978$-digit $W$, exact \\
+radical / perfect power & squarefree kernel, exponent $\gcd$ & exact, $200$ values \\
+\midrule
+seam keystone & Euler product $=p(n)$; convolution & exact, $n\le 30$; coefficient identity \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent A clarifying correction (adversarial audit, second pass): the relational form answers
+multiplicative questions about the multinomial $W$ ($\sim\!4978$ digits) and the $5000$-prime product
+($\sim\!20975$ digits) \emph{without ever forming the integer}. We do \emph{not} claim the scalar is
+incomputable: the integer builds in memory in milliseconds, and the only failure is at base-$10$ string
+projection (Python's \texttt{CVE-2022-45061} default \texttt{int\_max\_str\_digits}); the shape engine's
+own \texttt{volume()} hits the identical limit if asked to form the integer. The honest distinction is
+therefore narrow and real: the relational workflow never \emph{needs} the projection step, while the scalar
+workflow forms the integer as its normal representation. It is not a mathematical wall the relational form
+transcends; it is a step the relational form does not require.
+
+\subsection{The reproducible ledger (complete source)}
+\lstinputlisting{verify_ledger_disp.py}
+
+\subsection{The predictive test (complete source)}
+The $30$-domain predictive transfer of Section~\ref{sec:predictive}, reproducible and self-checking
+($28/30$ under the original criterion, $30/30$ under the injective correction).
+\lstinputlisting{predictive_test_disp.py}
+
+\section{The headline tractability instance: structure search beyond enumeration}
+
+Searching exponent space for the integer $n\le N$ maximizing $d(n)$ never forms $n$. An exact
+branch-and-bound with a \emph{provably admissible} bound (budget all remaining log-room on the cheapest
+prime; each unit buys at most a factor of two) computes the true maximum.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+$N$ & max $d(n)$ & time \\
+\midrule
+$10^{18}$ & $103{,}680$ & $7$\,ms \\
+$10^{50}$ & $1.81\times10^{10}$ & $1.4$\,s \\
+$10^{80}$ & $3.01\times10^{14}$ & $33$\,s \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Anchored exact against brute force at $N\le 60,840,720720,2162160$ ($d=12,32,240,320$). This reaches $N=10^{80}$
+without forming $n$. A correction on attribution (adversarial audit): the tractability here is \emph{not} a
+property of the relational representation. Since $d(n)=\prod_i(e_i+1)$ depends only on the exponents,
+maximizing it under $\sum_i e_i\log p_i\le\log N$ is an unbounded-knapsack problem on exponent vectors that
+any integer-array branch-and-bound solves equally fast; at $10^{80}$ the optimum has only $\sim\!54$ distinct
+primes, so the search space is narrow. The result is a fact about highly composite numbers and an admissible
+bound, not about shapes. We retain it as an example of computing a structural extremum without forming the
+integer, while crediting the speed to the knapsack structure, not the representation. The path to this result is itself recorded:
+a greedy heuristic (suboptimal, failed the anchor) and a non-admissible bound (pruned true optima, returned
+wrong answers) were both falsified before the admissible version passed.
+
+\section{The non-transitive class: when no scalar exists}
+
+\begin{theorem}[No faithful scalar under cycles, T1]
+If the pairwise majority relation contains a cycle $A\succ B\succ C\succ A$, every total order contradicts at
+least one majority verdict (verified exhaustively: minimum contradicted edges is one, not zero). Total orders
+are transitive; the relation is not; a transitive structure cannot realize a cycle.
+\end{theorem}
+
+This is the social-choice form of the obstruction that forbids encoding rock-paper-scissors as box
+containment (a partial order cannot represent a cycle). Cycle frequency rises with options
+($\sim\!7\%,43\%,78\%,99\%$ for $3,5,7,10$ candidates) and persists with electorate size ($\sim\!48\%$ at
+$1001$ voters), so the impossibility is structural. The faithful representation is a directed dominance graph
+--- integer, exact, supporting monotone elimination.
+
+\subsection{The dominance engine and two-engine dispatcher (complete source)}
+\lstinputlisting{dominance_engine_disp.py}
+
+\section{Application analysis: homomorphic encryption}\label{sec:fhe}
+
+The homomorphism of our criterion and the homomorphism of homomorphic encryption are the same algebraic
+concept, and the connection is real but specific. Single-operation schemes are easy (RSA multiplies
+ciphertexts; additive schemes add them, both verified on toy instances). Combining a multiplicative and an
+additive scheme to obtain both fails: their ciphertext spaces are incompatible, and bridging them requires
+either decryption (insecure) or a cheap structure-switch that does not exist --- the seam, relocated to the
+tool boundary, not removed. The real solution (Gentry) uses one structure (lattice/LWE) native to both
+operations and pays in noise management. The shape engine cannot be a ciphertext representation in any case:
+it \emph{exposes} factorization, the exact opposite of what encryption must \emph{hide}. A correction on the
+analogy (adversarial audit): mature FHE (Ring-LWE over $\mathbb{Z}_q[x]/(x^N+1)$) uses a \emph{single} rich
+structure that natively supports both operations, and its dominant cost is multiplicative noise growth
+injected for lattice-problem hardness --- not an add/multiply incompatibility. So the only defensible residue is a
+known triviality: one cannot obtain both operations by \emph{gluing two single-operation schemes}, because
+their ciphertext spaces are incompatible algebraic types --- a fact cryptographers never mistook for a
+bridgeable gap. FHE is therefore an \emph{illustration} of the seam, not evidence for it. It is \emph{not}
+that the seam explains FHE's expense; that expense
+is noise management, a different mechanism. The earlier identification was an over-stretched analogy.
+
+\section{The negative ledger (retained in full)}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+hypothesis & grade & how falsified \\
+\midrule
+multiply/divisibility faster than bigint & T4 & compiled C bigint wins to $\ge 39000$ bits \\
+exact rationals beat \texttt{Fraction} & T4 & per-step C gcd beats dict merge ($11\times$) \\
+near-unity ratios need exact shapes & T4 & log-subtraction is well-conditioned ($10^{-16}$) \\
+greedy superabundant search & T4 & suboptimal; failed brute-force anchor \\
+tighter (non-admissible) search bound & T4 & pruned true optima; returned wrong answers \\
+BRA charge composes multiplicatively & T4 & kernel whitepaper: charge is additive table-sums \\
+dual-engine geometric router & T4 & live source: ordinal thresholds, transitive relation \\
+trust/qualia as multiplicative & T4 & additive aggregation (the seam) \\
+Merkle composition as multiplicative & T4 & hashing destroys structure by design \\
+``commutativity $=$ no structure'' & T4 & $\gcd$ is commutative and structured \\
+ criterion converse (reversible $\Rightarrow$ inj.\ homo.) & T4 & Cantor pairing: reversible, not a homomorphism \\
+ ``inj.\ homomorphism into \emph{some} structure'' & T4 & vacuous: any bijection via transported operation \\
+$\varphi$+inverse-silver ``structures noise'' & T4 & $25\times$ worse than $\varphi$ alone (discrepancy) \\
+FHT ``consciousness score'' detects structure & T4 & saturates to $1.0$ on noise and structure alike \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Four of these were architecture-integration hypotheses falsified against live OmniForge/AISO source
+or the kernel specification; the clean structural resemblance was, in each case, the warning sign. Two were
+early-work claims re-tested against ground truth and found to be a real kernel wrapped in unfalsifiable
+naming. The final two are the criterion's own converse and a vacuity guard, both falsified by an independent
+adversarial counterexample search (the Cantor pairing) and incorporated here rather than elsewhere. Each falsification is the criterion working: the homomorphism test, and the anchor, predict the
+misses as well as the hits.
+
+\section{Scope, limits, and open questions}
+
+The mathematics invoked is classical (FTA, Legendre, multiplicativity of $\sigma,\varphi,\mu$, Smith normal
+form, Euler's partition product, Arrow/Condorcet). The contribution is the criterion --- reversibility of a
+flattening equals homomorphism into the stored relational structure --- its characterization of the seam as
+convolution, and the verified record across seven applied domains, the impossibility class, and the wall.
+\textbf{Limits, stated explicitly:} the principle is not an arithmetic accelerator (compiled big integers win
+on throughput; the advantage is exactness, overflow avoidance, and faithful representation of the
+unrepresentable); it requires an exact underlying relation (measured continuous data has none); its exactness
+is worth its cost only where the question is itself exact or discrete; and the verified-optimal search reaches
+$\sim\!10^{80}$, beyond which a tighter admissible bound is required and not yet constructed. The principle
+does not touch primality or prime-counting (building a prime's shape is the factoring wall) and does not bear
+on the Riemann Hypothesis (a categorical gap between finite multiplicative bookkeeping and the analytic
+continuation of an infinite object). \textbf{Open:} a verified-optimal search past $10^{80}$; a
+cleartext-side auditing role in multiplicatively-homomorphic protocols; and per-domain transposition tests in
+fields not examined here, each to be run through the same gauntlet.
+
+\section{Conclusion}
+
+The thesis is a representational law with a checkable criterion: the algebraic flattening of a relational
+object is losslessly reversible when the flattening is an injective homomorphism into a pre-specified structure (forward direction verified across the ledger and a $30$-domain predictive test; converse falsified by the Cantor pairing), and irreversible where injectivity fails (the seam),
+and the seam is crossed for density by convolution while remaining uncrossable for identity. The result is offered
+as a falsifiable program. Its verified instances, its impossibility class, its wall, and its fourteen retained
+falsifications are all reproducible at seed \texttt{20260423}. What it asks of any reader is the same thing it
+asked of its authors: do not believe the elegant statement; test it against ground truth, keep what survives,
+and record what does not.
+
+\vspace{1em}\noindent\rule{\linewidth}{0.4pt}\\
+\small Consolidates TR-2026-FF06g (the engine), FF06h (the relational principle and limits), and FF06i (the
+homomorphism criterion and convolution seam). All source listings are the verified reference implementations.
+SIP License v1.1. Seed \texttt{20260423}.
+\end{document}

@@ -1,0 +1,1656 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[expansion=false]{microtype}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{fvextra}
+
+\usepackage{calc}
+
+% Pandoc's Shaded + Highlighting environments (simple fallback)
+\usepackage{framed}
+\definecolor{shadecolor}{HTML}{f5f5f5}
+\newenvironment{Shaded}{\begin{snugshade}\small}{\end{snugshade}}
+% Stub style definitions used by Highlighting
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\KeywordTok}[1]{\textbf{#1}}
+\newcommand{\DataTypeTok}[1]{#1}
+\newcommand{\DecValTok}[1]{#1}
+\newcommand{\BaseNTok}[1]{#1}
+\newcommand{\FloatTok}[1]{#1}
+\newcommand{\ConstantTok}[1]{#1}
+\newcommand{\CharTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{#1}
+\newcommand{\StringTok}[1]{\textit{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textit{#1}}
+\newcommand{\SpecialStringTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textit{\textcolor{gray}{#1}}}
+\newcommand{\DocumentationTok}[1]{#1}
+\newcommand{\AnnotationTok}[1]{#1}
+\newcommand{\CommentVarTok}[1]{#1}
+\newcommand{\OtherTok}[1]{#1}
+\newcommand{\FunctionTok}[1]{#1}
+\newcommand{\VariableTok}[1]{#1}
+\newcommand{\ControlFlowTok}[1]{\textbf{#1}}
+\newcommand{\OperatorTok}[1]{#1}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{#1}
+\newcommand{\AttributeTok}[1]{#1}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{#1}
+\newcommand{\WarningTok}[1]{#1}
+\newcommand{\AlertTok}[1]{#1}
+\newcommand{\ErrorTok}[1]{#1}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},frame=none}
+
+\usepackage{newunicodechar}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+\newunicodechar{ε}{\ensuremath{\varepsilon}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{ν}{\ensuremath{\nu}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{←}{\ensuremath{\leftarrow}}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+\newunicodechar{⁻}{\ensuremath{{}^-}}
+\newunicodechar{¹}{\ensuremath{{}^1}}
+\newunicodechar{²}{\ensuremath{{}^2}}
+\newunicodechar{³}{\ensuremath{{}^3}}
+\newunicodechar{⁴}{\ensuremath{{}^4}}
+\newunicodechar{⁶}{\ensuremath{{}^6}}
+\newunicodechar{⁸}{\ensuremath{{}^8}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{ℚ}{\ensuremath{\mathbb{Q}}}
+\newunicodechar{ℝ}{\ensuremath{\mathbb{R}}}
+\newunicodechar{⅓}{\ensuremath{\tfrac{1}{3}}}
+\newunicodechar{└}{\textbar}
+\newunicodechar{─}{-}
+\newunicodechar{┐}{\textbar}
+\newunicodechar{┌}{\textbar}
+\newunicodechar{┘}{\textbar}
+\newunicodechar{│}{\textbar}
+\newunicodechar{├}{\textbar}
+\newunicodechar{┤}{\textbar}
+\newunicodechar{┬}{-}
+\newunicodechar{┴}{-}
+\newunicodechar{┼}{+}
+\newunicodechar{▼}{v}
+\newunicodechar{▲}{\^{}}
+\newunicodechar{▶}{>}
+\newunicodechar{↑}{\ensuremath{\uparrow}}
+\newunicodechar{↓}{\ensuremath{\downarrow}}
+\newunicodechar{⟶}{\ensuremath{\longrightarrow}}
+\newunicodechar{⟵}{\ensuremath{\longleftarrow}}
+
+\newunicodechar{₁}{\ensuremath{{}_1}}
+\newunicodechar{₂}{\ensuremath{{}_2}}
+\newunicodechar{₃}{\ensuremath{{}_3}}
+\newunicodechar{₄}{\ensuremath{{}_4}}
+\newunicodechar{₆}{\ensuremath{{}_6}}
+\newunicodechar{⁰}{\ensuremath{{}^0}}
+\newunicodechar{⁵}{\ensuremath{{}^5}}
+\newunicodechar{⁷}{\ensuremath{{}^7}}
+\newunicodechar{⁹}{\ensuremath{{}^9}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{ε}{\ensuremath{\varepsilon}}
+
+\usepackage{xltabular}
+\usepackage{tabularx}
+
+\definecolor{acsprimary}{HTML}{1a237e}
+\definecolor{acssecondary}{HTML}{3949ab}
+\definecolor{acsaccent}{HTML}{c62828}
+\definecolor{acsgold}{HTML}{b8860b}
+\definecolor{acsgreen}{HTML}{2e7d32}
+\definecolor{acsslate}{HTML}{37474f}
+\definecolor{acslight}{HTML}{e8eaf6}
+\definecolor{acsrule}{HTML}{9fa8da}
+\definecolor{codeback}{HTML}{f5f5f5}
+
+\usepackage[labelfont={bf,small,color=acsprimary!90!black},textfont={small,it}]{caption}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\geometry{top=1.15in,bottom=1.15in,left=1.2in,right=1.2in,
+          headheight=16pt,headsep=0.25in,footskip=0.45in}
+
+\hypersetup{colorlinks=true,linkcolor=acsprimary,citecolor=acssecondary,
+            urlcolor=acsaccent,pdfpagemode=UseOutlines,bookmarksopen=true}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\small\color{acsslate}\itshape\leftmark}
+\fancyhead[R]{\small\color{acsslate}\texttt{TR-2026-FF06d}}
+\fancyfoot[C]{\small\color{acsslate}\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{\S\thesection.\ #1}{}}
+
+\titleformat{\section}
+  {\needspace{6\baselineskip}\normalfont\Large\bfseries\color{acsprimary}}
+  {\thesection}{0.7em}{}
+  [\vspace{-2pt}{\color{acsrule}\rule{\textwidth}{0.4pt}}]
+\titleformat{\subsection}
+  {\needspace{5\baselineskip}\normalfont\large\bfseries\color{acssecondary}}
+  {\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}
+  {\needspace{4\baselineskip}\normalfont\normalsize\bfseries\color{acsslate}}
+  {\thesubsubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{2.4ex plus 0.9ex minus 0.4ex}{1.4ex plus 0.3ex}
+\titlespacing*{\subsection}{0pt}{2.0ex plus 0.7ex minus 0.3ex}{0.9ex plus 0.2ex}
+\titlespacing*{\subsubsection}{0pt}{1.6ex plus 0.5ex minus 0.2ex}{0.7ex}
+
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=2pt,topsep=3pt,parsep=0pt}
+
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{0.5pt}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+\vspace{6pt}
+\noindent{\footnotesize\color{acsslate}\hfill\texttt{TR-2026-FF06d} \quad|\quad \textit{Architectural PDR} \quad|\quad April 2026}
+\vspace{6pt}
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+\vfill
+\begin{center}
+  {\Huge\bfseries\color{acsprimary} ACS Deterministic AI Stack}\\[0.4em]
+  {\Large\color{acsslate} Preliminary Design Review \& Technical Blueprint}\\[1.2em]
+  {\normalsize\itshape\color{acsslate}
+    A bracket-governed, byte-reproducible architecture\\
+    for modelling the Asymmetric Codependent Systems framework}\\[2.0em]
+  {\large\bfseries Bradley Wallace}\\[0.25em]
+  {\small\itshape\color{acsslate} Independent Researcher}
+\end{center}
+\vspace{0.4in}
+\begin{center}
+\begin{minipage}{0.88\textwidth}
+\begin{center}
+  {\bfseries\color{acsprimary}\large Executive Summary}\\[0.3em]
+  {\color{acsrule}\rule{1.2in}{0.3pt}}
+\end{center}
+\vspace{0.5em}
+\small\noindent
+This document specifies a deterministic AI stack governed by the
+Asymmetric Codependent Systems (ACS) framework. Every generative step
+is a Lie bracket between two typed fields (Form and Function); outputs
+are validated by a closure criterion; convergence is detected by
+information balance ($\Delta\mathcal{I} \to 0$); compositional depth
+is capped at the third BCH order via the Jacobi identity. The stack
+is specified in five layers, four deployable services, and a phased
+roadmap from foundations through extension to the physics frontier.
+Phase~1 targets full deployment of the 76-script ACS verification suite
+under the new governance within a six-month horizon.
+\end{minipage}
+\end{center}
+\vfill
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+\end{titlepage}
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\markboth{Contents}{}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\hypertarget{governing-principles-acs-ai-mapping}{%
+\section{Governing Principles --- ACS → AI
+Mapping}\label{governing-principles-acs-ai-mapping}}
+
+The physics framework maps onto software architecture through a set of
+structural correspondences. These are not analogies; they are direct
+mappings because the ACS governs information flow in \emph{any}
+codependent system, whether physical or computational.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5652}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4348}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+ACS Physics
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AI Stack
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Form field \texttt{F} (vierbein \texttt{e}) & Typed state schema --- the
+``what'' \\
+Function field \texttt{Φ} (connection \texttt{ω}) & Operator algebra ---
+the ``how'' \\
+Lie bracket \texttt{{[}F,\ Φ{]}} & Composition core --- generative
+step \\
+BCH order 1 (direct coupling) & I/O layer --- input processing \\
+BCH order 2 (curvature \texttt{{[}f,g{]}}) & Operator composition ---
+transformations \\
+BCH order 3 (holonomy \texttt{{[}{[}f,g{]},·{]}}) & Emergent closure ---
+final output \\
+Jacobi identity (truncates at 3) & Bounded-depth guarantee \\
+Closure attractor (\texttt{D\ \textless{}\ 10⁻¹⁴}) & Convergence
+validator \\
+Information balance \texttt{ΔI\ =\ 0} & Halting criterion \\
+Constraint-attractor cycle & Governance feedback loop \\
+Torsion hierarchy \texttt{0:1:4} & Operator priority tiers \\
+Three generations & Three irreducible output channels \\
+7-parameter boundary & Explicit configuration surface \\
+\end{longtable}
+
+\textbf{The invariant that makes this deterministic.} For every
+generative step, there exists a closed-form algebraic expression in the
+operator algebra that produces the output exactly. There is no sampling.
+There is no temperature. The ``creativity'' comes from the bracket
+itself, whose structure is determined once the two fields are fixed.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{system-architecture}{%
+\section{System Architecture}\label{system-architecture}}
+
+\hypertarget{high-level-topology}{%
+\subsection{High-Level Topology}\label{high-level-topology}}
+
+\begin{verbatim}
++-------------------------------------------------------------------+
+|                    CLIENT / USER INTERFACE                         |
+|           (CLI · REST API · Jupyter · Verification Report)         |
++-----------------------------+-------------------------------------+
+                              |
++-----------------------------v-------------------------------------+
+|                    GOVERNANCE LAYER                                |
+|   Policy Engine · Closure Validator · ΔI Monitor · Audit Log      |
++-----------------------------+-------------------------------------+
+                              |
++-----------------------------v-------------------------------------+
+|                   COMPOSITION CORE (Bracket Engine)                |
+|    BCH-3 Truncated Executor · Jacobi Enforcer · Holonomy Tracker  |
++--------------+--------------------------+-------------------------+
+               |                          |
+   +-----------v----------+   +----------v-----------+
+   |    FORM LAYER        |   |    FUNCTION LAYER    |
+   |  Typed state schema  |   |   Operator algebra   |
+   |  (Pydantic + SymPy)  |   |  (registered brackets)|
+   +-----------+----------+   +----------+-----------+
+               |                          |
++--------------v--------------------------v-------------------------+
+|                    KERNEL — Symbolic + Numerical                  |
+|   SymPy (exact Q) · mpmath (arbitrary precision) · NumPy (fp64)   |
++-----------------------------+-------------------------------------+
+                              |
++-----------------------------v-------------------------------------+
+|                    PERSISTENCE & PROVENANCE                        |
+|   Content-addressed store (SHA-256) · DAG journal · Immutable log |
++-------------------------------------------------------------------+
+\end{verbatim}
+
+\hypertarget{the-five-architectural-layers}{%
+\subsection{The Five Architectural
+Layers}\label{the-five-architectural-layers}}
+
+\textbf{Layer 0: Kernel (numerical foundation).} Provides three
+interchangeable arithmetic backends --- SymPy for exact rational
+arithmetic (the only mode admissible for theorem-grade claims), mpmath
+for arbitrary-precision floating-point, and NumPy for standard double
+precision. All three must produce bit-identical results for any
+computation representable in their common domain; this is the
+\emph{kernel invariant}, checked at every build.
+
+\textbf{Layer 1: Form and Function (typed data plane).} All data in the
+stack is classified as either Form (state, configuration, schemas) or
+Function (operators, transformations, brackets). This classification is
+enforced at the type system level using Pydantic for runtime validation
+and mypy for static checking. A value cannot simultaneously inhabit both
+categories; this is the \emph{codependence invariant}.
+
+\textbf{Layer 2: Composition Core (the Bracket Engine).} The generative
+engine. Takes a Form \texttt{F} and a Function \texttt{Φ} and produces
+their bracket \texttt{{[}F,\ Φ{]}} truncated at BCH order 3. Every
+composition is recorded in the DAG journal with cryptographic
+provenance. The engine is stateless between brackets --- all state lives
+in Layer 1.
+
+\textbf{Layer 3: Governance (the policy plane).} Enforces the closure
+criterion, information-balance halting, and the constraint-attractor
+cycle. Every output from Layer 2 passes through Layer 3 before reaching
+the client. Rejected outputs are returned with a machine-readable
+violation report.
+
+\textbf{Layer 4: Interface (client plane).} CLI, REST API, Jupyter
+kernel, and verification reports. The API contract is minimal and
+explicit; there is no hidden state, no conversational memory, no
+implicit context. Every call is idempotent.
+
+\hypertarget{dependency-direction-and-invariants}{%
+\subsection{Dependency Direction and
+Invariants}\label{dependency-direction-and-invariants}}
+
+\begin{itemize}
+\tightlist
+\item
+  Dependencies flow downward only. Layer 3 depends on Layer 2, never the
+  reverse. This prevents governance bypass.
+\item
+  Layers 0 and 1 are pure (no side effects). Layer 2 is pure modulo the
+  DAG journal append. Only Layers 3 and 4 may have external side
+  effects.
+\item
+  All inter-layer communication uses immutable, hashed message objects.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{component-specifications}{%
+\section{Component Specifications}\label{component-specifications}}
+
+\hypertarget{the-form-layer}{%
+\subsection{The Form Layer}\label{the-form-layer}}
+
+\textbf{Purpose.} Represent all typed state in the system. Corresponds
+to the vierbein \texttt{e} in the physics: the field that encodes
+``shape''.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ pydantic }\ImportTok{import}\NormalTok{ BaseModel}
+\ImportTok{from}\NormalTok{ typing }\ImportTok{import}\NormalTok{ TypeVar, Generic}
+\ImportTok{from}\NormalTok{ hashlib }\ImportTok{import}\NormalTok{ sha256}
+
+\NormalTok{T }\OperatorTok{=}\NormalTok{ TypeVar(}\StringTok{\textquotesingle{}T\textquotesingle{}}\NormalTok{)}
+
+\KeywordTok{class}\NormalTok{ Form(BaseModel, Generic[T]):}
+    \CommentTok{"""A Form field carrying structural information."""}
+\NormalTok{    name: }\BuiltInTok{str}
+\NormalTok{    content: T}
+\NormalTok{    schema\_version: }\BuiltInTok{str}
+\NormalTok{    provenance: }\BuiltInTok{str}  \CommentTok{\# SHA{-}256 of the generating bracket chain, or "initial"}
+
+    \KeywordTok{class}\NormalTok{ Config:}
+\NormalTok{        frozen }\OperatorTok{=} \VariableTok{True}  \CommentTok{\# Forms are immutable}
+
+    \AttributeTok{@property}
+    \KeywordTok{def}\NormalTok{ content\_hash(}\VariableTok{self}\NormalTok{) }\OperatorTok{{-}\textgreater{}} \BuiltInTok{str}\NormalTok{:}
+        \CommentTok{"""Content{-}addressed identity."""}
+\NormalTok{        canonical }\OperatorTok{=} \VariableTok{self}\NormalTok{.json(sort\_keys}\OperatorTok{=}\VariableTok{True}\NormalTok{).encode()}
+        \ControlFlowTok{return}\NormalTok{ sha256(canonical).hexdigest()}
+
+    \KeywordTok{def} \FunctionTok{\_\_or\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, other: }\StringTok{\textquotesingle{}Function\textquotesingle{}}\NormalTok{) }\OperatorTok{{-}\textgreater{}} \StringTok{\textquotesingle{}Form\textquotesingle{}}\NormalTok{:}
+        \CommentTok{"""Syntactic sugar: F | Φ computes [F, Φ] via the Bracket Engine."""}
+        \ImportTok{from}\NormalTok{ acs.engine }\ImportTok{import}\NormalTok{ bracket}
+        \ControlFlowTok{return}\NormalTok{ bracket(}\VariableTok{self}\NormalTok{, other)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Invariants.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{I-F1} (Immutability): A Form, once constructed, is never
+  mutated.
+\item
+  \texttt{I-F2} (Content-addressed): Two Forms with equal
+  \texttt{content} and \texttt{schema\_version} produce identical
+  \texttt{content\_hash}.
+\item
+  \texttt{I-F3} (Type safety): \texttt{content} is validated against
+  \texttt{schema\_version} at construction time; construction fails on
+  schema mismatch.
+\end{itemize}
+
+\textbf{Standard Form types shipped with the kernel.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{AlgebraElement} --- element of a Lie algebra (e.g., a matrix
+  in sl(4,ℝ))
+\item
+  \texttt{TensorState} --- typed multilinear tensor
+\item
+  \texttt{Spectrum} --- a finite spectrum (eigenvalues + multiplicities)
+\item
+  \texttt{Measurement} --- a physical observable with uncertainty
+\item
+  \texttt{Configuration} --- a frozen parameter bundle
+\end{itemize}
+
+\hypertarget{the-function-layer}{%
+\subsection{The Function Layer}\label{the-function-layer}}
+
+\textbf{Purpose.} Represent all operators/transformations. Corresponds
+to the spin connection \texttt{ω}: the field that generates change.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ abc }\ImportTok{import}\NormalTok{ ABC, abstractmethod}
+
+\KeywordTok{class}\NormalTok{ Function(ABC):}
+    \CommentTok{"""A Function is an operator acting on Forms."""}
+\NormalTok{    name: }\BuiltInTok{str}
+\NormalTok{    order: }\BuiltInTok{int}  \CommentTok{\# BCH order at which this operator acts (1, 2, or 3)}
+
+    \AttributeTok{@abstractmethod}
+    \KeywordTok{def} \BuiltInTok{apply}\NormalTok{(}\VariableTok{self}\NormalTok{, form: Form) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Form:}
+        \CommentTok{"""The base action. Must be deterministic and side{-}effect{-}free."""}
+
+    \AttributeTok{@abstractmethod}
+    \KeywordTok{def}\NormalTok{ bracket\_with(}\VariableTok{self}\NormalTok{, other: }\StringTok{\textquotesingle{}Function\textquotesingle{}}\NormalTok{) }\OperatorTok{{-}\textgreater{}} \StringTok{\textquotesingle{}Function\textquotesingle{}}\NormalTok{:}
+        \CommentTok{"""The [self, other] composition. Returns a new Function."""}
+
+    \AttributeTok{@abstractmethod}
+    \KeywordTok{def}\NormalTok{ killing\_form(}\VariableTok{self}\NormalTok{, other: }\StringTok{\textquotesingle{}Function\textquotesingle{}}\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Rational:}
+        \CommentTok{"""K(self, other) — the Killing form value. Exact rational."""}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Invariants.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{I-Φ1} (Determinism): \texttt{Φ.apply(F)} depends only on
+  \texttt{Φ} and \texttt{F}.
+\item
+  \texttt{I-Φ2} (Bracket closure): \texttt{Φ₁.bracket\_with(Φ₂)} must
+  live in the same algebra as \texttt{Φ₁} and \texttt{Φ₂}.
+\item
+  \texttt{I-Φ3} (Jacobi): For any three Functions,
+  \texttt{{[}{[}Φ₁,Φ₂{]},Φ₃{]}\ +\ {[}{[}Φ₂,Φ₃{]},Φ₁{]}\ +\ {[}{[}Φ₃,Φ₁{]},Φ₂{]}\ =\ 0}
+  (verified at registration time).
+\item
+  \texttt{I-Φ4} (Order tagging): Every Function declares its BCH order.
+  Attempting to compose Functions such that the result would exceed
+  order 3 raises \texttt{JacobiTruncationError}.
+\end{itemize}
+
+\textbf{Standard Function types.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{BracketOperator} --- a Lie algebra generator acting by
+  commutator
+\item
+  \texttt{ProjectionOperator} --- orthogonal projection onto a subspace
+\item
+  \texttt{KillingOperator} --- the Killing form K(X, Y)
+\item
+  \texttt{DifferentialOperator} --- covariant derivative
+\item
+  \texttt{ClosureTest} --- computes the closure defect \texttt{D(V)}
+\end{itemize}
+
+\hypertarget{the-bracket-engine}{%
+\subsection{The Bracket Engine}\label{the-bracket-engine}}
+
+\textbf{Purpose.} The single generative primitive. Takes \texttt{F} and
+\texttt{Φ} and produces \texttt{{[}F,\ Φ{]}} truncated at the third BCH
+order.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ bracket(}
+\NormalTok{    f: Form,}
+\NormalTok{    phi: Function,}
+\NormalTok{    order: }\BuiltInTok{int} \OperatorTok{=} \DecValTok{3}\NormalTok{,}
+\NormalTok{    validate\_closure: }\BuiltInTok{bool} \OperatorTok{=} \VariableTok{True}\NormalTok{,}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Form:}
+    \CommentTok{"""}
+\CommentTok{    Compute [F, Φ] truncated at the given BCH order.}
+
+\CommentTok{    Parameters}
+\CommentTok{    {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{    f : Form}
+\CommentTok{        The Form field (state).}
+\CommentTok{    phi : Function}
+\CommentTok{        The Function field (operator).}
+\CommentTok{    order : int in \{1, 2, 3\}}
+\CommentTok{        BCH truncation order. Default 3.}
+\CommentTok{        Order 1: direct coupling (Φ.apply(F)).}
+\CommentTok{        Order 2: Lie bracket (curvature).}
+\CommentTok{        Order 3: holonomy — double bracket.}
+\CommentTok{    validate\_closure : bool}
+\CommentTok{        If True, run the Closure Validator on the result.}
+
+\CommentTok{    Returns}
+\CommentTok{    {-}{-}{-}{-}{-}{-}{-}}
+\CommentTok{    Form}
+\CommentTok{        The output, with provenance pointing to (f, phi, order).}
+
+\CommentTok{    Raises}
+\CommentTok{    {-}{-}{-}{-}{-}{-}}
+\CommentTok{    JacobiTruncationError : if order \textgreater{} 3.}
+\CommentTok{    ClosureViolation : if validate\_closure and the result fails closure.}
+\CommentTok{    BracketTypeError : if f and phi are not composable.}
+\CommentTok{    """}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Execution semantics.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Type check.} Verify that \texttt{phi} is applicable to
+  \texttt{f}. This checks schema compatibility and the codependence
+  invariant.
+\item
+  \textbf{Order-1 step.} Compute \texttt{r₁\ =\ Φ(F)}.
+\item
+  \textbf{Order-2 step.} If order ≥ 2, compute
+  \texttt{r₂\ =\ {[}F,\ r₁{]}} using the algebra's bracket operation.
+\item
+  \textbf{Order-3 step.} If order = 3, compute
+  \texttt{r₃\ =\ {[}{[}F,\ r₁{]},\ F{]}} and
+  \texttt{r₃\textquotesingle{}\ =\ {[}{[}F,\ r₁{]},\ r₁{]}}, then sum.
+\item
+  \textbf{Journal append.} Write the triple
+  \texttt{(content\_hash(f),\ phi.name,\ order)} and the output's
+  \texttt{content\_hash} to the immutable DAG journal.
+\item
+  \textbf{Closure validation.} If enabled, run the output through the
+  Closure Validator (§3.4). On failure, roll back the journal append
+  (using the 2-phase-commit protocol specified in §5.3) and raise.
+\item
+  \textbf{Return.} Wrapped Form with provenance.
+\end{enumerate}
+
+\textbf{Invariants.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{I-B1} (Reproducibility): \texttt{bracket(f,\ phi,\ n)} called
+  twice with byte-identical \texttt{f} and \texttt{phi} returns
+  byte-identical Forms.
+\item
+  \texttt{I-B2} (BCH truncation): The engine never computes orders above
+  3.
+\item
+  \texttt{I-B3} (Journal-before-return): No output is returned to the
+  caller before its provenance is committed to the journal.
+\item
+  \texttt{I-B4} (Rollback): If any step fails, no partial state is
+  visible outside the engine.
+\end{itemize}
+
+\hypertarget{the-closure-validator}{%
+\subsection{The Closure Validator}\label{the-closure-validator}}
+
+\textbf{Purpose.} Enforce the closure attractor principle --- outputs
+must satisfy \texttt{D(output)\ \textless{}\ ε} where \texttt{D} is the
+closure defect functional.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ decimal }\ImportTok{import}\NormalTok{ Decimal}
+
+\AttributeTok{@dataclass}\NormalTok{(frozen}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
+\KeywordTok{class}\NormalTok{ ClosureResult:}
+\NormalTok{    passed: }\BuiltInTok{bool}
+\NormalTok{    defect: Decimal}
+\NormalTok{    threshold: Decimal}
+\NormalTok{    witness: Optional[}\BuiltInTok{str}\NormalTok{]  }\CommentTok{\# explanation of failure, if any}
+
+\KeywordTok{def}\NormalTok{ validate\_closure(}
+\NormalTok{    form: Form,}
+\NormalTok{    subspace: AlgebraSubspace,}
+\NormalTok{    threshold: Decimal }\OperatorTok{=}\NormalTok{ Decimal(}\StringTok{"1e{-}14"}\NormalTok{),}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ ClosureResult:}
+    \CommentTok{"""}
+\CommentTok{    Compute D(subspace) for the algebra element in \textasciigrave{}form\textasciigrave{} and check}
+\CommentTok{    whether it closes in \textasciigrave{}subspace\textasciigrave{} to within \textasciigrave{}threshold\textasciigrave{}.}
+
+\CommentTok{    D(V) = sum\_\{i\textless{}j\} ||[T\_i, T\_j] {-} π\_V([T\_i, T\_j])||}
+\CommentTok{         / sum\_\{i\textless{}j\} ||[T\_i, T\_j]||}
+
+\CommentTok{    where \{T\_i\} is a basis of V and π\_V is orthogonal projection onto V.}
+\CommentTok{    """}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Standard thresholds.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Decimal("1e-14")} for exact rational computations (SymPy
+  backend)
+\item
+  \texttt{Decimal("1e-10")} for arbitrary-precision (mpmath)
+\item
+  \texttt{Decimal("1e-6")} for double-precision (NumPy) --- advisory
+  only, not admissible for theorem-grade claims
+\end{itemize}
+
+\textbf{Invariants.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{I-C1} (Monotonicity): If \texttt{D(V)\ \textless{}\ ε} with
+  threshold \texttt{ε}, then for any
+  \texttt{ε\textquotesingle{}\ \textgreater{}\ ε},
+  \texttt{D(V)\ \textless{}\ ε\textquotesingle{}} also passes.
+\item
+  \texttt{I-C2} (Provenance): Every ClosureResult carries a witness
+  string sufficient to reproduce the computation.
+\end{itemize}
+
+\hypertarget{the-ux3b4i-monitor}{%
+\subsection{The ΔI Monitor}\label{the-ux3b4i-monitor}}
+
+\textbf{Purpose.} Detect convergence via information balance. A
+computation that reaches \texttt{ΔI\ →\ 0} has found its attractor and
+should halt.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ delta\_I(}
+\NormalTok{    history: }\BuiltInTok{list}\NormalTok{[Form],}
+\NormalTok{    window: }\BuiltInTok{int} \OperatorTok{=} \DecValTok{8}\NormalTok{,}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Decimal:}
+    \CommentTok{"""}
+\CommentTok{    Compute the net information asymmetry over the last \textasciigrave{}window\textasciigrave{} Forms}
+\CommentTok{    in the computation history.}
+
+\CommentTok{    ΔI = TE(F → Φ) {-} TE(Φ → F)}
+
+\CommentTok{    where TE is transfer entropy estimated via the k{-}nearest{-}neighbour}
+\CommentTok{    estimator (Kraskov{-}Stögbauer{-}Grassberger).}
+\CommentTok{    """}
+
+\KeywordTok{def}\NormalTok{ is\_converged(history: }\BuiltInTok{list}\NormalTok{[Form], epsilon: Decimal }\OperatorTok{=}\NormalTok{ Decimal(}\StringTok{"1e{-}6"}\NormalTok{)) }\OperatorTok{{-}\textgreater{}} \BuiltInTok{bool}\NormalTok{:}
+    \CommentTok{"""True if |ΔI| \textless{} ε over the trailing window."""}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Halting policy.} The engine halts when any of the following
+hold:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{\textbar{}ΔI\textbar{}\ \textless{}\ ε} over the last 8 steps
+  --- information-balance attractor
+\item
+  BCH order 3 has been reached and produced no new independent content
+  (Jacobi truncation)
+\item
+  The closure defect has been below threshold for 3 consecutive steps
+\item
+  An explicit halt request is issued by the governance layer
+\end{enumerate}
+
+\hypertarget{the-governance-policy-engine}{%
+\subsection{The Governance Policy
+Engine}\label{the-governance-policy-engine}}
+
+\textbf{Purpose.} Enforce the constraint-attractor cycle. Every output
+must satisfy the current constraint set; outputs that satisfy become the
+next constraint.
+
+\textbf{Interface.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\AttributeTok{@dataclass}\NormalTok{(frozen}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
+\KeywordTok{class}\NormalTok{ Policy:}
+\NormalTok{    name: }\BuiltInTok{str}
+\NormalTok{    constraints: }\BuiltInTok{list}\NormalTok{[Constraint]}
+\NormalTok{    attractor\_criteria: }\BuiltInTok{list}\NormalTok{[AttractorTest]}
+\NormalTok{    version: }\BuiltInTok{str}
+
+\KeywordTok{def}\NormalTok{ enforce\_policy(}
+\NormalTok{    form: Form,}
+\NormalTok{    policy: Policy,}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ PolicyResult:}
+    \CommentTok{"""}
+\CommentTok{    Run \textasciigrave{}form\textasciigrave{} against all policy constraints and attractor tests.}
+\CommentTok{    Returns either Approved(form) or Rejected(reasons, witness).}
+\CommentTok{    """}
+
+\KeywordTok{def}\NormalTok{ promote\_to\_constraint(}
+\NormalTok{    form: Form,}
+\NormalTok{    policy: Policy,}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Policy:}
+    \CommentTok{"""}
+\CommentTok{    If \textasciigrave{}form\textasciigrave{} has satisfied the attractor criteria, promote it to be}
+\CommentTok{    a constraint for subsequent computations. Returns a new Policy}
+\CommentTok{    with the form added to the constraint set.}
+
+\CommentTok{    Implements the inversion arc: solution → next constraint.}
+\CommentTok{    """}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Standard policies.}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{TheoremGrade} --- requires SymPy backend, closure \textless{}
+  1e-14, full Jacobi verification, no stochastic steps
+\item
+  \texttt{VerificationGrade} --- permits mpmath, closure \textless{}
+  1e-10, Jacobi sampling
+\item
+  \texttt{ExploratoryGrade} --- permits NumPy, closure \textless{} 1e-6,
+  advisory only
+\end{itemize}
+
+Every output is tagged with the grade of policy it satisfied.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{data-flow-and-execution-model}{%
+\section{Data Flow and Execution
+Model}\label{data-flow-and-execution-model}}
+
+\hypertarget{the-canonical-computation-dag}{%
+\subsection{The Canonical Computation
+DAG}\label{the-canonical-computation-dag}}
+
+Every computation in the stack is a directed acyclic graph whose:
+
+\begin{itemize}
+\tightlist
+\item
+  Nodes are Forms (typed immutable states)
+\item
+  Edges are Functions (operators labelled with BCH order)
+\item
+  Root nodes are Inputs (user-supplied or configuration)
+\item
+  Leaf nodes are Outputs (policy-approved Forms)
+\end{itemize}
+
+The DAG is explicit, serialisable, and content-addressed. Every edge is
+labelled with the SHA-256 of
+\texttt{(source\_hash,\ function\_name,\ order)}, making the entire
+computation history a Merkle DAG.
+
+\hypertarget{execution-phases}{%
+\subsection{Execution Phases}\label{execution-phases}}
+
+\begin{verbatim}
+PHASE 1: INGEST
+  input bytes → Pydantic validation → Form(provenance="initial")
+
+PHASE 2: PLAN
+  target specification → DAG of Form nodes and Function edges
+  (this is a pure symbolic phase — no computation yet)
+
+PHASE 3: EXECUTE
+  topological walk of the DAG, dispatching each edge to the Bracket
+  Engine. Cache hits (content_hash already in store) skip re-execution.
+
+PHASE 4: VALIDATE
+  every Form passes through Closure Validator and Policy Engine.
+  Failures halt execution immediately with full provenance trace.
+
+PHASE 5: CONVERGE
+  ΔI Monitor checks for information balance. On convergence, the
+  attractor Form is marked as the computation result.
+
+PHASE 6: COMMIT
+  results and full DAG journal written to persistent store.
+  Returned to caller with cryptographic receipt.
+\end{verbatim}
+
+Phases 1--5 are deterministic and pure. Only Phase 6 has external side
+effects.
+
+\hypertarget{determinism-guarantees}{%
+\subsection{Determinism Guarantees}\label{determinism-guarantees}}
+
+Determinism is not a property of the Bracket Engine alone; it must be
+preserved across the entire stack. The guarantees decompose as:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2414}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7586}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Layer
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Determinism Mechanism
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Ingest & Pydantic's deterministic JSON schema + sorted-keys canonical
+form \\
+Plan & Symbolic --- no numerical evaluation \\
+Execute & SymPy exact rationals; NumPy only with fixed seed and fixed
+library versions \\
+Validate & Closure defect computed in exact arithmetic \\
+Converge & ΔI threshold is a rational constant \\
+Commit & Content-addressed store --- same inputs produce same storage
+keys \\
+\end{longtable}
+
+Floating-point non-determinism is quarantined to the NumPy backend and
+is \emph{advisory only}. No theorem-grade output can depend on NumPy.
+
+\hypertarget{reproducibility-envelope}{%
+\subsection{Reproducibility Envelope}\label{reproducibility-envelope}}
+
+A computation is reproducible if and only if:
+
+\begin{itemize}
+\tightlist
+\item
+  All inputs are content-addressed (SHA-256)
+\item
+  All library versions are pinned (\texttt{pyproject.toml} with exact
+  hashes)
+\item
+  The computation grade is TheoremGrade or VerificationGrade
+\item
+  The computation completes within the BCH-3 envelope (no unbounded
+  loops permitted)
+\end{itemize}
+
+The reproducibility envelope is explicit: every output carries a
+\textbf{receipt} containing input hashes, library hashes, grade, and
+timing bounds. Re-execution with the same receipt MUST produce
+byte-identical output or the receipt is considered invalidated.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{verification-stack}{%
+\section{Verification Stack}\label{verification-stack}}
+
+\hypertarget{the-three-tier-verification-model}{%
+\subsection{The Three-Tier Verification
+Model}\label{the-three-tier-verification-model}}
+
+Verification in the ACS stack is layered to match the BCH truncation:
+
+\textbf{Tier 0: Type-level verification.} Static checks via mypy,
+Pydantic schemas, and runtime invariant assertions. Catches schema
+violations and codependence breaks before any computation runs.
+
+\textbf{Tier 1: Unit verification.} Each Function's \texttt{apply},
+\texttt{bracket\_with}, and \texttt{killing\_form} methods are
+unit-tested against golden values. Every algebra element has a test
+suite that verifies its bracket relations against the structure
+constants.
+
+\textbf{Tier 2: Theorem verification.} The 76-script ACS verification
+suite runs as integration tests. Each script corresponds to a specific
+theorem (T1--T21) or derived match (D1--D11). A CI run must pass all 76
+scripts before a release is cut.
+
+\hypertarget{continuous-verification}{%
+\subsection{Continuous Verification}\label{continuous-verification}}
+
+The CI pipeline is layered:
+
+\begin{verbatim}
++-----------------------------------------------------------------+
+| TIER 0 (seconds)                                                |
+|  mypy · pydantic schema check · invariant assertions            |
++-----------------------------------------------------------------+
+| TIER 1 (minutes)                                                |
+|  unit tests · bracket relations · Jacobi identity sampling      |
++-----------------------------------------------------------------+
+| TIER 2 (hours)                                                  |
+|  76-script ACS suite · closure attractor 50k-sample regression |
++-----------------------------------------------------------------+
+| RELEASE GATE                                                    |
+|  All three tiers green · receipt hash matches previous release |
++-----------------------------------------------------------------+
+\end{verbatim}
+
+\hypertarget{two-phase-commit-protocol-for-the-dag-journal}{%
+\subsection{Two-Phase Commit Protocol (for the DAG
+Journal)}\label{two-phase-commit-protocol-for-the-dag-journal}}
+
+The Bracket Engine must guarantee that no output is observable before
+its provenance is journaled. This requires a 2PC protocol:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Prepare.} Compute the output and stage the journal entry.
+\item
+  \textbf{Write.} Append the journal entry to the immutable log.
+\item
+  \textbf{Publish.} Make the output visible to callers.
+\item
+  \textbf{Rollback path.} If any step fails, the staged journal entry is
+  discarded, the output is not published, and the caller receives the
+  error atomically.
+\end{enumerate}
+
+The journal uses an append-only log structure with Merkle-tree
+checkpointing every 1024 entries. Integrity is verifiable offline.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{governance-model}{%
+\section{Governance Model}\label{governance-model}}
+
+\hypertarget{the-constraint-attractor-cycle}{%
+\subsection{The Constraint-Attractor
+Cycle}\label{the-constraint-attractor-cycle}}
+
+The governance layer implements the inversion arc from Paper C
+(TR-2026-FF06c): every solution, once it satisfies the closure and
+information-balance criteria, is promoted to become a constraint for
+subsequent computations. This prevents drift and enforces cumulative
+consistency.
+
+\begin{verbatim}
+   +----------+   solve    +------------+  promote   +----------+
+   | CONSTRAINT| --------→ |  ATTRACTOR | ---------→ |CONSTRAINT|
+   |   set k   |           |   state    |            |  set k+1 |
+   +----------+            +------------+            +----------+
+         ^                                                  |
+         +---------------- feedback ------------------------+
+\end{verbatim}
+
+\hypertarget{grade-hierarchy}{%
+\subsection{Grade Hierarchy}\label{grade-hierarchy}}
+
+Outputs are tagged with a grade that determines their usage rights:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2143}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4524}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Grade
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Backend
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Closure Threshold
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Usage
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Theorem & SymPy (exact ℚ) & \texttt{\textless{}\ 1e-14} & May be cited
+as a theorem, added to the permanent constraint set \\
+Verification & mpmath & \texttt{\textless{}\ 1e-10} & Strong numerical
+evidence; candidate for promotion to Theorem \\
+Exploratory & NumPy (fp64) & \texttt{\textless{}\ 1e-6} & Advisory only;
+never admitted to the constraint set \\
+\end{longtable}
+
+Promotion from Verification to Theorem requires re-running the
+computation in SymPy exact arithmetic and passing the stricter
+threshold. Downgrade never happens automatically; it requires an
+explicit governance action with audit trail.
+
+\hypertarget{audit-log}{%
+\subsection{Audit Log}\label{audit-log}}
+
+Every state transition in the governance layer is logged to an
+append-only audit store. The log schema:
+
+\begin{verbatim}
+{
+  "timestamp": "ISO-8601",
+  "actor": "string (user or service identity)",
+  "action": "ingest | bracket | validate | promote | downgrade | reject",
+  "input_hashes": ["sha256:..."],
+  "output_hash": "sha256:...",
+  "grade": "theorem | verification | exploratory",
+  "policy_version": "semver",
+  "witness": "string (reproduction instructions)"
+}
+\end{verbatim}
+
+Logs are cryptographically linked via a hash chain; any tampering breaks
+the chain and is detectable in O(N) verification.
+
+\hypertarget{policy-as-code}{%
+\subsection{Policy as Code}\label{policy-as-code}}
+
+All governance policies are declarative and version-controlled:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# policies/theorem\_grade.yaml}
+\FunctionTok{name}\KeywordTok{:}\AttributeTok{ TheoremGrade}
+\FunctionTok{version}\KeywordTok{:}\AttributeTok{ }\FloatTok{1.2.0}
+\FunctionTok{constraints}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ backend}
+\AttributeTok{    }\FunctionTok{allowed}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\AttributeTok{sympy}\KeywordTok{]}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ closure\_threshold}
+\AttributeTok{    }\FunctionTok{max}\KeywordTok{:}\AttributeTok{ }\StringTok{"1e{-}14"}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ jacobi\_verification}
+\AttributeTok{    }\FunctionTok{required}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{sampling}\KeywordTok{:}\AttributeTok{ exhaustive}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ bch\_order}
+\AttributeTok{    }\FunctionTok{max}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+\FunctionTok{attractor\_criteria}\KeywordTok{:}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ delta\_I}
+\AttributeTok{    }\FunctionTok{threshold}\KeywordTok{:}\AttributeTok{ }\StringTok{"1e{-}12"}
+\AttributeTok{    }\FunctionTok{window}\KeywordTok{:}\AttributeTok{ }\DecValTok{8}
+\AttributeTok{  }\KeywordTok{{-}}\AttributeTok{ }\FunctionTok{kind}\KeywordTok{:}\AttributeTok{ closure\_stability}
+\AttributeTok{    }\FunctionTok{consecutive\_passes}\KeywordTok{:}\AttributeTok{ }\DecValTok{3}
+\end{Highlighting}
+\end{Shaded}
+
+Policy changes require code review, version bump, and a migration test
+--- running the previous theorem set under the new policy to confirm no
+regressions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{deployment-architecture}{%
+\section{Deployment Architecture}\label{deployment-architecture}}
+
+\hypertarget{deployment-topology}{%
+\subsection{Deployment Topology}\label{deployment-topology}}
+
+\begin{verbatim}
++-----------------------------------------------------------------+
+|  EDGE — Jupyter kernels · CLI · REST clients                    |
++-----------------------------+-----------------------------------+
+                              | TLS 1.3, mTLS for service calls
++-----------------------------v-----------------------------------+
+|  API GATEWAY — auth, rate limits, grade routing                 |
++-----------------------------+-----------------------------------+
+                              |
++-----------------------------v-----------------------------------+
+|  APPLICATION TIER                                               |
+|  Bracket Engine workers (stateless) — horizontal scale          |
+|  Governance Policy Engine (stateful, replicated 3-way)          |
++--------------+--------------------------+-----------------------+
+               |                          |
+      +--------v--------+         +------v-------+
+      |  Content Store  |         | Audit Log    |
+      |  (S3-compatible,|         | (append-only,|
+      |  content-addr.) |         | hash-chained)|
+      +-----------------+         +--------------+
+\end{verbatim}
+
+\hypertarget{service-decomposition}{%
+\subsection{Service Decomposition}\label{service-decomposition}}
+
+Four services, clearly bounded:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{\texttt{acs-api}} --- stateless REST façade. Validates inputs,
+  routes to the Bracket Engine, returns results with receipts.
+\item
+  \textbf{\texttt{acs-engine}} --- the Bracket Engine worker pool.
+  Consumes work from a deterministic work queue. Stateless modulo the
+  journal.
+\item
+  \textbf{\texttt{acs-governance}} --- Policy Engine, Closure Validator,
+  ΔI Monitor. Replicated 3-way with Raft consensus for policy updates.
+\item
+  \textbf{\texttt{acs-journal}} --- append-only audit + DAG log.
+  Content-addressed store. Periodic Merkle checkpoints.
+\end{enumerate}
+
+Each service is independently deployable, independently versioned, and
+communicates only through explicit message contracts (protobuf).
+
+\hypertarget{resource-envelope-phase-1-target}{%
+\subsection{Resource Envelope (Phase 1
+Target)}\label{resource-envelope-phase-1-target}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Resource & Sizing \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Engine workers & 4 cores, 16 GB each, 3--8 replicas \\
+Governance & 2 cores, 8 GB, 3-way replicated \\
+API façade & 2 cores, 4 GB, 3-way replicated \\
+Journal & 500 GB SSD (+ cold storage) \\
+Content store & 5 TB (S3-compatible) \\
+\end{longtable}
+
+Phase 1 targets a single region deployment. Multi-region is a Phase 3
+concern and requires the content store to support regional
+content-addressed replication.
+
+\hypertarget{observability}{%
+\subsection{Observability}\label{observability}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Metrics.} Per-bracket latency, closure-defect distribution, ΔI
+  trajectory, grade distribution. Prometheus-format.
+\item
+  \textbf{Tracing.} Every computation gets a trace ID propagated through
+  all services. OpenTelemetry.
+\item
+  \textbf{Logs.} Structured JSON. Audit log is separate from operational
+  log and is never deleted.
+\item
+  \textbf{Alerts.} Closure threshold violations in Theorem-grade work;
+  journal integrity failures; unusual latency distributions in the
+  Bracket Engine.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{api-and-integration-contracts}{%
+\section{API and Integration
+Contracts}\label{api-and-integration-contracts}}
+
+\hypertarget{rest-api-minimal-surface}{%
+\subsection{REST API (Minimal Surface)}\label{rest-api-minimal-surface}}
+
+\begin{verbatim}
+POST /v1/bracket
+  Body: { form: FormRef, function: FunctionRef, order: 1|2|3, grade: string }
+  Returns: { output: FormRef, receipt: string, grade_achieved: string }
+
+GET /v1/form/{content_hash}
+  Returns the full Form by its content hash.
+
+POST /v1/validate
+  Body: { form: FormRef, subspace: AlgebraSubspaceRef, threshold: Decimal }
+  Returns: { passed: bool, defect: Decimal, witness: string }
+
+POST /v1/verify/{theorem_id}
+  Runs the verification script for the named theorem.
+  Returns: { passed: bool, execution_time: duration, receipt: string }
+
+GET /v1/audit/{receipt}
+  Returns the complete audit trail for a given receipt.
+\end{verbatim}
+
+All endpoints are idempotent on the content-hash identity. No session
+state. No conversational memory.
+
+\hypertarget{python-client-api}{%
+\subsection{Python Client API}\label{python-client-api}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ acs }\ImportTok{import}\NormalTok{ Stack, Form, Function}
+
+\NormalTok{stack }\OperatorTok{=}\NormalTok{ Stack.}\ExtensionTok{connect}\NormalTok{(}\StringTok{"https://acs.example.org"}\NormalTok{)}
+
+\CommentTok{\# Load a Form}
+\NormalTok{f }\OperatorTok{=}\NormalTok{ stack.forms.get(}\StringTok{"sha256:abc123..."}\NormalTok{)}
+
+\CommentTok{\# Apply a Function}
+\NormalTok{phi }\OperatorTok{=}\NormalTok{ stack.functions.get(}\StringTok{"bracket.T\_BL.sl4"}\NormalTok{)}
+
+\CommentTok{\# Compose — uses the | operator for bracket}
+\NormalTok{result }\OperatorTok{=}\NormalTok{ f }\OperatorTok{|}\NormalTok{ phi  }\CommentTok{\# implicit order 3, Verification grade}
+
+\CommentTok{\# Explicit version with full control}
+\NormalTok{result }\OperatorTok{=}\NormalTok{ stack.bracket(}
+\NormalTok{    form}\OperatorTok{=}\NormalTok{f,}
+\NormalTok{    function}\OperatorTok{=}\NormalTok{phi,}
+\NormalTok{    order}\OperatorTok{=}\DecValTok{3}\NormalTok{,}
+\NormalTok{    grade}\OperatorTok{=}\StringTok{"Theorem"}\NormalTok{,}
+\NormalTok{)}
+
+\CommentTok{\# Every result carries its receipt}
+\BuiltInTok{print}\NormalTok{(result.receipt)}
+\CommentTok{\# {-}\textgreater{} "receipt:sha256:..., grade:Theorem, policy:v1.2.0, ts:2026{-}04{-}17T..."}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{integration-with-external-tools}{%
+\subsection{Integration with External
+Tools}\label{integration-with-external-tools}}
+
+The stack ships adapters for:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Jupyter} --- a kernel that exposes the REST API through
+  \texttt{\%acs} magic
+\item
+  \textbf{SymPy} --- round-trip conversion between SymPy expressions and
+  ACS Forms
+\item
+  \textbf{LaTeX} --- theorem output emits LaTeX with cryptographic
+  provenance footnotes linking back to the receipt
+\item
+  \textbf{Git} --- the audit log can be mirrored into a git-compatible
+  append-only branch for version-controlled collaboration
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{phased-implementation-roadmap}{%
+\section{Phased Implementation
+Roadmap}\label{phased-implementation-roadmap}}
+
+\hypertarget{phase-0-foundations-months-02}{%
+\subsection{Phase 0 --- Foundations (Months
+0--2)}\label{phase-0-foundations-months-02}}
+
+\begin{itemize}
+\tightlist
+\item
+  Kernel (Layer 0): SymPy + mpmath + NumPy backends, kernel invariant
+  test suite
+\item
+  Form/Function (Layer 1): Pydantic schemas, type system, 20+ standard
+  Form types and Function types
+\item
+  Content-addressed store prototype
+\item
+  Audit log prototype
+\end{itemize}
+
+\textbf{Exit criterion.} All 76 verification scripts pass under the new
+Form/Function typing.
+
+\hypertarget{phase-1-core-engine-months-25}{%
+\subsection{Phase 1 --- Core Engine (Months
+2--5)}\label{phase-1-core-engine-months-25}}
+
+\begin{itemize}
+\tightlist
+\item
+  Bracket Engine with full BCH-3 support
+\item
+  Closure Validator
+\item
+  ΔI Monitor
+\item
+  Basic Policy Engine (TheoremGrade, VerificationGrade,
+  ExploratoryGrade)
+\item
+  REST API façade
+\end{itemize}
+
+\textbf{Exit criterion.} End-to-end determinism test: given a fixed Form
+and Function, the stack produces byte-identical outputs across 1000
+consecutive invocations, and across clean-room re-deployments.
+
+\hypertarget{phase-2-governance-months-58}{%
+\subsection{Phase 2 --- Governance (Months
+5--8)}\label{phase-2-governance-months-58}}
+
+\begin{itemize}
+\tightlist
+\item
+  Full constraint-attractor cycle
+\item
+  Policy-as-code with version migration tests
+\item
+  Audit log Merkle checkpointing
+\item
+  Grade promotion workflow with human-in-the-loop approval
+\end{itemize}
+
+\textbf{Exit criterion.} Independent auditor can replay any
+Theorem-grade output from its receipt alone and confirm byte-identity.
+
+\hypertarget{phase-3-scale-and-integration-months-812}{%
+\subsection{Phase 3 --- Scale and Integration (Months
+8--12)}\label{phase-3-scale-and-integration-months-812}}
+
+\begin{itemize}
+\tightlist
+\item
+  Horizontal scaling of the Bracket Engine
+\item
+  Multi-region journal replication
+\item
+  Jupyter + SymPy + LaTeX adapters
+\item
+  Public API with authenticated access
+\end{itemize}
+
+\textbf{Exit criterion.} 99.9\% uptime under production load; sub-second
+latency for bracket operations below complexity bound C₁ (tbd).
+
+\hypertarget{phase-4-extension-to-the-physics-frontier-months-12}{%
+\subsection{Phase 4 --- Extension to the Physics Frontier (Months
+12+)}\label{phase-4-extension-to-the-physics-frontier-months-12}}
+
+\begin{itemize}
+\tightlist
+\item
+  Lattice PS simulation integration (external compute cluster)
+\item
+  Neutrino precision posterior fitter
+\item
+  GW waveform templates using the 0:1:4 torsion hierarchy
+\item
+  X-ray line search posterior updater (XRISM data feed)
+\end{itemize}
+
+\textbf{Exit criterion.} Phase 4 is open-ended; each experimental test
+from Paper A's Appendix E maps to a service integration milestone.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{risks-and-mitigations}{%
+\section{Risks and Mitigations}\label{risks-and-mitigations}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Risk
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Likelihood
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Severity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Mitigation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Floating-point creep into Theorem-grade work & Medium & Critical &
+Policy Engine refuses to grade as Theorem unless SymPy backend is used;
+CI enforces \\
+Journal corruption & Low & Critical & Merkle checkpoints every 1024
+entries; offline integrity verifier; 3-way replication \\
+Policy version drift between services & Medium & High & All services
+embed the policy version in every response; mismatch aborts the call \\
+Performance bottleneck at BCH-3 & High & Medium & BCH-3 is algebraically
+bounded; if dominant, introduce lazy evaluation and memoisation.
+Complexity is O(k³) in algebra rank, not exponential \\
+Closure threshold tuning & Medium & Medium & Thresholds are part of
+policy-as-code; changes require migration tests against the full theorem
+set \\
+Jacobi identity violations from numerical error & Medium & High & Tier-1
+CI samples 10⁴ random triples per build; violation triggers immediate
+policy-engine quarantine \\
+Determinism break from library upgrade & High & Medium & All
+dependencies pinned by hash; upgrade requires full 76-script
+regression \\
+Abuse of Exploratory grade for production claims & Low & High & Grade is
+cryptographically bound to receipt; external tools reject unapproved
+grades \\
+Auditor-replay failure on legitimate output & Low & Critical & Receipts
+carry complete reproduction envelope including library hashes; replay
+tools ship with the receipt format spec \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{traceability-to-the-acs-trilogy}{%
+\section{Traceability to the ACS
+Trilogy}\label{traceability-to-the-acs-trilogy}}
+
+Every architectural decision in this document traces back to a specific
+result in the ACS trilogy. This section is the cross-reference index.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4250}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Design Decision
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Justification
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Form/Function type split & ACS-2 structural asymmetry & Paper A §2.1 Def
+2.3 \\
+BCH-3 truncation & Jacobi truncation theorem & Paper A §5.1 Thm \\
+Closure-defect validation & Closure attractor selection (50k samples) &
+Paper A §4.3 \\
+Information-balance halting & \texttt{ΔI\ =\ 0} attractor & Paper A §2.3
+Lemma 2.10 \\
+Constraint-attractor cycle & Inversion arc & Paper C §3 \\
+Content-addressed provenance & Reproducibility envelope (Paper A
+footnote) & Paper A §6.8 \\
+Three grades (Theorem/Ver/Exp) & Epistemic tiers & Paper A §C.2 \\
+Torsion-hierarchy priority weights & 0:1:4 coupling hierarchy & Paper A
+§C.1 \\
+Seven configuration parameters & 7-parameter irreducible boundary &
+Paper A §C.2 \\
+Two-phase commit & Constraint before publication & Paper C §3.3 \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{glossary}{%
+\section{Glossary}\label{glossary}}
+
+\textbf{ACS.} Asymmetric Codependent System --- a pair of fields (Form,
+Function) that cannot be defined independently and whose interaction is
+governed by a Lie bracket.
+
+\textbf{BCH.} Baker-Campbell-Hausdorff formula --- the expansion for
+\texttt{log(exp(X)\ exp(Y))} as a series of nested commutators.
+
+\textbf{Bracket Engine.} The core compositional primitive of the stack.
+Computes \texttt{{[}F,\ Φ{]}} truncated at BCH order 3.
+
+\textbf{Closure attractor.} The unique subspace of a Lie algebra in
+which a given set of generators closes under the bracket, minimising the
+closure defect functional.
+
+\textbf{Closure defect \texttt{D(V)}.} A functional measuring how far a
+subspace \texttt{V} falls short of being closed under the bracket.
+
+\textbf{Constraint-attractor cycle.} The governance feedback loop in
+which outputs that satisfy the current constraints become the
+constraints for subsequent computations.
+
+\textbf{Form.} A typed immutable state object. Corresponds to the
+vierbein in the physics.
+
+\textbf{Function.} A typed operator acting on Forms. Corresponds to the
+spin connection in the physics.
+
+\textbf{Grade.} A classification of computational trust level: Theorem,
+Verification, or Exploratory.
+
+\textbf{Holonomy.} The third-order BCH term
+\texttt{{[}{[}f,g{]},\ h{]}}. In the architecture, this is the final
+emergent layer before Jacobi truncation.
+
+\textbf{Information balance.} The condition \texttt{ΔI\ =\ 0} indicating
+a computation has reached its attractor.
+
+\textbf{Jacobi truncation.} The fact that
+\texttt{{[}{[}A,B{]},C{]}\ +\ {[}{[}B,C{]},A{]}\ +\ {[}{[}C,A{]},B{]}\ =\ 0}
+ensures no new independent content is generated beyond BCH order 3.
+
+\textbf{Killing form.} The symmetric bilinear form
+\texttt{K(X,\ Y)\ =\ tr(ad(X)\ ad(Y))} on a Lie algebra.
+
+\textbf{Receipt.} A cryptographic record of a computation, sufficient
+for independent replay.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{appendix-a-reference-implementation-sketch}{%
+\section{Appendix A --- Reference Implementation
+Sketch}\label{appendix-a-reference-implementation-sketch}}
+
+The following skeleton shows the core of the Bracket Engine in minimal
+Python form, demonstrating determinism and provenance.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# acs/engine.py}
+\ImportTok{from}\NormalTok{ \_\_future\_\_ }\ImportTok{import}\NormalTok{ annotations}
+\ImportTok{from}\NormalTok{ dataclasses }\ImportTok{import}\NormalTok{ dataclass, replace}
+\ImportTok{from}\NormalTok{ hashlib }\ImportTok{import}\NormalTok{ sha256}
+\ImportTok{from}\NormalTok{ decimal }\ImportTok{import}\NormalTok{ Decimal}
+\ImportTok{from}\NormalTok{ typing }\ImportTok{import}\NormalTok{ Protocol}
+\ImportTok{import}\NormalTok{ json}
+
+\KeywordTok{class}\NormalTok{ FormProto(Protocol):}
+\NormalTok{    content: }\BuiltInTok{object}
+\NormalTok{    schema\_version: }\BuiltInTok{str}
+\NormalTok{    provenance: }\BuiltInTok{str}
+    \AttributeTok{@property}
+    \KeywordTok{def}\NormalTok{ content\_hash(}\VariableTok{self}\NormalTok{) }\OperatorTok{{-}\textgreater{}} \BuiltInTok{str}\NormalTok{: ...}
+
+\KeywordTok{class}\NormalTok{ FunctionProto(Protocol):}
+\NormalTok{    name: }\BuiltInTok{str}
+\NormalTok{    order: }\BuiltInTok{int}
+    \KeywordTok{def} \BuiltInTok{apply}\NormalTok{(}\VariableTok{self}\NormalTok{, f: FormProto) }\OperatorTok{{-}\textgreater{}}\NormalTok{ FormProto: ...}
+    \KeywordTok{def}\NormalTok{ bracket\_with(}\VariableTok{self}\NormalTok{, other: FunctionProto) }\OperatorTok{{-}\textgreater{}}\NormalTok{ FunctionProto: ...}
+
+\AttributeTok{@dataclass}\NormalTok{(frozen}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
+\KeywordTok{class}\NormalTok{ Receipt:}
+\NormalTok{    input\_hash: }\BuiltInTok{str}
+\NormalTok{    function\_name: }\BuiltInTok{str}
+\NormalTok{    order: }\BuiltInTok{int}
+\NormalTok{    output\_hash: }\BuiltInTok{str}
+\NormalTok{    policy\_version: }\BuiltInTok{str}
+\NormalTok{    grade: }\BuiltInTok{str}
+
+\NormalTok{\_JOURNAL: }\BuiltInTok{list}\NormalTok{[Receipt] }\OperatorTok{=}\NormalTok{ []  }\CommentTok{\# Prototype — real impl uses append{-}only store}
+
+\KeywordTok{def}\NormalTok{ bracket(}
+\NormalTok{    f: FormProto,}
+\NormalTok{    phi: FunctionProto,}
+\NormalTok{    order: }\BuiltInTok{int} \OperatorTok{=} \DecValTok{3}\NormalTok{,}
+\NormalTok{    grade: }\BuiltInTok{str} \OperatorTok{=} \StringTok{"Verification"}\NormalTok{,}
+\NormalTok{    policy\_version: }\BuiltInTok{str} \OperatorTok{=} \StringTok{"1.0.0"}\NormalTok{,}
+\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ FormProto:}
+    \ControlFlowTok{if}\NormalTok{ order }\KeywordTok{not} \KeywordTok{in}\NormalTok{ (}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{):}
+        \ControlFlowTok{raise} \PreprocessorTok{ValueError}\NormalTok{(}\SpecialStringTok{f"BCH order must be 1, 2, or 3; got }\SpecialCharTok{\{}\NormalTok{order}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \CommentTok{\# Phase: execute the truncated bracket}
+\NormalTok{    r1 }\OperatorTok{=}\NormalTok{ phi.}\BuiltInTok{apply}\NormalTok{(f)}
+    \ControlFlowTok{if}\NormalTok{ order }\OperatorTok{==} \DecValTok{1}\NormalTok{:}
+\NormalTok{        out }\OperatorTok{=}\NormalTok{ r1}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        r2 }\OperatorTok{=}\NormalTok{ \_commutator(f, r1)}
+        \ControlFlowTok{if}\NormalTok{ order }\OperatorTok{==} \DecValTok{2}\NormalTok{:}
+\NormalTok{            out }\OperatorTok{=}\NormalTok{ r2}
+        \ControlFlowTok{else}\NormalTok{:  }\CommentTok{\# order == 3}
+\NormalTok{            r3a }\OperatorTok{=}\NormalTok{ \_commutator(f, r2)}
+\NormalTok{            r3b }\OperatorTok{=}\NormalTok{ \_commutator(r1, r2)}
+\NormalTok{            out }\OperatorTok{=}\NormalTok{ \_add(r3a, r3b)}
+
+    \CommentTok{\# Phase: validate closure (elided here)}
+    \CommentTok{\# Phase: compute provenance}
+\NormalTok{    new\_provenance }\OperatorTok{=}\NormalTok{ sha256(}
+        \SpecialStringTok{f"}\SpecialCharTok{\{}\NormalTok{f}\SpecialCharTok{.}\NormalTok{content\_hash}\SpecialCharTok{\}}\SpecialStringTok{|}\SpecialCharTok{\{}\NormalTok{phi}\SpecialCharTok{.}\NormalTok{name}\SpecialCharTok{\}}\SpecialStringTok{|}\SpecialCharTok{\{}\NormalTok{order}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{.encode()}
+\NormalTok{    ).hexdigest()}
+\NormalTok{    out }\OperatorTok{=}\NormalTok{ replace(out, provenance}\OperatorTok{=}\SpecialStringTok{f"sha256:}\SpecialCharTok{\{}\NormalTok{new\_provenance}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \CommentTok{\# Phase: journal}
+\NormalTok{    \_JOURNAL.append(Receipt(}
+\NormalTok{        input\_hash}\OperatorTok{=}\NormalTok{f.content\_hash,}
+\NormalTok{        function\_name}\OperatorTok{=}\NormalTok{phi.name,}
+\NormalTok{        order}\OperatorTok{=}\NormalTok{order,}
+\NormalTok{        output\_hash}\OperatorTok{=}\NormalTok{out.content\_hash,}
+\NormalTok{        policy\_version}\OperatorTok{=}\NormalTok{policy\_version,}
+\NormalTok{        grade}\OperatorTok{=}\NormalTok{grade,}
+\NormalTok{    ))}
+    \ControlFlowTok{return}\NormalTok{ out}
+
+\KeywordTok{def}\NormalTok{ \_commutator(a: FormProto, b: FormProto) }\OperatorTok{{-}\textgreater{}}\NormalTok{ FormProto:}
+    \CommentTok{\# Implemented per algebra type; the kernel dispatches on schema\_version.}
+\NormalTok{    ...}
+
+\KeywordTok{def}\NormalTok{ \_add(a: FormProto, b: FormProto) }\OperatorTok{{-}\textgreater{}}\NormalTok{ FormProto:}
+\NormalTok{    ...}
+\end{Highlighting}
+\end{Shaded}
+
+This skeleton satisfies invariants I-B1 (same inputs → same outputs via
+deterministic \texttt{phi.apply}), I-B2 (BCH capped at 3), and I-B3
+(journal append happens before return). A production implementation
+replaces the in-memory \texttt{\_JOURNAL} with a proper append-only
+store and adds the 2PC protocol from §5.3.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{document-status}{%
+\section{Document Status}\label{document-status}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Version.} 1.0 (Initial PDR)
+\item
+  \textbf{Status.} Design review --- open for technical critique
+\item
+  \textbf{Next review.} After Phase 0 exit criterion
+\item
+  \textbf{Author.} Bradley Wallace
+\item
+  \textbf{Document ID.} TR-2026-FF06d
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{End of document.}
+
+\end{document}

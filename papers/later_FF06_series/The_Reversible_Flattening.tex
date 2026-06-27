@@ -1,0 +1,252 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small The Reversible Flattening}\fancyhead[R]{\small TR-2026-FF06i}
+\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}{Proposition}
+\newtheorem{criterion}{Criterion}\newtheorem{definition}{Definition}
+\newtheorem{observation}{Observation}
+
+\title{\textbf{The Reversible Flattening:\\
+Algebraic Representation as a Recoverable Compression of Relational Structure}\\[4pt]
+\large A homomorphism criterion for when scalars should be returned to geometry}
+\author{B.\ Wallace \quad (TensorRent)\\
+\small with computational verification by Claude (Anthropic)}
+\date{\small TR-2026-FF06i \ ---\ Parent of FF06g/h \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We advance a single mathematical thesis with a precise, testable criterion, and characterize the boundary it
+runs into. Much of arithmetic and algebra is a \emph{flattening}: a relational object (a factorization, a
+divisor lattice, a dominance relation) is projected onto a scalar or a symbol string because, historically,
+symbols on paper were the computable medium. We give the exact condition under which that flattening is
+\emph{reversible} --- recoverable losslessly to a relational form one can compute in directly --- and show it
+is the condition that the operation producing the scalar be a \emph{homomorphism} from the object's structure
+into a structure the relational representation stores. The boundary of reversibility (the ``seam'') is not a
+void: we characterize it precisely as \emph{convolution} --- the operation that adds indices while
+multiplying values --- and verify that the additive structure it was thought to lack is real but
+\emph{cardinal} (the partition function, the size of the cloud) rather than \emph{unique} (a factorization,
+a point), and is encoded multiplicatively by its generating function (Euler's product, verified). Two kinds
+of structure --- unique and cardinal --- meet in convolution, which is crossable for density and uncrossable
+for identity; this single fact organizes the explicit formula, the difficulty of fully homomorphic
+encryption, and the limits below. Under this criterion, three regimes appear and are each verified. (1) The
+\emph{homomorphic} regime --- multiplication, $\gcd$, $\mathrm{lcm}$, powers, and every multiplicative
+arithmetic function --- is reversible: by the Fundamental Theorem of Arithmetic, $(\mathbb{Z}_{>0},\times)$
+is isomorphic to $(\bigoplus \mathbb{N},+)$ on exponent vectors, and we verify exact computation across seven
+applied-mathematics domains, $14/14$ tests exact against ground truth, including objects of $\sim\!5000$
+digits that overflow the scalar form. (2) The \emph{non-transitive} regime --- dominance relations, social
+choice --- admits \emph{no} faithful scalar at all: a Condorcet cycle forces every total order to contradict
+the majority relation, so the relation is mandatory, not merely preferable, and the cyclicity persists at
+scale. (3) The \emph{seam} --- addition and ordering --- is non-homomorphic on factor structure and therefore
+irreversible: it is the genuine, fundamental wall, proven by direct counterexample. The thesis is thus not
+``geometry is better than algebra'' but the sharper claim that the algebraic flattening was a medium-driven
+compression, reversible exactly on the homomorphic and relational classes, and that modern computation lets
+us both perform and \emph{verify} the inverse transposition. We keep the full negative ledger --- two
+falsified search heuristics and four architecture-integration hypotheses falsified against live source ---
+because the boundary, not the enthusiasm, is the result.
+\end{abstract}
+
+\section{Thesis}
+
+Mathematics began with observation and construction --- lengths, angles, areas --- and was then abstracted
+into symbol and number because that form was mechanically manipulable by hand. This abstraction was an
+enormous gain and also a \emph{compression}: it flattened relational content into coordinate- and
+digit-strings, and a great deal of later effort (managing precision, overflow, coordinate artifacts) is the
+cost of recovering relations the flattening discarded. The thesis of this paper is precise:
+
+\begin{quote}
+The algebraic flattening of a relational object into a scalar is \emph{losslessly reversible} if and only if
+the operation that produces the scalar is a homomorphism from the object's structure into a structure the
+relational representation stores directly. Where reversible, computing in the restored relational form is
+more faithful and frequently more tractable; where not, the scalar is native and the flattening is genuine.
+\end{quote}
+
+This is a statement about \emph{representation}, not about the superiority of one notation. It explains a
+historical contingency (symbols were the computable medium) and supplies a criterion that did not previously
+have a name, then verifies the criterion across applied mathematics.
+
+\section{The criterion}
+
+\begin{definition}[Flattening and its inverse]
+A \emph{flattening} of a structured object $R$ is a map $\pi:R\to s$ to a scalar or symbol string. It is
+\emph{reversible} if there is a representation $\rho(R)$ --- the relational form --- and a recovery
+$\rho(R)\to s$ that is exact, such that the operations of interest are computed on $\rho(R)$ without forming
+$s$.
+\end{definition}
+
+\begin{criterion}[Homomorphism]
+The flattening of an operation $\star$ is reversible exactly when $\star$ is a homomorphism
+$(\text{objects},\star)\to(\text{stored relational structure},\oplus)$. Then $\rho(a\star b)=\rho(a)\oplus
+\rho(b)$ and the relational form computes $\star$ without forming the scalar.
+\end{criterion}
+
+For integers under multiplication this is the Fundamental Theorem of Arithmetic: factorization is an
+isomorphism $(\mathbb{Z}_{>0},\times)\cong(\bigoplus_p\mathbb{N},+)$, so multiplication becomes vector
+addition of exponents, $\gcd$ and $\mathrm{lcm}$ become coordinatewise $\min$ and $\max$, powers become
+scaling. We verify $\rho(ab)=\rho(a)\oplus\rho(b)$ directly. Addition fails the criterion: $\rho(a+b)$ is not
+a function of $\rho(a),\rho(b)$ in any structure-preserving way --- $360+84=444$ and $363+81=444$ have
+identical sums from disjoint summand structures, and a unit change of input ($360+86=446$) yields an
+unrelated factor structure. Addition is not a homomorphism on factor structure; its flattening is
+irreversible. This is the seam, now stated as the exact non-homomorphic boundary rather than as a list of
+hard cases.
+
+\section{Regime 1: the homomorphic class, verified exact}
+
+Every operation that is homomorphic into exponent-vector structure is reversible, and we computed each in the
+relational form, exact against ground truth (oracle: standard libraries; seed \texttt{20260423}).
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+domain & operations & verification \\
+\midrule
+arithmetic functions & $d(n),\sigma(n),\sigma_2(n),\varphi(n),\mu(n)$ & exact, $300$ values each \\
+$\gcd$ / $\mathrm{lcm}$ & $\min$/$\max$ on exponents & exact, $300$ pairs each \\
+binomial / factorial & Legendre exponent formula & $\binom{20}{7},\binom{100}{50},\binom{500}{123}$ exact \\
+modular products & homomorphism preserved under $\bmod$ & concentrated chain $\bmod\,(2^{61}{-}1)$ exact \\
+lattice index / SNF & product of elementary divisors & $\sim\!1479$-digit index, exact, no overflow \\
+multinomial multiplicity & $N!/\prod n_i!$ & $\sim\!4978$-digit $W$, exact \\
+radical / perfect power & squarefree kernel, exponent $\gcd$ & exact, $200$ values \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{observation}[$14/14$ exact; the flattening visibly fails where the relation does not]
+All fourteen tests are exact. Two cases are decisive for the thesis: the multinomial $W$ ($\sim\!4978$
+digits) and the product of the first $5000$ primes ($\sim\!20975$ digits) are computed exactly in relational
+form, while \emph{forming the scalar} exceeded the host language's integer-to-string limit --- the flattening
+hit a wall the relational representation did not. The headline tractability instance (companion FF06g/h) is
+an exact-optimal search for the integer maximizing $d(n)$ that runs in exponent space to $N=10^{80}$,
+verified-optimal against brute force at four anchors, sixty-two orders of magnitude past enumeration.
+\end{observation}
+
+\section{Regime 2: the non-transitive class, where no scalar exists}
+
+The strongest form of the thesis is not lossiness but impossibility.
+
+\begin{theorem}[No faithful scalar under cycles]
+If the pairwise majority relation contains a cycle $A\succ B\succ C\succ A$, every total order contradicts at
+least one majority verdict. No scalar ranking represents the relation.
+\end{theorem}
+
+\begin{proof}[Verification]
+Exhaustive over all orderings of the Condorcet instance: the minimum number of contradicted majority edges
+is one, not zero. Total orders are transitive; the majority relation is not; a transitive structure cannot
+realize a cycle. This is the social-choice form of the same obstruction by which box containment (a partial
+order) cannot encode rock-paper-scissors.
+\end{proof}
+
+\begin{observation}[Structural, not small-sample]
+Measured cycle frequency rises with options ($\sim\!7\%,43\%,78\%,99\%$ for $3,5,7,10$ candidates) and
+persists with electorate size ($\sim\!48\%$ at $1001$ voters, five candidates). The impossibility is a
+structural feature of aggregation. Here the relational representation (a directed dominance graph,
+integer and exact) is not an improvement on a scalar --- it is the only faithful object.
+\end{observation}
+
+\section{Regime 3: the seam, the irreversible wall}
+
+Addition and ordering are non-homomorphic on factor structure (\S2) and so their flattening is irreversible:
+the sum genuinely destroys multiplicative structure. This is not a limitation of the representation; it is a
+fact about the operation, and it bounds the thesis from below. Every mixed object inherits it: a determinant
+is a \emph{sum} of products (irreversible) even though each product is reversible; a characteristic
+polynomial's coefficients are elementary symmetric \emph{sums} (irreversible) even when the eigenvalue
+\emph{product} (the determinant's magnitude) is reversible. The criterion sorts these correctly without
+appeal to intuition: test whether the operation is a homomorphism into the stored structure.
+
+\section{The seam characterized: convolution (keystone)}
+
+The seam is not a void to be avoided; it has a precise structure, and naming it sharpens the entire thesis.
+
+\begin{theorem}[Two kinds of structure]
+The multiplicative side carries \emph{unique} structure: by the Fundamental Theorem of Arithmetic a number's
+factorization is a single canonical object (a point). The additive side carries \emph{cardinal} structure:
+a number's additive decompositions are non-unique (a cloud), but the \emph{size} of that cloud is exact and
+deep --- the partition function $p(n)$ (e.g.\ $p(100)=190{,}569{,}292$). Addition is not structureless; its
+structure is the count, not an address.
+\end{theorem}
+
+\begin{theorem}[The seam is convolution, verified]
+The additive (cardinal) structure is encoded multiplicatively: Euler's identity
+$\sum_n p(n)x^n=\prod_{k\ge 1}(1-x^k)^{-1}$ turns the entire additive cloud into one product (verified: the
+product's coefficients equal $p(n)$ for $n\le 30$). The operation joining the two sides is
+\emph{convolution}: multiplying generating functions convolves coefficients,
+$(a\,x^i)(b\,x^j)=ab\,x^{i+j}$, which \emph{adds} the index and \emph{multiplies} the value. Convolution is
+the native inhabitant of the seam --- simultaneously additive in the index and multiplicative in the value
+(verified on coefficient sequences). The seam is therefore not impassable; it is crossed by generating
+functions, and the crossing operation is convolution.
+\end{theorem}
+
+\begin{observation}[Density, not identity]
+Convolution crosses the seam for \emph{counting} and not for \emph{identifying}: it yields how many, never
+which one. This single property organizes three facts at once. The Riemann explicit formula (companion work)
+is a convolution of primes against zeros, which is why the prime/zero relationship is statistical (a
+$+122\sigma$ density signal) and never an address. Fully homomorphic encryption is hard for the same reason
+the seam is real: addition and multiplication share no common homomorphic structure, so a single scheme must
+host both natively (lattice/LWE) and pay in noise --- there is no cheap bridge, exactly as the seam predicts.
+And the additive wall of \S2 is precisely the statement that convolution gives density without identity: the
+sum's factor structure is the convolution of the summands' structures, which determines a distribution, not
+a point.
+\end{observation}
+
+\section{Two independent axes: order-dependence and structure-retention}
+
+A test of the conjecture ``commutativity measures projected-away structure'' falsified the strong form and
+yielded a sharper map. Non-commutativity measures retained \emph{order-dependent} structure: scalar
+$+,\times$ are commutative and retain none (an index of $0$); the cross product is anti-commutative,
+retaining exactly orientation (one bit, a structured sign flip); matrix products are fully non-commutative,
+retaining the entire arrangement. But commutativity does \emph{not} imply absence of structure: $\gcd$ and
+$\mathrm{lcm}$ are commutative and retain the full common multiplicative structure (order-\emph{independent}
+structure). Order-dependence and structure-retention are therefore \emph{independent axes}. The shape engine
+lives in the commutative-and-structured cell --- which is exactly why its canonical fingerprint is
+path-independent (commutativity) yet information-complete (structure). The corrected law: non-commutativity
+measures retained order-dependent structure only; order-independent structure is orthogonal to it.
+
+\section{Consequence: inherited representation as recoverable debt}
+
+The criterion gives ``inherited technical debt'' a precise mathematical reading. A representational layer
+built atop the algebraic flattening inherits the flattening's irreversibility wherever the underlying
+operation was non-homomorphic, and inherits a \emph{recoverable} compression wherever it was homomorphic. The
+disciplined move, when seeking improvement, is therefore not only to build forward but to test whether a
+lower layer was homomorphically richer than the layer built on it --- and, crucially, modern computation lets
+us \emph{test} this per operation rather than assert it. The transposition back to relational form is a
+hypothesis checked by the homomorphism criterion and anchored against ground truth, not a faith. We make no
+claim beyond mathematics here: the criterion is the content.
+
+\section{Negative ledger (retained)}
+
+Falsifications are first-class. Two search heuristics were falsified en route to the verified-optimal
+$d(n)$ search (a greedy method, suboptimal; a non-admissible bound that pruned true optima). Four
+architecture-integration hypotheses were falsified against live source: the multiplicative-fit of an
+eigenvalue ``charge'' (the real charge composes additively, by the kernel's own specification); a
+geometric dual-engine router (the live constraints are ordinal thresholds and the live relation is
+transitive --- no cycles); and trust and hash layers (additive and avalanche-destroyed, respectively). In
+each, a clean structural resemblance was the warning sign, and the source or the anchor was the arbiter.
+These are the criterion working: the homomorphism test predicts the misses as well as the hits.
+
+\section{Scope}
+
+The mathematics is classical (FTA, Legendre, the multiplicativity of $\sigma,\varphi,\mu$, Smith normal
+form, Arrow/Condorcet). The contribution is the \emph{criterion} --- reversibility of a flattening equals
+homomorphism into the stored relational structure --- and its verification across seven applied domains, the
+non-transitive impossibility class, and the additive wall. The thesis does not touch primality or
+prime-counting (building a prime's relational form is the factoring wall), does not bear on the Riemann
+Hypothesis (a categorical gap between finite multiplicative bookkeeping and the analytic continuation of an
+infinite object), and is not an arithmetic accelerator (a compiled big integer outpaces the relational form
+on raw throughput; the relational advantage is exactness, overflow avoidance, and faithful representation of
+the otherwise-unrepresentable). Within those bounds it is exact, reproducible, and bounded from both sides.
+
+\vspace{1em}\noindent\rule{\linewidth}{0.4pt}\\
+\small Parent of TR-2026-FF06g (the engine) and FF06h (the relational principle and limits). Reference
+engine, dominance engine, and the reproducible ledger \texttt{verify\_ledger.py} ($14/14$ exact) accompany
+this paper. SIP License v1.1. Seed \texttt{20260423}.
+
+\end{document}

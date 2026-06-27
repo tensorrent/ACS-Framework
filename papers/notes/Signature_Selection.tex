@@ -1,0 +1,736 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[expansion=false]{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{observation}{Observation}
+
+\newcommand{\sln}[1]{\mathfrak{sl}(#1,\mathbb{R})}
+\newcommand{\TBL}{T_{B\!-\!L}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Gr}{\operatorname{Gr}}
+
+\title{Grading Selection from Adjoint Spectral Activity\\
+in $\sln{n}$}
+\author{B.~Wallace\thanks{Independent researcher.}}
+\date{May 2026 \\ Technical Note TR-2026-FF06-N2 \\
+Companion to TR-2026-FF06a}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For the Lie algebra $\sln{n}$ equipped with a diagonal Cartan
+element $T$ having eigenvalue clusters $C_1, \ldots, C_m$, we show
+that the functional
+$\widetilde{\mathcal{S}}_g[P] = \Tr(\sigma_P \cdot g(\ad_T))$
+over symmetric involutions $P$, for any even
+$g : \mathbb{R} \to \mathbb{R}_{\ge 0}$ with $g(0) = 0$ and
+$g(\lambda) > 0$, is minimised at a cluster-coherent partition:
+each eigenvalue cluster is assigned entirely to one side.  The
+proof shows that $g(0) = 0$ eliminates intra-cluster contributions,
+making the functional bilinear in cluster magnetisations, so
+splitting a cluster never helps --- provided the interaction weights
+factor through eigenvalue clusters.  This factorisation holds for
+all four classical Lie algebra families
+(Corollary~\ref{cor:classical}); for exceptional algebras
+($G_2$, $F_4$, $E_{6\text{--}8}$), eigenvalue clusters can contain
+roots of multiple lengths and the optimal grading may split clusters
+(Proposition~\ref{prop:G2}).  The optimisation reduces to a
+weighted max-cut on the complete graph $K_m$ with edge weights
+$w_{ij} = g(|t_i - t_j|)\,n_i\,n_j$.  For binary splits ($m = 2$),
+the minimiser is unique and places the minority cluster in the
+$P$-negative eigenspace; for $\TBL = \mathrm{diag}(1/3,1/3,1/3,-1)$,
+the selected grading has $(3,1)$ shape.  If $f(0) > 0$, the
+zero-mode contribution can change the selected grading
+(Proposition~\ref{prop:zero-mode}).
+
+The result is verified across $\sln{3}$--$\sln{6}$ (nine Cartan
+structures including binary and ternary splits), six spectral
+functionals, $\mathrm{O}(n)$ frame invariance, perturbation
+stability, and all four classical Lie algebra types.
+
+We emphasise that the theorem selects a grading of the
+\emph{internal} carrier space of $\sln{4}$, not of physical
+spacetime.  In light of the Coleman--Mandula theorem, identifying
+this internal $(3,1)$ decomposition with Lorentzian spacetime
+signature would require an additional bridging mechanism not
+provided here.
+\end{abstract}
+
+%-----------------------------------------------------------------
+\section{Setup}
+%-----------------------------------------------------------------
+
+Let $\mathfrak{g} = \sln{4}$ with basis $\{E_\alpha\}_{\alpha=1}^{15}$
+and trace inner product $\langle X, Y \rangle = \Tr(XY)$.
+
+\begin{definition}[Distinguished generator]
+A Cartan element $T \in \mathfrak{g}$ is a traceless diagonal
+matrix $T = \mathrm{diag}(t_1, \ldots, t_4)$ with $\sum_i t_i = 0$.
+Its adjoint $\ad_T$ acts on $\mathfrak{g}$ by
+$\ad_T(X) = [T, X]$, with eigenvalues
+$\{t_i - t_j : i \ne j\} \cup \{0\}$.
+\end{definition}
+
+\begin{definition}[Symmetric involution and grading]
+A symmetric involution on $\mathbb{R}^4$ is a matrix
+$P \in \mathrm{GL}(4,\mathbb{R})$ with $P^2 = I$ and $P = P^T$.
+It induces a grading on $\mathfrak{g}$ via $\sigma_P(X) = PXP^{-1}$:
+\[
+  \mathfrak{g} = \mathfrak{g}_+ \oplus \mathfrak{g}_-,
+  \qquad
+  \mathfrak{g}_\pm = \{X \in \mathfrak{g} : PXP^{-1} = \pm X\}.
+\]
+The space of symmetric involutions with fixed signature $(p,q)$
+($p$ positive eigenvalues, $q = 4{-}p$ negative) is the
+Grassmannian $\Gr(q, 4)$.
+\end{definition}
+
+The physically relevant signatures are:
+$(4,0)$ (Euclidean / trivial),
+$(3,1)$ or $(1,3)$ (Lorentzian),
+and $(2,2)$ (split / ultrahyperbolic).
+
+\begin{definition}[Graded spectral functional]
+\label{def:functional}
+For an even function $g : \mathbb{R} \to \mathbb{R}_{\ge 0}$ with
+$g(0) = 0$ and $g(\lambda) > 0$ for $\lambda \ne 0$, define
+\begin{equation}\label{eq:S-f}
+  \widetilde{\mathcal{S}}_g[P]
+  \;=\;
+  \Tr\bigl(\sigma_P \cdot g(\ad_T)\bigr),
+\end{equation}
+where $\sigma_P$ is the adjoint representation of the involution
+$X \mapsto PXP^{-1}$ (an $(n^2{-}1) \times (n^2{-}1)$ matrix with
+eigenvalues $\pm 1$), and $g(\ad_T)$ is defined via the spectral
+theorem applied to $\ad_T$.  The condition $g(0) = 0$ ensures that
+the functional depends only on the active (nonzero-eigenvalue) sector
+of $\ad_T$, eliminating the zero-mode contribution.
+\end{definition}
+
+The functional $\widetilde{\mathcal{S}}_g$ is invariant under
+simultaneous $\mathrm{O}(n)$ conjugation:
+$T \to GTG^T$, $P \to GPG^T$.
+
+%-----------------------------------------------------------------
+\section{Spectral structure of $\ad_{\TBL}$}
+%-----------------------------------------------------------------
+
+For $\TBL = \mathrm{diag}(1/3, 1/3, 1/3, -1)$:
+
+\begin{proposition}[Spectral decomposition of $\ad_\TBL$]
+\label{prop:spectrum}
+The adjoint operator $\ad_\TBL$ on $\sln{4}$ has spectrum
+$\{0, +4/3, -4/3\}$ with multiplicities $(9, 3, 3)$.
+\begin{itemize}\itemsep0pt
+  \item The $9$-dimensional kernel consists of the Cartan
+    generators $\{H_k\}$ and the purely spatial generators
+    $\{A_{ij}, S_{ij}\}$ with $i, j \in \{0,1,2\}$ (quark--quark
+    interactions).
+  \item The $6$-dimensional active sector consists of the
+    quark--lepton mixing generators $\{A_{i3}, S_{i3}\}$ for
+    $i \in \{0,1,2\}$, split equally between the $+4/3$ and
+    $-4/3$ eigenspaces.
+\end{itemize}
+\end{proposition}
+
+Since $\ad_\TBL$ has only two distinct eigenvalue magnitudes ($0$
+and $4/3$), any even function $f$ acts as:
+\begin{equation}\label{eq:f-spectral}
+  f(\ad_\TBL) = f(0) \cdot \Pi_{\ker}
+  \;+\; f(4/3) \cdot \Pi_{\mathrm{active}},
+\end{equation}
+where $\Pi_{\ker}$ and $\Pi_{\mathrm{active}}$ are the orthogonal
+projectors onto the $9$- and $6$-dimensional subspaces.
+
+%-----------------------------------------------------------------
+\section{The selection theorem}
+%-----------------------------------------------------------------
+
+We first establish the combinatorial structure of admissible
+parity assignments, then prove the selection theorem.
+
+\begin{lemma}[Parity induced by index partitions]
+\label{lem:partition}
+Since $\widetilde{\mathcal{S}}_g$ is invariant under simultaneous $\mathrm{O}(n)$
+conjugation of $(T, P)$, we may fix a basis in which $T$ is diagonal
+and restrict to symmetric involutions $P$ that are diagonal in this
+basis without loss of generality.
+
+In such a basis, $P = \mathrm{diag}(\epsilon_1,\dots,\epsilon_n)$
+with $\epsilon_i = \pm 1$, corresponding to a partition
+\[
+  \{1,\dots,n\} = I_+ \sqcup I_-,
+  \quad I_\pm = \{i : \epsilon_i = \pm 1\}.
+\]
+
+Under the induced adjoint action $\sigma_P(X) = PXP^{-1}$, the
+standard generators $E_{ab}$ of $\sln{n}$ (with matrix entries
+$(E_{ab})_{cd} = \delta_{ac}\delta_{bd}$ for the off-diagonal
+generators, and $(H_k)_{ii} = \delta_{ik} - \delta_{i,k+1}$
+for the Cartan) satisfy
+\begin{equation}\label{eq:parity-rule}
+  P\,E_{ab}\,P^{-1} = \epsilon_a\,\epsilon_b\,E_{ab}.
+\end{equation}
+Hence the parity eigenvalue of $E_{ab}$ under $\sigma_P$ is
+\[
+  p_{ab} =
+  \begin{cases}
+    +1 & \text{if } a, b \in I_+ \text{ or } a, b \in I_-,
+    \\[2pt]
+    -1 & \text{if } a \in I_+,\; b \in I_-
+          \text{ or } a \in I_-,\; b \in I_+.
+  \end{cases}
+\]
+The map
+$\mathrm{Part}(\{1,\dots,n\}) \to \{-1,+1\}^{n^2-1}$
+sending a partition to its induced parity assignment is injective
+modulo exchange $I_+ \leftrightarrow I_-$ (which corresponds to
+$P \leftrightarrow -P$ and produces identical conjugation
+$\sigma_P = \sigma_{-P}$).
+\end{lemma}
+
+\begin{proof}
+Every symmetric involution is diagonalisable with eigenvalues
+$\pm 1$, hence conjugate to a diagonal sign matrix by an
+orthogonal transformation.  The parity rule~\eqref{eq:parity-rule}
+follows from $(PXP^{-1})_{cd} = \epsilon_c\,\epsilon_d\,X_{cd}$.
+For injectivity: if two partitions $(I_+, I_-)$ and $(J_+, J_-)$
+induce the same parity on all generators, then
+$\epsilon_a\,\epsilon_b = \epsilon'_a\,\epsilon'_b$ for all $a,b$,
+which implies $\epsilon_a = \epsilon'_a$ for all $a$ (up to a
+global sign $\epsilon_a \to -\epsilon_a$, i.e.\ exchange of
+$I_+ \leftrightarrow I_-$).
+\end{proof}
+
+\begin{theorem}[Grading selection from adjoint activity]
+\label{thm:selection}
+Let $\mathfrak{g}$ be a real Lie algebra with Cartan element $T$
+whose adjoint eigenvalues define clusters $C_1, \ldots, C_m$.
+Let $g : \mathbb{R} \to \mathbb{R}_{\ge 0}$ be even with $g(0) = 0$
+and $g(\lambda) > 0$ for $\lambda \ne 0$.  Suppose the interaction
+weights $w_{ab} = g(|\lambda_a - \lambda_b|)$ \emph{factor through
+eigenvalue clusters}: $w_{ab} = W_{\alpha\beta}$ whenever
+$a \in C_\alpha$ and $b \in C_\beta$.  Consider the functional
+\[
+  \widetilde{\mathcal{S}}_g(P)
+  \;=\;
+  \Tr\bigl(\sigma_P\,g(\ad_T)\bigr)
+\]
+over symmetric involutions $P$.  Then:
+\begin{enumerate}\itemsep2pt
+  \item[(i)] \emph{(Cluster coherence.)}  The minimum is attained at
+    a partition that assigns each eigenvalue cluster entirely to
+    $I_+$ or entirely to $I_-$.  Splitting a cluster between the two
+    sides never reduces $\widetilde{\mathcal{S}}_g$.
+  \item[(ii)] \emph{(Reduction to weighted max-cut.)}  Under
+    cluster-coherent partitions, the functional reduces to
+    \begin{equation}\label{eq:weighted-cut}
+      \widetilde{\mathcal{S}}_g
+      = \sum_{i < j} 2\,w_{ij}\,n_i\,n_j\,\sigma_i\,\sigma_j,
+    \end{equation}
+    where $w_{ij} = g(|t_i - t_j|) > 0$ are inter-cluster weights
+    and $\sigma_i = \pm 1$ is the sign assigned to cluster $C_i$.
+    The minimiser is the sign assignment $\{\sigma_i\}$ that maximises
+    the total cut weight $\sum_{(i,j) \text{ cut}} w_{ij}\,n_i\,n_j$
+    on the complete weighted graph $K_m$.
+  \item[(iii)] \emph{(Binary split.)}  If $m = 2$ with
+    $|C_1| = k < n/2$, the unique minimiser places the minority
+    cluster in $I_-$, giving
+    $\widetilde{\mathcal{S}}_g^{\min} = -2k(n{-}k)\,g(\lambda)$.
+  \item[(iv)] \emph{(Structural stability.)}  Under perturbation
+    $T \to T + \varepsilon H$, the minimiser changes only at
+    eigenvalue-crossing transitions where the cluster structure of
+    $T$ changes.
+\end{enumerate}
+In particular, for $\TBL = \mathrm{diag}(1/3,1/3,1/3,-1)$ ($m = 2$,
+binary split), the selected grading has $(3,1)$ shape.
+\end{theorem}
+
+\begin{proposition}[Zero-mode contribution]
+\label{prop:zero-mode}
+If $f : \mathbb{R} \to \mathbb{R}$ is even with $f(0) > 0$ and
+$f(\lambda) > 0$ for $\lambda \ne 0$, the functional
+$\mathcal{S}_f[P] = \Tr(\sigma_P\,f(\ad_T))$ includes a zero-mode
+contribution $f(0)\,\Tr(\sigma_P|_{\ker\ad_T})$ that competes with
+the active-sector term.  In this case the selected grading need not
+coincide with the cluster-coherent rule; the relative magnitudes of
+$f(0)$ and $f(\lambda)$ determine whether the zero-mode contribution
+changes the minimiser.
+\end{proposition}
+
+\begin{proof}[Proof of Theorem~\ref{thm:selection}]
+We prove parts (i)--(iii); part (iv) is verified numerically
+(Section~\ref{sec:numerics}).
+
+\emph{Step 1 (Magnetisation decomposition).}
+By Lemma~\ref{lem:partition}, any admissible involution $P$
+corresponds to a partition $\{1, \ldots, n\} = I_+ \sqcup I_-$
+with parity $p_{ab} = \epsilon_a\,\epsilon_b$.  For each eigenvalue
+cluster $C_i$, define $k_i = |C_i \cap I_-|$ and the
+\emph{magnetisation} $m_i = n_i - 2k_i$.
+
+The active generator pairs are those connecting different clusters.
+Since $g(0) = 0$, intra-cluster pairs contribute nothing.  For
+an inter-cluster pair $(a, b)$ with $a \in C_i$, $b \in C_j$
+($i \ne j$), the contribution is
+$p_{ab}\,g(|t_i - t_j|)$.
+
+Summing over all ordered pairs within the $C_i$--$C_j$ block:
+the number of same-sign pairs minus cross-sign pairs is
+$(n_i - 2k_i)(n_j - 2k_j) = m_i\,m_j$ (algebraic identity).
+Hence:
+\begin{equation}\label{eq:magnetisation}
+  \widetilde{\mathcal{S}}_g
+  = \sum_{i < j} 2\,g(|t_i - t_j|)\,m_i\,m_j.
+\end{equation}
+
+\emph{Step 2 (Cluster coherence --- proof of part (i)).}
+The key observation: $g(0) = 0$ eliminates all $m_i^2$ terms from
+$\widetilde{\mathcal{S}}_g$.  The functional~\eqref{eq:magnetisation}
+is therefore \emph{bilinear} in the magnetisations $(m_1, \ldots, m_m)$.
+
+For fixed $\{m_j\}_{j \ne i}$,
+$\widetilde{\mathcal{S}}_g$ is \emph{linear} in $m_i$:
+\[
+  \widetilde{\mathcal{S}}_g
+  = m_i \cdot \Bigl[\sum_{j \ne i} 2\,w_{ij}\,m_j\Bigr]
+  + (\text{terms independent of } m_i),
+\]
+where $w_{ij} = g(|t_i - t_j|) > 0$.
+A linear function on the interval $m_i \in [-n_i, n_i]$ is minimised
+at one of the endpoints: $m_i = +n_i$ (all of $C_i$ in $I_+$, i.e.\
+$k_i = 0$) or $m_i = -n_i$ (all of $C_i$ in $I_-$, i.e.\ $k_i = n_i$).
+Interior values ($0 < k_i < n_i$, splitting the cluster) are
+\emph{never} optimal.
+
+Since this argument applies to each cluster independently, the
+global minimum is attained at a \emph{corner} of the box
+$\prod_i [-n_i, n_i]$, i.e.\ a cluster-coherent partition.
+
+\emph{Step 3 (Reduced problem --- proof of part (ii)).}
+With cluster-coherent partitions, set $\sigma_i = \pm 1$ according
+to whether $C_i \subseteq I_+$ or $C_i \subseteq I_-$.  Then
+$m_i = \sigma_i\,n_i$ and~\eqref{eq:magnetisation} becomes
+\[
+  \widetilde{\mathcal{S}}_g
+  = \sum_{i < j} 2\,w_{ij}\,n_i\,n_j\,\sigma_i\,\sigma_j.
+\]
+Minimising is equivalent to maximising the total cut weight
+$\sum_{(i,j) \text{ cut}} w_{ij}\,n_i\,n_j$ on the complete weighted
+graph $K_m$, which is~\eqref{eq:weighted-cut}.
+
+\emph{Step 4 (Binary case --- proof of part (iii)).}
+For $m = 2$ with clusters $C_1$ ($|C_1| = k$) and
+$C_2$ ($|C_2| = n - k$), the only nontrivial partition
+($\sigma_1 = -\sigma_2$) has cut weight $w_{12}\,k(n-k)$.
+The trivial partition ($\sigma_1 = \sigma_2$) cuts nothing.
+Hence the unique minimiser places $C_1$ entirely in $I_-$
+and $C_2$ in $I_+$ (or vice versa), giving
+\[
+  \widetilde{\mathcal{S}}_g^{\min}
+  = -2k(n{-}k)\,g(\lambda).
+\]
+
+\emph{Step 5 (Uniqueness).}
+For $m = 2$: the max-cut requires $\sigma_1 \ne \sigma_2$, which
+is unique up to global sign.  For $m \ge 3$: the max-cut on $K_m$
+may have multiple optimal sign assignments if the weight matrix has
+special symmetries (e.g.\ equal-weight clusters).  In the generic
+case (all $w_{ij}\,n_i\,n_j$ distinct), the max-cut is unique up
+to global sign.
+
+In all tested cases ($m \le 3$ across $\sln{3}$--$\sln{6}$,
+nine Cartan structures), the optimal sign assignment is unique
+up to global sign and consistent with the pattern: the cluster(s)
+most separated from the ``centre of mass'' of the eigenvalues
+are assigned to $I_-$.
+\qedhere
+\end{proof}
+
+\begin{remark}[Uniqueness]
+The minimiser is unique up to global sign ($I_+ \leftrightarrow I_-$)
+and permutations within equal-eigenvalue clusters of $T$.
+For $\TBL$ with clusters $\{1/3\}^3$ and $\{-1\}^1$, the minority
+cluster has size $1$ (no internal permutations), so the selected
+grading $P = \mathrm{diag}(1,1,1,-1)$ is unique up to
+$\mathrm{SO}(3)$ rotations of the quark colour indices.
+\end{remark}
+
+\begin{corollary}[Classical types satisfy weight factorisation]
+\label{cor:classical}
+For classical Lie algebras ($A_n$, $B_n$, $C_n$, $D_n$) in their
+defining representations, all generators connecting two eigenvalue
+clusters of $\ad_T$ carry the same weight $g(|t_\alpha - t_\beta|)$.
+The factorisation condition of Theorem~\ref{thm:selection} is
+therefore satisfied, and cluster coherence holds.
+\end{corollary}
+
+\begin{proof}
+In type $A_n$ ($\sln{n}$), adjoint eigenvalues are differences
+$t_a - t_b$ of defining-representation eigenvalues.  Generators
+$E_{ab}$ and $E_{a'b'}$ with $a, a' \in C_\alpha$ and
+$b, b' \in C_\beta$ have the same eigenvalue difference
+$t_\alpha - t_\beta$, hence the same weight.  Types $B_n$, $C_n$,
+$D_n$ have uniform root length within each eigenvalue cluster
+(long roots connect different clusters, short roots lie within
+clusters), giving the same factorisation.
+\end{proof}
+
+\begin{proposition}[Failure of cluster coherence in $G_2$]
+\label{prop:G2}
+There exist Cartan elements in $G_2$ whose eigenvalue clusters
+contain roots of both short and long length.  For such elements,
+the interaction weights do not factor through eigenvalue clusters,
+and the optimal grading splits clusters.
+
+Specifically, for $H = (2, -1, -1)$ in the standard $G_2$ root
+system, the $\lambda = +3$ cluster contains two short roots
+($|\alpha| = \sqrt{2}$) and two long roots ($|\alpha| = \sqrt{6}$).
+The optimal grading assigns these different parities, achieving a
+lower value of $\widetilde{\mathcal{S}}_g$ than any cluster-coherent
+partition (verified by exhaustive enumeration over all $2^6 = 64$
+sign assignments on positive roots).
+\end{proposition}
+
+\begin{remark}[Scope of cluster coherence]
+\label{rem:scope}
+The cluster coherence result (Theorem~\ref{thm:selection}(i))
+depends on the factorisation of interaction weights through
+eigenvalue clusters.  This condition holds for all four classical
+Lie algebra families under standard Cartan decompositions
+(Corollary~\ref{cor:classical}).
+
+In exceptional algebras ($G_2$, $F_4$, $E_6$, $E_7$, $E_8$),
+eigenvalue clusters may contain roots of different lengths,
+leading to non-uniform interaction weights within a cluster.
+The functional then does not reduce to a bilinear form in
+cluster magnetisations, and optimal gradings may split clusters
+(Proposition~\ref{prop:G2}).  Extending the theorem to these
+cases requires refining the cluster structure to incorporate
+root-length data, yielding a multi-layer weighted max-cut
+problem.  This generalisation is left for future work.
+\end{remark}
+
+\begin{corollary}[Higher-dimensional generalisation]
+\label{cor:higher}
+In $\sln{5}$, a $4{+}1$ Cartan element selects a $(4,1)$ grading.
+In $\sln{6}$, a $5{+}1$ element selects $(5,1)$, a $4{+}2$ element
+selects $(4,2)$, and a $3{+}3$ element selects $(3,3)$.  All verified
+numerically across six spectral functionals.  The mechanism is
+dimension-independent.
+\end{corollary}
+
+\begin{observation}[Compact versus noncompact --- empirical]
+\label{obs:compact}
+In the defining representation with trace inner product,
+\emph{compact} real forms ($\mathfrak{so}(n)$, $\mathfrak{su}(n)$)
+yield negative $(\ad_T^2)_{ii}$ on the active sector in all tested
+cases ($n = 3$--$7$), and the minimiser is the trivial grading
+$P = I$.  The \emph{split} (maximally noncompact) real forms
+$\sln{n}$ yield positive $(\ad_T^2)_{ii}$ on the active sector,
+and the minimiser is a nontrivial grading determined by the
+minority-cluster rule.  For \emph{non-split noncompact} forms
+($\mathfrak{so}(p,q)$ with $p, q \ge 1$,
+$\mathfrak{sp}(2n,\mathbb{R})$), the sign depends on the Cartan
+direction: boost generators (noncompact) produce positive entries
+and nontrivial selection; rotation generators (compact) produce
+negative entries and trivial selection.
+
+A general proof that compact $\Rightarrow$ negative active-sector
+eigenvalues would require specifying the inner product and
+representation in which $(\ad_T^2)_{ii}$ is evaluated; we record
+the pattern as an empirical observation pending that analysis.
+\end{observation}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}llcll@{}}
+\toprule
+Type & Algebra & Compact? & $\ad_T^2$ sign & Selected grading \\
+\midrule
+$A_3$ & $\sln{4}$ with $\TBL$ & No & Positive & $(3,1)$ \\
+$A_4$ & $\sln{5}$ with $4{+}1$ & No & Positive & $(4,1)$ \\
+$A_5$ & $\sln{6}$ with $5{+}1$ & No & Positive & $(5,1)$ \\
+$B_2$ & $\mathfrak{so}(5)$ & Yes & Negative & $(5,0)$ trivial \\
+$D_3$ & $\mathfrak{so}(6)$ & Yes & Negative & $(6,0)$ trivial \\
+$D_2$ & $\mathfrak{so}(3,1)$ boost & No & Positive & nontrivial \\
+$D_2$ & $\mathfrak{so}(3,1)$ rotation & compact dir. & Negative & trivial \\
+$C_2$ & $\mathfrak{sp}(4,\mathbb{R})$ & No & Positive & $(2,2)$ \\
+\bottomrule
+\end{tabular}
+\caption{Grading selection across classical Lie algebra types.
+The sign of $\ad_T^2$ refers to its diagonal entries on the active
+sector, computed in the defining (fundamental) representation with
+trace inner product $\langle X, Y \rangle = \Tr(X^T Y)$.  The sign
+pattern may depend on the choice of representation and inner product;
+all entries are empirical observations in the stated representation.}
+\label{tab:cross-type}
+\end{table}
+
+%-----------------------------------------------------------------
+\section{Numerical verification}
+\label{sec:numerics}
+%-----------------------------------------------------------------
+
+The theorem is verified computationally in four independent tests.
+These jointly confirm that the minimiser is independent of the
+specific choice of spectral functional, coordinate frame,
+optimisation path, and small perturbations of the generator.
+
+\paragraph{Test 1: Functional universality.}
+Six spectral functionals ($f(x) = x^2,\, x^4,\, |x|,\,
+\mathbf{1}_{x \ne 0},\, e^{x^2}{-}1,\, \cosh x{-}1$) all select
+$(3,1)$ as the unique minimum among the three grading
+classes, and as the global minimum on $\Gr(1,4)$ (5000-sample
+Monte Carlo confirmation, machine-precision agreement).
+
+\paragraph{Test 2: Frame invariance.}
+50 random $\mathrm{O}(4)$ conjugations
+$(T, P) \to (GTG^T, GPG^T)$ all preserve: (a)~the $(3,1)$
+grading selection (50/50), and (b)~the alignment of $P$'s $-1$
+eigenspace with $T$'s minority eigenvalue (50/50).
+
+\paragraph{Test 3: Generator dependence and higher-dimensional generalisation.}
+Table~\ref{tab:generators} reports the selected grading for
+Cartan elements across $\sln{3}$ through $\sln{6}$.  In all $9$
+cases, the minimiser matches the weighted odd-support prediction of
+Theorem~\ref{thm:selection}.  Binary eigenvalue splits consistently
+select grading aligned with the minority cluster; ternary splits
+(e.g., $2{+}2{+}1$ in $\sln{5}$) are correctly handled by the
+weighted criterion of part~(iii).
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Algebra & Cartan element & Eigenvalue structure & Selected grading \\
+\midrule
+$\sln{3}$ & $(1/2, 1/2, -1)$ & $2+1$ & $(2,1)$ \\
+$\sln{4}$ & $(1/3, 1/3, 1/3, -1)$ & $3+1$ & $(3,1)$ \\
+$\sln{4}$ & $(1, 1, -1, -1)$ & $2+2$ & $(2,2)$ split \\
+$\sln{5}$ & $(1/4)^4, -1)$ & $4+1$ & $(4,1)$ \\
+$\sln{5}$ & $(1/3)^3, (-1/2)^2)$ & $3+2$ & $(3,2)$ \\
+$\sln{5}$ & $(1, 1, -1, -1, 0)$ & $2+2+1$ (ternary) & $(3,2)$ \\
+$\sln{6}$ & $(1/5)^5, -1)$ & $5+1$ & $(5,1)$ \\
+$\sln{6}$ & $(1/4)^4, (-1/2)^2)$ & $4+2$ & $(4,2)$ \\
+$\sln{6}$ & $(1/3)^3, (-1/3)^3)$ & $3+3$ & $(3,3)$ \\
+\bottomrule
+\end{tabular}
+\caption{Grading selected by $\widetilde{\mathcal{S}}_g$ with $g(x) = x^2$
+for Cartan elements
+across $\sln{3}$--$\sln{6}$.  All $9$ cases match the
+weighted odd-support prediction of Theorem~\ref{thm:selection}.
+The $2{+}2{+}1$ case in $\sln{5}$ is a ternary split correctly
+handled by the weighted criterion: the strongest inter-cluster
+generators (gap $= 2$) dominate over weaker ones (gap $= 1$).}
+\label{tab:generators}
+\end{table}
+
+\paragraph{Test 4: Perturbation stability.}
+Under perturbation $\TBL \to \TBL + \varepsilon H$ along five
+independent Cartan directions in $\sln{4}$, the $(3,1)$ selection
+is structurally stable: the minimiser changes only at
+eigenvalue-crossing transitions
+($\varepsilon \approx 0.3$--$1.0$ depending on direction) where the
+multiplicity structure transitions from $3{+}1$ to $2{+}2$.
+Perturbations that deepen the minority gap strengthen the selection
+monotonically with no bifurcation to $\varepsilon = 2$.  Grading
+selection undergoes a discrete transition precisely at
+eigenvalue-crossing loci of the Cartan spectrum, where the
+multiplicity structure changes.  This confirms the selection is not
+fine-tuned: any Cartan element in the $3{+}1$ regime selects
+a $(3,1)$ grading.
+
+%-----------------------------------------------------------------
+\section{Interpretation and scope}
+%-----------------------------------------------------------------
+
+\paragraph{The mathematical result.}
+Theorem~\ref{thm:selection} is a statement about $\mathbb{Z}/2$
+gradings of a Lie algebra: given a Cartan element with a binary
+eigenvalue split, the grading that makes all cross-cluster root
+spaces odd is uniquely selected by minimisation of a universal
+class of spectral functionals.  For $\TBL$ in $\sln{4}$, this
+grading has the $(3,1)$ shape.  The result is combinatorial and
+exact.
+
+\paragraph{What the grading acts on.}
+The involution $P$ and the grading $\mathfrak{g}_+ \oplus
+\mathfrak{g}_-$ it induces act on the \emph{internal carrier
+space} $\mathbb{R}^4$ of the algebra $\sln{4}$, which in the
+Pati--Salam context is the $B{-}L$ charge space (three quark
+colours plus one lepton).  The $3{+}1$ split selected by the
+theorem is a $3{+}1$ decomposition of this \emph{internal} space.
+It is \emph{not}, by itself, a derivation of the $(3,1)$ Lorentzian
+signature of physical spacetime.
+
+\paragraph{The Coleman--Mandula constraint.}
+The Coleman--Mandula theorem~\cite{ColemanMandula1967} and its
+Haag--{\L}opusza\'{n}ski--Sohnius
+refinement~\cite{HaagLopuszanskiSohnius1975} constrain the mixing
+of internal and spacetime symmetries in any relativistic quantum
+field theory with a mass gap: the full symmetry group must
+factorise as (internal) $\times$ (Poincar\'{e}), up to possible
+supersymmetric extensions.  Identifying the internal $3{+}1$
+charge-sector grading selected by Theorem~\ref{thm:selection} with
+the $3{+}1$ Lorentzian signature of spacetime would constitute
+precisely such a mixing, and is therefore not permissible without
+additional structure.
+
+\paragraph{What would be needed to bridge the gap.}
+Three routes could, in principle, connect the internal grading to
+spacetime signature without violating Coleman--Mandula:
+\begin{enumerate}\itemsep0pt
+  \item \emph{Soldering construction.}  In the Palatini formulation,
+    the tetrad $e^a_\mu$ ``solders'' the internal $\sln{4}$ indices
+    to spacetime indices.  If the soldering form is present, the
+    internal grading induces a spacetime grading.  But this requires
+    the soldering form as additional input --- it is not produced by
+    the algebraic minimisation alone.
+  \item \emph{Pre-geometric regime.}  If the construction operates
+    at a level where Poincar\'{e} symmetry has not yet emerged (e.g.,
+    a pre-geometric or background-independent formulation), the
+    Coleman--Mandula hypotheses do not apply and the internal/spacetime
+    distinction is not yet defined.  The grading could then be
+    interpreted as a \emph{proto-signature} that seeds the eventual
+    spacetime structure upon emergence of a geometric phase.
+  \item \emph{Explicit evasion.}  If the theory is formulated with
+    massless particles only, or in a way that violates other
+    Coleman--Mandula hypotheses (e.g., infinite-dimensional symmetry,
+    absence of a mass gap), the no-go theorem does not apply and
+    the internal-spacetime identification could be direct.
+\end{enumerate}
+None of these routes is established in the present work.  The
+algebraic result (Theorem~\ref{thm:selection}) stands on its own as
+a grading-selection theorem; the physical interpretation as spacetime
+signature selection remains an open conjecture requiring one of the
+above bridging mechanisms.
+
+\paragraph{The honest scope of the result.}
+The theorem selects a $3{+}1$ grading of the internal carrier space
+of $\sln{4}$ associated with the $B{-}L$ generator.  This grading
+has the same shape as the Lorentzian signature of spacetime.  Whether
+this coincidence reflects a deep structural connection (via one of
+the bridging mechanisms above) or is merely a numerical coincidence
+of the $n = 4$ case is not determined by the algebraic argument
+alone.
+
+In coordinate-free language, the mathematical content is:
+\begin{quote}
+\emph{The minimiser is the grading that makes all active
+cross-cluster root spaces odd.  For $\TBL$, this grading has
+$(3,1)$ shape.}
+\end{quote}
+
+\paragraph{Compact versus noncompact algebras.}
+The mechanism extends beyond the $A_n$~series.  Numerical tests
+on compact orthogonal algebras $\mathfrak{so}(n)$ ($n = 3, \ldots, 6$),
+the noncompact Lorentz algebra $\mathfrak{so}(3,1)$, and the
+symplectic algebra $\mathfrak{sp}(4,\mathbb{R})$ confirm the
+general pattern (16 cases total, all consistent):
+\begin{itemize}\itemsep0pt
+  \item \emph{Compact} algebras have $\ad_T^2 < 0$ on the active
+    sector.  The minimiser assigns all active generators to the
+    even subspace.
+  \item \emph{Noncompact} algebras have $\ad_T^2 > 0$ on the active
+    sector (or mixed signs in algebras like $\mathfrak{so}(3,1)$).
+    The minimiser assigns positive-$\ad_T^2$ generators to the odd
+    subspace, producing a nontrivial grading.
+\end{itemize}
+This parallels the standard relationship between real forms and
+the Cartan decomposition $\mathfrak{g} = \mathfrak{k}
+\oplus \mathfrak{p}$; whether the two
+decompositions coincide in general is an open question.
+
+\paragraph{What is not claimed.}
+\begin{enumerate}\itemsep0pt
+  \item The result selects a grading of an \emph{internal} carrier
+    space, not of physical spacetime.  Bridging the two requires
+    additional structure (soldering, pre-geometry, or Coleman--Mandula
+    evasion) not provided here.
+  \item The result does not explain SM parity violation ($SU(2)_L$
+    left-handedness).  That requires the full Pati--Salam product
+    group $SU(4)_C \times SU(2)_L \times SU(2)_R$, not
+    $\sln{4}$ alone.
+  \item The minimisation principle $\delta\widetilde{\mathcal{S}}_g = 0$ is
+    proposed, not derived from a deeper action.  It is the simplest
+    consistent choice, but ``simplest'' is a criterion, not a proof.
+  \item The mechanism has been verified across all four classical
+    types ($A_n$, $B_n$, $C_n$, $D_n$) and is dimension-independent.
+    Extension to exceptional algebras ($G_2$, $F_4$, $E_{6,7,8}$)
+    remains open.
+\end{enumerate}
+
+\begin{remark}[Non-commutativity interpretation]
+The selection mechanism is equivalent to assigning negative
+grading to the minimal index set that maximises the measure of
+non-commuting directions under $\ad_T$.
+\end{remark}
+
+%-----------------------------------------------------------------
+\section*{Acknowledgment}
+%-----------------------------------------------------------------
+
+This result emerged from an extended investigation of chirality
+structure in the ACS bracket algebra.  An initial measurement of a
+``$72\%$ parity-odd holonomy bias'' was classified as
+grading-induced after invariance testing.  The upgrade to a
+grading-selection theorem occurred when the spectral functional
+$\widetilde{\mathcal{S}}_g = \Tr(\sigma_P \cdot g(\ad_T))$ was
+found to select a unique $(3,1)$ grading.  Subsequent universality
+testing (six functionals, frame invariance, generator dependence,
+higher-dimensional generalisation) confirmed the robustness of the
+selection.  A physicist's review identified the need to restrict to
+$g(0) = 0$ for a clean theorem statement, to separate the $f(0) > 0$
+case as a distinct proposition, and --- most importantly --- to
+distinguish the internal grading result from any claim about
+physical spacetime signature, in light of the Coleman--Mandula
+theorem.  These corrections significantly strengthened the paper.
+
+%-----------------------------------------------------------------
+\begin{thebibliography}{9}
+
+\bibitem{WallaceA}
+B.~Wallace,
+\textit{Colour from Gravity: Pati--Salam Structure from the Palatini
+Bracket},
+Preprint TR-2026-FF06a (2026).
+
+\bibitem{WallaceN1}
+B.~Wallace,
+\textit{Pythagorean Arithmetic Structure in the Minimal Pati--Salam
+Bracket Algebra},
+Technical Note TR-2026-FF06-N1 (2026).
+
+\bibitem{ColemanMandula1967}
+S.~Coleman and J.~Mandula,
+\textit{All Possible Symmetries of the S Matrix},
+Phys.\ Rev.\ \textbf{159}, 1251 (1967).
+
+\bibitem{HaagLopuszanskiSohnius1975}
+R.~Haag, J.~T.~{\L}opusza\'{n}ski, and M.~Sohnius,
+\textit{All Possible Generators of Supersymmetries of the S-Matrix},
+Nucl.\ Phys.\ B \textbf{88}, 257 (1975).
+
+\end{thebibliography}
+
+\end{document}

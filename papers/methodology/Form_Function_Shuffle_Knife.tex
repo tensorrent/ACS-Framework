@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  framesep=4pt,
+  backgroundcolor=\color{gray!6},
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Form, Function, and the Shuffle Knife}
+\fancyhead[R]{\small TR-2026-FF06e}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{definition}{Definition}
+\newtheorem{principle}{Principle}
+
+\title{\textbf{Form, Function, and the Shuffle Knife:\\
+Categorising Spectral Witnesses by What They Respond To}}
+\author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
+\date{\small Companion to TR-2026-FF06b'\ ---\ SIP License v1.1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A spectrum admits many ``witnesses'' --- pair correlation, spacing distribution, counting function, shape statistics, serial correlations, arithmetic phase --- and on the Riemann zeros they all ``point at the critical line.'' We ask whether this agreement is many independent confirmations or one reading refracted through several lenses, and we make the question decidable with a single operator we call the \emph{shuffle knife}: replace the object by a marginal-matched surrogate (its own spacing distribution, re-randomised so that object-specific correlations are destroyed but the distribution class is preserved) and ask whether each witness's value survives. A witness whose value is unchanged is reading the \emph{universality class} --- we call it \textbf{form}; a witness whose value collapses is reading the \emph{object} --- we call it \textbf{function}, and the size of the collapse measures its true influence. On the full first $10^5$ zeros with $60$ surrogate seeds the split is unambiguous: spacing, counting, and Wigner-shape are FORM ($0.4$--$1.0\sigma$ from the surrogate null); arithmetic prime-resonance and lag-1 correlation are FUNCTION ($\sim\!11{,}500\sigma$ and $\sim\!97\sigma$), with the function signal \emph{amplifying} with $N$. Almost all of the $\zeta$-specific influence lives in one witness --- the arithmetic one, i.e.\ the explicit-formula coupling. We frame the result with an epistemological observation we found load-bearing throughout: scientific categories are routinely \emph{reactional} (a thing named by the response it emits), where the correct frame is \emph{response-driven} (a thing defined by what it responds to), and the reactional frame is precisely the one in which form and function cannot be separated. The shuffle knife is the operator that converts one frame into the other. We state the discipline, give the measurements, and mark exactly where the method stops.
+\end{abstract}
+
+\section{The question: one witness or many?}
+
+A spectrum has no shortage of statistics that can be computed on it. For the Riemann zeros, the standard battery --- nearest-neighbour spacing distribution, two-point (pair) correlation, number variance, the spectral form factor, low-order serial correlations, and the arithmetic phase $\langle\cos(\gamma\log p)\rangle$ --- all behave ``as expected'' under the Montgomery--Odlyzko picture, and in that sense all of them ``point at the critical line.'' This abundance is usually read as over-determination: many independent witnesses, all agreeing, so the picture is robust.
+
+The abundance can equally be read the other way. If the witnesses are not independent --- if they are several lenses on a single underlying response --- then their agreement is not over-determination but redundancy, and counting them as separate confirmations is a category error. Worse, if what they share is generic to the \emph{distribution class} rather than specific to $\zeta$, then their convergence on the critical line says only ``these numbers are GUE-spaced,'' which is true of uncountably many sequences that have nothing to do with the primes. The agreement would then be a property of the instruments, not of the object.
+
+The two readings have different consequences and we wanted a measurement, not a debate, to decide between them.
+
+\section{The shuffle knife}\label{sec:knife}
+
+\begin{definition}[Marginal-matched surrogate]
+Let the object be the unfolded zeros $u_1<u_2<\dots<u_N$ with spacings $s_i=u_{i+1}-u_i$. A \emph{marginal-matched surrogate} is the sequence obtained by randomly permuting $\{s_i\}$ and re-accumulating. By construction it has the \emph{same} one-point spacing distribution as the object and destroys all object-specific correlations of order $\ge2$.
+\end{definition}
+
+\begin{definition}[Form and function]\label{def:ff}
+A witness $W$ is a scalar functional of the sequence. Evaluate it on the object, $W_{\mathrm{real}}$, and on an ensemble of $K$ surrogates, with mean $\overline{W}$ and standard deviation $\sigma_W$. Define the witness's \emph{true influence}
+\[
+z(W)\;=\;\frac{\big|W_{\mathrm{real}}-\overline{W}\big|}{\sigma_W}.
+\]
+$W$ is \textbf{form} if $z(W)$ is small ($\lesssim3$): its value is a property of the distribution class, reproduced by any marginal-matched sequence. $W$ is \textbf{function} if $z(W)$ is large: its value exists only in the object and vanishes under the knife.
+\end{definition}
+
+The knife is the operator that asks, of each witness, \emph{respond to what?} A form witness responds to the marginal --- the class --- and reports the same reading whatever object carries that marginal. A function witness responds to the object's own structure --- the part that the permutation annihilates. There is no parameter to tune and no model to assume; the surrogate inherits the object's own distribution, so the comparison is internal.
+
+\section{Measurement}\label{sec:meas}
+
+We evaluate five scalar witnesses on the first $N=10^5$ zeros and on $60$ marginal-matched surrogates (seed $20260423$). The arithmetic witness is the prime-resonance power $\sum_{p\le29}\langle\cos(\gamma\log p)\rangle^2$, summed over the actual (not unfolded) heights; the remaining four are computed on unfolded spacings.
+
+\begin{center}
+\begin{tabular}{lrrrl}
+\toprule
+witness & $W_{\mathrm{real}}$ & $\overline{W}_{\mathrm{shuf}}$ & $z$ ($\sigma$) & category \\
+\midrule
+arithmetic (prime resonance) & $0.0636$ & $1.0\times10^{-5}$ & $\mathbf{11{,}497}$ & \textbf{FUNCTION} \\
+lag-1 spacing correlation     & $-0.357$ & $-1.0\times10^{-3}$ & $\mathbf{97}$ & \textbf{FUNCTION} \\
+spacing mean deviation        & $0.0000$ & $0.0000$ & $1.0$ & FORM \\
+counting deviation            & $1\times10^{-5}$ & $1\times10^{-5}$ & $1.0$ & FORM \\
+Wigner-shape $L^2$            & $0.0258$ & $0.0258$ & $0.4$ & FORM \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{The split is clean.} Three witnesses sit within one standard deviation of the surrogate: spacing, counting, and shape are statistically \emph{indistinguishable} on the real zeros from any marginal-matched sequence. They are reading the universality class. Two witnesses sit thousands and tens of standard deviations away: the arithmetic prime-resonance and the lag-1 correlation read structure that exists only in $\zeta$ and is destroyed by the permutation. The arithmetic witness carries the overwhelming majority of the true influence; it is, in content, the explicit-formula coupling between zeros and primes, which is exactly the structure a permutation of spacings cannot preserve.
+
+\textbf{Amplification with $N$ (the decisive check).} A finite-size accident would wash out as the sample grows. The function signal does the opposite:
+\[
+z_{\mathrm{arith}}:\;3030\ (N{=}2{\times}10^4)\;\to\;11{,}497\ (N{=}10^5),
+\qquad
+z_{\mathrm{lag1}}:\;51\;\to\;97.
+\]
+The deviation \emph{sharpens} with sample size, which is the behaviour of real structure being resolved, not of an artifact being averaged down.
+
+\textbf{An honest caveat on raw value vs.\ significance.} The arithmetic raw value \emph{decreases} with $N$ ($0.0922\to0.0636$) even as its significance rises. This is not a contradiction: the explicit-formula sum normalises downward as more zeros average in, while the surrogate floor falls faster, so the ratio $z$ grows. The load-bearing quantity is the significance against the matched null, not the bare magnitude; we report both so the reader is not misled by either alone.
+
+\textbf{Why ``many witnesses'' was the wrong count.} Treated as perturbation-response objects, the five witnesses have effective rank $\approx4$ --- and crucially that rank is the \emph{same} on the surrogate as on the real zeros (normalised singular spectrum $1.00,0.77,0.69,0.59,0.06$ real; $1.00,0.67,0.61,0.50,0.05$ surrogate). The multiplicity of the form witnesses is itself a property of the distribution class: they are several lenses, but several lenses on the \emph{same generic marginal}. The genuinely independent, object-specific axis is the arithmetic one. So the original ``six agreeing witnesses'' resolve into one generic form-bundle plus essentially one function witness.
+
+\section{Methods/discussion: reactional vs.\ response-driven definition}\label{sec:epistemology}
+
+The form/function split is an instance of a more general framing that we found controlling throughout the wider programme, and we state it here because it is the reason the knife is the right tool and not an ad hoc trick.
+
+\begin{principle}[Reactional vs.\ response-driven]
+A \emph{reactional} definition names a thing by the reaction it emits --- its output. A \emph{response-driven} definition names a thing by what it responds to --- its input, or purpose. The two are not interchangeable: defined by their outputs, distinct responders can be indistinguishable; defined by what they respond to, they separate.
+\end{principle}
+
+The everyday case is colour. We say a shirt ``is red,'' naming it by the band it reflects --- the reaction reaching the eye. But the band it reflects is precisely the one it does \emph{not} engage; its material identity is the absorption spectrum, ``everything but red,'' the part it actually transacts with. The reactional name is the complement of the function, compressed to a single label. The response-driven description --- wavelength, the medium's permittivity and permeability, the absorption that sets which bands are kept --- is the one that names the object rather than its leftover.
+
+The same inversion governs the witnesses. Defined reactionally --- by their outputs --- every witness ``emits a finding that points at the critical line,'' and as outputs they are indistinguishable: one cannot tell the witness that read $\zeta$ from the witness that read its own GUE calibration, because both emit the same verdict. The form/function asymmetry is invisible in this frame; it has to be, because the frame collapses ``what responds to what'' into a single output column. Defined by what they respond to --- form to the class, function to the object --- the asymmetry appears, and it is not subtle: $0.4\sigma$ against $11{,}497\sigma$. The reactional frame literally cannot see the quantity that carries the signal.
+
+The shuffle knife is the operator that performs the conversion. Holding the marginal fixed and destroying the object's structure is the experimental form of the question ``respond to what?'': what survives the destruction of $\zeta$ was responding to the class; what dies was responding to $\zeta$. This is the same operation, at different depths, as asking what a pigment absorbs rather than what it reflects, or --- one layer further down --- asking which part of a perceived colour is the wavelength and which is the three-cone basis the visual system happens to carry. At every layer the corrective is the single question: not ``what does it emit to me,'' but ``what does it engage.''
+
+We include this framing because it is honest about \emph{why} the categorisation is trustworthy. It is not that we preferred a parsimonious story; it is that the reactional reading of ``many agreeing witnesses'' is a known failure mode --- mistaking the shared calibration of instruments for a shared sighting of the object, calling the effect the cause --- and the knife is the discriminant that catches exactly that failure.
+
+\section{What this does and does not establish}
+
+\textbf{Establishes.} On the first $10^5$ zeros, the standard distributional witnesses (spacing, counting, shape) are form: they certify membership in the GUE universality class and carry no $\zeta$-specific influence detectable above their own surrogate noise. The arithmetic prime-resonance witness and, to a far smaller degree, the lag-1 correlation are function: they read structure unique to $\zeta$, the former overwhelmingly so, and both sharpen with $N$. The apparent multiplicity of distributional witnesses is generic (shuffle-invariant effective rank), so they are one form-bundle, not many independent confirmations.
+
+\textbf{Does not establish.} Nothing here proves the Riemann Hypothesis, constructs a Hilbert--P\'olya operator, or quantifies off-line behaviour. ``Function'' means ``reads $\zeta$-specific structure relative to a marginal-matched null,'' not ``proves a property of $\zeta$.'' The lag-1 correlation, although formally function by Definition~\ref{def:ff}, sits within the measured apparatus band of the GUE value and is therefore \emph{not} claimed as a beyond-GUE finding. Two independent GUE reference constructions disagree by more than the candidate signal: a $1/M$ size-extrapolation to $M\to\infty$ over $M=400,800,1600,3200$ gives GUE lag-1 $-0.310\pm0.005$ (real $-0.360$, gap $0.050$, nominal $9.4\sigma$), while a bulk-concatenation reference gives $-0.307$ (gap $0.053$, nominal $15.6\sigma$); the $\sim\!6\sigma$ swing between the two references is induced purely by the choice of GUE pipeline, and defines an apparatus band of $\sim\!0.08$ in which the candidate gap sits. (A coarser extrapolation from $M\le1600$ alone gives $-0.302$; we report the $M=3200$ value $-0.310$ as the reference.) The nonzero $z$ records that lag-1 responds to the object's correlations, not that those correlations exceed the universality class. The clean function result that survives every control is the arithmetic one --- which is the explicit formula, which is unique factorisation expressed spectrally.
+
+\textbf{Where the method stops.} The knife requires a marginal-matched surrogate, i.e.\ an object whose distribution can be preserved while its correlations are destroyed. Where no such surrogate exists --- where one cannot ``shuffle'' the object to separate its response from the instrument's --- the form/function question is well-posed but not answerable by this operator. That boundary is not a defect of the result; it is the honest edge of the tool, and we mark it here so the categorisation is not over-read.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small This companion accompanies TR-2026-FF06b' (\emph{Spectral Witness Survival and the Character of the Transport Obstruction}). All measurements use the real first $10^5$ Riemann zeros and the canonical seed $20260423$; the form/function suite is reproducible standalone. SIP License v1.1.
+
+\end{document}

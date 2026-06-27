@@ -1,0 +1,279 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small The Geometry Engine}
+\fancyhead[R]{\small TR-2026-FF06g}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+\newtheorem{definition}{Definition}
+\newtheorem{principle}{Principle}
+
+\title{\textbf{The Geometry Engine:\\
+Multiplicative Structure as Shape, the Additive Seam,\\
+and the Two Faces of the Riemann Zeta Function}}
+\author{B.\ Wallace \quad (TensorRent)\\
+\small with computational verification by Claude (Anthropic)}
+\date{\small TR-2026-FF06g \ ---\ Companion to FF06a--f \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We develop a representation in which a number's \emph{multiplicative} structure is a geometric object --- a
+box whose sides are primes and whose dimensions are exponents --- and operations that conserve volume are
+answered directly from the shape without computing the value. A 91-line reference engine implements this;
+all twelve of its operations are verified exact against integer ground truth. Benchmarked head-to-head
+against standard methods across ten ontologies of applied mathematics and computer science, the engine wins
+decisively where the standard method is forced to flatten rich multiplicative structure --- multiplicative
+functions ($81\times$), the prime structure of binomial coefficients without expansion ($13\times$),
+exact rationals, canonical fingerprinting --- and loses, flatly reported, where the query needs only partial
+structure (smoothness, $106\times$ slower), where the standard operation is already trivial (\textsc{gcd}),
+or where the task is set-generation (sieving, $73\times$ slower); it has no advantage at the factoring entry
+wall, by design. The representation is bounded by one seam: \emph{addition has no shape}. We confirm, in three
+independent settings (the Riemann zeros, Goldbach decompositions, and prime gaps), a single law --- multiplication
+governs the \emph{density} of the additive world while individual additive structure stays generic, the bridge
+being statistical and never an address --- and we report honestly that the coupling is strong for first-order
+counts ($\sim\!0.99$) and only moderate for second-order differences ($\sim\!0.6$), including a sub-claim that
+failed its pre-registered test. The engine generalizes to any unique-factorization domain, and to analytic
+functions with poles as their ``primes.'' Finally, on the Riemann zeta function the engine's two faces --- prime
+boxes (the Euler product) and zero/pole geometry (the Hadamard product) --- are the same object joined by the
+explicit formula, which we verify in both directions on the real first $10^5$ zeros. Throughout, classical
+results are labeled as verification rather than novelty, negative results are retained as first-class outputs,
+and the applied target is overhead reduction, for which a battle-tested known law is an asset.
+\end{abstract}
+
+\section{Orientation and honesty protocol}
+
+This paper records one working session conducted under a fixed discipline: every claim passes a
+pre-registered computational test before it is stated; results are labeled by \emph{how} they were verified;
+negative results are kept as first-class outputs with the killing computation; and scope boundaries are
+stated explicitly. The applied goal is reduction of computational overhead, not mathematical novelty ---
+consequently a result already established in the literature is an asset (battle-tested, buildable), not a
+demerit. We use a four-tier verification ledger: \textbf{(T1)} machine-verified against ground truth;
+\textbf{(T2)} proven or forced; \textbf{(T3)} numerically verified, not theorem-level; \textbf{(T4)}
+explicitly falsified.
+
+\section{The representation: numbers as shapes}
+
+\begin{definition}[Shape]
+A \emph{shape} is a box, encoded as a finite map $\{\,p_i : e_i\,\}$ from prime sides $p_i$ to dimension
+exponents $e_i \ge 1$. Its \emph{volume} is the integer $\prod_i p_i^{e_i}$. The empty box is the unit $1$.
+Zero and negatives are not boxes.
+\end{definition}
+
+\begin{principle}[Conservation]
+Every operation on shapes is admissible if and only if it conserves volume. This single invariant is the
+correctness criterion: a reshaping is exact when the volume it produces equals the value the corresponding
+arithmetic operation would produce.
+\end{principle}
+
+The content of the representation is that the \emph{multiplicative} questions about a number are
+\emph{geometric} questions about its box, answerable without ever computing the volume.
+
+\begin{theorem}[Shape-native operations, T1]
+The following operations are computable from the shape alone and were verified exact against integer ground
+truth at the indicated scale (seed \texttt{20260423}):
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+operation & geometry & verification \\
+\midrule
+multiply & merge boxes (exponents add) & $2000$ pairs \\
+power & scale all dimensions by $k$ & samples $\times\, k\in\{0,1,2,3\}$ \\
+divisibility & box containment & $2000$ pairs \\
+exact division & remove the nested box & $2000$ pairs \\
+\textsc{gcd} / \textsc{lcm} & common / enclosing box (min / max dims) & $2000$ pairs \\
+primality & atomic box: one side, unit dimension & all $[2,2\!\times\!10^4)$ \\
+perfect power & dimensional symmetry: $\gcd$ of dims $\ge 2$ & all $[2,5000)$ \\
+factorization & the box \emph{is} the decomposition & $500$ samples \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+
+The reference implementation is $91$ lines; the harness reports $12/12$ exact, including the round-trip
+$\mathrm{volume}(\mathrm{shape}(n))=n$ and the glyph rendering (sides named by prime index, the
+``built-once, shared'' dictionary).
+
+\subsection{The boundary: addition has no shape}
+
+\begin{proposition}[The additive seam, T1]
+Addition admits no box-merge: the sum of two boxes is in general not a box, and its shape is unrelated to
+the shapes of the summands. Concretely the $360$-box and the $84$-box sum to $444=2^2\cdot 3\cdot 37$, a box
+sharing no structure with either input.
+\end{proposition}
+
+In the engine this is handled by an explicit, named \texttt{add\_exit} that computes the value, refactors,
+and re-enters geometry, emitting a \texttt{GEOMETRY\_EXIT} flag so that every additive step is visible as a
+departure from the geometric world. Addition is never hidden inside a geometric costume.
+
+\section{The advantage map (measured)}
+
+We raced the engine against the standard method for each task, reporting wins and losses flatly.
+
+\begin{center}
+\begin{tabular}{llrl}
+\toprule
+ontology & task & factor & outcome \\
+\midrule
+multiplicative functions & $\varphi,\sigma,\mu,d(n)$ on held shapes & $81\times$ & \textbf{win} \\
+combinatorics & prime structure of $\binom{n}{k}$, no expansion & $13\times$ & \textbf{win} \\
+combinatorics & $\binom{5000}{2500}$ value via Legendre & $2.2\times$ & win \\
+exact rationals & product of fractions, auto-reduced & exact vs.\ lossy & \textbf{win (correctness)} \\
+content addressing & canonical path-independent signature & --- & \textbf{win (determinism)} \\
+generality & extends to any UFD (polynomials, $\mathbb{Z}[i]$) & --- & \textbf{win (reach)} \\
+computer algebra & \textsc{gcd} on pre-factored inputs & $2.9\times$ & loss (Euclid) \\
+number theory & coprimality at scale & $2.2\times$ & loss (\textsc{gcd}) \\
+number theory & $B$-smoothness detection & $106\times$ & loss (trial division) \\
+cryptography & factor an arbitrary semiprime & --- & no advantage (by design) \\
+prime generation & generate primes below $N$ & $73\times$ & loss (sieve) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{observation}[The predictive law]
+The advantage is proportional to the multiplicative structure the standard method is forced to flatten,
+minus the cost of building the shape. The engine wins when the shape is already held (or is cheap because
+the number is structured) and the query is multiplicative; it loses when the query needs only partial
+structure (smoothness needs only small primes), when the standard operation is already trivial
+(\textsc{gcd} on machine integers), or when the task is set-generation (sieving shares work across a range
+that a per-number tool cannot). It has no advantage where building the shape is itself the hard problem
+(factoring) --- necessarily so, since otherwise public-key cryptography would fail.
+\end{observation}
+
+The combinatorial win is the sharpest: the question ``what power of $7$ divides $\binom{5000}{2500}$'' is
+answered in $0.34$\,ms from the shape (via Legendre's exponent formula) versus $4.4$\,ms to build the
+$\sim\!16000$-digit integer and factor it --- a $13\times$ gain that never forms the giant number, the direct
+payoff of holding an object in its native dimension rather than its flattened projection.
+
+\section{The multiplicative--additive seam}
+
+\begin{principle}[Seam law, T3 across three instances]
+Multiplication governs the \emph{density} of the additive world; addition fills it generically; the bridge
+between the two is statistical, never an address.
+\end{principle}
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+instance & individual structure & density governed by & coupling \\
+\midrule
+Riemann zeros & spacings generic (GUE) & positions $\leftarrow$ primes & $+122\sigma$ (strong) \\
+Goldbach & decomposition a cloud & count $\leftarrow$ Hardy--Littlewood & $0.9952$ (strong) \\
+prime gaps & gaps generic (Poisson) & density $\leftarrow$ small-prime richness & $0.59$ (moderate) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{observation}[Honest variation, including a falsified sub-claim, T4]
+The coupling strength varies with the order of the additive object: strong for first-order counts
+($\sim\!0.99$), moderate for second-order differences ($\sim\!0.6$). The ``jumping champions are primorials''
+sub-claim \emph{failed} its pre-registered test at $N=3\times10^6$ (the empirical champions are $6,12,2,4$;
+the primorial ladder dominates only near $\sim\!10^{35}$) and is recorded as falsified at this scale.
+\end{observation}
+
+\begin{observation}[Applied corollary, mixed result]
+Strong coupling converts to a real computational skip: replacing Goldbach enumeration by the
+Hardy--Littlewood density formula measured $223\times$ faster (the formula's shape tracks the truth at
+$0.9952$; obtaining single-digit relative error requires properly normalizing the correction constant,
+which the in-session demonstration did not). Moderate coupling does \emph{not} automatically yield a usable
+predictor: a proposed gap-pruning proxy tested at correlation $-0.029$ and was discarded. High analysis
+correlation does not guarantee a cheap exploitable predictor; the specific decision-time proxy must itself
+be tested.
+\end{observation}
+
+\section{The two-structure map of number}
+
+Every number carries two independent decompositions: its \emph{multiplicative} structure (the unique
+prime box, by the Fundamental Theorem of Arithmetic --- representable, a coordinate) and its
+\emph{additive} structure (a sum of primes --- whose parts are non-unique, a cloud, not representable, but
+whose minimal \emph{depth} is a unique invariant). The depth is $1$, $2$, or $3$: every prime has depth $1$;
+every even $\ge 4$ has depth $2$ (Goldbach, verified empirically); every remaining odd has depth $3$ (weak
+Goldbach, proven by Helfgott, 2013). Verified over $[2,10^5)$:
+
+\begin{theorem}[The diagonal, T1]
+Every prime has additive depth $1$, and only primes have depth $1$. The multiplicative atoms are exactly
+the additive atoms: primes are the unique volumes rigid under both reshapings, the single class where
+``Form'' (additive) and ``Function'' (multiplicative) coincide. The additively-reachable primes
+(those with $p-2$ prime) are precisely the upper members of twin-prime pairs.
+\end{theorem}
+
+\section{The analysis engine: poles as the primes of a function}
+
+A Taylor \emph{series value} is an additive object and has no box. But the \emph{function} carries genuine
+geometry in its singularities, and the engine transfers wholesale with poles in place of primes.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+ & integer engine & analysis engine \\
+\midrule
+irreducible units & primes & poles \\
+shape & $\{p:e\}$ & $\{\text{pole}:\text{order}\}$ \\
+free structural questions & divisibility, \textsc{gcd}, $\varphi$ & radius of convergence, best center \\
+value (still work) & $\mathrm{volume}()$ & summing the series \\
+wall (no finite shape) & generic large numbers & entire / lacunary functions \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Verified: the radius of convergence equals the distance from the expansion center to the nearest pole
+($1/(1-x)\Rightarrow R=1$, matching the coefficient ratio test). For the real function $1/(1+x^2)$, whose
+real Taylor series converges only for $|x|<1$ with no reason visible on the real line, the geometry supplies
+the reason --- poles at $\pm i$, distance $1$ --- which summation can only measure. The optimal expansion
+center is chosen by pure geometry (farthest from all poles), summing no series at any candidate.
+
+\section{Loop closure: the two faces are one engine}
+
+\begin{theorem}[Two faces of zeta, T1 both directions]
+The integer engine (prime boxes) and the analysis engine (pole/zero geometry) are one engine seen through
+the two products of the Riemann zeta function: the Euler product $\prod_p (1-p^{-s})^{-1}$ (primes as
+multiplicative boxes) and the Hadamard product (zeros as analytic pole geometry). The explicit formula is
+the dictionary between them, verified in both directions on the real first $10^5$ zeros:
+\begin{itemize}\setlength\itemsep{1pt}
+\item zeros' positions reconstructed from primes: $+122\sigma$ over an amplitude-matched random control;
+\item the prime staircase $\psi(x)$ reconstructed from zeros: agreement at every tested $x$
+($7.83/7.82$, $49.5/49.5$, $94.0/94.2$), tightening as more zeros are included.
+\end{itemize}
+\end{theorem}
+
+Thus the two threads --- geometric number representation and the Riemann zeros --- are the same structure.
+At the top level: primes are the multiplicative Form, zeros are the analytic Form, and zeta is the Function
+carrying both.
+
+\section{Scope and what is owned}
+
+The mathematics underlying \S6--\S7 is classical: the Fundamental Theorem of Arithmetic, Legendre's
+exponent formula, the Hardy--Littlewood conjecture, the Hadamard product, and the Riemann--von Mangoldt
+explicit formula. The verifications confirm that the engine's logic \emph{extends} to those domains; they
+are not new theorems, and for the applied goal of overhead reduction their established status is an asset.
+What is genuinely contributed here is structural: a single shape-engine architecture --- irreducibles yield
+a representable shape, structural questions are free, the value remains additive work, and infinite structure
+breaks the finite box --- is shown to be the \emph{same} architecture on the prime side and the zero side,
+and the advantage map and seam law are measured rather than asserted. Reconstructions are finite-$N$ and
+approximate (Gibbs ringing, finite zero count, a $\sim\!5\%$ staircase band). A Rust/OmniForge transcription
+is pending: the verification environment lacked a Rust toolchain, so all artifacts are a Python reference
+implementation plus a locked specification, and no unverified Rust was produced. Falsified claims are
+retained: Mersenne-as-prime, single-deletion-as-primality, geometry-beats-division, the gap-pruning
+heuristic ($-0.029$), and the primorial-champions sub-claim.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small Companion to TR-2026-FF06a--f. Reference engine, harness, and specification accompany this paper.
+SIP License v1.1. Seed \texttt{20260423}.
+
+\end{document}

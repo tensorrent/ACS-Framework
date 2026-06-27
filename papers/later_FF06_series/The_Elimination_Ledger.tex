@@ -1,0 +1,486 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newcommand{\DI}{\Delta I}
+\newcommand{\Tmin}{T_{\min}}
+\newcommand{\tier}[1]{\textsf{#1}}
+
+\title{\textbf{The Elimination Ledger}\\[2pt]
+\large A Catalogue of Falsifications, Refractions, and Survivals\\
+in the ACS / AISO Program}
+\author{Bradley Wallace \\ \small TensorRent}
+\date{June 2026 \quad\textbar\quad TR-2026-FF06-K1 \quad\textbar\quad SIP License v1.1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper reports negative results as first-class outputs. Across a single
+elimination campaign we subjected the load-bearing claims of the ACS (Asymmetric
+Codependent Systems) framework and the AISO/TENT computational stack to
+pre-registered kill tests, each carrying an explicit falsification criterion fixed
+\emph{before} the test was run. We adopt the discipline of \emph{adversarial
+compression}: a claim is admitted as a theorem only after it survives an attempt to
+destroy it, and a claim that fails is recorded --- with its killing computation --- as
+a result of equal standing. The campaign retired the program's two highest--collapse
+claims, both of which were the program's own: the information--asymmetry / central--charge
+identity $\DI \equiv c$, and the conditional--uniformity height floor
+$\Tmin=(2\pi e)^d/q$. Several numerical constants long carried as ``forced'' were shown
+to be \emph{refractions} --- artifacts of a normalization or counting convention --- while
+the \emph{relations} among them survived. We also gather the program's accumulated dead
+ends from prior work into a single catalogue. The recurring lesson is that the
+quantities which survive a change of instrument are relations, ratios, and equalities;
+bare convention--laden numbers are not. Every verdict is labelled by a four--tier
+verification hierarchy, and every kill test states what it does and does not claim.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction: overclaiming as the primary failure mode}
+
+In a long-running theoretical program the dominant risk is not error but
+\emph{overclaiming}: dressing a conjecture in the language of a theorem, or carrying a
+convention-dependent number as though it were a forced prediction. The remedy adopted
+here is to make destruction cheap and routine. Rather than accumulate positive support
+for favored claims, we attempt to kill them, and we treat a clean kill as a success.
+This is the strip-mining stance: one does not prove the gold is present; one removes
+everything that is not gold, and what remains earns credibility by the elimination of
+alternatives.
+
+The campaign reported here ran a queue of targets, each a load-bearing claim of the ACS
+framework or the AISO/TENT stack, and each equipped with a pre-registered kill
+condition. The targets were ordered by expected collapse of candidate space per unit
+cost, with deliberate weight given to claims that were \emph{our own}. A kill aimed at
+one's own load-bearing claim is the highest-integrity move available, and --- as the
+results below show --- the most productive: the two largest results of the campaign are
+both falsifications of claims the program had previously advanced.
+
+\section{Methodology}
+
+\subsection{Adversarial compression}
+Every claim passes through the cycle
+\[
+\text{conjecture} \;\longrightarrow\; \text{pre-registered test (with kill condition)}
+\;\longrightarrow\;
+\begin{cases}
+\text{survives} \Rightarrow \text{compress to theorem (with proof)}\\
+\text{fails} \Rightarrow \text{record as negative result (with the killing computation)}\\
+\text{partial} \Rightarrow \text{record as observation (with explicit scope boundary)}.
+\end{cases}
+\]
+The rules are non-negotiable: a conjecture is never described in theorem language until
+its proof is complete; a negative result is documented with its conjecture, its killing
+computation, the mechanism of failure, and the boundary it establishes; every scope
+boundary states what the result does and does not claim.
+
+\subsection{The four-tier verification hierarchy}
+Each verdict is labelled by the strongest tier it has earned, and a lower tier is never
+allowed to pass as a higher one.
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+Tier & Standard & Example in this paper\\
+\midrule
+\tier{T1} & machine-measured, reproducible & $g_4$ moves $4/3\!\to\!2/3$ under rescaling\\
+\tier{T2} & proven, or true by inspection & $\Lambda$ supported on prime powers\\
+\tier{T3} & numerical, not yet theorem-level & GUE level-repulsion $\beta\approx 2.12$\\
+\tier{T4} & explicitly falsified by computation & $\Tmin=(2\pi e)^d/q$ at $d=2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{The tomographic invariance engine and its kill-criterion}
+A central instrument is a \emph{tomographic invariance engine}: a battery that varies
+the measuring instrument (representation, normalization, convention, scale, analysis
+window, taper) and asks which quantities move. The operative definition:
+\begin{quote}
+A quantity is a \textbf{refraction} if its value moves under a legitimate change of
+instrument. It is an \textbf{invariant} (candidate) if it does not.
+\end{quote}
+The criterion is applied either numerically --- by recomputing under an instrument swap,
+yielding a \tier{T1} verdict --- or structurally, by argument from a quantity's
+construction when no recomputable pipeline is reachable, yielding a \tier{T2} verdict.
+Before trusting the engine on genuinely uncertain calls, it was calibrated against known
+invariants and known refractions, with negative controls and decoy targets included so
+that the engine could not become its own refraction.
+
+\subsection{Pre-registration, controls, decoys}
+Each kill test fixes its falsification criterion before execution. Negative controls
+(quantities that should show nothing) and decoys (near-miss targets that should not
+register) accompany every numerical test. Two further disciplines were enforced
+throughout: \emph{measured, never projected} --- a complexity argument or extrapolation
+is not a measurement and is never reported as one --- and \emph{validate the instrument
+before trusting it}, e.g.\ a new numerical method must reproduce an independent method on
+a shared case before it is used at scale.
+
+\section{Results I: the invariant/refraction classification of framework constants}
+\label{sec:constants}
+
+The ACS parameter ledger carried four quantities as algebraically ``locked.'' We turned
+the engine inward and recomputed each under a legitimate change of representation or
+counting convention. The verdicts (all \tier{T1}, machine-confirmed by re-running the
+derivations under instrument swaps) are summarized in Table~\ref{tab:constants}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lllc}
+\toprule
+Quantity & As carried & Under instrument swap & Verdict\\
+\midrule
+$g_4=g_L=g_R$ & $4/3$ & $\to 2/3$ under $\mathrm{Tr}(T^aT^b)=\tfrac12\delta\;$vs$\;\delta$ & refraction (value)\\
+$\gamma$ (Barbero--Immirzi) & $0.274067$ & $\to 0.190206$ under SU(2)$\to$SO(3) counting & refraction\\
+$\lambda_\phi$ (Higgs quartic) & $2\sqrt3/27\approx0.1283$ & scales with Killing-form norm.\ & refraction\\
+$\tilde h/h$ (Yukawa ratio) & $2/3$ & $d/d(\ln\mu)\approx 0$, normalization cancels & invariant\\
+\bottomrule
+\end{tabular}
+\caption{Framework constants under the tomographic kill-criterion. Three bare values are
+refractions; one dimensionless ratio is an invariant.}
+\label{tab:constants}
+\end{table}
+
+\paragraph{$g_4=4/3$.} A bare gauge-coupling \emph{value} is generator-normalization
+dependent; rescaling the trace form $\mathrm{Tr}(T^aT^b)=k\,\delta^{ab}$ sends $4/3\to
+2/3$. The \emph{equality} $g_4=g_L=g_R$, however, is an equality of three couplings in
+one shared normalization and is preserved under any consistent rescaling. The value is a
+refraction; the unification relation is the invariant.
+
+\paragraph{$\gamma=0.274$.} The value is counting-prescription dependent. Under the
+SU(2) (half-integer) counting it is $0.274067$; under SO(3) (integer) counting it is
+$0.190206$, a shift of $|\Delta\gamma|=0.0839$. The value moves under a change of the
+state-counting prescription; only the existence of a fixed $\gamma$ \emph{given} a
+prescription is structural.
+
+\paragraph{$\lambda_\phi=2\sqrt3/27$.} The numerical value scales with the
+generator/Killing-form normalization. The Koide-geometric \emph{origin} of the quartic
+is the candidate invariant; the specific number, and its identification with the
+physical running quartic (which crosses experiment only near $\mu\sim132$ GeV), are
+scale- and convention-relative.
+
+\paragraph{$\tilde h/h=2/3$.} A dimensionless ratio in which multiplicative normalization
+cancels, additionally protected as a renormalization-group invariant
+($d/d(\ln\mu)(\tilde h/h)\approx0$ on integration of the Yukawa system). This is the
+strongest invariant candidate of the four and the only one that survives.
+
+\paragraph{The pattern.} Across all four, the relations survive and the bare numbers do
+not: the equality $g_4=g_L=g_R$, the ratio $\tilde h/h$, and the geometric origin of
+$\lambda_\phi$ are invariant or candidate-invariant; the convention- and scale-laden
+numbers $4/3$, $0.274$, $0.1283$ are refractions. This is the expected signature of
+physics, in which observables are relations.
+
+\section{Results II: falsifications}
+
+\subsection{The height-floor scaling law $\Tmin=(2\pi e)^d/q$ (T4)}
+\label{sec:q3}
+
+The program's conditional-uniformity height floor was stated as
+$\Tmin(d,q)=(2\pi e)^d/q$, with the mechanism that $\Tmin$ is the height at which the
+Riemann--von Mangoldt count
+\begin{equation}
+N(T)\sim \frac{dT}{2\pi}\,\log\!\frac{qT}{(2\pi e)^d}
+\label{eq:fwcount}
+\end{equation}
+becomes asymptotically valid, i.e.\ $qT>(2\pi e)^d$, below which ``too few zeros exist
+to resolve the $d$-fold denser prime spectrum.''
+
+For the Riemann zeta function ($d=1,q=1$) the floor is $2\pi e\approx 17.08$, exactly
+the zero of the leading count term $(T/2\pi)(\log(T/2\pi)-1)$ --- a window-free analytic
+identity, with decoy heights ($2\pi e\cdot\varphi$, $(2\pi e)^2/10$) not privileged. At
+$d=1$ this floor is a genuine invariant. But $d=1$ is the degenerate case: the standard
+analytic-conductor zero count is
+\begin{equation}
+N(T)\sim \frac{dT}{2\pi}\,\log\!\frac{q^{1/d}T}{2\pi e},
+\qquad
+\Tmin^{\text{std}} = 2\pi e\, q^{-1/d},
+\label{eq:stdcount}
+\end{equation}
+and Eqs.~\eqref{eq:fwcount} and \eqref{eq:stdcount} coincide \emph{only} at $d=1$, where
+both give $2\pi e/q$.
+
+\paragraph{The discriminating test.} The $d>1$ case decides between them. We computed the
+zeros of two Dirichlet $L$-functions (via Hurwitz-zeta construction and Hardy-$Z$ sign
+changes) and of a genuine degree-two $L$-function, the Dedekind zeta of $\mathbb{Q}(i)$,
+$\zeta_K=\zeta\cdot L(\chi_{-4})$, conductor $q=4$. The zeros of $\zeta_K$ are the union
+of the $\zeta$ zeros and the $L(\chi_{-4})$ zeros, so its counting function is exact.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccc}
+\toprule
+$L$-function & $d$ & $q$ & framework $(2\pi e)^d/q$ & standard $2\pi e\,q^{-1/d}$ & $N_{\text{actual}}$ at framework floor\\
+\midrule
+$L(\chi_{-4})$ & 1 & 4 & $4.27$ & $4.27$ & $0$ (first zero $6.02$)\\
+$L(\chi_{3})$ & 1 & 3 & $5.69$ & $5.69$ & $0$ (first zero $8.04$)\\
+$\zeta_{\mathbb{Q}(i)}$ & \textbf{2} & \textbf{4} & $\mathbf{72.93}$ & $\mathbf{8.54}$ & $\mathbf{51}$\\
+\bottomrule
+\end{tabular}
+\caption{The degree-two case falsifies the scaling law. The framework floor sits above
+51 actual zeros; the standard floor sits just after the first zero.}
+\label{tab:q3}
+\end{table}
+
+At $d=2$ the framework floor $(2\pi e)^2/4=72.93$ sits \emph{above $51$ actual zeros} ---
+flatly contradicting the framework's own definition of $\Tmin$ as the height below which
+``too few zeros exist.'' Equation~\eqref{eq:fwcount} predicts $\approx 0$ zeros up to
+$T=72.93$; the truth is $51$, and Eq.~\eqref{eq:stdcount} correctly predicts $\approx
+50$. The standard floor $8.54$ sits just after the first zero ($N=1$), as a floor should.
+
+\paragraph{Verdict (T4).} The floor \emph{value} at $d=1,q=1$ remains an analytic
+invariant. The \emph{scaling law} $\Tmin=(2\pi e)^d/q$ is falsified in its degree
+dependence: the floor scales as $2\pi e\,q^{-1/d}$, overshooting by a factor $\sim 8.5$
+at $d=2$. The $\zeta$ ``survival'' in earlier scoped reporting was precisely the
+degenerate case in which the wrong degree dependence coincides with the right one ---
+exactly where the strip-mine anticipated the discriminator would lie.
+
+\subsection{The information-asymmetry / central-charge identity $\DI\equiv c$ (T4 as stated)}
+\label{sec:q4}
+
+The program's stated load-bearing open conjecture identifies the information asymmetry
+$\DI$ with the renormalization-group $c$-function. The reachable definitions are: a
+routing scalar $\delta_i=0.4\,(\text{consistency})+0.3\,(\text{divergence})+
+0.2\,(\text{late\_error})+0.1\,(\text{recomposition})\in[0,1]$, and a physical
+transfer-entropy asymmetry
+\begin{equation}
+\DI = \mathrm{TE}(F\!\to\!G)-\mathrm{TE}(G\!\to\!F).
+\end{equation}
+We built an independent reference $c$-function (the Casini--Huerta entropic
+$c$-function on a free-Majorana transverse-field Ising chain, computed by a
+correlation-matrix method gate-validated against exact diagonalization to $10^{-13}$).
+It recovers the Ising central charge $c=1/2$ at criticality (fitted $0.488$ at scale)
+and flows monotonically to $0$ in the massive phase.
+
+\paragraph{The identity fails (T2 $\to$ T4 as stated).} The central charge is unbounded
+above ($c=1$ for a free boson, $c=N$ for $N$ free bosons, $c=26$ for the bosonic
+string). Hence:
+\begin{itemize}[nosep]
+\item If $\DI$ is the bounded routing scalar ($\in[0,1]$), the identity is falsified for
+every theory with $c>1$.
+\item If $\DI$ is the transfer-entropy asymmetry, three structural mismatches block the
+identity: \textbf{(i) sign} --- $c\ge0$, but a difference of transfer entropies is signed;
+\textbf{(ii) fixed-point value} --- on a symmetric fixed point $\mathrm{TE}(F\!\to\!G)=
+\mathrm{TE}(G\!\to\!F)$ so $\DI=0$, while $c$ equals the (nonzero) central charge;
+\textbf{(iii) category} --- transfer entropy is a temporal, directed-information-flow
+quantity requiring a time series, whereas $c$ is static and spatial (Zamolodchikov;
+Casini--Huerta), so the two are not even defined on the same object.
+\end{itemize}
+
+\paragraph{The surviving reading is a theorem, not a conjecture.} The only reading under
+which a monotone quantity ``plays the role of'' $c$ is the mutual-information / entropic
+$c$-function. We confirmed numerically that this quantity is monotone non-increasing
+along the flow for every mass tested. But under that reading $\DI=c$ is not a novel
+conjecture: it is the Casini--Huerta entropic $c$-theorem, monotone by strong
+subadditivity. The literal transfer-entropy asymmetry cannot furnish it: it is undefined
+on a static, time-translation-invariant ground state and vanishes by symmetry on a
+symmetric bipartition.
+
+\paragraph{Verdict.} Every reading is accounted for: $\DI\equiv c$ is either
+false/ill-defined (transfer-entropy asymmetry, or bounded routing scalar at $c>1$) or a
+restatement of an established theorem (mutual-information reading). No reading is both
+novel and true. The highest-collapse target is retired.
+
+\subsection{The BRA speed-superiority claim (T4 for speed; determinism survives at T1)}
+\label{sec:q2}
+
+The BRA kernel was advanced as a faster deterministic replacement for a TensorFlow
+operation, with a withdrawn projection of a $489\times$ speedup. We identified the
+matched operation (a Gabor wave-packet render/energy, replacing
+$\exp(-\delta t^2/2w^2)\exp(2\pi i f\,\delta t)$ in f32) and benchmarked the release-mode
+kernel against it.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\toprule
+$N$ & BRA f64 (ns/op) & TF f32 (ns/op) & ratio\\
+\midrule
+16 & 225.6 & 124.0 & $1.82\times$ slower\\
+64 & 700.9 & 469.8 & $1.49\times$ slower\\
+256 & 2505.5 & 1638.0 & $1.53\times$ slower\\
+1024 & 8326.3 & 6074.5 & $1.37\times$ slower\\
+\bottomrule
+\end{tabular}
+\caption{Measured BRA vs.\ TF throughput. The speed-superiority claim is killed.}
+\label{tab:q2}
+\end{table}
+
+\paragraph{Verdict.} BRA is $1.37$--$1.82\times$ \emph{slower}; the $489\times$ claim is
+obliterated. One confound is recorded honestly: the comparison is BRA-f64 against
+TF-f32, and f64 carries $\sim1.5$--$2\times$ the work, so ``competitive at matched f64''
+is untested (plausibly near parity). The genuine surviving value is \emph{determinism}:
+the integer and f64 paths are bit-identical across runs (\tier{T1}). The speed claim is
+dead; the determinism claim --- always the real one --- stands.
+
+\subsection{Residual prime-orbit off-diagonal mechanisms (T2 + T3)}
+\label{sec:q6}
+
+We tested whether any \emph{peaked} off-diagonal mechanism contributes to the
+zeta spectrum beyond the diagonal prime-power terms. Using the explicit-formula dual
+periodogram on the zeros, the power ratios to local baseline were: fundamentals
+$\log 2,3,5,7$ at $\sim 3$--$4\times10^8$; prime-power harmonics $2\log2,3\log2,2\log3,
+2\log5$ at $\sim 5\times10^7$--$4\times10^8$ (real peaks, suppressed by the $p^{k/2}$
+weight); composites $\log6,10,12,15$ at $0.3$--$5.4$ (baseline noise); decoys $\sim1$.
+
+\paragraph{Verdict.} The peaked spectrum is exactly the diagonal prime-power set
+$\{k\log p\}$ at $10^7$--$10^8$ contrast. There is a structural reason, not merely a
+null: the explicit-formula dual carries weight only on the von Mangoldt function
+$\Lambda(n)$, which is supported on prime powers, so a sum-frequency peak at
+$\log(pp')$ is \emph{forbidden}. Difference-tone off-diagonal peaks were falsified in
+prior work. The remaining off-diagonal content is smooth (the Montgomery pair-correlation
+term, separately confirmed). No residual peaked off-diagonal mechanism exists; the tunnel
+is mapped empty.
+
+\section{Results III: class-level eliminations --- the Hilbert--Pólya operator}
+\label{sec:q5}
+
+One cannot construct and diagonalize a self-adjoint operator with spectrum equal to the
+zeros --- that is the open problem itself --- but the data forces discriminating
+constraints, and those constraints kill candidate \emph{classes}.
+
+\paragraph{Symmetry class (T3).} The unfolded nearest-neighbour spacings of the $\zeta$
+zeros match the GUE Wigner surmise (L2 distance $7.3\times10^{-2}$) far better than GSE
+($1.7\times10^{-1}$), GOE ($2.3\times10^{-1}$), or Poisson ($6.5\times10^{-1}$); the
+fitted level-repulsion exponent is $\beta\approx2.12$, with variance $0.1600$. Under
+random-matrix universality the operator must lie in the unitary class with broken
+time-reversal symmetry. This kills any real-symmetric / time-reversal-invariant candidate
+(GOE, $\beta=1$) and any symplectic candidate (GSE, $\beta=4$).
+
+\paragraph{Berry--Keating $xp$ (T2 + T3).} The semiclassical $xp$ count reproduces the
+smooth Riemann--von Mangoldt staircase to $<0.2\%$, so it passes the smooth-density
+necessary condition. But $xp$ has a continuous spectrum and no discrete eigenvalues, and
+the fluctuation $S(T)$ is prime-driven, which bare $xp$ does not encode. ``$xp$ alone is
+the operator'' is killed as sufficient; ``$xp$ as the smooth skeleton'' survives.
+
+\paragraph{Verdict.} The surviving operator must simultaneously be unitary class (broken
+$T$), reproduce $(T/2\pi)\log(T/2\pi e)$, and encode the primes in its fluctuation
+spectrum. Two classes are mapped empty; the full construction remains open.
+
+\section{Results IV: a tension resolved by decoupling (T3 + T2)}
+\label{sec:q7}
+
+The naive Type-I see-saw active--sterile mixing $\sin^2 2\theta\approx4\times10^{-6}$ is
+excluded by the X-ray bound $\sin^2 2\theta<10^{-10}$. The proposed Pati--Salam
+gauge-sector suppression is $(M_W/M_{W_R})^2$. Requiring it to clear the bound gives
+$M_{W_R}\gtrsim 16$ TeV (equivalently $v_R\gtrsim 49$ TeV), comfortably below the
+independent lower bounds on the Pati--Salam scale from rare decays
+($K_L\to\mu e$ pushes $v_R$ to $\gtrsim$ hundreds of TeV). So the mechanism clears the
+bound.
+
+\paragraph{Verdict.} The X-ray bound is not a live obstruction once $v_R$ sits at its
+independently-required scale. But the resolution is by \emph{decoupling}: clearing the
+bound requires high $v_R$, hence a heavy right-handed mass $M_R\sim v_R$, so the sterile
+state is no longer a keV-scale dark-matter candidate. The tension is removed for the
+field-theory consistency reading, and the keV-sterile-dark-matter reading does not
+survive.
+
+\section{The accumulated dead ends}
+\label{sec:deadends}
+
+For completeness we gather the program's prior falsifications --- the empty tunnels
+mapped before this campaign --- with the mechanism that killed each.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{5.4cm}p{8.2cm}}
+\toprule
+Killed claim & Killing mechanism\\
+\midrule
+$\mathrm{ad}^3=2\,\mathrm{ad}$ for integers & requires $\lambda=1/\sqrt2$; eigenvalue constraint fails for integers\\
+Universal $2\pi$ inversion & $\mathfrak{sl}(4,\mathbb{R})$ adjoint is hyperbolic, not rotational; representation-specific\\
+Wronskian bracket $=$ Poisson bracket & Leibniz rule fails by $-fgh'$; structural claim demoted to analogy only\\
+IR lattice imprint in zeros & $z$-scores null against PDG values; statistical null test\\
+Intrinsic chirality of the bias & bias vanishes under covariant conjugation; not invariant\\
+Signature selection via Killing form (Route A) & Cartan involution $\ne$ parity involution\\
+Signature selection via stability (Route C) & all signatures give equal holonomy norms\\
+Coleman--Weinberg $6\to5$ parameter reduction & $\tan\beta$ is a gauge-protected flat direction (RG-invariant ratio, multiplicative two-loop QCD, $\beta$-independent thresholds)\\
+$\alpha_2$ optional & forbidden by representation theory, $T^A\Phi=0$\\
+$\beta_c$ explanatory & tree-level no-go from mass-matrix rank\\
+Yukawa rescue of $\tan\beta$ & impossible via the identity $M_u-M_d=(h-\tilde h)(\kappa_1-\kappa_2)$\\
+Action-proximity ($\tau$) off-diagonal mechanism & inconsistent with the incommensurable surrogate null\\
+Difference-tone / Tartini off-diagonal mechanism & inconsistent with the surrogate null\\
+``$3$-$6$-$9$'' attractor & retired as falsified (no structural support)\\
+\bottomrule
+\end{tabular}
+\caption{Prior dead ends gathered from the program. Each is a first-class negative
+result with an explicit killing mechanism.}
+\label{tab:deadends}
+\end{table}
+
+\section{Discussion: recurring patterns}
+
+\paragraph{Relations survive; bare numbers are refractions.} The single most consistent
+finding (Sec.~\ref{sec:constants}) is that the quantities surviving a change of
+instrument are relations, ratios, and equalities, while convention- or scale-laden
+numbers are not. This is precisely what one expects of physics, whose observables are
+relations; it also gives a fast triage heuristic for which claims to suspect.
+
+\paragraph{The degenerate-case trap.} The height-floor law (Sec.~\ref{sec:q3}) survived
+every test available at $d=1$ because at $d=1$ a wrong degree dependence coincides
+exactly with the right one. A claim can pass indefinitely on the degenerate slice of its
+parameter space; the discriminating test lives off that slice, and naming where it lives
+\emph{before} testing is what turned a scoped survival into a clean falsification.
+
+\paragraph{Category mismatch.} The $\DI\equiv c$ identity (Sec.~\ref{sec:q4}) failed most
+fundamentally on a category error: a temporal, directed quantity identified with a
+static, spatial one. When an identity is proposed between objects from different
+categories, the burden is a bridge construction, not a numerical coincidence.
+
+\paragraph{Necessary but insufficient.} The Berry--Keating $xp$ operator
+(Sec.~\ref{sec:q5}) passes a necessary condition (the smooth count) and is nonetheless
+insufficient (no discrete spectrum, no prime fluctuations). Passing a necessary test is
+not survival; a candidate must clear every condition the data forces.
+
+\paragraph{Methodological self-corrections.} The campaign caught and discarded several of
+its own artifacts before they could be read as signal: a band-relative-error onset
+statistic dominated by low-height discreteness; a sub-sample indexing bug in a deviation
+metric; a ``broken-lens'' control that failed to break the GUE statistic for an
+identifiable reason; projected speedups mistaken for measurements; and a SIGPIPE harness
+artifact that reported a passing test as a failure. Each was recorded, not hidden. The
+discipline that catches these is the same one that produces the kills: pre-registration,
+negative controls, and the refusal to let analysis pose as measurement.
+
+\section{What survives, and what remains open}
+
+\paragraph{Survivors (earned by elimination).} The dimensionless ratio $\tilde h/h=2/3$
+(RG-invariant); the coupling-unification equality $g_4=g_L=g_R$; the analytic floor
+$2\pi e$ at $d=1,q=1$; the Koide-geometric origin of $\lambda_\phi$; the GUE statistics
+and the prime-power structure $\{k\log p\}$ of the zeta spectrum (the latter forced by
+$\Lambda$-support). These survive not because they were proven from first principles
+here, but because the alternatives around them were eliminated.
+
+\paragraph{Open.} The Hilbert--Pólya operator construction (constrained but not
+constructed); the action principle for the grading functional; the extension of the
+spectral results to general $L$-functions (now with a corrected --- standard ---
+height-floor scaling); and the conceptual question of whether a static, positive,
+canonically-normalized information quantity exists that could non-trivially realize a
+$c$-function role.
+
+\section{Conclusion}
+
+The campaign retired the two highest-collapse claims of the program --- the
+$\DI\equiv c$ identity and the $\Tmin=(2\pi e)^d/q$ scaling law --- and both were the
+program's own. Several ``forced'' constants were reclassified as refractions, with their
+underlying relations surviving. A speed claim was killed and a determinism claim
+confirmed. Two operator classes were eliminated and a peaked-spectrum tunnel mapped
+empty. None of these required a new positive theory; each followed from making
+destruction cheap, pre-registering the kill condition, and treating a clean negative as a
+result worth the same care as a proof. The survivors are credible in proportion to what
+was removed around them. That is the whole of the method: do not prove the gold is there;
+remove everything that is not gold, and keep an honest ledger of every tunnel.
+
+\appendix
+\section{Reproducibility}
+All numerical tests are reproducible from the accompanying scripts. The degree-two
+falsification (Sec.~\ref{sec:q3}) uses \texttt{q3\_scaling\_test.py} (mpmath
+Dirichlet-$L$ zeros via Hurwitz-zeta construction and Hardy-$Z$ sign changes; $\zeta$
+zeros from the first $10^5$ accurate to $3\times10^{-9}$; the degree-two case built as
+$\zeta\cdot L(\chi_{-4})$). The reference $c$-function (Sec.~\ref{sec:q4}) uses
+\texttt{q4\_cfunction\_testbed.py} (free-fermion BdG correlation-matrix method, gate-validated
+against exact diagonalization). Verdicts and tiers are recorded in the append-only
+elimination ledger TR-2026-FF06-K01. Random seed $20260423$ where randomness appears.
+
+\end{document}

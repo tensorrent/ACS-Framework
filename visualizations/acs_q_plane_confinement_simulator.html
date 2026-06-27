@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ACS Q-Plane Confinement Simulator</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+    }
+    </script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #050505; color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        canvas#webgl { display: block; width: 100vw; height: 100vh; }
+        #ui-container {
+            position: absolute; bottom: 0; width: 100%; max-height: 58vh; overflow-y: auto;
+            background: rgba(15, 15, 15, 0.92); border-top: 1px solid #333; padding: 14px;
+            box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; z-index: 10;
+        }
+        @media (min-width: 768px) {
+            #ui-container { bottom: 14px; right: 14px; width: min(440px, 94vw); max-height: 88vh;
+                border: 1px solid #333; border-radius: 12px; }
+        }
+        h1 { margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; }
+        p, .disclaimer { margin: 0; font-size: 0.78rem; color: #aaa; line-height: 1.35; }
+        .disclaimer { color: #666; font-size: 0.7rem; border-left: 2px solid #444; padding-left: 8px; }
+        .control-group { display: flex; flex-direction: column; gap: 3px; }
+        .control-header { display: flex; justify-content: space-between; font-size: 0.74rem; font-weight: 600; color: #ccc; }
+        input[type="range"] { width: 100%; cursor: pointer; }
+        .row { display: flex; align-items: center; gap: 8px; font-size: 0.74rem; color: #bbb; flex-wrap: wrap; }
+        .row input[type="checkbox"] { width: auto; }
+        .status-box {
+            background: #000; border: 1px solid #444; padding: 8px; border-radius: 6px;
+            font-family: ui-monospace, monospace; font-size: 0.72rem;
+        }
+        #energy-chart {
+            width: 100%; height: 56px; background: #0a0a0a; border: 1px solid #333;
+            border-radius: 4px; display: block;
+        }
+        #phase-plot {
+            width: 100%; max-width: 260px; height: auto; aspect-ratio: 1;
+            background: #0a0a0a; border: 1px solid #333; border-radius: 4px; display: block;
+        }
+        button.preset-btn {
+            flex: 1; min-width: 0;
+            background: #222; color: #eee; border: 1px solid #444; border-radius: 4px;
+            padding: 6px 6px; font-size: 0.7rem; cursor: pointer;
+        }
+        button.preset-btn:hover { background: #2a2a2a; }
+        button.preset-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+        .chart-label { font-size: 0.65rem; color: #666; margin-bottom: 2px; }
+        .highlight-red { color: #ff3333; font-weight: bold; }
+        .highlight-white { color: #fff; font-weight: bold; }
+        .section-label {
+            font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-top: 2px;
+        }
+        select { background: #222; color: #eee; border: 1px solid #444; border-radius: 4px; padding: 4px; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+
+    <canvas id="webgl"></canvas>
+
+    <div id="ui-container">
+        <h1>ACS Q-Plane Dynamics</h1>
+        <p>Parameterized toy: <strong>T(d) = k·d + c/(d+ε)</strong> on <strong>two</strong> qq̄ pairs. Coupling uses centered neighbor strain <strong>(strain/max − 0.5)</strong>; strain integrates <strong>T/T_snap locked</strong> only. Not QCD.</p>
+        <p class="disclaimer">Modes: Amplify / Oppose / Threshold-shift (see menu). Factor clamp [0.5, 1.5] on coupling. Chart blues = T_state norm (drives phases); strain follows raw T/locked snap.</p>
+
+        <div class="section-label">Geometry</div>
+        <div class="control-group">
+            <div class="control-header"><span>Pair A · separation d</span><span id="distance-val">0.0</span></div>
+            <input type="range" id="distance-slider" min="0" max="20" step="0.1" value="0">
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Pair B · separation d</span><span id="distance-b-val">0.0</span></div>
+            <input type="range" id="distance-slider-b" min="0" max="20" step="0.1" value="6">
+        </div>
+
+        <div class="section-label">Tension model</div>
+        <div class="control-group">
+            <div class="control-header"><span>k</span><span id="k-val">0.15</span></div>
+            <input type="range" id="k-slider" min="0" max="2" step="0.01" value="0.15">
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>c</span><span id="c-val">2.0</span></div>
+            <input type="range" id="c-slider" min="0" max="10" step="0.05" value="2">
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>ε</span><span id="eps-val">0.5</span></div>
+            <input type="range" id="eps-slider" min="0.05" max="2" step="0.05" value="0.5">
+        </div>
+
+        <div class="section-label">Snap & memory</div>
+        <div class="control-group">
+            <div class="control-header"><span>d_ref → T_snap = T(d_ref)</span><span id="snap-val">16.0</span></div>
+            <input type="range" id="snap-slider" min="2" max="20" step="0.5" value="16">
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Snap mode</span></div>
+            <select id="snap-mode">
+                <option value="tension" selected>T(d) ≥ T_snap</option>
+                <option value="strain">Strain integral ≥ max</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Strain max (dimensionless; snap in strain mode)</span><span id="strain-max-val">3.0</span></div>
+            <input type="range" id="strain-max-slider" min="0.3" max="15" step="0.1" value="3">
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Strain decay λ (1/s)</span><span id="strain-decay-val">0.4</span></div>
+            <input type="range" id="strain-decay-slider" min="0" max="3" step="0.05" value="0.4">
+        </div>
+
+        <div class="section-label">Noise</div>
+        <div class="row">
+            <label><input type="checkbox" id="noise-display" checked> Display noise on T̃</label>
+            <label><input type="checkbox" id="noise-force"> Force noise (motion)</label>
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Noise amplitude</span><span id="noise-val">0.0</span></div>
+            <input type="range" id="noise-slider" min="0" max="0.5" step="0.02" value="0">
+        </div>
+
+        <div class="section-label">Motion</div>
+        <div class="control-group">
+            <div class="control-header"><span>Wobble damping</span><span id="damp-val">0.0</span></div>
+            <input type="range" id="damp-slider" min="0" max="0.95" step="0.05" value="0">
+        </div>
+        <div class="section-label">Inertial d</div>
+        <div class="row">
+            <label><input type="checkbox" id="inertia-enable"> Lag toward slider (first-order + damping)</label>
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Inertia τ (s)</span><span id="inertia-tau-val">0.50</span></div>
+            <input type="range" id="inertia-tau-slider" min="0.1" max="2" step="0.05" value="0.5">
+        </div>
+
+        <div class="section-label">Pair interaction</div>
+        <div class="control-group">
+            <div class="control-header"><span>Coupling mode</span></div>
+            <select id="couple-mode">
+                <option value="amplify" selected>Amplify — T×(1+α·ñ)</option>
+                <option value="oppose">Oppose — T×(1−α·ñ)</option>
+                <option value="threshold">Threshold — T/(T_snap·(1−α·ñ))</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <div class="control-header"><span>Coupling α (ñ = neighbor strain/max − 0.5; factor clamped 0.5–1.5)</span><span id="couple-val">0.80</span></div>
+            <input type="range" id="couple-slider" min="0" max="2" step="0.05" value="0.8">
+        </div>
+
+        <div class="chart-label">Chart: grays d/d_ref; blue/cyan = T_state vs locked snap (phase driver); orange/tan = strain/max</div>
+        <canvas id="energy-chart" width="400" height="56"></canvas>
+
+        <div class="section-label">Phase map</div>
+        <div class="row" style="gap: 10px; margin-bottom: 4px; flex-wrap: wrap;">
+            <label><input type="checkbox" id="phase-show-a" checked> Show pair A</label>
+            <label><input type="checkbox" id="phase-show-b" checked> Show pair B</label>
+            <label><input type="checkbox" id="phase-density" checked> Density halos</label>
+            <label><input type="checkbox" id="phase-density-normalize" title="Per-pair: alpha / count for that pair"> Normalize density</label>
+            <span id="phase-density-normalize-tag" style="display: none; font-size: 0.68rem; color: #7cb8ff;">Density: normalized (per pair)</span>
+            <label><input type="checkbox" id="phase-diff-mode" title="A adds (blue), B subtracts; B strength scaled by countA/(countA+countB)"> Difference (A−B)</label>
+            <label><input type="checkbox" id="phase-diff-symmetric" title="Blue = A, orange = B (lighter); optional dominance threshold"> Symmetric diff (A vs B)</label>
+        </div>
+        <div class="row" style="gap: 8px; margin-bottom: 4px; flex-wrap: wrap; align-items: center;">
+            <span style="font-size: 0.7rem; color: #888;">Dominance threshold</span>
+            <input type="range" id="phase-dominance-threshold" min="0" max="1" step="0.05" value="0" title="0 = off (additive). &gt;0: per-pixel A vs B, neutral band between (1−t) and t." style="width: 120px;">
+            <span id="phase-dominance-val" style="font-size: 0.68rem; color: #aaa; min-width: 2.2em;">0</span>
+            <label><input type="checkbox" id="phase-dominance-contours" checked title="Zero-crossings of dom at 0.5, thr, 1−thr"> Contours</label>
+            <label><input type="checkbox" id="phase-dominance-contour-history" checked title="Fade older decision boundaries (last 8 frames)"> Contour history</label>
+        </div>
+        <div class="row" style="gap: 10px; margin-bottom: 4px; flex-wrap: wrap;">
+            <span style="font-size: 0.7rem; color: #888; align-self: center;">Cause:</span>
+            <label><input type="checkbox" id="phase-cause-tension" checked> tension</label>
+            <label><input type="checkbox" id="phase-cause-strain" checked> strain</label>
+            <label><input type="checkbox" id="phase-cause-both" checked> both</label>
+        </div>
+        <div class="row" style="gap: 6px; margin-bottom: 4px; flex-wrap: wrap;">
+            <button type="button" class="preset-btn" id="btn-freeze-density" title="Bake current density; new breaks draw above">Freeze density</button>
+            <button type="button" class="preset-btn" id="btn-clear-frozen-density" title="Remove frozen density layer">Clear frozen</button>
+            <button type="button" class="preset-btn" id="btn-reset-overlays" title="Ghost, break markers, frozen density, replay">Reset overlays</button>
+        </div>
+        <div class="chart-label">Breaks: causal snapshot; × / ○ / both; fade by id; halos = cause-colored (clamped), optional per-pair normalize. Diff mode: live only. Frozen A/B follow pair toggles. Replay ~0.5s on break. Step disabled while running.</div>
+        <div id="phase-frozen-meta" style="font-size: 0.7rem; color: #888; margin: 2px 0 2px 0; min-height: 1em;"></div>
+        <div class="row" style="gap: 10px; margin-bottom: 2px; flex-wrap: wrap;">
+            <label><input type="checkbox" id="phase-stats-filtered" title="Counts match visible cause/pair filters"> Stats follow filters</label>
+        </div>
+        <div id="phase-break-stats" style="font-size: 0.68rem; color: #999; margin-bottom: 4px;"></div>
+        <canvas id="phase-plot" width="260" height="260"></canvas>
+        <div id="phase-probe-readout" style="font-size: 0.65rem; color: #888; margin-top: 4px; max-width: 280px; line-height: 1.35;">Click phase map to probe (symmetric diff + dominance threshold &gt; 0).</div>
+
+        <div class="section-label">Presets</div>
+        <div class="row" style="gap: 6px;">
+            <button type="button" class="preset-btn" id="preset-stable" title="α=0.2, λ=0.8, strain_max=3, oppose">Stable</button>
+            <button type="button" class="preset-btn" id="preset-cascade" title="α=0.7, λ=0.2, strain_max=2.5, amplify">Cascade</button>
+            <button type="button" class="preset-btn" id="preset-oscillatory" title="α=0.5, λ=0.5, strain_max=3, amplify">Oscillatory</button>
+        </div>
+
+        <div class="section-label">Simulation</div>
+        <div class="row" style="gap: 6px; flex-wrap: wrap;">
+            <button type="button" class="preset-btn" id="btn-pause">Pause</button>
+            <button type="button" class="preset-btn" id="btn-step" title="Advance one frame (stays paused)">Step</button>
+            <button type="button" class="preset-btn" id="btn-step-10" title="Advance 10 frames">Step×10</button>
+            <button type="button" class="preset-btn" id="btn-clear-ghost" title="Clear ghost trail buffer">Clear ghost</button>
+        </div>
+
+        <div class="status-box">
+            <div>Pair A · phase: <span id="phase-status">—</span></div>
+            <div>T raw: <span id="tension-clean">0.00</span> · T_state/T_snap (locked): <span id="tension-norm">0%</span></div>
+            <div>T_snap locked: <span id="tension-snap">0.00</span> · T(d_ref) live: <span id="tension-snap-live">0.00</span> · Δ: <span id="tension-snap-delta">—</span></div>
+            <div>T̃ (display, A): <span id="tension-raw">0.00</span> · strain: <span id="strain-disp">0.00</span> · strain/max: <span id="strain-norm-disp">0%</span></div>
+            <div style="margin-top: 6px; padding-top: 6px; border-top: 1px solid #333;">Pair B · phase: <span id="phase-status-b">—</span></div>
+            <div>T(B) raw: <span id="tension-clean-b">0.00</span> · T_state/T_snap (locked): <span id="tension-norm-b">0%</span></div>
+            <div>T̃ (B): <span id="tension-raw-b">0.00</span> · strain: <span id="strain-disp-b">0.00</span> · strain/max: <span id="strain-norm-b-disp">0%</span></div>
+            <div style="margin-top: 4px; font-size: 0.68rem; color: #888;" id="physics-desc"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+
+        const el = (id) => document.getElementById(id);
+        const canvas3d = el('webgl');
+        const chart = el('energy-chart');
+        const ctx = chart.getContext('2d');
+        const phaseCanvas = el('phase-plot');
+        const pctx = phaseCanvas.getContext('2d');
+
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x050505, 0.02);
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 16, 36);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: canvas3d });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.maxDistance = 60;
+
+        scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(0, 20, 10);
+        scene.add(pointLight);
+
+        const cubeGeo = new THREE.BoxGeometry(2, 2, 2);
+        const redMat = new THREE.MeshStandardMaterial({ color: 0xff3333, roughness: 0.2, metalness: 0.8 });
+        const greenMat = new THREE.MeshStandardMaterial({ color: 0x33ff33, roughness: 0.2, metalness: 0.8 });
+        const antiRedMat = new THREE.MeshStandardMaterial({ color: 0x33ffff, roughness: 0.2, metalness: 0.8 });
+        const antiGreenMat = new THREE.MeshStandardMaterial({ color: 0xff33ff, roughness: 0.2, metalness: 0.8 });
+
+        const PAIR_B_Z = -11;
+
+        const quark1 = new THREE.Mesh(cubeGeo, redMat);
+        const quark2 = new THREE.Mesh(cubeGeo, greenMat);
+        scene.add(quark1, quark2);
+
+        const redB = new THREE.MeshStandardMaterial({ color: 0xff8844, roughness: 0.2, metalness: 0.8 });
+        const greenB = new THREE.MeshStandardMaterial({ color: 0x44cc88, roughness: 0.2, metalness: 0.8 });
+        const quark1b = new THREE.Mesh(cubeGeo, redB);
+        const quark2b = new THREE.Mesh(cubeGeo, greenB);
+        quark1b.position.z = PAIR_B_Z;
+        quark2b.position.z = PAIR_B_Z;
+        scene.add(quark1b, quark2b);
+
+        const tubeGeo = new THREE.CylinderGeometry(0.3, 0.3, 1, 16);
+        const tubeMat = new THREE.MeshStandardMaterial({
+            color: 0x4488ff, emissive: 0x112244, emissiveIntensity: 0.2, transparent: true, opacity: 0.85
+        });
+        const tubeMatB = new THREE.MeshStandardMaterial({
+            color: 0x3399cc, emissive: 0x112233, emissiveIntensity: 0.2, transparent: true, opacity: 0.85
+        });
+        const fluxTube = new THREE.Mesh(tubeGeo, tubeMat);
+        fluxTube.rotation.z = Math.PI / 2;
+        scene.add(fluxTube);
+        const fluxTubeB = new THREE.Mesh(tubeGeo, tubeMatB);
+        fluxTubeB.rotation.z = Math.PI / 2;
+        fluxTubeB.position.z = PAIR_B_Z;
+        scene.add(fluxTubeB);
+
+        const newQuark1 = new THREE.Mesh(cubeGeo, antiRedMat);
+        const newQuark2 = new THREE.Mesh(cubeGeo, antiGreenMat);
+        newQuark1.scale.set(0.5, 0.5, 0.5);
+        newQuark2.scale.set(0.5, 0.5, 0.5);
+        newQuark1.visible = false;
+        newQuark2.visible = false;
+        scene.add(newQuark1, newQuark2);
+
+        const antiRedB = new THREE.MeshStandardMaterial({ color: 0x66ccff, roughness: 0.2, metalness: 0.8 });
+        const antiGreenB = new THREE.MeshStandardMaterial({ color: 0xcc88ff, roughness: 0.2, metalness: 0.8 });
+        const newQuark1b = new THREE.Mesh(cubeGeo, antiRedB);
+        const newQuark2b = new THREE.Mesh(cubeGeo, antiGreenB);
+        newQuark1b.scale.set(0.5, 0.5, 0.5);
+        newQuark2b.scale.set(0.5, 0.5, 0.5);
+        newQuark1b.visible = false;
+        newQuark2b.visible = false;
+        newQuark1b.position.z = PAIR_B_Z;
+        newQuark2b.position.z = PAIR_B_Z;
+        scene.add(newQuark1b, newQuark2b);
+
+        const gridHelper = new THREE.GridHelper(40, 40, 0x222222, 0x111111);
+        gridHelper.position.y = -3;
+        scene.add(gridHelper);
+
+        const distanceSlider = el('distance-slider');
+        const distanceSliderB = el('distance-slider-b');
+        const inertiaTauSlider = el('inertia-tau-slider');
+        const inertiaEnableCb = el('inertia-enable');
+        let dPhys = parseFloat(distanceSlider.value);
+        let dBPhys = parseFloat(distanceSliderB.value);
+        let vD = 0;
+        let vDB = 0;
+        const coupleSlider = el('couple-slider');
+        const coupleModeEl = el('couple-mode');
+        const kSlider = el('k-slider');
+        const cSlider = el('c-slider');
+        const epsSlider = el('eps-slider');
+        const snapSlider = el('snap-slider');
+        const dampSlider = el('damp-slider');
+        const noiseSlider = el('noise-slider');
+        const snapModeEl = el('snap-mode');
+        const strainMaxSlider = el('strain-max-slider');
+        const strainDecaySlider = el('strain-decay-slider');
+        const noiseDisplayCb = el('noise-display');
+        const noiseForceCb = el('noise-force');
+
+        /** @type {'stable' | 'critical' | 'broken'} */
+        let phaseState = 'stable';
+        let phaseStateB = 'stable';
+        let simPaused = false;
+        let stepRemaining = 0;
+        let strain = 0;
+        let strainB = 0;
+        let noiseT = 0;
+        const clock = new THREE.Clock();
+
+        /** T_snap frozen when d_ref slider moves; not recomputed from live k,c,ε. */
+        let T_snap_cached = 0;
+
+        function smoothstep(edge0, edge1, x) {
+            const t = THREE.MathUtils.clamp((x - edge0) / (edge1 - edge0), 0, 1);
+            return t * t * (3 - 2 * t);
+        }
+
+        function overloadReleaseFactor(overload) {
+            const tRel = smoothstep(1.0, 1.3, overload);
+            return THREE.MathUtils.lerp(0.15, 0.35, tRel);
+        }
+
+        function shouldEnterCritical(T_norm, strainNorm) {
+            return T_norm > 0.88 || (strainNorm > 0.82 && T_norm > 0.7);
+        }
+
+        function clampCouplingFactor(f) {
+            return THREE.MathUtils.clamp(f, 0.5, 1.5);
+        }
+
+        /**
+         * ñ = neighbor strain_norm − 0.5. Returns T_state_norm for phase machine / visuals.
+         * Strain integration uses T_raw / snapDenom only (caller).
+         */
+        function couplingTStateNorm(T_raw, snapDenom, nTilde, alpha, mode) {
+            const base = snapDenom > 1e-9 ? T_raw / snapDenom : 0;
+            if (alpha < 1e-9) return base;
+            if (mode === 'amplify') {
+                const mult = clampCouplingFactor(1 + alpha * nTilde);
+                return (T_raw * mult) / snapDenom;
+            }
+            if (mode === 'oppose') {
+                const mult = clampCouplingFactor(1 - alpha * nTilde);
+                return (T_raw * mult) / snapDenom;
+            }
+            if (mode === 'threshold') {
+                const snapEff = Math.max(1e-9, snapDenom * clampCouplingFactor(1 - alpha * nTilde));
+                return T_raw / snapEff;
+            }
+            return base;
+        }
+
+        const HIST = 250;
+        const CHART_Y_MAX = 1.15;
+        const histT = new Float32Array(HIST);
+        const histS = new Float32Array(HIST);
+        const histD = new Float32Array(HIST);
+        const histT2 = new Float32Array(HIST);
+        const histS2 = new Float32Array(HIST);
+        const histD2 = new Float32Array(HIST);
+        let histIdx = 0;
+        let histLen = 0;
+
+        const PHASE_AXIS_MAX = 1.15;
+        const MAX_BREAK_MARKERS = 48;
+        let breakIdSeq = 0;
+        /** @type {{ id: number; pair: 'A' | 'B'; x: number; y: number; cause: 'tension' | 'strain' | 'both' }[]} */
+        const breakMarkers = [];
+
+        const REPLAY_FLASH_MS = 520;
+        const MAX_REPLAY_SNAPS = 5;
+        /** @type {{ pair: 'A' | 'B'; cause: 'tension' | 'strain' | 'both'; pts: { x: number; y: number }[]; t0: number }[]} */
+        const replaySnaps = [];
+
+        const frozenDensityCanvasA = document.createElement('canvas');
+        const frozenDensityCanvasB = document.createElement('canvas');
+        const densityDiffScratch = document.createElement('canvas');
+        const symmetricScratchA = document.createElement('canvas');
+        const symmetricScratchB = document.createElement('canvas');
+        /** Baked diff view at freeze when diff mode was on (single composite). */
+        const frozenDiffCanvas = document.createElement('canvas');
+        const MAX_DOM_FIELD_HISTORY = 8;
+        /** @type {Float32Array[]} */
+        const domFieldHistory = [];
+        let domHistorySizeKey = '';
+
+        function clearDomFieldHistory() {
+            domFieldHistory.length = 0;
+            domHistorySizeKey = '';
+        }
+
+        let probeBufDom = null;
+        let probeBufIa = null;
+        let probeBufIb = null;
+        const lastProbeSnapshot = { w: 0, h: 0, thr: 0, valid: false };
+
+        function ensureProbeBuffers(W, H) {
+            const n = W * H;
+            if (!probeBufDom || probeBufDom.length !== n) {
+                probeBufDom = new Float32Array(n);
+                probeBufIa = new Float32Array(n);
+                probeBufIb = new Float32Array(n);
+            }
+        }
+
+        function invalidatePhaseProbe() {
+            lastProbeSnapshot.valid = false;
+        }
+
+        function canvasPixelToPhaseAxes(px, py, W, H) {
+            const pad = 26;
+            const plotW = W - pad * 2;
+            const plotH = H - pad * 2;
+            const A = PHASE_AXIS_MAX;
+            const x = THREE.MathUtils.clamp(px - pad, 0, plotW);
+            const yTop = THREE.MathUtils.clamp(py - pad, 0, plotH);
+            return {
+                strainNorm: (x / plotW) * A,
+                T_norm: (1 - yTop / plotH) * A,
+            };
+        }
+
+        /** After freeze, live density only for markers with id > this; -1 = no freeze. */
+        let freezeCutId = -1;
+        /** @type {null | { showA: boolean; showB: boolean; causeFilter: { tension: boolean; strain: boolean; both: boolean }; normalized: boolean; hasDiffFrozen?: boolean; diffSymmetric?: boolean; dominanceThreshold?: number }} */
+        let frozenMeta = null;
+
+        function filterMarkersForOverlay(markers, showA, showB, showTension, showStrain, showBoth) {
+            const out = [];
+            for (let i = 0; i < markers.length; i++) {
+                const b = markers[i];
+                if ((b.pair === 'A' && !showA) || (b.pair === 'B' && !showB)) continue;
+                if (!causePassesFilter(b.cause, showTension, showStrain, showBoth)) continue;
+                out.push(b);
+            }
+            return out;
+        }
+
+        function formatFrozenMetaLabel(meta) {
+            if (!meta) return '';
+            const parts = [];
+            if (meta.showA) parts.push('A');
+            if (meta.showB) parts.push('B');
+            const pairStr = parts.length ? parts.join('+') : 'none';
+            const c = meta.causeFilter;
+            const ck = [];
+            if (c.tension) ck.push('tension');
+            if (c.strain) ck.push('strain');
+            if (c.both) ck.push('both');
+            const causeStr =
+                ck.length === 3 ? 'all causes' : ck.length ? ck.join(', ') : 'no causes';
+            const nm = meta.normalized ? 'normalized (per pair)' : 'raw';
+            let diffStr = '';
+            if (meta.hasDiffFrozen) {
+                diffStr = meta.diffSymmetric
+                    ? ' Frozen diff: symmetric A vs B' +
+                      (typeof meta.dominanceThreshold === 'number' && meta.dominanceThreshold > 1e-6
+                          ? ' (dominance ' + meta.dominanceThreshold.toFixed(2) + ').'
+                          : '.')
+                    : ' Frozen diff: A−B (B subtract scaled).';
+            }
+            return 'Frozen capture: pairs ' + pairStr + ', ' + causeStr + ', ' + nm + '.' + diffStr;
+        }
+
+        function buildBreakStatsText(sourceMarkers) {
+            let nA = 0;
+            let nB = 0;
+            let tA = 0;
+            let sA = 0;
+            let bA = 0;
+            let tB = 0;
+            let sB = 0;
+            let bB = 0;
+            for (let i = 0; i < sourceMarkers.length; i++) {
+                const b = sourceMarkers[i];
+                if (b.pair === 'A') {
+                    nA++;
+                    if (b.cause === 'tension') tA++;
+                    else if (b.cause === 'strain') sA++;
+                    else bA++;
+                } else {
+                    nB++;
+                    if (b.cause === 'tension') tB++;
+                    else if (b.cause === 'strain') sB++;
+                    else bB++;
+                }
+            }
+            return (
+                'A: ' +
+                nA +
+                ' (T ' +
+                tA +
+                ', S ' +
+                sA +
+                ', both ' +
+                bA +
+                ') · B: ' +
+                nB +
+                ' (T ' +
+                tB +
+                ', S ' +
+                sB +
+                ', both ' +
+                bB +
+                ')'
+            );
+        }
+
+        function phasePlotGeom(W, H) {
+            const pad = 26;
+            const plotW = W - pad * 2;
+            const plotH = H - pad * 2;
+            const A = PHASE_AXIS_MAX;
+            return {
+                pad,
+                plotW,
+                plotH,
+                xToPx(vx) {
+                    return pad + THREE.MathUtils.clamp(vx / A, 0, 1) * plotW;
+                },
+                yToPx(vy) {
+                    return pad + plotH - THREE.MathUtils.clamp(vy / A, 0, 1) * plotH;
+                },
+            };
+        }
+
+        function computeBreakAgeSpan(markers) {
+            if (markers.length === 0) {
+                return { minId: 0, maxId: 0, idSpan: 1, uniformBreakAge: true };
+            }
+            let minId = markers[0].id;
+            let maxId = markers[0].id;
+            for (let i = 1; i < markers.length; i++) {
+                const id = markers[i].id;
+                minId = Math.min(minId, id);
+                maxId = Math.max(maxId, id);
+            }
+            const idSpan = Math.max(1, maxId - minId);
+            const uniformBreakAge = minId === maxId;
+            return { minId, maxId, idSpan, uniformBreakAge };
+        }
+
+        function causeDensityRgb(cause) {
+            if (cause === 'tension') return [255, 80, 80];
+            if (cause === 'strain') return [80, 120, 255];
+            return [180, 80, 200];
+        }
+
+        function causePassesFilter(cause, showTension, showStrain, showBoth) {
+            if (cause === 'tension') return showTension;
+            if (cause === 'strain') return showStrain;
+            return showBoth;
+        }
+
+        function domCrossesLevel(a, b, level) {
+            if (a < 0 || b < 0) return false;
+            if (level <= 0 || level >= 1) return false;
+            return (a < level) !== (b < level);
+        }
+
+        /**
+         * Draw zero-crossing segments where neighbor dom values straddle `level`.
+         * @param {number} [alphaMultiplier] — scales stroke opacity (temporal fade for ghosts).
+         */
+        function drawDominanceContours(ctx, W, H, domField, levels, alphaMultiplier = 1) {
+            ctx.save();
+            ctx.globalAlpha = THREE.MathUtils.clamp(alphaMultiplier, 0, 1);
+            for (let li = 0; li < levels.length; li++) {
+                const lev = levels[li];
+                ctx.strokeStyle =
+                    Math.abs(lev - 0.5) < 0.02 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 230, 120, 0.78)';
+                ctx.lineWidth = Math.abs(lev - 0.5) < 0.02 ? 1.15 : 0.85;
+                ctx.beginPath();
+                for (let y = 0; y < H; y++) {
+                    for (let x = 0; x < W; x++) {
+                        if (x < W - 1) {
+                            const a = domField[y * W + x];
+                            const b = domField[y * W + x + 1];
+                            if (domCrossesLevel(a, b, lev)) {
+                                ctx.moveTo(x + 1, y);
+                                ctx.lineTo(x + 1, y + 1);
+                            }
+                        }
+                        if (y < H - 1) {
+                            const a = domField[y * W + x];
+                            const b = domField[(y + 1) * W + x];
+                            if (domCrossesLevel(a, b, lev)) {
+                                ctx.moveTo(x, y + 1);
+                                ctx.lineTo(x + 1, y + 1);
+                            }
+                        }
+                    }
+                }
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+
+        /**
+         * Symmetric A vs B: optional per-pair normalize only (no global count/total).
+         * dominanceThreshold 0: additive blue/orange (lighter).
+         * dominanceThreshold &gt; 0: raster A/B intensity, classify pixels by dom = iA/(iA+iB).
+         */
+        function drawSymmetricDiffDensityHalos(ctx, W, H, filtered, opts) {
+            const { normalizeDensity, dominanceThreshold, showDominanceContours, skipContourHistory, contourHistory, recordProbe } = opts;
+            let countA = 0;
+            let countB = 0;
+            for (let i = 0; i < filtered.length; i++) {
+                if (filtered[i].pair === 'A') countA++;
+                else countB++;
+            }
+            const { minId, maxId, idSpan, uniformBreakAge } = computeBreakAgeSpan(filtered);
+            const { xToPx, yToPx } = phasePlotGeom(W, H);
+            const baseAlpha = 0.04;
+
+            function alphaForMarker(b) {
+                const frac = uniformBreakAge ? 1 : (b.id - minId) / idSpan;
+                const alphaMul = 0.22 + 0.78 * frac;
+                let a = Math.min(baseAlpha * alphaMul, 0.12);
+                if (normalizeDensity) a /= Math.max(1, b.pair === 'A' ? countA : countB);
+                return a;
+            }
+
+            const thr =
+                typeof dominanceThreshold === 'number' && dominanceThreshold > 1e-6
+                    ? THREE.MathUtils.clamp(dominanceThreshold, 0, 1)
+                    : 0;
+
+            if (thr < 1e-6) {
+                clearDomFieldHistory();
+                ctx.save();
+                ctx.globalCompositeOperation = 'lighter';
+                for (let bi = 0; bi < filtered.length; bi++) {
+                    const b = filtered[bi];
+                    const px = xToPx(b.x);
+                    const py = yToPx(b.y);
+                    const alpha = alphaForMarker(b);
+                    ctx.fillStyle =
+                        b.pair === 'A'
+                            ? `rgba(80, 140, 255, ${alpha})`
+                            : `rgba(255, 140, 80, ${alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(px, py, 15, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+                return;
+            }
+
+            const sizeKey = W + 'x' + H;
+            if (domHistorySizeKey !== sizeKey) {
+                clearDomFieldHistory();
+                domHistorySizeKey = sizeKey;
+            }
+
+            symmetricScratchA.width = W;
+            symmetricScratchA.height = H;
+            symmetricScratchB.width = W;
+            symmetricScratchB.height = H;
+            const sctxA = symmetricScratchA.getContext('2d');
+            const sctxB = symmetricScratchB.getContext('2d');
+            sctxA.fillStyle = '#000';
+            sctxA.fillRect(0, 0, W, H);
+            sctxB.fillStyle = '#000';
+            sctxB.fillRect(0, 0, W, H);
+            sctxA.globalCompositeOperation = 'lighter';
+            sctxB.globalCompositeOperation = 'lighter';
+            for (let bi = 0; bi < filtered.length; bi++) {
+                const b = filtered[bi];
+                const px = xToPx(b.x);
+                const py = yToPx(b.y);
+                const alpha = alphaForMarker(b);
+                if (b.pair === 'A') {
+                    sctxA.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+                    sctxA.beginPath();
+                    sctxA.arc(px, py, 15, 0, Math.PI * 2);
+                    sctxA.fill();
+                } else {
+                    sctxB.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+                    sctxB.beginPath();
+                    sctxB.arc(px, py, 15, 0, Math.PI * 2);
+                    sctxB.fill();
+                }
+            }
+            const idA = sctxA.getImageData(0, 0, W, H);
+            const idB = sctxB.getImageData(0, 0, W, H);
+            const dA = idA.data;
+            const dB = idB.data;
+            const out = ctx.createImageData(W, H);
+            const od = out.data;
+            const domField = new Float32Array(W * H);
+            const eps = 1e-6;
+            if (recordProbe) ensureProbeBuffers(W, H);
+            for (let y = 0; y < H; y++) {
+                for (let x = 0; x < W; x++) {
+                    const p = (y * W + x) * 4;
+                    const ia = dA[p] * 0.299 + dA[p + 1] * 0.587 + dA[p + 2] * 0.114;
+                    const ib = dB[p] * 0.299 + dB[p + 1] * 0.587 + dB[p + 2] * 0.114;
+                    const sum = ia + ib;
+                    const idx = y * W + x;
+                    if (sum < 1e-5) {
+                        domField[idx] = -1;
+                        if (recordProbe) {
+                            probeBufDom[idx] = -1;
+                            probeBufIa[idx] = -1;
+                            probeBufIb[idx] = -1;
+                        }
+                        od[p] = od[p + 1] = od[p + 2] = od[p + 3] = 0;
+                        continue;
+                    }
+                    const dom = ia / (sum + eps);
+                    domField[idx] = dom;
+                    if (recordProbe) {
+                        probeBufDom[idx] = dom;
+                        probeBufIa[idx] = ia;
+                        probeBufIb[idx] = ib;
+                    }
+                    const strength = Math.min(255, sum * 0.45 + 35);
+                    if (dom > thr) {
+                        od[p] = 80;
+                        od[p + 1] = 140;
+                        od[p + 2] = 255;
+                        od[p + 3] = strength;
+                    } else if (dom < 1 - thr) {
+                        od[p] = 255;
+                        od[p + 1] = 140;
+                        od[p + 2] = 80;
+                        od[p + 3] = strength;
+                    } else {
+                        od[p] = od[p + 1] = od[p + 2] = 95;
+                        od[p + 3] = Math.min(160, strength * 0.45);
+                    }
+                }
+            }
+            ctx.putImageData(out, 0, 0);
+            if (showDominanceContours !== false) {
+                const levelSet = new Set([0.5, thr, 1 - thr]);
+                const levels = [];
+                levelSet.forEach((v) => {
+                    if (v > 1e-4 && v < 1 - 1e-4) levels.push(v);
+                });
+                levels.sort((a, b) => a - b);
+                if (skipContourHistory !== true && contourHistory !== false) {
+                    const nHist = domFieldHistory.length;
+                    for (let hi = 0; hi < nHist; hi++) {
+                        const ghostAlpha =
+                            0.1 + 0.55 * ((hi + 1) / Math.max(1, nHist + 1));
+                        drawDominanceContours(ctx, W, H, domFieldHistory[hi], levels, ghostAlpha);
+                    }
+                }
+                drawDominanceContours(ctx, W, H, domField, levels, 1);
+                if (skipContourHistory !== true && contourHistory !== false) {
+                    domFieldHistory.push(new Float32Array(domField));
+                    while (domFieldHistory.length > MAX_DOM_FIELD_HISTORY) domFieldHistory.shift();
+                }
+            }
+            if (recordProbe) {
+                lastProbeSnapshot.w = W;
+                lastProbeSnapshot.h = H;
+                lastProbeSnapshot.thr = thr;
+                lastProbeSnapshot.valid = true;
+            }
+        }
+
+        /**
+         * A−B: A adds (blue-tinted); B punches out on scratch; B strength scaled by countA/(countA+countB).
+         */
+        function drawAsymmetricDiffDensityHalos(ctx, W, H, filtered, opts) {
+            const { normalizeDensity } = opts;
+            const listA = [];
+            const listB = [];
+            for (let i = 0; i < filtered.length; i++) {
+                if (filtered[i].pair === 'A') listA.push(filtered[i]);
+                else listB.push(filtered[i]);
+            }
+            const countA = listA.length;
+            const countB = listB.length;
+            if (countA === 0 && countB === 0) return;
+            const total = countA + countB || 1;
+            const scaleB = countA / total;
+            const { minId, maxId, idSpan, uniformBreakAge } = computeBreakAgeSpan(filtered);
+            const { xToPx, yToPx } = phasePlotGeom(W, H);
+            const baseAlpha = 0.04;
+            densityDiffScratch.width = W;
+            densityDiffScratch.height = H;
+            const sctx = densityDiffScratch.getContext('2d');
+            sctx.clearRect(0, 0, W, H);
+            sctx.save();
+            sctx.globalCompositeOperation = 'lighter';
+            for (let bi = 0; bi < listA.length; bi++) {
+                const b = listA[bi];
+                const px = xToPx(b.x);
+                const py = yToPx(b.y);
+                const frac = uniformBreakAge ? 1 : (b.id - minId) / idSpan;
+                const alphaMul = 0.22 + 0.78 * frac;
+                let alpha = Math.min(baseAlpha * alphaMul, 0.12);
+                if (normalizeDensity) alpha /= Math.max(1, countA);
+                const [r, g, bl] = causeDensityRgb(b.cause);
+                const br = Math.round(r * 0.35 + 80 * 0.65);
+                const bg = Math.round(g * 0.35 + 140 * 0.65);
+                const bb = Math.round(bl * 0.35 + 255 * 0.65);
+                sctx.fillStyle = `rgba(${br}, ${bg}, ${bb}, ${alpha})`;
+                sctx.beginPath();
+                sctx.arc(px, py, 15, 0, Math.PI * 2);
+                sctx.fill();
+            }
+            if (countB > 0 && countA > 0) {
+                sctx.globalCompositeOperation = 'destination-out';
+                for (let bi = 0; bi < listB.length; bi++) {
+                    const b = listB[bi];
+                    const px = xToPx(b.x);
+                    const py = yToPx(b.y);
+                    const frac = uniformBreakAge ? 1 : (b.id - minId) / idSpan;
+                    const alphaMul = 0.22 + 0.78 * frac;
+                    let alpha = Math.min(baseAlpha * alphaMul, 0.12);
+                    if (normalizeDensity) alpha /= Math.max(1, countB);
+                    alpha *= scaleB;
+                    sctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.95})`;
+                    sctx.beginPath();
+                    sctx.arc(px, py, 15, 0, Math.PI * 2);
+                    sctx.fill();
+                }
+            }
+            sctx.restore();
+            ctx.drawImage(densityDiffScratch, 0, 0);
+        }
+
+        /**
+         * Additive cause-colored density disks; alpha clamped to limit saturation under 'lighter'.
+         * Per-pair normalization: alpha scales by 1 / count within that pair (when normalize on).
+         * When opts.recordProbe is true, symmetric diff + dominance raster fills probe buffers for phase-map click readout.
+         * @param {{ normalizeDensity: boolean; showTension: boolean; showStrain: boolean; showBoth: boolean; diffMode?: boolean; diffSymmetric?: boolean; skipFilter?: boolean; dominanceThreshold?: number; showDominanceContours?: boolean; contourHistory?: boolean; skipContourHistory?: boolean; recordProbe?: boolean }} opts
+         */
+        function drawCauseDensityHalos(ctx, W, H, markers, showA, showB, opts) {
+            const { normalizeDensity, showTension, showStrain, showBoth, diffMode, diffSymmetric, skipFilter } = opts;
+            if (!diffMode || (diffMode && !diffSymmetric)) {
+                clearDomFieldHistory();
+            }
+            const filtered = skipFilter
+                ? markers
+                : filterMarkersForOverlay(markers, showA, showB, showTension, showStrain, showBoth);
+            if (filtered.length === 0) {
+                clearDomFieldHistory();
+                invalidatePhaseProbe();
+                return;
+            }
+            if (diffMode) {
+                if (diffSymmetric) {
+                    drawSymmetricDiffDensityHalos(ctx, W, H, filtered, {
+                        normalizeDensity,
+                        dominanceThreshold: opts.dominanceThreshold,
+                        showDominanceContours: opts.showDominanceContours,
+                        skipContourHistory: opts.skipContourHistory,
+                        contourHistory: opts.contourHistory,
+                        recordProbe: opts.recordProbe === true,
+                    });
+                } else {
+                    drawAsymmetricDiffDensityHalos(ctx, W, H, filtered, { normalizeDensity });
+                }
+                return;
+            }
+            let countA = 0;
+            let countB = 0;
+            for (let i = 0; i < filtered.length; i++) {
+                if (filtered[i].pair === 'A') countA++;
+                else countB++;
+            }
+            const { minId, maxId, idSpan, uniformBreakAge } = computeBreakAgeSpan(filtered);
+            const { xToPx, yToPx } = phasePlotGeom(W, H);
+            const baseAlpha = 0.04;
+            ctx.save();
+            ctx.globalCompositeOperation = 'lighter';
+            for (let bi = 0; bi < filtered.length; bi++) {
+                const b = filtered[bi];
+                const px = xToPx(b.x);
+                const py = yToPx(b.y);
+                const frac = uniformBreakAge ? 1 : (b.id - minId) / idSpan;
+                const alphaMul = 0.22 + 0.78 * frac;
+                let alpha = Math.min(baseAlpha * alphaMul, 0.12);
+                if (normalizeDensity) {
+                    const c = b.pair === 'A' ? countA : countB;
+                    alpha /= Math.max(1, c);
+                }
+                const rgb = causeDensityRgb(b.cause);
+                ctx.fillStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
+                ctx.beginPath();
+                ctx.arc(px, py, 15, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.restore();
+        }
+
+        function captureReplayPointsForPair(pair) {
+            if (phaseCount < 2) return [];
+            const n = Math.min(10, phaseCount);
+            const start = (phaseHead - phaseCount + PHASE_TRAIL) % PHASE_TRAIL;
+            const pts = [];
+            for (let k = 0; k < n; k++) {
+                const i = (start + phaseCount - n + k) % PHASE_TRAIL;
+                if (pair === 'A') pts.push({ x: trailAX[i], y: trailAY[i] });
+                else pts.push({ x: trailBX[i], y: trailBY[i] });
+            }
+            return pts;
+        }
+
+        function pushReplayFlash(pair, cause) {
+            const c = cause || 'both';
+            replaySnaps.push({
+                pair,
+                cause: c,
+                pts: captureReplayPointsForPair(pair),
+                t0: performance.now(),
+            });
+            while (replaySnaps.length > MAX_REPLAY_SNAPS) replaySnaps.shift();
+        }
+
+        function recordPhaseBreak(pair, strainNormAtCheck, T_normAtCheck, cause) {
+            breakIdSeq += 1;
+            const c = cause || 'both';
+            breakMarkers.push({
+                id: breakIdSeq,
+                pair,
+                x: THREE.MathUtils.clamp(strainNormAtCheck, 0, PHASE_AXIS_MAX),
+                y: THREE.MathUtils.clamp(T_normAtCheck, 0, PHASE_AXIS_MAX),
+                cause: c,
+            });
+            if (breakMarkers.length > MAX_BREAK_MARKERS) breakMarkers.shift();
+            pushReplayFlash(pair, c);
+        }
+
+        const PHASE_TRAIL = 512;
+        const trailAX = new Float32Array(PHASE_TRAIL);
+        const trailAY = new Float32Array(PHASE_TRAIL);
+        const trailBX = new Float32Array(PHASE_TRAIL);
+        const trailBY = new Float32Array(PHASE_TRAIL);
+        const ghostAX = new Float32Array(PHASE_TRAIL);
+        const ghostAY = new Float32Array(PHASE_TRAIL);
+        const ghostBX = new Float32Array(PHASE_TRAIL);
+        const ghostBY = new Float32Array(PHASE_TRAIL);
+        let phaseHead = 0;
+        let phaseCount = 0;
+        let ghostCount = 0;
+
+        function snapshotGhostFromCurrent() {
+            if (phaseCount < 2) {
+                ghostCount = 0;
+                return;
+            }
+            ghostCount = phaseCount;
+            const start = (phaseHead - phaseCount + PHASE_TRAIL) % PHASE_TRAIL;
+            for (let k = 0; k < ghostCount; k++) {
+                const i = (start + k) % PHASE_TRAIL;
+                ghostAX[k] = trailAX[i];
+                ghostAY[k] = trailAY[i];
+                ghostBX[k] = trailBX[i];
+                ghostBY[k] = trailBY[i];
+            }
+        }
+
+        function resetPhaseTrail() {
+            snapshotGhostFromCurrent();
+            phaseHead = 0;
+            phaseCount = 0;
+        }
+
+        function pushPhasePoint(ax, ay, bx, by) {
+            const w = phaseHead % PHASE_TRAIL;
+            trailAX[w] = ax;
+            trailAY[w] = ay;
+            trailBX[w] = bx;
+            trailBY[w] = by;
+            phaseHead++;
+            phaseCount = Math.min(phaseCount + 1, PHASE_TRAIL);
+        }
+
+        function headDotRgb(state, baseR, baseG, baseB) {
+            if (state === 'broken') return { r: 255, g: 60, b: 55 };
+            if (state === 'critical') return { r: 230, g: 175, b: 45 };
+            return { r: baseR, g: baseG, b: baseB };
+        }
+
+        function drawPhasePlot(phaseA, phaseB, headOverrideA, headOverrideB) {
+            const nowPrune = performance.now();
+            let rp = 0;
+            for (let i = 0; i < replaySnaps.length; i++) {
+                if (nowPrune - replaySnaps[i].t0 < REPLAY_FLASH_MS) replaySnaps[rp++] = replaySnaps[i];
+            }
+            replaySnaps.length = rp;
+
+            const W = phaseCanvas.width;
+            const H = phaseCanvas.height;
+            pctx.fillStyle = '#0a0a0a';
+            pctx.fillRect(0, 0, W, H);
+            const pad = 26;
+            const plotW = W - pad * 2;
+            const plotH = H - pad * 2;
+            const A = PHASE_AXIS_MAX;
+            const showA = el('phase-show-a').checked;
+            const showB = el('phase-show-b').checked;
+            const showTensionCause = el('phase-cause-tension').checked;
+            const showStrainCause = el('phase-cause-strain').checked;
+            const showBothCause = el('phase-cause-both').checked;
+            const normalizeDensity = el('phase-density-normalize').checked;
+            const densityEnabled = el('phase-density').checked;
+            const diffModeEl = el('phase-diff-mode');
+            const diffSymEl = el('phase-diff-symmetric');
+            diffModeEl.disabled = !densityEnabled;
+            diffSymEl.disabled = !densityEnabled;
+            if (!densityEnabled) {
+                diffModeEl.checked = false;
+                diffSymEl.checked = false;
+            }
+            const diffMode = densityEnabled && diffModeEl.checked;
+            const diffSymmetric = densityEnabled && diffMode && diffSymEl.checked;
+            const domEl = el('phase-dominance-threshold');
+            domEl.disabled = !(densityEnabled && diffMode && diffSymmetric);
+            const dominanceThreshold = parseFloat(domEl.value) || 0;
+            el('phase-dominance-val').textContent = dominanceThreshold.toFixed(2);
+            const domContoursEl = el('phase-dominance-contours');
+            const domContourHistEl = el('phase-dominance-contour-history');
+            const domContoursOn =
+                densityEnabled && diffMode && diffSymmetric && dominanceThreshold > 1e-6;
+            domContoursEl.disabled = !domContoursOn;
+            domContourHistEl.disabled = !domContoursOn || !domContoursEl.checked;
+            const densityOpts = {
+                normalizeDensity,
+                showTension: showTensionCause,
+                showStrain: showStrainCause,
+                showBoth: showBothCause,
+                diffMode,
+                diffSymmetric,
+                dominanceThreshold,
+                showDominanceContours: domContoursEl.checked,
+                contourHistory: domContourHistEl.checked,
+                skipContourHistory: false,
+            };
+            const visibleMarkers = filterMarkersForOverlay(
+                breakMarkers,
+                showA,
+                showB,
+                showTensionCause,
+                showStrainCause,
+                showBothCause
+            );
+            el('phase-density-normalize-tag').style.display =
+                normalizeDensity && densityEnabled ? 'inline' : 'none';
+            el('phase-frozen-meta').textContent =
+                freezeCutId >= 0 && frozenMeta
+                    ? formatFrozenMetaLabel(frozenMeta) +
+                      (diffMode
+                          ? diffSymmetric
+                              ? ' Live: symmetric A vs B.'
+                              : ' Live: A−B diff (post-freeze).'
+                          : '')
+                    : '';
+            const statsSource = el('phase-stats-filtered').checked ? visibleMarkers : breakMarkers;
+            el('phase-break-stats').textContent = buildBreakStatsText(statsSource);
+
+            function xToPx(vx) {
+                return pad + THREE.MathUtils.clamp(vx / A, 0, 1) * plotW;
+            }
+            function yToPx(vy) {
+                return pad + plotH - THREE.MathUtils.clamp(vy / A, 0, 1) * plotH;
+            }
+
+            const x1 = xToPx(1);
+            const y1 = yToPx(1);
+
+            pctx.fillStyle = 'rgba(0, 220, 120, 0.07)';
+            pctx.fillRect(pad, y1, x1 - pad, pad + plotH - y1);
+            pctx.fillStyle = 'rgba(255, 160, 40, 0.06)';
+            pctx.fillRect(x1, pad, pad + plotW - x1, plotH);
+            pctx.fillStyle = 'rgba(255, 60, 60, 0.055)';
+            pctx.fillRect(pad, pad, plotW, y1 - pad);
+
+            pctx.strokeStyle = '#333';
+            pctx.lineWidth = 1;
+            pctx.strokeRect(pad, pad, plotW, plotH);
+
+            pctx.setLineDash([4, 4]);
+            pctx.strokeStyle = '#555';
+            pctx.beginPath();
+            pctx.moveTo(x1, pad);
+            pctx.lineTo(x1, pad + plotH);
+            pctx.stroke();
+            pctx.beginPath();
+            pctx.moveTo(pad, y1);
+            pctx.lineTo(pad + plotW, y1);
+            pctx.stroke();
+            pctx.setLineDash([]);
+
+            let minId = 0;
+            let maxId = 0;
+            let idSpan = 1;
+            let uniformBreakAge = true;
+            if (visibleMarkers.length > 0) {
+                minId = maxId = visibleMarkers[0].id;
+                for (let i = 1; i < visibleMarkers.length; i++) {
+                    const id = visibleMarkers[i].id;
+                    minId = Math.min(minId, id);
+                    maxId = Math.max(maxId, id);
+                }
+                idSpan = Math.max(1, maxId - minId);
+                uniformBreakAge = minId === maxId;
+            }
+
+            const showDensity = densityEnabled;
+            if (showDensity && freezeCutId >= 0) {
+                const useFrozenDiff = frozenMeta && frozenMeta.hasDiffFrozen && diffMode;
+                if (useFrozenDiff) {
+                    pctx.drawImage(frozenDiffCanvas, 0, 0);
+                    pctx.save();
+                    pctx.strokeStyle = 'rgba(0, 220, 255, 0.32)';
+                    pctx.lineWidth = 1.5;
+                    pctx.setLineDash([4, 3]);
+                    pctx.strokeRect(pad + 0.5, pad + 0.5, plotW - 1, plotH - 1);
+                    pctx.setLineDash([]);
+                    pctx.restore();
+                } else {
+                    if (showA) pctx.drawImage(frozenDensityCanvasA, 0, 0);
+                    if (showB) pctx.drawImage(frozenDensityCanvasB, 0, 0);
+                }
+            }
+            const liveRaw = [];
+            if (freezeCutId >= 0) {
+                for (let i = 0; i < breakMarkers.length; i++) {
+                    if (breakMarkers[i].id > freezeCutId) liveRaw.push(breakMarkers[i]);
+                }
+            } else {
+                for (let i = 0; i < breakMarkers.length; i++) liveRaw.push(breakMarkers[i]);
+            }
+            const liveVisibleMarkers = filterMarkersForOverlay(
+                liveRaw,
+                showA,
+                showB,
+                showTensionCause,
+                showStrainCause,
+                showBothCause
+            );
+            const probeRecord =
+                showDensity &&
+                liveVisibleMarkers.length > 0 &&
+                diffMode &&
+                diffSymmetric &&
+                dominanceThreshold > 1e-6;
+            if (!probeRecord) {
+                invalidatePhaseProbe();
+            }
+            if (showDensity && liveVisibleMarkers.length > 0) {
+                drawCauseDensityHalos(pctx, W, H, liveVisibleMarkers, showA, showB, {
+                    ...densityOpts,
+                    skipFilter: true,
+                    recordProbe: probeRecord,
+                });
+            }
+
+            for (let bi = 0; bi < visibleMarkers.length; bi++) {
+                const b = visibleMarkers[bi];
+                const px = xToPx(b.x);
+                const py = yToPx(b.y);
+                const frac = uniformBreakAge ? 1 : (b.id - minId) / idSpan;
+                const alphaMul = 0.22 + 0.78 * frac;
+                const base = b.pair === 'A' ? [255, 70, 70] : [255, 130, 160];
+                const drawCross = b.cause === 'tension' || b.cause === 'both';
+                const drawRing = b.cause === 'strain' || b.cause === 'both';
+                pctx.lineWidth = 1.35;
+                if (drawRing) {
+                    pctx.strokeStyle = `rgba(${base[0]}, ${base[1]}, ${base[2]}, ${alphaMul * 0.9})`;
+                    pctx.beginPath();
+                    pctx.arc(px, py, 5, 0, Math.PI * 2);
+                    pctx.stroke();
+                }
+                if (drawCross) {
+                    pctx.strokeStyle = `rgba(${base[0]}, ${base[1]}, ${base[2]}, ${alphaMul * 0.95})`;
+                    pctx.beginPath();
+                    pctx.moveTo(px - 4, py - 4);
+                    pctx.lineTo(px + 4, py + 4);
+                    pctx.moveTo(px - 4, py + 4);
+                    pctx.lineTo(px + 4, py - 4);
+                    pctx.stroke();
+                }
+            }
+
+            const replayNow = performance.now();
+            for (let ri = 0; ri < replaySnaps.length; ri++) {
+                const snap = replaySnaps[ri];
+                if ((snap.pair === 'A' && !showA) || (snap.pair === 'B' && !showB)) continue;
+                const sc = snap.cause != null ? snap.cause : 'both';
+                if (!causePassesFilter(sc, showTensionCause, showStrainCause, showBothCause)) continue;
+                const age = replayNow - snap.t0;
+                if (age > REPLAY_FLASH_MS || snap.pts.length < 2) continue;
+                const fade = 1 - age / REPLAY_FLASH_MS;
+                const rgb = snap.pair === 'A' ? [255, 220, 120] : [180, 255, 255];
+                pctx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${fade * 0.85})`;
+                pctx.lineWidth = 1.8;
+                pctx.lineJoin = 'round';
+                pctx.lineCap = 'round';
+                pctx.beginPath();
+                for (let pi = 0; pi < snap.pts.length; pi++) {
+                    const qx = xToPx(snap.pts[pi].x);
+                    const qy = yToPx(snap.pts[pi].y);
+                    if (pi === 0) pctx.moveTo(qx, qy);
+                    else pctx.lineTo(qx, qy);
+                }
+                pctx.stroke();
+            }
+
+            function strokeGhostTrail(gx, gy, count, lineWidth) {
+                if (count < 2) return;
+                pctx.beginPath();
+                pctx.moveTo(xToPx(gx[0]), yToPx(gy[0]));
+                for (let k = 1; k < count; k++) {
+                    pctx.lineTo(xToPx(gx[k]), yToPx(gy[k]));
+                }
+                pctx.strokeStyle = 'rgba(130, 130, 145, 0.25)';
+                pctx.lineWidth = lineWidth * 0.9;
+                pctx.lineJoin = 'round';
+                pctx.lineCap = 'round';
+                pctx.stroke();
+            }
+            if (showA) strokeGhostTrail(ghostAX, ghostAY, ghostCount, 1.2);
+            if (showB) strokeGhostTrail(ghostBX, ghostBY, ghostCount, 1.05);
+
+            function strokeTrailFading(trX, trY, r, g, b, lineWidth) {
+                if (phaseCount < 2) return;
+                const start = (phaseHead - phaseCount + PHASE_TRAIL) % PHASE_TRAIL;
+                for (let k = 0; k < phaseCount - 1; k++) {
+                    const t = k / Math.max(1, phaseCount - 2);
+                    const alpha = 0.14 + 0.78 * t;
+                    const i0 = (start + k) % PHASE_TRAIL;
+                    const i1 = (start + k + 1) % PHASE_TRAIL;
+                    pctx.beginPath();
+                    pctx.moveTo(xToPx(trX[i0]), yToPx(trY[i0]));
+                    pctx.lineTo(xToPx(trX[i1]), yToPx(trY[i1]));
+                    pctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+                    pctx.lineWidth = lineWidth;
+                    pctx.lineJoin = 'round';
+                    pctx.lineCap = 'round';
+                    pctx.stroke();
+                }
+            }
+            if (showA) strokeTrailFading(trailAX, trailAY, 68, 136, 255, 1.35);
+            if (showB) strokeTrailFading(trailBX, trailBY, 85, 200, 220, 1.25);
+
+            if (showA && (phaseCount >= 1 || headOverrideA)) {
+                const start = (phaseHead - phaseCount + PHASE_TRAIL) % PHASE_TRAIL;
+                const iLastA =
+                    phaseCount >= 1 ? (start + phaseCount - 1) % PHASE_TRAIL : 0;
+                const cA = headDotRgb(phaseA, 68, 136, 255);
+                const ax =
+                    headOverrideA && typeof headOverrideA.x === 'number'
+                        ? xToPx(headOverrideA.x)
+                        : xToPx(trailAX[iLastA]);
+                const ay =
+                    headOverrideA && typeof headOverrideA.y === 'number'
+                        ? yToPx(headOverrideA.y)
+                        : yToPx(trailAY[iLastA]);
+                pctx.fillStyle = `rgba(${cA.r}, ${cA.g}, ${cA.b}, 0.98)`;
+                pctx.beginPath();
+                pctx.arc(ax, ay, 3.5, 0, Math.PI * 2);
+                pctx.fill();
+                pctx.strokeStyle = `rgba(${Math.min(255, cA.r + 40)}, ${Math.min(255, cA.g + 50)}, ${Math.min(255, cA.b + 40)}, 0.9)`;
+                pctx.lineWidth = 1;
+                pctx.stroke();
+            }
+            if (showB && (phaseCount >= 1 || headOverrideB)) {
+                const start = (phaseHead - phaseCount + PHASE_TRAIL) % PHASE_TRAIL;
+                const iLastB =
+                    phaseCount >= 1 ? (start + phaseCount - 1) % PHASE_TRAIL : 0;
+                const cB = headDotRgb(phaseB, 85, 200, 220);
+                const bx =
+                    headOverrideB && typeof headOverrideB.x === 'number'
+                        ? xToPx(headOverrideB.x)
+                        : xToPx(trailBX[iLastB]);
+                const by =
+                    headOverrideB && typeof headOverrideB.y === 'number'
+                        ? yToPx(headOverrideB.y)
+                        : yToPx(trailBY[iLastB]);
+                pctx.fillStyle = `rgba(${cB.r}, ${cB.g}, ${cB.b}, 0.98)`;
+                pctx.beginPath();
+                pctx.arc(bx, by, 3.5, 0, Math.PI * 2);
+                pctx.fill();
+                pctx.strokeStyle = `rgba(${Math.min(255, cB.r + 45)}, ${Math.min(255, cB.g + 45)}, ${Math.min(255, cB.b + 35)}, 0.88)`;
+                pctx.lineWidth = 1;
+                pctx.stroke();
+            }
+
+            pctx.fillStyle = '#777';
+            pctx.font = '9px ui-monospace, monospace';
+            pctx.textAlign = 'left';
+            pctx.fillText('T_state/T_snap ↑', pad, pad - 6);
+            pctx.textAlign = 'center';
+            pctx.fillText('strain/max →', pad + plotW / 2, H - 5);
+        }
+
+        function tensionModel(d, k, c, epsilon) {
+            return k * d + c / (d + epsilon);
+        }
+
+        function readParams() {
+            return {
+                d: parseFloat(distanceSlider.value),
+                dB: parseFloat(distanceSliderB.value),
+                coupleAlpha: parseFloat(coupleSlider.value),
+                coupleMode: coupleModeEl.value,
+                k: parseFloat(kSlider.value),
+                c: parseFloat(cSlider.value),
+                epsilon: parseFloat(epsSlider.value),
+                dRef: parseFloat(snapSlider.value),
+                damping: parseFloat(dampSlider.value),
+                noiseAmp: parseFloat(noiseSlider.value),
+                snapMode: snapModeEl.value,
+                strainMax: parseFloat(strainMaxSlider.value),
+                strainDecayLambda: parseFloat(strainDecaySlider.value),
+            };
+        }
+
+        /** Sliders are targets; when inertia is on, d/dB lag with velocity and optional damping. */
+        function getEffectiveSeparationForFrame(dt) {
+            const p = readParams();
+            const tau = Math.max(0.05, parseFloat(inertiaTauSlider.value));
+            if (!inertiaEnableCb.checked) {
+                dPhys = p.d;
+                dBPhys = p.dB;
+                vD = 0;
+                vDB = 0;
+                return { d: p.d, dB: p.dB, p };
+            }
+            const a = (p.d - dPhys) / tau;
+            vD += a * dt;
+            dPhys += vD * dt;
+            vD *= Math.exp(-dt / tau);
+            const aB = (p.dB - dBPhys) / tau;
+            vDB += aB * dt;
+            dBPhys += vDB * dt;
+            vDB *= Math.exp(-dt / tau);
+            dPhys = THREE.MathUtils.clamp(dPhys, 0, 20);
+            dBPhys = THREE.MathUtils.clamp(dBPhys, 0, 20);
+            return { d: dPhys, dB: dBPhys, p };
+        }
+
+        function relockTSnapFromRef() {
+            const p = readParams();
+            T_snap_cached = tensionModel(p.dRef, p.k, p.c, p.epsilon);
+        }
+
+        function noiseSample() {
+            noiseT += 0.04;
+            return (Math.sin(noiseT * 1.7) * 0.5 + Math.sin(noiseT * 2.3) * 0.5);
+        }
+
+        function applyTensionColor(mat, norm, time, flickerIntensity, criticalBoost) {
+            const t = THREE.MathUtils.clamp(norm, 0, 1);
+            const hue = THREE.MathUtils.lerp(0.58, 0.02, t);
+            const sat = THREE.MathUtils.lerp(0.35, 0.95, t);
+            const light = THREE.MathUtils.lerp(0.55, 0.45, t);
+            const flash =
+                flickerIntensity > 0
+                    ? 0.35 * flickerIntensity * (0.5 + 0.5 * Math.sin(time * 12))
+                    : 0;
+            mat.color.setHSL(hue, sat, light);
+            mat.emissive.setHSL(hue, sat * 0.9, light * 0.5);
+            mat.emissiveIntensity = 0.15 + t * 3.5 + flash + criticalBoost * 0.45;
+        }
+
+        function drawChart() {
+            const w = chart.width;
+            const h = chart.height;
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, w, h);
+            if (histLen < 2) return;
+            const pad = 4;
+            const plotW = w - pad * 2;
+            const plotH = h - pad * 2;
+            const step = plotW / (histLen - 1);
+            const yScale = CHART_Y_MAX;
+
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 1;
+            const y1 = pad + plotH * (1 - 1 / yScale);
+            ctx.beginPath();
+            ctx.moveTo(pad, y1);
+            ctx.lineTo(pad + plotW, y1);
+            ctx.stroke();
+
+            function strokeHistory(arr, color, lineWidth) {
+                ctx.beginPath();
+                for (let i = 0; i < histLen; i++) {
+                    const idx = (histIdx - histLen + i + HIST) % HIST;
+                    const x = pad + i * step;
+                    const v = THREE.MathUtils.clamp(arr[idx], 0, yScale);
+                    const y = pad + plotH * (1 - v / yScale);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth ?? 1.25;
+                ctx.stroke();
+            }
+            strokeHistory(histD, 'rgba(140,140,150,0.5)', 1);
+            strokeHistory(histD2, 'rgba(100,100,115,0.28)', 1);
+            strokeHistory(histT, '#4488ff', 1.25);
+            strokeHistory(histS, '#cc8844', 1.25);
+            strokeHistory(histT2, '#55aacc', 1.1);
+            strokeHistory(histS2, '#b8956a', 1.1);
+        }
+
+        function refreshStaticLabels() {
+            const p = readParams();
+            const tau = parseFloat(inertiaTauSlider.value);
+            el('inertia-tau-val').textContent = Number.isFinite(tau) ? tau.toFixed(2) : '—';
+            if (inertiaEnableCb.checked) {
+                el('distance-val').textContent = dPhys.toFixed(1);
+                el('distance-b-val').textContent = dBPhys.toFixed(1);
+            } else {
+                el('distance-val').textContent = p.d.toFixed(1);
+                el('distance-b-val').textContent = p.dB.toFixed(1);
+            }
+            el('couple-val').textContent = p.coupleAlpha.toFixed(2);
+            el('k-val').textContent = p.k.toFixed(2);
+            el('c-val').textContent = p.c.toFixed(2);
+            el('eps-val').textContent = p.epsilon.toFixed(2);
+            el('snap-val').textContent = p.dRef.toFixed(1);
+            el('damp-val').textContent = p.damping.toFixed(2);
+            el('noise-val').textContent = p.noiseAmp.toFixed(2);
+            el('strain-max-val').textContent = p.strainMax.toFixed(1);
+            el('strain-decay-val').textContent = p.strainDecayLambda.toFixed(2);
+        }
+
+        ['input', 'change'].forEach((ev) => {
+            [distanceSlider, distanceSliderB, inertiaTauSlider, inertiaEnableCb, coupleSlider, coupleModeEl, kSlider, cSlider, epsSlider, dampSlider, noiseSlider,
+                strainMaxSlider, strainDecaySlider, snapModeEl].forEach((x) => x.addEventListener(ev, refreshStaticLabels));
+        });
+        inertiaEnableCb.addEventListener('change', () => {
+            const p = readParams();
+            dPhys = p.d;
+            dBPhys = p.dB;
+            vD = 0;
+            vDB = 0;
+            refreshStaticLabels();
+        });
+        ['input', 'change'].forEach((ev) => {
+            snapSlider.addEventListener(ev, () => {
+                relockTSnapFromRef();
+                refreshStaticLabels();
+            });
+        });
+        [noiseDisplayCb, noiseForceCb].forEach((x) => x.addEventListener('change', () => {}));
+        refreshStaticLabels();
+        relockTSnapFromRef();
+
+        function applyPreset(kind) {
+            if (kind === 'stable') {
+                coupleSlider.value = '0.2';
+                strainDecaySlider.value = '0.8';
+                strainMaxSlider.value = '3';
+                coupleModeEl.value = 'oppose';
+            } else if (kind === 'cascade') {
+                coupleSlider.value = '0.7';
+                strainDecaySlider.value = '0.2';
+                strainMaxSlider.value = '2.5';
+                coupleModeEl.value = 'amplify';
+            } else if (kind === 'oscillatory') {
+                coupleSlider.value = '0.5';
+                strainDecaySlider.value = '0.5';
+                strainMaxSlider.value = '3';
+                coupleModeEl.value = 'amplify';
+            }
+            refreshStaticLabels();
+            relockTSnapFromRef();
+            resetPhaseTrail();
+        }
+
+        el('preset-stable').addEventListener('click', () => applyPreset('stable'));
+        el('preset-cascade').addEventListener('click', () => applyPreset('cascade'));
+        el('preset-oscillatory').addEventListener('click', () => applyPreset('oscillatory'));
+
+        function updateStepButtonsDisabled() {
+            const dis = !simPaused;
+            el('btn-step').disabled = dis;
+            el('btn-step-10').disabled = dis;
+        }
+
+        el('btn-pause').addEventListener('click', () => {
+            simPaused = !simPaused;
+            if (!simPaused) stepRemaining = 0;
+            el('btn-pause').textContent = simPaused ? 'Resume' : 'Pause';
+            updateStepButtonsDisabled();
+        });
+        el('btn-step').addEventListener('click', () => {
+            stepRemaining += 1;
+            simPaused = true;
+            el('btn-pause').textContent = 'Resume';
+            updateStepButtonsDisabled();
+        });
+        el('btn-step-10').addEventListener('click', () => {
+            stepRemaining += 10;
+            simPaused = true;
+            el('btn-pause').textContent = 'Resume';
+            updateStepButtonsDisabled();
+        });
+        el('btn-clear-ghost').addEventListener('click', () => {
+            ghostCount = 0;
+        });
+
+        function densityOptsFromUi() {
+            return {
+                normalizeDensity: el('phase-density-normalize').checked,
+                showTension: el('phase-cause-tension').checked,
+                showStrain: el('phase-cause-strain').checked,
+                showBoth: el('phase-cause-both').checked,
+            };
+        }
+
+        function ensureCanvasSize(canvas, W, H) {
+            if (canvas.width !== W || canvas.height !== H) {
+                canvas.width = W;
+                canvas.height = H;
+            }
+        }
+
+        function clearFrozenDensityCanvases() {
+            const W = phaseCanvas.width;
+            const H = phaseCanvas.height;
+            ensureCanvasSize(frozenDensityCanvasA, W, H);
+            ensureCanvasSize(frozenDensityCanvasB, W, H);
+            frozenDensityCanvasA.getContext('2d').clearRect(0, 0, W, H);
+            frozenDensityCanvasB.getContext('2d').clearRect(0, 0, W, H);
+            ensureCanvasSize(frozenDiffCanvas, W, H);
+            frozenDiffCanvas.getContext('2d').clearRect(0, 0, W, H);
+        }
+
+        el('btn-freeze-density').addEventListener('click', () => {
+            const W = phaseCanvas.width;
+            const H = phaseCanvas.height;
+            frozenDensityCanvasA.width = W;
+            frozenDensityCanvasA.height = H;
+            frozenDensityCanvasB.width = W;
+            frozenDensityCanvasB.height = H;
+            const fctxA = frozenDensityCanvasA.getContext('2d');
+            const fctxB = frozenDensityCanvasB.getContext('2d');
+            fctxA.clearRect(0, 0, W, H);
+            fctxB.clearRect(0, 0, W, H);
+            const markersA = [];
+            const markersB = [];
+            for (let i = 0; i < breakMarkers.length; i++) {
+                if (breakMarkers[i].pair === 'A') markersA.push(breakMarkers[i]);
+                else markersB.push(breakMarkers[i]);
+            }
+            const opts = { ...densityOptsFromUi(), diffMode: false };
+            drawCauseDensityHalos(fctxA, W, H, markersA, true, true, opts);
+            drawCauseDensityHalos(fctxB, W, H, markersB, true, true, opts);
+
+            const dOn = el('phase-density').checked;
+            const dm = dOn && el('phase-diff-mode').checked;
+            const sym = dOn && dm && el('phase-diff-symmetric').checked;
+            if (dOn && dm) {
+                frozenDiffCanvas.width = W;
+                frozenDiffCanvas.height = H;
+                const fdx = frozenDiffCanvas.getContext('2d');
+                fdx.clearRect(0, 0, W, H);
+                const frozenVisible = filterMarkersForOverlay(
+                    breakMarkers,
+                    el('phase-show-a').checked,
+                    el('phase-show-b').checked,
+                    el('phase-cause-tension').checked,
+                    el('phase-cause-strain').checked,
+                    el('phase-cause-both').checked
+                );
+                const domThr = parseFloat(el('phase-dominance-threshold').value) || 0;
+                drawCauseDensityHalos(fdx, W, H, frozenVisible, true, true, {
+                    ...densityOptsFromUi(),
+                    diffMode: true,
+                    diffSymmetric: sym,
+                    skipFilter: true,
+                    dominanceThreshold: domThr,
+                    showDominanceContours: el('phase-dominance-contours').checked,
+                    contourHistory: false,
+                    skipContourHistory: true,
+                });
+            } else {
+                ensureCanvasSize(frozenDiffCanvas, W, H);
+                frozenDiffCanvas.getContext('2d').clearRect(0, 0, W, H);
+            }
+
+            freezeCutId = breakIdSeq;
+            const domThrMeta = parseFloat(el('phase-dominance-threshold').value) || 0;
+            frozenMeta = {
+                showA: el('phase-show-a').checked,
+                showB: el('phase-show-b').checked,
+                causeFilter: {
+                    tension: el('phase-cause-tension').checked,
+                    strain: el('phase-cause-strain').checked,
+                    both: el('phase-cause-both').checked,
+                },
+                normalized: el('phase-density-normalize').checked,
+                hasDiffFrozen: dOn && dm,
+                diffSymmetric: sym,
+                dominanceThreshold: sym ? domThrMeta : undefined,
+            };
+        });
+
+        el('phase-density').addEventListener('change', () => {
+            if (!el('phase-density').checked) {
+                el('phase-diff-mode').checked = false;
+                el('phase-diff-symmetric').checked = false;
+            }
+        });
+
+        el('phase-dominance-threshold').addEventListener('input', () => {
+            el('phase-dominance-val').textContent = parseFloat(el('phase-dominance-threshold').value).toFixed(2);
+        });
+
+        phaseCanvas.addEventListener('click', (ev) => {
+            const row = el('phase-probe-readout');
+            const rect = phaseCanvas.getBoundingClientRect();
+            const sx = ((ev.clientX - rect.left) * phaseCanvas.width) / Math.max(1e-9, rect.width);
+            const sy = ((ev.clientY - rect.top) * phaseCanvas.height) / Math.max(1e-9, rect.height);
+            const W = phaseCanvas.width;
+            const H = phaseCanvas.height;
+            const { strainNorm, T_norm } = canvasPixelToPhaseAxes(sx, sy, W, H);
+            if (!lastProbeSnapshot.valid || !probeBufDom) {
+                row.textContent =
+                    'Probe: no field (symmetric diff + dominance threshold > 0, with visible breaks).';
+                return;
+            }
+            const ix = Math.floor(THREE.MathUtils.clamp(sx, 0, W - 1));
+            const iy = Math.floor(THREE.MathUtils.clamp(sy, 0, H - 1));
+            const idx = iy * W + ix;
+            if (
+                idx < 0 ||
+                idx >= probeBufDom.length ||
+                W !== lastProbeSnapshot.w ||
+                H !== lastProbeSnapshot.h
+            ) {
+                row.textContent =
+                    'Probe: no field (symmetric diff + dominance threshold > 0, with visible breaks).';
+                return;
+            }
+            const d = probeBufDom[idx];
+            const ia = probeBufIa[idx];
+            const ib = probeBufIb[idx];
+            if (d < 0 || ia < 0) {
+                row.textContent =
+                    'Phase: strain/max=' +
+                    strainNorm.toFixed(3) +
+                    '  T_state/T_snap=' +
+                    T_norm.toFixed(3) +
+                    '  |  no A/B density';
+                return;
+            }
+            row.textContent =
+                'Phase: strain/max=' +
+                strainNorm.toFixed(3) +
+                '  T_state/T_snap=' +
+                T_norm.toFixed(3) +
+                '  |  dom=' +
+                d.toFixed(3) +
+                '  iA=' +
+                ia.toFixed(4) +
+                '  iB=' +
+                ib.toFixed(4) +
+                '  (thr=' +
+                lastProbeSnapshot.thr.toFixed(2) +
+                ')';
+        });
+
+        el('btn-clear-frozen-density').addEventListener('click', () => {
+            freezeCutId = -1;
+            frozenMeta = null;
+            clearFrozenDensityCanvases();
+        });
+
+        function resetPhaseOverlays() {
+            ghostCount = 0;
+            breakMarkers.length = 0;
+            freezeCutId = -1;
+            frozenMeta = null;
+            clearFrozenDensityCanvases();
+            clearDomFieldHistory();
+            invalidatePhaseProbe();
+            replaySnaps.length = 0;
+        }
+
+        el('btn-reset-overlays').addEventListener('click', () => {
+            resetPhaseOverlays();
+        });
+
+        updateStepButtonsDisabled();
+
+        function recomputeDerivedWhilePaused(d, dB, p) {
+            const time = performance.now() * 0.001;
+            const { coupleAlpha, coupleMode, k, c, epsilon, dRef, damping, noiseAmp, snapMode, strainMax, strainDecayLambda } = p;
+
+            const T1_raw = tensionModel(d, k, c, epsilon);
+            const T2_raw = tensionModel(dB, k, c, epsilon);
+            const T_snap_live = tensionModel(dRef, k, c, epsilon);
+            const snapDenom = T_snap_cached > 1e-9 ? T_snap_cached : 1;
+
+            const strainNorm = strainMax > 1e-9 ? strain / strainMax : 0;
+            const strainNormB = strainMax > 1e-9 ? strainB / strainMax : 0;
+            const nTildeA = strainNormB - 0.5;
+            const nTildeB = strainNorm - 0.5;
+
+            const T_norm1 = couplingTStateNorm(T1_raw, snapDenom, nTildeA, coupleAlpha, coupleMode);
+            const T_norm2 = couplingTStateNorm(T2_raw, snapDenom, nTildeB, coupleAlpha, coupleMode);
+
+            const nd = noiseDisplayCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp : 0;
+            const T_display = Math.max(0, T1_raw + nd);
+            const T_displayB = Math.max(0, T2_raw + nd);
+
+            const normDisplay = THREE.MathUtils.clamp(T_norm1, 0, 1.2);
+            const normDisplayB = THREE.MathUtils.clamp(T_norm2, 0, 1.2);
+
+            const nF = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF2 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF3 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF4 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+
+            const wobbleStrength = THREE.MathUtils.clamp(normDisplay * 0.7 + strainNorm * 0.3, 0, 1);
+            const wobbleStrengthB = THREE.MathUtils.clamp(normDisplayB * 0.7 + strainNormB * 0.3, 0, 1);
+            const flickerIntensity = Math.max(
+                smoothstep(0.7, 1.0, wobbleStrength),
+                smoothstep(0.75, 0.95, normDisplay)
+            );
+            const flickerIntensityB = Math.max(
+                smoothstep(0.7, 1.0, wobbleStrengthB),
+                smoothstep(0.75, 0.95, normDisplayB)
+            );
+            const pre = wobbleStrength * 1.15;
+            const preB = wobbleStrengthB * 1.15;
+            const stringWobble = pre * Math.sin(time * 22) * 0.15;
+            const stringWobbleB = preB * Math.sin(time * 22 + 0.7) * 0.15;
+            const wobbleBase = 0.2 * (1 - damping);
+
+            function layoutPairA() {
+                quark1.position.x = -(d / 2);
+                quark2.position.x = d / 2;
+                quark1.position.z = nF * 0.8;
+                quark2.position.z = nF2 * 0.8;
+                fluxTube.scale.y = Math.max(0.01, d);
+                fluxTube.position.x = 0;
+                fluxTube.position.z = 0;
+                fluxTube.rotation.y = stringWobble + nF * 0.3;
+            }
+
+            function layoutPairB() {
+                quark1b.position.x = -(dB / 2);
+                quark2b.position.x = dB / 2;
+                quark1b.position.z = PAIR_B_Z + nF3 * 0.8;
+                quark2b.position.z = PAIR_B_Z + nF4 * 0.8;
+                fluxTubeB.scale.y = Math.max(0.01, dB);
+                fluxTubeB.position.x = 0;
+                fluxTubeB.position.z = PAIR_B_Z;
+                fluxTubeB.rotation.y = stringWobbleB + nF3 * 0.3;
+            }
+
+            if (phaseState !== 'broken') {
+                fluxTube.visible = true;
+                newQuark1.visible = false;
+                newQuark2.visible = false;
+                layoutPairA();
+                const t2 = Date.now() * 0.002;
+                const wy = wobbleBase + pre * 0.35;
+                quark1.position.y = Math.sin(t2) * wy + nF;
+                quark2.position.y = Math.sin(t2 + Math.PI) * wy + nF2;
+                const criticalBoost = phaseState === 'critical' ? 0.35 : 0;
+                applyTensionColor(tubeMat, normDisplay, time, flickerIntensity, criticalBoost);
+                if (phaseState === 'critical') {
+                    el('phase-status').innerHTML =
+                        '<span style="color:#ccaa44;">Critical (pre-failure)</span>';
+                } else {
+                    el('phase-status').innerHTML =
+                        d < 4
+                            ? '<span style="color:#8899aa;">Close separation (UI band)</span>'
+                            : '<span class="highlight-red">Stretched</span>';
+                }
+            } else {
+                fluxTube.visible = false;
+                newQuark1.visible = true;
+                newQuark2.visible = true;
+                layoutPairA();
+                quark1.position.x = -(d / 2);
+                newQuark2.position.x = d / 2 - 2.5;
+                quark2.position.x = d / 2;
+                newQuark1.position.x = -(d / 2) + 2.5;
+                newQuark1.position.z = 0;
+                newQuark2.position.z = 0;
+                const t2 = Date.now() * 0.002;
+                const wy = wobbleBase * (1 - damping);
+                quark1.position.y = Math.sin(t2) * wy;
+                newQuark1.position.y = Math.sin(t2 + Math.PI) * wy;
+                quark2.position.y = Math.cos(t2) * wy;
+                newQuark2.position.y = Math.cos(t2 + Math.PI) * wy;
+                el('phase-status').innerHTML = '<span class="highlight-white">Broken (visual snap)</span>';
+            }
+
+            if (phaseStateB !== 'broken') {
+                fluxTubeB.visible = true;
+                newQuark1b.visible = false;
+                newQuark2b.visible = false;
+                layoutPairB();
+                const t2b = Date.now() * 0.002;
+                const wyB = wobbleBase + preB * 0.35;
+                quark1b.position.y = Math.sin(t2b) * wyB + nF3;
+                quark2b.position.y = Math.sin(t2b + Math.PI) * wyB + nF4;
+                const criticalBoostB = phaseStateB === 'critical' ? 0.35 : 0;
+                applyTensionColor(tubeMatB, normDisplayB, time, flickerIntensityB, criticalBoostB);
+                if (phaseStateB === 'critical') {
+                    el('phase-status-b').innerHTML =
+                        '<span style="color:#ccaa44;">Critical (pre-failure)</span>';
+                } else {
+                    el('phase-status-b').innerHTML =
+                        dB < 4
+                            ? '<span style="color:#8899aa;">Close separation (UI band)</span>'
+                            : '<span class="highlight-red">Stretched</span>';
+                }
+            } else {
+                fluxTubeB.visible = false;
+                newQuark1b.visible = true;
+                newQuark2b.visible = true;
+                layoutPairB();
+                quark1b.position.x = -(dB / 2);
+                newQuark2b.position.x = dB / 2 - 2.5;
+                quark2b.position.x = dB / 2;
+                newQuark1b.position.x = -(dB / 2) + 2.5;
+                quark1b.position.z = PAIR_B_Z;
+                quark2b.position.z = PAIR_B_Z;
+                newQuark1b.position.z = PAIR_B_Z;
+                newQuark2b.position.z = PAIR_B_Z;
+                const t2b = Date.now() * 0.002;
+                const wyB = wobbleBase * (1 - damping);
+                quark1b.position.y = Math.sin(t2b) * wyB;
+                newQuark1b.position.y = Math.sin(t2b + Math.PI) * wyB;
+                quark2b.position.y = Math.cos(t2b) * wyB;
+                newQuark2b.position.y = Math.cos(t2b + Math.PI) * wyB;
+                el('phase-status-b').innerHTML = '<span class="highlight-white">Broken (visual snap)</span>';
+            }
+
+            const modeHint =
+                coupleMode === 'amplify'
+                    ? 'Amplify'
+                    : coupleMode === 'oppose'
+                      ? 'Oppose'
+                      : 'Threshold';
+            const anyBroken = phaseState === 'broken' || phaseStateB === 'broken';
+            el('physics-desc').textContent = anyBroken
+                ? snapMode === 'strain'
+                    ? 'Paused: sliders recompute T_state & visuals; strain/state frozen. ' +
+                      'Broken→critical: strain/max < 0.6 (per pair).'
+                    : 'Paused: sliders recompute T_state & visuals; strain/state frozen. ' +
+                      'Broken→critical: T_state/T_snap < 0.88.'
+                : 'Paused preview: move d, k, α… — phase head follows (trail frozen). Mode ' + modeHint + '.';
+
+            el('tension-clean').textContent = T1_raw.toFixed(3);
+            el('tension-clean-b').textContent = T2_raw.toFixed(3);
+            el('tension-snap').textContent = T_snap_cached.toFixed(3);
+            el('tension-snap-live').textContent = T_snap_live.toFixed(3);
+            if (T_snap_cached > 1e-9) {
+                const pct = ((T_snap_live - T_snap_cached) / T_snap_cached) * 100;
+                el('tension-snap-delta').textContent =
+                    (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%';
+            } else {
+                el('tension-snap-delta').textContent = '—';
+            }
+            el('tension-norm').textContent = Math.round(normDisplay * 100) + '%';
+            el('tension-norm-b').textContent = Math.round(normDisplayB * 100) + '%';
+            el('tension-raw').textContent = T_display.toFixed(3);
+            el('tension-raw-b').textContent = T_displayB.toFixed(3);
+            el('strain-disp').textContent = strain.toFixed(3);
+            el('strain-disp-b').textContent = strainB.toFixed(3);
+            el('strain-norm-disp').textContent = Math.round(strainNorm * 100) + '%';
+            el('strain-norm-b-disp').textContent = Math.round(strainNormB * 100) + '%';
+
+            const tStateAEnd = couplingTStateNorm(T1_raw, snapDenom, strainNormB - 0.5, coupleAlpha, coupleMode);
+            const tStateBEnd = couplingTStateNorm(T2_raw, snapDenom, strainNorm - 0.5, coupleAlpha, coupleMode);
+            drawPhasePlot(phaseState, phaseStateB, {
+                x: THREE.MathUtils.clamp(strainNorm, 0, PHASE_AXIS_MAX),
+                y: THREE.MathUtils.clamp(tStateAEnd, 0, PHASE_AXIS_MAX),
+            }, {
+                x: THREE.MathUtils.clamp(strainNormB, 0, PHASE_AXIS_MAX),
+                y: THREE.MathUtils.clamp(tStateBEnd, 0, PHASE_AXIS_MAX),
+            });
+        }
+
+        function advanceStateMachine(state, strain, T_norm, strainNorm, snapMode) {
+            if (state === 'stable') {
+                if (shouldEnterCritical(T_norm, strainNorm)) return { state: 'critical', strain };
+            } else if (state === 'critical') {
+                if (T_norm >= 1 - 1e-9 || strainNorm >= 1 - 1e-9) {
+                    const tHit = T_norm >= 1 - 1e-9;
+                    const sHit = strainNorm >= 1 - 1e-9;
+                    let cause = 'both';
+                    if (tHit && !sHit) cause = 'tension';
+                    else if (sHit && !tHit) cause = 'strain';
+                    return {
+                        state: 'broken',
+                        strain: strain * overloadReleaseFactor(Math.max(T_norm, strainNorm)),
+                        transitionSnapshot: {
+                            strainNorm,
+                            T_norm,
+                            cause,
+                        },
+                    };
+                }
+                if (T_norm < 0.8 && strainNorm < 0.75) return { state: 'stable', strain };
+            } else if (state === 'broken') {
+                const healStrain = snapMode === 'strain' && strainNorm < 0.6;
+                const healTension = snapMode === 'tension' && T_norm < 0.88;
+                if (healStrain || healTension) return { state: 'critical', strain };
+            }
+            return { state, strain };
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const dt = Math.min(clock.getDelta(), 0.1);
+            const sep = getEffectiveSeparationForFrame(dt);
+            const d = sep.d;
+            const dB = sep.dB;
+            const p = sep.p;
+            const runPhysics = !simPaused || stepRemaining > 0;
+            if (!runPhysics) {
+                recomputeDerivedWhilePaused(d, dB, p);
+                controls.update();
+                renderer.render(scene, camera);
+                return;
+            }
+
+            const time = performance.now() * 0.001;
+            const { coupleAlpha, coupleMode, k, c, epsilon, dRef, damping, noiseAmp, snapMode, strainMax, strainDecayLambda } = p;
+
+            const T1_raw = tensionModel(d, k, c, epsilon);
+            const T2_raw = tensionModel(dB, k, c, epsilon);
+            const T_snap_live = tensionModel(dRef, k, c, epsilon);
+            const snapDenom = T_snap_cached > 1e-9 ? T_snap_cached : 1;
+            const strainCap = 1.5 * strainMax;
+
+            const strainNormPre = strainMax > 1e-9 ? strain / strainMax : 0;
+            const strainNormBPre = strainMax > 1e-9 ? strainB / strainMax : 0;
+            const nTildeA = strainNormBPre - 0.5;
+            const nTildeB = strainNormPre - 0.5;
+
+            const T_strain_norm1 = T1_raw / snapDenom;
+            const T_strain_norm2 = T2_raw / snapDenom;
+            const T_norm1 = couplingTStateNorm(T1_raw, snapDenom, nTildeA, coupleAlpha, coupleMode);
+            const T_norm2 = couplingTStateNorm(T2_raw, snapDenom, nTildeB, coupleAlpha, coupleMode);
+
+            const nd = noiseDisplayCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp : 0;
+            const T_display = Math.max(0, T1_raw + nd);
+            const T_displayB = Math.max(0, T2_raw + nd);
+
+            const normDisplay = THREE.MathUtils.clamp(T_norm1, 0, 1.2);
+            const normDisplayB = THREE.MathUtils.clamp(T_norm2, 0, 1.2);
+            let strainNorm = strainNormPre;
+            let strainNormB = strainNormBPre;
+
+            if (phaseState !== 'broken') {
+                const sat = strainCap > 1e-9 ? 1 - Math.min(strain / strainCap, 1) : 1;
+                strain += T_strain_norm1 * dt * sat;
+            }
+            if (phaseStateB !== 'broken') {
+                const satB = strainCap > 1e-9 ? 1 - Math.min(strainB / strainCap, 1) : 1;
+                strainB += T_strain_norm2 * dt * satB;
+            }
+            strain *= Math.exp(-strainDecayLambda * dt);
+            strainB *= Math.exp(-strainDecayLambda * dt);
+            if (strainCap > 1e-9) {
+                strain = Math.min(strain, strainCap);
+                strainB = Math.min(strainB, strainCap);
+            }
+
+            strainNorm = strainMax > 1e-9 ? strain / strainMax : 0;
+            strainNormB = strainMax > 1e-9 ? strainB / strainMax : 0;
+
+            const rA = advanceStateMachine(phaseState, strain, T_norm1, strainNorm, snapMode);
+            phaseState = rA.state;
+            strain = rA.strain;
+            const rB = advanceStateMachine(phaseStateB, strainB, T_norm2, strainNormB, snapMode);
+            phaseStateB = rB.state;
+            strainB = rB.strain;
+
+            if (rA.transitionSnapshot) {
+                const s = rA.transitionSnapshot;
+                recordPhaseBreak('A', s.strainNorm, s.T_norm, s.cause);
+            }
+            if (rB.transitionSnapshot) {
+                const s = rB.transitionSnapshot;
+                recordPhaseBreak('B', s.strainNorm, s.T_norm, s.cause);
+            }
+
+            const nF = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF2 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF3 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+            const nF4 = noiseForceCb.checked && noiseAmp > 0 ? noiseSample() * noiseAmp * 2.5 : 0;
+
+            const wobbleStrength = THREE.MathUtils.clamp(
+                normDisplay * 0.7 + strainNorm * 0.3,
+                0,
+                1
+            );
+            const wobbleStrengthB = THREE.MathUtils.clamp(
+                normDisplayB * 0.7 + strainNormB * 0.3,
+                0,
+                1
+            );
+            const flickerIntensity = Math.max(
+                smoothstep(0.7, 1.0, wobbleStrength),
+                smoothstep(0.75, 0.95, normDisplay)
+            );
+            const flickerIntensityB = Math.max(
+                smoothstep(0.7, 1.0, wobbleStrengthB),
+                smoothstep(0.75, 0.95, normDisplayB)
+            );
+            const pre = wobbleStrength * 1.15;
+            const preB = wobbleStrengthB * 1.15;
+            const stringWobble = pre * Math.sin(time * 22) * 0.15;
+            const stringWobbleB = preB * Math.sin(time * 22 + 0.7) * 0.15;
+            const wobbleBase = 0.2 * (1 - damping);
+
+            function layoutPairA() {
+                quark1.position.x = -(d / 2);
+                quark2.position.x = d / 2;
+                quark1.position.z = nF * 0.8;
+                quark2.position.z = nF2 * 0.8;
+                fluxTube.scale.y = Math.max(0.01, d);
+                fluxTube.position.x = 0;
+                fluxTube.position.z = 0;
+                fluxTube.rotation.y = stringWobble + nF * 0.3;
+            }
+
+            function layoutPairB() {
+                quark1b.position.x = -(dB / 2);
+                quark2b.position.x = dB / 2;
+                quark1b.position.z = PAIR_B_Z + nF3 * 0.8;
+                quark2b.position.z = PAIR_B_Z + nF4 * 0.8;
+                fluxTubeB.scale.y = Math.max(0.01, dB);
+                fluxTubeB.position.x = 0;
+                fluxTubeB.position.z = PAIR_B_Z;
+                fluxTubeB.rotation.y = stringWobbleB + nF3 * 0.3;
+            }
+
+            if (phaseState !== 'broken') {
+                fluxTube.visible = true;
+                newQuark1.visible = false;
+                newQuark2.visible = false;
+                layoutPairA();
+
+                const t2 = Date.now() * 0.002;
+                const wy = wobbleBase + pre * 0.35;
+                quark1.position.y = Math.sin(t2) * wy + nF;
+                quark2.position.y = Math.sin(t2 + Math.PI) * wy + nF2;
+
+                quark1.rotation.y += 0.01;
+                quark1.rotation.x += 0.005;
+                quark2.rotation.y -= 0.01;
+                quark2.rotation.x -= 0.005;
+
+                const criticalBoost = phaseState === 'critical' ? 0.35 : 0;
+                applyTensionColor(tubeMat, normDisplay, time, flickerIntensity, criticalBoost);
+
+                if (phaseState === 'critical') {
+                    el('phase-status').innerHTML =
+                        '<span style="color:#ccaa44;">Critical (pre-failure)</span>';
+                } else {
+                    el('phase-status').innerHTML = d < 4
+                        ? '<span style="color:#8899aa;">Close separation (UI band)</span>'
+                        : '<span class="highlight-red">Stretched</span>';
+                }
+            } else {
+                fluxTube.visible = false;
+                newQuark1.visible = true;
+                newQuark2.visible = true;
+                layoutPairA();
+                quark1.position.x = -(d / 2);
+                newQuark2.position.x = d / 2 - 2.5;
+                quark2.position.x = d / 2;
+                newQuark1.position.x = -(d / 2) + 2.5;
+                newQuark1.position.z = 0;
+                newQuark2.position.z = 0;
+                const t2 = Date.now() * 0.002;
+                const wy = wobbleBase * (1 - damping);
+                quark1.position.y = Math.sin(t2) * wy;
+                newQuark1.position.y = Math.sin(t2 + Math.PI) * wy;
+                quark2.position.y = Math.cos(t2) * wy;
+                newQuark2.position.y = Math.cos(t2 + Math.PI) * wy;
+                el('phase-status').innerHTML = '<span class="highlight-white">Broken (visual snap)</span>';
+            }
+
+            if (phaseStateB !== 'broken') {
+                fluxTubeB.visible = true;
+                newQuark1b.visible = false;
+                newQuark2b.visible = false;
+                layoutPairB();
+
+                const t2b = Date.now() * 0.002;
+                const wyB = wobbleBase + preB * 0.35;
+                quark1b.position.y = Math.sin(t2b) * wyB + nF3;
+                quark2b.position.y = Math.sin(t2b + Math.PI) * wyB + nF4;
+
+                quark1b.rotation.y += 0.01;
+                quark1b.rotation.x += 0.005;
+                quark2b.rotation.y -= 0.01;
+                quark2b.rotation.x -= 0.005;
+
+                const criticalBoostB = phaseStateB === 'critical' ? 0.35 : 0;
+                applyTensionColor(tubeMatB, normDisplayB, time, flickerIntensityB, criticalBoostB);
+
+                if (phaseStateB === 'critical') {
+                    el('phase-status-b').innerHTML =
+                        '<span style="color:#ccaa44;">Critical (pre-failure)</span>';
+                } else {
+                    el('phase-status-b').innerHTML = dB < 4
+                        ? '<span style="color:#8899aa;">Close separation (UI band)</span>'
+                        : '<span class="highlight-red">Stretched</span>';
+                }
+            } else {
+                fluxTubeB.visible = false;
+                newQuark1b.visible = true;
+                newQuark2b.visible = true;
+                layoutPairB();
+                quark1b.position.x = -(dB / 2);
+                newQuark2b.position.x = dB / 2 - 2.5;
+                quark2b.position.x = dB / 2;
+                newQuark1b.position.x = -(dB / 2) + 2.5;
+                quark1b.position.z = PAIR_B_Z;
+                quark2b.position.z = PAIR_B_Z;
+                newQuark1b.position.z = PAIR_B_Z;
+                newQuark2b.position.z = PAIR_B_Z;
+                const t2b = Date.now() * 0.002;
+                const wyB = wobbleBase * (1 - damping);
+                quark1b.position.y = Math.sin(t2b) * wyB;
+                newQuark1b.position.y = Math.sin(t2b + Math.PI) * wyB;
+                quark2b.position.y = Math.cos(t2b) * wyB;
+                newQuark2b.position.y = Math.cos(t2b + Math.PI) * wyB;
+                el('phase-status-b').innerHTML = '<span class="highlight-white">Broken (visual snap)</span>';
+            }
+
+            const modeHint =
+                coupleMode === 'amplify'
+                    ? 'Amplify'
+                    : coupleMode === 'oppose'
+                      ? 'Oppose'
+                      : 'Threshold';
+            const anyBroken = phaseState === 'broken' || phaseStateB === 'broken';
+            el('physics-desc').textContent = anyBroken
+                ? snapMode === 'strain'
+                    ? 'Broken→critical: strain/max < 0.6 (per pair). Strain rate uses T_raw/T_snap locked only; phases use T_state (' +
+                      modeHint +
+                      ').'
+                    : 'Broken→critical: T_state/T_snap < 0.88. Break release: smoothstep overload [1,1.3]→lerp(0.15,0.35). Coupling ñ=neighbor strain/max−0.5; factor clamp [0.5,1.5].'
+                : 'Coupling mode ' +
+                  modeHint +
+                  ': T_state drives thresholds; strain integrates T_raw/T_snap (no double count). ñ=strain_neighbor/max−0.5.';
+
+            el('tension-clean').textContent = T1_raw.toFixed(3);
+            el('tension-clean-b').textContent = T2_raw.toFixed(3);
+            el('tension-snap').textContent = T_snap_cached.toFixed(3);
+            el('tension-snap-live').textContent = T_snap_live.toFixed(3);
+            if (T_snap_cached > 1e-9) {
+                const pct = ((T_snap_live - T_snap_cached) / T_snap_cached) * 100;
+                el('tension-snap-delta').textContent =
+                    (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%';
+            } else {
+                el('tension-snap-delta').textContent = '—';
+            }
+            el('tension-norm').textContent = Math.round(normDisplay * 100) + '%';
+            el('tension-norm-b').textContent = Math.round(normDisplayB * 100) + '%';
+            el('tension-raw').textContent = T_display.toFixed(3);
+            el('tension-raw-b').textContent = T_displayB.toFixed(3);
+            el('strain-disp').textContent = strain.toFixed(3);
+            el('strain-disp-b').textContent = strainB.toFixed(3);
+            el('strain-norm-disp').textContent = Math.round(strainNorm * 100) + '%';
+            el('strain-norm-b-disp').textContent = Math.round(strainNormB * 100) + '%';
+
+            const hi = histIdx % HIST;
+            histT[hi] = normDisplay;
+            histS[hi] = strainNorm;
+            histD[hi] = THREE.MathUtils.clamp(dRef > 1e-9 ? d / dRef : 0, 0, CHART_Y_MAX);
+            histT2[hi] = normDisplayB;
+            histS2[hi] = strainNormB;
+            histD2[hi] = THREE.MathUtils.clamp(dRef > 1e-9 ? dB / dRef : 0, 0, CHART_Y_MAX);
+            histIdx += 1;
+            histLen = Math.min(histLen + 1, HIST);
+
+            const snAEnd = strainMax > 1e-9 ? strain / strainMax : 0;
+            const snBEnd = strainMax > 1e-9 ? strainB / strainMax : 0;
+            const nAEnd = snBEnd - 0.5;
+            const nBEnd = snAEnd - 0.5;
+            const tStateAEnd = couplingTStateNorm(T1_raw, snapDenom, nAEnd, coupleAlpha, coupleMode);
+            const tStateBEnd = couplingTStateNorm(T2_raw, snapDenom, nBEnd, coupleAlpha, coupleMode);
+            pushPhasePoint(
+                THREE.MathUtils.clamp(snAEnd, 0, PHASE_AXIS_MAX),
+                THREE.MathUtils.clamp(tStateAEnd, 0, PHASE_AXIS_MAX),
+                THREE.MathUtils.clamp(snBEnd, 0, PHASE_AXIS_MAX),
+                THREE.MathUtils.clamp(tStateBEnd, 0, PHASE_AXIS_MAX)
+            );
+            drawChart();
+            drawPhasePlot(phaseState, phaseStateB, undefined, undefined);
+
+            controls.update();
+            renderer.render(scene, camera);
+
+            if (stepRemaining > 0) stepRemaining--;
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

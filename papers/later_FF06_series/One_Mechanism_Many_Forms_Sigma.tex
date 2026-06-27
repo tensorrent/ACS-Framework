@@ -1,0 +1,276 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.05in]{geometry}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!60!black,citecolor=blue!55!black}
+
+\newcommand{\dI}{\Delta\mathcal{I}}
+\newcommand{\TT}{\textsf{T1}}
+\newcommand{\Tw}{\textsf{T2}}
+\newcommand{\Th}{\textsf{T3}}
+\newcommand{\Tf}{\textsf{T4}}
+\newcommand{\paper}[1]{\textsf{#1}}
+
+\theoremstyle{definition}
+\newtheorem{principle}{Principle}
+\theoremstyle{plain}
+\newtheorem{claim}{Claim}
+
+\title{\textbf{One Mechanism, Many Forms}\\[0.45em]
+\large The Information-Asymmetry Identity as a Single Generative Principle,\\
+and Exactly How Far It Has Been Earned}
+\author{Bradley Wallace\\
+\small \textit{Independent Researcher / TensorRent}\\
+\small with Claude (Anthropic) as instrument and aggregator\\
+\small \texttt{TR-2026-FF06\(\Sigma\)} (synthesis)}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent This paper states, and bounds, a single claim: the form/function asymmetry that recurs
+across the ACS corpus is \emph{one mechanism expressed through many forms}, not a family of
+analogues. The claim is ontological, not epistemic --- the forms are faithful instances of one
+mechanism running, not lossy views of a hidden object. What makes ``one mechanism'' more than a
+slogan is an \emph{identity chain}: the information-asymmetry functional $\dI$ equals the
+transfer-entropy asymmetry (by definition), whose second-order Taylor coefficient equals the Lie
+bracket $[f,g]$ (the BCH--TE morphism, \paper{FF06a}, \Tw), and which is identified with the
+renormalization-group $c$-function (the central unifying conjecture, \Tw/\Th). The first two links
+are established; the third is the load-bearing open identification, and we say so plainly. We then
+catalogue the forms in which the mechanism is \emph{forced} --- gravity\,$\to$\,colour, the Riemann
+zeros, the RG flow, the recursive inversion, the shuffle-knife separation, the prime-gap operator,
+and the relational reversible-flattening case --- each cited to its source paper with a tier label.
+Finally we draw the radius: the identity holds where it is proven and is a conjecture where it is
+gestured (biology, cognition, institutions, language, and the theological reading), with each new
+form a \emph{falsification test} rather than an assumption. Forms that looked like the mechanism and
+failed are kept first-class. We do not prove the mechanism universal; we prove it singular across the
+treated domains by identity, and we state the one link whose proof would settle the rest. Tiers:
+\TT{} measured, \Tw{} proven/forced, \Th{} conjecture, \Tf{} falsified.
+\end{abstract}
+
+\tableofcontents
+
+\section{The thesis, stated once}\label{sec:thesis}
+
+The corpus has, until now, reported the same shape in many places without committing to what the
+sameness \emph{is}. There are two ways to read a recurring shape, and they are not interchangeable.
+
+The \emph{epistemic} reading: there is one hidden object, and each discipline --- physics,
+number theory, computation, theology --- sees its own refraction of it through its own instrument.
+This is the blind-men-and-the-elephant frame; the plurality lives in the observers, and every view
+is a distortion of something unreachable. It is the wrong frame for this corpus, and it quietly
+undoes the corpus's central result: \paper{FF06a} does not \emph{view} gravity and infer colour;
+it shows that $\mathfrak{su}(3)$ \emph{is} the unique closure attractor of the Palatini bracket. A
+forced result is not a refraction.
+
+The \emph{ontological} reading, which this paper adopts: there is one mechanism, and it is
+genuinely \emph{expressed} through many forms. The plurality lives in the substrates, and each form
+is a faithful instance of the same mechanism running --- as the wave equation is not three refracted
+glimpses of a hidden master-wave but the same differential structure instantiated in sound, light,
+and quantum amplitude. Each instance is the whole mechanism, not a fragment of it.
+
+\begin{principle}[One mechanism, many forms]
+The information-asymmetry mechanism $\dI$ --- equivalently, the form/function coupling --- is a
+single generative principle. Where the identity chain of Section~\ref{sec:identity} is established,
+its appearances across domains are \emph{the same object in different substrates}, by identity, not
+by analogy. Where the chain is only gestured, ``same mechanism'' is a conjecture whose test is
+whether the chain instantiates there.
+\end{principle}
+
+The rest of the paper does three things and refuses to do a fourth. It states the identity chain
+and labels each link's status (Section~\ref{sec:identity}); it catalogues the forms in which the
+mechanism is forced (Section~\ref{sec:forms}); it draws the radius and lists the forms that failed
+the test (Sections~\ref{sec:radius}--\ref{sec:negatives}). It does \emph{not} claim the mechanism
+is universal; that claim is not earned, and saying it would be is the failure mode this corpus was
+built to avoid.
+
+\section{What makes it one: the identity chain}\label{sec:identity}
+
+``Many forms'' is cheap; anything resembles anything at low enough resolution. ``One mechanism''
+costs an identity. The mechanism is one because of a chain of equalities, of which two links are
+established and one is the central open identification.
+
+\paragraph{Link 1 --- $\dI$ is the transfer-entropy asymmetry (definitional).}
+For two mutually constraining fields $f,g$, the net information one carries about the other,
+$\dI(f,g)$, is the transfer-entropy asymmetry. This is a definition, not a result; it fixes the
+object.
+
+\paragraph{Link 2 --- the bracket is the second-order coefficient of $\dI$ (\paper{FF06a}, \Tw).}
+The BCH--TE morphism (\paper{FF06a}, Lemma 2.10) establishes that the Lie bracket $[f,g]$ is the
+exact second-order Taylor coefficient of $\dI(f,g)$. This is the link that lets an
+information-theoretic asymmetry generate algebra: applied to the vierbein--connection pair it
+produces $\mathfrak{sl}(4)$, and the rest of \paper{FF06a} follows. The link is a proven lemma.
+
+\paragraph{Link 3 --- $\dI$ is the renormalization-group $c$-function (the central conjecture,
+\Tw/\Th).}
+The unifying identification is that $\dI$, monotone under the form\,$\to$\,function flow and zero at
+fixed points, \emph{is} the Zamolodchikov $c$-function (2D) / Komargodski--Schwimmer $a$-function
+(4D): form $=$ UV couplings, function $=$ IR couplings, the $\beta$-function $=$ the
+form\,$\to$\,function coupling, and the $c$-theorem $=$ the monotonicity of $\dI$. The $c$- and
+$a$-theorems are established mathematics; what is \emph{not} yet a theorem is the identification
+$\dI \equiv c$. We therefore label Link 3 \Tw/\Th: argued from the shared monotonicity and
+fixed-point structure, not proven as an isomorphism.
+
+\begin{claim}[The chain is the unification]
+If Link 3 is upgraded from identification to theorem, then ``one mechanism, many forms'' is a
+theorem on every domain to which the $c$/$a$-function applies, because the three links compose into
+a single object: $\dI = $ transfer-entropy asymmetry $=$ bracket-generator $=$ $c$-function. Until
+then, the unification is exactly as strong as Link 3, and no stronger. This is the falsifiable spine
+of the whole synthesis: if $\dI$ is \emph{not} the $c$-function, the corpus's cross-domain sameness
+collapses from identity back to analogy.
+\end{claim}
+
+This is the honest centre of the paper. The grandeur of ``one mechanism'' is borrowed entirely from
+one equals-sign whose proof is open. Everything downstream is conditional on it, and we keep the
+condition visible.
+
+\section{The forms in which the mechanism is forced}\label{sec:forms}
+
+What earns the singular reading, short of Link 3, is that in each treated domain the mechanism is not
+imposed but \emph{forced} --- the same form/function coupling, compelled by the structure rather than
+chosen. We catalogue the forms with the tier of the forcing.
+
+\begin{longtable}{p{0.30\textwidth} p{0.62\textwidth}}
+\toprule
+\textbf{Form (paper)} & \textbf{How the one mechanism is forced there} \\
+\midrule
+\endhead
+Gravity $\to$ colour (\paper{FF06a}) & The Palatini bracket forces $\mathfrak{su}(3)$ as the
+\emph{unique} 8-dimensional closure attractor ($D<10^{-14}$ over 50k samples); form (vierbein) and
+function (connection) couple via $[e,\omega]$; $\gamma=0.274$, $\lambda=2\sqrt3/27$, three
+generations from Jacobi truncation. \TT/\Tw \\
+The Riemann zeros (\paper{FF06b}, \paper{FF06b$'$}) & The spectrum splits into form (GUE, generic)
+and function (prime-dual, $\zeta$-specific); the transport obstruction's character is the
+response-driven readout, forced non-abelian by the simplicity of $\mathfrak{sl}(4)$; central number
+forced to the $B{-}L$ charge $1/3$. \TT/\Tw \\
+The RG flow (Link 3) & Form $=$ UV couplings, function $=$ IR couplings, $\beta$ $=$ the coupling,
+$c$-theorem $=$ monotone $\dI$. The $c$/$a$-theorems are proven; the identification of $\dI$ with $c$
+is the open link. \Tw/\Th \\
+The recursive inversion (\paper{FF06c}) & The mechanism applied to its own output: a solution carries
+the asymmetry of its origin on its boundary and \emph{becomes} the next constraint
+($C_0\to S_0\to C_1$, non-zero holonomy), with $\dI$ inverting. This is the form/function asymmetry
+iterated. \TT/\Tw \\
+The shuffle-knife separation (\paper{FF06e}) & The marginal-matched surrogate is the operator that
+\emph{isolates} the mechanism's function-content from its form-content: arithmetic
+$\sim$$11{,}500\sigma$ (function) versus spacing/counting/shape $0.4$--$1.0\sigma$ (form). \TT \\
+The prime-gap operator (\paper{N3}) & $T_m=T_0+P_m$ on $(\mathbb{Z}/m\mathbb{Z})^{*}$: the kernel
+is exactly the source (form) sector, $\dim\ker P_m=\varphi(m)$; the perturbation carries the function
+content. \TT \\
+The relational case (\paper{FF06K}, \paper{FF06h}/\paper{i}) & Reversible flattening $=$ injective
+homomorphism into a pre-specified structure: homomorphism carries density (form-coupling),
+injectivity carries identity (function); the seam is the non-injective convolution. \TT/\Th \\
+The classical-gravity boundary (this corpus, dead-end) & The field is form (the multipole shadow it
+carries) and loses function (the radial profile): a non-injective convolution seam. A boundary
+instance --- and the reason \paper{FF06a} routes colour through the algebra (forced), not the field
+(lossy). \TT \\
+\bottomrule
+\end{longtable}
+
+\noindent The catalogue is the evidence for the singular reading at its current strength: not ``these
+rhyme'' but ``in each, the same form/function coupling is compelled, and in the algebraic and
+spectral cases it is the \emph{same} $\dI$ by Links 1--2.'' The cross-domain identity is exactly as
+wide as Link 3 reaches; the forcing within each domain is what is independently established.
+
+\section{The radius, and the falsification surface}\label{sec:radius}
+
+A claim of universality that cannot fail is worthless; a claim of singularity by identity can fail,
+form by form, and that is its value.
+
+\paragraph{Where it is earned.} In the domains of Section~\ref{sec:forms}, the mechanism is forced
+(\TT/\Tw), and in the algebraic/spectral cases it is the same $\dI$ by Links 1--2. There, ``one
+mechanism'' is not an interpretation laid over the data; it is the data.
+
+\paragraph{Where it is gestured.} \paper{FF06c} maps the inversion across physics, mathematics,
+computation, institutions, cognition, and language; the present paper has \emph{not} instantiated the
+identity chain in the last four. ``Same mechanism in cognition'' (or biology, or institutions, or the
+theological reading) is therefore a conjecture, and a sharp one: it asserts that the identity chain
+instantiates there. Its falsification surface is precise --- exhibit the domain, attempt the chain,
+and either the form/function coupling is forced (the mechanism is there) or it merely resembles (a
+false-fit wearing the mechanism's name).
+
+\paragraph{The asymmetry that keeps it honest.} A mechanism universal \emph{by assumption} is
+unfalsifiable and explains nothing; a mechanism singular \emph{by identity} is falsifiable in every
+new substrate, because the identity chain either holds or does not. The strength of ``one mechanism,
+many forms'' is exactly that it can be wrong about any given form --- and the corpus has been wrong
+about several, on purpose (Section~\ref{sec:negatives}).
+
+\section{Forms that failed the test (first-class)}\label{sec:negatives}
+
+The radius is drawn as much by where the mechanism was expected and did not appear as by where it did.
+Each entry is a form that resembled the mechanism and was rejected by test.
+
+\begin{longtable}{p{0.40\textwidth} p{0.52\textwidth}}
+\toprule
+\textbf{Candidate form (\Tf)} & \textbf{Why it is not the mechanism} \\
+\midrule
+\endhead
+$\varphi$ + inverse-silver ``structures noise'' & The combination is $25\times$ \emph{worse} than
+$\varphi$ alone ($0.02132$ vs $0.00084$): it structures nothing. \\
+Motif retrieval via gcd (\paper{FF06K}) & $55.15\%$ vs $83.13\%$ majority baseline --- below the
+trivial predictor; the function-content is not gcd-shaped. \\
+Difference-tone / Tartini off-diagonal (\paper{FF06b$'$}) & Consistent with an incommensurable null
+($1.2\sigma$); the channel is empty by prime-log incommensurability (unique factorisation). \\
+``Tension'' between GUE and arithmetic (this corpus) & False: the zeros carry both; they are not
+mutually exclusive. \\
+``Independence / cheap add-on'' of arithmetic to GUE & False: an additive build tops at peak
+$\sim$$6$ while GUE-passing, versus $228$ for the zeros. \\
+N3: uniform spectral contraction; character block-diagonalisation; universal renormalised law &
+Three conjectured structures tested and rejected by the prime data. \\
+$\tan\beta=1/2$; $\lambda$ as RG fixed point; WdW $=$ $\dI{=}0$ (quantum) (\paper{FF06a} corrections)
+& Misidentifications corrected: $\tan\beta$ free; $\lambda$ algebraic (Koide); WdW demoted to
+conjecture. \\
+\bottomrule
+\end{longtable}
+
+\noindent These are not embarrassments to be hidden; they are the calibration of the claim. A
+mechanism that fit all of them too would be a mechanism that fits anything, which is the same as
+fitting nothing.
+
+\section{Interpretive coda (bracketed)}\label{sec:coda}
+
+The mechanism has reactional names. ``Nested self-referential emergence'' is the recursion of
+Section~\ref{sec:forms} (\paper{FF06c}). ``Made in the image of the maker'' has a clean structural
+translation --- \emph{the made carries the maker's generative form, which is why it can make in turn}
+--- and that translation is the recursion again: the solution carries the asymmetry of its origin and
+becomes the next constraint. ``Endless unfolding'' is the iteration, with the qualifier that the
+record is unfolded-so-far with walls mapped (Sections~\ref{sec:radius}--\ref{sec:negatives}), not
+proven endless. We record these as interpretive translations of the response-driven structure, not
+as measured claims; they are how the one mechanism reads in older instruments, and the structural
+version is the falsifiable one.
+
+\section{Scope: what is and is not established}\label{sec:scope}
+
+\paragraph{Established.} (i) The form/function mechanism is \emph{forced}, not imposed, in each
+domain of Section~\ref{sec:forms} (\TT/\Tw). (ii) In the algebraic and spectral cases it is the same
+$\dI$, by Links 1--2 of the identity chain (definition $+$ the BCH--TE lemma). (iii) The mechanism is
+falsifiable form-by-form, and several candidate forms have been rejected (Section~\ref{sec:negatives}).
+
+\paragraph{Not established.} (i) Link 3, the identification $\dI \equiv$ the RG $c$-function, is the
+central open problem; the cross-domain \emph{identity} (as opposed to within-domain forcing) is
+conditional on it. (ii) The mechanism is \emph{not} shown universal; cognition, biology, institutions,
+language, and the theological reading remain conjecture, each a separate test. (iii) Nothing here
+proves RH, constructs a Hilbert--P\'olya operator, or closes the $\sim$$1\%$ coupling residual; those
+walls stand exactly where the source papers leave them.
+
+\paragraph{The one sentence that survives compression.} \emph{It is one mechanism expressed through
+many forms --- by identity where the chain is proven, by conjecture where it is gestured, and
+falsifiable in every form either way.}
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small This synthesis (\texttt{TR-2026-FF06\(\Sigma\)}) sits over the result papers it cites:
+\paper{FF06a} (Colour from Gravity), \paper{FF06b}/\paper{FF06b$'$} (the Riemann spectral side and the
+transport obstruction), \paper{FF06c} (the Inversion Arc), \paper{FF06e} (the Shuffle Knife),
+\paper{N3} (the prime-gap operator), \paper{LF01} (finite-window localisation), and \paper{FF06K} (the
+reversible-flattening process record). It states what they share and, more carefully, exactly how far
+the sharing has been earned. The unification is real to the radius of Link 1--2 and conjectural beyond
+it; the honest measure of the program is that the boundary is drawn, not blurred.
+
+\end{document}

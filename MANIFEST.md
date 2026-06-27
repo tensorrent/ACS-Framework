@@ -1,0 +1,101 @@
+# MANIFEST — ACS Complete Bundle
+
+Assembled 2026-06-27. Seed `20260423`. All code below was executed at assembly time.
+
+## Four-tier verification hierarchy (tiers never promote)
+
+| Tier | Standard |
+|------|----------|
+| **T1** | Machine-verified — automated test passes, reproducible by running the code |
+| **T2** | Proved in paper — complete mathematical proof, human-verified |
+| **T3** | Numerically verified — consistent across runs, not yet theorem-level |
+| **T4** | Explicitly falsified — computation shows the claim is false (recorded, not hidden) |
+
+Assembly-time checks: `acs_codebase` → **42 passed**; HP suite → reproduces session
+figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
+
+---
+
+## Papers (latest version of each)
+
+| File | Paper | Notes |
+|------|-------|-------|
+| core_trilogy/TR-2026-FF06a_Colour_from_Gravity | A | Pati-Salam SU(4)×SU(2)×SU(2) from Palatini bracket on sl(4,ℝ). (A figure-rich PDF variant `_5.pdf` exists in the project dir; the canonical tex+pdf pair is here.) |
+| core_trilogy/TR-2026-FF06b_Riemann_Spectral_ACS_extended | B (May 26) | deepest/longest form |
+| core_trilogy/Spectral_Witness_Survival_TR-2026-FF06b | B (May 30) | retitled, tightened — **choose one as canonical** |
+| core_trilogy/TR-2026-FF06c_Inversion_Arc | C | holographic resolution / ER=EPR algebraic |
+| notes/TR-2026-FF06-N1_Pythagorean_Structure | N1 | |
+| notes/TR-2026-FF06-N2_Signature_Selection | N2 | grading-selection theorem |
+| notes/TR-2026-FF06-N3_Transition_Operator | N3 | prime-gap transition operator |
+| methodology/Form_Function_Shuffle_Knife_TR-2026-FF06e | FF06e | the discriminant itself |
+| later_FF06_series/ (f, g, h, i, J, K, Σ, K1) | — | June methodology/geometry thread; documents only |
+
+---
+
+## Claim → evidence → tier
+
+### Paper A (Colour from Gravity)
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| SU(3) closure attractor | **T3** | `acs_codebase/src/paper_a/`, selection scripts (50k-sample numerical, not a uniqueness theorem) |
+| Higgs quartic λ_φ = 2√3/27 | **T2** | Koide projection; `acs_codebase` paper_a + `extras/koide_clebsch_gordan.py` |
+| α₂ = 0 (representation theory) | **T2** | paper_a |
+| β_c = 0 no-go (tree level) | **T2** | `acs_codebase/src/paper_a/betac_tan_beta.py` |
+| tan β gauge-protected (CW 6→5 fails) | **T4** | `extras/phase51_tanbeta.py`, `phase50_vacuum.py` — fermion-dominated, boundary min |
+| N_gen = 3 (Jacobi truncation at BCH order 3) | **T1** | paper_a |
+| γ = 0.274 (Barbero-Immirzi, Meissner) | **T2** | `extras/barbero_immirzi_correct.py` |
+| θ_QCD = 0, torsion ratio 0:1:4 | **T2** | paper_a |
+| θ₁₃ obstruction / TM1 PMNS | **T2/T3** | `src/paper_a/theta13_obstruction.py`, `tm1_pmns.py` |
+
+### Paper B (Riemann Spectral ACS)  +  HP knife suite
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Wronskian ≠ Poisson (Leibniz fails by −fgh′) | **T2** | `acs_codebase/src/paper_b/wronskian_leibniz.py` |
+| RH ⇒ stationarity | **T2** | paper_b (functional analysis) |
+| von Koch stability | **T2** | `src/paper_b/renormalized_stability.py` |
+| Berry-Keating smooth counting reproduced | **T2(known)** | `src/paper_b/berry_keating_counting.py` |
+| C5 arithmetic present (real 240 vs GUE ≈1) | **T1** | `hp_knife_suite/hp_never_synced.py` |
+| Berry-Keating xp carries no arithmetic | **T1** | `hp_knife_suite/hp_xp_test.py` (xp-honest 0.71; circular injection labeled) |
+| C6 sign + C7 von Mangoldt weights (zeta) | **T1** | `hp_knife_suite/hp_signed_lfunction.py` (sign 100%, weight corr 1.00) |
+| C8 character sign, quadratic L (18/18) | **T1** | `hp_signed_lfunction.py` |
+| C8′ complex-character phase (R = 0.99) | **T1** | `hp_phase_test.py` (order-4 mod 5, order-6 mod 7) |
+| C9 finite-prime orthogonality (corr 0.92) | **T1** | `hp_c9_orthogonality.py` |
+
+> **Scope:** C5–C9 numerically exhibit the explicit formula (Weil–Guinand) and its
+> Dirichlet generalization — known theorems. The suite is a falsification/calibration
+> instrument, not a source of new theorems, and constructs no operator. Non-circularity:
+> L-zeros built from L(s,χ) via Hurwitz zeta (`data_zeros/cyclotomic_*/*.py`), primes never
+> inserted. "Selberg orthogonality" here = finite-prime proxy, consistent with the
+> asymptotic statement, not it.
+
+### Paper C (Inversion Arc)
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Killing-orthogonality (Thm 4.1) | **T2** | `acs_codebase/src/paper_c/killing_orthogonality.py` |
+| Three-class spectral taxonomy (Thm 4.2) | **T2** | `src/paper_c/spectral_taxonomy.py` (Jordan-Chevalley) |
+| ER=EPR algebraic correspondence | **T2/T3** | `src/paper_c/er_epr_algebraic.py` |
+
+### Notes
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| N1 — IR lattice imprint is null vs PDG | **T4** | `code/notes_verification/test_lattice_imprint.py` |
+| N2 — general grading selection theorem | **T2** | `code/notes_verification/test_signature_selection.py` (bilinearity + weighted max-cut) |
+| N2 — G₂ exceptional-algebra counterexample | **T2** | same (cluster coherence fails for multi-length root clusters) |
+| N3 — transition operator P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
+
+> **N3 fresh-eyes note (2026-06-27):** the transition operator's eigenvalues are bounded
+> dynamical modes (|λ| ≈ 0.01–0.3), **not** an unbounded spectrum claimed to *be* the
+> Riemann zeros. Its connection to L-functions is via the kernel (characters), not the
+> eigenvalues. Recorded so the bundle does not overstate N3.
+
+---
+
+## Falsified claims ledger
+`docs/TR-2026-FF06-KILL01_Elimination_Ledger.md` — the eight explicitly falsified claims
+(ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
+chirality, Route A/C signature selection, CW 6→5). First-class results.
+
+## Reproduction notes
+- Seed `20260423` throughout. PDG v = 246.22 GeV canonical.
+- Riemann zeros: Odlyzko first 100,000, `data_zeros/riemann_zeros_100k.txt`.
+- Codebase entry point: `code/acs_codebase/` (`pytest -q` → 42 passed).

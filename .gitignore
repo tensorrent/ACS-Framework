@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Model / tensor checkpoints (large)
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.npz
+*.npy
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Local secrets / env
+.env
+.env.*
+*.pem
+
+# Telemetry & raw logs (privacy / size)
+*.ndjson
+**/drift_history*.ndjson
+**/file_edit*.ndjson
+
+# Optional: omit large merged JSONL from git; remove this line if you intentionally publish a public corpus slice
+# *.jsonl
+
+# Training run exhaust (regenerate with harness)
+harness/reports/

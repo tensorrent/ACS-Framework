@@ -1,0 +1,1057 @@
+\documentclass[11pt,a4paper]{article}
+
+%% ═══════════════════════════════════════════════════════════════════════════
+%% VISUAL STYLE — ACS Trilogy, presentation-grade typography
+%% ═══════════════════════════════════════════════════════════════════════════
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[expansion=false]{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{placeins}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+
+\definecolor{acsprimary}{HTML}{1a237e}
+\definecolor{acssecondary}{HTML}{3949ab}
+\definecolor{acsaccent}{HTML}{c62828}
+\definecolor{acsgold}{HTML}{b8860b}
+\definecolor{acsgreen}{HTML}{2e7d32}
+\definecolor{acsslate}{HTML}{37474f}
+\definecolor{acslight}{HTML}{e8eaf6}
+\definecolor{acsrule}{HTML}{9fa8da}
+
+\usepackage[labelfont={bf,small,color=acsprimary!90!black},
+            textfont={small,it}]{caption}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\geometry{top=1.15in,bottom=1.15in,left=1.2in,right=1.2in,
+          headheight=16pt,headsep=0.25in,footskip=0.45in}
+
+\hypersetup{colorlinks=true,linkcolor=acsprimary,citecolor=acssecondary,
+            urlcolor=acsaccent,pdfpagemode=UseOutlines,bookmarksopen=true}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyheadoffset{0pt}
+\fancyhead[L]{\small\color{acsslate}\itshape\leftmark}
+\fancyhead[R]{\small\color{acsslate}\texttt{TR-2026-FF06c}}
+\fancyfoot[C]{\small\color{acsslate}\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{\S\thesection.\ #1}{}}
+
+\titleformat{\section}{\normalfont\Large\bfseries\color{acsprimary}}
+  {\thesection}{0.7em}{}[\vspace{-2pt}{\color{acsrule}\rule{\textwidth}{0.4pt}}]
+\titleformat{\subsection}{\normalfont\large\bfseries\color{acssecondary}}
+  {\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{acsslate}}
+  {\thesubsubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{2.4ex plus 0.9ex minus 0.4ex}{1.4ex plus 0.3ex}
+\titlespacing*{\subsection}{0pt}{2.0ex plus 0.7ex minus 0.3ex}{0.9ex plus 0.2ex}
+\titlespacing*{\subsubsection}{0pt}{1.6ex plus 0.5ex minus 0.2ex}{0.7ex}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=2pt,topsep=3pt,parsep=0pt}
+\setcounter{tocdepth}{2}
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{0.5pt}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+%
+
+\newcommand{\DI}{\Delta\mathcal{I}}
+\newcommand{\TE}{\mathrm{TE}}
+\newcommand{\Order}[1]{\mathcal{O}(#1)}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\FormF}{\mathbf{F}}
+\newcommand{\FuncF}{\boldsymbol{\Phi}}
+\renewcommand{\Form}{\mathbf{e}}
+\providecommand{\Func}{\boldsymbol{\omega}}
+\newcommand{\Lie}[2]{[#1,\,#2]}
+
+\title{\textbf{The Inversion Arc: Holographic Resolution in Asymmetric Coupled Systems}\\[0.4em]
+       \large Constraint--Attractor Dynamics, Tensegrity, and the Banach--Tarski Connection}
+\author{Bradley Wallace\\[0.3em]
+        \small \textit{Independent Researcher}\\[0.2em]
+        \small \texttt{TR-2026-FF06c}}
+\date{March 2026}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+\vspace{6pt}
+\noindent{\footnotesize\color{acsslate}\hfill\texttt{TR-2026-FF06c} \quad|\quad \textit{Independent Research} \quad|\quad March 2026}
+\vspace{6pt}
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+
+\vspace{0.6in}
+
+\begin{center}
+  {\Huge\bfseries\color{acsprimary} The Inversion Arc}\\[0.4em]
+  {\Large\color{acsslate} Holographic Resolution in Asymmetric Coupled Systems}\\[1.2em]
+  {\normalsize\itshape\color{acsslate}
+    Constraint\textendash Attractor Dynamics, Tensegrity, and the Banach\textendash Tarski Connection}\\[2.0em]
+  {\large\bfseries Bradley Wallace}\\[0.25em]
+  {\small\itshape\color{acsslate} Independent Researcher}
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+\begin{minipage}{0.88\textwidth}
+\begin{center}
+  {\bfseries\color{acsprimary}\large Abstract}\\[0.3em]
+  {\color{acsrule}\rule{1.2in}{0.3pt}}
+\end{center}
+\vspace{0.5em}
+\small\noindent
+We develop the conceptual and structural consequences of the Asymmetric
+Codependent System (ACS) framework introduced in~\cite{Wallace2026a}.
+The \emph{inversion arc} describes how a system that solves a constraint
+becomes the new constraint: the information asymmetry $\DI$ flips sign as
+the system transitions from solution to dominant structure.  We propose
+this as the \emph{holographic resolution principle} and argue that it is
+instantiated by the Zamolodchikov $c$-theorem (2D QFT) and the
+Komargodski--Schwimmer $a$-theorem (4D QFT), which serve as proved
+examples of the inversion arc in quantum field theory.  The
+\emph{constraint--attractor cycle} connects the inversion arc to the
+gauge-algebraic results of~\cite{Wallace2026a}: the Palatini torsion-free
+condition $T^a = 0$ is both the attractor and the next constraint.
+Tensegrity structures provide a discrete geometric realisation of the
+ACS, where zero modes of the rigidity matrix correspond to gauge freedoms.
+The Banach--Tarski paradox is reinterpreted as a geometric ACS: the
+non-commuting rotations generate an exponential branching of states, and
+the emergent volume measures the 3rd-order holonomy.
+\end{minipage}
+\end{center}
+
+\vfill
+
+\noindent{\color{acsrule}\rule{\textwidth}{0.4pt}}
+\end{titlepage}
+
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\markboth{Contents}{}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduction}
+\label{sec:intro}
+
+\noindent\textit{This paper is the third in a trilogy.
+Paper~A~\cite{Wallace2026a} develops the ACS framework and its
+application to gauge theory (57 verification scripts).
+Paper~B~\cite{Wallace2026b} applies the framework to number theory
+and the Riemann Hypothesis.  This paper explores the universal
+structural consequence --- the inversion arc --- and requires only
+the BCH--TE morphism (Lemma~2.5 of~\cite{Wallace2026a}) and the
+definitions of Form, Function, and $\DI$.}
+
+\medskip\noindent
+This paper develops the structural and conceptual consequences of the
+Asymmetric Codependent System (ACS) framework, whose mathematical
+foundations and primary physical application (the gauge-algebraic
+selection of $\mathfrak{su}(3)$ from Palatini geometry) are presented
+in~\cite{Wallace2026a}.  The number-theoretic application is developed
+in~\cite{Wallace2026b}.
+
+The core observation is that in any system where two structurally
+different objects are codependent and asymmetric, the asymmetry
+\emph{generates} observable pattern through the Lie bracket $[f,g]$
+of the coupling operators.  Here we explore what happens when that
+pattern becomes dominant: the solution becomes the constraint, and the
+information asymmetry inverts.  This is the \emph{inversion arc}.
+
+\subsection{Paper structure}
+Section~\ref{sec:tensegrity} presents the tensegrity--gauge correspondence.
+Section~\ref{sec:holographic} develops holographic resolution and the inversion arc.
+Section~\ref{sec:constraint} presents the constraint--attractor cycle.
+Section~\ref{sec:algebraic} collects the algebraic foundations: the
+Killing-orthogonality theorem, the three-class spectral taxonomy of
+adjoint flows, and the algebraic non-traversability theorem (the
+ACS rereading of ER\,=\,EPR).
+Section~\ref{sec:unified} collects the unified claims across all ACS domains.
+Section~\ref{sec:BT} develops the Banach--Tarski connection.
+
+\subsection*{Methodological note on epistemic compression}
+
+The results in this trilogy were obtained through repeated cycles of
+conjecture, explicit verification, and compression --- a discipline
+formally articulated by Lakatos~\cite{Lakatos1976} as ``proofs and
+refutations.''  Several previously stated claims were narrowed during
+this process: a universal ``$2\pi$ inversion at three steps'' was
+found to be representation-specific; the Wronskian on scalar zero
+modes was found to fail the Leibniz axiom (Paper~B,
+Section~5); a three-class rather than four-class spectral taxonomy
+emerges from Jordan--Chevalley decomposition (Section~\ref{sec:taxonomy}).
+Each correction tightens rather than weakens the framework.  We
+distinguish throughout between proved theorems, conjectures explicitly
+flagged as open, and disproved hypotheses retained as boundary
+markers in the model space.
+\section{Discrete Geometry: Tensegrity as ACS}
+\label{sec:tensegrity}
+%% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{The tensegrity--gauge correspondence}
+
+A tensegrity network has nodes $\{q_i\} \subset \mathbb{R}^n$, edges 
+partitioned into cables (tension) and struts (compression), with energy:
+\begin{equation}
+  H = \sum_{(i,j)\in\mathrm{cables}} k_{ij}\,V_+(|q_i-q_j|, L_{ij})
+    + \sum_{(i,j)\in\mathrm{struts}} k_{ij}\,V_-(|q_i-q_j|, L_{ij}),
+\end{equation}
+where $V_+$ penalises extension and $V_-$ penalises compression.
+
+\begin{lemma}[Zero modes are gauge freedoms]\label{lem:zero-modes}
+The zero eigenvalues of the rigidity matrix~\cite{Connelly1996} $K = R R^\top$ 
+(where $R_{3i, e}$ is the unit vector of edge $e$ at node $i$) correspond to 
+deformations that cost zero energy.  In the ACS correspondence, these
+align with the gauge redundancies of the lattice gauge theory defined on
+the same graph: directions in configuration space where $\DI = 0$.
+\end{lemma}
+
+\noindent
+Numerical verification: the icosahedral tensegrity (12 bulk nodes, 6 struts) 
+yields exactly 6 zero modes, matching the $\dim(SO(3)) + \dim(\mathrm{translations}) = 6$ 
+gauge redundancies of a 3D lattice gauge theory.
+
+The ACS structure in this case:
+\begin{itemize}[noitemsep]
+  \item Form = cable network (tension, pulls toward equilibrium: structural).
+  \item Function = strut network (compression, maintains separation: dynamic).
+  \item Coupling = node positions $q_i$ shared by both.
+  \item Asymmetry: $V_+(r,L) \neq V_-(r,L)$ --- the cable and strut potentials 
+    are structurally different nonlinear functions.
+  \item Emergent pattern: the equilibrium configuration, which is 
+    neither the minimiser of cables alone nor struts alone.
+\end{itemize}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\section{Holographic Resolution}
+\label{sec:holographic}
+%% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{The inversion arc}
+
+\begin{definition}[Holographic Resolution]\label{def:holo}
+Let $C$ be a constraint and $S$ a system that solves $C$
+by reducing $\DI$.  $S$ achieves \emph{holographic resolution} of $C$ if:
+\begin{itemize}[noitemsep]
+  \item[(HR-1)] \textbf{Boundary completeness:}
+    $I(\partial S;\, C) = H(C)$
+    --- the mutual information between the boundary $\partial S$ and
+    the constraint equals the full entropy of $C$;
+  \item[(HR-2)] \textbf{Interior redundancy:}
+    $I(\partial S;\, \mathrm{int}(S) \mid C) = 0$
+    --- given $C$, the boundary carries no information about the interior
+    beyond what $C$ already determines;
+  \item[(HR-3)] \textbf{Outward gating:}
+    $\DI(S \to \mathrm{exterior}) < 0$
+    --- the boundary gates information outward, not inward.
+\end{itemize}
+The Ryu--Takayanagi formula $S_{\mathrm{EE}} = \mathrm{Area}(\partial A)/(4G)$
+is recovered when $\DI = 0$: at information balance, the entanglement
+entropy of a bulk region equals the area of its boundary in Planck units.
+Condition (HR-1) is the information-theoretic restatement of the
+RT formula; (HR-2) is the ``no-hair'' property of the holographic encoding;
+(HR-3) is the statement that holographic screens gate access from
+inside to outside, not the reverse.
+\end{definition}
+
+\begin{definition}[Self-Resolving Structure]\label{def:self-resolving}
+A structure $S$ is \emph{self-resolving} if it contains an intrinsic 
+measure $\mu(t)$ such that whenever $S$ begins to invert its information 
+asymmetry ($\DI \to -\DI$), the value $\mu(t)$ becomes nonzero and 
+is legible \emph{within} $S$'s own record --- not only detectable by 
+external observers.
+\end{definition}
+
+\begin{remark}
+The Bianchi identity $D_{[\mu}F_{\nu\rho]} = 0$ is the prototype 
+self-resolving structure: any deviation from gauge-covariant curvature 
+is immediately encoded in the field equations themselves.  
+A magnetic monopole would violate $\nabla \cdot B = 0$, and this 
+violation is legible in the same layer as the field --- not 
+detectable only post hoc.
+\end{remark}
+
+\subsection{The inversion theorem}
+
+\begin{theorem}[Inversion arc of access systems]\label{thm:inversion}
+Let $S$ be a system solving constraint $C_0$ by achieving $\DI > 0$ 
+(Form drives Function: open, outward-flowing).  As $S$ becomes the 
+dominant access structure, new actors enter the field only through $S$.  
+At this point $S = C_1$ is the new constraint, and:
+\begin{equation}
+  \DI(S\text{ as solution}) > 0 \quad\longrightarrow\quad 
+  \DI(S\text{ as constraint}) < 0.
+\end{equation}
+The information asymmetry has inverted.  The key has become the lock.
+\end{theorem}
+
+\begin{proof}
+The proof follows from the BCH--TE morphism (Lemma~2.5 of~\cite{Wallace2026a}).
+
+\textbf{Step~1 (Role assignment).}
+When $S$ is a solution, let $f = S$ (the outward-flowing operator, Form)
+and $g = C_0$ (the constraining operator, Function).  By hypothesis,
+$\DI(f \to g) > 0$: Form drives Function.
+
+\textbf{Step~2 (Role reversal).}
+When $S$ becomes the dominant access structure, the roles swap:
+$f' = C_0'$ (the new dynamic actors, now Function) and $g' = S$
+(now the constraining boundary, Form).  The operators are the same
+but their positions in the ACS coupling are exchanged: $f' \leftrightarrow g'$.
+
+\textbf{Step~3 (BCH sign reversal).}
+The BCH--TE morphism gives $\DI(f, g) = \eps^2\,\mathbb{E}[f - g] + \Order{\eps^3}$.
+Under role reversal $f \leftrightarrow g$:
+\[
+  \DI(g, f) = \eps^2\,\mathbb{E}[g - f] = -\eps^2\,\mathbb{E}[f - g]
+  = -\DI(f, g) + \Order{\eps^3}.
+\]
+The first-order transfer entropy flips sign exactly.  Higher-order
+corrections are $\Order{\eps^3}$ and do not alter the sign for
+sufficiently small coupling.
+
+\textbf{Step~4 (Conclusion).}
+The sign of $\DI$ inverts when $S$ transitions from solution to
+constraint.  The inversion rate $\tau^{-1}$ scales with the adoption
+rate (how quickly $S$ becomes the dominant access layer).
+\end{proof}
+
+\begin{remark}[Computational verification]
+Three instances of the inversion arc are verified in~\cite{Wallace2026a}:
+\begin{enumerate}[noitemsep]
+  \item The Ricci flow uniformisation ($41\times$ curvature reduction):
+    the Ricci flow (solution) becomes the Einstein equation (constraint).
+  \item The constraint hierarchy $\|G\| > \|D\| > \|H\|$ on the spin network:
+    the Gauss constraint (Form) gates the diffeomorphism and Hamiltonian
+    constraints (Function).
+  \item The Wheeler--DeWitt attractor ($\ker(\hat{H})$ weight $50.7\%$):
+    the quantum state flows to $\hat{H}\Psi = 0$, where the WdW equation
+    (solution) becomes the definition of the physical Hilbert space
+    (constraint).
+\end{enumerate}
+\end{remark}
+
+\noindent
+Historical instances (Table~\ref{tab:acs-instances}):
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+Domain & ACS Form & ACS Function \\
+\midrule
+2D QFT (c-theorem) & UV fixed point & IR RG flow \\
+4D QFT (a-theorem) & UV couplings & Weyl anomaly \\
+Gauge theory & vierbein $e$ & connection $\omega$ \\
+Quantum gravity & triad $\tilde{E}$ & Ashtekar $A$ \\
+Number theory & primes $\{p_n\}$ & Riemann zeros $\{\gamma_k\}$ \\
+\bottomrule
+\end{tabular}
+\caption{ACS instances across domains.  The RG examples (top two rows) provide
+established instances of monotone information flow (Zamolodchikov $c$-theorem~\cite{Zamolodchikov1986} and the
+Komargodski--Schwimmer $a$-theorem~\cite{KomargodskiSchwimmer2011}), anchoring the framework in known results.}
+\label{tab:acs-instances}
+\end{table}
+
+\subsection{The constraint--attractor cycle}
+\label{sec:constraint}
+
+The inversion arc (Theorem~\ref{thm:inversion}) has a dynamical interpretation
+that unifies the attractor structure of the gauge theory, GL(4), and
+quantum gravity sections of~\cite{Wallace2026a}.
+
+In the Palatini formulation, the field equations drive the system
+to $T^a = 0$ (torsion-free geometry).  This equilibrium is both
+the \emph{attractor} of the ACS flow and the \emph{constraint}
+on subsequent evolution: once torsion vanishes, the connection is
+fully determined by the vierbein, and the system has no remaining
+degrees of freedom at 1st order.
+
+Breaking this constraint --- activating $T^a \neq 0$ --- is the
+ACS analog of Form overcoming Function.  The excess torsion produces
+chiral zero-modes (~\cite{Wallace2026a}), which carry the spinor
+structure needed for complexification.  Those spinor degrees of
+freedom self-organise into the next constraint: the colour gauge
+symmetry $\mathrm{SU}(3)$, whose confinement mechanism provides
+the new attractor.
+
+The cycle is:
+\[
+  T^a = 0 \;\;\xrightarrow{\;\text{torsion activates}\;}\;\;
+  T^a \neq 0 \;\;\xrightarrow{\;\text{chiral modes}\;}\;\;
+  \text{spinor bundle} \;\;\xrightarrow{\;\text{complexify}\;}\;\;
+  \mathfrak{su}(3) \;\;\xrightarrow{\;\text{confine}\;}\;\;
+  \text{new constraint}
+\]
+Each stage is one step of the inversion arc.
+The Lie bracket $[f,g]$ at each stage measures the asymmetry
+driving the transition; when it vanishes, the system is at the
+attractor; when it is non-zero, the system is being driven
+toward the next attractor.
+
+For quantum gravity, the same structure appears:
+the Wheeler--DeWitt condition $\hat{H}|\Psi\rangle = 0$
+(the WdW conjecture~\cite{Wallace2026a}) is the quantum attractor where
+$\DI_Q = 0$.  Breaking this balance ($\hbar$ corrections,
+$\DI_Q \neq 0$) produces the arrow of time --- the quantum
+version of activating torsion.
+
+For the Riemann Hypothesis, the attractor is the critical line
+$\sigma = \tfrac{1}{2}$: the state where the prime--zero ACS is
+stationary (the spectral stationarity theorem~\cite{Wallace2026b}).  Off-critical zeros
+correspond to the system not having reached equilibrium --- the
+variance grows (Section~\ref{sec:unified}), the attractor has
+not been found.
+
+In every domain, the constraint is the attractor, and the attractor
+is the next constraint.  The ACS framework makes this cycle
+computable: $\DI$ measures how far the system is from equilibrium,
+and the Lie bracket $[f,g]$ measures what is driving it there.
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\section{Algebraic Foundations of the Inversion Arc}
+\label{sec:algebraic}
+%% ─────────────────────────────────────────────────────────────────────────────
+
+The inversion arc, as developed in Section~\ref{sec:holographic}, has
+the structural form of a Lie bracket whose successive applications
+saturate at finite order.  This section makes that statement precise.
+We prove the Killing-orthogonality theorem (Section~\ref{sec:killing}),
+which is the algebraic content of ``non-traversability'' in the ACS
+framework.  We classify adjoint flows by spectral type
+(Section~\ref{sec:taxonomy}).  We re-read the ER\,=\,EPR conjecture
+in this language (Section~\ref{sec:erepr}).  Together these
+results sharpen what the inversion arc \emph{is} mathematically,
+and what it is not.
+
+\subsection{The Killing-orthogonality theorem}
+\label{sec:killing}
+
+\begin{theorem}[Killing-orthogonality]\label{thm:killing}
+For any matrix Lie algebra $\mathfrak{g}$ and any $X, Y \in \mathfrak{g}$,
+\begin{equation}\label{eq:killing-orth}
+  \mathrm{tr}\bigl([X, Y]\,X\bigr) = 0,
+  \qquad
+  \mathrm{tr}\bigl([X, Y]\,Y\bigr) = 0.
+\end{equation}
+Equivalently, the bracket output $B = [X, Y]$ is trace-orthogonal to
+both of its inputs in the sense of the Killing form.
+\end{theorem}
+
+\begin{proof}
+By trace cyclicity,
+\(
+  \mathrm{tr}(XYX) = \mathrm{tr}(YX^2),
+\)
+so
+\(
+  \mathrm{tr}\bigl([X,Y]\,X\bigr) = \mathrm{tr}(XYX) - \mathrm{tr}(YX^2) = 0.
+\)
+The second identity follows by symmetric exchange.
+\end{proof}
+
+\noindent
+This identity is verified symbolically in
+\texttt{src/paper\_c/killing\_orthogonality.py} (returning
+$0$ in SymPy) and numerically across $1{,}000$ random pairs in each
+of $\mathfrak{sl}(3,\mathbb{R})$ and $\mathfrak{sl}(4,\mathbb{R})$
+with maximum residual $\sim 10^{-15}$.
+
+\subsubsection*{Chirality hopping example}
+
+In $\mathfrak{sl}(4,\mathbb{R})$ with the standard basis
+$\{H_i, A_{ij}, S_{ij}\}$ where $H_i$ are Cartan generators,
+$A_{ij}$ are antisymmetric, and $S_{ij}$ are symmetric off-diagonal,
+the bracket
+\begin{equation}\label{eq:chirality-hopping}
+  [H_1, A_{01}] = 2\,S_{01}
+\end{equation}
+maps a Cartan element and an antisymmetric off-diagonal element to
+a symmetric off-diagonal element --- crossing chirality sectors
+exactly.  This is a numerical verification (exact integer match) of
+the more general fact that the bracket of $\mathrm{sym}$ and
+$\mathrm{anti}$ sectors lands in the opposite-chirality sector.
+The Killing-orthogonality theorem then forces the result $S_{01}$ to
+be Killing-orthogonal to both $H_1$ and $A_{01}$, which is verified
+directly: $\mathrm{tr}(S_{01} H_1) = \mathrm{tr}(S_{01} A_{01}) = 0$.
+
+\subsubsection*{The three ambiguity numbers in \texorpdfstring{$\mathfrak{sl}(4,\mathbb{R})$}{sl(4,R)}}
+
+Given $B = [X, Y]$, the inverse problem ``recover $(X, Y)$ from $B$''
+has three distinct ambiguity numbers depending on what one means by
+recovery.
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Passive ambiguity (subspace).}
+    The Killing-orthogonality theorem forces both $X$ and $Y$ to lie
+    in the codimension-1 subspace
+    \(
+      B^\perp = \{Z \in \mathfrak{sl}(4) : \mathrm{tr}(BZ) = 0\}.
+    \)
+    Its dimension is $\dim B^\perp = n^2 - 2 = 14$.
+  \item \textbf{Generic active ambiguity (Jacobian kernel).}
+    The bracket map $\mu : \mathfrak{sl}(4) \oplus \mathfrak{sl}(4) \to \mathfrak{sl}(4)$,
+    $\mu(X, Y) = [X, Y]$ has differential
+    $d\mu(\delta X, \delta Y) = [\delta X, Y] + [X, \delta Y]$.
+    At a generic point $(X, Y)$, $\mathrm{rank}\,d\mu = n^2 - 1 = 15$
+    and $\dim \ker\,d\mu = 15$ --- the locally surjective regime.
+    Verified across $20$ random pairs in
+    \texttt{src/paper\_c/orthogonal\_complement\_probe.py}.
+  \item \textbf{Degenerate active ambiguity at $(H_1, A_{01})$.}
+    At the specific Cartan-antisymmetric pair, where the bracket lands
+    in a $1$-dimensional subspace, the differential degenerates to
+    $\mathrm{rank}\,d\mu = 11$ and $\dim \ker\,d\mu = 19$.
+\end{enumerate}
+
+These three numbers measure different things and should not be
+conflated.  Citing only one ``ambiguity factor'' without context
+produces misleading statements.
+
+\subsection{The three-class spectral taxonomy}
+\label{sec:taxonomy}
+
+The orbits of $\exp(t\,\mathrm{ad}_X)$ on $\mathfrak{g}$ classify by
+the spectrum of $\mathrm{ad}_X$ via the Jordan--Chevalley decomposition
+$X = X_s + X_n$ with $X_s$ semisimple, $X_n$ nilpotent, and
+$[X_s, X_n] = 0$.  The semisimple part $X_s$ further splits over
+$\mathbb{R}$ into eigenvalues that are either real-valued or
+complex-conjugate pairs, yielding three distinct flow types.
+
+\begin{theorem}[Spectral taxonomy of adjoint flows]\label{thm:taxonomy}
+Any finite-dimensional real linear ACS operator $X$ admits a
+Jordan--Chevalley decomposition into commuting semisimple and
+nilpotent parts.  The semisimple part further partitions adjoint
+flows into three classes:
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Elliptic} --- $\mathrm{ad}_{X_s}$ has imaginary
+    eigenvalues (paired conjugates).  $\exp(t\,\mathrm{ad}_X)$ is
+    rotational and periodic.
+  \item \textbf{Hyperbolic} --- $\mathrm{ad}_{X_s}$ has real eigenvalues.
+    $\exp(t\,\mathrm{ad}_X)$ is exponential growth/decay; no $2\pi$ loop
+    closure.
+  \item \textbf{Parabolic} --- $X_s = 0$, $X_n \neq 0$.
+    $\exp(t\,\mathrm{ad}_X)$ is polynomial.
+\end{enumerate}
+The generic case is a commuting sum of these classes acting on
+distinct invariant subspaces.
+\end{theorem}
+
+\noindent
+The taxonomy is mathematically standard~\cite{Jacobson1979,Bourbaki1989};
+its relevance here is to clarify that the three-fold closure
+$\mathrm{ad}^3 = (16/9)\,\mathrm{ad}$ in $\mathfrak{sl}(4,\mathbb{R})$
+(Theorem~C of Paper~A~\cite{Wallace2026a}) is an algebraic statement
+about the minimal polynomial of $\mathrm{ad}_{T_{B-L}}$ --- not a
+geometric ``$2\pi$ inversion at three steps.''  The latter applies
+only in the elliptic case.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+ACS instance & Spectrum of $\mathrm{ad}_X$ & Class & Geometric content \\
+\midrule
+$\mathrm{SU}(2)$ quaternion & $\{\pm i\}$ & Elliptic & $2\pi$ rotation $= -I$ \\
+Frenet--Serret operator & $\{0, \pm i\sqrt{\kappa^2{+}\chi^2}\}$ & Elliptic & curvature/torsion rotation \\
+$\mathfrak{sl}(4,\mathbb{R})$ Palatini ($T_{B-L}$) & $\{0, \pm 4/3\}$ & Hyperbolic & boost-like, no $2\pi$ closure \\
+Core rope ring ($R^3 = R$) & $\{-1, 0, +1\}$ & Hyperbolic & $\mathbb{Z}/3$ permutation \\
+\bottomrule
+\end{tabular}
+\caption{Four ACS instances classified by spectral type.  Elliptic
+systems exhibit literal $2\pi$ inversion under three-step
+composition; hyperbolic systems exhibit only algebraic Cayley--Hamilton
+saturation, with no rotational closure.  The Frenet--Serret operator
+$A$ satisfies $A^3 = -(\kappa^2 + \chi^2)\,A$, an elliptic-class
+saturation; the Palatini adjoint satisfies $\mathrm{ad}_{T_{B-L}}^3 =
+(16/9)\,\mathrm{ad}_{T_{B-L}}$, a hyperbolic-class saturation.  Each
+identity is verified in \texttt{src/paper\_c/spectral\_taxonomy.py}.}
+\label{tab:spectral-classes}
+\end{table}
+
+\begin{remark}[On the universal-$2\pi$ overclaim]
+An earlier draft of this work proposed that ``three-step bracket
+chains universally produce $2\pi$ geometric inversions'' across all
+ACS systems.  Verification against $\mathrm{ad}_{T_{B-L}}$ in
+$\mathfrak{sl}(4,\mathbb{R})$ shows otherwise:
+$\exp(2\pi\,\mathrm{ad}_{T_{B-L}})$ has spectral norm of order
+$e^{8\pi/3} \approx 4{,}348$, not unity.  The flow does not close.
+What is universal is finite-order Cayley--Hamilton saturation; the
+specific geometric content (rotation versus boost versus shear)
+depends on the spectral class.  The corrected statement is preserved
+here as Theorem~\ref{thm:taxonomy}.
+\end{remark}
+
+\begin{remark}[Grading selection from spectral class]
+The spectral taxonomy has a direct consequence for $\mathbb{Z}/2$
+gradings: in the companion note~\cite{WallaceN2}, it is shown that
+minimising a universal class of adjoint spectral functionals over
+symmetric involutions on $\mathbb{R}^n$ selects the grading
+aligned with the minority eigenvalue cluster of the Cartan
+generator.  For compact algebras (elliptic class), the minimiser is
+the trivial grading; for noncompact split algebras (hyperbolic
+class), it is a nontrivial $(k, n{-}k)$ grading.  The three-class
+taxonomy of Theorem~\ref{thm:taxonomy} thus determines not only
+the dynamics (rotational, exponential, polynomial) but also the
+preferred grading structure compatible with each spectral class.
+(See~\cite{WallaceN2} for the Coleman--Mandula constraint on
+interpreting this grading as physical spacetime signature.)
+\end{remark}
+
+\subsection{Algebraic non-traversability: the ACS rereading of ER\,=\,EPR}
+\label{sec:erepr}
+
+The Maldacena--Susskind ER\,=\,EPR conjecture~\cite{MaldacenaSusskind2013}
+posits that entangled quantum systems are connected by non-traversable
+Einstein--Rosen bridges.  In the conjecture's original formulation,
+non-traversability is imposed as an external causality constraint:
+local operators on either side commute (preserving relativistic causality
+across the bulk geometry).
+
+The ACS framework derives the operational content of non-traversability
+from the bracket algebra alone.  No bulk geometry is invoked.
+
+\begin{proposition}[Algebraic non-traversability]\label{prop:non-trav}
+Let $B = [X, Y]$ be the bracket output of an ACS coupling.  The
+projection $\pi_X : \mathfrak{g} \to \mathrm{span}\{X\}$ defined by
+\(
+  \pi_X(M) = \frac{\mathrm{tr}(MX)}{\mathrm{tr}(X^2)}\,X
+\)
+satisfies $\pi_X(B) = 0$ identically.  No information from $B$ can
+be ``traversed'' back to $X$ through scalar inner-product reconstruction.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:killing}, $\mathrm{tr}(BX) = 0$.  Hence the
+projection coefficient is zero.
+\end{proof}
+
+\noindent
+This is verified at machine precision in
+\texttt{src/paper\_c/er\_epr\_algebraic.py} (projection coefficient
+$|c| < 10^{-16}$ for random $(X, Y)$ pairs in $\mathfrak{sl}(4,\mathbb{R})$).
+Combined with the standard quantum-mechanical fact that local Alice
+and Bob operators on a Bell state commute (verified in the same module),
+this gives the operational content of non-traversability without
+invoking bulk geometry: the ACS bracket structure is intrinsically
+``opaque'' from inputs to outputs in the trace inner product.
+
+\begin{remark}[Limits of the rereading]
+This algebraic non-traversability is a statement about the bracket
+algebra, not a derivation of holographic entropy bounds or the
+Ryu--Takayanagi formula~\cite{RyuTakayanagi2006}.  Whether the algebraic
+non-traversability of ACS bracket outputs can be quantitatively
+matched to AdS/CFT entanglement-wedge depth saturation is an
+open question requiring construction of an explicit correspondence
+map.  We flag this as a research direction, not a derived consequence.
+\end{remark}
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\section{Unified Claims and Open Problems}
+\label{sec:unified}
+%% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{The unified object}
+
+All five domains (gauge theory, number theory, discrete geometry, renormalisation group, and quantum gravity) are projections of a single structure: an ACS on a space where 
+Form and Function are the two independent fields, with the bracket 
+$[f, g]$ generating curvature and the holonomy $[[f,g],\cdot]$ 
+being the emergent pattern.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lllll}
+\toprule
+Domain & Form $\Form$ & Function $\Func$ & Bracket $[f,g]$ & Pattern \\
+\midrule
+Gauge theory & $F_{\mu\nu}$ & $A_\mu$ & $[A_\mu, A_\nu]$ & YM equation \\
+Gravity & $e^a{}_\mu$ & $\omega^{ab}{}_\mu$ & $R = d\omega + \omega^2$ & Einstein eqs.\ \\
+Number theory & $\{p_n\}$ & $\{\gamma_k\}$ & Explicit formula & RH stationarity \\
+Tensegrity & Cables & Struts & Equilibrium & Zero modes \\
+RG flow & UV couplings & IR couplings & $\beta$-function & $c$-theorem \\
+Quantum gravity & $\tilde{E}^a_i$ & $A^i_a$ & LQG constraints & Spin foam \\
+\bottomrule
+\end{tabular}
+\caption{All five domains as projections of the ACS framework.}
+\end{table}
+
+\subsection{Open problems}
+
+\begin{conjecture}[Standard Model from GL(4) fiber]\label{conj:SM}
+Let $\mathcal{Y}^{14}$ be the bundle of positive-definite metrics over $M^4$, 
+with fiber $\mathrm{GL}(4)/O(4)$ (dimension 10) and base $M^4$ (dimension 4).  
+The Lie algebra $\mathfrak{gl}(4)$ acting on each fiber satisfies:
+\[
+  \mathfrak{gl}(4) \supset \mathfrak{so}(3,1) \supset 
+  \mathfrak{su}(2) \oplus \mathfrak{u}(1).
+\]
+Conjecture: with the ACS coupling $(\FormF, \FuncF) = (e, \omega)$ on 
+$\mathcal{Y}^{14}$, the asymmetry bracket $[f, g]$ generates 
+$\mathfrak{su}(2) \oplus \mathfrak{u}(1)$ 
+as the electroweak sub-algebra of the ACS asymmetry 
+(see ~\cite{Wallace2026a} for the proof that $\mathfrak{su}(3)$ 
+cannot arise from the $O(4)$ fiber alone).
+\end{conjecture}
+
+\begin{conjecture}[Geometric fermions from torsion]\label{conj:fermions}
+In an ACS with $(e^a{}_\mu, \omega^{ab}{}_\mu)$ and non-zero torsion 
+$T^a \neq 0$, the torsion--spin coupling produces modes with half-integer 
+angular momentum from purely geometric data.  No independent spin structure 
+is required; the Cartan--Kibble--Sciama mechanism realises fermions as the 
+1st-order ACS coupling between Form and Function.
+\end{conjecture}
+
+\begin{theorem*}[Zamolodchikov $c$-theorem~\cite{Zamolodchikov1986}, restated in ACS language]\label{thm:c-theorem}
+For any unitary 2D QFT, there exists a function $C(g)$ on coupling space such that $dC/dt \leq 0$ along RG flow, with equality if and only if the theory is at a fixed point.  At fixed points, $C$ equals the Virasoro central charge $c$.  In the ACS framework, fixed points correspond to $\DI = 0$ (information balance between UV Form and IR Function).  The 4D analogue (Komargodski--Schwimmer $a$-theorem~\cite{KomargodskiSchwimmer2011}) extends this monotonicity to four-dimensional QFT.
+\end{theorem*}
+
+\subsection{Gaps revealed by formalisation (updated status)}
+
+Several gaps identified in the original draft have been addressed,
+with varying levels of rigour.  We distinguish three epistemic tiers:
+\emph{theorem} (rigorous proof from stated axioms),
+\emph{derived} (conditional result with numerical verification
+and mechanism identified), and \emph{conjecture} (matching pattern
+without full derivation).
+
+\begin{enumerate}[label=(\arabic*)]
+  \item \textbf{The SM generation conjecture: conjecture.}
+    The companion paper~\cite{Wallace2026a} identifies one full SM
+    generation from the GL(4) fiber: all 8 electric charges and
+    8 hypercharges match, including a right-handed neutrino.
+    Three generations follow from Jacobi truncation of the BCH at order~3.
+    The Koide angle $\theta_0 = \arctan(\lambda_{\mathrm{Wolfenstein}})$
+    to $0.23\%$, linking the lepton mass hierarchy to the Cabibbo angle.
+    \emph{Not yet: a field-theoretic derivation showing that the BCH
+    orders map to distinct fermion families in the quantum theory.}
+
+  \item \textbf{The Wheeler--DeWitt attractor: derived.}
+    A 3-node spin network Lindblad steady state concentrates in
+    $\ker(\hat{H})$ with $\langle\hat{H}\rangle = 3 \times 10^{-6}$.
+    This is a numerical result on a toy model; the full spin-foam
+    limit is open.
+
+  \item \textbf{The Higgs potential shape: derived.}
+    The $\DI$ landscape across the GL(4) fiber produces the Mexican Hat
+    potential for $15.9\%$ of Palatini directions.  The quartic coupling
+    $\lambda = 2\sqrt{3}/27$ matches the SM value to $0.85\%$.
+    \emph{Not yet: a derivation of the electroweak scale $v$ from
+    first principles.}
+
+  \item \textbf{The neutrino see-saw: conjecture.}
+    Three layers of suppression produce $m_\nu \times M_R = m_e^4/(9m_\tau^2)$
+    (holds to $0.1\%$), predicting $M_R \sim 49$~keV.
+    The Dodelson--Widrow mechanism overproduces this state by $\sim\!10^5$,
+    requiring either subdominant DM or an alternative production mechanism.
+
+  \item \textbf{Definition~\ref{def:holo} and ``emergent'':} formalised
+    with mutual information bounds (HR-1 through HR-3).
+
+  \item \textbf{Theorem~\ref{thm:inversion} (testability):} the inversion
+    arc now has three verified physical instances (Ricci flow, spin network
+    constraint hierarchy, and the Wheeler--DeWitt attractor).
+
+  \item \textbf{Torsion coupling hierarchy: theorem.}
+    All 15 generators of $\mathfrak{sl}(4,\mathbb{R})$ classified into
+    Tier~0 (zero coupling, 9~generators) and Tier~2 (coupling $32/9$,
+    6~generators).  The hierarchy 0:1:4 between unbroken, electroweak,
+    and colour-lepton generators follows from the $T_{B{-}L}$ eigenvalue
+    spectrum (Paper~A, \S 6.8).
+
+  \item \textbf{Bosonic vacuum energy cancellation: theorem.}
+    $\sum_{X \in \mathfrak{sl}(4)} \|[T_{B{-}L}, X]\|^2 \cdot K(X,X) = 0$
+    exactly, in rational arithmetic.  Reduces the cosmological constant
+    problem from $10^{121}$ to $\sim 10^{55}$ (Paper~A, \S 6.8).
+
+  \item \textbf{Corrections from the exploration session (updated).}
+    (a)~$\tan\beta = 1/2$ was a misidentification of the Yukawa ratio
+    $\tilde{h}/h \approx 2/3$ with the VEV ratio.
+    (b)~The W/Z torsion share is a conditional prediction,
+    not a theorem.  (c)~$\lambda = 2\sqrt{3}/27$ is an algebraic result
+    (Koide projection), not an RG fixed point.
+    (d)~The $\alpha_2$ cross-coupling
+    $\mathrm{Tr}(\Phi^\dagger T^A \Phi)\,\mathrm{Tr}(\Delta_R^\dagger T^A \Delta_R)$
+    vanishes identically in the minimal bi-doublet because
+    $T^A \Phi = 0$ for $\Phi \sim (1, 2, 2)$ (the bi-doublet is an
+    $\mathrm{SU}(4)$ singlet); $\alpha_2$ is therefore forbidden by
+    representation theory, not eliminated by choice.
+    (e)~The $\beta_c$ term is excluded at tree level in the minimal
+    model: extremization forces $\tan\beta = \pm 1$, which by the
+    no-go identity
+    $M_u - M_d = (h - \tilde{h})(\kappa_1 - \kappa_2)$ gives
+    $V_{\mathrm{CKM}} = I$, contradicting observed quark mixing.
+    Either $\beta_c = 0$ at tree level or the Higgs sector must be
+    extended (Branch~B with $\Sigma \sim (15, 1, 1)$).
+
+  \item \textbf{The irreducible boundary: 6 inputs in Branch~A
+    (minimal bi-doublet).}
+    The bracket algebra and consistency filters together fix the
+    Pati--Salam Higgs sector to:
+    \begin{itemize}[noitemsep]
+      \item Locked by Palatini: $\lambda_\Phi = 2\sqrt{3}/27$,
+        $2\rho_1 + \rho_2 = 16/9$, $g = 4/3$, $\tilde{h}/h = 2/3$,
+        $N_{\mathrm{gen}} = 3$.
+      \item Forbidden by representation theory: $\alpha_2 = 0$.
+      \item Excluded at tree level: $\beta_c = 0$ (else $V_{\mathrm{CKM}} = I$).
+      \item Free at tree level: $\rho_1$, $\alpha_1$.
+      \item Radiatively generated: $\tan\beta$ (value pending Coleman--Weinberg).
+      \item Calibrations: $v$, $v_R$.
+    \end{itemize}
+    Total inputs: 4 free + 2 calibrations = 6 (vs.\ $19{+}$ in the SM,
+    a reduction factor of $\sim 3.2\times$).  Whether one-loop
+    Coleman--Weinberg corrections fix $\tan\beta$ uniquely (reducing
+    the count to 5) is open.
+
+  \item \textbf{Three-layer self-pruning of the Higgs sector.}
+    The reduction from 5 quartic couplings to 2 free + 1 radiative
+    proceeds through three independent consistency filters: representation
+    theory ($\alpha_2 = 0$), vacuum extremization ($\beta_c$ forces
+    $\tan\beta = \pm 1$ if present), and flavor phenomenology
+    ($\kappa_1 = \kappa_2 \Rightarrow M_u = M_d$).  Each operates at a
+    different mathematical layer and constrains the others; this is
+    not a coincidence but a structural feature of the minimal
+    bi-doublet embedding.
+\end{enumerate}
+
+\section{The Inversion Arc as a Universal Principle}
+\label{sec:universal}
+
+The constraint--attractor cycle
+\[
+  \text{Constraint} \;\to\; \text{Solution} \;\to\;
+  \text{Dominance} \;\to\; \text{Inversion} \;\to\;
+  \text{New Constraint}
+\]
+is instantiated across every domain touched by the ACS framework.
+Table~\ref{tab:inversion-universal} maps each domain to its specific
+realisation of the cycle, with the computational verification
+from~\cite{Wallace2026a} indicated where available.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Domain & Constraint & Solution & Inversion & New constraint \\
+\midrule
+Gauge theory & $T^a = 0$ (torsion-free) & Activate torsion &
+  Chiral modes & $\mathfrak{su}(3)$ confinement \\
+Quantum gravity & $\hat{H}\Psi = 0$ (WdW) & $\hbar$ corrections &
+  Lindblad flow & Physical Hilbert space \\
+Geometry & Curved manifold & Ricci flow & $41\times$ reduction &
+  Einstein equation \\
+Riemann zeros & $\sigma = \tfrac{1}{2}$ (RH) & Off-critical zeros &
+  $\mathcal{S}(N,X) \to \infty$ & Stationarity restored \\
+Higgs sector & $V'(\phi) = 0$ & Radial perturbation &
+  Sombrero trough & VEV $= v$ \\
+\bottomrule
+\end{tabular}
+\caption{The inversion arc across domains.  Each row instantiates the
+same cycle: a constraint generates a solution; the solution becomes
+dominant; dominance inverts the information asymmetry; the inverted
+system becomes a new constraint.  The first three rows have
+computational verification in~\cite{Wallace2026a}.}
+\label{tab:inversion-universal}
+\end{table}
+
+The universality of this cycle is not merely an analogy but a structural
+consequence of the BCH--TE morphism: any system with codependent
+Form and Function and non-zero bracket $[f, g] \neq 0$ will exhibit
+sign reversal of $\DI$ under role exchange (Theorem~\ref{thm:inversion}).
+The cycle terminates at $\DI = 0$ attractors: confinement in gauge
+theory, $\ker(\hat{H})$ in quantum gravity, stationarity in number
+theory, the VEV in the Higgs sector.
+
+%% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+
+\section{Historical Precursors: Newton, Russell, and Mersenne}
+\label{sec:history}
+
+The ACS framework has unexpected antecedents in three historical
+observations, each of which maps precisely onto the mathematical structure.
+
+\subsection{Newton's colour wheel and the su(3) singlet}
+
+In the \textit{Opticks} (1704), Newton arranged the visible spectrum on a
+circle and observed that combining three primary colours (red, green, blue)
+produces white light.  In the ACS framework:
+\begin{itemize}[noitemsep]
+  \item The three primary colours $\leftrightarrow$ the three weights of the
+    fundamental representation of $\mathfrak{su}(3)$, separated by $120^\circ$
+    in the Cartan weight diagram;
+  \item White $=$ R $+$ G $+$ B $\leftrightarrow$ the colour singlet
+    ($\DI = 0$, confinement);
+  \item Newton's colour wheel IS the $\mathfrak{su}(3)$ weight diagram,
+    topologically.
+\end{itemize}
+The identification is not metaphorical: QCD colour charge is named after
+optical colour precisely because the combinatorics match.  The ACS recovers
+both from the same structure --- the Palatini bracket on GL(4).
+
+\subsection{Russell's wavelength spiral and atomic octaves}
+
+In 1867, Alexander Reina Russell proposed a wavelength-based spiral
+arrangement of the elements, predating Mendeleev's periodic table.
+Russell's key observation: chemical periodicity has an \emph{octave}
+structure, with noble gases as the ``silent'' nodes.
+
+In the ACS framework:
+\begin{itemize}[noitemsep]
+  \item Shell capacities $2n^2$ (2, 8, 18, 32) arise from $\mathrm{SO}(3)$
+    representation theory: $\sum_{l=0}^{n-1} (2l+1) = n^2$, doubled for spin;
+  \item Noble gases ($\DI = 0$) are the ACS \emph{attractors} --- closed-shell
+    configurations where the electron Form and nuclear Function are in
+    perfect information balance;
+  \item Chemical reactivity ($\DI \neq 0$) is the departure from the attractor;
+  \item Russell's spiral IS the ACS layered resolution: each ``octave'' is
+    one BCH order of the atomic Hamiltonian, with the noble gas at its
+    $\DI = 0$ fixed point.
+\end{itemize}
+
+\subsection{Dimensional devolution}
+
+The ACS framework inverts the traditional micro-to-macro construction.
+The fundamental object is the full $\mathfrak{sl}(4)$ fiber (15~dimensions);
+particles are \emph{projections} onto our $3{+}1$D observation space.
+The compression sequence
+\[
+  \mathfrak{sl}(4)\,[15\mathrm{D}] \to \mathfrak{su}(3)\,[8\mathrm{D}]
+  \to \mathrm{Cartan}\,[2\mathrm{D}] \to \mathrm{singlet}\,[0\mathrm{D}]
+\]
+has been verified computationally: the Cartan projection kills all
+off-diagonal structure exactly ($\max|M_{ij}| = 0.000000$ for $i \neq j$).
+A perfectly ordered geodesic on $T^{15}$ has autocorrelation $0.95$ in 15D
+but only $0.23$ when projected to 3D.  What we perceive as quantum
+randomness is the resolution bias of low-dimensional sampling.
+
+%% ─────────────────────────────────────────────────────────────────────────────
+
+
+\section{The Banach--Tarski Paradox as a Geometric ACS}
+\label{sec:BT}
+
+The Banach–Tarski paradox is the ultimate mathematical manifestation of a non‑commutative
+system generating emergent volume.  One takes a solid ball in $\mathbb{R}^3$, partitions it
+into five pieces, and reassembles them using rotations and translations to obtain two
+identical copies of the original ball.  The mechanism relies entirely on the fact that
+the rotation group $SO(3)$ contains a free subgroup on two generators $a$ and $b$.
+These generators do not commute: $ab \neq ba$.  The set of all words in $a$ and $b$ forms
+an infinite binary tree; each distinct sequence gives a distinct orientation.
+The exponential growth of words ($2^n$ words of length $n$) is what allows a single piece
+to be “unrolled” to cover the whole ball.
+
+Mapping this to the ACS:
+\begin{itemize}[noitemsep]
+  \item \textbf{Form} and \textbf{Function} are the two rotation generators $a$ and $b$.
+  \item The \textbf{2nd‑order bracket} $[a,b] \neq 0$ is exactly the non‑commutativity that
+    creates the free group.
+  \item The \textbf{3rd‑order holonomy} is the irreducible residue of the closed loop
+    $a b a^{-1} b^{-1}$ etc. — the fact that no finite combination of generators returns
+    to the identity unless it is trivial.  This is the source of the paradoxical decomposition.
+  \item The \textbf{emergent volume} is the extra measure (the second ball) generated by
+    the non‑commutative operations.  In ACS language, the information asymmetry $\DI$
+    measures precisely this geometric defect: the failure of the flow to close under
+    composition of the two generators.
+\end{itemize}
+
+Thus Banach--Tarski serves as a concrete mathematical illustration of the ACS
+mechanism, where the fields are rotation operators and the measure is the Lebesgue
+measure on the ball.  The paradox shows that when $[f,g] \neq 0$, the system can
+create new phase-space volume, and $\DI$ provides a quantitative measure of this
+non-closure across the other domains considered here.
+
+%% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{thebibliography}{99}
+\bibitem{Wallace2026a}
+B.~Wallace,
+\textit{Colour from Gravity: SU(3) as a Closure Attractor in the Palatini Bracket},
+Preprint TR-2026-FF06a (2026).
+
+\bibitem{Wallace2026b}
+B.~Wallace,
+\textit{Information Asymmetry and the Riemann Spectral ACS},
+Preprint TR-2026-FF06b (2026).
+
+\bibitem{Zamolodchikov1986}
+A.~B.~Zamolodchikov,
+\textit{Irreversibility of the flux of the renormalization group in a 2D field theory},
+JETP Letters \textbf{43}(12), 730--732 (1986).
+
+\bibitem{KomargodskiSchwimmer2011}
+Z.~Komargodski and A.~Schwimmer,
+\textit{On renormalization group flows in four dimensions},
+Journal of High Energy Physics \textbf{2011}(12), 099 (2011).
+
+\bibitem{Connelly1996}
+R.~Connelly and W.~Whiteley,
+\textit{Second-order rigidity and prestress stability for tensegrity frameworks},
+SIAM Journal on Discrete Mathematics \textbf{9}(3), 453--491 (1996).
+
+\bibitem{Jacobson1979}
+N.~Jacobson,
+\textit{Lie Algebras},
+Dover Publications, New York (1979).
+
+\bibitem{Bourbaki1989}
+N.~Bourbaki,
+\textit{Lie Groups and Lie Algebras: Chapters 1--3},
+Springer-Verlag, Berlin (1989).
+
+\bibitem{MaldacenaSusskind2013}
+J.~Maldacena and L.~Susskind,
+\textit{Cool horizons for entangled black holes},
+Fortschritte der Physik \textbf{61}(9), 781--811 (2013).
+
+\bibitem{RyuTakayanagi2006}
+S.~Ryu and T.~Takayanagi,
+\textit{Holographic derivation of entanglement entropy from AdS/CFT},
+Physical Review Letters \textbf{96}(18), 181602 (2006).
+
+\bibitem{Lakatos1976}
+I.~Lakatos,
+\textit{Proofs and Refutations: The Logic of Mathematical Discovery},
+Cambridge University Press, Cambridge (1976).
+
+\bibitem{WallaceN2}
+B.~Wallace,
+\textit{Grading Selection from Adjoint Spectral Activity
+in $\mathfrak{sl}(n,\mathbb{R})$},
+Technical Note TR-2026-FF06-N2 (2026).
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,211 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small The Relational Representation Principle}
+\fancyhead[R]{\small TR-2026-FF06h}
+\fancyfoot[C]{\thepage}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{observation}{Observation}
+\newtheorem{principle}{Principle}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{When a Number Lies:\\
+The Relational Representation Principle and Its Limits}\\[4pt]
+\large A study of when structural representation beats scalar abstraction}
+\author{B.\ Wallace \quad (TensorRent)\\
+\small with computational verification by Claude (Anthropic)}
+\date{\small TR-2026-FF06h \ ---\ Companion to FF06a--g \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate and test a single principle: many quantities that computation abstracts to one large scalar are
+in fact lossy projections of an exact underlying \emph{relation}, and computing in the relation is more
+accurate, sometimes more efficient, and occasionally the only faithful option. We state the principle,
+give a representation that realizes it for multiplicative structure (numbers as boxes of prime sides), and
+subject it to an adversarial gauntlet across roughly a dozen problems in number theory, combinatorics,
+linear algebra, statistical mechanics, and social choice. The principle resolves into a sharp, predictable
+law: relational representation wins exactly when the scalar is a lossy-to-impossible projection of an exact
+relation that is a \emph{product} (overflow), a \emph{ratio} (cancellation), or a \emph{non-transitive
+graph} (no scalar exists); it ties or loses when the scalar is the datum itself, when the relation is
+additive, or when an existing method already avoids forming the scalar. We characterize the limits
+explicitly. The fundamental wall is addition: a sum destroys multiplicative structure and admits no shape,
+proven by direct example. The efficiency claim is sharply bounded: against a compiled big-integer the
+relational form does \emph{not} win on speed even at 39{,}000-bit products --- its advantage is overflow
+avoidance, exactness, and impossibility, not arithmetic throughput. The strongest instance is non-transitive:
+when preferences cycle (Condorcet), \emph{every} scalar ranking provably contradicts the majority relation,
+and the cyclicity persists at scale (about $48\%$ of $1001$-voter, five-candidate electorates), so the
+impossibility is structural rather than a small-sample artifact. We provide a verified reference engine, a
+$10^{80}$-scale verified-optimal structure search as the headline efficiency instance, and a complete record
+of the negative results --- including four architecture-integration hypotheses falsified against live source
+and two performance hypotheses falsified against measurement --- because the boundary is the contribution.
+\end{abstract}
+
+\section{The principle}
+
+\begin{principle}[Relational over scalar]
+Let a computation produce a scalar $s$ that is a function of an underlying structured object $R$ (a product,
+a ratio, a graph). If $s$ is a lossy or non-invertible projection of $R$, then computing the desired answer
+directly on $R$ is more accurate, and often more tractable, than forming $s$ and operating on it.
+\end{principle}
+
+The claim is not that scalars are bad. It is that some scalars are \emph{shadows}: the magnitude lives in the
+projection, not the object (a $10^{80}$ integer has a small description as an exponent vector; a partition
+function with $300$ digits is a short product over modes). When the shadow is what breaks --- overflow,
+underflow, catastrophic cancellation, or the outright nonexistence of a faithful scalar --- the object was
+the thing to keep. This study asks where that is true, where it is false, and what law separates the two.
+
+\section{The representation and its verification}
+
+\begin{definition}[Shape]
+A \emph{shape} encodes a positive integer's multiplicative structure as a finite map $\{p_i:e_i\}$ from
+prime sides to positive exponents, with volume $\prod p_i^{e_i}$. Multiplicative questions become geometric:
+multiply $=$ merge, divisibility $=$ containment, $\gcd/\mathrm{lcm}=$ common/enclosing box, primality $=$
+atomic box. The reference engine is $91$ lines; all twelve operations are verified exact against integer
+ground truth (seed \texttt{20260423}). The single boundary is addition, handled by an explicit, flagged exit
+to value-space.
+\end{definition}
+
+This is the multiplicative realization of the principle. Non-transitive relations require a second
+realization --- a directed dominance graph --- developed in \S5.
+
+\section{The gauntlet: where the principle holds}
+
+Each candidate was raced against the \emph{smart} standard method and anchored against ground truth. Results
+are graded HIT (relation wins), SPLIT (the multiplicative part wins, the additive part is the wall),
+DOWNGRADED (an existing method already wins), or FALSE FIT (no hidden relation).
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+domain / problem & grade & mechanism \\
+\midrule
+non-transitive preference cycles & \textbf{HIT (necessity)} & no scalar ranking can exist \\
+highly composite / superabundant search & \textbf{HIT} & exponent-space search; verified-optimal to $10^{80}$ \\
+concentrated modular products & \textbf{HIT} & $K/D$ collapse; logs inapplicable to mod \\
+exact multiplicities $W=N!/\prod n_i!$ & \textbf{HIT} & logs destroy the integer; relation keeps it \\
+lattice index / SNF divisor product & \textbf{HIT} & overflows as scalar; exact as relation \\
+partition-function / free-energy ratios & \textbf{HIT} & $Z$ overflows; ratio exact in factor-relation \\
+eigenvalue-product determinant & SPLIT & $\det=$ product (hit); trace, char-poly $=$ sums (wall) \\
+multiplicative-function families & \textbf{HIT} & whole family free from one held shape \\
+content fingerprint & SPLIT & multiplicative: hit; general data: needs a hash \\
+probability products & DOWNGRADED & log-space floats already avoid underflow \\
+exact rational products & DOWNGRADED & compiled \texttt{Fraction} gcd beats dict merge \\
+measured continuous data (temperatures, fluxes) & FALSE FIT & no hidden relation; the scalar is the datum \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{observation}[The headline efficiency instance, verified-optimal]
+Searching directly in exponent space for the integer $n\le N$ maximizing the divisor count $d(n)$ never
+forms $n$. An exact branch-and-bound with a \emph{provably admissible} upper bound (budget all remaining
+log-room on the cheapest prime, each unit buying at most a factor of two) computes the true maximum out to
+$N=10^{80}$ in tens of seconds, sixty-two orders of magnitude past the $\sim 10^{18}$ wall of integer
+enumeration. It is anchored to brute force at $N\le 60,840,720720,2162160$ ($d=12,32,240,320$), all exact.
+Two earlier versions were \emph{falsified} en route and are retained in the record: a greedy heuristic
+(suboptimal, failed the anchor) and a tighter bound that was not admissible (pruned true optima, returned
+wrong answers). The verified-optimal version is the one of record.
+\end{observation}
+
+\section{The limits (the core contribution)}
+
+A principle without a boundary is a slogan. We pushed to failure and characterized the edge.
+
+\paragraph{The wall: addition.} A sum destroys multiplicative structure and has no shape: $360+84=444=
+2^2\cdot 3\cdot 37$ shares no factor structure with either summand. No relational representation crosses
+this; it is the fundamental limit, and it reappears in every SPLIT result as the additive component
+(trace, characteristic-polynomial coefficients, determinant-as-a-sum).
+
+\paragraph{The efficiency bound.} The principle is \emph{not} an arithmetic accelerator. Forming a product of
+$k$ structured factors as a compiled big integer beat the relational representation at every size tested,
+through $k=10^4$ ($\sim 39{,}000$ bits). The relational advantage is categorical, not throughput: it avoids
+overflow/underflow, preserves exactness, and represents the impossible --- it does not multiply faster.
+
+\paragraph{The requirement.} The principle needs an \emph{exact} underlying relation. Measured continuous
+data (a temperature of $2.725$) has no factor structure and no relation to keep; the scalar is the datum and
+flattening is correct. Absent an exact relation, the principle does not apply.
+
+\paragraph{The worth-of-exactness bound.} Relational exactness costs time. It is worth paying only when the
+question is itself exact or discrete --- modular arithmetic (no approximation exists), exact ratios near
+unity (where log-space error would swamp the signal), impossibility cases. When floating tolerance suffices
+(most of physics and machine learning), existing methods win and the principle is a refinement at best.
+
+\begin{theorem}[Boundary law]
+Relational representation strictly improves on scalar abstraction if and only if (i) an exact underlying
+relation exists, (ii) it is a product, a ratio, or a non-transitive graph rather than a sum, and (iii) the
+scalar projection breaks (overflow, underflow, cancellation, or nonexistence) or the question is exact and
+the scalar destroys needed structure. Otherwise scalar abstraction is correct or already optimally served.
+\end{theorem}
+
+This is stated as the organizing law of the study; (i)--(iii) are each witnessed by HITs and each violation
+by a DOWNGRADED or FALSE-FIT or SEAM result above. It is an empirical-structural characterization, not a
+formal theorem in the proof-theoretic sense.
+
+\section{The strongest instance: when no number can exist}
+
+The deepest form of the principle is not lossiness but impossibility.
+
+\begin{theorem}[Scalar abstraction is impossible under cycles]
+If the pairwise majority relation on candidates contains a cycle $A\!\succ\!B\!\succ\!C\!\succ\!A$, then every
+total order (every scalar ranking) contradicts at least one majority verdict. The relation carries
+information no scalar can hold.
+\end{theorem}
+
+\begin{proof}[Verification]
+By exhaustive check over all $n!$ rankings on the Condorcet paradox instance, the minimum number of
+contradicted majority edges is one, not zero; containment/order is transitive while the majority relation is
+not, so no order reproduces it. This is the social-choice instance of the same transitivity obstruction that
+forbids encoding rock-paper-scissors as box containment (a partial order cannot represent a cycle).
+\end{proof}
+
+\begin{observation}[Structural, not small-sample]
+Cyclicity persists and grows with the number of options and does not wash out with electorate size:
+measured rates are about $7\%,43\%,78\%,99\%$ of random electorates for $3,5,7,10$ candidates, and about
+$48\%$ at $1001$ voters with five candidates. The impossibility is a structural feature of preference
+aggregation, not an artifact of few voters.
+\end{observation}
+
+This places the principle's strongest claim --- ``some objects cannot be a number, and forcing them loses
+truth'' --- on a foundational result (Arrow/Condorcet) rather than on any benchmark.
+
+\section{Negative results retained}
+
+Per the program's discipline, falsifications are first-class outputs. Beyond the two search heuristics
+falsified in \S3, this principle's integration into the AISO/OmniForge architecture was tested against live
+source and falsified four times: the multiplicative-fit of the BRA charge (the real charge composes
+additively by table-sum, confirmed from the kernel whitepaper); a dual-engine geometric router (the live
+constraints are ordinal thresholds and the live relation is transitive --- no cycles --- confirmed against
+the routing/CDCL source); and trust/Merkle layers (additive and hash-destroyed respectively). The geometry
+engines are real, verified, standalone capabilities; they are not that architecture's substrate. The clean
+structural resemblance was, in each case, the warning sign, and the source was the arbiter.
+
+\section{Scope and honesty}
+
+The mathematics invoked is classical (fundamental theorem of arithmetic, Legendre's formula, Robin's
+criterion connecting superabundant numbers to the Riemann Hypothesis, Arrow/Condorcet, the Hadamard and
+Euler products). The contribution is not a theorem but a \emph{characterized representational principle}
+with a predictive boundary, witnessed across domains and bounded by explicit limits. The applied target is
+accuracy and tractability where scalar abstraction fails; for that target, the principle's established
+mathematical components are an asset. The principle does not touch primality or prime-counting (the factoring
+wall blocks building a prime's shape), does not prove the Riemann Hypothesis (a categorical gap between finite
+multiplicative bookkeeping and the global analytic behavior of an infinite object), and is not an arithmetic
+accelerator. What it is: a sharp, testable lens --- \emph{is this scalar hiding a product, a ratio, or a
+non-transitive graph that breaks when formed, or is it the truth?} --- with a verified hit set, a verified
+miss set, and a fundamental wall at addition.
+
+\vspace{1em}\noindent\rule{\linewidth}{0.4pt}\\
+\small Companion to TR-2026-FF06a--g. Reference engine, dominance engine, search code, and the domain test
+harnesses accompany this study. SIP License v1.1. Seed \texttt{20260423}.
+
+\end{document}

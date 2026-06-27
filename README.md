@@ -46,6 +46,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │       └── data_zeros/               # Extracted zeros and generation scripts
 │
 ├── docs/                             # Framework documentation
+│   ├── ACS_Technical_Whitepaper.md   # Consolidated mathematical/physical whitepaper
 │   ├── ACS_Master_Index.md           # Page/line index for all manuscripts
 │   ├── ACS_Corpus_Map.md             # Logical map of the theoretical claims
 │   ├── Elimination_Ledger.md         # Detailed record of the 8 falsified claims

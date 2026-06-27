@@ -170,7 +170,7 @@ At q = 0, only cross-class transitions are possible (gap = 2 or 4). At q ≥ 1, 
 
 ## 7. Connection to the ⟨2,3⟩ Lattice
 
-The modulo 6 structure is the ⟨2,3⟩ multiplicative lattice acting on the integers. All dimensionless ratios in the Pati-Salam gauge construction from the Palatini bracket [e, ω] on sl(4, ℝ) belong to this same lattice (TR-2026-FF06-N1). The hexagonal clock is the prime-number-theoretic manifestation of the algebraic structure that governs the gauge sector.
+The modulo 6 structure is the ⟨2,3⟩ multiplicative lattice acting on the integers. All dimensionless ratios in the Pati-Salam gauge construction from the Palatini bracket [e, ω] on sl(4, ℝ) belong to this same lattice (Note N1). The hexagonal clock is the prime-number-theoretic manifestation of the algebraic structure that governs the gauge sector.
 
 The three gap classes (r = 0, 2, 4) correspond to the three independent directions in the ⟨2,3⟩ lattice: a full ⟨2,3⟩ cycle (r=0), a ⟨2⟩ step (r=2), and a ⟨2²⟩ step (r=4). The 3-phase power delivery (Anomaly C) reflects the fact that these three directions maintain constant coverage of the lattice under the sieving action of primes 2 and 3.
 
@@ -184,7 +184,7 @@ However, as argued in §4.3, pair-correlation corrections cannot flip the sign o
 
 Extension to 10⁸ or 10⁹ primes would test whether the three anomalies persist, strengthen, or attenuate at larger scales. The variance floor's stability across window sizes (W = 10 to W = 500) suggests persistence, but this requires confirmation.
 
-A derivation of the specific quantitative values (29% variance suppression, 1.94× pair enhancement, 3% spring-back rate per rotation) from the Wronskian non-vanishing condition of the Riemann spectral structure (TR-2026-FF06b) would establish a direct link between the prime gear clock and the zeta zero spectrum. This connection, if it exists, would constitute a novel structural characterization of the prime distribution.
+A derivation of the specific quantitative values (29% variance suppression, 1.94× pair enhancement, 3% spring-back rate per rotation) from the Wronskian non-vanishing condition of the Riemann spectral structure (Paper B) would establish a direct link between the prime gear clock and the zeta zero spectrum. This connection, if it exists, would constitute a novel structural characterization of the prime distribution.
 
 ---
 

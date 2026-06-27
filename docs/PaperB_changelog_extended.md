@@ -1,4 +1,4 @@
-# TR-2026-FF06b Paper B — Extension Changelog
+# Paper B (Riemann Spectral ACS) — Extension Changelog
 
 **From**: v2M (17 pages, May 2026)
 **To**: extended (26 pages, May 2026)
@@ -99,8 +99,8 @@ Theoretical content:
 
 | File | Description |
 |---|---|
-| TR-2026-FF06b_Riemann_Spectral_ACS_extended.tex | Full LaTeX source, 26-page output |
-| TR-2026-FF06b_Riemann_Spectral_ACS_extended.pdf | Compiled output |
+| Riemann_Spectral_ACS_extended.tex | Full LaTeX source, 26-page output |
+| Riemann_Spectral_ACS_extended.pdf | Compiled output |
 | tartini_synthesis/ | R₃, prime-power, Fourier-dual figures + paragraph |
 | l_function_test/ | L(s, χ₄) test data + figure |
 | l_function_arc/ | Cross-correlation + Dedekind figures + synthesis |

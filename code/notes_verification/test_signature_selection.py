@@ -2,7 +2,7 @@
 Signature Selection from Adjoint Spectral Structure in sl(4,R)
 ==============================================================
 
-Companion code to TR-2026-FF06-N2.
+Companion code to Note N2 (Signature Selection).
 
 Verifies: for any even positive spectral functional f, the graded
 functional S_f[P] = Tr(P_ad · f(ad_T)) is uniquely minimised at

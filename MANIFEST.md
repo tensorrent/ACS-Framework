@@ -20,15 +20,15 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 
 | File | Paper | Notes |
 |------|-------|-------|
-| core_trilogy/TR-2026-FF06a_Colour_from_Gravity | A | Pati-Salam SU(4)×SU(2)×SU(2) from Palatini bracket on sl(4,ℝ). (A figure-rich PDF variant `_5.pdf` exists in the project dir; the canonical tex+pdf pair is here.) |
-| core_trilogy/TR-2026-FF06b_Riemann_Spectral_ACS_extended | B (May 26) | deepest/longest form |
-| core_trilogy/Spectral_Witness_Survival_TR-2026-FF06b | B (May 30) | retitled, tightened — **choose one as canonical** |
-| core_trilogy/TR-2026-FF06c_Inversion_Arc | C | holographic resolution / ER=EPR algebraic |
-| notes/TR-2026-FF06-N1_Pythagorean_Structure | N1 | |
-| notes/TR-2026-FF06-N2_Signature_Selection | N2 | grading-selection theorem |
-| notes/TR-2026-FF06-N3_Transition_Operator | N3 | prime-gap transition operator |
-| methodology/Form_Function_Shuffle_Knife_TR-2026-FF06e | FF06e | the discriminant itself |
-| later_FF06_series/ (f, g, h, i, J, K, Σ, K1) | — | June methodology/geometry thread; documents only |
+| core_trilogy/Colour_from_Gravity | A | Pati-Salam SU(4)×SU(2)×SU(2) from Palatini bracket on sl(4,ℝ) |
+| core_trilogy/Riemann_Spectral_ACS_extended | B (May 26) | deepest/longest form |
+| core_trilogy/Spectral_Witness_Survival | B' (May 30) | retitled, tightened |
+| core_trilogy/Inversion_Arc | C | holographic resolution / ER=EPR algebraic |
+| notes/Pythagorean_Structure | N1 | |
+| notes/Signature_Selection | N2 | grading-selection theorem |
+| notes/Transition_Operator | N3 | prime-gap transition operator |
+| methodology/Form_Function_Shuffle_Knife | — | the discriminant itself |
+| later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
 ---
 
@@ -91,7 +91,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 ---
 
 ## Falsified claims ledger
-`docs/TR-2026-FF06-KILL01_Elimination_Ledger.md` — the eight explicitly falsified claims
+`docs/Elimination_Ledger.md` — the eight explicitly falsified claims
 (ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
 chirality, Route A/C signature selection, CW 6→5). First-class results.
 

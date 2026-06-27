@@ -1,4 +1,4 @@
-# Paper C (TR-2026-FF06c) — Edit Changelog
+# Paper C (The Inversion Arc) — Edit Changelog
 
 **Date:** April 25, 2026
 **Source version:** April 17, 2026 (10 pages, 734 lines TeX)

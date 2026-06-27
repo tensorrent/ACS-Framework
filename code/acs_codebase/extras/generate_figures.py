@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate all figures for TR-2026-FF06"""
+"""Generate all figures for the ACS Framework"""
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt

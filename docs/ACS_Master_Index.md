@@ -9,9 +9,9 @@
 
 | Document | Title | Pages | Lines | Status |
 |---|---|---|---|---|
-| **TR-2026-FF06a** | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 | 3142 | Final |
-| **TR-2026-FF06b** | Information Asymmetry and the Riemann Spectral ACS | 15 | 1151 | Final |
-| **TR-2026-FF06c** | The Inversion Arc: Holographic Resolution in ACS | 13 | 1056 | Final |
+| **Paper A** | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 | 3142 | Final |
+| **Paper B** | Information Asymmetry and the Riemann Spectral ACS | 15 | 1151 | Final |
+| **Paper C** | The Inversion Arc: Holographic Resolution in ACS | 13 | 1056 | Final |
 
 **Trilogy total: 72 pages, 5349 lines TeX**
 
@@ -19,8 +19,8 @@
 
 | Document | Title | Pages | Lines | Status |
 |---|---|---|---|---|
-| **TR-2026-FF06-N1** | Pythagorean Arithmetic Structure in Minimal PS | 5 | 384 | Final |
-| **TR-2026-FF06-N2** | Metric Signature as Minimiser of Adjoint Spectral Activity | 8 | 682 | Final |
+| **Note N1** | Pythagorean Arithmetic Structure in Minimal PS | 5 | 384 | Final |
+| **Note N2** | Metric Signature as Minimiser of Adjoint Spectral Activity | 8 | 682 | Final |
 
 **Notes total: 13 pages, 1066 lines TeX**
 

@@ -2,7 +2,7 @@
 Lattice imprint test for the broken-phase Standard Model spectrum
 ==================================================================
 
-Companion to TR-2026-FF06-N1_Pythagorean_Structure.
+Companion to Note N1 (Pythagorean Structure).
 
 Tests whether the broken-phase Standard Model masses and CKM mixing
 preserve any detectable imprint of the <2, 3> arithmetic lattice that

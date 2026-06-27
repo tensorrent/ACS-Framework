@@ -1993,7 +1993,7 @@ print(f"""
 """
 ACS FRAMEWORK — COMPLETE VERIFICATION SUITE
 =============================================
-TR-2026-FF06: "Form, Function, and the Asymmetry That Generates Both"
+ACS Framework: "Form, Function, and the Asymmetry That Generates Both"
 
 Every computational claim in the paper is verified below.
 Run with: python3 acs_verify_all.py
@@ -2608,7 +2608,7 @@ else:
     print(f"\n  ⚠ {FAIL} FAILURES — investigate before submission")
 
 print(f"\n{'═'*70}")
-print(f"  Every claim in TR-2026-FF06 that has a computational component")
+print(f"  Every claim in the ACS Framework that has a computational component")
 print(f"  is tested above. Run this script to reproduce all results.")
 print(f"{'═'*70}")
 
@@ -7343,7 +7343,7 @@ print(f"""
 # ======================================================================
 
 #!/usr/bin/env python3
-"""Generate all figures for TR-2026-FF06"""
+"""Generate all figures for the ACS Framework"""
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt

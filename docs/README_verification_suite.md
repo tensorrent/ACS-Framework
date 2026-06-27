@@ -1,5 +1,5 @@
 # ACS Verification Suite — 72 Scripts
-## TR-2026-FF06a/b/c (Wallace, 2026)
+## ACS Papers A/B/C (Wallace, 2026)
 
 All scripts require Python 3.8+ with NumPy and SciPy.
 SymPy is required for the exact-arithmetic scripts.

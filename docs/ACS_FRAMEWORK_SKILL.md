@@ -56,11 +56,11 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 
 | ID | Title | Pages |
 |----|-------|------:|
-| TR-2026-FF06a | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 |
-| TR-2026-FF06b | Information Asymmetry and the Riemann Spectral ACS | 15 |
-| TR-2026-FF06c | The Inversion Arc: Holographic Resolution in ACS | 14 |
-| TR-2026-FF06-N1 | Pythagorean Arithmetic Structure | 5 |
-| TR-2026-FF06-N2 | Grading Selection from Adjoint Spectral Activity | 9 |
+| Paper A | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 |
+| Paper B | Information Asymmetry and the Riemann Spectral ACS | 15 |
+| Paper C | The Inversion Arc: Holographic Resolution in ACS | 14 |
+| Note N1 | Pythagorean Arithmetic Structure | 5 |
+| Note N2 | Grading Selection from Adjoint Spectral Activity | 9 |
 
 **Total: 87 pages, ~6500 lines TeX. Zero undefined citations across all documents.**
 
@@ -379,7 +379,7 @@ Never mix S\_f and S̃\_g without specifying which regime.
 
 ```bash
 # Compile all (3 passes for cross-refs)
-for d in papers/TR-2026-FF06*/; do
+for d in papers/core_trilogy/ papers/notes/ papers/methodology/ papers/later_FF06_series/; do
     cd "$d" && pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
     pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
     pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
@@ -387,7 +387,7 @@ for d in papers/TR-2026-FF06*/; do
 done
 
 # Citation check (should print nothing)
-for doc in papers/TR-2026-FF06*/main.tex; do
+for doc in papers/core_trilogy/*.tex papers/notes/*.tex; do
     cites=$(grep -oP '\\cite\{[^}]+\}' "$doc" | sed 's/\\cite{//;s/}//;s/,/\n/g' | sort -u)
     bibs=$(grep -oP '\\bibitem\{[^}]+\}' "$doc" | sed 's/\\bibitem{//;s/}//' | sort -u)
     for c in $cites; do

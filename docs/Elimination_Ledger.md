@@ -1,4 +1,4 @@
-# TR-2026-FF06-KILL01 — Elimination Ledger
+# Elimination Ledger
 
 **Append-only.** Strip-mine discipline: rank targets by expected-space-collapsed
 per unit cost; weight toward kills aimed at our **own** load-bearing claims. A

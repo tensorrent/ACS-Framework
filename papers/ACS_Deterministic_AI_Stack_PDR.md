@@ -2,13 +2,13 @@
 title: "ACS Deterministic AI Stack — Preliminary Design Review"
 subtitle: "Architectural PDR and Technical Blueprint"
 author: "Bradley Wallace"
-docid: "TR-2026-FF06d"
+docid: "ACS-PDR-1.0"
 date: "April 2026"
 ---
 
 # ACS DETERMINISTIC AI STACK
 ## Preliminary Design Review & Technical Blueprint
-### Document ID: TR-2026-FF06d · Version 1.0 · April 2026
+### Document ID: ACS-PDR-1.0 · Version 1.0 · April 2026
 
 ---
 
@@ -601,7 +601,7 @@ checkpointing every 1024 entries. Integrity is verifiable offline.
 ### 6.1 The Constraint-Attractor Cycle
 
 The governance layer implements the inversion arc from Paper C
-(TR-2026-FF06c): every solution, once it satisfies the closure and
+(The Inversion Arc): every solution, once it satisfies the closure and
 information-balance criteria, is promoted to become a constraint for
 subsequent computations. This prevents drift and enforces cumulative
 consistency.
@@ -1066,7 +1066,7 @@ protocol from §5.3.
 - **Status.** Design review — open for technical critique
 - **Next review.** After Phase 0 exit criterion
 - **Author.** Bradley Wallace
-- **Document ID.** TR-2026-FF06d
+- **Document ID.** ACS-PDR-1.0
 
 ---
 

@@ -1,4 +1,4 @@
-# Paper A (TR-2026-FF06a) — Edit Changelog
+# Paper A (Colour from Gravity) — Edit Changelog
 
 **Date:** April 26, 2026
 **Source version:** April 17, 2026 (40 pages, 2860 lines TeX)

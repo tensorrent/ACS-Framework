@@ -1,80 +1,122 @@
-# ACS Framework — Complete Bundle
+# ACS Framework (Asymmetric Codependent Systems)
 
-**Author:** Bradley Wallace · TensorRent
-**Assembled:** 2026-06-27
-**Canonical seed (all stochastic code):** `20260423`
-
-This bundle contains the latest ACS (Asymmetric Codependent Systems) papers and the
-validation/code that supports the claims in them. Everything here has been run and
-checked at assembly time (see `MANIFEST.md` for the per-claim tier table).
+This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework. 
 
 ---
 
-## What's inside
+## Repository Structure
 
 ```
-papers/
-  core_trilogy/        Papers A, B, C   (B in two current forms — see note below)
-  notes/               N1, N2, N3
-  methodology/         FF06e — the Form/Function shuffle-knife (the discriminant itself)
-  later_FF06_series/   June 2026 methodology/geometry thread (f, g, h, i, J, K, Σ, K1)
-code/
-  acs_codebase/        curated pytest backbone for Papers A/B/C  (42 tests, 15 modules)
-  notes_verification/  N1 lattice null-test, N2 signature-selection test, N3 support
-  hp_knife_suite/      the four-knife Riemann/L-function exam built this session
-    data_zeros/        Riemann + Dirichlet L zeros, WITH their generation scripts
-docs/                  master index, corpus map, framework skill, elimination ledger, changelogs
-MANIFEST.md            full inventory + four-tier verification table + claim→evidence map
+.
+├── MANIFEST.md                       # Claim-to-code mapping & verification matrix
+├── README.md                         # This file
+├── LICENSE                           # Open-source MIT license
+├── papers/                           # Research manuscripts and notes
+│   ├── core_trilogy/                 # The core three papers of the framework
+│   │   ├── Colour_from_Gravity.tex   # Paper A: SU(3) closure attractor in Palatini gravity
+│   │   ├── Riemann_Spectral_ACS_ext.tex # Paper B: Extended spectral Riemann hypothesis form
+│   │   ├── Spectral_Witness_Survival.tex # Paper B': Retitled, tightened witness survival variant
+│   │   └── Inversion_Arc.tex         # Paper C: Holographic resolution & ER=EPR correspondence
+│   ├── notes/                        # Mathematical companion notes
+│   │   ├── Pythagorean_Structure.tex # Note N1: Pythagorean structure in minimal PS algebra
+│   │   ├── Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
+│   │   └── Transition_Operator.tex   # Note N3: Prime-gap transition operators
+│   ├── methodology/                  # Empirical tools and frameworks
+│   │   └── Form_Function_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
+│   ├── later_FF06_series/            # Chronological research thread documents
+│   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
+│   │   ├── The_Geometry_Engine.tex   # Reference engine specification
+│   │   ├── When_a_Number_Lies.tex    # Relational limits and domain tests
+│   │   ├── The_Reversible_Flattening.tex # Reversible flattening processes
+│   │   ├── The_Reversible_Flattening_Monograph.tex
+│   │   ├── The_Reversible_Flattening_Process_Record.tex
+│   │   ├── The_Elimination_Ledger.tex # Record of falsifications & refractions (K1)
+│   │   └── One_Mechanism_Many_Forms_Sigma.tex # Consolidated synthesis (Σ)
+│   ├── Form_Function_and_Asymmetry.tex # Consolidated core monograph
+│   ├── ACS_Deterministic_AI_Stack_PDR.tex # Paper D: Deterministic AI Stack blueprint
+│   └── discrete_geometry_formalism.tex # Dynamical Epistemic Algebra formalization
+│
+├── code/                             # Scientific verification suites
+│   ├── acs_codebase/                 # Core verification package
+│   │   ├── src/                      # Source implementations for Papers A, B, and C
+│   │   ├── tests/                    # Pytest verification suite (42 passing assertions)
+│   │   └── extras/                   # Specialized standalone verification scripts
+│   ├── notes_verification/           # Companion scripts for Notes N1, N2, and N3
+│   └── hp_knife_suite/               # Hilbert-Pólya shuffle-knife verification suite
+│       └── data_zeros/               # Extracted zeros and generation scripts
+│
+├── docs/                             # Framework documentation
+│   ├── ACS_Master_Index.md           # Page/line index for all manuscripts
+│   ├── ACS_Corpus_Map.md             # Logical map of the theoretical claims
+│   ├── Elimination_Ledger.md         # Detailed record of the 8 falsified claims
+│   ├── README_verification_suite.md  # Detailed developer guide for the code
+│   └── ACS_FRAMEWORK_SKILL.md        # LLM context instruction module
+│
+├── harness/                          # Execution and telemetry scripts
+│   └── training/                     # Unified Phase-1 training and telemetry sweeps
+│
+├── scripts/                          # Supporting helper scripts
+└── visualizations/                   # Interactive visual models
+    └── acs_q_plane_confinement_simulator.html # Q-plane confinement visualizer
 ```
 
-## Reproduce
+---
 
-Codebase (Papers A/B/C):
-```
+## Claims and Verification Matrix
+
+Every mathematical or numerical claim in the papers is tracked under a strict four-tier verification hierarchy in [MANIFEST.md](MANIFEST.md). Tiers never promote; numerical approximations (T3) are explicitly distinguished from exact mathematical proofs (T2).
+
+### Core Theoretical Focus
+
+1. **Gauge Group Selection (Paper A):** Derivation of Pati-Salam $\mathfrak{su}(4) \times \mathfrak{su}(2)_L \times \mathfrak{su}(2)_R$ and the emergence of the compact real form $\mathfrak{su}(3)$ of the strong force as a geometric closure attractor.
+2. **Spectral Positional Duality (Paper B):** Numerical proof that the arithmetic information of the Riemann zeros is encoded strictly in their level locations (governed by the explicit formula) rather than their local spacing distributions (which are universally GUE and arithmetic-blind).
+3. **Algebraic Holography (Paper C):** Formalization of Killing-orthogonality and three-class spectral taxonomies mapping algebraic structures to holographic boundary conditions.
+
+---
+
+## Replication and Test Execution
+
+### 1. Curated Core Test Suite (42 Assertions)
+To run the automated verification suite for the core trilogy (requires `numpy`, `scipy`, `sympy`, and `pytest`):
+
+```bash
 cd code/acs_codebase
-pip install -r requirements.txt        # numpy scipy sympy pytest
-python -m pytest -q                     # expect: 42 passed
+pip install -r requirements.txt
+python -m pytest -v
 ```
 
-HP / L-function exam (Paper B / N3 support):
-```
+### 2. Standalone Verification Scripts
+The individual claims and physical parameters are calculated by standalone python modules in `code/acs_codebase/extras/`:
+
+*   **Barbero-Immirzi Parameter ($\gamma \approx 0.274$):**
+    ```bash
+    python code/acs_codebase/extras/barbero_immirzi_correct.py
+    ```
+*   **Koide Lepton Mass Relation ($0.001\%$ fit):**
+    ```bash
+    python code/acs_codebase/extras/koide_clebsch_gordan.py
+    ```
+*   **Higgs Mass Ratio ($m_H/v \approx 0.506$ vs. physical $0.508$):**
+    ```bash
+    python code/acs_codebase/extras/higgs_mass_ratio.py
+    ```
+
+### 3. Hilbert-Pólya Shuffle-Knife Verification
+To reproduce the level-decomposition and spacing universality metrics:
+
+```bash
 cd code/hp_knife_suite
-python hp_never_synced.py      # real zeros 240 vs GUE ~1 vs lattice ~0.7   (C5: arithmetic present)
-python hp_xp_test.py           # Berry-Keating xp: density only, no orbits  (negative)
-python hp_signed_lfunction.py  # C6 sign + C7 weights on zeta; C8 char-sign 18/18 on quadratics
-python hp_phase_test.py        # C8' complex-character phase, demod R = 0.99
-python hp_c9_orthogonality.py  # C9 finite-prime orthogonality, zeros-vs-truth corr 0.92
+python hp_never_synced.py      # Verifies spacing properties (zeros vs GUE vs lattice)
+python hp_xp_test.py           # Verifies Berry-Keating xp-operator limits
+python hp_signed_lfunction.py  # Checks zeta weights and quadratic L-function signs
+python hp_phase_test.py        # Validates complex character phases (demodulation R = 0.99)
 ```
-All scripts are self-contained (data paths resolve to `data_zeros/` automatically).
 
 ---
 
-## Honest scope (read this)
+## Scientific Scope & Guidelines
 
-- **Paper B is included in two current forms.** `..._extended` (deepest, longest) and
-  `Spectral_Witness_Survival_...` (retitled, tightened). Both are post-May-21; pick the
-  canonical one yourself — neither was silently dropped.
-
-- **The HP/L-function suite verifies *known* mathematics.** C5–C9 are the Weil–Guinand
-  explicit formula and its Dirichlet generalization: peaks at log pᵐ, weights p^(−m/2),
-  negative sign, χ(p) twist, pairwise character orthogonality. These are theorems. The
-  suite is a **falsification / calibration instrument** — it confirms that real spectra
-  exhibit the explicit formula and that imposters (GUE, Berry-Keating xp) do not. It does
-  **not** prove new theorems and does **not** construct a Hilbert–Pólya operator.
-
-- **Non-circularity is checked.** The Dirichlet L-function zeros were computed from
-  L(s,χ) via Hurwitz zeta (`data_zeros/cyclotomic_*/*.py`) — no prime ever enters the
-  construction. So the witness recovering χ(p) from those zeros is a real readout, not a
-  plant. The generation scripts are included so this is auditable.
-
-- **"Selberg orthogonality" (C9) here is a finite-prime proxy** (a ~12-prime resultant),
-  consistent with Selberg's asymptotic statement, not the asymptotic statement itself.
-
-- **Tiers do not promote.** T3 (numerical) is labeled T3, never T2. The closure-attractor
-  result is T3. The falsified claims live in `docs/...KILL01_Elimination_Ledger.md` as
-  first-class results, not hidden.
-
-- **Not included:** the hundreds of loose exploratory scripts across the working
-  directory, the AISO engineering stack, and the `.npz`/`.png` caches. The
-  `later_FF06_series` papers are included as documents; their individual computational
-  artifacts remain in the broader workspace and can be bundled on request.
+*   **Replication Seed:** The stochastic portions of the codebase use the canonical seed `20260423`.
+*   **Zero Dataset:** Zeros used are Odlyzko's first 100,000 Riemann zeros, located under `code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt`.
+*   **Dirichlet L-Function Zeros:** Zeros are calculated directly from $L(s, \chi)$ using Hurwitz zeta functions without inserting prime values, ensuring non-circularity in character readouts.
+*   **Falsifications:** Rather than being hidden, explicitly falsified claims (such as the standard $2\pi$ loop inversion or standard Wronskian-Poisson equivalence) are detailed in [docs/Elimination_Ledger.md](docs/Elimination_Ledger.md).

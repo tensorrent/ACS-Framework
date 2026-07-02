@@ -20,6 +20,12 @@ The connection perturbation κ lives in the ANTISYMMETRIC part.
 This is NOT random — it's fixed by the physics.
 
 The question: do these specific directions give θ₀ = 12.73°?
+
+NOTE (derived negative, 2026-06-29): θ₀ is not fixable from this algebra at current spec.
+Leg 1: [h,ω] spans all sl(4) (gl4_asymmetry_map.py, rank=15). Leg 2: the physical selector
+Function=[k_dir,Form] (linearized-Einstein wave condition, below ~L334) annihilates the BCH
+hierarchy (L2/L3 degenerate) — no θ₀ extractable under it. See OVERCLAIM LEDGER entry
+theta0-not-derivable-from-algebra in theta0_derivation_suite.py.
 """
 
 import numpy as np
@@ -336,6 +342,8 @@ k_dir[2,2] = 1  # projection onto z-direction
 
 print("  Physical constraint: δω ~ ∂h (connection from metric derivative)")
 print("  In the algebra: Function = [k_direction, Form]")
+print("  StrickenBy{rule: derived-negative-component, reason: this selector annihilates BCH L2/L3;")
+print("    no theta0 extractable; load-bearing leg of theta0-not-derivable-from-algebra (T2)}")
 print("")
 
 # Apply the constraint: given Form = h, Function = [k, h]
@@ -397,10 +405,16 @@ if hits:
   BCH orders sets θ₀. The algebra constrains θ₀ to a specific
   distribution; the vacuum selects the exact value within it.
 
-  STATUS:
+  STATUS (sharpened derived negative — keep prior text):
     CONFIRMED: θ₀ depends on vacuum direction (not arbitrary)
     CONFIRMED: the algebra constrains θ₀ to a specific range
-    OPEN: the exact vacuum selection requires solving the
-          linearised Einstein equations at the Palatini scale,
-          which is the electroweak symmetry-breaking problem
+    OPEN (framework concession, upgraded): exact vacuum selection requires solving the
+          linearised Einstein equations at the Palatini scale — the EWSB problem
+    DERIVED NEGATIVE (T2): θ₀ not fixable from Palatini bracket algebra alone because:
+      (1) unconstrained [h,ω] spans ALL of sl(4) (dim 15) — algebra selects no direction
+          (gl4_asymmetry_map.py:341-345, Corollary 9.3, rank=15 machine-confirmed)
+      (2) physical selector Function=[k_dir,Form] ANNIHILATES BCH hierarchy (L2/L3 degenerate;
+          see Physical Constraint block above, ~L334-349) — no θ₀ under it
+      => vacuum selection requires EWSB-scale input EXTERNAL to gauge/gravity sector;
+         θ₀ is an EWSB output, not a Palatini-algebra derivation
 """)

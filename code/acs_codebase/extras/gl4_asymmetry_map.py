@@ -343,6 +343,9 @@ if rank_all == 15:
     print(f"generates ALL of sl(4). The SM cannot be selected by")
     print(f"the bracket alone — vacuum selection is REQUIRED.")
     print(f"This confirms Corollary 9.3.")
+    print(f"  StrickenBy{{rule: derived-negative-load-bearing, reason: rank=15 => algebra")
+    print(f"    selects NO direction; load-bearing leg of theta0-not-derivable-from-algebra")
+    print(f"    (T2 derived negative; see theta0_derivation_suite.py OVERCLAIM LEDGER)}}")
 elif rank_all < 15:
     print(f"CONCLUSION: Palatini constraints REDUCE the image!")
     print(f"dim(Im) = {rank_all} < 15 = dim(sl(4))")

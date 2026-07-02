@@ -2,9 +2,15 @@
 """
 THE KOIDE ANGLE RG FLOW: 11.57° → 12.73°
 ===========================================
-The bare geometric angle θ₀ = π/6 - arctan(1/3) = 11.57° at the GUT scale.
-The observed IR angle is 12.73°.
-Gap: 1.17°.
+NOTE: π/6 - arctan(1/3) = 11.57° is a NUMERICAL COINCIDENCE, not a bracket
+derivation. Origin: guess-and-check in bl_vev_projection.py (≈ L451–453),
+where "close!" was later promoted to "ACS prediction" here with no derivation
+in between. The π/6 = 30° has no geometric origin in the framework.
+StrickenBy{rule: overclaim-no-derivation, reason: promoted guess-and-check}
+Genuine derived content: arctan(1/3) = 18.43° (B-L VEV eigenvalue ratio).
+
+The candidate angle θ₀ = π/6 - arctan(1/3) = 11.57° vs observed IR 12.73°.
+Gap: 1.17° — but this gap is an artifact of the underived π/6 subtraction.
 
 This computation runs the Standard Model 1-loop RG equations for the
 charged lepton Yukawa couplings from M_GUT down to the IR, and extracts
@@ -210,7 +216,9 @@ print(f"\n── Results ──\n")
 theta0_IR = theta0_running[0]   # at M_Z
 theta0_UV = theta0_running[-1]  # at M_GUT
 
-# The bare geometric prediction
+# Candidate angle (numerical coincidence, NOT a bracket derivation;
+# see docstring StrickenBy note). arctan(1/3) is derived from B-L VEV;
+# π/6 subtraction is underived.
 theta0_bare = np.degrees(np.pi/6 - np.arctan(1/3))  # 11.565°
 
 print(f"  θ₀ at M_Z (IR):          {theta0_IR:.4f}°")
@@ -401,8 +409,8 @@ print(f"\n{'='*70}")
 print("FINAL RESULT")
 print(f"{'='*70}")
 print(f"""
-  BARE GEOMETRIC ANGLE (ACS prediction at Palatini scale):
-    θ₀_bare = π/6 - arctan(1/3) = {theta0_bare:.4f}°
+  CANDIDATE ANGLE (numerical coincidence, NOT derived — see docstring):
+    θ₀_candidate = π/6 - arctan(1/3) = {theta0_bare:.4f}°
     
   OBSERVED IR ANGLE (from charged lepton masses):
     θ₀_obs = 12.7328°

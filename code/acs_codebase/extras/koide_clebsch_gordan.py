@@ -4,7 +4,10 @@ FACE 1: THE KOIDE ANGLE FROM FIRST PRINCIPLES
 ================================================
 Point 1: Jacobi closes BCH at order 3 (proved)
 Point 2: Koide fits masses to su(3) weights at 0.001% (confirmed)
-Point 3: THIS COMPUTATION — derive θ₀ from the chirality map
+Point 3: ATTEMPT to derive θ₀ from the chirality map (random/basis scan — NOT a derivation)
+
+StrickenBy{rule: derived-negative-component, reason: random scan cannot select vacuum direction;
+  concession at FACE 1 STATUS ~L328 confirmed; load-bearing leg of theta0-not-derivable-from-algebra}
 
 The chirality map J(T) = i·sym(T) + anti(T) acts on sl(3,R) ⊂ sl(4,R).
 The three BCH orders couple to the Higgs field through Clebsch-Gordan
@@ -14,7 +17,7 @@ The effective Yukawa coupling at order n is:
   y_n = ε^n × |⟨J(L_n), H⟩|
 where L_n is the nth BCH generator and H is the Higgs direction.
 
-If y₁, y₂, y₃ force θ₀ = 12.73°, the mass hierarchy is geometric.
+NOTE: θ₀ = 12.73° is the FIT value (Nelder-Mead on lepton masses), not forced by this scan.
 """
 
 import numpy as np
@@ -293,7 +296,7 @@ for name, L in [("L1 (Form)", L1_t), ("L2 (bracket)", L2_t), ("L3 (holonomy)", L
     print(f"    ||J(L)|| = {norm(J_L):.6f}")
 
 # The θ₀ depends on how the sym/anti ratio changes across orders
-print(f"""
+print("""
   THE GEOMETRIC FACE:
   
   The chirality map J decomposes each BCH order into:
@@ -308,11 +311,11 @@ print(f"""
     - High sym/anti → strong coupling to Higgs (heavy generation)
     - Low sym/anti → weak coupling (light generation)
   
-  The specific angle θ₀ = 12.73° is determined by the ALGEBRA:
-    tan(θ₀) = f(sym/anti ratios at orders 1,2,3)
-  
-  This is a GEOMETRIC property of the chirality map acting on
-  the BCH series — not a free parameter.
+  StrickenBy{rule: overclaim-no-derivation, reason: derived negative — algebra spans sl(4),
+    no vacuum selector fixes direction; 12.73 deg is FIT not algebra-output}
+  The sym/anti ratio mechanism is REAL but does NOT pin θ₀ without external vacuum input:
+    tan(θ₀) = f(sym/anti ratios at orders 1,2,3)  [parametric, direction-dependent]
+  θ₀ = 12.73° is the observed FIT; not determined by chirality map alone.
 """)
 
 print("=" * 70)
@@ -327,4 +330,7 @@ print(f"""
     - Mechanism identified: sym/anti ratio change across BCH orders
     - Full derivation requires solving for the physical vierbein/connection
       direction in the GL(4) fiber (not random, but determined by the vacuum)
+    - CONCESSION CONFIRMED (T2 derived negative): random scan cannot derive θ₀;
+      [h,ω] spans sl(4) (no algebra selection); vacuum input is EWSB-external
+      (see theta0_derivation_suite.py OVERCLAIM LEDGER: theta0-not-derivable-from-algebra)
 """)

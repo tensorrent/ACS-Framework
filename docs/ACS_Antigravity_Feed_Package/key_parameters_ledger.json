@@ -1,0 +1,124 @@
+{
+  "project": "Asymmetric Codependent Systems (ACS) Framework",
+  "last_updated": "2026-06-27",
+  "canonical_seed": "20260423",
+  "verification_tiers": {
+    "T1": "Machine-verified (runnable test suites)",
+    "T2": "Proved in paper (exact mathematical derivation)",
+    "T3": "Numerically verified (consistent calculations, no formal proof)",
+    "T4": "Explicitly falsified (negative result recorded)"
+  },
+  "locked_invariants": {
+    "g_4": {
+      "value": "1.3333333333333333",
+      "rational": "4/3",
+      "tier": "T2",
+      "mechanism": "Palatini bracket Casimir coefficient C_2"
+    },
+    "lambda_phi": {
+      "value": "0.12830005981977056",
+      "rational": "2*sqrt(3)/27",
+      "tier": "T2",
+      "mechanism": "Koide Higgs quartic projection"
+    },
+    "h_tilde_over_h": {
+      "value": "0.6666666666666666",
+      "rational": "2/3",
+      "tier": "T2",
+      "mechanism": "Koide Yukawa ratio"
+    },
+    "gamma_unconstrained": {
+      "value": "0.274067",
+      "tier": "T2",
+      "mechanism": "ACS unconstrained Meissner partition function solution Z(gamma) = 1"
+    },
+    "gamma_physical": {
+      "value": "0.2375",
+      "tier": "T2",
+      "mechanism": "SU(2) Gauss constraint via Chern-Simons singlet projection"
+    },
+    "N_gen": {
+      "value": 3,
+      "tier": "T1",
+      "mechanism": "Jacobi truncation at BCH order 3"
+    },
+    "theta_QCD": {
+      "value": "0.0",
+      "tier": "T2",
+      "mechanism": "Palatini vierbein-connection alignment prediction"
+    },
+    "torsion_coupling_ratio": {
+      "value": "0:1:4",
+      "tier": "T2",
+      "mechanism": "Palatini torsion sector projection"
+    }
+  },
+  "proved_theorems": [
+    {
+      "paper": "Paper A",
+      "statement": "The Lie bracket [f,g] is the exact second-order Taylor coefficient of the net transfer entropy Delta I under short-time evolution.",
+      "label": "BCH-TE Morphism"
+    },
+    {
+      "paper": "Paper B",
+      "statement": "The Wronskian of the counting fluctuation is non-vanishing along the critical line, establishing stationarity under the Riemann Hypothesis.",
+      "label": "Wronskian Stationarity Theorem"
+    },
+    {
+      "paper": "Paper C",
+      "statement": "The boundary state space is the orthogonal complement of the bulk gauge orbit under the algebra's Killing form.",
+      "label": "Killing Orthogonality Theorem"
+    },
+    {
+      "paper": "Note N2",
+      "statement": "The graded spectral functional S_f[P] = Tr(P_ad * f(ad_T)) is uniquely minimized at the Lorentzian signature (3+1) for classical Lie algebra types.",
+      "label": "Grading Selection Theorem"
+    }
+  ],
+  "explicitly_falsified_claims": [
+    {
+      "label": "ad^3 = 2*ad",
+      "tier": "T4",
+      "falsification_evidence": "fails for integer eigenvalues; requires non-integer eigenvalues lambda = 1/sqrt(2)",
+      "ledger_ref": "F-1"
+    },
+    {
+      "label": "Universal 2pi inversion loop",
+      "tier": "T4",
+      "falsification_evidence": "sl(4,R) adjoint representation is hyperbolic and does not close into a 2pi loop; only su(2) quaternion closes",
+      "ledger_ref": "F-2"
+    },
+    {
+      "label": "Wronskian-Poisson equivalence",
+      "tier": "T4",
+      "falsification_evidence": "Leibniz failure by -f*g*h' term; proved symbolically and numerically in wronskian_leibniz.py",
+      "ledger_ref": "F-3"
+    },
+    {
+      "label": "IR lattice imprint",
+      "tier": "T4",
+      "falsification_evidence": "PDG masses and CKM mixing matrices show no statistically significant imprint of the <2,3> lattice",
+      "ledger_ref": "F-4"
+    },
+    {
+      "label": "theta0-not-derivable-from-algebra",
+      "tier": "T2",
+      "falsification_evidence": "[h,omega] spans sl(4) rank=15 (gl4_asymmetry_map.py); Function=[k_dir,Form] annihilates BCH hierarchy (vacuum_theta0.py); theta0=2/9 is fit necessarily",
+      "ledger_ref": "F-5"
+    }
+  ],
+  "open_problems": [
+    {
+      "id": 1,
+      "problem": "FeynRules / UFO model file export for the Palatini SU(3) Higgs model to run LHC-testable simulations."
+    },
+    {
+      "id": 2,
+      "problem": "Constructing a self-adjoint operator whose eigenvalue positions carry the prime staircase without violating GUE spacing universality."
+    },
+    {
+      "id": 3,
+      "problem": "Formulating the variational action principle for the generalized information-dynamics Lagrangian."
+    }
+  ]
+}

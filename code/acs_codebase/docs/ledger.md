@@ -103,6 +103,10 @@ These are first-class outputs of the framework's adversarial-compression methodo
 5. **Universal 2π inversion not universal** — representation-specific, fails for hyperbolic ad
 6. **TM1/TM2 ansaetze rejected** — fail to reproduce PMNS angles within 3-5σ
 7. **θ_13 cross-coupling rescue impossible** — v_R requirement conflicts with proton decay
+8. **θ₀ not derivable from Palatini bracket algebra** — [h,ω] spans all of sl(4) (rank=15,
+   `gl4_asymmetry_map.py`); physical selector Function=[k_dir,Form] annihilates BCH hierarchy
+   (`vacuum_theta0.py`); θ₀ = 2/9 rad is a fit necessarily; EWSB-scale input required
+   (`theta0_derivation_suite.py` OVERCLAIM LEDGER: `theta0-not-derivable-from-algebra`, T2)
 
 These are durable theorems-by-falsification: they tell future model-builders which doors are closed and why.
 

@@ -2,8 +2,9 @@
 """
 θ₀ FROM QUARK-LEPTON COMPLEMENTARITY
 =======================================
-The RG flow gives zero shift. The bare geometric angle π/6 - arctan(1/3) = 11.57°
-misses by 1.17°. But arctan(√(m_d/m_s)) = 12.60° is only 0.13° off.
+The RG flow gives zero shift. The candidate angle π/6 - arctan(1/3) = 11.57°
+(numerical coincidence, NOT derived — π/6 origin underived; see koide_rg_flow.py
+StrickenBy note) misses by 1.17°. arctan(√(m_d/m_s)) = 12.60° is 0.13° off.
 
 In Pati-Salam SU(4), quarks and leptons are in the SAME multiplet.
 The VEV that breaks SU(4) → SU(3) × U(1)_{B-L} doesn't just set the
@@ -12,7 +13,10 @@ B-L charges — it also MIXES the quark and lepton mass matrices.
 The Koide angle for LEPTONS is determined by the quark mass ratios
 through the Pati-Salam mixing. This is quark-lepton complementarity.
 
-The prediction: θ₀ = arctan(√(m_d/m_s)) corrected by a Cabibbo-like factor.
+NOTE: θ₀ = 2/9 rad (~12.73°) is a FIT (Nelder-Mead on lepton masses), not derived.
+StrickenBy{rule: fit-necessarily, reason: deriving equation absent from Palatini algebra;
+  see theta0_derivation_suite.py OVERCLAIM LEDGER: theta0-not-derivable-from-algebra}
+The conjecture below (arctan(√(m_d/m_s)) corrected by a Cabibbo-like factor) is exploratory.
 """
 
 import numpy as np
@@ -267,9 +271,9 @@ RESULT
   
   Match: {gap:.4f}° ({gap/theta0_lepton*100:.2f}%)
   
-  This closes the 1.17° gap from π/6 - arctan(1/3).
-  The correct formula is NOT a geometric construction from 1/3.
-  It is the CABIBBO ANGLE passed through the Pati-Salam embedding:
+  NOTE: π/6 - arctan(1/3) is a numerical coincidence, not derived (see
+  koide_rg_flow.py StrickenBy note). The 1.17° "gap" is an artifact.
+  The relation below (tan θ₀ = λ_W) is a NOTED COINCIDENCE, not a derivation:
   
     tan(θ₀_Koide) = sin(θ_Cabibbo) = λ_Wolfenstein
     
@@ -277,7 +281,9 @@ RESULT
   Three lepton masses from one quark parameter + Koide constraint.
   
   STATUS:
-    CONFIRMED: tan(θ₀) = λ to 0.5% (within 1σ of PDG)
-    CONFIRMED: Pati-Salam quark-lepton complementarity mechanism
-    OPEN: deriving λ itself from the ACS bracket structure
+    CONFIRMED: tan(θ₀) = λ to 0.5% (within 1σ of PDG) — NOTED COINCIDENCE, not derivation
+    CONFIRMED: Pati-Salam quark-lepton complementarity mechanism (exploratory)
+    FIT: θ₀ = 2/9 rad (~12.73°) from Nelder-Mead on lepton masses — necessarily, because
+         the Palatini bracket algebra provably selects no direction (T2 derived negative)
+    OPEN: deriving λ or θ₀ from ACS bracket structure — blocked at EWSB scale (external input)
 """)

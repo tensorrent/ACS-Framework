@@ -84,7 +84,10 @@ Wigner-shape $L^2$            & $0.0258$ & $0.0258$ & $0.4$ & FORM \\
 \end{tabular}
 \end{center}
 
-\noindent\textbf{The split is clean.} Three witnesses sit within one standard deviation of the surrogate: spacing, counting, and shape are statistically \emph{indistinguishable} on the real zeros from any marginal-matched sequence. They are reading the universality class. Two witnesses sit thousands and tens of standard deviations away: the arithmetic prime-resonance and the lag-1 correlation read structure that exists only in $\zeta$ and is destroyed by the permutation. The arithmetic witness carries the overwhelming majority of the true influence; it is, in content, the explicit-formula coupling between zeros and primes, which is exactly the structure a permutation of spacings cannot preserve.
+\noindent\textbf{The split is clean.} Three witnesses sit within one standard deviation of the surrogate: spacing, counting, and shape are statistically \emph{indistinguishable} on the real zeros from any marginal-matched sequence. They are reading the universality class.
+% STRUCK 2026-07-02 per WO-03 C1.5: naive surrogate spacing definition.
+We clarify that the actual surrogate construction is \emph{permute-then-reinterpolate} to map onto the reference grid: $u_{\mathrm{s}} = \mathrm{concat}([u_0[0]], u_0[0] + \mathrm{cumsum}(\mathrm{perm}(s_0)))$ followed by $z_{\mathrm{s}} = \mathrm{interp}(u_{\mathrm{s}}, u_0, z_0)$. The $0.4$--$1.0\sigma$ deviations for the form-witnesses are purely artifacts of this re-interpolation path; on bare permuted spacings without grid re-interpolation, the form-witness standard deviation is exactly zero by construction (symmetric-multiset invariants).
+Two witnesses sit thousands and tens of standard deviations away: the arithmetic prime-resonance and the lag-1 correlation read structure that exists only in $\zeta$ and is destroyed by the permutation. The arithmetic witness carries the overwhelming majority of the true influence; it is, in content, the explicit-formula coupling between zeros and primes, which is exactly the structure a permutation of spacings cannot preserve.
 
 \textbf{Amplification with $N$ (the decisive check).} A finite-size accident would wash out as the sample grows. The function signal does the opposite:
 \[

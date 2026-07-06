@@ -44,7 +44,7 @@ CONJECTURE → EXPLICIT COMPUTATION → RESULT
 | **1. Machine-verified** | Automated test passes, reproducible by running code | `verify_n2_signature.py`: 4/4 PASS |
 | **2. Proved in paper** | Complete mathematical proof, human-verified | N2 Theorem 1: cluster coherence via bilinearity |
 | **3. Numerically verified** | Consistent across tests, not yet theorem-level | Compact → trivial grading (16 cases) |
-| **4. Explicitly falsified** | Computation shows claim is false, documented | CW 6→5 reduction: fermion-dominated, boundary min |
+| **4. Explicitly falsified** | Computation shows claim is false, documented | CW 6→5 reduction: fermion-dominated, boundary min; T_min=(2πe)^d/q height floor at d=2 |
 
 When reporting results, always state which tier. Never let Tier 3 pass as Tier 2.
 
@@ -64,18 +64,19 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 
 **Total: 87 pages, ~6500 lines TeX. Zero undefined citations across all documents.**
 
-### 4.2 Parameter Ledger (6 Inputs)
+### 4.2 Parameter Ledger (7 Inputs)
 
-**Free parameters (4):**
+**Free parameters (5):**
 
 | Parameter | Range | Controls | Notes |
 |-----------|-------|----------|-------|
-| ρ₁ | (0, 8/9) | Higgs-triplet self-coupling | |
-| α₁ | \|α₁\| < 0.81 | Higgs-triplet portal coupling | |
 | tan β | (0, ∞) | Bi-doublet VEV ratio | **Gauge-protected flat direction.** Cannot be fixed perturbatively in minimal bi-doublet sector. PS gauge symmetry forces h̃/h to be RG invariant, two-loop QCD is multiplicative, thresholds are β-independent. Requires Branch B with Σ ~ (15,1,1) or non-perturbative effects. |
-| v_R | unconstrained | Right-handed breaking scale | Sets proton decay rate and heavy boson masses |
+| ρ_Δ | (0, 8/9) | Higgs-triplet self-coupling | |
+| α₁ | \|α₁\| < 0.81 | Higgs-triplet portal coupling 1 | |
+| α₂ | unconstrained | Higgs-triplet portal coupling 2 | |
+| β_c | unconstrained | Equal-VEV alignment parameter | |
 
-**Calibrations (2):** v = 246.22 GeV (measured), v_R (to be measured)
+**Calibrations (2):** m_τ (measured), v = 246.22 GeV (measured)
 
 **Locked (algebraically fixed):**
 
@@ -85,10 +86,8 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | h̃/h (Yukawa ratio) | 2/3 | Koide ratio |
 | g₄ = g_L = g_R | 4/3 | Palatini bracket |
 | 2ρ₁ + ρ₂ | 16/9 | Palatini pairing |
-| α₂ | 0 | Representation theory (Phase 50) |
-| β_c (tree) | 0 | Phase 51/52 equal-VEV no-go |
 | N_gen | 3 | Jacobi truncation at BCH order 3 |
-| γ (Barbero-Immirzi) | 0.274 | Information balance / Meissner counting (confirmed exactly: λ₀ = 1.722013) |
+| γ (Barbero-Immirzi) | 0.274 | Unconstrained (Meissner) value, confirmed exactly |
 
 ### 4.3 Proved Theorems (10)
 
@@ -105,7 +104,7 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 9 | von Koch stability | Paper B Thm 2.4 | Log-coordinate reformulation |
 | 10 | **General grading selection** | **N2 Thm 1** | **Bilinearity + weighted max-cut** |
 
-### 4.4 Falsified Claims (8)
+### 4.4 Falsified Claims (9)
 
 | # | Claim | How Killed | Mechanism |
 |---|-------|-----------|-----------|
@@ -117,6 +116,7 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 6 | Route A (Killing form) | Cartan ≠ parity involution | Classification |
 | 7 | Route C (stability) | All signatures equal holonomy norms | Computation |
 | 8 | **CW 6→5** | **Gauge-protected flat direction** | **RG invariance + multiplicative QCD + β-independent thresholds** |
+| 9 | **T_min height floor** | **$T_{\min} = (2\pi e)^d/q$** | **Falsified (T4) at $d > 1$; true floor scales as $2\pi e \cdot q^{-1/d}$. Re-anchored to the SNR measurability criterion.** |
 
 ### 4.5 Open Problems (6)
 
@@ -125,7 +125,7 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 1 | FeynRules/UFO export | Engineering | LHC-testable predictions |
 | 2 | Hilbert-Pólya operator | Different domain | RH connection |
 | 3 | Action principle for S̃_g | Variational theory | First-principles derivation |
-| 4 | L-functions extension | LMFDB zeros | Paper B generality |
+| 4 | L-functions extension | LMFDB zeros | Paper B generality (Partially closed: per-tone/octave extension done across d∈{1,2}; aggregate/Landau SNR-gated. See [NOTE_landau_identity_transport_20260705.md](file:///Users/coo-koba42/dev/TR-2026-FF06-ACS/code/instrument_suite/xfer/docs/NOTE_landau_identity_transport_20260705.md)) |
 | 5 | SM from GL(4) fiber | Conceptual breakthrough | Full SM derivation |
 | 6 | ER=EPR correspondence | Conceptual breakthrough | Holographic interpretation |
 

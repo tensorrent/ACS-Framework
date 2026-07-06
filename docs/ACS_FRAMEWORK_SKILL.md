@@ -73,8 +73,8 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | tan β | (0, ∞) | Bi-doublet VEV ratio | **Gauge-protected flat direction.** Cannot be fixed perturbatively in minimal bi-doublet sector. PS gauge symmetry forces h̃/h to be RG invariant, two-loop QCD is multiplicative, thresholds are β-independent. Requires Branch B with Σ ~ (15,1,1) or non-perturbative effects. |
 | ρ_Δ | (0, 8/9) | Higgs-triplet self-coupling | |
 | α₁ | \|α₁\| < 0.81 | Higgs-triplet portal coupling 1 | |
-| α₂ | unconstrained | Higgs-triplet portal coupling 2 | |
-| β_c | unconstrained | Equal-VEV alignment parameter | |
+| v_R | unconstrained | Right-handed breaking scale | Sets proton decay rate and heavy boson masses |
+| μ_Δ | unconstrained | Higgs-triplet mass parameter | $v_R$-sector mass parameter |
 
 **Calibrations (2):** m_τ (measured), v = 246.22 GeV (measured)
 
@@ -88,6 +88,10 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 2ρ₁ + ρ₂ | 16/9 | Palatini pairing |
 | N_gen | 3 | Jacobi truncation at BCH order 3 |
 | γ (Barbero-Immirzi) | 0.274 | Unconstrained (Meissner) value, confirmed exactly |
+| α₂ | 0 | Representation theory (Phase 50, $T^A \Phi = 0$) |
+| β_c | 0 | Tree-level equal-VEV no-go (Phase 51/52) |
+
+> **StrickenBy{C1.4-D1, 2026-07-06}:** α₂ and β_c were previously listed as free parameters (unconstrained) in the 7-input ledger propagation. Struck and relocated to Locked: α₂ = 0 is proved theorem #3 (§4.3, Phase 50 representation theory); β_c = 0 is proved theorem #4 (§4.3, Phase 51/52 equal-VEV no-go). Replaced in free table by v_R and μ_Δ (the actual $v_R$-sector VEV/mass parameters). Consistent with Paper A Table 1 (tab:branch-A-ledger).
 
 ### 4.3 Proved Theorems (10)
 

@@ -117,6 +117,8 @@ python hp_phase_test.py        # Validates complex character phases (demodulatio
 
 ## Scientific Scope & Guidelines
 
+> **This repository documents an active research program, not a completed theory.** All results are tiered T1–T4 (machine-verified / proved / numerically verified / explicitly falsified); tiers never promote. Open problems remain — including the Hilbert-Pólya operator construction and the L-functions extension — and **the Riemann Hypothesis is nowhere concluded or claimed proved** by this framework. Parameter-count claims (7 inputs, 2.7× reduction) are specific to Branch A (minimal bi-doublet); alternative Higgs sectors change the count. The Barbero-Immirzi parameter γ = 0.274 is the unconstrained information-balance value, pending Chern-Simons state-counting verification. Falsified claims are documented openly in the [Elimination Ledger](docs/Elimination_Ledger.md), not hidden.
+
 *   **Replication Seed:** The stochastic portions of the codebase use the canonical seed `20260423`.
 *   **Zero Dataset:** Zeros used are Odlyzko's first 100,000 Riemann zeros, located under `code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt`.
 *   **Dirichlet L-Function Zeros:** Zeros are calculated directly from $L(s, \chi)$ using Hurwitz zeta functions without inserting prime values, ensuring non-circularity in character readouts.

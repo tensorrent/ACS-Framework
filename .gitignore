@@ -41,3 +41,6 @@ build/
 
 # Training run exhaust (regenerate with harness)
 harness/reports/
+
+# Withholding gate: exclude sealed predictions from public mirror
+docs/PARALLEL_YM_SEALED_20260704.md

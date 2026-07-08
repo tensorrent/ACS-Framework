@@ -5,7 +5,7 @@
 - **Name:** acs-framework
 - **Author:** Bradley Wallace
 - **Version:** 1.0 (May 2026)
-- **Trigger:** ACS, Palatini bracket, Pati-Salam, grading selection, sl(4), Lie bracket, adjoint representation, Barbero-Immirzi, Coleman-Weinberg, signature selection, "work on the papers", "what's still open", "test this idea"
+- **Trigger:** ACS, Palatini bracket, Pati-Salam, grading selection, sl(4), Lie bracket, adjoint representation, Barbero-Immirzi, Coleman-Weinberg, Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras, "work on the papers", "what's still open", "test this idea"
 
 ---
 
@@ -56,9 +56,9 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 
 | ID | Title | Pages |
 |----|-------|------:|
-| Paper A | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 |
-| Paper B | Information Asymmetry and the Riemann Spectral ACS | 15 |
-| Paper C | The Inversion Arc: Holographic Resolution in ACS | 14 |
+| Paper A | Emergence of Pati-Salam Gauge Symmetry from Palatini Torsion Attractors | 44 |
+| Paper B | Spectral Susceptibility and Renormalized Stability on the Riemann Critical Line | 15 |
+| Paper C | Holographic Spectral Inversion and Invariant Kinematic Attractors | 14 |
 | Note N1 | Pythagorean Arithmetic Structure | 5 |
 | Note N2 | Grading Selection from Adjoint Spectral Activity | 9 |
 

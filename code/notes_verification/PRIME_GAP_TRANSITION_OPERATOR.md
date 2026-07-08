@@ -1,4 +1,4 @@
-# The Prime Gap Transition Operator on (Z/mZ)*
+# The Prime Gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles on (Z/mZ)*
 
 ### Empirical Kernel Law, Compression Law, and Three Falsified Conjectures
 
@@ -9,7 +9,7 @@
 
 ## Abstract
 
-We study the empirical second-order transition operator $T_m$ describing prime-gap dynamics on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$. Writing $T_m = T_0 + P_m$ where $T_0$ is the uniform transport respecting residue continuity, we establish two empirical laws verified across moduli $m \in \{6, 10, 12, 14, 15, 18, 20, 24, 30, 42, 60, 66, 84, 90\}$:
+We study the empirical second-order Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles $T_m$ describing prime-gap dynamics on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$. Writing $T_m = T_0 + P_m$ where $T_0$ is the uniform transport respecting residue continuity, we establish two empirical laws verified across moduli $m \in \{6, 10, 12, 14, 15, 18, 20, 24, 30, 42, 60, 66, 84, 90\}$:
 
 **Kernel Law.** $\dim \ker(P_m) = \varphi(m)$ exactly, with kernel equal to the space of state-space functions depending only on the source residue class. The kernel is naturally spanned by Dirichlet characters on $(\mathbb{Z}/m\mathbb{Z})^*$.
 
@@ -29,7 +29,7 @@ $$
 $$
 with $|\mathcal{S}_m| = \varphi(m)^2$. For each prime gap $p_{i+1} - p_i$ with $p_i, p_{i+1} > m$ and $\gcd(p_i, m) = \gcd(p_{i+1}, m) = 1$, the pair $(p_i \bmod m, p_{i+1} \bmod m) \in \mathcal{S}_m$ is the *transition class*.
 
-Construct the empirical second-order transition operator $T_m : \mathbb{R}^{\mathcal{S}_m} \to \mathbb{R}^{\mathcal{S}_m}$ by
+Construct the empirical second-order Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles $T_m : \mathbb{R}^{\mathcal{S}_m} \to \mathbb{R}^{\mathcal{S}_m}$ by
 $$
 T_m\bigl[(a,b), (a', b')\bigr] = \frac{N\bigl((a,b) \to (a',b')\bigr)}{\sum_{(c,d)} N\bigl((a,b) \to (c,d)\bigr)}
 $$
@@ -211,7 +211,7 @@ The operator construction, kernel verification, and scaling-law extraction are d
 
 ## 10. Summary
 
-The empirical prime-gap transition operator $P_m = T_m - T_0$ on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$ admits the following structure, verified across moduli with $\varphi(m) \leq 24$:
+The empirical prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles $P_m = T_m - T_0$ on the multiplicative residue group $(\mathbb{Z}/m\mathbb{Z})^*$ admits the following structure, verified across moduli with $\varphi(m) \leq 24$:
 
 **Surviving Tier-1 result:** The kernel is exactly $\varphi(m)$-dimensional and consists of source-residue-only functions.
 

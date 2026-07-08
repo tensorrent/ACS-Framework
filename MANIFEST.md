@@ -20,14 +20,14 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 
 | File | Paper | Notes |
 |------|-------|-------|
-| core_trilogy/Colour_from_Gravity | A | Pati-Salam SU(4)×SU(2)×SU(2) from Palatini bracket on sl(4,ℝ) |
-| core_trilogy/Riemann_Spectral_ACS_extended | B (May 26) | deepest/longest form |
-| core_trilogy/Spectral_Witness_Survival | B' (May 30) | retitled, tightened |
-| core_trilogy/Inversion_Arc | C | holographic resolution / ER=EPR algebraic |
-| notes/Pythagorean_Structure | N1 | |
-| notes/Signature_Selection | N2 | grading-selection theorem |
-| notes/Transition_Operator | N3 | prime-gap transition operator |
-| methodology/Form_Function_Shuffle_Knife | — | the discriminant itself |
+| core_trilogy/Palatini_Gauge_Attractor | A | Pati-Salam SU(4)×SU(2)×SU(2) from Palatini bracket on sl(4,ℝ) |
+| core_trilogy/Riemann_Spectral_Critical_Line | B (May 26) | deepest/longest form |
+| core_trilogy/Spectral_Witness_Refinement | B' (May 30) | retitled, tightened |
+| core_trilogy/Holographic_Spectral_Inversion | C | holographic resolution / ER=EPR algebraic |
+| notes/Pythagorean_Lattice_Limits | N1 | |
+| notes/Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection | N2 | grading-selection theorem |
+| notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
+| methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
 ---
@@ -81,9 +81,9 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | N1 — IR lattice imprint is null vs PDG | **T4** | `code/notes_verification/test_lattice_imprint.py` |
 | N2 — general grading selection theorem | **T2** | `code/notes_verification/test_signature_selection.py` (bilinearity + weighted max-cut) |
 | N2 — G₂ exceptional-algebra counterexample | **T2** | same (cluster coherence fails for multi-length root clusters) |
-| N3 — transition operator P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
+| N3 — Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
 
-> **N3 fresh-eyes note (2026-06-27):** the transition operator's eigenvalues are bounded
+> **N3 fresh-eyes note (2026-06-27):** the Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles's eigenvalues are bounded
 > dynamical modes (|λ| ≈ 0.01–0.3), **not** an unbounded spectrum claimed to *be* the
 > Riemann zeros. Its connection to L-functions is via the kernel (characters), not the
 > eigenvalues. Recorded so the bundle does not overstate N3.
@@ -93,7 +93,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 ## Falsified claims ledger
 `docs/Elimination_Ledger.md` — the eight explicitly falsified claims
 (ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
-chirality, Route A/C signature selection, CW 6→5). First-class results.
+chirality, Route A/C Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras, CW 6→5). First-class results.
 
 ## Reproduction notes
 - Seed `20260423` throughout. PDG v = 246.22 GeV canonical.

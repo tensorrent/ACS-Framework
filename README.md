@@ -13,16 +13,16 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 ├── LICENSE                           # Open-source MIT license
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
-│   │   ├── Colour_from_Gravity.tex   # Paper A: SU(3) closure attractor in Palatini gravity
+│   │   ├── Palatini_Gauge_Attractor.tex   # Paper A: SU(3) closure attractor in Palatini gravity
 │   │   ├── Riemann_Spectral_ACS_ext.tex # Paper B: Extended spectral Riemann hypothesis form
-│   │   ├── Spectral_Witness_Survival.tex # Paper B': Retitled, tightened witness survival variant
-│   │   └── Inversion_Arc.tex         # Paper C: Holographic resolution & ER=EPR correspondence
+│   │   ├── Spectral_Witness_Refinement.tex # Paper B': Retitled, tightened witness survival variant
+│   │   └── Holographic_Spectral_Inversion.tex         # Paper C: Holographic resolution & ER=EPR correspondence
 │   ├── notes/                        # Mathematical companion notes
-│   │   ├── Pythagorean_Structure.tex # Note N1: Pythagorean structure in minimal PS algebra
-│   │   ├── Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
-│   │   └── Transition_Operator.tex   # Note N3: Prime-gap transition operators
+│   │   ├── Pythagorean_Lattice_Limits.tex # Note N1: Pythagorean structure in minimal PS algebra
+│   │   ├── Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
+│   │   └── Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator.tex   # Note N3: Prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless
 │   ├── methodology/                  # Empirical tools and frameworks
-│   │   └── Form_Function_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
+│   │   └── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
 │   │   ├── The_Geometry_Engine.tex   # Reference engine specification

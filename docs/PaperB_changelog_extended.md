@@ -99,8 +99,8 @@ Theoretical content:
 
 | File | Description |
 |---|---|
-| Riemann_Spectral_ACS_extended.tex | Full LaTeX source, 26-page output |
-| Riemann_Spectral_ACS_extended.pdf | Compiled output |
+| Riemann_Spectral_Critical_Line.tex | Full LaTeX source, 26-page output |
+| Riemann_Spectral_Critical_Line.pdf | Compiled output |
 | tartini_synthesis/ | R₃, prime-power, Fourier-dual figures + paragraph |
 | l_function_test/ | L(s, χ₄) test data + figure |
 | l_function_arc/ | Cross-correlation + Dedekind figures + synthesis |

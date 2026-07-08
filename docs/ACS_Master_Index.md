@@ -9,9 +9,9 @@
 
 | Document | Title | Pages | Lines | Status |
 |---|---|---|---|---|
-| **Paper A** | Colour from Gravity: Pati-Salam from Palatini Bracket | 44 | 3142 | Final |
-| **Paper B** | Information Asymmetry and the Riemann Spectral ACS | 15 | 1151 | Final |
-| **Paper C** | The Inversion Arc: Holographic Resolution in ACS | 13 | 1056 | Final |
+| **Paper A** | Emergence of Pati-Salam Gauge Symmetry from Palatini Torsion Attractors | 44 | 3142 | Final |
+| **Paper B** | Spectral Susceptibility and Renormalized Stability on the Riemann Critical Line | 15 | 1151 | Final |
+| **Paper C** | Holographic Spectral Inversion and Invariant Kinematic Attractors | 13 | 1056 | Final |
 
 **Trilogy total: 72 pages, 5349 lines TeX**
 
@@ -19,7 +19,7 @@
 
 | Document | Title | Pages | Lines | Status |
 |---|---|---|---|---|
-| **Note N1** | Pythagorean Arithmetic Structure in Minimal PS | 5 | 384 | Final |
+| **Note N1** | Pythagorean Lattice Projections in Pati-Salam Models and the IR Null Limit | 5 | 384 | Final |
 | **Note N2** | Metric Signature as Minimiser of Adjoint Spectral Activity | 8 | 682 | Final |
 
 **Notes total: 13 pages, 1066 lines TeX**
@@ -78,7 +78,7 @@ All citations resolved: 0 undefined references across all 5 documents.
 - Barbero-Immirzi γ = 0.274 from information balance
 - Wheeler-DeWitt as ACS quantum attractor
 - **Arithmetic lattice remark** (⟨2,3⟩ structure, cites N1)
-- **Signature selection remark** (adjoint spectral minimisation, cites N2)
+- **Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras remark** (adjoint spectral minimisation, cites N2)
 
 ### Paper B (Riemann Spectral ACS) — 15 pages
 - F_N(x) stationarity ↔ RH
@@ -96,7 +96,7 @@ All citations resolved: 0 undefined references across all 5 documents.
 - Constraint-attractor cycle
 - **Killing-orthogonality theorem** (Theorem 4.1)
 - **Three-class spectral taxonomy** (Theorem 4.2, corrected from 4-class)
-- **Signature selection cross-reference** (Remark after Theorem 4.2)
+- **Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras cross-reference** (Remark after Theorem 4.2)
 - **Algebraic non-traversability** (Proposition 4.3, ER=EPR rereading)
 - Updated parameter ledger (6 inputs, three-layer self-pruning)
 
@@ -106,9 +106,9 @@ All citations resolved: 0 undefined references across all 5 documents.
 - **IR null test**: PDG masses show no lattice imprint (z ∈ [-0.7, +0.3])
 - Classification: UV algebraic artifact, not phenomenological prediction
 
-### N2 (Signature Selection) — 8 pages
+### N2 (Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras) — 8 pages
 - **Lemma**: index-partition → parity map (with O(n) reduction)
-- **Theorem**: binary-split signature selection (6-step proof)
+- **Theorem**: binary-split Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras (6-step proof)
 - Reduction to max-cut on complete bipartite graph
 - Functional universality (6 functionals)
 - Frame invariance (50/50 O(4))
@@ -131,7 +131,7 @@ All citations resolved: 0 undefined references across all 5 documents.
 7. Wronskian is Lie bracket but not Poisson (Paper B Remark 2.3)
 8. RH ⇒ stationarity of F_N (Paper B)
 9. Renormalized stability under RH (Paper B Theorem 2.4)
-10. **Signature selection from adjoint spectral activity (N2 Theorem 1)**
+10. **Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras from adjoint spectral activity (N2 Theorem 1)**
 
 ### Numerically verified (not yet theorem-level)
 11. Compact → Euclidean, noncompact → nontrivial (N2 Observation)
@@ -153,14 +153,14 @@ All citations resolved: 0 undefined references across all 5 documents.
 23. Wronskian as Poisson bracket (Leibniz fails by −fgh')
 24. IR lattice imprint of ⟨2,3⟩ structure (z-scores null)
 25. Intrinsic algebra chirality (Type I from algebra alone — ruled out)
-26. Signature selection from Killing form (Route A — closed)
-27. Signature selection from stability (Route C — closed)
+26. Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras from Killing form (Route A — closed)
+27. Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras from stability (Route C — closed)
 
 ---
 
 ## Recommended Submission Order
 
-1. **N2 (Signature Selection)** — standalone, highest novelty, smallest attack surface
+1. **N2 (Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras)** — standalone, highest novelty, smallest attack surface
 2. **Paper A** — the main paper, references everything else
 3. **Paper C** — algebraic foundations, supports Paper A
 4. **Paper B** — most independent, can go separately

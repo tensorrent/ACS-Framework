@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{\textbf{Pre-Registered Blind Comparison Protocol for the Yang-Mills Mass Gap Construction}}
+\author{\textbf{Bradley Wallace} \\ \textit{TensorRent Research} \and \textbf{Operator-AI} \\ \textit{Google DeepMind Pair-Programming Subsystem}}
+\date{July 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present the formal mathematical framework, pre-registered predictions, and automated checking methodology for evaluating the newly arrived 600-page constructive proof of the Yang-Mills mass gap. Following the blind-comparison protocol established on July 4, 2026, we categorize our predictions into clean (scoreable) and contaminated (non-scoreable) sets, mapping them to the expected lemma structure of the construction. We detail the design of an automated, self-healing sliding-window density parser used to scan the construction and generate verifiable matching ledgers.
+\end{abstract}
+
+\section{Introduction}
+The Yang-Mills mass gap problem stands as one of the Millennium Prize Problems in mathematical physics, requiring the proof of the existence of a quantum Yang-Mills theory on $\mathbb{R}^4$ with a gauge group $G$ (compact, simple Lie group) and a non-zero physical mass gap $\Delta > 0$. 
+
+On July 4, 2026, we pre-registered a set of six clean predictions ($\text{C1}$--$\text{C6}$) and two contaminated predictions ($\text{X1}$--$\text{X2}$) in a sealed file (SHA-256 hash: \texttt{b449243813...}). With the arrival of the counterparty's 600-page construction, we release the sealed document and present the formal protocol for the verification of these predictions.
+
+\section{Formal Pre-Registered Predictions}
+
+\subsection{Clean Predictions (Scoreable)}
+Clean predictions are derived strictly from our program's primitives alone and are eligible for scoring under the comparison protocol.
+
+\begin{itemize}
+    \item[\textbf{C1}] \textbf{Kinematic Nature of Finite Resolution (Casimir Gap)}: 
+    At any finite resolution, the mass gap is kinematic. The compactness of the gauge group makes the electric spectrum discrete:
+    \begin{equation}
+        \Delta_{\text{kin}} \approx \frac{3}{2} g^2 + \mathcal{O}(g^4)
+    \end{equation}
+    The difficulty of the proof resides not in proving the existence of a gap at finite cutoff, but in the refinement transport.
+    
+    \item[\textbf{C2}] \textbf{Survival under Refinement (Refinement Transport)}: 
+    The proof is structurally a survival theorem showing that the physical mass gap does not close along the coherent refinement path (as volume $V \to \infty$ and lattice spacing $a \to 0$ at fixed physical scale):
+    \begin{equation}
+        \lim_{a \to 0} \Delta(a) \ge \Delta_0 > 0
+    \end{equation}
+    
+    \item[\textbf{C3}] \textbf{Gauge-Invariant Algebra Projection}: 
+    The massless-gluon obstruction is a projection-class artifact of the gauge-variant description (e.g., the perturbative propagator). The proof bypasses this by working entirely inside gauge-invariant observable algebras, excluding the massless artifact by construction.
+    
+    \item[\textbf{C4}] \textbf{One-Channel Law ($0^{++}$ Plaquette)}: 
+    The quantitative bound lives entirely in the invariant $0^{++}$ plaquette-plaquette correlation channel (transfer-matrix spectrum). The hard estimate is a uniform bound on the correlation length:
+    \begin{equation}
+        \langle \Phi(x) \Phi(0) \rangle_c \le C e^{-|x| \Delta}
+    \end{equation}
+    
+    \item[\textbf{C5}] \textbf{Exchange of Limits (Cutoff Uniformity)}: 
+    The non-commuting limits of weak coupling and infinite volume are resolved via uniform, frame-independent bounds carrying no cutoff dependence.
+    
+    \item[\textbf{C6}] \textbf{Constructive Proof Form}: 
+    The result is constructive, exhibiting the vacuum state and the gap via reflection positivity and a uniform correlation-length estimate across a scale sequence, rather than a compactness or existence-only argument.
+\end{itemize}
+
+\subsection{Contaminated Predictions (Non-Scoreable)}
+Contaminated predictions are informed by counterparty clues (e.g., Wilson-type algebras, admissibility, refinement transport) and are excluded from the landed-same-spot score.
+
+\begin{itemize}
+    \item[\textbf{X1}] \textbf{Wilson-Type Algebras}: Refinement transport between nested Wilson-type algebras $\mathcal{A}_n^{\epsilon}(\Omega)$ inside gauge-invariant $\mathcal{O}_n^{\text{gi}}(\Omega)$ under admissibility $\epsilon$-control.
+    \item[\textbf{X2}] \textbf{Observable Algebra Pivot}: Utilizing Algebraic Quantum Field Theory (AQFT) or observable algebra representations.
+\end{itemize}
+
+\section{Automated Comparison Checker Methodology}
+To eliminate human evaluation bias, we constructed the comparison checker tool, \texttt{ym\_comparison\_checker.py}. The checker operates via the following steps:
+\begin{enumerate}
+    \item \textbf{Input Extraction}: Recursively parses targeted LaTeX, text, or PDF files. PDF files are parsed via a self-healing import of the \texttt{pypdf} library, auto-installed on demand.
+    \item \textbf{Sliding-Window Density Scan}: The parsed text is tokenized into sliding windows of $W = 150$ words.
+    \item \textbf{Keyword Co-occurrence Proximity}: For each prediction $P$, the tool evaluates the presence of must-have and should-have keyword clusters. The window match score is defined as:
+    \begin{equation}
+        S(P) = 0.6 \left( \frac{|W \cap \text{Must}(P)|}{|\text{Must}(P)|} \right) + 0.4 \left( \frac{|W \cap \text{Should}(P)|}{|\text{Should}(P)|} \right)
+    \end{equation}
+    \item \textbf{Verdict Classification}: Scores $S(P) \ge 0.7$ map to \textbf{MATCH}; $0.25 \le S(P) < 0.7$ map to \textbf{PARTIAL}; others map to \textbf{MISS}.
+\end{enumerate}
+
+\section{Verification Protocol}
+Each prediction is mapped to the newly arrived lemma structure. In the event of a \textbf{MISS}, the result is treated as first-class, localizing the divergence between our theoretical framework and the constructive proof. This divergence forms the basis for joint-paper development.
+
+\end{document}

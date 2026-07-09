@@ -28,7 +28,7 @@ the $\zeta$ Prime Signal is the Value-Space Pair Correlation of the Zeros}}
 \maketitle
 
 \begin{abstract}
-The shuffle-knife discriminant established that, among the standard spectral witnesses of the Riemann zeros, the arithmetic prime-resonance is the one carrying $\zeta$-specific structure (FUNCTION, $\sim\!11{,}500\sigma$) while the distributional witnesses read only the universality class (FORM). It located the signal by \emph{elimination}. This note locates it by \emph{construction}: it identifies, positively and to numerical precision, the single two-point object the prime signal lives in. The prime-resonance power $\mathcal P=\sum_p\lvert\sum_j e^{-i(\log p)\gamma_j}\rvert^2/N$ is, by expansion, a linear functional of the empirical value-space pair correlation of the zero \emph{positions}; reconstructing $\mathcal P$ from that pair correlation alone recovers $100.0\%$ of the signal (exact to machine precision), whereas surrogates that preserve the two-point statistics of the \emph{spacings} or the index-space fluctuations recover only $\sim\!7\%$. A fine sweep of the position form factor peaks only at frequencies $\log n$ with $n$ a prime power, with heights tracking the explicit-formula weight $(\Lambda(n)/\sqrt n)^2$ at Pearson $r=0.9975$ and vanishing ($\sim\!0.01$) at composite $n$. The separation from the shuffled floor grows from $20\times$ at $N=200$ to $411\times$ at $N=10^4$. The operational conclusion is that ``the primes are not a two-point statistic'' --- a claim we had entertained internally from spacing-domain surrogate tests --- is false and is retracted here: the primes are exactly the two-point pair correlation of the positions, i.e.\ the Montgomery form factor read through the Riemann--von Mangoldt explicit formula. The word ``two-point'' is simply ambiguous between the positions and the spacings; the carrier is the former, and the surrogate collapse measures the destruction of that object, not the presence of any higher-order one.
+The shuffle-knife discriminant established that, among the standard spectral witnesses of the Riemann zeros, the arithmetic prime-resonance is the one carrying $\zeta$-specific structure (FUNCTION, $\sim\!11{,}500\sigma$) while the distributional witnesses read only the universality class (FORM). It located the signal by \emph{elimination}. This note locates it by \emph{construction}: it identifies, positively and to numerical precision, the single two-point object the prime signal lives in. The prime-resonance power $\mathcal P=\sum_p\lvert\sum_j e^{-i(\log p)\gamma_j}\rvert^2/N$ is, by expansion, a linear functional of the empirical value-space pair correlation of the zero \emph{positions}; reconstructing $\mathcal P$ from that pair correlation alone recovers $100.0\%$ of the signal (exact to machine precision), whereas surrogates that preserve the two-point statistics of the \emph{spacings} or the index-space fluctuations recover only $\sim\!7\%$. A fine sweep of the position form factor peaks only at frequencies $\log n$ with $n$ a prime power, with heights tracking the explicit-formula weight $(\Lambda(n)/\sqrt n)^2$ at Pearson $r=0.9975$ and vanishing ($\sim\!0.01$) at composite $n$. The separation from the shuffled floor grows from $18\times$ at $N=200$ to $474\times$ at $N=10^4$. The operational conclusion is that ``the primes are not a two-point statistic'' --- a claim we had entertained internally from spacing-domain surrogate tests --- is false and is retracted here: the primes are exactly the two-point pair correlation of the positions, i.e.\ the Montgomery form factor read through the Riemann--von Mangoldt explicit formula. The word ``two-point'' is simply ambiguous between the positions and the spacings; the carrier is the former, and the surrogate collapse measures the destruction of that object, not the presence of any higher-order one.
 \end{abstract}
 
 \section{The ambiguity that motivated the test}\label{sec:motivation}
@@ -121,16 +121,16 @@ Heights fall with $n$ exactly as $1/\sqrt{p^k}$ (so $4,8,9,16,32$ shrink monoton
 \toprule
 $N$ & baseline $\mathcal P$ & shuffle floor & separation \\
 \midrule
-$200$ & $51.99$ & $2.60$ & $20.0\times$ \\
-$500$ & $88.68$ & $2.10$ & $42.1\times$ \\
-$1000$ & $137.53$ & $1.96$ & $70.3\times$ \\
-$2000$ & $216.40$ & $1.70$ & $127.5\times$ \\
-$5000$ & $407.69$ & $1.45$ & $282.1\times$ \\
-$10000$ & $672.90$ & $1.64$ & $410.8\times$ \\
+$200$ & $51.99$ & $2.83$ & $18.4\times$ \\
+$500$ & $88.68$ & $2.13$ & $41.7\times$ \\
+$1000$ & $137.53$ & $1.87$ & $73.6\times$ \\
+$2000$ & $216.40$ & $1.75$ & $123.4\times$ \\
+$5000$ & $407.69$ & $1.53$ & $266.9\times$ \\
+$10000$ & $672.90$ & $1.42$ & $474.2\times$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-The value-space reconstruction equals the baseline at every $N$ (Proposition~\ref{prop:suff}); the separation from the floor sharpens with $N$, consistent with the shuffle-knife amplification result.
+The value-space reconstruction equals the baseline at every $N$ (Proposition~\ref{prop:suff}); the separation from the floor (each floor averaged over $200$ spacing permutations) sharpens with $N$, consistent with the shuffle-knife amplification result. The floor is a small, mildly noisy quantity; the separations are reproducible from \texttt{scripts/prime\_carrier\_reproduce.py} at the canonical seed but should be read as $\mathcal O(10)$-to-$\mathcal O(10^2)$ growth, not to the last digit.
 
 \paragraph{Coherence and mechanism.}
 The raw peak $\lvert\sum_j e^{-i(\log2)\gamma_j}\rvert^2$ grows faster than $N$ ($\lvert\cdot\rvert^2/N$: $8.1\to50.5$ across $N=500\to8000$; $\lvert\cdot\rvert^2/N^2$: $0.016\to0.006$), i.e.\ the peak is a coherent, non-self-averaging arithmetic sum. And the gap two-point surrogate is \emph{faithful}: the spacing autocovariance at lags $1,2,3$ is $(-0.009,0.061,0.067)$ on the object and $(-0.009,0.061,0.067)$ on the surrogate, yet $\mathcal P$ falls from $216.4$ to $1.5$. A surrogate that provably preserves the gap two-point object still loses the primes --- the carrier is the position pair correlation, not the gap correlation.

@@ -22,7 +22,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
 │   │   └── Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator.tex   # Note N3: Prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless
 │   ├── methodology/                  # Empirical tools and frameworks
-│   │   └── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
+│   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
+│   │   └── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
 │   │   ├── The_Geometry_Engine.tex   # Reference engine specification

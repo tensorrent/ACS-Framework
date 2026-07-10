@@ -1,10 +1,7 @@
 # Papers and monograph (text / PDF)
 
-Manuscripts placed under `papers/` are **not** covered by the repository `LICENSE` (MIT), which applies to **code** in this repository.
+Manuscripts, papers, and monographs placed under `papers/` (including all source LaTeX files and compiled PDFs) are governed by and enforce the repository `LICENSE` (**Sovereign Integrity Protocol License - SIP License v1.1**).
 
-If you distribute compiled PDFs here, use a separate terms file per your publisher policy. A common choice for non-commercial preservation of wording is:
+Any Commercial Use, cloud hosting, monetization, secondary distribution, or any use that generates Financial Gain from these papers or their contents is **expressly prohibited** without a separate, prior written commercial license obtained from the Licensor. 
 
-**Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**  
-Summary: https://creativecommons.org/licenses/by-nc-nd/4.0/
-
-Place your PDFs in `papers/` and document the exact CC (or other) license in your preprint cover page and in any public README section you add for readers.
+All uses must comply with the conditions, royalty obligations, and penalty provisions detailed in the root `LICENSE` file.

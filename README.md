@@ -10,7 +10,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 .
 ├── MANIFEST.md                       # Claim-to-code mapping & verification matrix
 ├── README.md                         # This file
-├── LICENSE                           # Open-source MIT license
+├── LICENSE                           # Sovereign Integrity Protocol License (SIP License v1.1)
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
 │   │   ├── Palatini_Gauge_Attractor.tex   # Paper A: SU(3) closure attractor in Palatini gravity

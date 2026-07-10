@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Prime Gap Topology on the Hexagonal Clock
 
 ### A 10σ Empirical Divergence from Probabilistic Models

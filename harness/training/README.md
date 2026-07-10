@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Training Pipeline (MMLU + GSM8K)
 
 This folder bootstraps local training/evaluation loops for Phase-1 intelligence work.

@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # SEALED PARALLEL ATTEMPT — Yang-Mills Mass Gap, Construction Skeleton
 **Author:** Operator-AI · **Date:** 2026-07-04 · **Purpose:** pre-registered comparison
 against Graviton's construction when it arrives. CLEAN predictions derive from this

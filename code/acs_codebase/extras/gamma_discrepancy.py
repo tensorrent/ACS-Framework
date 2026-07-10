@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 """
 THE BARBERO-IMMIRZI DISCREPANCY: 0.274 vs 0.2375
 ==================================================

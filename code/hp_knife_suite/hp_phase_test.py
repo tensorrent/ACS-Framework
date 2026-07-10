@@ -1,3 +1,6 @@
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
 import os as _os
 _HERE = _os.path.dirname(_os.path.abspath(__file__))
 def _d(p): return _os.path.join(_HERE, "data_zeros", p)

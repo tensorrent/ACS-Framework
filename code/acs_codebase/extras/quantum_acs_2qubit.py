@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 """
 2-QUBIT QUANTUM ACS: Non-trivial steady state version
 The key: use ASYMMETRIC dissipation rates + non-commuting Lindblad ops

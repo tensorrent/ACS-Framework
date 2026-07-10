@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 """
 prime_carrier_reproduce.py
 Reproduces every table in papers/methodology/Prime_Carrier_Position_Form_Factor.tex (FF06f).

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 # Multi-seed stability barrage: residual_product head + auto LR decay + fixed hyperparams.
 # Goal: config-level stability via compare_runs --aggregate-by-config (stability_score).
 # Run from repo root: bash tent_io/harness/training/run_phase1_tune_batch.sh

@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Citations and External References
 
 The ACS trilogy rests on standard mathematical and physical results

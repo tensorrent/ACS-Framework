@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Asymmetric Codependent Systems (ACS) — Technical Whitepaper
 
 This document provides a consolidated mathematical and physical specification of the Asymmetric Codependent Systems (ACS) framework. It outlines the algebraic foundations of the gauge sector, the spectral positional duality of L-functions, the holographic boundary conditions of the inversion arc, and the deterministic AI stack governance model.

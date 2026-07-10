@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 """
 U(1) CHERN-SIMONS PROJECTION: Closing the 15% Gap
 ====================================================

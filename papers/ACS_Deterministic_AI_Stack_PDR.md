@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 ---
 title: "ACS Deterministic AI Stack — Preliminary Design Review"
 subtitle: "Architectural PDR and Technical Blueprint"

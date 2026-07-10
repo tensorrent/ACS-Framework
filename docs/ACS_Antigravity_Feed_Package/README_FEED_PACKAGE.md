@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # ACS Antigravity Feed Package
 
 This directory contains the structured artifacts and prompt templates designed to integrate the Asymmetric Codependent Systems (ACS) framework directly into Google's Antigravity agentic platform.

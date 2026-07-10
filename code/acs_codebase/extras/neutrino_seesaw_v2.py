@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 """
 GEOMETRIC SEE-SAW v2: The suppression comes from the COUPLING CONSTANT ε,
 not from the bracket norms. The bracket structure FORCES the neutrino 

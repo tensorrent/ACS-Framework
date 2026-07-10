@@ -1,3 +1,6 @@
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
 """
 dominance_engine.py — the SIBLING primitive to the shape engine.
 Handles NON-TRANSITIVE (rock-paper-scissors) constraints that box-containment structurally cannot encode.

@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Antigravity Agent Prompt Templates
 
 These templates are designed to be copied and pasted directly into your chat or task definitions when invoking an Antigravity agent to work on the ACS codebase.

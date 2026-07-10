@@ -1,3 +1,6 @@
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
 """predictive_test.py — Test A (predictive domain transfer) for TR-2026-FF06J.
 Pre-registered reversibility predictions across 30 domains, scored against ground truth.
 The criterion (CORRECTED): a flattening is losslessly reversible iff it is an INJECTIVE

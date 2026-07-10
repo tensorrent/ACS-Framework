@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 # Phase D: telemetry auxiliary weight sweep (0.03, 0.05, 0.1) with x50 merged GSM train.
 # Matches Phase C: same SEEDS/EPOCHS/hparams as run_phase1_tune_batch.sh defaults; gsm_merged_telemetry_x50.jsonl.
 # Run from repo root:

@@ -1,3 +1,6 @@
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
 """
 Shape Engine -- a geometry engine for the multiplicative world.
 Numbers are BOXES: volume = product of (prime_side ^ dimension_exponent).

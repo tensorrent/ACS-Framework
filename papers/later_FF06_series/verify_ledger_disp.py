@@ -1,3 +1,6 @@
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
 """verify_ledger.py — reproduces the complete exact ledger of TR-2026-FF06i.
 All seven homomorphic-class domains, exact vs ground truth. Seed 20260423.
 Run: python3 verify_ledger.py  (needs shape_engine.py, sympy)"""

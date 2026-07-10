@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+# https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 # Single-command full reproduction of all verifiable claims.
 # Runs every paper section as a script, then runs the test suite.
 set -e

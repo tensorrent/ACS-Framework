@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # The ACS Corpus — Variables, Invariables, Tests, Results, Failures
 
 *A map of every paper in the folder. Sourced from the extracted texts (FF06a/b/c via embedded page-text; N3 native; FF06b'/e/f from the build). Numbers are as written in the documents.*

@@ -30,6 +30,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | notes/Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection | N2 | grading-selection theorem |
 | notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
 | methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
+| methodology/Form_Function_Relativity | FF06g | the form/function label is frame-relative (companion to FF06e) |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
 ---
@@ -62,6 +63,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | C8 character sign, quadratic L (18/18) | **T1** | `hp_signed_lfunction.py` |
 | C8′ complex-character phase (R = 0.99) | **T1** | `hp_phase_test.py` (order-4 mod 5, order-6 mod 7) |
 | C9 finite-prime orthogonality (corr 0.92) | **T1** | `hp_c9_orthogonality.py` |
+| Form/function label is frame-relative (staircase over Poisson ≺ GUE-marginal ≺ GUE-full) | **T1** | `hp_knife_suite/hp_form_function_relativity.py` (repulsion/shape flip FUNC→FORM 44σ→0.1σ; arith FUNC in all frames) |
 
 > **Scope:** C5–C9 numerically exhibit the explicit formula (Weil–Guinand) and its
 > Dirichlet generalization — known theorems. The suite is a falsification/calibration

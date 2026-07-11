@@ -23,7 +23,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   └── Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator.tex   # Note N3: Prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless
 │   ├── methodology/                  # Empirical tools and frameworks
 │   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
-│   │   └── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
+│   │   ├── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
+│   │   └── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
 │   │   ├── The_Geometry_Engine.tex   # Reference engine specification
@@ -112,6 +113,8 @@ python hp_never_synced.py      # Verifies spacing properties (zeros vs GUE vs la
 python hp_xp_test.py           # Verifies Berry-Keating xp-operator limits
 python hp_signed_lfunction.py  # Checks zeta weights and quadratic L-function signs
 python hp_phase_test.py        # Validates complex character phases (demodulation R = 0.99)
+python hp_form_function_relativity.py         # Form/function label is frame-relative (2 exact frames, ~2s)
+python hp_form_function_relativity.py --full  # adds the GUE-full(bulk) rung (dense diagonalisation, ~7 min)
 ```
 
 ---

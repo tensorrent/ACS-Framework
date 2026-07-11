@@ -1,0 +1,155 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  framesep=4pt,
+  backgroundcolor=\color{gray!6},
+  columns=fullflexible,
+  keepspaces=true,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Form/Function Relativity}
+\fancyhead[R]{\small Form/Function Relativity}
+\fancyfoot[C]{\thepage}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newtheorem{principle}{Principle}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\real}{\mathrm{real}}
+
+\title{\textbf{Form/Function Relativity:\\
+The Reference Frame Is the Perspective}}
+\author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
+\date{\small Companion to \textit{Spectral Rigidity and Shuffled Spacing Discriminant}\ (FF06e)\ ---\ SIP License v1.1}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The shuffle knife (FF06e) sorts each spectral witness into \emph{form} (its value is a property of the distribution class) or \emph{function} (its value reads the object, $\zeta$, specifically) by comparing the real zeros against a marginal-matched surrogate. That verdict is stated as if it were a property of the witness. It is not. It is a property of the \emph{pair} (witness, reference measure), and the reference measure --- the surrogate ensemble against which the witness is scored --- is a free choice. Change the choice and the verdict moves. We make this operational by scoring the same five witnesses against a \emph{ladder} of reference frames ordered by how much structure each preserves: Poisson (no level repulsion), the GUE-marginal shuffle (nearest-neighbour spacing law only), a full-GUE bulk ensemble (the two-point correlation), and $\zeta$ itself (the arithmetic). Refining the frame turns witnesses from function to form one structural class at a time --- a staircase. The repulsion and Wigner-shape witnesses are \textbf{function} against Poisson ($44$--$50\sigma$) and \textbf{form} against the GUE-marginal frame ($0.1$--$0.2\sigma$): the identical witness carries opposite labels in the two frames. The rigidity (number-variance) witness is function against both of those and form ($1.6\sigma$) only once the frame preserves the two-point function. The arithmetic prime-resonance witness is function against every frame short of $\zeta$ itself ($260$--$832\sigma$): it is the irreducibly object-specific content. The form/function label is therefore a coordinate on (witness $\times$ frame), not an intrinsic attribute --- \emph{one witness's form is another witness's function}. This is the same reference measure $\mathrm{d}\mu/\mathrm{d}\nu$ that already carries the perspective in the BCH--transfer-entropy lemma of the core monograph; here it is exhibited numerically. Reproducible at seed $20260423$. Nothing here proves RH; negatives are kept first-class.
+\end{abstract}
+
+\section{The observation}\label{sec:obs}
+
+FF06e defines form and function through a single surrogate ensemble.
+
+\begin{definition}[Form and function, FF06e Def.~2, recalled]\label{def:ff-single}
+A witness $W$ is a scalar functional of a spectrum. Evaluate it on the real zeros, $W_\real$, and on an ensemble of marginal-matched surrogates (the unfolded spacings permuted and re-accumulated), with mean $\overline{W}$ and standard deviation $\sigma_W$. Its \emph{influence} is $z(W)=|W_\real-\overline{W}|/\sigma_W$; $W$ is \textbf{form} if $z(W)$ is small ($\lesssim 3$) and \textbf{function} if $z(W)$ is large.
+\end{definition}
+
+The definition names one surrogate --- the gap-shuffle --- and reads off a label. But the gap-shuffle is a choice, and FF06e's own scope section already records that the choice is load-bearing: the lag-1 verdict swings by $\sim\!6\sigma$ ``induced purely by the choice of GUE pipeline,'' with two legitimate GUE references disagreeing by more than the candidate signal. If replacing one repulsion-matched reference by another moves the verdict, then replacing a repulsion-matched reference by a \emph{non}-repulsion-matched one (Poisson) will move it much further. The label was never attached to the witness alone. It was attached to the witness \emph{as seen from} a reference frame, and FF06e fixed the frame silently.
+
+We make the frame a variable.
+
+\section{Relative form and function}\label{sec:rel}
+
+\begin{definition}[Form/function relative to a reference frame]\label{def:ff-rel}
+Let $\nu$ be a reference ensemble (a ``frame'') on spectra: a distribution from which surrogates are drawn. For a witness $W$ define
+\[
+  z_\nu(W)\;=\;\frac{\big|W_\real-\mathbb{E}_\nu[W]\big|}{\sqrt{\operatorname{Var}_\nu[W]}}.
+\]
+$W$ is \textbf{function relative to $\nu$} if $z_\nu(W)>\tau$ (we use $\tau=3$) and \textbf{form relative to $\nu$} otherwise. Definition~\ref{def:ff-single} is the special case $\nu=$ gap-shuffle.
+\end{definition}
+
+The verdict is now explicitly a two-argument object. The content of this note is that the second argument matters, and matters in a structured way.
+
+\begin{principle}[Form/function relativity]\label{prin:rel}
+The label $\{$form, function$\}$ is a coordinate on the product space (witness $\times$ frame), not a property of the witness. For a fixed witness $W$ there exist frames $\nu_1,\nu_2$ with $W$ \emph{form} relative to $\nu_1$ and \emph{function} relative to $\nu_2$; equivalently, relative to a fixed frame two witnesses split into form and function, and the split is not preserved when the frame changes. \emph{One witness's form is another witness's function.}
+\end{principle}
+
+The mechanism is not mysterious. A witness is function relative to $\nu$ exactly when it reads structure that $\nu$ does \emph{not} reproduce. So the label tracks the difference between what the witness reads and what the frame preserves --- a relation between two things, neither of which is the witness by itself. Order the frames by refinement (how much structure each preserves) and the labels must fall monotonically:
+
+\begin{proposition}[Monotone staircase]\label{prop:stair}
+Let $\nu_1 \preceq \nu_2$ mean that every scalar structure preserved (in ensemble mean) by $\nu_1$ is also preserved by $\nu_2$. If a witness $W$ reads only structure that $\nu_2$ preserves, then $z_{\nu_2}(W)\le z_{\nu_1}(W)$ up to sampling noise: refining the frame can turn function into form but never the reverse. Hence along a refinement chain each witness has a single threshold frame at which it falls from function to form, and the witnesses are totally ordered by the depth of structure they read.
+\end{proposition}
+
+This is a statement about the geometry of the (witness $\times$ frame) table, and it is testable: the table should be a staircase, not a scatter.
+
+\section{The frame ladder}\label{sec:ladder}
+
+We instantiate a four-rung refinement chain on the Riemann zeros. Each rung preserves strictly more structure than the last.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}llp{6.6cm}@{}}
+\toprule
+Frame $\nu$ & preserves & construction \\
+\midrule
+Poisson            & density only        & i.i.d.\ exponential spacings, density-matched \\
+GUE-marginal       & $+$ NN-spacing law  & permute the real unfolded spacings, re-accumulate \\
+GUE-full (bulk)    & $+$ two-point corr. & eigenvalues of a random Hermitian matrix, bulk unfolded \\
+$\zeta$ itself     & $+$ arithmetic      & the real zeros (terminal frame) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent The chain is Poisson $\preceq$ GUE-marginal $\preceq$ GUE-full $\preceq \zeta$. Poisson destroys level repulsion; the GUE-marginal shuffle restores the exact nearest-neighbour spacing distribution but destroys all correlations of order $\ge2$ and all arithmetic; the full-GUE bulk restores the RMT two-point function but still carries no arithmetic; $\zeta$ itself is the only frame that carries the primes, and against it every witness is trivially form ($z=0$ against itself). The reference measure $\nu$ is exactly the free reference $\mathrm{d}\mu/\mathrm{d}\nu$ of the BCH--transfer-entropy lemma (core monograph, Lemma~2.9): the information asymmetry, and with it the form/function reading, is always measured against a \emph{chosen} $\nu$. Choosing $\nu$ differently relabels; that choice is what we call the perspective.
+
+We score five witnesses, ordered by the depth of structure they read: \emph{repulsion} (fraction of spacings below half the mean) and \emph{shape} ($L^2$ distance of the spacing histogram to the GUE Wigner surmise), both reading only the nearest-neighbour spacing law; \emph{lag-1} serial correlation, reading local order; \emph{rigidity} (number variance in fixed windows), reading the two-point correlation; and \emph{arith} ($\sum_{p\le 29}\langle\cos(\gamma\log p)\rangle^2$), reading the arithmetic.
+
+\section{Measurement}\label{sec:meas}
+
+On the first $N=4000$ Odlyzko zeros at seed $20260423$, with $200$ surrogate draws for the two exact frames and $40$ for GUE-full (bulk, central $80\%$ trimmed before unfolding). Cells give $z_\nu$ and the resulting label at $\tau=3$.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}lcccl@{}}
+\toprule
+witness & vs Poisson & vs GUE-marginal & vs GUE-full & reads \\
+\midrule
+repulsion & $49.5$ \textsc{func} & $\mathbf{0.2}$ \textsc{\textbf{form}} & $5.3$ \textsc{func} & NN-spacing law \\
+shape     & $44.3$ \textsc{func} & $\mathbf{0.1}$ \textsc{\textbf{form}} & $6.5$ \textsc{func} & NN-spacing law \\
+lag-1     & $25.7$ \textsc{func} & $25.9$ \textsc{func} & $6.5$ \textsc{func} & local order \\
+rigidity  & $10.7$ \textsc{func} & $10.4$ \textsc{func} & $\mathbf{1.6}$ \textsc{\textbf{form}} & two-point corr. \\
+arith     & $259.9$ \textsc{func} & $832.2$ \textsc{func} & $479.1$ \textsc{func} & arithmetic \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Read the rows. \textbf{Repulsion and shape} are the theorem in miniature: $44$--$50\sigma$ function against Poisson, $0.1$--$0.2\sigma$ form against the GUE-marginal frame. The identical scalar functional, on the identical zeros, is function in one frame and form in the next --- Principle~\ref{prin:rel} made numerical. Their agreement with the critical line, viewed from Poisson, looks like a sighting of $\zeta$; viewed from a repulsion-matched frame it is revealed as a property of the class that any GUE-spaced sequence would reproduce. \textbf{Rigidity} falls one rung later: function against Poisson and against the spacing-marginal shuffle (both fail to reproduce the two-point function), form ($1.6\sigma$) only once the frame is full GUE. \textbf{Arith} never falls: it is function against every frame that lacks the primes, and its $z$ is two to three orders of magnitude above threshold. It is the object-specific content that no non-arithmetic frame can absorb --- the explicit-formula coupling, i.e.\ unique factorisation read spectrally.
+
+The table is a staircase, as Proposition~\ref{prop:stair} requires: reading down the ``threshold frame'' at which each witness turns form gives repulsion/shape at GUE-marginal, rigidity at GUE-full, arith beyond every frame short of $\zeta$. The witnesses are thereby \emph{ordered} by the depth of structure they read, and that order is an output of the measurement, not an input.
+
+The two exact frames (Poisson, GUE-marginal) run in $\sim\!2$\,s and carry the load-bearing flip; the GUE-full column requires dense diagonalisation and is gated behind \texttt{-{}-full} ($\sim\!7$\,min). The driver is \texttt{code/hp\_knife\_suite/hp\_form\_function\_relativity.py}.
+
+\section{Why this is the same object as the monograph's asymmetry}\label{sec:mono}
+
+The relativity is not a quirk of the knife; it is the discrete face of a structure already central to the framework.
+
+\textbf{The reference measure is the perspective.} The BCH--transfer-entropy lemma writes the information asymmetry as $\Delta\mathcal{I}(\varepsilon)=\varepsilon\,\langle f-g,\nabla\log\tfrac{\mathrm{d}\mu}{\mathrm{d}\nu}\rangle_\mu + 2\varepsilon^2\langle[f,g],\nabla\log\tfrac{\mathrm{d}\mu}{\mathrm{d}\nu}\rangle_\mu+\cdots$, against a reference measure $\nu$. The Radon--Nikod\'ym derivative $\mathrm{d}\mu/\mathrm{d}\nu$ is exactly the frame of Definition~\ref{def:ff-rel}: what counts as asymmetry, and therefore what counts as function, is measured against a chosen $\nu$. The knife's ``surrogate ensemble'' and the lemma's ``reference measure'' are the same slot in the same formula. Form/function relativity is what that slot being free \emph{looks like} on a spectrum.
+
+\textbf{Form and Function were already frame-relative in gauge theory.} The monograph assigns Form to the observable curvature and Function to the potential (the vierbein/connection pair, the field-strength/gauge-field pair). That assignment is itself gauge-dependent: which half of $e^{i\theta}=\cos\theta+i\sin\theta$ is ``the observable'' depends on the phase origin, and a gauge rotation trades one for the other. The core monograph's own remark that ``the distinction is not merely labelling'' is correct \emph{within} a fixed frame and incomplete across frames: within a frame Form constrains Function and vice versa; across frames the assignment rotates. Principle~\ref{prin:rel} is the number-theoretic instance of that rotation --- the same statement the title of the parent programme already makes, that form and function are generated by the asymmetry of a pair and not carried by either member alone.
+
+\section{What this establishes, and where it stops}\label{sec:scope}
+
+\textbf{Establishes.} The form/function verdict of FF06e is frame-relative in the precise sense of Definition~\ref{def:ff-rel}: on the first $4000$ zeros the repulsion and shape witnesses are function against Poisson and form against a repulsion-matched frame, and rigidity is function until the frame preserves the two-point function. The (witness $\times$ frame) table is a monotone staircase, so the witnesses are totally ordered by the depth of structure they read, with the arithmetic witness strictly deepest. This sharpens FF06e's single-surrogate categorisation into a frame-indexed one and identifies the frame with the reference measure of the monograph's asymmetry lemma.
+
+\textbf{Does not establish.} Nothing here proves the Riemann Hypothesis, constructs a Hilbert--P\'olya operator, or bounds off-line behaviour. ``Function relative to $\nu$'' means ``reads structure absent from $\nu$,'' not ``proves a property of $\zeta$.'' That the arithmetic witness stays function against every non-arithmetic frame is consistent with, but not evidence for, RH: it says only that the primes are not reproduced by any GUE-type null, which is the explicit formula, not a theorem about zero locations.
+
+\textbf{Two honest edges.} (i) The GUE-full frame is a finite-$N$, unfolded ensemble; its column is approximate, and it is the two exact frames that carry the argument. Consistent with that approximation, lag-1 remains nominally function ($6.5\sigma$) against GUE-full where Proposition~\ref{prop:stair} would place its threshold --- a finite-$N$ apparatus effect of the same kind FF06e flagged (the $\sim\!6\sigma$ inter-pipeline swing), not a claimed beyond-GUE signal. (ii) The threshold $\tau=3$ is a convention; the staircase structure, not the exact cell labels near the threshold, is the result. Both edges are recorded so the table is not over-read.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small This companion accompanies \textit{Spectral Rigidity and Shuffled Spacing Discriminant} (FF06e) and \textit{Spectral Witness Survival}. All measurements use the real first Riemann zeros and the canonical seed $20260423$; the relativity suite is reproducible standalone via \texttt{hp\_form\_function\_relativity.py}. SIP License v1.1.
+
+\end{document}

@@ -17,6 +17,7 @@
 | FF06b' | Spectral Witness Survival and the Character of the Transport Obstruction | Number theory + bridge | 13 | New |
 | FF06e | Spectral Rigidity and Shuffled Spacing Discriminant | Methodology + zeros | 4 | New |
 | FF06f | Density, Positions, Spacings (three-layer decomposition) | Number theory | 4 | New |
+| FF06g | Form/Function Relativity: The Reference Frame Is the Perspective | Methodology + zeros | 4 | New |
 | AISO | Full-Stack Design Invariables + TENT v10 | Engineering / trust | — | Living |
 
 ---
@@ -90,6 +91,7 @@
 | §9 forced values (exact) | K=32/3, charge 1/3, m_H 124.72 | exact SymPy | 1/2 | FF06b' |
 | Form/function split | arith 11,497σ, lag1 97σ FUNCTION; spacing/counting/shape 0.4–1.0σ FORM | full 10⁵, 60 seeds | 1 | FF06e |
 | Effective rank of witness set | 4 on real AND shuffled | N=20k | 1 | FF06e |
+| Form/function **relativity** (frame ladder) | repulsion/shape FUNC vs Poisson (44–50σ) → FORM vs GUE-marginal (0.1–0.2σ); rigidity FORM only vs GUE-full (1.6σ); arith FUNC in every frame (260–832σ) | N=4000, seed 20260423 | 1 | FF06g |
 | Position reconstruction (primes) | corr 0.84, expl.var 0.71→0.82, vs random +122σ | full 10⁵, primes<3000 | 1 (verifies known RvM) | FF06f |
 | Spacing arithmetic selection | none at any ε (cosmetic, then breaks) | M=400–500 | 1 | FF06f |
 

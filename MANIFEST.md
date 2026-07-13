@@ -65,6 +65,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | C8′ complex-character phase (R = 0.99) | **T1** | `hp_phase_test.py` (order-4 mod 5, order-6 mod 7) |
 | C9 finite-prime orthogonality (corr 0.92) | **T1** | `hp_c9_orthogonality.py` |
 | Form/function label is frame-relative (staircase over Poisson ≺ GUE-marginal ≺ GUE-full) | **T1** | `hp_knife_suite/hp_form_function_relativity.py` (repulsion/shape flip FUNC→FORM 44σ→0.1σ; arith FUNC in all frames) |
+| Witness vantage-point count: ~4.8/5 independent instruments; exactly TWO robust FUNCTION faces (arithmetic 830σ + local-order 26σ); no independent third face — candidate tones are von-Mangoldt harmonics or the theory-nulled difference-tones | **T1** | `hp_knife_suite/hp_vantage_points.py` (effective-rank + jitter-response independence, seed 20260423) |
 
 > **Scope:** C5–C9 numerically exhibit the explicit formula (Weil–Guinand) and its
 > Dirichlet generalization — known theorems. The suite is a falsification/calibration

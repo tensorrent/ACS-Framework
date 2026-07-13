@@ -49,6 +49,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | γ = 0.274 (Barbero-Immirzi, Meissner) | **T2** | `extras/barbero_immirzi_correct.py` |
 | θ_QCD = 0, torsion ratio 0:1:4 | **T2** | paper_a |
 | θ₁₃ obstruction / TM1 PMNS | **T2/T3** | `src/paper_a/theta13_obstruction.py`, `tm1_pmns.py` |
+| Riemann curvature = Layer-2 bracket R^{ab}=dω+ω∧ω; Palatini eqs solve ω→Γ→R (Schwarzschild: ∇g=0, R_μν=0, K=48M²/r⁶) | **T1** | `extras/riemann_curvature_palatini.py` |
 
 ### Paper B (Riemann Spectral ACS)  +  HP knife suite
 | Claim | Tier | Evidence |

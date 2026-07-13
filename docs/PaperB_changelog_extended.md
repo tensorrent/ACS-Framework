@@ -122,3 +122,30 @@ What still needs to happen before submission:
 5. **Submission**: Experimental Mathematics is the appropriate venue per the framework's stated target
 
 These are quality-pass tasks, not blockers. The paper compiles, the content is integrated, and the structural extension is complete.
+
+---
+
+## Consistency revision (July 2026) — acoustic framing
+
+A prose/empirics mismatch was corrected. The §8.4 synthesis already stated the
+prime–zero coupling is **Fourier-dual, not resonant**, and the difference-tone
+cross-species channel is falsified (Paper B′ §7.2; Elimination Ledger). But the
+narrative "Acoustic structure" subsection and the "Geometric Vision" appendix still
+described that coupling affirmatively as a resonance and called RH the instrument being
+"in tune." The two readings contradicted each other.
+
+Reframed both Paper B and the consolidated monograph (`Form_Function_and_Asymmetry.tex`)
+so the acoustic prose matches the empirics:
+
+- **Intra-species (real):** the Wronskian combination tones γₖ ± γⱼ are objective
+  nonlinear mixing *within* the zero spectrum (zero–zero); the analogous Form-side
+  structure is the prime–prime correlations. Neither describes the other spectrum.
+- **Cross-species (complementary, not resonant):** the explicit formula
+  ψ(x) + (−Σ xᵖ/ρ) = x − log 2π − ½log(1−x⁻²) is a **cancellation identity** — Form and
+  Function sum to the smooth main term. The zeros are the Fourier dual of the prime
+  fluctuations, not a partner ringing in sympathy.
+- **RH = balance, not tuning:** RH is the condition under which the cancellation is
+  *exact* (Dᵢ = 0), reworded from "perfectly in tune" to "in perfect balance."
+
+No numerical claim, theorem, or falsification record changed; this is a wording pass that
+removes the contradiction between the acoustic metaphor and §8.4 / the Ledger.

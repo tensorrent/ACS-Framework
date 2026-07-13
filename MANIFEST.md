@@ -66,6 +66,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | C9 finite-prime orthogonality (corr 0.92) | **T1** | `hp_c9_orthogonality.py` |
 | Form/function label is frame-relative (staircase over Poisson ≺ GUE-marginal ≺ GUE-full) | **T1** | `hp_knife_suite/hp_form_function_relativity.py` (repulsion/shape flip FUNC→FORM 44σ→0.1σ; arith FUNC in all frames) |
 | Witness vantage-point count: ~4.8/5 independent instruments; exactly TWO robust FUNCTION faces (arithmetic 830σ + local-order 26σ); no independent third face — candidate tones are von-Mangoldt harmonics or the theory-nulled difference-tones | **T1** | `hp_knife_suite/hp_vantage_points.py` (effective-rank + jitter-response independence, seed 20260423) |
+| Arithmetic-face harmonic ladder obeys the p^{−k/2} trace-formula weight: k=2/k=1 line ratio = p^{−1/2} (log-log slope −0.533 vs −0.5, R²=0.98; abs. weight corr 0.998; GUE-marginal null slope +0.20) — the prime periodic orbits appear with r-fold repetitions at the standard amplitude (necessary HP-operator condition, constructs no operator) | **T1** | `hp_knife_suite/hp_harmonic_ladder.py` (100k zeros, seed 20260423) |
 
 > **Scope:** C5–C9 numerically exhibit the explicit formula (Weil–Guinand) and its
 > Dirichlet generalization — known theorems. The suite is a falsification/calibration

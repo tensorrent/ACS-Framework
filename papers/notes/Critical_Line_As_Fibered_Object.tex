@@ -106,8 +106,12 @@ locus.
 \begin{observation}[The two faces are the two sides across the seam]
 The arithmetic face is the \emph{prime side imaged across the seam}: the prime-resonance witness
 is the Euler product showing through the explicit formula, and its harmonic ladder (rung $k$ at
-$k\log p$) carries exactly the convolution weight $p^{-k/2}$ verified to slope $-0.533$ vs $-0.5$
-(\texttt{hp\_harmonic\_ladder.py}). The local-order face is the zero side's own \emph{cardinal}
+$k\log p$) carries exactly the convolution weight $p^{-k/2}$ --- verified as a \emph{repetition
+tower three deep}: the ratio law holds at slope $-0.501$ (rung~2, $R^2\!=\!1.00$, to $p\le 47$)
+and $-1.015$ (rung~3, $R^2\!=\!1.00$, to $p\le 7$ before the $p^{-1}$-suppressed cube line drowns
+in background), with an absolute weight fit of slope $+1.002$ and correlation $1.000$ across the
+$33$ prime-power lines that clear background (\texttt{hp\_harmonic\_ladder.py},
+\texttt{hp\_ladder\_tower.py}). The local-order face is the zero side's own \emph{cardinal}
 structure --- the additive density law (GUE), which every marginal-matched spectrum shares.
 \end{observation}
 
@@ -124,25 +128,33 @@ density crosses, identity does not.
 The functional equation is the symmetry of the completed $\xi(s)$: the reflection
 $s\leftrightarrow 1-s$ across Re$(s)=\half$. On the family of Dirichlet $L$-functions it is the
 involution $\iota:\chi\mapsto\zbar$. Because $\chi$ is a \emph{multiplicative} character it lives
-on the prime face; the twist $T$ paints $\chi(p)^k$ on rung $k$ (verified: complex $\chi$ give a
-diagonal phase-demod table, rung~1 under $\chi$ at $R=0.99$, rung~2 under $\chi^2$; quadratic
-$\chi$ flip rung~1 and leave rung~2 blind, $12/12$; \texttt{hp\_ladder\_character\_twist.py}).
+on the prime face; the twist $T$ paints $\chi(p)^k$ on rung $k$. The rung-1 twist is decisive
+and hardens with sample size (complex $\chi$: $R=0.99$ at $\sim\!150$ generated $L$-zeros;
+quadratic $\chi$: rung-1 sign flips with $\chi(p)$, $12/12$;
+\texttt{hp\_ladder\_character\_twist.py}, \texttt{hp\_twist\_hardened.py}). We keep a first-class
+negative: the rung-2 \emph{phase} magnitude does \emph{not} harden --- the $p^2$-line phase sits
+at the demodulation noise floor even at $\sim\!150$ $L$-zeros (T3), so the twist \emph{structure}
+below is established through the commutator parity law and the resolved rungs, not through the
+rung-2 phase resultant.
 
 \begin{principle}[The commutator is the family's order parameter]\label{prin:comm}
 With $\|[\iota,T]\|_k=\operatorname*{mean}_p|\operatorname{Im}\chi(p)^k|$, one has
 $\|[\iota,T]\|_k=0$ iff $\operatorname{order}(\chi)\mid 2k$; in particular the arithmetic face is
 real on every rung iff $\chi$ is self-dual ($\chi\in\mathrm{Fix}(\iota)$): \textbf{the self-dual
-locus is the commuting locus}, and off it the commutator equals the phase the zeros carry.
+locus is the commuting locus}, and off it the commutator equals the phase the zeros carry. The
+parity law is confirmed to rung~3, including its new statement --- an order-$6$ character commutes
+on rung~3 ($6\mid 6$) while an order-$4$ character does not ($4\nmid 6$) --- with mod-$7$ rung~3
+phase resolving under $\chi^3$ ($R=0.59$, above floor; \texttt{hp\_twist\_hardened.py}).
 \end{principle}
 
 \begin{center}\small
-\begin{tabular}{@{}lccl@{}}
+\begin{tabular}{@{}lcccl@{}}
 \toprule
-fiber & $\|[\iota,T]\|_{1}$ & $\|[\iota,T]\|_{2}$ & locus \\
+fiber & $\|[\iota,T]\|_{1}$ & $\|[\iota,T]\|_{2}$ & $\|[\iota,T]\|_{3}$ & commuting rungs \\
 \midrule
-quadratic $\chi$ ($d=-35,-91,-104$) & $0.000$ & $0.000$ & $\mathrm{Fix}(\iota)$ \\
-$\chi$ mod $5$, order $4$ & $0.643$ & $0.000$ & $\chi^2$ real \\
-$\chi$ mod $7$, order $6$ & $0.619$ & $0.619$ & $\chi^2$ complex \\
+quadratic $\chi$ ($d=-35,-91,-104$) & $0.000$ & $0.000$ & $0.000$ & all ($\mathrm{Fix}(\iota)$) \\
+$\chi$ mod $5$, order $4$ & $0.643$ & $0.000$ & $0.643$ & rung $2$ only \\
+$\chi$ mod $7$, order $6$ & $0.619$ & $0.619$ & $0.000$ & rung $3$ only \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -177,6 +189,16 @@ The seam's defining property has three verified statements, conjectured identica
 bridge is non-traversable.'' One object, three descriptions.
 \end{principle}
 
+Non-traversability is also the shape of the Hilbert--P\'olya obstruction, made quantitative
+(\texttt{hp\_operator\_constraint.py}). Any self-adjoint $H$ with spectrum $\{\gamma_k\}$ must
+carry, simultaneously, \emph{real} periodic-orbit amplitudes ($|\!\operatorname{Im}W|/|\!\operatorname{Re}W|
+= 0.0001$, the prime-face reflection-evenness) and \emph{GUE} level repulsion (measured exponent
+$\beta = 2.00$, the zero-face local law). The first pulls to a time-reversal-invariant ($\beta=1$)
+operator, the second to a time-reversal-broken ($\beta=2$) one: the two sides do not traverse to a
+common naive operator, which is precisely why the problem is open. The seam is crossable for the
+statistics it couples and uncrossable for the operator it would name --- the same one-sidedness,
+one level up.
+
 \section{Why the pieces come in a forced order}\label{sec:assembly}
 
 Because it is one object, the pieces that describe it are a sequence, not a set, and the sequence
@@ -207,16 +229,27 @@ Kept first-class.
         contribution is structural framing and the measured seam constants, not new theorems.
   \item \textbf{Nothing about RH, no operator.} The seam is a spectral fingerprint an operator
         must match; it constructs none and locates no zero.
-  \item \textbf{Data-limited twist.} The rung-2 character twist is directional at $\sim\!55$
-        $L$-zeros (T3); rung-1 twist, quadratic signs, and the seam density law are decisive (T1).
+  \item \textbf{Data-limited rung-2 phase (first-class negative).} Generating $\sim\!150$
+        non-circular $L$-zeros hardened the rung-1 twist ($R=0.99$) and confirmed the parity law
+        to rung~3, but the rung-2 \emph{phase} magnitude stayed at the demodulation noise floor
+        ($\sim\!0.26$) and did \emph{not} improve --- the $p^2$-line phase is below resolution at
+        accessible heights (T3). Reported as a negative, not spun. Rung-1 twist, quadratic and
+        rung-3 signs, the parity law, and the seam density law are decisive (T1).
+  \item \textbf{Tower depth is background-limited.} The $p^{-k/2}$ ladder is resolved to rung~3
+        only for small primes ($p\le 7$ at $10^5$ zeros); the cube line drowns beyond, and rung~4
+        is not attempted. The repetition tower is confirmed to depth~3 where measurable, no deeper.
 \end{itemize}
 
 \section*{Reproducibility}
 Seed $20260423$; Odlyzko's first $10^5$ $\zeta$-zeros and the bundle $L(s,\chi)$ zero files
 (built from $L(s,\chi)$ via Hurwitz zeta, primes never inserted). Scripts:
 \texttt{code/hp\_knife\_suite/hp\_vantage\_points.py} (faces),
-\texttt{hp\_harmonic\_ladder.py} (the $p^{-k/2}$ convolution weight),
-\texttt{hp\_ladder\_character\_twist.py} (the $\chi^k$ twist, reality locus, commutator ledger);
+\texttt{hp\_harmonic\_ladder.py} and \texttt{hp\_ladder\_tower.py} (the $p^{-k/2}$ convolution
+weight, tower to rung~3),
+\texttt{hp\_ladder\_character\_twist.py} and \texttt{hp\_twist\_hardened.py} (the $\chi^k$ twist,
+reality locus, commutator ledger and parity law, hardened on generated $L$-zeros),
+\texttt{hp\_operator\_constraint.py} (the quantified Hilbert--P\'olya wall),
+\texttt{data\_zeros/generate\_more\_lzeros.py} (the non-circular $L$-zero generator);
 \texttt{code/acs\_codebase/src/paper\_c/er\_epr\_algebraic.py} (non-traversability). Nothing here
 proves RH; negatives are kept first-class.
 

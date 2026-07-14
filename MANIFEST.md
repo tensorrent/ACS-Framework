@@ -31,6 +31,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
 | methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
 | methodology/Form_Function_Relativity | FF06g | the form/function label is frame-relative (companion to FF06e) |
+| notes/Critical_Line_As_Fibered_Object | — | critical line as one fiber of a χ-family; reality = fixed locus of the functional-equation involution; GUE per fiber (synthesis of the vantage-point / ladder / twist results) |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
 ---

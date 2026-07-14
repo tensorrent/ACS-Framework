@@ -14,8 +14,8 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small The Critical Line as a Fibered Object}
-\fancyhead[R]{\small Two Faces, One Geometry}
+\fancyhead[L]{\small The Critical Line Is a Seam}
+\fancyhead[R]{\small One Object, Three Descriptions}
 \fancyfoot[C]{\thepage}
 
 \theoremstyle{definition}
@@ -26,248 +26,198 @@
 \newcommand{\zbar}{\overline{\chi}}
 \newcommand{\half}{\tfrac12}
 
-\title{\textbf{The Critical Line as a Fibered Object:\\
-Two Symmetry Classes on Two Faces of One Geometry}}
+\title{\textbf{The Critical Line Is a Seam, Not a Flattening:\\
+Prime and Zero Faces of One Two-Sided Object}}
 \author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
-\date{\small Companion to \textit{Form/Function Relativity} (FF06g) and \textit{Spectral Witness Survival} (Paper B$'$) --- SIP License v1.1}
+\date{\small Companion to \textit{The Geometry Engine}, \textit{The Reversible Flattening},
+Paper~C, and Paper~B$'$ --- SIP License v1.1}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Four machine-verified results about the Riemann and Dirichlet zeros, taken together,
-say the critical line is not a line but a projection. The witness census
-(\texttt{hp\_vantage\_points.py}) finds exactly two \emph{function} faces --- an
-arithmetic face and a local-order face --- over a GUE \emph{silhouette} that every
-spectrum in the universality class shares. The arithmetic face is a prime periodic-orbit
-trace formula: its harmonic ladder (rung $k$ at frequency $k\log p$) obeys the
-$p^{-k/2}$ repetition weight of the Weil explicit formula to a log--log slope of
-$-0.533$ against $-0.5$ ($R^2=0.98$, \texttt{hp\_harmonic\_ladder.py}). That ladder is
-\emph{universal} across $L(s,\chi)$, twisted by $\chi^k$ on rung $k$: for complex
-characters the phase-demodulation table is diagonal (rung~1 aligns under $\chi$,
-$R=0.99$; rung~2 under $\chi^2$), and for quadratic characters rung~1 flips sign with
-$\chi(p)$ while rung~2 is character-blind ($12/12$, \texttt{hp\_ladder\_character\_twist.py}).
-The arithmetic face is also \emph{real} (cosine-only) precisely on the self-dual members
-(\(\zeta\) and the quadratic $\chi$), and phase-carrying off them. We organise these
-facts geometrically. The functional equation is an involution $\chi\mapsto\zbar$ on the
-family of $L$-functions; its fixed locus is exactly the self-dual set where the arithmetic
-face is real, and its off-locus is exactly where the face carries the $\chi^k$ phase. The
-naive puzzle --- real (time-reversal-even) arithmetic coefficients coexisting with unitary
-(GUE, time-reversal-broken) local statistics on a single line --- dissolves once the line
-is read as one \emph{fiber} of a family fibered over character space: reality is the
-fixed-locus coordinate of the involution, GUE is the per-fiber local law, and
-``flattening'' is the act of studying one $L$-function in isolation, which superimposes the
-two onto a single line. The pieces are a forced sequence
-(faces $\prec$ ladder $\prec$ twist $\prec$ involution), not a set, and the object's order
-parameter is the commutator $[\iota,T]$ of the involution with the twist, which vanishes on
-rung $k$ iff $\operatorname{order}(\chi)\mid 2k$ --- the self-dual locus is the commuting
-locus. This is an organising framing of verified numerics, not a theorem:
-it proves nothing about RH, constructs no Hilbert--P\'olya operator, and the rung-2 twist
-is numerically exhibited (T3), not established. Reproducible at seed $20260423$; negatives
-first-class.
+An earlier draft of this note called the critical line a \emph{flattening} --- a projection
+of a higher object down to a line. That is the wrong word in this bundle's own vocabulary and
+the wrong picture. \textit{The Reversible Flattening} fixes ``flattening'' to mean the
+medium-driven compression of a \emph{relational} object to a \emph{scalar}, reversible exactly
+when the compressing operation is a homomorphism; its boundary --- the \emph{seam} --- is
+\emph{convolution}, ``crossable for density and uncrossable for identity.'' \textit{The Geometry
+Engine} then shows the Riemann zeta function is \emph{two-sided}: a prime face (the Euler
+product; multiplicative, \emph{unique} structure --- a factorization is a point) and a zero
+face (the Hadamard product; additive, \emph{cardinal} structure --- the size of a cloud), the
+two joined by the explicit formula and verified in both directions. The critical line is that
+\textbf{seam}, not a shadow of it: a two-dimensional, two-sided object, not a flattened scalar.
+We correct the framing and show our own measurements are an instance of the seam law: the
+arithmetic ``face'' of the zeros ($\sim\!830\sigma$) is the prime side imaged across the seam,
+the local-order face is the zero side's own cardinal structure, and the finding that arithmetic
+couples to \emph{density} ($\sim\!0.99$) while individual spacings stay \emph{generic} (GUE) is
+verbatim ``crossable for density, uncrossable for identity.'' We then argue the one seam has
+three descriptions that the bundle verifies separately and that we conjecture are the same
+object: (i) \emph{convolution} / the explicit formula (arithmetic); (ii) the reflection
+$s\leftrightarrow 1-s$, the functional-equation involution $\iota:\chi\mapsto\zbar$, whose
+commutator with the multiplicative-character twist is the family's order parameter
+(\S\ref{sec:reflect}); and (iii) Paper~C's algebraic ER$\,=\,$EPR \emph{non-traversability},
+$\pi_X([X,Y])=0$ at $|c|<10^{-16}$ --- the bracket opaque from inputs to outputs, which is
+``uncrossable for identity'' in geometric dress. The three-way identification is an organising
+conjecture with three independently verified instances, not a theorem: it proves nothing about
+RH, constructs no Hilbert--P\'olya operator, and Paper~C itself flags the quantitative AdS/CFT
+match as open. Reproducible at seed $20260423$; negatives first-class.
 \end{abstract}
 
-\section{The four verified inputs}\label{sec:inputs}
+\section{The correction: seam, not flattening}\label{sec:correct}
 
-Everything below is downstream of results already tiered in the bundle MANIFEST. We recall
-them as a single table so the geometric reading has a fixed footing.
+\begin{definition}[Flattening and its seam, recalled from \textit{The Reversible Flattening}]
+A \emph{flattening} projects a relational object (a factorization, a divisor lattice) onto a
+scalar; it is \emph{reversible} iff the projecting operation is a homomorphism into the stored
+relational structure. The boundary of reversibility --- the \emph{seam} --- is \emph{convolution}:
+the operation that adds indices while multiplying values, ``crossable for density and uncrossable
+for identity.''
+\end{definition}
 
-\begin{center}
-\small
-\begin{tabular}{@{}p{0.40\textwidth}cp{0.34\textwidth}@{}}
+The critical line is not a flattening under this definition. It is the seam itself. \textit{The
+Geometry Engine} (``Two faces of zeta, T1 both directions'') exhibits the two sides:
+
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
 \toprule
-Result & Tier & Evidence \\
+ & \textbf{Prime face} & \textbf{Zero face} \\
 \midrule
-Two \emph{function} faces (arithmetic $\sim\!830\sigma$, local-order $\sim\!26\sigma$) over a
-GUE silhouette; $\sim\!4.8/5$ independent instruments; no independent third face
-& T1 & \texttt{hp\_vantage\_points.py} \\[4pt]
-Arithmetic face is a prime periodic-orbit trace formula: rung-$k$ line at $k\log p$ with
-weight $p^{-k/2}$ (ratio-law slope $-0.533$ vs $-0.5$, $R^2=0.98$; GUE-marginal null slope $+0.20$)
-& T1 & \texttt{hp\_harmonic\_ladder.py} \\[4pt]
-Ladder universal across $L(s,\chi)$ with a $\chi^k$ twist on rung $k$ (complex $\chi$:
-diagonal phase table, $R_{\text{rung1}}=0.99$; quadratic $\chi$: rung-1 flip, rung-2 blind, $12/12$)
-& T1/T3 & \texttt{hp\_ladder\_character\_twist.py} \\[4pt]
-Arithmetic face is \emph{real} (cosine-only, $\gamma\!\leftrightarrow\!-\gamma$ even) on
-self-dual members; phase-carrying off them
-& T1 & \texttt{hp\_ladder\_character\_twist.py} (Part 2 signs vs Part 1 phases) \\
+product      & Euler $\prod_p (1-p^{-s})^{-1}$ & Hadamard (over zeros) \\
+operation    & multiplicative                  & additive \\
+structure    & \emph{unique} (a point/address) & \emph{cardinal} (size of a cloud) \\
+recovered    & $\psi(x)$ from zeros ($7.83/7.82,\dots$) & zeros from primes ($+122\sigma$) \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\section{The apparent tension}\label{sec:tension}
+The two faces are one object seen through zeta's two products; the explicit formula is the
+dictionary, verified both directions on $10^5$ zeros. So the object is two-sided and
+two-dimensional (a relational shape, not a scalar), and Re$(s)=\half$ is where the sides are
+glued. Calling that a ``flattening to a line'' inverts the picture: nothing was projected down;
+the line is the seam of a shape.
 
-Read on a single line, two of these facts pull in opposite directions.
+\section{Our measurements are the seam law}\label{sec:seamlaw}
 
-\begin{observation}[The naive puzzle]\label{obs:puzzle}
-The arithmetic face of $\zeta$ is \emph{real}: the explicit-formula coefficients
-$\Lambda(n)/\sqrt n$ are real, the witness $F(u)=\sum_\gamma\cos(u\gamma)$ is cosine-only,
-and the structure is even under $\gamma\mapsto-\gamma$. A real, reflection-even orbit sum is
-the fingerprint of a \emph{time-reversal-symmetric} (orthogonal, $\beta=1$) system. Yet the
-\emph{local} statistics of the same zeros are GUE --- unitary, $\beta=2$, time-reversal
-\emph{broken} (level repulsion $\propto s^2$, not $s$). A single line cannot be both
-symmetry classes at once.
+The vantage-point census (\texttt{hp\_vantage\_points.py}) found two \emph{function} faces of the
+zeros --- arithmetic ($\sim\!830\sigma$) and local-order ($\sim\!26\sigma$) --- over a GUE
+silhouette. In seam language these are not two peers: they are the two sides seen from the zero
+locus.
+
+\begin{observation}[The two faces are the two sides across the seam]
+The arithmetic face is the \emph{prime side imaged across the seam}: the prime-resonance witness
+is the Euler product showing through the explicit formula, and its harmonic ladder (rung $k$ at
+$k\log p$) carries exactly the convolution weight $p^{-k/2}$ verified to slope $-0.533$ vs $-0.5$
+(\texttt{hp\_harmonic\_ladder.py}). The local-order face is the zero side's own \emph{cardinal}
+structure --- the additive density law (GUE), which every marginal-matched spectrum shares.
 \end{observation}
 
-The puzzle is only apparent: the two statements live on different axes (a global reflection
-symmetry versus a local level-repulsion exponent), and their coexistence is standard. What
-the framework adds is not a resolution of a contradiction --- there is none --- but a
-\emph{coordinate system} in which the two facts stop looking like they are about the same
-object.
+And the central number our census produced is the seam law itself. \textit{The Reversible
+Flattening} characterises the seam as ``crossable for density, uncrossable for identity.'' Our
+data says: arithmetic couples to the \emph{density} (first-order counts $\sim\!0.99$) while
+individual spacings stay \emph{generic} (GUE; second-order $\sim\!0.6$). That is the seam law,
+re-measured on the zeros without our having named it. The critical line is where multiplication
+(shape, density) meets addition (the cloud, identity), and the coupling is exactly one-sided:
+density crosses, identity does not.
 
-\section{The involution and its fixed locus}\label{sec:involution}
+\section{The reflection is the same seam}\label{sec:reflect}
 
-The decisive datum is that ``reality'' is \emph{not universal} across the family. The
-$\chi^k$-twist experiment shows the arithmetic face is real only for the self-dual members.
+The functional equation is the symmetry of the completed $\xi(s)$: the reflection
+$s\leftrightarrow 1-s$ across Re$(s)=\half$. On the family of Dirichlet $L$-functions it is the
+involution $\iota:\chi\mapsto\zbar$. Because $\chi$ is a \emph{multiplicative} character it lives
+on the prime face; the twist $T$ paints $\chi(p)^k$ on rung $k$ (verified: complex $\chi$ give a
+diagonal phase-demod table, rung~1 under $\chi$ at $R=0.99$, rung~2 under $\chi^2$; quadratic
+$\chi$ flip rung~1 and leave rung~2 blind, $12/12$; \texttt{hp\_ladder\_character\_twist.py}).
 
-\begin{principle}[Reality is the fixed locus of the functional equation]\label{prin:fix}
-The functional equation relates $L(s,\chi)$ to $L(1-s,\zbar)$; on the family of primitive
-Dirichlet characters it is the involution $\iota:\chi\mapsto\zbar$. Its fixed locus is the
-self-dual set $\{\chi=\zbar\}$: the trivial character ($\zeta$) and the real (quadratic)
-characters. The arithmetic face is real \emph{exactly on} $\mathrm{Fix}(\iota)$ and carries a
-non-trivial phase exactly off it. Concretely, rung $k$ carries $\chi(p)^k$; reality is
-$\chi^k\in\mathbb R$ for all $k$, i.e.\ $\chi$ real, i.e.\ $\chi\in\mathrm{Fix}(\iota)$.
+\begin{principle}[The commutator is the family's order parameter]\label{prin:comm}
+With $\|[\iota,T]\|_k=\operatorname*{mean}_p|\operatorname{Im}\chi(p)^k|$, one has
+$\|[\iota,T]\|_k=0$ iff $\operatorname{order}(\chi)\mid 2k$; in particular the arithmetic face is
+real on every rung iff $\chi$ is self-dual ($\chi\in\mathrm{Fix}(\iota)$): \textbf{the self-dual
+locus is the commuting locus}, and off it the commutator equals the phase the zeros carry.
 \end{principle}
 
-This is verified on both sides. On $\mathrm{Fix}(\iota)$ (Part~2, quadratic $\chi$): rung~1
-flips sign with $\chi(p)=\pm1$ and rung~2 is character-blind because $\chi(p)^2=+1$ ---
-$12/12$ across $d=-35,-91,-104$. Off $\mathrm{Fix}(\iota)$ (Part~1, complex $\chi$ of order
-$4$ and $6$): the face is genuinely complex, and the phase climbs the ladder as $\chi^k$ ---
-the demodulation table is diagonal, rung~1 aligning under $\chi$ and rung~2 under $\chi^2$.
-
-Level repulsion is orthogonal to all of this. GUE is the local law on \emph{every} fiber,
-self-dual or not (the single-$L$ statistics are unitary in the Katz--Sarnak sense
-regardless of the character's order). So the ``$\beta=1$ smell'' of
-Observation~\ref{obs:puzzle} was never a local statement: it was the global reflection
-symmetry of the \emph{self-dual} fiber, mistaken for a local repulsion class because both
-were being read off the same flattened line.
-
-\section{The object, not the line}\label{sec:object}
-
-\begin{principle}[The critical line is one fiber of a fibered object]\label{prin:fiber}
-Fix a modulus $q$. The primitive characters mod $q$ index a family of $L$-functions; each
-contributes a critical line carrying the two faces of \S\ref{sec:inputs}. The natural object
-is the total space of this family, fibered over character space, with
-\begin{itemize}[nosep]
-  \item \textbf{ladder coordinate} $k=1,2,3,\dots$ (the repetition rungs, weight $p^{-k/2}$),
-  \item \textbf{character coordinate} $\chi$ (the twist $\chi^k$ on rung $k$),
-  \item \textbf{involution} $\iota:\chi\mapsto\zbar$ (the functional equation), whose fixed
-        locus is the real-arithmetic locus,
-  \item \textbf{per-fiber local law} GUE (unitary), independent of the above.
-\end{itemize}
-A single critical line is the restriction to one $\chi$. ``Flattening'' is that restriction:
-it discards the character and ladder coordinates and the involution structure, and projects
-the arithmetic face and the local law onto one line, where they superimpose and read as the
-tension of Observation~\ref{obs:puzzle}.
-\end{principle}
-
-The picture is reversible in the sense the bundle's \emph{Reversible Flattening} thread
-intends: the flattened line retains enough to reconstruct the missing coordinates. The
-ladder is recovered from the harmonic content of one line (\S\ref{sec:inputs}, rung~2 sits
-at $2\log p$ with weight $p^{-1/2}$); the character coordinate is recovered by demodulation
-($\chi$ from rung~1, $\chi^2$ from rung~2); and the involution is recovered as the reflection
-that fixes the real-arithmetic fibers. What one cannot recover from a single line is the
-\emph{fact} that it is one fiber among many --- which is precisely why studying $\zeta$ in
-isolation makes the two symmetry aspects look like a contradiction.
-
-\section{Assembly order and the commutator law}\label{sec:assembly}
-
-The four inputs of \S\ref{sec:inputs} were not a set --- they were a sequence, and the
-sequence is forced. You cannot measure the $\chi^k$ twist before you have found the ladder
-(there is no rung $k$ to twist); you cannot locate $\mathrm{Fix}(\iota)$ before the twist
-(the fixed locus is \emph{defined} by $\chi^k\in\mathbb R$); you cannot isolate the ladder
-before you have split the faces. The pieces form a strict dependency order
-
-\[
-  \text{faces}\ \prec\ \text{ladder}\ \prec\ \text{twist}\ \prec\ \text{involution},
-\]
-
-and no permutation of it composes into a defined object. This is why ``we had the pieces,
-we just assembled them in the wrong sequence'' is a statement with content and not
-hindsight: the other orders are not merely worse, they are undefined.\footnote{The
-cumulative folk tale is the exact shape: each step exists \emph{to catch} the previous one
-(a spider swallowed to catch the fly, a bird to catch the spider), the order cannot be
-permuted, the cascade is deterministic, and it has a terminal state. ``Why is it this way''
-is always answered by pointing back exactly one step --- the dependency edge.} The bundle
-MANIFEST presents the pieces as a flat table --- a \emph{commutative} list of claims. A flat
-list is precisely the structure that discards ordering; the fibered object is the same
-pieces under a \emph{non-commutative} composition, which the table cannot hold.
-
-The non-commutativity is not only in the assembly. It is in the object, and it carries the
-content.
-
-\begin{principle}[The commutator is the order parameter]\label{prin:comm}
-Let $T$ be the twist (paint $\chi(p)^k$ on rung $k$) and $\iota:\chi\mapsto\zbar$ the
-functional-equation involution. Define the commutator norm on rung $k$,
-\[
-  \big\|[\iota,T]\big\|_k \;=\; \operatorname*{mean}_{p}\big|\operatorname{Im}\chi(p)^k\big|.
-\]
-Then $\big\|[\iota,T]\big\|_k = 0$ iff $\chi(p)^k\in\mathbb R$ for all $p$, iff
-$\operatorname{order}(\chi)\mid 2k$. In particular the arithmetic face is real on \emph{all}
-rungs iff $\chi$ is real iff $\chi\in\mathrm{Fix}(\iota)$: \textbf{the fixed locus is the
-commuting locus}, and off it the commutator equals exactly the phase the zeros carry.
-\end{principle}
-
-This is exhibited in \texttt{hp\_ladder\_character\_twist.py} (Part~3), and it has a rung
-parity the flat picture cannot see:
-
-\begin{center}
-\small
+\begin{center}\small
 \begin{tabular}{@{}lccl@{}}
 \toprule
 fiber & $\|[\iota,T]\|_{1}$ & $\|[\iota,T]\|_{2}$ & locus \\
 \midrule
 quadratic $\chi$ ($d=-35,-91,-104$) & $0.000$ & $0.000$ & $\mathrm{Fix}(\iota)$ \\
-$\chi$ mod $5$, order $4$ & $0.643$ & $0.000$ & off-locus ($\chi^2$ real) \\
-$\chi$ mod $7$, order $6$ & $0.619$ & $0.619$ & off-locus ($\chi^2$ complex) \\
+$\chi$ mod $5$, order $4$ & $0.643$ & $0.000$ & $\chi^2$ real \\
+$\chi$ mod $7$, order $6$ & $0.619$ & $0.619$ & $\chi^2$ complex \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The order-$4$ character commutes on rung $2$ but not rung $1$ ($\chi^2$ is quadratic, hence
-real); the order-$6$ character commutes on neither ($\chi^2$ is order $3$). The commutator
-switches off rung by rung as $\operatorname{order}(\chi)$ divides $2k$ --- a deterministic,
-order-dependent law, invisible to any presentation that lists the pieces without composing
-them.
+The reflection is not a second structure bolted onto the seam --- it \emph{is} the seam read as
+a symmetry. Reality (self-duality) is $[\iota,T]=0$: the value at which reflecting the prime
+face and reading it back agree. The apparent puzzle of \S\ref{sec:seamlaw}'s draft ancestor
+(real, time-reversal-even arithmetic coefficients coexisting with unitary GUE statistics) is not
+a contradiction on a line; it is one side of the seam (the prime face, reflection-even on
+$\mathrm{Fix}(\iota)$) and the other (the zero face, whose local law is GUE), read together
+because they meet there.
 
-\section{Consistency with the ACS transport obstruction}\label{sec:acs}
+\section{The bridge is the same seam}\label{sec:bridge}
 
-Paper~B$'$ finds the spectral transport obstruction ``forced non-abelian'' --- its algebraic
-character is conjugacy-class-valued, not a central scalar. The fibered picture is consistent
-with, and sharpens, that finding: the twist is the character-group action, and the obstruction
-to trivialising it across the family is non-abelian exactly when the character group is
-non-trivially acted on by $\iota$. The self-dual fixed locus is the abelian (real-scalar)
-sublocus; the genuinely complex fibers are where the obstruction acquires its phase. We state
-this as consistency, not derivation: no claim here computes the obstruction from the geometry,
-and the $\iota$-action is exhibited on three moduli, not proved in general.
+Paper~C gives the geometric face. Its \emph{algebraic non-traversability} (Prop., verified in
+\texttt{src/paper\_c/er\_epr\_algebraic.py} at $|c|<10^{-16}$) states that for a bracket output
+$B=[X,Y]$, the trace projection back to an input vanishes identically, $\pi_X(B)=0$: no
+information in $B$ can be traversed back to $X$ by inner-product reconstruction --- the ACS
+bracket is ``opaque from inputs to outputs.'' This is the ER$\,=\,$EPR non-traversable bridge
+derived from the bracket algebra, no bulk geometry invoked.
+
+\begin{principle}[One property, three dresses]\label{prin:one}
+The seam's defining property has three verified statements, conjectured identical:
+\begin{itemize}[nosep]
+  \item \textbf{arithmetic:} convolution is \emph{crossable for density, uncrossable for
+        identity} (\textit{Reversible Flattening}; re-measured $0.99$ vs GUE here);
+  \item \textbf{symmetric:} $\iota$ relates the two sides but $[\iota,T]$ does not vanish off
+        the self-dual locus (\S\ref{sec:reflect});
+  \item \textbf{geometric:} the bracket is \emph{non-traversable}, $\pi_X([X,Y])=0$ (Paper~C).
+\end{itemize}
+``Density crosses, identity does not'' $=$ ``$\iota$ reflects, $[\iota,T]\neq 0$'' $=$ ``the
+bridge is non-traversable.'' One object, three descriptions.
+\end{principle}
+
+\section{Why the pieces come in a forced order}\label{sec:assembly}
+
+Because it is one object, the pieces that describe it are a sequence, not a set, and the sequence
+is forced: you cannot measure the $\chi^k$ twist before the ladder, cannot place
+$\mathrm{Fix}(\iota)$ before the twist, cannot isolate the ladder before splitting the faces ---
+\[
+  \text{faces}\ \prec\ \text{ladder}\ \prec\ \text{twist}\ \prec\ \text{involution}.
+\]
+No permutation composes into a defined object; the other orders are undefined, not merely
+worse.\footnote{The cumulative folk tale is the exact shape: each piece is swallowed \emph{to
+catch} the previous one, the order cannot be permuted, the cascade is deterministic, and it has a
+terminal state. ``Why is it this way'' is answered by pointing back one dependency edge.} The
+bundle MANIFEST lists the pieces as a flat, commutative table; the seam is the same pieces under
+the non-commutative composition the table cannot hold. That is the precise sense of ``we had the
+pieces, we just assembled them in the wrong sequence.''
 
 \section{Scope and limitations}\label{sec:scope}
 
-Kept first-class, per the bundle's standard.
+Kept first-class.
 \begin{itemize}[nosep]
-  \item \textbf{Not a theorem.} \S\S\ref{sec:involution}--\ref{sec:object} organise verified
-        numerics into a coordinate system. The coexistence of self-duality and GUE is standard
-        analytic number theory; the contribution is the mapping (reality $=$ $\mathrm{Fix}(\iota)$;
-        twist $=\chi^k$ on rung $k$), not a new result about $L$-functions.
-  \item \textbf{Nothing about RH, no operator.} The trace-formula reading of the arithmetic
-        face is the Weil explicit formula (known); it constructs no Hilbert--P\'olya operator
-        and proves no zero location. The two faces are a spectral fingerprint a candidate
-        operator must match, not an operator.
-  \item \textbf{Data-limited twist.} The rung-2 phase alignment (Part~1) is directional at
-        $\sim\!55$ $L$-zeros: the diagonal beats its off-diagonal, but the absolute
-        resultant ($0.21$--$0.34$) is modest and the mod-5 case sits near the random floor.
-        Tier T3. The rung-1 twist and the quadratic-sign parity (Part~2) are decisive (T1).
-  \item \textbf{One modulus at a time.} The fibered object is exhibited within fixed-$q$
-        families; the cross-$q$ organisation (conductor as a further coordinate) is not tested here.
+  \item \textbf{The unification is a conjecture.} \S\ref{sec:bridge}'s three-way identification
+        has three \emph{independently verified} instances (seam law, commutator law,
+        non-traversability) but no proof that they are one structure. Paper~C explicitly flags the
+        quantitative AdS/CFT match as ``a research direction, not a derived consequence''; the
+        arithmetic$\leftrightarrow$geometric identification inherits that status.
+  \item \textbf{Classical core.} The two-faced explicit-formula reading (Euler/Hadamard,
+        convolution seam) is classical (FTA, Hadamard product, Riemann--von Mangoldt). The
+        contribution is structural framing and the measured seam constants, not new theorems.
+  \item \textbf{Nothing about RH, no operator.} The seam is a spectral fingerprint an operator
+        must match; it constructs none and locates no zero.
+  \item \textbf{Data-limited twist.} The rung-2 character twist is directional at $\sim\!55$
+        $L$-zeros (T3); rung-1 twist, quadratic signs, and the seam density law are decisive (T1).
 \end{itemize}
 
 \section*{Reproducibility}
-All numerics at canonical seed $20260423$ on Odlyzko's first $10^5$ $\zeta$-zeros and the
-bundle's $L(s,\chi)$ zero files (built from $L(s,\chi)$ via Hurwitz zeta, primes never
-inserted). Scripts, all in \texttt{code/hp\_knife\_suite/}:
-\texttt{hp\_vantage\_points.py} (faces, effective rank),
-\texttt{hp\_harmonic\_ladder.py} (the $p^{-k/2}$ ladder),
-\texttt{hp\_ladder\_character\_twist.py} (the $\chi^k$ twist, the reality locus, and the
-commutator ledger of \S\ref{sec:assembly}).
-Nothing here proves RH; negatives are kept first-class.
+Seed $20260423$; Odlyzko's first $10^5$ $\zeta$-zeros and the bundle $L(s,\chi)$ zero files
+(built from $L(s,\chi)$ via Hurwitz zeta, primes never inserted). Scripts:
+\texttt{code/hp\_knife\_suite/hp\_vantage\_points.py} (faces),
+\texttt{hp\_harmonic\_ladder.py} (the $p^{-k/2}$ convolution weight),
+\texttt{hp\_ladder\_character\_twist.py} (the $\chi^k$ twist, reality locus, commutator ledger);
+\texttt{code/acs\_codebase/src/paper\_c/er\_epr\_algebraic.py} (non-traversability). Nothing here
+proves RH; negatives are kept first-class.
 
 \end{document}

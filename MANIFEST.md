@@ -31,6 +31,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
 | methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
 | methodology/Form_Function_Relativity | FF06g | the form/function label is frame-relative (companion to FF06e) |
+| notes/Scaled_Invariance_Infinity_Zero | — | resolution-relative counting: ∞ and 0 are one interval read at two units; count invariant under joint (interval,unit) rescaling, exact; set cardinality untouched (T1) |
 | notes/Critical_Line_As_Fibered_Object | — | the critical line is the two-sided SEAM (prime/Euler face ↔ zero/Hadamard face joined by convolution = explicit formula), NOT a flattening; one object in three verified descriptions — convolution seam law, s↔1−s reflection (commutator [ι,T]), Paper C ER=EPR non-traversability |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
@@ -92,6 +93,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | N2 — general grading selection theorem | **T2** | `code/notes_verification/test_signature_selection.py` (bilinearity + weighted max-cut) |
 | N2 — G₂ exceptional-algebra counterexample | **T2** | same (cluster coherence fails for multi-length root clusters) |
 | N3 — Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
+| Scaled invariance — resolution-relative count staircase 0,9,99,999,9999 on (1,2); joint (interval,unit) rescaling invariant (0/2×10⁵), interval-only scaling breaks it, invariant is width/δ (50000/50000); set cardinality untouched | **T1** | `code/notes_verification/test_scaled_invariance.py` |
 
 > **N3 fresh-eyes note (2026-06-27):** the Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles's eigenvalues are bounded
 > dynamical modes (|λ| ≈ 0.01–0.3), **not** an unbounded spectrum claimed to *be* the

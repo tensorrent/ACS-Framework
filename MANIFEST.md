@@ -31,6 +31,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
 | methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
 | methodology/Form_Function_Relativity | FF06g | the form/function label is frame-relative (companion to FF06e) |
+| methodology/Scaled_Invariance_of_Infinity_and_Zero | FF06h | ∞/0 as resolution-relative counting labels; joint-scaling invariant is width/δ (companion to FF06g) |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
 
 ---
@@ -87,6 +88,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | N2 — general grading selection theorem | **T2** | `code/notes_verification/test_signature_selection.py` (bilinearity + weighted max-cut) |
 | N2 — G₂ exceptional-algebra counterexample | **T2** | same (cluster coherence fails for multi-length root clusters) |
 | N3 — Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
+| FF06h — ∞/0 counting label is resolution-relative; joint-scaling invariance N_δ[a,b]=N_λδ[λa,λb] exact (0/2×10⁵), invariant is width/δ | **T1** | `code/notes_verification/test_scaled_invariance.py` (interior of (1,2): 0,9,99,999,9999 as δ→0; A–D all PASS). Scope: counting under resolution, NOT set cardinality — Cantor untouched |
 
 > **N3 fresh-eyes note (2026-06-27):** the Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles's eigenvalues are bounded
 > dynamical modes (|λ| ≈ 0.01–0.3), **not** an unbounded spectrum claimed to *be* the

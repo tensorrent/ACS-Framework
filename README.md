@@ -24,7 +24,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   ├── methodology/                  # Empirical tools and frameworks
 │   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
 │   │   ├── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
-│   │   └── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
+│   │   ├── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
+│   │   └── Scaled_Invariance_of_Infinity_and_Zero.tex # FF06h: ∞/0 are resolution-relative counting labels; the joint-scaling invariant is width/δ (companion to FF06g)
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
 │   │   ├── The_Geometry_Engine.tex   # Reference engine specification
@@ -43,7 +44,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── src/                      # Source implementations for Papers A, B, and C
 │   │   ├── tests/                    # Pytest verification suite (42 passing assertions)
 │   │   └── extras/                   # Specialized standalone verification scripts
-│   ├── notes_verification/           # Companion scripts for Notes N1, N2, and N3
+│   ├── notes_verification/           # Companion scripts for Notes N1, N2, N3, and FF06h (scaled invariance)
 │   └── hp_knife_suite/               # Hilbert-Pólya shuffle-knife verification suite
 │       └── data_zeros/               # Extracted zeros and generation scripts
 │
@@ -115,6 +116,13 @@ python hp_signed_lfunction.py  # Checks zeta weights and quadratic L-function si
 python hp_phase_test.py        # Validates complex character phases (demodulation R = 0.99)
 python hp_form_function_relativity.py         # Form/function label is frame-relative (2 exact frames, ~2s)
 python hp_form_function_relativity.py --full  # adds the GUE-full(bulk) rung (dense diagonalisation, ~7 min)
+```
+
+### 4. Companion Note Verifications
+Standalone exact-arithmetic checks for the methodology notes (standard library only):
+
+```bash
+python code/notes_verification/test_scaled_invariance.py  # FF06h: ∞/0 are resolution-relative; joint-scaling invariant width/δ (A–D PASS, <1s)
 ```
 
 ---

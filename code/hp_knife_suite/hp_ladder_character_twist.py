@@ -150,6 +150,36 @@ for d, fn in quad_cases:
     print(f"  rung1 flip-with-chi match : {hit1}/{tot1}")
     print(f"  rung2 stays-negative match: {hit2}/{tot2}")
 
+# =====================================================================================
+print("\n" + "="*72)
+print("PART 3  --  COMMUTATOR LEDGER: reality = [iota, T] = 0 = self-dual")
+print("="*72)
+# The functional equation is the involution iota: chi -> chi-bar. The twist T paints
+# chi(p)^k on rung k (verified in Parts 1-2). Their commutator on a fiber is the failure
+# of the arithmetic face to be real: || [iota,T] ||_k = mean_p | Im chi(p)^k |. It is
+# zero exactly when chi(p)^k is real for all k, i.e. chi real, i.e. chi in Fix(iota).
+# This is the ORDER PARAMETER of the family, read off the twist the zeros confirmed above.
+print("  ||[iota,T]||_k = mean_p |Im chi(p)^k|   (0 <=> face real <=> self-dual)")
+print(f"  {'fiber':>22} {'k=1':>8} {'k=2':>8}   {'locus':>14}")
+def commutator_norm(chi, k, primes):
+    vals = [abs((chi(int(p))**k).imag) for p in primes if chi(int(p)) != 0]
+    return float(np.mean(vals))
+# quadratic (self-dual) fibers: chi real -> defect 0 on every rung
+for d, _ in quad_cases:
+    chi = lambda p, d=d: chi_quad(d, p) + 0j
+    c1 = commutator_norm(chi, 1, PRIMES); c2 = commutator_norm(chi, 2, PRIMES)
+    locus = "Fix(iota)" if (c1 < 1e-9 and c2 < 1e-9) else "off-locus"
+    print(f"  {'chi_'+str(d)+' (quadratic)':>22} {c1:>8.3f} {c2:>8.3f}   {locus:>14}")
+# complex fibers: chi not real -> defect > 0, and rung parity differs
+for title, fn, q, gen, order in complex_cases:
+    chi = build_chi(q, gen, order)
+    c1 = commutator_norm(chi, 1, PRIMES); c2 = commutator_norm(chi, 2, PRIMES)
+    locus = "Fix(iota)" if (c1 < 1e-9 and c2 < 1e-9) else "off-locus"
+    tag = f"chi mod {q} ord {order}"
+    print(f"  {tag:>22} {c1:>8.3f} {c2:>8.3f}   {locus:>14}")
+print("  => self-dual fibers commute ([iota,T]=0, real face); complex fibers do not.")
+print("     The commutator IS the phase the zeros carry -- the family's order parameter.")
+
 print("\n" + "="*72)
 print("""READING:
   PART 1 -- if the 2x2 phase table is diagonal, the L-function ladder carries chi^k on

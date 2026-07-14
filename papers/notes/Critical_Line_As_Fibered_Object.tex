@@ -57,7 +57,11 @@ naive puzzle --- real (time-reversal-even) arithmetic coefficients coexisting wi
 is read as one \emph{fiber} of a family fibered over character space: reality is the
 fixed-locus coordinate of the involution, GUE is the per-fiber local law, and
 ``flattening'' is the act of studying one $L$-function in isolation, which superimposes the
-two onto a single line. This is an organising framing of verified numerics, not a theorem:
+two onto a single line. The pieces are a forced sequence
+(faces $\prec$ ladder $\prec$ twist $\prec$ involution), not a set, and the object's order
+parameter is the commutator $[\iota,T]$ of the involution with the twist, which vanishes on
+rung $k$ iff $\operatorname{order}(\chi)\mid 2k$ --- the self-dual locus is the commuting
+locus. This is an organising framing of verified numerics, not a theorem:
 it proves nothing about RH, constructs no Hilbert--P\'olya operator, and the rung-2 twist
 is numerically exhibited (T3), not established. Reproducible at seed $20260423$; negatives
 first-class.
@@ -165,6 +169,66 @@ that fixes the real-arithmetic fibers. What one cannot recover from a single lin
 \emph{fact} that it is one fiber among many --- which is precisely why studying $\zeta$ in
 isolation makes the two symmetry aspects look like a contradiction.
 
+\section{Assembly order and the commutator law}\label{sec:assembly}
+
+The four inputs of \S\ref{sec:inputs} were not a set --- they were a sequence, and the
+sequence is forced. You cannot measure the $\chi^k$ twist before you have found the ladder
+(there is no rung $k$ to twist); you cannot locate $\mathrm{Fix}(\iota)$ before the twist
+(the fixed locus is \emph{defined} by $\chi^k\in\mathbb R$); you cannot isolate the ladder
+before you have split the faces. The pieces form a strict dependency order
+
+\[
+  \text{faces}\ \prec\ \text{ladder}\ \prec\ \text{twist}\ \prec\ \text{involution},
+\]
+
+and no permutation of it composes into a defined object. This is why ``we had the pieces,
+we just assembled them in the wrong sequence'' is a statement with content and not
+hindsight: the other orders are not merely worse, they are undefined.\footnote{The
+cumulative folk tale is the exact shape: each step exists \emph{to catch} the previous one
+(a spider swallowed to catch the fly, a bird to catch the spider), the order cannot be
+permuted, the cascade is deterministic, and it has a terminal state. ``Why is it this way''
+is always answered by pointing back exactly one step --- the dependency edge.} The bundle
+MANIFEST presents the pieces as a flat table --- a \emph{commutative} list of claims. A flat
+list is precisely the structure that discards ordering; the fibered object is the same
+pieces under a \emph{non-commutative} composition, which the table cannot hold.
+
+The non-commutativity is not only in the assembly. It is in the object, and it carries the
+content.
+
+\begin{principle}[The commutator is the order parameter]\label{prin:comm}
+Let $T$ be the twist (paint $\chi(p)^k$ on rung $k$) and $\iota:\chi\mapsto\zbar$ the
+functional-equation involution. Define the commutator norm on rung $k$,
+\[
+  \big\|[\iota,T]\big\|_k \;=\; \operatorname*{mean}_{p}\big|\operatorname{Im}\chi(p)^k\big|.
+\]
+Then $\big\|[\iota,T]\big\|_k = 0$ iff $\chi(p)^k\in\mathbb R$ for all $p$, iff
+$\operatorname{order}(\chi)\mid 2k$. In particular the arithmetic face is real on \emph{all}
+rungs iff $\chi$ is real iff $\chi\in\mathrm{Fix}(\iota)$: \textbf{the fixed locus is the
+commuting locus}, and off it the commutator equals exactly the phase the zeros carry.
+\end{principle}
+
+This is exhibited in \texttt{hp\_ladder\_character\_twist.py} (Part~3), and it has a rung
+parity the flat picture cannot see:
+
+\begin{center}
+\small
+\begin{tabular}{@{}lccl@{}}
+\toprule
+fiber & $\|[\iota,T]\|_{1}$ & $\|[\iota,T]\|_{2}$ & locus \\
+\midrule
+quadratic $\chi$ ($d=-35,-91,-104$) & $0.000$ & $0.000$ & $\mathrm{Fix}(\iota)$ \\
+$\chi$ mod $5$, order $4$ & $0.643$ & $0.000$ & off-locus ($\chi^2$ real) \\
+$\chi$ mod $7$, order $6$ & $0.619$ & $0.619$ & off-locus ($\chi^2$ complex) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The order-$4$ character commutes on rung $2$ but not rung $1$ ($\chi^2$ is quadratic, hence
+real); the order-$6$ character commutes on neither ($\chi^2$ is order $3$). The commutator
+switches off rung by rung as $\operatorname{order}(\chi)$ divides $2k$ --- a deterministic,
+order-dependent law, invisible to any presentation that lists the pieces without composing
+them.
+
 \section{Consistency with the ACS transport obstruction}\label{sec:acs}
 
 Paper~B$'$ finds the spectral transport obstruction ``forced non-abelian'' --- its algebraic
@@ -202,7 +266,8 @@ bundle's $L(s,\chi)$ zero files (built from $L(s,\chi)$ via Hurwitz zeta, primes
 inserted). Scripts, all in \texttt{code/hp\_knife\_suite/}:
 \texttt{hp\_vantage\_points.py} (faces, effective rank),
 \texttt{hp\_harmonic\_ladder.py} (the $p^{-k/2}$ ladder),
-\texttt{hp\_ladder\_character\_twist.py} (the $\chi^k$ twist and the reality locus).
+\texttt{hp\_ladder\_character\_twist.py} (the $\chi^k$ twist, the reality locus, and the
+commutator ledger of \S\ref{sec:assembly}).
 Nothing here proves RH; negatives are kept first-class.
 
 \end{document}

@@ -458,3 +458,31 @@ computation of this form can single out an electromagnetic residue
 direction** — any "EM as degradation" mechanism must be sought in the
 representation/embedding where charges act, not in the adjoint algebra.
 That boundary is the space this kill collapses.
+
+### Condensate-as-collapse ("the slag of the furnace") — **SURVIVED, all four forms** · T1 machine / exact
+
+Clarified conjecture (image/omega-limit dual of the killed F-6 kernel form):
+matter/condensate is the COLLAPSED terminal output of the torsion flow, not
+the protected base. Kill test:
+`code/acs_codebase/extras/test_conjecture_condensate_collapse.py` (exact
+rationals; four independently kill-able sub-claims, all stated first).
+
+- **C1 SURVIVED** — ad_{T_BL} is semisimple over Q with exact spectrum
+  {−4/3 (×3), 0 (×9), +4/3 (×3)}; every direction outside the exact 12-dim
+  exceptional subspace V0⊕V− collapses projectively onto the 3-dim dominant
+  sector V+. The terminal form is universal.
+- **C2 SURVIVED** — V+ is abelian and nilpotent of order 2 (A·B = 0):
+  the collapsed sector is terminal; it cannot regenerate structure.
+- **C3 SURVIVED** — in the fermion fundamental 4, V+ consists EXACTLY of the
+  three lepton→quark transition operators, and the collapse rate +4/3 equals
+  the B−L charge transferred per transition (1/3 − (−1) = 4/3), exactly.
+- **C4 SURVIVED** — the flow-invariant (uncollapsed) sector V0 is EXACTLY
+  sl(3) ⊕ u(1)_{B−L}: the gauge structure is the furnace; it is never slag.
+
+**Scope boundary (enforced in the script):** these are exact statements about
+projective alignment of a linear hyperbolic flow on sl(4,R) and its action on
+the fundamental 4. "Collapse" here is NOT decoherence/measurement; nothing is
+established about physical spacetime or cosmology. The names correspond
+structurally; the physics identification remains conjecture (T3 narrative at
+best). What is locked: the flow sorts the algebra into gauge-invariant vs
+matter-transitional sectors with the 4/3 = Δ(B−L) identity — machine-verified.

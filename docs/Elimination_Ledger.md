@@ -421,3 +421,96 @@ overshooting the floor by ~8.5× at d=2.
 The *scaling law* T_min=(2πe)^d/q is **FALSIFIED (T4)** in its degree dependence — an
 overclaim in LF01's T_min correction, surfaced exactly where the strip-mine predicted the
 discriminator would be (d>1). Conductor (q) scaling at d=1 holds. Q3 closed.
+
+---
+
+## KILLS LOGGED (2026-07-17)
+
+### EM-as-torsion-annihilator ("electromagnetism is the fundamental degradation") — **KILLED, both forms** · T1 machine / T4 falsified
+
+Conjecture (stated before computation): the electromagnetic direction
+Q = J3 + K3 + T_BL/2 is the unique direction in sl(4,R) annihilated by the
+Palatini torsion sector — strong form against the full 9-dim sector
+T = [Sym0(4), o(4)], weak form against the B−L vacuum direction alone.
+Kill test: `code/acs_codebase/extras/test_conjecture_em_torsion_annihilator.py`
+(exact rationals, no floats in any decision).
+
+**Strong form KILLED.** T = Sym0(4) exactly (dim 9 = 9, containment verified),
+and the centralizer of Sym0(4) in sl(4) is **{0}**: only multiples of the
+identity commute with all of Sym0(4), and tracelessness removes those. The
+full torsion sector annihilates *nothing* — no direction, EM or otherwise,
+is a torsion-null residue of the full sector.
+
+**Weak form KILLED.** Q (in the geometric J3+K3+T_BL/2 embedding) is **not**
+in ker(ad_{T_BL}): its J3+K3 component carries the A(0,3) col-lep generator,
+which T_BL moves. The kernel itself is the 9-dim sl(3)⊕u(1) block — so even
+the diagonal-embedded photon (∝ T_BL) shares "torsion-null" with every colour
+direction. Neither embedding gives uniqueness.
+
+**Positive residue (the survivor, machine-verified exact).** The canonical
+torsion-coupling operator C = Σ_a ad_{T_a}†ad_{T_a} (orthonormal torsion
+basis, Frobenius metric) has **exactly two eigenvalues on sl(4)**:
+**4** (multiplicity 9, the symmetric/torsion block) and **6** (multiplicity 6,
+the o(4) Lorentz block). C is block-scalar: the only structure torsion
+coupling resolves at the algebra level is the Palatini split itself. No
+direction inside either block is graded, so **no algebra-level coupling
+computation of this form can single out an electromagnetic residue
+direction** — any "EM as degradation" mechanism must be sought in the
+representation/embedding where charges act, not in the adjoint algebra.
+That boundary is the space this kill collapses.
+
+### Condensate-as-collapse ("the slag of the furnace") — **SURVIVED, all four forms** · T1 machine / exact
+
+Clarified conjecture (image/omega-limit dual of the killed F-6 kernel form):
+matter/condensate is the COLLAPSED terminal output of the torsion flow, not
+the protected base. Kill test:
+`code/acs_codebase/extras/test_conjecture_condensate_collapse.py` (exact
+rationals; four independently kill-able sub-claims, all stated first).
+
+- **C1 SURVIVED** — ad_{T_BL} is semisimple over Q with exact spectrum
+  {−4/3 (×3), 0 (×9), +4/3 (×3)}; every direction outside the exact 12-dim
+  exceptional subspace V0⊕V− collapses projectively onto the 3-dim dominant
+  sector V+. The terminal form is universal.
+- **C2 SURVIVED** — V+ is abelian and nilpotent of order 2 (A·B = 0):
+  the collapsed sector is terminal; it cannot regenerate structure.
+- **C3 SURVIVED** — in the fermion fundamental 4, V+ consists EXACTLY of the
+  three lepton→quark transition operators, and the collapse rate +4/3 equals
+  the B−L charge transferred per transition (1/3 − (−1) = 4/3), exactly.
+- **C4 SURVIVED** — the flow-invariant (uncollapsed) sector V0 is EXACTLY
+  sl(3) ⊕ u(1)_{B−L}: the gauge structure is the furnace; it is never slag.
+
+**Scope boundary (enforced in the script):** these are exact statements about
+projective alignment of a linear hyperbolic flow on sl(4,R) and its action on
+the fundamental 4. "Collapse" here is NOT decoherence/measurement; nothing is
+established about physical spacetime or cosmology. The names correspond
+structurally; the physics identification remains conjecture (T3 narrative at
+best). What is locked: the flow sorts the algebra into gauge-invariant vs
+matter-transitional sectors with the 4/3 = Δ(B−L) identity — machine-verified.
+
+### Hypercone-through-the-slice (projection picture) — **SURVIVED, all three forms** · T1 exact (C1,C2) / T3 measured (C3)
+
+Picture: the 15-dim sl(4) cloud is the object; experience is a slice; a
+higher-dimensional cone intersecting the slice is seen as evolving
+spheroids/hyperbolae. Kill test:
+`code/acs_codebase/extras/test_conjecture_hypercone_projection.py`.
+
+- **C1 SURVIVED (exact)** — real 2-param slice x·D + y·S03 in the fermion
+  4-rep has nonzero eigenvalue sheets exactly ±√(x²+y²): a true double cone.
+  Any 1-param sub-slice sees the hyperbola 2√(t²+g²) — the cone poking
+  through, apex off-slice. Degeneracy codim 2 → β = 1 class.
+- **C2 SURVIVED (exact)** — adding the chirality direction z·(i·A03) (the
+  same i the J-map sl(3)→su(3) introduces, Prop 9.7) gives sheets exactly
+  ±√(x²+y²+z²): degeneracy codim 3 → β = 2 class. The repulsion exponent
+  is a DIMENSION COUNTER: β = codim − 1.
+- **C3 SURVIVED (measured)** — the repo's 100k Riemann zeros, unfolded,
+  give fitted small-spacing exponent **β = 2.019** (Poisson 0 / GOE 1 /
+  GUE 2). The shadow carries the imprint of a codimension-3 conical
+  structure — the complex/chirality class.
+
+**Scope boundary (enforced in-script):** the cone is in parameter space,
+not physical space. Not established: that 3-space is a slice of the cloud,
+that the zeros are such an operator's spectrum (open problem #2 stands),
+or anything about spacetime/matter. What is locked: β counts hidden cone
+dimensions exactly, and the zeros' measured β ≈ 2 selects the chirality
+class — consistent with, and giving countable content to, the projection
+picture.

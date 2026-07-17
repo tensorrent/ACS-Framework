@@ -77,8 +77,10 @@ print(f"  A: orbit amplitudes real (|Im|/|Re| = {realness:.3f} ~ 0)  -> pulls to
 print(f"  B: measured repulsion beta = {beta:.2f} ~ 2               -> beta=2 (T-broken)")
 print("""  A real-symmetric (beta=1) operator satisfies A and fails B; a generic complex-Hermitian
   (beta=2) operator satisfies B with complex amplitudes and fails A. The Riemann operator must
-  be time-reversal-BROKEN yet carry REAL orbit amplitudes -- realised in physics only by special
-  systems (e.g. a T-breaking with an antiunitary symmetry whose square is +1). No natural
-  differential/dynamical operator with this exact signature is known; that gap is the open
-  Hilbert-Polya problem, here stated as two measured numbers rather than a slogan.
+  be time-reversal-BROKEN yet carry REAL orbit amplitudes. Resolution class (see
+  hp_wall_resolution_class.py): the two constraints coexist exactly under an ANTI-commuting
+  antiunitary symmetry (chiral/BdG-type, C H* C^-1 = -H), which pairs the spectrum (making the
+  witness real) while preserving codim-3 degeneracies (beta=2); a COMMUTING antiunitary would
+  force beta=1. The class is pinned; the arithmetic realisation (orbit lengths log p) is the
+  remaining open Hilbert-Polya content, here stated as measured numbers rather than a slogan.
   Constructs no operator; proves nothing about RH.""")

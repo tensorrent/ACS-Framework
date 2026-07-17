@@ -194,10 +194,28 @@ Non-traversability is also the shape of the Hilbert--P\'olya obstruction, made q
 carry, simultaneously, \emph{real} periodic-orbit amplitudes ($|\!\operatorname{Im}W|/|\!\operatorname{Re}W|
 = 0.0001$, the prime-face reflection-evenness) and \emph{GUE} level repulsion (measured exponent
 $\beta = 2.00$, the zero-face local law). The first pulls to a time-reversal-invariant ($\beta=1$)
-operator, the second to a time-reversal-broken ($\beta=2$) one: the two sides do not traverse to a
-common naive operator, which is precisely why the problem is open. The seam is crossable for the
-statistics it couples and uncrossable for the operator it would name --- the same one-sidedness,
-one level up.
+operator, the second to a time-reversal-broken ($\beta=2$) one.
+
+The companion hypercone test (\texttt{test\_conjecture\_hypercone\_projection.py}, branch
+\texttt{claude/torsion-topological-condensation-h6v40k}) supplies the geometry that resolves the
+tension: eigenvalue degeneracies of Hermitian families are \emph{cones}, the repulsion exponent
+counts the cone's codimension ($\beta = \mathrm{codim} - 1$), and the chirality direction --- the
+$i$ the J-map introduces --- is exactly what buys the third dimension (measured on the zeros:
+$\beta = 2.019$, a codim-3 shadow). \texttt{hp\_wall\_resolution\_class.py} then establishes,
+exactly and by ensemble, that the two wall constraints \emph{coexist} precisely in the class of
+families carrying an \emph{anti-commuting} antiunitary symmetry ($C H^{*} C^{-1} = -H$, verified
+with $C^2=-1$ on the hypercone's active block): the anti-commuting $C$ pairs the spectrum
+$\gamma\leftrightarrow-\gamma$ --- making the full-spectrum witness machine-real --- while
+preserving the codim-3 degeneracy ($\beta=2$); a \emph{commuting} antiunitary instead confines the
+family to the real slice $z=0$ (codim~2, $\beta=1$). Among GOE / GUE / chiral ensembles, only the
+chiral class passes both constraints ($\beta=2.01$, $|\!\operatorname{Im}W|/|W| = 10^{-12.0}$,
+pairing defect $10^{-12.2}$). In seam coordinates: \textbf{the amplitudes live on the real slice
+(the self-dual locus $\mathrm{Fix}(\iota)$); the repulsion counts the hidden imaginary direction
+--- the phase direction $[\iota,T]$ measures}. The wall is a class selection, not a contradiction:
+$\beta$ is the dimension counter of the projection, and ``the line is a slice of the cone.'' What
+remains open --- unchanged --- is the arithmetic realisation: an operator in this class whose orbit
+lengths are $\{\log p\}$ with the $p^{-k/2}$ weights. The class is pinned; the primes are not yet
+in it.
 
 \section{Why the pieces come in a forced order}\label{sec:assembly}
 
@@ -249,6 +267,8 @@ weight, tower to rung~3),
 \texttt{hp\_ladder\_character\_twist.py} and \texttt{hp\_twist\_hardened.py} (the $\chi^k$ twist,
 reality locus, commutator ledger and parity law, hardened on generated $L$-zeros),
 \texttt{hp\_operator\_constraint.py} (the quantified Hilbert--P\'olya wall),
+\texttt{hp\_wall\_resolution\_class.py} (the wall's resolution class: anti-commuting antiunitary,
+exact miniature + GOE/GUE/chiral discriminator),
 \texttt{data\_zeros/generate\_more\_lzeros.py} (the non-circular $L$-zero generator);
 \texttt{code/acs\_codebase/src/paper\_c/er\_epr\_algebraic.py} (non-traversability). Nothing here
 proves RH; negatives are kept first-class.

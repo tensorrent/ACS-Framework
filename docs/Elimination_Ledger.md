@@ -421,3 +421,40 @@ overshooting the floor by ~8.5× at d=2.
 The *scaling law* T_min=(2πe)^d/q is **FALSIFIED (T4)** in its degree dependence — an
 overclaim in LF01's T_min correction, surfaced exactly where the strip-mine predicted the
 discriminator would be (d>1). Conductor (q) scaling at d=1 holds. Q3 closed.
+
+---
+
+## KILLS LOGGED (2026-07-17)
+
+### EM-as-torsion-annihilator ("electromagnetism is the fundamental degradation") — **KILLED, both forms** · T1 machine / T4 falsified
+
+Conjecture (stated before computation): the electromagnetic direction
+Q = J3 + K3 + T_BL/2 is the unique direction in sl(4,R) annihilated by the
+Palatini torsion sector — strong form against the full 9-dim sector
+T = [Sym0(4), o(4)], weak form against the B−L vacuum direction alone.
+Kill test: `code/acs_codebase/extras/test_conjecture_em_torsion_annihilator.py`
+(exact rationals, no floats in any decision).
+
+**Strong form KILLED.** T = Sym0(4) exactly (dim 9 = 9, containment verified),
+and the centralizer of Sym0(4) in sl(4) is **{0}**: only multiples of the
+identity commute with all of Sym0(4), and tracelessness removes those. The
+full torsion sector annihilates *nothing* — no direction, EM or otherwise,
+is a torsion-null residue of the full sector.
+
+**Weak form KILLED.** Q (in the geometric J3+K3+T_BL/2 embedding) is **not**
+in ker(ad_{T_BL}): its J3+K3 component carries the A(0,3) col-lep generator,
+which T_BL moves. The kernel itself is the 9-dim sl(3)⊕u(1) block — so even
+the diagonal-embedded photon (∝ T_BL) shares "torsion-null" with every colour
+direction. Neither embedding gives uniqueness.
+
+**Positive residue (the survivor, machine-verified exact).** The canonical
+torsion-coupling operator C = Σ_a ad_{T_a}†ad_{T_a} (orthonormal torsion
+basis, Frobenius metric) has **exactly two eigenvalues on sl(4)**:
+**4** (multiplicity 9, the symmetric/torsion block) and **6** (multiplicity 6,
+the o(4) Lorentz block). C is block-scalar: the only structure torsion
+coupling resolves at the algebra level is the Palatini split itself. No
+direction inside either block is graded, so **no algebra-level coupling
+computation of this form can single out an electromagnetic residue
+direction** — any "EM as degradation" mechanism must be sought in the
+representation/embedding where charges act, not in the adjoint algebra.
+That boundary is the space this kill collapses.

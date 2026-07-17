@@ -486,3 +486,31 @@ established about physical spacetime or cosmology. The names correspond
 structurally; the physics identification remains conjecture (T3 narrative at
 best). What is locked: the flow sorts the algebra into gauge-invariant vs
 matter-transitional sectors with the 4/3 = Δ(B−L) identity — machine-verified.
+
+### Hypercone-through-the-slice (projection picture) — **SURVIVED, all three forms** · T1 exact (C1,C2) / T3 measured (C3)
+
+Picture: the 15-dim sl(4) cloud is the object; experience is a slice; a
+higher-dimensional cone intersecting the slice is seen as evolving
+spheroids/hyperbolae. Kill test:
+`code/acs_codebase/extras/test_conjecture_hypercone_projection.py`.
+
+- **C1 SURVIVED (exact)** — real 2-param slice x·D + y·S03 in the fermion
+  4-rep has nonzero eigenvalue sheets exactly ±√(x²+y²): a true double cone.
+  Any 1-param sub-slice sees the hyperbola 2√(t²+g²) — the cone poking
+  through, apex off-slice. Degeneracy codim 2 → β = 1 class.
+- **C2 SURVIVED (exact)** — adding the chirality direction z·(i·A03) (the
+  same i the J-map sl(3)→su(3) introduces, Prop 9.7) gives sheets exactly
+  ±√(x²+y²+z²): degeneracy codim 3 → β = 2 class. The repulsion exponent
+  is a DIMENSION COUNTER: β = codim − 1.
+- **C3 SURVIVED (measured)** — the repo's 100k Riemann zeros, unfolded,
+  give fitted small-spacing exponent **β = 2.019** (Poisson 0 / GOE 1 /
+  GUE 2). The shadow carries the imprint of a codimension-3 conical
+  structure — the complex/chirality class.
+
+**Scope boundary (enforced in-script):** the cone is in parameter space,
+not physical space. Not established: that 3-space is a slice of the cloud,
+that the zeros are such an operator's spectrum (open problem #2 stands),
+or anything about spacetime/matter. What is locked: β counts hidden cone
+dimensions exactly, and the zeros' measured β ≈ 2 selects the chirality
+class — consistent with, and giving countable content to, the projection
+picture.

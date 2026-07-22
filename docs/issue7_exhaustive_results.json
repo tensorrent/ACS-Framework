@@ -1,0 +1,219 @@
+{
+  "section9_exhaustive": {
+    "settings": {
+      "n_sites": [
+        6,
+        7,
+        8
+      ],
+      "h_values": [
+        0.4,
+        0.6000000000000001,
+        0.8,
+        1.0,
+        1.2000000000000002,
+        1.4,
+        1.6,
+        1.8000000000000003,
+        2.0,
+        2.2,
+        2.4
+      ],
+      "t_points": 70,
+      "t_max": 2.8,
+      "thresholds": [
+        0.01,
+        0.003,
+        0.001,
+        0.0003
+      ],
+      "j": 1.0
+    },
+    "summary": {
+      "support_cases": 0,
+      "total_cases": 12,
+      "support_rate": 0.0
+    },
+    "cases": [
+      {
+        "n_sites": 6,
+        "threshold": 0.01,
+        "corr_gap_xi": -0.5451715966468509,
+        "corr_gap_outside_leak": 0.7205041365158932,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 6,
+        "threshold": 0.003,
+        "corr_gap_xi": -0.5451715966468509,
+        "corr_gap_outside_leak": 0.8150784500863846,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 6,
+        "threshold": 0.001,
+        "corr_gap_xi": -0.5451715966468509,
+        "corr_gap_outside_leak": 0.4981623682781427,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 6,
+        "threshold": 0.0003,
+        "corr_gap_xi": -0.5451715966468509,
+        "corr_gap_outside_leak": 0.7983614253383247,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 7,
+        "threshold": 0.01,
+        "corr_gap_xi": -0.5242711025776369,
+        "corr_gap_outside_leak": 0.8993845397981858,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 7,
+        "threshold": 0.003,
+        "corr_gap_xi": -0.5242711025776369,
+        "corr_gap_outside_leak": 0.5999094287403312,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 7,
+        "threshold": 0.001,
+        "corr_gap_xi": -0.5242711025776369,
+        "corr_gap_outside_leak": 0.45309766061850404,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 7,
+        "threshold": 0.0003,
+        "corr_gap_xi": -0.5242711025776369,
+        "corr_gap_outside_leak": 0.6694359925383011,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 8,
+        "threshold": 0.01,
+        "corr_gap_xi": -0.5102398374951072,
+        "corr_gap_outside_leak": 0.922243681020254,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 8,
+        "threshold": 0.003,
+        "corr_gap_xi": -0.5102398374951072,
+        "corr_gap_outside_leak": 0.7612097360518781,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 8,
+        "threshold": 0.001,
+        "corr_gap_xi": -0.5102398374951072,
+        "corr_gap_outside_leak": 0.7834865361929783,
+        "supports_chain": false
+      },
+      {
+        "n_sites": 8,
+        "threshold": 0.0003,
+        "corr_gap_xi": -0.5102398374951072,
+        "corr_gap_outside_leak": 0.6618631751543992,
+        "supports_chain": false
+      }
+    ]
+  },
+  "mechanism_4over3_exhaustive": {
+    "settings": {
+      "beta0": 1.3333333333333333,
+      "scale_min": 0.5,
+      "scale_max": 1.5,
+      "scale_count": 101,
+      "integer_scan_max": 100
+    },
+    "normalization_robustness": {
+      "finite_d_mean": 4.901355630553059,
+      "finite_d_spread": 74.00000000000077,
+      "non_finite_count": 26
+    },
+    "identity_check": {
+      "exact_hit_count": 98,
+      "all_hits_match_n_eq_d_plus_1": true,
+      "first_hits": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    },
+    "epsilon_near_hit_scan": [
+      {
+        "eps": -0.05,
+        "near_hits": 2473,
+        "total_pairs": 9801
+      },
+      {
+        "eps": -0.02,
+        "near_hits": 2460,
+        "total_pairs": 9801
+      },
+      {
+        "eps": 0.0,
+        "near_hits": 2435,
+        "total_pairs": 9801
+      },
+      {
+        "eps": 0.02,
+        "near_hits": 2419,
+        "total_pairs": 9801
+      },
+      {
+        "eps": 0.05,
+        "near_hits": 2387,
+        "total_pairs": 9801
+      }
+    ]
+  }
+}

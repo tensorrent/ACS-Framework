@@ -1,0 +1,5 @@
+Issue #7 cross-model kill pass complete
+TFIM support rate: 0.0000
+XXZ support rate:  0.1667
+Combined support:  1/12
+artifact: /Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_cross_model_results.json

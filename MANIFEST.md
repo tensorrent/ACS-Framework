@@ -104,3 +104,23 @@ chirality, Route A/C Adjoint Spectral Minimization and Bipartite Adjoint Spectra
 - Seed `20260423` throughout. PDG v = 246.22 GeV canonical.
 - Riemann zeros: Odlyzko first 100,000, `data_zeros/riemann_zeros_100k.txt`.
 - Codebase entry point: `code/acs_codebase/` (`pytest -q` → 42 passed).
+
+
+---
+
+## Issue #7 companion — Section 9 cone chain & 4/3 kill tests (TR-2026-FF06-I7)
+
+Paper: `papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex`  
+Code: `code/issue7/` · Artifacts: `docs/issue7_*.json`, `docs/issue7_logs/`  
+Verify: `python3 code/issue7/verify_issue7_pipeline.py`
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| TFIM exhaustive chain support rate 0/12 | **T1** | `code/issue7/exhaustive_issue7.py` |
+| Cross-model combined support 1/12 | **T1** | `code/issue7/cross_model_kill_pass.py` |
+| Long-range combined support 5/12 | **T1** | `code/issue7/long_range_kill_pass.py` |
+| Exact joint chain support false | **T1** | `code/issue7/section9_exact_kill_test.py` |
+| 4/3 identity family n=d+1 on scanned lattice | **T1** | `code/issue7/mechanism_4over3_test.py` |
+| 4/3 mechanism established under K1/K2 | **T4** | failed normalisation robustness + identity bookkeeping |
+| Section 9 gap→cone chain as general theorem | — | not claimed |
+

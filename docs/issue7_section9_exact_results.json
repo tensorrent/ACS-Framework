@@ -1,0 +1,85 @@
+{
+  "model": "classical_ising_exact_fraction",
+  "settings": {
+    "n": 8,
+    "j": 1,
+    "b": 2,
+    "h_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "rows": [
+    {
+      "h": 0,
+      "gap": 2,
+      "cluster_weight": "261804/78125",
+      "cluster_weight_num": 261804,
+      "cluster_weight_den": 78125,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    },
+    {
+      "h": 1,
+      "gap": 4,
+      "cluster_weight": "50549082/483604081",
+      "cluster_weight_num": 50549082,
+      "cluster_weight_den": 483604081,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    },
+    {
+      "h": 2,
+      "gap": 6,
+      "cluster_weight": "696473088647088/165558163992862205",
+      "cluster_weight_num": 696473088647088,
+      "cluster_weight_den": 165558163992862205,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    },
+    {
+      "h": 3,
+      "gap": 8,
+      "cluster_weight": "1234784182631234673408/5212933877257058058731689",
+      "cluster_weight_num": 1234784182631234673408,
+      "cluster_weight_den": 5212933877257058058731689,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    },
+    {
+      "h": 4,
+      "gap": 10,
+      "cluster_weight": "39546958385246993516961679060992/2740989545269605933968906164410906005",
+      "cluster_weight_num": 39546958385246993516961679060992,
+      "cluster_weight_den": 2740989545269605933968906164410906005,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    },
+    {
+      "h": 5,
+      "gap": 12,
+      "cluster_weight": "83950131023181891927707916515778428928/93696216149681372340745471246370359466094649",
+      "cluster_weight_num": 83950131023181891927707916515778428928,
+      "cluster_weight_den": 93696216149681372340745471246370359466094649,
+      "outside_cone_affect": "0",
+      "outside_cone_affect_num": 0,
+      "outside_cone_affect_den": 1
+    }
+  ],
+  "summary": {
+    "sign_cov_gap_cluster": -1,
+    "sign_cov_gap_outside_affect": 0,
+    "supports_chain": false
+  },
+  "float_free": true,
+  "decision_path": "Fraction covariance signs only"
+}

@@ -1,0 +1,19 @@
+4/3 mechanism test
+Baseline: beta = 4/3 => implied d = 3.000000
+
+K1: normalization robustness
+scale c, beta' = c*beta, implied d' = 1/(beta'-1)
+c=0.50  beta'= 0.6667  d'=       nan
+c=0.75  beta'= 1.0000  d'=       nan
+c=1.00  beta'= 1.3333  d'=  3.000000
+c=1.10  beta'= 1.4667  d'=  2.142857
+c=1.25  beta'= 1.6667  d'=  1.500000
+c=1.50  beta'= 2.0000  d'=  1.000000
+finite d' spread under scaling = 2.000000
+
+K2: independent-mechanism check (integer lattice scan)
+exact alpha(d)=beta(n) hits in d,n in [2..12]: [(2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9), (9, 10), (10, 11), (11, 12)]
+all hits satisfy n=d+1: True
+
+Decision
+RESULT: mechanism not established; coincidence fails robustness tests.

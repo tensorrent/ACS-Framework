@@ -1,0 +1,13 @@
+Section 9 exact (no IEEE float) kill test
+Model: classical Ising N=8, B=2
+h  gap  cluster_weight  outside_cone_affect
+0    2      261804/78125                 0
+1    4  50549082/483604081                 0
+2    6  696473088647088/165558163992862205                 0
+3    8  1234784182631234673408/5212933877257058058731689                 0
+4   10  39546958385246993516961679060992/2740989545269605933968906164410906005                 0
+5   12  83950131023181891927707916515778428928/93696216149681372340745471246370359466094649                 0
+sign cov(gap, cluster_weight) = -1  (expect -1)
+sign cov(gap, outside_affect) = +0  (expect -1)
+RESULT: exact data does not support a robust monotone chain.
+artifact: docs/issue7_section9_exact_results.json

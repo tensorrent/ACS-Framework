@@ -1,0 +1,5 @@
+Issue #7 exhaustion run complete
+section9 support rate: 0.0000
+4/3 inferred-d spread under scaling: 74.000000
+4/3 exact-hit identity only (n=d+1): True
+artifact: /Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_exhaustive_results.json

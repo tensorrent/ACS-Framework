@@ -1,0 +1,13 @@
+Section 9 toy kill test
+Model: 1D TFIM, open chain, N=7
+Columns: h, gap, xi (cluster length), v_est, outside_cone_max
+h= 0.5  gap= 0.01172  xi= 45.0054  v= 2.0909  leak_out_max=8.082635e-03
+h= 0.8  gap= 0.16791  xi=  8.1981  v= 2.6669  leak_out_max=1.012964e-02
+h= 1.2  gap= 0.73938  xi=  2.5445  v= 3.3603  leak_out_max=1.247457e-02
+h= 1.5  gap= 1.27891  xi=  1.6939  v= 3.8467  leak_out_max=1.339460e-02
+h= 2.0  gap= 2.23346  xi=  1.1596  v= 4.2437  leak_out_max=1.584649e-02
+
+Trend checks
+corr(gap, xi)         = -0.6375  (expect negative)
+corr(gap, leak_out)   = +0.9636  (expect negative)
+RESULT: toy data does not support a robust monotone chain.

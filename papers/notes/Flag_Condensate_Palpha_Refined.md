@@ -19,6 +19,55 @@ Two comparison channels extend the throat+Woods–Saxon overlap proxy on the sam
 
 ---
 
+## Radial track layout (DAW metaphor)
+
+> **Figure:** the compiled PDF includes TikZ Figure `fig:daw-tracks` (§Radial track layout). This section is an ASCII/mermaid fallback.
+
+Horizontal axis \(r\) acts as timeline: origin \(\to\) interior \([0,R]\) \(\to\) barrier \([R,b]\). Each lane is one factor in the throat-weighted overlap integrand (layout aid only—not a literal audio claim).
+
+| Lane | Role | Notes |
+|------|------|-------|
+| \(u_{\mathrm{in}}\) | Flag interior | Standing wave; **mute @ \(R\)** (Dirichlet) |
+| \(u_\alpha\) | Alpha trial / eigenmode | Channel B WS+Coulomb eigenmode |
+| \(w(r)=R/r\) | Throat gain automation | AdS-like measure factor |
+| Overlap bus | \(w\,u_{\mathrm{in}}u_\alpha\) | Integrate on \([0,R]\) |
+| \(\mathrm{e}^{-2W}\) | Gamow send | Fade past \(R\) (Channel C) |
+
+**Mix metaphor (RC1):** global \(S\) = master fader on \(P_{\mathrm{model}}\); parametric \(S(A,Z)\) = clip automation (Channel A, LOO); Dirichlet @ \(R\) mutes interior lanes; Gamow @ \(R\) routes exterior send.
+
+```mermaid
+flowchart LR
+  subgraph interior["interior [0,R]"]
+    Uin["u_in (flag)"]
+    Ua["u_alpha (WS/eigen)"]
+    W["w=R/r gain"]
+    Bus["overlap bus"]
+  end
+  subgraph barrier["barrier [R,b]"]
+    G["e^{-2W} Gamow send"]
+  end
+  Uin --> Bus
+  Ua --> Bus
+  W --> Bus
+  Bus --> S["× global S"]
+  S --> P["P_model"]
+  Bus -. mute @ R .-> G
+```
+
+```
+  Global S │ master fader
+  ─────────┼──────────────────────────────────────────► r
+           │ 0        interior [0,R]        R    [R,b]  b
+  u_in     │ ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿│mute
+  u_α      │     ╱╲    eigenmode curve    │╲
+  w=R/r    │ ▂▂▂▂▂▂▂▂▂ automation ───────│▁
+  overlap  │     ▓▓▓▓ shaded product     │
+  e^{-2W}  │ ────────────────────────────│▁▂▃ fade/send
+           │ S(A,Z) clip automation ─────┘
+```
+
+---
+
 ## Channel A — isotope \(S\) and parametric models
 
 Base: throat+WS (`palpha_overlap_throat.py`).

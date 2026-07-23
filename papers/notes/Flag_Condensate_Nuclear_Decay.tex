@@ -96,7 +96,7 @@ where $h_\ell^{(1)}$ is the spherical Hankel function of the first kind. Here, $
 \section{Instanton Action on the Confining Throat}
 
 \subsection{Euclidean Deformation}
-In flat space $\mathbb{R}^4$, the classical Yang-Mills BPST instanton action is a pure topological invariant:
+In flat space $\mathbb{R}^4$, the classical Yang-Mills BPST instanton action~\cite{bpst1975} is a pure topological invariant:
 \begin{equation}
 S_0 = \frac{8\pi^2}{g_{\text{weak}}^2}.
 \end{equation}
@@ -190,7 +190,8 @@ $^{244}\text{Cm}$ & 5.902 & 9.42 & 44.47 & 29.832 & $1.39 \times 10^5$ s & $5.72
 \end{table}
 
 \subsection{Geiger-Nuttall Law Linearity}
-Linear regression of $\ln\lambda$ against $Z/\sqrt{E}$ yields:
+Following the classical Geiger--Nuttall systematics~\cite{geiger1911},
+linear regression of $\ln\lambda$ against $Z/\sqrt{E}$ yields:
 \begin{align}
 \text{Measured Fit:} \quad &\ln\lambda = -1.6842 \frac{Z}{\sqrt{E}} + 53.21, \quad R^2 = 0.9939, \\
 \text{Predicted Fit:} \quad &\ln\lambda = -1.6841 \frac{Z}{\sqrt{E}} + 49.85, \quad R^2 = 0.9957.
@@ -210,10 +211,12 @@ $P_\alpha$ is \emph{extracted} from the intercept (and from
 $t_{1/2}^{\mathrm{meas}}/t_{1/2}^{\mathrm{Gamow}}$), not predicted from
 first principles in this note.  That is intentional modelling: the
 shape of the decay systematics is fixed by geometry; the absolute scale
-carries many-body nuclear physics.  A natural sequel is to compute
-$P_\alpha$ as a standing-wave overlap integral between the confined
-flag mode and the outgoing wave packet inside the throat --- a separate
-paper, not claimed here.
+carries many-body nuclear physics.  The standing-wave overlap sequel
+computes a geometric/structural preformation proxy
+$P_{\mathrm{model}}=|\langle u_{\mathrm{in}}|u_\alpha\rangle|^2$ on
+$[0,R]$ (optional global spectroscopic factor $S$)
+in~\cite{PalphaOverlap2026}; absolute scale may still need $S$, and
+many-body uniqueness is not claimed.
 \end{remark}
 
 \section{Universal Geometric Unification}
@@ -226,7 +229,7 @@ physically identical beyond that pattern.
 
 For black holes, replacing the colour throat with the Schwarzschild
 horizon and setting surface gravity $\kappa = c^4/(4GM)$ evaluates the
-mode-mixing spectrum to:
+mode-mixing spectrum to the Hawking form~\cite{hawking1975}:
 \begin{equation}
 n(\omega) = \frac{|\beta_\omega|^2}{|\alpha_\omega|^2 - |\beta_\omega|^2}
 = \frac{1}{\ee^{2\pi\omega / \kappa} - 1},
@@ -279,6 +282,7 @@ developed in~\cite{Mobius2026}, and the broader ontology in~\cite{KFM2026}.
 \bibitem{geiger1911} H. Geiger and J. M. Nuttall, \emph{The ranges of the $\alpha$ particles from uranium}, Phil. Mag. \textbf{22}, 613 (1911).
 \bibitem{Mobius2026} Flag Condensate Collaboration, \emph{The M\"obius-Screw Electron}, ACS Framework note (2026), \texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
 \bibitem{KFM2026} B. Wallace, \emph{The Klein-Foam Monad}, ACS Framework note (2026), \texttt{papers/notes/Klein\_Foam\_Monad.tex}.
+\bibitem{PalphaOverlap2026} ACS Theoretical Physics Working Group, \emph{Standing-Wave Overlap Proxy for Alpha Preformation}, ACS Framework note (2026), \texttt{flag\_condensate\_palpha\_overlap.tex} / \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
 \end{thebibliography}
 
 \end{document}

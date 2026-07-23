@@ -56,7 +56,7 @@ Scale input: $R = \hbar/(2 m_e c)$.
 
 ### Geometric fidelity (revision surface)
 
-The capacitance formula is an annulus/thin-ring approximation to a twisted ribbon. A conformal map (or boundary-integral solve) on the true double-cover domain is the natural next revision; until then α^{-1}≈137.036 is an annulus-model output, not a geometry-unique invariant.
+The capacitance formula is an annulus/thin-ring approximation to a twisted ribbon. The conformal-map / BIE revision is carried out in the sequel `Mobius_Ribbon_Capacitance.tex` (annulus vs conformal vs Möbius BIE). At moderate aspect ratios those revisions give α⁻¹=O(1); α⁻¹≈137.036 remains an annulus-model output at a tuned cutoff, not a geometry-unique invariant.
 
 
 $$
@@ -85,3 +85,4 @@ Tornado / Archimedean-screw imagery for framing vs knotting — not formal conte
 
 - Formal TeX: `papers/notes/Mobius_Screw_Electron.tex`
 - Companion decay paper: `papers/notes/Flag_Condensate_Nuclear_Decay.tex`
+- Capacitance sequel: `papers/notes/Mobius_Ribbon_Capacitance.tex`

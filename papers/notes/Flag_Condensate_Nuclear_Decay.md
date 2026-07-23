@@ -146,4 +146,4 @@ We have demonstrated that alpha radioactivity requires no particle-based tunneli
 
 ## Note on Pα (revision 2026-07-22)
 
-Pα is extracted from the Geiger–Nuttall intercept / lifetime ratio, not predicted from first principles. Slope = geometry; absolute scale = nuclear structure. Sequel: standing-wave overlap integral (separate paper).
+Pα is extracted from the Geiger–Nuttall intercept / lifetime ratio, not predicted from first principles. Slope = geometry; absolute scale = nuclear structure. Standing-wave overlap sequel: `flag_condensate_palpha_overlap.tex` / `Flag_Condensate_Palpha_Overlap.tex` — geometric/structural proxy \(P_{\mathrm{model}}\) (optional global \(S\)); not a many-body uniqueness claim.

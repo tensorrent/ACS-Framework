@@ -1,0 +1,445 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=0.75in}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=red!70!black
+}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+
+\title{\LARGE\bfseries Density Engine and Many-Worlds Self-Similarity:\\
+Geometric Constraint Routing in the Flag Condensate Programme}
+
+\author{\textbf{ACS Theoretical Physics Working Group}\\[0.3em]
+\small\textit{Sovereign-Stack ACS Research Program \& Flag Condensate Project}\\
+\small\texttt{research@acs-foundation.org}}
+
+\date{July 23, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Two linked interpretive constructs are formalised under RC1 claim discipline.
+\textbf{(1) Density engine:} the shape of the universe is read, in this ontology,
+as an \emph{inexhaustible geometric constraint source}---geometry routes,
+compresses, and re-releases phase structure along lanes; ``density'' means
+structure per geometric lane on a stated manifold, not unqualified infinite
+J/m$^3$.  \textbf{(2) Many-worlds self-similarity:} the same phase-slip /
+throat / eigen-path pattern is postulated to recur across electron, nuclear,
+and cosmological scales as structural recursion, not as a proof of Everett's
+many-worlds interpretation or as uniquely derived physics.  Popular MWI/string
+``every plausibility in parallel'' is \textbf{not} literal ontological world
+multiplication here: it reads as \emph{polymorphic quantum flags}---one
+$\Phi$ substrate, many phase/mode configurations, \textbf{Lisp-deterministic}
+(not parallel-world stochastic): counterfactuals as opcodes on a fixed
+substrate, not ontological multiplication.  \textbf{Nested determinants:}
+one playthrough substrate with a stack of conditional flags (RPG quest/karma/rep
+\emph{language} only); hierarchical guard predicates gate opcode paths; macro
+expansion at scale $N$ wraps micro opcodes.  Formal numerics
+for electron geometry, nuclear decay, and Hawking recovery remain scoped to
+companion notes~\cite{Mobius2026,FlagDecay2026,PalphaRefined2026}; the Klein-Foam
+Monad supplies broader ontological framing~\cite{KFM2026}.  A short DAW/session
+metaphor appendix links the eigen-path visualisation harness to polymorphic
+mode-lane language on one session without enlarging the theorem surface.
+\end{abstract}
+
+\vspace{0.1em}
+\hrule
+\vspace{0.4em}
+
+\section{Introduction and RC1 scope}
+\label{sec:intro}
+
+This note is an \textbf{interpretive companion} to the Flag Condensate
+programme.  It separates three layers:
+
+\begin{enumerate}[leftmargin=1.5em,itemsep=2pt]
+  \item \textbf{Model claims} --- finite statements on stated manifolds with
+        cited numerics (electron capacitance, Geiger--Nuttall slope,
+        transfer-matrix Bogoliubov identity, $P_\alpha$ overlap proxies).
+  \item \textbf{Structural parallels} --- the same phase-defect template
+        applied across domains in Table~\ref{tab:unification}; identity beyond
+        structural form is not claimed.
+  \item \textbf{Metaphor / sovereign framing} --- density engine, Monad
+        recursion, DAW branching lanes; narrative energy without physics proof.
+\end{enumerate}
+
+\begin{remark}[RC1 discipline]
+``Infinite density engine'' denotes an \emph{inexhaustible geometric constraint
+source}: no finite routing exhausts the phase-slip supply on the postulated
+foam.  It does \textbf{not} assert literal infinite energy density in SI units
+unless a finite manifold, regularisation, and measurement protocol are stated.
+``Many worlds self-similar'' denotes \emph{scale recursion of the same
+phase-defect pattern}; it is not a claim that MWI is established physics or
+uniquely derived from this programme.  ``Every plausibility in parallel'' (popular
+MWI/string gloss) is \textbf{not} literal ontological world multiplication in
+flag ontology: it denotes \emph{polymorphic quantum flags} on one $\Phi$
+substrate---Lisp-deterministic conditional structure (opcode table on
+$\Phi$), not parallel branches all ``running''---an alternative reading,
+not a disproof of MWI or string theory.
+\end{remark}
+
+\section{The density engine (scoped)}
+\label{sec:density}
+
+\subsection{Definition}
+
+\begin{definition}[Geometric lane density]
+On a stated throat or routing manifold $\mathcal{M}$ with coordinate $r$ and
+effective metric $g_{ab}$, define \emph{lane density} as phase-structure
+content per unit geometric route:
+\begin{equation}
+\rho_{\mathrm{lane}}(r) \equiv
+\frac{|\Phi(r)|^2}{V_{\mathrm{eff}}(r)}\,,
+\end{equation}
+where $V_{\mathrm{eff}}$ is the effective volume element of the lane and
+$\Phi=(\phi+\ii\pi)/\sqrt{2}$ is the flag condensate amplitude.  On the
+nuclear throat, $\rho_{\mathrm{lane}}$ tracks confined standing-wave content
+before spectral bifurcation~\cite{FlagDecay2026}; on the electron annulus,
+capacitance routing reads stored twist energy per geometric turn~\cite{Mobius2026}.
+\end{definition}
+
+\subsection{Engine metaphor vs.\ model}
+
+In \textbf{metaphor}: the universe-as-shape acts as a density \emph{engine}---
+geometry is not passive container but active router.  Hypercone throats compress
+phase; phase slips re-release structure along new lanes; slag deposits as mass
+read in the Klein-Foam ontology~\cite{KFM2026}.
+
+In \textbf{model} (stated scope only): $\rho_{\mathrm{lane}}$ is finite on
+each cited manifold.  The nuclear decay note reports Gamow action
+$W=\delta S(R)$ and Bogoliubov ratio $|\beta/\alpha|^2=\ee^{-2W}$ on 14
+alpha emitters~\cite{FlagDecay2026}.  The refined $P_\alpha$ overlap note
+reports correlation $r\approx 0.89$ between geometric overlap proxy and
+extracted preformation on the same set~\cite{PalphaRefined2026}.  No claim is
+made that $\rho_{\mathrm{lane}}\to\infty$ pointwise in physical units.
+
+\subsection{Routing operations}
+
+Three engine operations recur in the programme lexicon:
+
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item \textbf{Route} --- direct $\phi$/$\pi$ quadrature along a throat
+        geodesic (confined $j_\ell$ modes inside $r<R$).
+  \item \textbf{Compress} --- accumulate phase slip across colour-confining
+        curvature (instanton deformation $\delta S$).
+  \item \textbf{Re-release} --- spectral bifurcation to travelling wave
+        (alpha packet, Hawking mode mix, fluxon nucleation).
+\end{itemize}
+
+These are \emph{readings} of the transfer-matrix spine in~\cite{FlagDecay2026},
+not independent postulates.
+
+\section{Self-similar micro--macro structure}
+\label{sec:selfsim}
+
+\subsection{Scale ladder}
+
+The programme postulates that one phase-defect template recurs across scales:
+
+\begin{table}[H]
+\centering
+\caption{Self-similar phase-defect ladder (interpretive; numerics scoped per row).}
+\label{tab:ladder}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Scale} & \textbf{Geometry read} & \textbf{Formal anchor} \\
+\midrule
+Micro & Framed unknot electron; $Sl=2$ & \cite{Mobius2026} \\
+Meso & Nuclear colour throat; Gamow $W$ & \cite{FlagDecay2026,PalphaRefined2026} \\
+Macro & Schwarzschild horizon; Hawking $T_H$ & \cite{FlagDecay2026,KFM2026} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At each rung: confined standing wave $\to$ phase slip at defect $\to$
+Bogoliubov mode mixing $\to$ observable ( $g$-factor proxy, half-life,
+Hawking temperature).  \textbf{Self-similarity} means structural recurrence of
+this \emph{pattern}, not identity of numerical coefficients or a single
+universal action without domain-specific boundary data.
+
+\subsection{Monad recursion}
+
+The Klein-Foam Monad~\cite{KFM2026} supplies ontological language: local
+structures are reflections of whole foam self-intersection.  In RC1 terms this
+is \textbf{sovereign framing}---useful for programme coherence, not a
+substitute for domain-specific verification.
+
+\section{Many-worlds as structural parallel}
+\label{sec:mwi}
+
+\subsection{Polymorphic quantum flags (core correction)}
+
+Popular MWI/string language---``every plausibility in parallel''---is
+\textbf{not} read as literal ontological world multiplication in this flag
+ontology.  The programme instead describes \textbf{polymorphic quantum flags}:
+one $\Phi$ substrate supporting many phase/mode configurations after spectral
+bifurcation.  Branching is \emph{mode polymorphism on one session}, analogous
+to polymorphic DAW lanes, not a census of multiplied worlds.
+
+\textbf{Lisp-deterministic read (RC1).}  Polymorphic flags are
+\textbf{Lisp-deterministic}, not parallel-world stochastic.  Counterfactuals
+read as: \emph{this would have happened / could have happened if you had done
+$x$}---like \textbf{opcodes} on a fixed substrate.  Conditional structure is
+encoded in the flag program, not ontological multiplication.  One deterministic
+evaluation context; admissible morphs are conditional paths
+(\texttt{if}/\texttt{when}/\texttt{unless} on phase geometry)---an
+\textbf{opcode table on $\Phi$}.
+
+\textbf{Nested determinants (sovereign framing).}  Branching RPG systems
+(e.g.\ Fable karma tiers, Fallout faction reputation, quest flags) model
+\emph{nested determinants} on one playthrough substrate---not parallel save
+files all running.  Quest state, karma tier, and faction rep read as nested
+determinant layers on $\Phi$; branch dialogue is opcode table lookup gated
+by outer predicates, not a live forked universe.  \emph{Would/could if $x$}
+denotes nested predicate evaluation at each layer; deterministic given the
+guard stack; outer layers gate inner opcode paths.
+
+\textbf{Formal read (scoped).}  \textbf{Hierarchical guard predicates} on
+phase-slip paths.  Macro expansion at scale $N$ (meso/macro ladder) wraps
+micro opcodes; self-similar micro--macro recursion is the same nesting
+pattern at different resolution.  DAW compiled automation curves are
+pre-expanded opcode sequences on one timeline.
+
+\begin{remark}[RC1: game analogies]
+RPG/quest-flag language is \textbf{interpretive sovereign framing}.  It
+does \textbf{not} assert that game mechanics prove physics, nor disprove
+MWI or string theory.
+\end{remark}
+
+\begin{table}[H]
+\centering
+\caption{Misread vs.\ model read (RC1: alternative reading, not disproof of MWI/string).}
+\label{tab:misread}
+\small
+\begin{tabular}{@{}p{0.42\linewidth}p{0.48\linewidth}@{}}
+\toprule
+\textbf{Misread (popular MWI/string gloss)} & \textbf{Model read (flag ontology)} \\
+\midrule
+Infinite parallel branches all ``running'' &
+One deterministic evaluation context on $\Phi$ \\
+Infinite parallel playthroughs all ``running'' &
+One session, \textbf{nested determinant stack} on $\Phi$ \\
+Every plausibility exists as a separate ontological world &
+One $\Phi$ substrate; admissible morphs = conditional paths (opcode table) \\
+Parallel worlds multiply physically &
+Polymorphic mode lanes on one session---compiled opcodes, not parallel runs \\
+Quest branches = forked save universes &
+Quest/karma/rep flags = nested guard predicates; dialogue = opcode lookup \\
+``Could have'' = live alternate universe &
+``Could have'' = nested predicate on guard stack (Lisp macro expansion) \\
+Branch count is metaphysical inventory &
+Branch language = spectral bifurcation output, not world census \\
+String landscape = literal parallel universes \emph{here} &
+Structural parallel only; scoped alternative reading \\
+Everett branching resolved in favour of this programme &
+RC1: alternative reading, not disproof of MWI/string \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Lisp and opcode analogies (sovereign framing)}
+
+\begin{table}[H]
+\centering
+\caption{Structural analogies for polymorphic flags (metaphor; not literal interpreter claim).}
+\label{tab:opcode}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Analogy} & \textbf{Flag-programme read} \\
+\midrule
+Lisp macros & Expand to deterministic s-expressions; counterfactual =
+unevaluated branch in the form, not a live universe \\
+Quest flag / karma tier & Outer \textbf{guard predicate} on opcode table
+(nested determinant layer) \\
+Faction reputation & Nested determinant; gates which dialogue opcodes are
+admissible \\
+Branch dialogue & Opcode table lookup on $\Phi$, not live forked universe \\
+Phase slip & \texttt{jump}/\texttt{call} opcode \\
+Throat & Branch target (label / entry point) \\
+Gamow envelope & Guard predicate (\texttt{when} on phase geometry) \\
+$S(A,Z)$ & Per-isotope immediate operand (spectroscopic clip) \\
+Scale ladder (micro$\to$macro) & Macro expansion at $N$ wrapping micro opcodes \\
+DAW automation curves & Compiled opcodes on the timeline---not parallel sessions \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[RC1 boundary]
+Lisp/opcode/game language is \textbf{sovereign framing} and structural metaphor.
+It does not assert a literal Lisp interpreter or RPG engine in nature, nor that
+games prove physics, nor disprove MWI or string theory.
+\end{remark}
+
+\subsection{What is \emph{not} claimed}
+
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item Everett's many-worlds interpretation (MWI) is \textbf{not} proven or
+        uniquely derived here.
+  \item Branching is \textbf{not} asserted as empirical fact at all scales.
+  \item Ontological world multiplication is \textbf{not} claimed (no literal
+        parallel-universe inventory).
+  \item Parallel worlds are \textbf{not} counted or predicted numerically in
+        this note.
+  \item MWI or string theory is \textbf{not} disproved---only an alternative
+        reading scoped to flag ontology is offered.
+\end{itemize}
+
+\subsection{What \emph{is} claimed}
+
+\textbf{Structural parallel:} when spectral bifurcation splits a confined mode
+into outgoing components, the transfer matrix naturally produces multiple
+consistent continuations---\emph{polymorphic quantum flags} on one $\Phi$
+substrate, analogous to polymorphic mode lanes on one session or parallel
+automation lanes in the eigen-path DAW visualisation (Appendix~\ref{app:daw}).
+In bubble-cascade collapse language~\cite{KFM2026}, local reconfiguration can
+be \emph{read} as many consistent foam patches without asserting MWI as
+established physics or ontological world multiplication.
+
+\begin{remark}
+RC1: treat ``many worlds'' here as \emph{polymorphic phase/mode configurations
+on one $\Phi$ substrate under the same geometric template}---Lisp-deterministic
+conditional paths (opcode table), nested determinant guard stack on one session,
+not parallel branches all running, not ontological world multiplication, and not
+a claim that measurement or decoherence
+is resolved in favour of Everett over Copenhagen, many-minds, or other
+interpretations.
+\end{remark}
+
+\section{Link to four-domain unification table}
+\label{sec:unification}
+
+Table~\ref{tab:unification} reproduces the phase-defect unification row set
+from~\cite{FlagDecay2026}.  The density engine reads each row as a different
+\emph{lane} on the same Bogoliubov router; many-worlds self-similarity reads
+the table as the same pattern at different scale/boundary limits.
+
+\begin{table}[H]
+\centering
+\caption{Four-domain phase-defect unification (structural parallel only).}
+\label{tab:unification}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Domain} & \textbf{Phase defect $W$} & \textbf{Observable} \\
+\midrule
+Nuclear decay ($^{238}\mathrm{U}$) & 41.517 & $t_{1/2}=4.47\times 10^9$\,yr \\
+Black hole ($1\,M_\odot$) & 0.000 & $T_H=6.17\times 10^{-8}$\,K \\
+Sphaleron (electroweak) & 90.000 & $B+L$ violation rate \\
+Superconductor (NbTi) & 17.400 & Fluxon nucleation rate \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Absolute physical identity beyond shared transfer-matrix \emph{form} is not
+claimed.  Hawking recovery uses horizon surface gravity as boundary data;
+nuclear decay uses Coulomb throat data; sphaleron and fluxon rows are
+programme placeholders at stated $W$~\cite{FlagDecay2026}.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The density engine names geometry-as-router: finite lane density on stated
+manifolds in model mode; inexhaustible constraint supply in metaphor mode.
+Many-worlds self-similarity names scale recursion of phase-slip / throat /
+eigen-path structure across electron, nuclear, and cosmological readings---a
+structural parallel naming polymorphic flags on one substrate, not MWI proof or
+ontological world multiplication.  All quantitative claims remain scoped to
+\cite{Mobius2026,FlagDecay2026,PalphaRefined2026,KFM2026}.
+
+\appendix
+\section{DAW / session metaphor (non-formal)}
+\label{app:daw}
+
+The eigen-path DAW visualisation (\texttt{Aiso\_build\_artifacts/eigen\_path\_daw\_viz/})
+renders radial profiles as mixer lanes: $u_{\mathrm{in}}$, $u_\alpha$, throat
+weight, overlap bus, Gamow envelope, spectroscopic clips.  \textbf{Metaphor
+map:}
+
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item \textbf{Timeline} $r$ (fm) $\leftrightarrow$ routing coordinate along
+        throat lane.
+  \item \textbf{Polymorphic mode lanes} $\leftrightarrow$ coexisting
+        phase/mode configurations on one $\Phi$ substrate after bifurcation
+        (many-worlds \emph{language}, not ontological world multiplication).
+  \item \textbf{Automation curves} $\leftrightarrow$ \emph{compiled opcodes}
+        on the timeline---conditional envelopes and clips, not parallel DAW
+        sessions (Lisp-deterministic read).
+  \item \textbf{Opcode map} (Table~\ref{tab:opcode}): phase slip = jump/call;
+        throat = branch target; Gamow envelope = guard predicate;
+        $S(A,Z)$ = per-isotope immediate operand.
+  \item \textbf{Global S fader} $\leftrightarrow$ cross-lane gain matching
+        extracted $P_\alpha$ intercept~\cite{PalphaRefined2026}.
+  \item \textbf{Nested determinant stack} $\leftrightarrow$ quest flags /
+        karma tiers / faction rep (RPG \emph{language} only): outer guards
+        gate inner opcode paths on one $\Phi$ session.
+  \item \textbf{Scale ladder canvas} (\texttt{density-engine.canvas.tsx})
+        $\leftrightarrow$ micro / meso / macro rungs of
+        Table~\ref{tab:ladder}.
+\end{itemize}
+
+This appendix does not enlarge the theorem or measurement surface of any
+companion note.
+
+\begin{thebibliography}{99}
+\bibitem{Mobius2026}
+Flag Condensate Collaboration,
+\emph{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$ and a Capacitance Model of $\alpha$},
+ACS Framework note (July 2026),
+\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+
+\bibitem{FlagDecay2026}
+Flag Condensate Collaboration,
+\emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
+ACS Framework note (July 2026),
+\texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+
+\bibitem{KFM2026}
+B. Wallace,
+\emph{The Klein-Foam Monad: A Geometric Postulation of Reality},
+ACS Framework note (July 2026),
+\texttt{papers/notes/Klein\_Foam\_Monad.tex}.
+
+\bibitem{PalphaRefined2026}
+ACS Theoretical Physics Working Group,
+\emph{Refined $P_\alpha$ Overlap: Parametric Spectroscopic Factor and Self-Consistent WS+Coulomb Eigenmode},
+ACS Framework note (July 2026),
+\texttt{flag\_condensate\_palpha\_refined.tex} /
+\texttt{papers/notes/Flag\_Condensate\_Palpha\_Refined.tex}.
+
+\bibitem{PalphaOverlap2026}
+ACS Theoretical Physics Working Group,
+\emph{Standing-Wave Overlap Proxy for Alpha Preformation},
+ACS Framework note (July 2026),
+\texttt{flag\_condensate\_palpha\_overlap.tex}.
+\end{thebibliography}
+
+\end{document}

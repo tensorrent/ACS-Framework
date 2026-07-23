@@ -11,6 +11,10 @@
 \usepackage{cite}
 \usepackage{xcolor}
 \usepackage{float}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta, positioning, calc, patterns, decorations.pathreplacing}
 \usepackage{geometry}
 \geometry{margin=0.60in}
 
@@ -80,6 +84,177 @@ reported only as a diagnostic.  Predictive claims use parametric $S$ with
 LOO, or Channel~B with one global $S$.  No uniqueness of many-body
 preformation is claimed.
 \end{remark}
+
+\section{Radial track layout (DAW metaphor)}
+\label{sec:daw-tracks}
+
+Figure~\ref{fig:daw-tracks} is a \emph{schematic} track view of the
+refined overlap protocol: horizontal axis $r$ acts as timeline from the
+origin through interior support $[0,R]$ to the Coulomb barrier region
+$[R,b]$.  Each lane is one radial factor in the throat-weighted overlap
+integrand; this is a layout aid only---not a claim that alpha decay is
+literally audio production.  In the metaphor, one global spectroscopic
+factor $S$ behaves as a master fader on $P_{\mathrm{model}}$; parametric
+$S(A,Z)$ is clip-level automation fit per isotope; Dirichlet at $R$
+mutes the interior flag lane past the throat wall, whereas Channel~C
+routes a Gamow send into $[R,b]$.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  track/.style={draw=gray!55, line width=0.4pt},
+  hdr/.style={font=\scriptsize\sffamily, anchor=east, align=right},
+  tick/.style={font=\tiny, anchor=north},
+  ann/.style={font=\tiny\sffamily, fill=white, inner sep=1pt, align=center},
+  dot/.style={circle, fill, inner sep=1.2pt},
+  >=Stealth
+]
+  % layout constants
+  \def\W{11.2}   % plot width (cm)
+  \def\H{0.95}   % lane height (cm)
+  \def\HDR{2.35} % header column width (cm)
+  \def\xR{6.35}  % throat wall R
+  \def\xb{10.2}  % barrier point b
+  \def\yTop{5.85}
+
+  % master fader strip (left)
+  \draw[fill=gray!12, draw=gray!45, line width=0.5pt]
+    (-\HDR-0.15, -0.35) rectangle (-0.08, \yTop+0.35);
+  \node[font=\scriptsize\sffamily, rotate=90, anchor=south]
+    at (-\HDR-0.55, 2.75) {Global $S$};
+  \draw[fill=gray!35, draw=gray!60, line width=0.4pt]
+    (-\HDR+0.35, 0.15) rectangle (-\HDR+0.55, 4.95);
+  \node[font=\tiny\sffamily, anchor=west] at (-\HDR+0.62, 4.2)
+    {master};
+  \node[font=\tiny, anchor=west, text=gray!70!black] at (-\HDR+0.62, 0.55)
+    {$S_\star$};
+
+  % lane headers + track boxes (top to bottom)
+  \foreach \i/\lab/\col/\fillcol in {
+    0/{$u_{\mathrm{in}}$\\{\tiny flag interior}}/blue!65!black/blue!8,
+    1/{$u_\alpha$\\{\tiny WS / eigenmode}}/orange!80!black/orange!8,
+    2/{$w(r)\!=\!R/r$\\{\tiny throat gain}}/green!50!black/green!8,
+    3/{overlap bus\\{\tiny $w\,u_{\mathrm{in}}u_\alpha$}}/violet!70!black/violet!8,
+    4/{$\ee^{-2W}$\\{\tiny Gamow send}}/red!70!black/red!8
+  }{
+    \pgfmathsetmacro{\y}{\yTop - \i*\H}
+    \draw[track, fill=\fillcol] (0,\y-\H) rectangle (\W,\y);
+    \node[hdr, text=\col] at (-0.12,\y-0.5*\H) {\lab};
+  }
+
+  % vertical grid + region markers
+  \foreach \x/\lab in {0/{0}, 2.2/{}, 4.4/{}, \xR/{$R$}, 7.8/{}, \xb/{$b$}} {
+    \draw[gray!25, line width=0.3pt, dashed] (\x,0) -- (\x,\yTop);
+    \node[tick] at (\x, -0.08) {\lab};
+  }
+  \draw[orange!75!black, line width=0.9pt, dashed] (\xR,0) -- (\xR,\yTop);
+  \node[ann, text=orange!75!black] at (\xR+0.05, \yTop+0.22)
+    {Dirichlet mute @ $R$};
+  \fill[blue!8] (0,0) rectangle (\xR,\yTop);
+  \fill[orange!6] (\xR,0) rectangle (\xb,\yTop);
+  \node[font=\tiny\sffamily, text=gray!65!black, anchor=south west]
+    at (0.08, \yTop+0.05) {interior $[0,R]$};
+  \node[font=\tiny\sffamily, text=gray!65!black, anchor=south east]
+    at (\xb-0.08, \yTop+0.05) {barrier $[R,b]$};
+
+  % --- lane 0: u_in standing wave (mute at R) ---
+  \begin{scope}
+    \clip (0,\yTop-0*\H-\H) rectangle (\W,\yTop-0*\H);
+    \draw[blue!65!black, line width=0.85pt, domain=0.08:\xR, samples=120]
+      plot (\x, {\yTop-0*\H-0.5*\H + 0.34*\H*sin(180*\x/\xR)});
+    \fill[blue!65!black] (0.55,\yTop-0*\H-0.5*\H+0.34*\H*0.87) circle (1.3pt);
+    \fill[blue!65!black] (2.35,\yTop-0*\H-0.5*\H-0.34*\H*0.92) circle (1.3pt);
+    \fill[blue!65!black] (4.55,\yTop-0*\H-0.5*\H+0.34*\H*0.65) circle (1.3pt);
+    \node[ann, text=blue!65!black] at (1.6, \yTop-0*\H-0.12*\H)
+      {standing wave};
+    \draw[gray!50, line width=0.5pt] (\xR,\yTop-0*\H-\H) -- (\xR,\yTop-0*\H);
+    \node[font=\tiny, text=gray!60!black] at (\xR+0.55, \yTop-0*\H-0.15*\H)
+      {mute};
+  \end{scope}
+
+  % --- lane 1: u_alpha eigenmode ---
+  \begin{scope}
+    \clip (0,\yTop-1*\H-\H) rectangle (\W,\yTop-1*\H);
+    \draw[orange!80!black, line width=0.85pt, domain=0.08:\xR, samples=100]
+      plot (\x, {\yTop-1*\H-0.5*\H + 0.38*\H*sin(180*\x/\xR)*sin(180*\x/\xR)});
+    \fill[orange!80!black] (1.25,\yTop-1*\H-0.5*\H+0.05*\H) circle (1.3pt);
+    \fill[orange!80!black] (3.55,\yTop-1*\H-0.5*\H+0.32*\H) circle (1.3pt);
+    \fill[orange!80!black] (5.55,\yTop-1*\H-0.5*\H+0.08*\H) circle (1.3pt);
+    \node[ann, text=orange!80!black] at (3.2, \yTop-1*\H-0.12*\H)
+      {Channel~B eigenmode};
+  \end{scope}
+
+  % --- lane 2: w(r)=R/r automation gain ---
+  \begin{scope}
+    \clip (0,\yTop-2*\H-\H) rectangle (\W,\yTop-2*\H);
+    \draw[green!50!black, line width=0.85pt, domain=0.35:\xR, samples=80]
+      plot (\x, {\yTop-2*\H-0.5*\H + 0.36*\H*(1.35 - 0.35*\x/\xR)});
+    \fill[green!50!black] (0.55,\yTop-2*\H-0.5*\H+0.36*\H*1.0) circle (1.4pt);
+    \fill[green!50!black] (2.55,\yTop-2*\H-0.5*\H+0.36*\H*0.72) circle (1.4pt);
+    \fill[green!50!black] (4.75,\yTop-2*\H-0.5*\H+0.36*\H*0.48) circle (1.4pt);
+    \fill[green!50!black] (\xR-0.08,\yTop-2*\H-0.5*\H+0.36*\H*0.35) circle (1.4pt);
+    \node[ann, text=green!50!black] at (1.05, \yTop-2*\H-0.12*\H)
+      {automation};
+  \end{scope}
+
+  % --- lane 3: overlap bus (shaded product) ---
+  \begin{scope}
+    \clip (0,\yTop-3*\H-\H) rectangle (\W,\yTop-3*\H);
+    \fill[violet!18, domain=0.25:\xR, samples=120]
+      plot (\x, {\yTop-3*\H-0.5*\H + 0.30*\H*sin(180*\x/\xR)*sin(180*\x/\xR)*sin(180*\x/\xR)})
+      -- (\xR,\yTop-3*\H-0.5*\H) -- (0.25,\yTop-3*\H-0.5*\H) -- cycle;
+    \draw[violet!70!black, line width=0.85pt, domain=0.25:\xR, samples=120]
+      plot (\x, {\yTop-3*\H-0.5*\H + 0.30*\H*sin(180*\x/\xR)*sin(180*\x/\xR)*sin(180*\x/\xR)});
+    \node[ann, text=violet!70!black] at (3.0, \yTop-3*\H-0.12*\H)
+      {$\int_0^R(\cdots)\,\dd r$};
+  \end{scope}
+
+  % --- lane 4: Gamow fade/send past R ---
+  \begin{scope}
+    \clip (0,\yTop-4*\H-\H) rectangle (\W,\yTop-4*\H);
+    \draw[gray!45, line width=0.5pt, domain=0:\xR, samples=2]
+      plot (\x, {\yTop-4*\H-0.5*\H+0.02*\H});
+    \draw[red!70!black, line width=0.85pt, domain=\xR:\xb, samples=80]
+      plot (\x, {\yTop-4*\H-0.5*\H + 0.40*\H*exp(-2.1*(\x-\xR)/(\xb-\xR))});
+    \fill[red!70!black] (\xR+0.05,\yTop-4*\H-0.5*\H+0.38*\H) circle (1.3pt);
+    \fill[red!70!black] (8.15,\yTop-4*\H-0.5*\H+0.18*\H) circle (1.3pt);
+    \fill[red!70!black] (9.55,\yTop-4*\H-0.5*\H+0.06*\H) circle (1.3pt);
+    \draw[->, red!60!black, line width=0.55pt]
+      (\xR+0.15, \yTop-4*\H-0.5*\H+0.42*\H) -- (\xR+1.1, \yTop-4*\H-0.5*\H+0.28*\H);
+    \node[ann, text=red!70!black] at (8.55, \yTop-4*\H-0.12*\H)
+      {Channel~C send};
+  \end{scope}
+
+  % clip automation callout
+  \draw[decorate, decoration={brace, amplitude=4pt, mirror},
+        gray!55, line width=0.45pt]
+    (0.35, -0.55) -- (\xR-0.25, -0.55);
+  \node[font=\tiny\sffamily, text=gray!65!black] at (3.2, -0.82)
+    {$S(A,Z)$ = clip automation (Channel~A, LOO fit)};
+
+  % timeline axis
+  \draw[->, gray!70!black, line width=0.55pt] (0,-1.05) -- (\W+0.25,-1.05);
+  \node[font=\scriptsize\sffamily, anchor=west] at (\W+0.3,-1.05)
+    {$r\;(\mathrm{fm})$};
+
+  % send vs mute legend
+  \node[ann, draw=gray!45, rounded corners=1pt] at (9.1, 1.05)
+    {Dirichlet: interior mute @ $R$\\Gamow: exterior send @ $R$};
+\end{tikzpicture}%
+}%
+\caption{Schematic DAW-style radial track layout for the refined
+$P_\alpha$ overlap proxy.  Horizontal axis: radius $r$ from origin
+through interior $[0,R]$ to barrier $[0,b]$.  Lanes (top to bottom):
+confined flag mode $u_{\mathrm{in}}$ (Dirichlet mute at $R$); alpha
+trial or self-consistent eigenmode $u_\alpha$; throat weight
+$w(r)=R/r$ as gain automation; overlap bus integrating the weighted
+product on $[0,R]$; Gamow envelope $\ee^{-2W(r)}$ as exterior fade/send
+(Channel~C).  Global $S$ scales the bus output; parametric $S(A,Z)$
+is isotope-resolved clip automation (Channel~A).  Curves are
+illustrative, not fitted to a specific isotope.}
+\label{fig:daw-tracks}
+\end{figure}
 
 \section{Channel A --- isotope $S$ and parametric models}
 

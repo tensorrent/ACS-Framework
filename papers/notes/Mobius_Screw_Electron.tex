@@ -7,6 +7,7 @@
 \usepackage{amsmath,amssymb,amsthm,bm}
 \usepackage{booktabs}
 \usepackage{microtype}
+\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{geometry}
@@ -222,10 +223,15 @@ one-sided surface), not a flat annulus.  Two consequences follow:
 A natural revision path is to replace~\eqref{eq:C} by the capacitance
 of the ribbon domain under a conformal map to a standard annulus (or
 by a boundary-integral computation on the immersed strip), then
-re-solve~\eqref{eq:Ecap}.  Until that is done,
-$\alpha^{-1}\approx 137.036$ should be read as a numerical output of
-the annulus model, not as a geometry-unique invariant of the
-framed unknot.
+re-solve~\eqref{eq:Ecap}.  That revision is carried out as an
+as-implemented numerical sequel in~\cite{ribboncap2026}
+(annulus vs conformal-modulus vs M\"obius BIE collocation, with
+aspect-ratio scan and machine-readable results).  Under those
+revisions, moderate geometric aspect ratios yield
+$\alpha^{-1}=\mathcal{O}(1)$ rather than $\approx 137$; the figure
+$\alpha^{-1}\approx 137.036$ remains a numerical output of the
+annulus model at a tuned cutoff, not a geometry-unique invariant of
+the framed unknot.
 
 \subsection{Self-stress matching}
 
@@ -319,6 +325,14 @@ Flag Condensate Collaboration,
 \textit{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
 preprint (July 2026),
 \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+
+\bibitem{ribboncap2026}
+Flag Condensate Collaboration,
+\textit{M\"obius-Ribbon Capacitance: Annulus, Conformal Modulus, and BIE
+Revisions of the $\alpha$ Estimate},
+preprint (July 2026),
+\texttt{mobius\_ribbon\_capacitance.tex} /
+\texttt{papers/notes/Mobius\_Ribbon\_Capacitance.tex}.
 
 \end{thebibliography}
 

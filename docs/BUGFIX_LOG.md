@@ -4,6 +4,8 @@
 **Scope:** `rh_papers_may21/acs-framework/code/{palpha_overlap,capacitance_ribbon,acs_memo.py,benchmark_efficiency.py}`, `Aiso_build_artifacts/eigen_path_daw_viz/`, canvases `eigen-path-daw` / `density-engine`, ACS public mirror under `acs-framework-public/code/`.  
 **RC1:** Claims limited to this harness run; no aiso/ substrate edits.
 
+**ACS public commit:** `304ff8a` (`304ff8a95ce2c21521c54a3d9a85d4de9c967236`) on `main` (tensorrent/ACS-Framework).
+
 ## Procedure executed
 
 1. Ran all Pα / ribbon / efficiency scripts (`ACS_MEMO=0` then memo parity).

@@ -142,3 +142,8 @@ $$T_H = \frac{\hbar \kappa}{2\pi c k_B} = \frac{\hbar c^3}{8\pi G M k_B}$$
 
 ## 7. Conclusion
 We have demonstrated that alpha radioactivity requires no particle-based tunneling postulates. Nuclear decay is a localized spectral bifurcation of the flag field $\Phi = (\phi + i\pi)/\sqrt{2}$ from a confined standing wave to a propagating travelling wave. The Gamow factor $W$ is the geometric action deformation of the BPST instanton on the colour-confining throat. The exact mathematical identity between nuclear decay, Hawking radiation, electroweak sphalerons, and superconducting fluxons confirms that all four phenomena are manifestations of a unified phase-defect mechanism.
+
+
+## Note on Pα (revision 2026-07-22)
+
+Pα is extracted from the Geiger–Nuttall intercept / lifetime ratio, not predicted from first principles. Slope = geometry; absolute scale = nuclear structure. Sequel: standing-wave overlap integral (separate paper).

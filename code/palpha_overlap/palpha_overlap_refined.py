@@ -562,6 +562,8 @@ def channel_A_from_model_rows(
         "global_S": {
             "S": S_global,
             "log10_S": log10_S_global,
+            # Alias matches channel B/C summary.rms_residual_S naming.
+            "rms_residual_S": rms_global,
             "rms_residual_log10_P": rms_global,
             "mean_residual": float(np.mean(resid_global)),
         },

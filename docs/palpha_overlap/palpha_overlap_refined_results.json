@@ -335,6 +335,7 @@
     "global_S": {
       "S": 0.03177865015554276,
       "log10_S": -1.4978645540276172,
+      "rms_residual_S": 0.8246942381575607,
       "rms_residual_log10_P": 0.8246942381575607,
       "mean_residual": 0.0
     },
@@ -1693,6 +1694,7 @@
     "global_S": {
       "S": 0.014205330231878512,
       "log10_S": -1.8475486657625482,
+      "rms_residual_S": 0.8257387808867478,
       "rms_residual_log10_P": 0.8257387808867478,
       "mean_residual": 6.344131569286608e-17
     },
@@ -1792,5 +1794,5 @@
     "flat": "palpha_overlap.py / docs/palpha_overlap_results.json",
     "throat": "palpha_overlap_throat.py / docs/palpha_overlap_throat_results.json"
   },
-  "utc": "2026-07-23T05:20:27.925231+00:00"
+  "utc": "2026-07-23T13:25:01.895032+00:00"
 }

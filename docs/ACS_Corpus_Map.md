@@ -13,7 +13,7 @@
 | FF06a | Colour from Gravity: SU(3) as a Closure Attractor in the Palatini Bracket | Gauge / gravity | 44 | Core |
 | FF06b | The Riemann Spectral ACS: Stationarity as a Characterisation of the Critical Line | Number theory | 15 | Core |
 | FF06c | Holographic Spectral Inversion and Invariant Kinematic Attractors | QFT / geometry | 14 | Core |
-| FF06-N3 | The Prime-Gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles on (Z/mZ)* | Number theory / operator | 8 | Note |
+| FF06-N3 | Dynamical Transition Operators over Prime Gap Ensembles on (Z/mZ)* | Number theory / operator | 8 | Note |
 | FF06b' | Spectral Witness Survival and the Character of the Transport Obstruction | Number theory + bridge | 13 | New |
 | FF06e | Spectral Rigidity and Shuffled Spacing Discriminant | Methodology + zeros | 4 | New |
 | FF06f | Density, Positions, Spacings (three-layer decomposition) | Number theory | 4 | New |

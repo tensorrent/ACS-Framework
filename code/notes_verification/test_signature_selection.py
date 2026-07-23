@@ -2,10 +2,10 @@
 # https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 
 """
-Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras from Adjoint Spectral Structure in sl(4,R)
+Signature Selection from Adjoint Spectral Structure in sl(4,R)
 ==============================================================
 
-Companion code to Note N2 (Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras).
+Companion code to Note N2 (Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras).
 
 Verifies: for any even positive spectral functional f, the graded
 functional S_f[P] = Tr(P_ad · f(ad_T)) is uniquely minimised at
@@ -194,7 +194,7 @@ def test_frame_invariance():
                np.linalg.norm(P_opt + P_g)) < 1e-6:
             align_pass += 1
 
-    print(f"  Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras: {sig_pass}/50")
+    print(f"  Signature selection: {sig_pass}/50")
     print(f"  Alignment check:    {align_pass}/50")
     ok = sig_pass == 50 and align_pass == 50
     print(f"  Result: {'PASS' if ok else 'FAIL'}")

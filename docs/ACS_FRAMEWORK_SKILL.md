@@ -7,7 +7,7 @@
 - **Name:** acs-framework
 - **Author:** Bradley Wallace
 - **Version:** 1.0 (May 2026)
-- **Trigger:** ACS, Palatini bracket, Pati-Salam, grading selection, sl(4), Lie bracket, adjoint representation, Barbero-Immirzi, Coleman-Weinberg, Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras, "work on the papers", "what's still open", "test this idea"
+- **Trigger:** ACS, Palatini bracket, Pati-Salam, grading selection, sl(4), Lie bracket, adjoint representation, Barbero-Immirzi, Coleman-Weinberg, signature selection, "work on the papers", "what's still open", "test this idea"
 
 ---
 

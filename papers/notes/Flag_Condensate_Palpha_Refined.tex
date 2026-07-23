@@ -7,7 +7,6 @@
 \usepackage{amsmath,amssymb,amsfonts,amsthm,bm}
 \usepackage{booktabs}
 \usepackage{microtype}
-\usepackage{hyperref}
 \usepackage{cite}
 \usepackage{xcolor}
 \usepackage{float}
@@ -17,6 +16,7 @@
 \usetikzlibrary{arrows.meta, positioning, calc, patterns, decorations.pathreplacing}
 \usepackage{geometry}
 \geometry{margin=0.60in}
+\usepackage{hyperref}
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
@@ -245,7 +245,7 @@ routes a Gamow send into $[R,b]$.
 }%
 \caption{Schematic DAW-style radial track layout for the refined
 $P_\alpha$ overlap proxy.  Horizontal axis: radius $r$ from origin
-through interior $[0,R]$ to barrier $[0,b]$.  Lanes (top to bottom):
+through interior $[0,R]$ to barrier $[R,b]$.  Lanes (top to bottom):
 confined flag mode $u_{\mathrm{in}}$ (Dirichlet mute at $R$); alpha
 trial or self-consistent eigenmode $u_\alpha$; throat weight
 $w(r)=R/r$ as gain automation; overlap bus integrating the weighted

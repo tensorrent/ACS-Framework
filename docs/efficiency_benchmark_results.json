@@ -1,0 +1,439 @@
+{
+  "scope": "RC1 harness performance benchmark \u2014 wall time, throughput, scaling, and disk/memory memo speedups of as-implemented scripts in the stated environment; not a claim about physical engine efficiency.",
+  "utc": "2026-07-23T12:53:34.682658+00:00",
+  "environment": {
+    "platform": "darwin",
+    "python": "3.14.6",
+    "repo_root": "acs-framework-public",
+    "timing_tool": "/usr/bin/time -l (macOS)",
+    "fast_run_threshold_s": 5.0,
+    "default_repeats": 3,
+    "acs_memo": "1"
+  },
+  "status": "pass",
+  "script_runs": [
+    {
+      "script": "rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap.py",
+      "name": "palpha_overlap_baseline",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.24333333333333332,
+        "std": 0.005773502691896263,
+        "runs": [
+          0.25,
+          0.24,
+          0.24
+        ]
+      },
+      "user_time_s": 0.21,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 57935296,
+      "peak_memory_MiB": 55.25,
+      "throughput": {
+        "isotopes_per_sec": 57.53424657534247
+      },
+      "notes": "Flat [0,R] Gaussian overlap, n_grid=4096"
+    },
+    {
+      "script": "rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_throat.py",
+      "name": "palpha_overlap_throat",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.2733333333333334,
+        "std": 0.005773502691896263,
+        "runs": [
+          0.28,
+          0.27,
+          0.27
+        ]
+      },
+      "user_time_s": 0.24,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 59524672,
+      "peak_memory_MiB": 56.77,
+      "throughput": {
+        "isotopes_per_sec": 51.21951219512194
+      },
+      "notes": "Throat weight + WS models"
+    },
+    {
+      "script": "rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_refined.py",
+      "name": "palpha_overlap_refined",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.35,
+        "std": 0.07810249675906655,
+        "runs": [
+          0.44,
+          0.31,
+          0.3
+        ]
+      },
+      "user_time_s": 0.26,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 62948864,
+      "peak_memory_MiB": 60.03,
+      "throughput": {
+        "isotopes_per_sec": 40.0
+      },
+      "notes": "Channel A/B/C full analysis"
+    },
+    {
+      "script": "rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_extended.py",
+      "name": "palpha_overlap_extended",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.2733333333333333,
+        "std": 0.015275252316519449,
+        "runs": [
+          0.26,
+          0.27,
+          0.29
+        ]
+      },
+      "user_time_s": 0.24,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 59983616,
+      "peak_memory_MiB": 57.2,
+      "throughput": {
+        "isotopes_per_sec": 106.09756097560977
+      },
+      "notes": "Throat+WS on 29-isotope catalog"
+    },
+    {
+      "script": "rh_papers_may21/acs-framework/code/capacitance_ribbon/ribbon_capacitance.py",
+      "name": "ribbon_capacitance",
+      "repeats": 1,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.15,
+        "std": 0.0,
+        "runs": [
+          0.15
+        ]
+      },
+      "user_time_s": 0.12,
+      "sys_time_s": 0.02,
+      "peak_memory_bytes": 41092544,
+      "peak_memory_MiB": 39.19,
+      "throughput": {
+        "note": "grid scan over aspect ratios; see scaling.bie_mesh"
+      },
+      "notes": "Annulus/conformal/BIE aspect scan (~12s)"
+    },
+    {
+      "script": "Aiso_build_artifacts/eigen_path_daw_viz/export_daw_profiles.py",
+      "name": "export_daw_profiles",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.27,
+        "std": 0.010000000000000009,
+        "runs": [
+          0.28,
+          0.27,
+          0.26
+        ]
+      },
+      "user_time_s": 0.22,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 59868608,
+      "peak_memory_MiB": 57.1,
+      "throughput": {
+        "isotopes_per_sec": 51.85185185185185
+      },
+      "notes": "Eigen-path lane export, 128 pts/lane"
+    },
+    {
+      "script": "Aiso_build_artifacts/eigen_path_daw_viz/build_canvas.py",
+      "name": "build_canvas",
+      "repeats": 3,
+      "exit_code": 0,
+      "wall_time_s": {
+        "mean": 0.2866666666666667,
+        "std": 0.005773502691896231,
+        "runs": [
+          0.29,
+          0.28,
+          0.29
+        ]
+      },
+      "user_time_s": 0.24,
+      "sys_time_s": 0.03,
+      "peak_memory_bytes": 10601408,
+      "peak_memory_MiB": 10.11,
+      "throughput": {},
+      "notes": "Runs export + compact JSON + canvas inject"
+    }
+  ],
+  "relative_to_baseline": {
+    "palpha_overlap_baseline": 1.0,
+    "palpha_overlap_throat": 1.123,
+    "palpha_overlap_refined": 1.438,
+    "palpha_overlap_extended": 1.123,
+    "ribbon_capacitance": 0.616,
+    "export_daw_profiles": 1.11,
+    "build_canvas": 1.178
+  },
+  "slowest_script": {
+    "name": "palpha_overlap_refined",
+    "wall_s": 0.35
+  },
+  "channel_cost": {
+    "n_isotopes": 14,
+    "n_grid": 4096,
+    "n_interior_eigen": 800,
+    "memo_disabled": true,
+    "total_wall_s": {
+      "flat_gaussian": {
+        "mean_s": 0.00595111104970177,
+        "std_s": 0.00040153855290548073,
+        "runs_s": [
+          0.006338207982480526,
+          0.005978583358228207,
+          0.005536541808396578
+        ]
+      },
+      "throat_full_analysis": {
+        "mean_s": 0.02969065262004733,
+        "std_s": 0.0003532807911495154,
+        "runs_s": [
+          0.030098499730229378,
+          0.02947945799678564,
+          0.029494000133126974
+        ]
+      },
+      "eigenmode_dirichlet_14": {
+        "mean_s": 0.07993266622846325,
+        "std_s": 0.0008265610526775351,
+        "runs_s": [
+          0.08043779199942946,
+          0.07897879090160131,
+          0.08038141578435898
+        ]
+      },
+      "gamow_outgoing_14": {
+        "mean_s": 0.13600843073800206,
+        "std_s": 0.000984292606458858,
+        "runs_s": [
+          0.13561362493783236,
+          0.13528283406049013,
+          0.1371288332156837
+        ]
+      }
+    },
+    "per_isotope_s": {
+      "flat_gaussian": 0.00042507936069298354,
+      "throat_ws_loop": 0.0004191607281210877,
+      "eigenmode_dirichlet": 0.0057094761591759465,
+      "gamow_outgoing": 0.00971488790985729
+    },
+    "per_isotope_throughput_per_sec": {
+      "flat_gaussian": 2352.501891340372,
+      "throat_ws_loop": 2385.7196843858874,
+      "eigenmode_dirichlet": 175.1474167017681,
+      "gamow_outgoing": 102.93479546844198
+    },
+    "relative_to_flat": {
+      "flat_gaussian": 1.0,
+      "throat_full_analysis": 4.989,
+      "eigenmode_14_isotopes": 13.432,
+      "gamow_14_isotopes": 22.854
+    },
+    "bottleneck_channel": "gamow_outgoing"
+  },
+  "scaling": {
+    "n_grid_flat_proxy": {
+      "rows": [
+        {
+          "n_grid": 512,
+          "wall_s": 0.004331221804022789,
+          "grid_points_per_sec": 1654960.268564968,
+          "isotopes_per_sec": 3232.344274540953
+        },
+        {
+          "n_grid": 1024,
+          "wall_s": 0.004530458090205987,
+          "grid_points_per_sec": 3164359.9200248164,
+          "isotopes_per_sec": 3090.195234399235
+        },
+        {
+          "n_grid": 2048,
+          "wall_s": 0.004944041526565949,
+          "grid_points_per_sec": 5799304.04021406,
+          "isotopes_per_sec": 2831.6914258857714
+        },
+        {
+          "n_grid": 4096,
+          "wall_s": 0.005862014057735602,
+          "grid_points_per_sec": 9782303.391839873,
+          "isotopes_per_sec": 2388.2576640234065
+        },
+        {
+          "n_grid": 8192,
+          "wall_s": 0.00737988871211807,
+          "grid_points_per_sec": 15540613.750946917,
+          "isotopes_per_sec": 1897.0475770198873
+        }
+      ],
+      "loglog_slope_wall_vs_n_grid_last3": 0.28895409991414484,
+      "interpretation": "slope \u2248 0.29 on last 3 sizes (\u22481 \u21d2 linear in grid points for Simpson overlap)"
+    },
+    "isotope_count_throat_ws": {
+      "rows": [
+        {
+          "label": "base_14",
+          "n_isotopes": 14,
+          "wall_s": 0.005883541579047839,
+          "isotopes_per_sec": 2379.519174276947,
+          "per_isotope_ms": 0.4202529699319885
+        },
+        {
+          "label": "extended_29",
+          "n_isotopes": 29,
+          "wall_s": 0.012027680252989134,
+          "isotopes_per_sec": 2411.1050003006926,
+          "per_isotope_ms": 0.41474759493065977
+        }
+      ],
+      "wall_ratio_29_over_14": 2.0442925560042746,
+      "isotope_count_ratio": 2.0714285714285716,
+      "linearity_assessment": "wall time ratio 2.044 vs isotope ratio 2.071 (approximately linear)"
+    },
+    "bie_mobius_mesh": {
+      "a_over_R": 0.05,
+      "rows": [
+        {
+          "n_u": 16,
+          "n_v": 4,
+          "panels": 64,
+          "wall_s": 0.16473473592971763,
+          "panels_per_sec": 388.5033696069112
+        },
+        {
+          "n_u": 32,
+          "n_v": 4,
+          "panels": 128,
+          "wall_s": 0.3321451113248865,
+          "panels_per_sec": 385.373728637533
+        },
+        {
+          "n_u": 48,
+          "n_v": 6,
+          "panels": 288,
+          "wall_s": 1.1489530832817156,
+          "panels_per_sec": 250.66297674870708
+        },
+        {
+          "n_u": 64,
+          "n_v": 8,
+          "panels": 512,
+          "wall_s": 2.768359902470062,
+          "panels_per_sec": 184.9470509752613
+        },
+        {
+          "n_u": 96,
+          "n_v": 8,
+          "panels": 768,
+          "wall_s": 4.323519625080128,
+          "panels_per_sec": 177.63305514908276
+        }
+      ],
+      "loglog_slope_wall_vs_panels": 1.3629325724657,
+      "interpretation": "slope \u2248 1.36 vs panel count (dense BIE solve \u2014 expect \u22651)",
+      "memo_disabled": true
+    },
+    "eigen_interior_single_isotope": {
+      "isotope": "238U",
+      "rows": [
+        {
+          "n_interior": 200,
+          "wall_s": 0.002951583359390497
+        },
+        {
+          "n_interior": 400,
+          "wall_s": 0.0038919861738880477
+        },
+        {
+          "n_interior": 800,
+          "wall_s": 0.006155347141126792
+        },
+        {
+          "n_interior": 1200,
+          "wall_s": 0.008527055537949005
+        }
+      ],
+      "loglog_slope": 0.5925466734950005
+    },
+    "heavy_isotope_238U_single_solve": {
+      "eigenmode_s": {
+        "mean_s": 0.005690999794751406,
+        "std_s": 6.458221017720284e-05,
+        "runs_s": [
+          0.00574458297342062,
+          0.005709124729037285,
+          0.005619291681796312
+        ]
+      },
+      "gamow_s": {
+        "mean_s": 0.009900527851035198,
+        "std_s": 0.0003177166358954676,
+        "runs_s": [
+          0.009882499929517508,
+          0.010226874612271786,
+          0.0095922090113163
+        ]
+      },
+      "gamow_over_eigen_ratio": 1.739681639097243,
+      "memo_disabled": true
+    }
+  },
+  "cache_speedup": {
+    "memo_root": ".cache",
+    "memo_stats_after": {
+      "hits": 29,
+      "misses": 29,
+      "writes": 29
+    },
+    "before_baseline_utc": "2026-07-23T12:28:11.565943+00:00",
+    "before_ribbon_wall_s": 12.21,
+    "before_gamow_relative_to_flat": 23.502,
+    "gamow_14": {
+      "cold_s": 0.15172749990597367,
+      "warm_s": 0.010549499653279781,
+      "speedup": 14.38
+    },
+    "eigen_14": {
+      "cold_s": 0.09091033320873976,
+      "warm_s": 0.010026957839727402,
+      "speedup": 9.07
+    },
+    "bie_single_48x6": {
+      "cold_s": 1.1491142502054572,
+      "warm_s": 0.0001577497459948063,
+      "speedup": 7284.41
+    },
+    "ribbon_script": {
+      "cold_s": 11.762350959237665,
+      "warm_s": 0.15071612503379583,
+      "speedup": 78.04,
+      "cold_exit": 0,
+      "warm_exit": 0,
+      "vs_before_speedup": 81.01
+    }
+  },
+  "summary": {
+    "bottleneck_script": "palpha_overlap_refined",
+    "bottleneck_channel": "gamow_outgoing",
+    "extended_set_linearity": "wall time ratio 2.044 vs isotope ratio 2.071 (approximately linear)",
+    "gamow_vs_eigen_heavy_isotope_ratio": 1.739681639097243,
+    "bie_scaling_slope": 1.3629325724657,
+    "ribbon_warm_vs_before": 81.01,
+    "gamow_cold_to_warm": 14.38,
+    "bie_cold_to_warm": 7284.41
+  }
+}

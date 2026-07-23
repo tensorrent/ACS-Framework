@@ -42,3 +42,7 @@ build/
 # Training run exhaust (regenerate with harness)
 harness/reports/
 
+
+# Harness memo blobs
+.cache/
+**/.cache/

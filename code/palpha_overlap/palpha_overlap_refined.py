@@ -70,6 +70,12 @@ from palpha_overlap_throat import (  # type: ignore
 )
 from palpha_overlap_gamow import evaluate_gamow_isotope  # type: ignore
 
+# Shared harness memo (disk + memory).
+_CODE_ROOT = Path(__file__).resolve().parents[1]
+if str(_CODE_ROOT) not in sys.path:
+    sys.path.insert(0, str(_CODE_ROOT))
+from acs_memo import fmt_float, get_npz_solve, put_npz_solve  # noqa: E402
+
 # ---------------------------------------------------------------------------
 # Paths / constants
 # ---------------------------------------------------------------------------
@@ -229,6 +235,25 @@ def eigen_ground_energy_and_mode(
     return E0, r_full, u_full, meta
 
 
+def _dirichlet_solve_key(
+    row: IsotopeRow,
+    *,
+    r0_fm: float,
+    a_ws_fm: float,
+    n_interior: int,
+) -> tuple[Any, ...]:
+    return (
+        row.name,
+        "dirichlet",
+        fmt_float(r0_fm),
+        fmt_float(a_ws_fm),
+        int(n_interior),
+        fmt_float(row.Q_alpha_MeV),
+        fmt_float(row.R_fm),
+        fmt_float(row.b_fm),
+    )
+
+
 def find_V0_for_Q(
     row: IsotopeRow,
     ids: NuclearIds,
@@ -244,6 +269,12 @@ def find_V0_for_Q(
     Deeper V0 lowers E0.  f(V0) = E0(V0) - Q changes from + to - as V0 grows.
     """
     Q = row.Q_alpha_MeV
+    cache_parts = _dirichlet_solve_key(
+        row, r0_fm=r0_fm, a_ws_fm=a_ws_fm, n_interior=n_interior
+    )
+    hit = get_npz_solve("palpha_eigen", cache_parts)
+    if hit is not None:
+        return hit["V0"], hit["E0"], hit["r"], hit["u"], hit["meta"]
 
     def f(V0: float) -> float:
         E0, _, _, _ = eigen_ground_energy_and_mode(
@@ -288,6 +319,15 @@ def find_V0_for_Q(
                 "Q_alpha_MeV": Q,
                 "E0_minus_Q": E0 - Q,
             }
+            put_npz_solve(
+                "palpha_eigen",
+                cache_parts,
+                V0=V0,
+                E0=E0,
+                r=r,
+                u=u,
+                meta=meta,
+            )
             return V0, E0, r, u, meta
 
     V0 = float(brentq(f, lo, hi, xtol=1e-6, rtol=1e-6, maxiter=80))
@@ -306,6 +346,15 @@ def find_V0_for_Q(
         "Q_alpha_MeV": Q,
         "E0_minus_Q": E0 - Q,
     }
+    put_npz_solve(
+        "palpha_eigen",
+        cache_parts,
+        V0=V0,
+        E0=E0,
+        r=r,
+        u=u,
+        meta=meta,
+    )
     return V0, E0, r, u, meta
 
 

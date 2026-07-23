@@ -54,6 +54,11 @@ Scale input: $R = \hbar/(2 m_e c)$.
 
 ## 4. Capacitance estimate for $\alpha$
 
+### Geometric fidelity (revision surface)
+
+The capacitance formula is an annulus/thin-ring approximation to a twisted ribbon. A conformal map (or boundary-integral solve) on the true double-cover domain is the natural next revision; until then α^{-1}≈137.036 is an annulus-model output, not a geometry-unique invariant.
+
+
 $$
 C \approx \frac{2\pi\epsilon_0 R}{\ln(8R/a)+1},\qquad
 E_{\mathrm{cap}}=\frac{(e/2)^2}{2C}=m_e c^2

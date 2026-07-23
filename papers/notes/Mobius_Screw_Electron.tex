@@ -200,6 +200,33 @@ C \approx \frac{2\pi\epsilon_0 R}{\ln(8R/a) + 1}.
 (The additive constant in the denominator is scheme-dependent at this
 order; the logarithm dominates for $R\gg a$.)
 
+\subsection{Geometric fidelity of the capacitance model}
+\label{sec:C-fidelity}
+
+Equation~\eqref{eq:C} is an \emph{annulus / thin-ring} approximation to
+the electrostatic energy of the M\"obius ribbon.  The actual
+double-cover geometry is a twisted strip (or its immersion as a
+one-sided surface), not a flat annulus.  Two consequences follow:
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt]
+  \item The logarithmic cutoff $\ln(8R/a)$ encodes an effective
+        aspect ratio; a different conformal modulus for the true
+        ribbon will shift the constant term and, more weakly, the
+        argument of the logarithm.
+  \item The factor $e/2$ per sheet is a double-cover bookkeeping
+        choice; alternative charge assignments change the prefactor
+        of $E_{\mathrm{cap}}$ at the same order as a change of
+        conformal modulus.
+\end{enumerate}
+
+A natural revision path is to replace~\eqref{eq:C} by the capacitance
+of the ribbon domain under a conformal map to a standard annulus (or
+by a boundary-integral computation on the immersed strip), then
+re-solve~\eqref{eq:Ecap}.  Until that is done,
+$\alpha^{-1}\approx 137.036$ should be read as a numerical output of
+the annulus model, not as a geometry-unique invariant of the
+framed unknot.
+
 \subsection{Self-stress matching}
 
 Assign charge $e/2$ to each sheet of the double cover and match the
@@ -222,11 +249,9 @@ approximations,
 \end{equation}
 
 \begin{remark}[Status of~\eqref{eq:alpha}]
-Equation~\eqref{eq:alpha} is a numerical output of the capacitance model
-with the matching condition~\eqref{eq:Ecap}.  It is sensitive to the
-precise logarithmic cutoff and to the factor $e/2$ assignment.  It is
-reported as an as-implemented estimate, not as a uniqueness theorem for
-$\alpha$.
+The estimate is cutoff- and charge-split-sensitive; see
+\S\ref{sec:C-fidelity}.  It is reported as an as-implemented estimate,
+not as a uniqueness theorem for $\alpha$.
 \end{remark}
 
 \section{Phase-slip unification}

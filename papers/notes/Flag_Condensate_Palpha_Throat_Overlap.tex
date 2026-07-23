@@ -1,0 +1,294 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=0.60in}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=red!70!black
+}
+
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\setlength{\abovedisplayshortskip}{1pt}
+\setlength{\belowdisplayshortskip}{1pt}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+
+\title{\LARGE\bfseries Throat-Geometry Overlap for Alpha Preformation:\\
+Warped Measure and Woods--Saxon Cluster Trial}
+
+\author{\textbf{ACS Theoretical Physics Working Group}\\[0.3em]
+\small\textit{Sovereign-Stack ACS Research Program \& Flag Condensate Project}\\
+\small\texttt{research@acs-foundation.org}}
+
+\date{July 22, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The flat $[0,R]$ standing-wave overlap proxy~\cite{PalphaOverlap2026}
+uses $\ell=0$ flag mode vs Gaussian alpha trial with measure $\dd r$.
+This sequel replaces that proxy geometry with (i)~the AdS-like throat
+radial weight $w(r)=R/r$ implied by the companion nuclear metric
+$\dd s^2=(R^2/r^2)\,\dd r^2+\cdots$~\cite{NuclearDecay2026}, and
+(ii)~a Woods--Saxon (WS) alpha-cluster radial trial as primary, keeping
+Gaussian/HO as comparison.  Overlap support remains the confined interior
+$[0,R]$ where the Dirichlet flag mode is defined; the barrier $[R,b]$ stays
+the Gamow domain.  On the same 14-isotope set, primary throat+WS yields
+$\langle\log_{10} P_{\mathrm{model}}\rangle=-0.4607$, Pearson
+$r=+0.8875$ vs extracted $\log_{10} P_\alpha$, and
+$S_\star\approx 3.18\times 10^{-2}$ reducing RMS residual from $1.7099$
+to $0.8247$.  Relative to the flat-Gaussian proxy, correlation changes by
+$\Delta r\approx -0.0007$; absolute-scale $S$ shifts modestly.  Still a
+geometric/structural proxy---not microscopic uniqueness.
+\end{abstract}
+
+\vspace{0.1em}
+\hrule
+\vspace{0.4em}
+
+\section{Motivation and what moved}
+
+Reference~\cite{PalphaOverlap2026} documented a flat-measure overlap
+proxy and flagged full throat geometry and a more realistic alpha trial
+as the next structural step.  This note implements that step on the
+unchanged 14-isotope table of~\cite{NuclearDecay2026}.
+
+\begin{remark}[RC1 scope]
+$P_{\mathrm{model}}$ remains a geometric/structural preformation
+\emph{proxy}.  Warped measure and WS shape are mechanism choices
+documented below; they are not a claim of unique many-body nuclear
+structure.  Absolute scale may still need one global factor $S$.
+\end{remark}
+
+\subsection{What moved (proxy $\to$ throat/WS)}
+\begin{itemize}
+\item \textbf{Measure:} flat $\dd r$ $\to$ throat weight $w(r)=R/r$
+  from $\sqrt{g_{rr}}$ on the AdS-like confining metric of~\cite{NuclearDecay2026}.
+\item \textbf{Alpha trial:} Gaussian/HO $\to$ Woods--Saxon primary
+  $u_\alpha(r)=r\bigl(1+\ee^{(r-R_\alpha)/a_{\mathrm{WS}}}\bigr)^{-1}$,
+  with optional WS$\times$Coulomb-tail match for comparison.
+\item \textbf{Artifacts:} new code
+  \texttt{palpha\_overlap\_throat.py}, JSON
+  \texttt{palpha\_overlap\_throat\_results.json}; baseline proxy files
+  retained.
+\end{itemize}
+
+\subsection{What remains open}
+\begin{itemize}
+\item Isotope-specific spectroscopic amplitudes beyond one global $S$.
+\item Self-consistent bound-state solution of WS+Coulomb (R-matrix /
+  cluster eigenmode) rather than a phenomenological trial.
+\item Overlap constructions that place non-vanishing flag amplitude in
+  the barrier $[R,b]$ (the present Dirichlet $u_{\mathrm{in}}$ vanishes
+  at $R$).
+\item Absolute uniqueness of preformation from many-body structure.
+\end{itemize}
+
+\begin{remark}[Next]
+Parametric isotope-resolved $S(A,Z)$ (with leave-one-out) and a
+self-consistent WS+Coulomb interior eigenmode are implemented as
+comparison channels in the refined sequel
+\texttt{flag\_condensate\_palpha\_refined.tex} /
+\texttt{palpha\_overlap\_refined.py}.  On the stated set, parametric
+$S(A,Z)$ reduces LOO residual RMS most among non-tautological protocols;
+see that note for metrics.
+\end{remark}
+
+\section{Throat weight and overlap definition}
+
+Companion metric~\cite{NuclearDecay2026}:
+\begin{equation}
+\dd s^2 = \frac{R^2}{r^2}\,\dd r^2 + \frac{r^2}{R^2}\eta_{\mu\nu}\,\dd x^\mu\dd x^\nu.
+\end{equation}
+We take the radial measure factor $\sqrt{g_{rr}}=R/r$ and define
+\begin{equation}
+P_{\mathrm{model}}
+=
+\frac{\bigl|\displaystyle\int_0^R u_{\mathrm{in}}(r)\,u_\alpha(r)\,w(r)\,\dd r\bigr|^2}
+{\displaystyle
+\Bigl(\int_0^R u_{\mathrm{in}}^2\,w\,\dd r\Bigr)
+\Bigl(\int_0^R u_\alpha^2\,w\,\dd r\Bigr)},
+\qquad w(r)=\frac{R}{r}.
+\end{equation}
+For reduced modes $u\sim O(r)$ near the origin the integrands remain
+integrable.  Flat $w\equiv 1$ is recomputed for side-by-side comparison
+(including reproduction of~\cite{PalphaOverlap2026}).
+
+\begin{remark}[Domain choice]
+Overlap support is $[0,R]$.  The Coulomb barrier interval $[R,b]$
+determines Gamow $W$ in~\cite{NuclearDecay2026}; it is not used here as
+overlap support for the Dirichlet interior mode.
+\end{remark}
+
+\section{Radial modes}
+
+\subsection{Confined flag mode ($\ell=0$)}
+Unchanged:
+\begin{equation}
+u_{\mathrm{in}}(r)=r\,j_0(kr),\qquad k=\pi/R.
+\end{equation}
+
+\subsection{Alpha trials}
+Primary Woods--Saxon cluster packet (inputs $r_0=1.2\,\mathrm{fm}$,
+$a_{\mathrm{WS}}=0.55\,\mathrm{fm}$):
+\begin{equation}
+u_\alpha^{\mathrm{WS}}(r)
+=
+\frac{r}{1+\ee^{(r-R_\alpha)/a_{\mathrm{WS}}}},
+\qquad
+R_\alpha=r_0\,4^{1/3}\approx 1.905\,\mathrm{fm}.
+\end{equation}
+Comparison: Gaussian/HO as in~\cite{PalphaOverlap2026}; optional
+WS with exponential$\times R_m/r$ tail matched in value at
+$R_m=R_\alpha+2a_{\mathrm{WS}}$ ($\kappa=1/a_{\mathrm{WS}}$,
+phenomenological).
+
+\section{Numerical protocol}
+
+Simpson quadrature, $N=4096$ on $[0,R]$.  Implementation:
+\texttt{rh\_papers\_may21/acs-framework/code/palpha\_overlap/palpha\_overlap\_throat.py}.
+Results:
+\texttt{docs/palpha\_overlap\_throat\_results.json}.
+Logs:
+\texttt{docs/palpha\_overlap\_throat\_logs/}.
+
+\section{Results on the stated set}
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Throat+WS overlap vs extracted $\log_{10} P_\alpha$.}
+Primary model; $S$ is one global factor.}
+\label{tab:throat-overlap}
+\vspace{0.2em}
+\scriptsize
+\renewcommand{\arraystretch}{0.75}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Isotope} & \textbf{$R$ (fm)} & \textbf{$\log_{10} P_{\mathrm{model}}$}
+ & \textbf{$\log_{10} P_\alpha^{\mathrm{ext}}$}
+ & \textbf{resid.\ (raw)}
+ & \textbf{$\log_{10}(S P_{\mathrm{model}})$}
+ & \textbf{resid.\ ($S$)} \\
+\midrule
+$^{212}\mathrm{Po}$ & 8.99 & $-0.4441$ & $-1.53$ & $+1.0859$ & $-1.9419$ & $-0.4119$ \\
+$^{214}\mathrm{Po}$ & 9.02 & $-0.4465$ & $-1.19$ & $+0.7435$ & $-1.9443$ & $-0.7543$ \\
+$^{216}\mathrm{Po}$ & 9.05 & $-0.4489$ & $-1.04$ & $+0.5911$ & $-1.9467$ & $-0.9067$ \\
+$^{218}\mathrm{Po}$ & 9.07 & $-0.4505$ & $-0.82$ & $+0.3695$ & $-1.9483$ & $-1.1283$ \\
+$^{220}\mathrm{Rn}$ & 9.10 & $-0.4529$ & $-1.12$ & $+0.6671$ & $-1.9507$ & $-0.8307$ \\
+$^{224}\mathrm{Ra}$ & 9.16 & $-0.4576$ & $-1.54$ & $+1.0824$ & $-1.9555$ & $-0.4155$ \\
+$^{226}\mathrm{Ra}$ & 9.18 & $-0.4592$ & $-1.73$ & $+1.2708$ & $-1.9571$ & $-0.2271$ \\
+$^{228}\mathrm{Th}$ & 9.21 & $-0.4616$ & $-1.87$ & $+1.4084$ & $-1.9595$ & $-0.0895$ \\
+$^{232}\mathrm{Th}$ & 9.26 & $-0.4656$ & $-2.17$ & $+1.7044$ & $-1.9634$ & $+0.2066$ \\
+$^{234}\mathrm{U}$  & 9.29 & $-0.4679$ & $-2.64$ & $+2.1721$ & $-1.9658$ & $+0.6742$ \\
+$^{238}\mathrm{U}$  & 9.34 & $-0.4718$ & $-1.97$ & $+1.4982$ & $-1.9697$ & $+0.0003$ \\
+$^{238}\mathrm{Pu}$ & 9.34 & $-0.4718$ & $-3.28$ & $+2.8082$ & $-1.9697$ & $+1.3103$ \\
+$^{240}\mathrm{Pu}$ & 9.36 & $-0.4734$ & $-2.91$ & $+2.4366$ & $-1.9713$ & $+0.9387$ \\
+$^{244}\mathrm{Cm}$ & 9.42 & $-0.4781$ & $-3.61$ & $+3.1319$ & $-1.9760$ & $+1.6340$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Primary summary (throat + Woods--Saxon)}
+\begin{align*}
+\langle\log_{10} P_{\mathrm{model}}\rangle &= -0.4607
+\quad(\sigma=0.0110),\\
+\langle\log_{10} P_\alpha^{\mathrm{ext}}\rangle &= -1.9586
+\quad(\sigma=0.8656),\\
+r\bigl(\log_{10} P_{\mathrm{model}},\,\log_{10} P_\alpha^{\mathrm{ext}}\bigr)
+&= +0.8875,\\
+\mathrm{RMS}_{S=1} &= 1.7099,\qquad
+S_{\star}=3.178\times 10^{-2},\qquad
+\mathrm{RMS}_{S_\star}=0.8247.
+\end{align*}
+
+\subsection{Model comparison on the stated set}
+\begin{table}[H]
+\centering
+\caption{Flat vs throat measure; Gaussian vs WS alpha trial.}
+\label{tab:model-compare}
+\scriptsize
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & $\langle\log_{10} P\rangle$ & $r$ & $\mathrm{RMS}_{S=1}$ & $\mathrm{RMS}_{S_\star}$ \\
+\midrule
+throat + WS (primary) & $-0.4607$ & $+0.8875$ & $1.7099$ & $0.8247$ \\
+throat + WS$\times$Coulomb tail & $-0.4825$ & $+0.8875$ & $1.6908$ & $0.8245$ \\
+throat + Gaussian & $-0.2791$ & $+0.8881$ & $1.8715$ & $0.8260$ \\
+flat + WS & $-0.6786$ & $+0.8876$ & $1.5201$ & $0.8200$ \\
+flat + Gaussian (baseline proxy) & $-0.3905$ & $+0.8882$ & $1.7705$ & $0.8220$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Relative to flat+Gaussian~\cite{PalphaOverlap2026}:
+$\Delta\langle\log_{10} P\rangle=-0.0702$,
+$\Delta r=-0.0007$,
+$\Delta\mathrm{RMS}_{S_\star}=+0.0027$,
+$S$ moves from $2.70\times 10^{-2}$ to $3.18\times 10^{-2}$.
+
+\begin{remark}[Interpretation]
+On this set, warped measure and WS shape shift absolute scale and
+slightly compress $\sigma(\log_{10} P_{\mathrm{model}})$, but do not
+materially change correlation with extracted $\log_{10} P_\alpha$.
+Isotope-specific residual structure remains; one global $S$ absorbs mean
+offset only.
+\end{remark}
+
+\section{Conclusion}
+We have advanced the flat $[0,R]$ proxy of~\cite{PalphaOverlap2026} to
+an AdS-like throat weight $w=R/r$ with Woods--Saxon alpha trial on the
+same 14-isotope set.  Primary metrics:
+$\langle\log_{10} P\rangle=-0.4607$, $r=+0.8875$,
+$S_\star\approx 0.032$.  Correlation is essentially unchanged versus the
+flat-Gaussian proxy.  Isotope-resolved / parametric $S$ and
+self-consistent WS+Coulomb eigenmodes are reported in the refined
+sequel~\cite{PalphaRefined2026}.  Absolute uniqueness is not claimed.
+
+\begin{thebibliography}{99}
+\bibitem{NuclearDecay2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_nuclear\_decay.tex} /
+  \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+\bibitem{PalphaOverlap2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Standing-Wave Overlap Proxy for Alpha Preformation},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_palpha\_overlap.tex} /
+  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
+\bibitem{PalphaRefined2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Refined $P_\alpha$ Overlap: Parametric $S$ and WS+Coulomb Eigenmode},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_palpha\_refined.tex} /
+  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Refined.tex}.
+\bibitem{gamow1928}
+  G. Gamow, \emph{Zur Quantentheorie des Atomkernes},
+  Z. Phys. \textbf{51}, 204 (1928).
+\end{thebibliography}
+
+\end{document}

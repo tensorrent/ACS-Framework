@@ -1,0 +1,254 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=0.85in}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=red!70!black
+}
+
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{M\"obius-Ribbon Capacitance:\\
+Annulus, Conformal Modulus, and BIE Revisions of the $\alpha$ Estimate}\\[0.35em]
+\large Sequel to \textit{The M\"obius-Screw Electron}}
+\author{Flag Condensate Collaboration\\
+\small\textit{Sovereign-Stack ACS Research Program}}
+\date{July 22, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The companion framed-unknot electron note~\cite{mobius2026} obtains
+$\alpha^{-1}\approx 137.036$ from an annulus / thin-ring capacitance
+and a self-stress match $(e/2)^2/(2C)=m_e c^2$.  That note
+(\S4.1) asks for a conformal-map and boundary-integral revision of
+$C$.  This sequel implements three as-reported models at fixed
+spin-radius input $R=\hbar/(2m_e c)$: (i)~the baseline annulus
+formula; (ii)~a double-cover strip$\to$annulus conformal-modulus
+image; (iii)~constant-panel single-layer BIE collocation on a
+discretized M\"obius ribbon about the $(2,1)$ centerline.  Aspect
+ratios are scanned; capacitances and $\alpha^{-1}$ are written to
+machine-readable results.  All outputs are model claims under stated
+inputs.  Comparison uses the CODATA-style reference
+$\alpha^{-1}\approx 137.035999084$; no uniqueness or derivation claim
+for $\alpha$ is made.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Scope and claim discipline}
+\label{sec:scope}
+
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item \textbf{In scope:} numerical $C$ and $\alpha^{-1}$ under three
+        explicit capacitance models; aspect-ratio sensitivity; comparison
+        to the CODATA-style reference value of $\alpha^{-1}$.
+  \item \textbf{Out of scope:} a proof that any model yields the measured
+        fine-structure constant; QED radiative corrections; a first-principles
+        prediction of $a/R$ from the Standard Model.
+\end{itemize}
+
+\paragraph{Reference.}
+Unless otherwise noted, numerical comparisons use
+\begin{equation}
+\alpha^{-1}_{\mathrm{ref}} \approx 137.035999084
+\end{equation}
+(CODATA-style).  Runtime constants follow \texttt{scipy.constants}
+(float64), whose reciprocal fine-structure value is
+$\alpha^{-1}\approx 137.035999178$ in the recorded run.
+
+\section{Self-stress match (unchanged)}
+\label{sec:match}
+
+With charge split $e/2$ per double-cover sheet and rest-energy matching,
+\begin{equation}
+\label{eq:Ecap}
+\frac{(e/2)^2}{2C} = m_e c^2.
+\end{equation}
+Combined with $\alpha=e^2/(4\pi\epsilon_0\hbar c)$ and
+$R=\hbar/(2m_e c)$,
+\begin{equation}
+\label{eq:alphaC}
+\alpha^{-1} = \frac{\pi\epsilon_0 R}{C}.
+\end{equation}
+Equation~\eqref{eq:alphaC} converts any positive finite $C$ into a model
+$\alpha^{-1}$.
+
+\section{Three capacitance models}
+\label{sec:models}
+
+\subsection{Annulus / thin-ring baseline}
+\label{sec:annulus}
+
+As in~\cite{mobius2026},
+\begin{equation}
+\label{eq:Cann}
+C_{\mathrm{ann}}
+=
+\frac{2\pi\epsilon_0 R}{\ln(8R/a)+1}.
+\end{equation}
+Under~\eqref{eq:alphaC} this collapses to the closed form
+\begin{equation}
+\alpha^{-1}_{\mathrm{ann}} = \tfrac12\bigl(\ln(8R/a)+1\bigr).
+\end{equation}
+Matching $\alpha^{-1}_{\mathrm{ref}}$ forces an extreme aspect ratio
+$a/R = 8\exp(1-2\alpha^{-1}_{\mathrm{ref}})\sim 2\times 10^{-118}$.
+That match is a tuning of the cutoff, not a geometric prediction of $a$.
+
+\subsection{Conformal double-cover strip $\to$ annulus}
+\label{sec:conformal}
+
+Take a rectangular strip of length $L=\mathrm{cover}\cdot 2\pi R$
+(default $\mathrm{cover}=2$) and width $W=2a$.  The exponential map
+sends the strip to an annulus with modulus
+\begin{equation}
+\rho = e^{2\pi W/L} = \exp\!\bigl(2a/(\mathrm{cover}\, R)\bigr).
+\end{equation}
+Geometric-mean radius $R_m = L/(2\pi)=\mathrm{cover}\, R$ and effective
+half-width
+\begin{equation}
+a_{\mathrm{eff}} = R_m\,\sinh\!\bigl(a/(\mathrm{cover}\, R)\bigr)
+\end{equation}
+are inserted into the same logarithmic scheme as~\eqref{eq:Cann}:
+\begin{equation}
+C_{\mathrm{conf}}
+=
+\frac{2\pi\epsilon_0 R_m}{\ln(8 R_m/a_{\mathrm{eff}})+1}.
+\end{equation}
+This is a conformal-modulus revision of the cutoff geometry, still
+within the thin-ring capacitance scheme.
+
+\subsection{BIE / collocation on a M\"obius ribbon}
+\label{sec:bie}
+
+Discretize the immersed ribbon
+\begin{equation}
+\mathbf{X}(u,v)=\mathbf{r}(u)+v\,\mathbf{n}(u),
+\qquad u\in[0,2\pi),\quad v\in[-a,a],
+\end{equation}
+about the $(2,1)$ centerline of~\cite{mobius2026}, with $\mathbf{n}$ a
+torus-based M\"obius half-twist frame (stable against Frenet flips).
+Constant-panel collocation of the single-layer potential at unit
+potential yields $C_{\mathrm{BIE}}=Q/V$.  Lengths are nondimensionalized
+by $R$; the SI capacitance is $C=C_{\hat{}}\,\epsilon_0 R$.
+Mesh parameters in the recorded run: $n_u=40$, $n_v=5$ on the scan
+(demo point $n_u=48$, $n_v=6$).  BIE is reported only on a moderate
+aspect window where the half-width is panel-resolved
+($5\times 10^{-3}\le a/R\le 0.25$).
+
+\section{Numerical results (as-implemented)}
+\label{sec:results}
+
+Code path:
+\texttt{rh\_papers\_may21/acs-framework/code/capacitance\_ribbon/ribbon\_capacitance.py}.
+Artifacts:
+\texttt{docs/capacitance\_ribbon\_results.json} and
+\texttt{docs/capacitance\_ribbon\_logs/}.
+
+\subsection{Worked demo at $a/R=0.05$}
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Model & $C$ [F] & $\alpha^{-1}$ & $C/(\epsilon_0 R)$ \\
+\midrule
+Annulus & $1.768\times 10^{-24}$ & $3.037587$ & $1.034$ \\
+Conformal (cover$=2$) & $3.174\times 10^{-24}$ & $1.692054$ & $1.857$ \\
+BIE M\"obius & $1.441\times 10^{-23}$ & $0.372688$ & $8.430$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At moderate aspect ratio the log-ring models sit near the thin-wire
+scale $C\sim\epsilon_0 R$, while the finite-width BIE ribbon sits near
+the disk scale $C\sim 8\epsilon_0 R$.  Correspondingly,
+$\alpha^{-1}$ from~\eqref{eq:alphaC} is $\mathcal{O}(1)$, not
+$\mathcal{O}(137)$.
+
+\subsection{CODATA-matching aspect ratios (analytic models)}
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Model & $a/R$ at $\alpha^{-1}_{\mathrm{ref}}$ & Note \\
+\midrule
+Annulus & $\approx 2.039\times 10^{-118}$ & closed form \\
+Conformal & $\approx 3.824\times 10^{-237}$ & root find; cover$=2$ \\
+BIE & --- & not resolved at that aspect \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Ordering on the scanned grid}
+
+On the recorded $a/R$ grid (including the BIE window),
+\begin{equation}
+\alpha^{-1}_{\mathrm{ann}}
+\;>\;
+\alpha^{-1}_{\mathrm{conf}}
+\;>\;
+\alpha^{-1}_{\mathrm{BIE}}
+\end{equation}
+at shared aspect ratio: the conformal double-cover image increases $C$
+relative to the single-radius annulus scheme, and the immersed ribbon
+BIE increases $C$ further.  None of the moderate-aspect samples approach
+$\alpha^{-1}_{\mathrm{ref}}$; the annulus/conformal approach to the
+reference value requires the extreme cutoffs above.
+
+\begin{remark}[Reading of~\cite{mobius2026}'s $137.036$]
+The companion value $\alpha^{-1}\approx 137.036$ is recovered by the
+annulus closed form at a tuned $a/R$.  Under the conformal and BIE
+revisions implemented here, the same moderate geometric aspect does
+\emph{not} reproduce that figure.  This is the geometric-fidelity
+caveat of~\cite{mobius2026}, \S4.1, made quantitative.
+\end{remark}
+
+\section{Summary}
+
+\begin{center}
+\begin{tabular}{@{}lp{0.55\textwidth}@{}}
+\toprule
+Object & Status \\
+\midrule
+$C_{\mathrm{ann}}$~\eqref{eq:Cann} & baseline; CODATA match at extreme $a/R$ \\
+$C_{\mathrm{conf}}$ & conformal-modulus revision; still log-ring scheme \\
+$C_{\mathrm{BIE}}$ & immersed M\"obius collocation; moderate-aspect only \\
+$\alpha^{-1}$ via~\eqref{eq:alphaC} & model output; not a uniqueness claim \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Acknowledgments}
+This sequel answers the revision path stated in~\cite{mobius2026},
+\S4.1 (geometric fidelity of the capacitance model).
+
+\begin{thebibliography}{9}
+
+\bibitem{mobius2026}
+Flag Condensate Collaboration,
+\textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$
+and a Capacitance Model of $\alpha$},
+preprint (July 2026),
+\texttt{mobius\_screw\_electron.tex} /
+\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,259 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=0.60in}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=red!70!black
+}
+
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\setlength{\abovedisplayshortskip}{1pt}
+\setlength{\belowdisplayshortskip}{1pt}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+
+\title{\LARGE\bfseries Refined $P_\alpha$ Overlap:\\
+Parametric Spectroscopic Factor and Self-Consistent WS+Coulomb Eigenmode}
+
+\author{\textbf{ACS Theoretical Physics Working Group}\\[0.3em]
+\small\textit{Sovereign-Stack ACS Research Program \& Flag Condensate Project}\\
+\small\texttt{research@acs-foundation.org}}
+
+\date{July 23, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Two comparison channels extend the throat+Woods--Saxon overlap
+proxy~\cite{PalphaThroat2026} on the same 14-isotope set.
+\textbf{Channel~A} extracts per-isotope $S_i=P_{\alpha,\mathrm{ext}}/P_{\mathrm{model},i}$
+(diagnostic), retains one global $S$, and fits predictive parametric
+$\log_{10}S(A,Z)$ and $\log_{10}S(R)$ with leave-one-out (LOO) RMS vs
+extracted $\log_{10}P$.
+\textbf{Channel~B} replaces the phenomenological WS trial by a
+self-consistent $\ell=0$ eigenmode of $V_{\mathrm{WS}}+V_C$ on $[0,R]$
+(Dirichlet; depth $V_0$ so $E_0=Q_\alpha$), overlapped with the
+throat-weighted flag mode.
+On the stated set, parametric $S(A,Z)$ LOO RMS $=0.2862$ reduces
+residuals most among \emph{non-tautological} protocols (vs throat+WS
+global-$S$ RMS $=0.8247$).  The eigenmode raises Pearson $r$ to
+$+0.9676$ but leaves global-$S$ RMS essentially unchanged ($0.8257$).
+RC1 scope: documented proxies --- not uniqueness.
+\end{abstract}
+
+\vspace{0.1em}
+\hrule
+\vspace{0.4em}
+
+\section{Motivation}
+
+Reference~\cite{PalphaThroat2026} closed flat$\to$throat/WS geometry and
+listed isotope-resolved $S$ and self-consistent WS+Coulomb eigenmodes as
+open.  This note implements both as comparison channels on the unchanged
+table of~\cite{NuclearDecay2026}.
+
+\begin{remark}[RC1 scope]
+Per-isotope $S_i$ zeros that isotope's residual by construction and is
+reported only as a diagnostic.  Predictive claims use parametric $S$ with
+LOO, or Channel~B with one global $S$.  No uniqueness of many-body
+preformation is claimed.
+\end{remark}
+
+\section{Channel A --- isotope $S$ and parametric models}
+
+Base model: throat+WS of~\cite{PalphaThroat2026}
+($w=R/r$, Woods--Saxon trial).  Define
+\begin{equation}
+S_i=\frac{P_{\alpha,\mathrm{ext}}^{(i)}}{P_{\mathrm{model},i}}
+=10^{\log_{10}P_{\mathrm{ext}}^{(i)}-\log_{10}P_{\mathrm{model},i}}.
+\end{equation}
+Global $S_\star=10^{\langle\log_{10}P_{\mathrm{ext}}-\log_{10}P_{\mathrm{model}}\rangle}$
+as before.  Parametric fits (least squares):
+\begin{align}
+\log_{10}S &= b_0 + b_1 A + b_2 Z,\\
+\log_{10}S &= c_0 + c_1 R.
+\end{align}
+Leave-one-out: for each isotope, refit on the other 13 and predict
+$\log_{10}S$; LOO RMS is on predicted $\log_{10}(S P_{\mathrm{model}})$ vs
+extracted $\log_{10}P$.
+
+\subsection{Channel A numbers (stated set)}
+\begin{align*}
+\langle S_i\rangle &= 1.001\times 10^{-1}
+\quad(\sigma=1.260\times 10^{-1}),\\
+\langle\log_{10}S_i\rangle &= -1.4979
+\quad(\sigma=0.8558),\\
+S_\star &= 3.178\times 10^{-2},\qquad
+\mathrm{RMS}_{S_\star}=0.8247,\\
+\mathrm{LOO\,RMS}_{S(A,Z)} &= 0.2862,\qquad
+\mathrm{LOO\,RMS}_{S(R)}=0.4695.
+\end{align*}
+Fit (in-sample):
+$b_0\approx 14.616$, $b_1\approx +0.0979$, $b_2\approx -0.4312$;
+$c_0\approx 48.503$, $c_1\approx -5.435\,\mathrm{fm}^{-1}$.
+
+\section{Channel B --- self-consistent WS+Coulomb eigenmode}
+
+For parent $(A,Z)$ with daughter $(A_d,Z_d)=(A-4,Z-2)$, reduced mass
+$\mu$, and nuclear radius $R$ from the table, solve
+\begin{equation}
+-\frac{\hbar^2}{2\mu}\,u''(r)
++\bigl[V_{\mathrm{WS}}(r;V_0)+V_C(r)\bigr]u(r)=E\,u(r)
+\end{equation}
+on $[0,R]$ with Dirichlet $u(0)=u(R)=0$ (finite-difference
+Sturm--Liouville).  Potentials:
+\begin{align}
+V_{\mathrm{WS}}&=-\frac{V_0}{1+\ee^{(r-R_{\mathrm{WS}})/a}},
+\quad R_{\mathrm{WS}}=r_0 A_d^{1/3},\; a=0.55\,\mathrm{fm},\\
+V_C&=
+\begin{cases}
+\dfrac{Z_\alpha Z_d e^2}{2 R_C}\bigl(3-(r/R_C)^2\bigr), & r<R_C,\\[0.6em]
+Z_\alpha Z_d e^2/r, & r\ge R_C,
+\end{cases}
+\quad R_C=R_{\mathrm{WS}}.
+\end{align}
+Self-consistency: adjust $V_0$ so the ground eigenvalue $E_0=Q_\alpha$
+(box-resonance surrogate; not a complex Gamow eigenphase).  Overlap with
+$u_{\mathrm{in}}=r\,j_0(\pi r/R)$ uses throat weight $w=R/r$ as
+in~\cite{PalphaThroat2026}.
+
+\subsection{Channel B numbers (stated set)}
+\begin{align*}
+\langle\log_{10}P_{\mathrm{model}}\rangle &= -0.1110,\\
+r\bigl(\log_{10}P_{\mathrm{model}},\log_{10}P_{\mathrm{ext}}\bigr)
+&= +0.9676,\\
+\mathrm{RMS}_{S=1} &= 2.0237,\qquad
+S_\star=1.421\times 10^{-2},\qquad
+\mathrm{RMS}_{S_\star}=0.8257.
+\end{align*}
+Typical fitted depths: $V_0\sim 36$--$43\,\mathrm{MeV}$ on this set
+(shallow relative to deep cluster wells --- a consequence of forcing
+$E_0=Q_\alpha>0$ under hard-wall Dirichlet at $R$).
+
+\begin{remark}[Boundary condition]
+Dirichlet at the throat wall $R$ matches the overlap support of the
+confined flag mode.  Channel~C implements outgoing Coulomb/Gamow
+matching on $[0,b]$; on the stated 14-isotope set it does not reduce
+global-$S$ RMS vs Channel~B (see audit log).
+\end{remark}
+
+\section{Acceptance comparison}
+
+\begin{table}[H]
+\centering
+\caption{Flat / throat+WS / refined eigenmode / parametric $S$ on the
+stated 14-isotope set.  LOO applies only to parametric $S$.}
+\label{tab:accept}
+\scriptsize
+\renewcommand{\arraystretch}{0.85}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Channel} & $\langle\log_{10}P\rangle$ & $r$ & $\mathrm{RMS}_{\mathrm{raw}}$
+ & $\mathrm{RMS}_{S_\star}$ / LOO \\
+\midrule
+flat Gaussian & $-0.3905$ & $+0.8882$ & $1.7705$ & $0.8220$ / --- \\
+throat + WS & $-0.4607$ & $+0.8875$ & $1.7099$ & $0.8247$ / --- \\
+refined eigenmode & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
+Gamow outgoing & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
+parametric $S(A,Z)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.2862$ \\
+parametric $S(R)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.4695$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[Which channel reduces residuals most?]
+Excluding tautological per-isotope $S_i$, \textbf{Channel~A parametric
+$S(A,Z)$} yields the largest residual reduction (LOO RMS $0.2862$ vs
+global-$S$ RMS $\approx 0.82$).  Channel~B improves correlation
+($\Delta r\approx +0.080$) but does not reduce global-$S$ RMS relative
+to throat+WS on this set ($\Delta\mathrm{RMS}_{S_\star}\approx +0.001$).
+\end{remark}
+
+\section{Artifacts and protocol}
+
+Implementation:
+\texttt{rh\_papers\_may21/acs-framework/code/palpha\_overlap/palpha\_overlap\_refined.py}.
+JSON:
+\texttt{docs/palpha\_overlap\_refined\_results.json}.
+Logs:
+\texttt{docs/palpha\_overlap\_refined\_logs/}.
+Baselines retained:
+\texttt{palpha\_overlap.py}, \texttt{palpha\_overlap\_throat.py}.
+Gamow channel: \texttt{palpha\_overlap\_gamow.py}.
+Extended catalog ($n=29$): \texttt{palpha\_overlap\_extended.py},
+\texttt{isotope\_catalog.py}, \texttt{docs/palpha\_overlap\_extended\_results.json}.
+Audit: \texttt{docs/palpha\_audit\_log.md}.
+
+\section{Channel C --- Gamow outgoing boundary on \texorpdfstring{$[0,b]$}{[0,b]}}
+
+Channel~B used Dirichlet $u(0)=u(R)=0$ on the throat support.
+Channel~C extends the radial domain to $[0,b]$ ($b$ = outer Coulomb
+turning point) and replaces the hard wall at $R$ with a Robin outgoing
+match at $r=b$ from WKB slope in the exterior allowed region.
+Overlap support remains $[0,R]$ with throat weight $w=R/r$.
+
+On the stated 14-isotope set: $r=+0.9676$, $\mathrm{RMS}_{S_\star}=0.8257$
+(vs Dirichlet eigenmode $+0.9676$, $0.8257$).  Gamow outgoing BC does
+not improve global-$S$ RMS under the documented $E_0=Q_\alpha$ protocol.
+
+\section{Extended isotope catalog (\texorpdfstring{$n=29$}{n=29})}
+
+Fifteen additional alpha emitters from NNDC/NuDat tabulations were added
+(see extended JSON metadata).  On $n=29$ throat+WS:
+LOO $\mathrm{RMS}_{S(A,Z)}=1.355$ vs $0.286$ on the original 14;
+coefficient signs ($b_1>0$, $b_2<0$, $c_1<0$) hold but magnitudes shift.
+Parametric $S(A,Z)$ predictive power is scoped to the original stated set
+under the mixed extraction protocol in the audit log.
+
+\section{Conclusion}
+
+On the stated set, predictive parametric $S(A,Z)$ with leave-one-out
+compresses residual RMS from $\sim 0.82$ (one global $S$) to $0.286$.
+A self-consistent WS+Coulomb interior eigenmode improves correlation with
+extracted $\log_{10}P$ but does not, by itself, beat throat+WS on
+global-$S$ RMS under the documented Dirichlet/$E_0=Q_\alpha$ protocol.
+Channel~C (Gamow outgoing on $[0,b]$) likewise leaves global-$S$ RMS
+unchanged on the stated set.  Extended catalog ($n=29$) degrades LOO
+parametric RMS as documented.  Absolute uniqueness is not claimed.
+
+\begin{thebibliography}{99}
+\bibitem{NuclearDecay2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_nuclear\_decay.tex}.
+\bibitem{PalphaOverlap2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Standing-Wave Overlap Proxy for Alpha Preformation},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_palpha\_overlap.tex}.
+\bibitem{PalphaThroat2026}
+  ACS Theoretical Physics Working Group,
+  \emph{Throat-Geometry Overlap for Alpha Preformation},
+  ACS Framework note (2026),
+  \texttt{flag\_condensate\_palpha\_throat\_overlap.tex}.
+\end{thebibliography}
+
+\end{document}

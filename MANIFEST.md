@@ -132,5 +132,7 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 | File | Notes | Status |
 |------|-------|--------|
 | `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped) |
+
+| `papers/notes/Klein_Foam_Monad.tex` | Klein-foam Monad postulation (TR-2026-FF06-KFM); cites Möbius + nuclear-decay notes; RC1-scoped | Postulation / ontology |
 | `papers/notes/Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel; Geiger–Nuttall and Hawking transfer-matrix fits as reported in-note | Companion programme note |
 

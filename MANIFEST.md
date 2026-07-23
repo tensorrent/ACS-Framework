@@ -124,3 +124,13 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 | 4/3 mechanism established under K1/K2 | **T4** | failed normalisation robustness + identity bookkeeping |
 | Section 9 gap→cone chain as general theorem | — | not claimed |
 
+
+---
+
+## Flag Condensate notes — Möbius-screw electron & nuclear decay
+
+| File | Notes | Status |
+|------|-------|--------|
+| `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped) |
+| `papers/notes/Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel; Geiger–Nuttall and Hawking transfer-matrix fits as reported in-note | Companion programme note |
+

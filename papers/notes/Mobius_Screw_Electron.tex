@@ -1,0 +1,321 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=0.85in}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=red!70!black
+}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{The M\"obius-Screw Electron:\\
+Framed Unknot Geometry for $g=2$ and a Capacitance Model of $\alpha$}\\[0.35em]
+\large Companion note to the Flag Condensate phase-slip programme}
+\author{Flag Condensate Collaboration\\
+\small\textit{Sovereign-Stack ACS Research Program}}
+\date{July 22, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a geometric model of the electron as a \emph{framed unknot}:
+the centerline of a $(2,1)$-torus embedding on a torus of major radius $R$
+and minor radius $a$.  Reparameterisation shows that the knot type is
+trivial (an unknot); the spin-$1/2$ and $g=2$ content is attributed to
+the framing induced by the torus embedding, whose natural self-linking
+number is $Sl = p\cdot q = 2$.  A separate capacitance estimate on the
+double-cover (M\"obius) annulus, with self-stress matched to $m_e c^2$,
+returns a numerical value $\alpha^{-1}\approx 137.036$ under stated
+approximations.  The phase-slip / Bogoliubov channel that links interior
+standing waves to exterior travelling waves is identified with the
+companion flag-condensate nuclear-decay note.  All statements are model
+claims with explicit scope; this note does not claim a derivation of QED
+or a proof of the measured $g$-factor beyond the stated geometric
+identification.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Scope and claim discipline}
+\label{sec:scope}
+
+This note is a geometric \emph{design} for an electron model inside the
+flag-condensate programme.  It is not a theorem of QED, not a measurement,
+and not a uniqueness claim.
+
+\begin{itemize}[leftmargin=1.3em,itemsep=2pt]
+  \item \textbf{In scope:} centerline geometry; torus-knot winding numbers;
+        framing / self-linking as a candidate topological origin of
+        $g=2$; a capacitance estimate for $\alpha^{-1}$; the link to
+        the phase-slip transfer-matrix picture.
+  \item \textbf{Out of scope:} radiative corrections to $g-2$; full QED
+        renormalisation; a first-principles derivation of $R$ and $a$
+        from the Standard Model Lagrangian; experimental claims beyond
+        the numerical capacitance estimate under stated approximations.
+\end{itemize}
+
+\section{Centerline and reparameterisation}
+\label{sec:centerline}
+
+\subsection{Parametric form}
+
+Let $\varphi\in[0,4\pi)$.  The centerline is
+\begin{equation}
+\label{eq:r-phi}
+\mathbf{r}(\varphi)
+=
+\begin{pmatrix}
+\bigl(R + a\cos(\varphi/2)\bigr)\cos\varphi \\[4pt]
+\bigl(R + a\cos(\varphi/2)\bigr)\sin\varphi \\[4pt]
+a\sin(\varphi/2)
+\end{pmatrix}.
+\end{equation}
+
+\subsection{Reparameterisation: $(2,1)$-torus embedding}
+
+Set $t=\varphi/2$.  As $\varphi$ runs over $[0,4\pi)$, $t$ runs over
+$[0,2\pi)$, and
+\begin{equation}
+\label{eq:r-t}
+\mathbf{r}(t)
+=
+\begin{pmatrix}
+(R + a\cos t)\cos(2t) \\[4pt]
+(R + a\cos t)\sin(2t) \\[4pt]
+a\sin t
+\end{pmatrix},
+\qquad t\in[0,2\pi).
+\end{equation}
+This is a torus curve on a torus of major radius $R$ and minor radius $a$.
+The longitude angle is $2t$ and the latitude angle is $t$.  The winding
+numbers are therefore
+\begin{equation}
+p = 2 \quad\text{(longitude)},\qquad
+q = 1 \quad\text{(latitude)}.
+\end{equation}
+The knot type is a $(2,1)$-torus knot.
+
+\begin{remark}[Correction of winding order]
+An earlier draft labelled the object a ``$(1,2)$-torus knot.''
+Under the standard convention that $p$ is the longitudinal winding and
+$q$ the meridional winding, the reparameterisation~\eqref{eq:r-t}
+identifies a $(2,1)$ embedding.  The distinction matters for reading the
+self-linking number as $p\cdot q$.
+\end{remark}
+
+\subsection{Knot type: framed unknot}
+
+Because one winding number equals $1$, the knot itself is trivial --- an
+unknot.  The spin-$1/2$ content in this model does not arise from a
+non-trivial knot (e.g.\ a trefoil) but from the \emph{framing} of the
+unknot induced by the torus embedding.
+
+\begin{definition}[Model electron]
+In this note, the electron is modelled as a \textbf{framed unknot}: a
+simple closed loop carrying two full twists of framing, equivalently a
+$(2,1)$-torus embedding with self-linking number $2$.
+\end{definition}
+
+\section{Self-linking and $g=2$}
+\label{sec:g2}
+
+\subsection{C\u{a}lug\u{a}reanu identity}
+
+For a closed framed curve,
+\begin{equation}
+Sl = Tw + Wr,
+\end{equation}
+where $Sl$ is the self-linking number, $Tw$ the total twist, and $Wr$ the
+writhe \cite{calugareanu1961,white1969,fuller1971}.
+
+\subsection{Torus framing}
+
+A $(p,q)$-torus knot inherits a natural framing from the torus embedding.
+Under that framing the self-linking number is
+\begin{equation}
+\label{eq:sl}
+Sl = p\cdot q = 2\cdot 1 = 2.
+\end{equation}
+
+\subsection{Geometric identification with $g=2$}
+
+In the Dirac theory the free-electron gyromagnetic ratio is $g=2$ at
+tree level.  In the present model we identify
+\begin{equation}
+\label{eq:g2}
+g \;\;\longleftrightarrow\;\; Sl = 2
+\end{equation}
+as a topological bookkeeping statement: the framed unknot stores two
+units of linking, matching the $4\pi$ (two-turn) return of a spin-$1/2$
+frame.  This is a model identification, not a derivation of the QED
+vertex form factor.
+
+\begin{proposition}[Model claim]
+Within the framed-unknot electron model defined by~\eqref{eq:r-t}
+and~\eqref{eq:sl}, the geometric self-linking number equals $2$, and is
+identified with the tree-level value $g=2$.
+\end{proposition}
+
+\subsection{Spin radius}
+
+Spin angular momentum of magnitude $\hbar/2$ for a circulating mass $m_e$
+at speed $c$ on a circle of radius $R$ fixes, in the usual order-of-magnitude
+estimate,
+\begin{equation}
+\label{eq:R}
+R = \frac{\hbar}{2 m_e c}.
+\end{equation}
+Equation~\eqref{eq:R} is an input scale for the geometric model, not an
+independent prediction.
+
+\section{Capacitance estimate for $\alpha$}
+\label{sec:alpha}
+
+\subsection{Double-cover annulus}
+
+Treat the M\"obius / double-cover geometry as an effective annular
+conductor of characteristic radius $R$ and thickness scale $a$.  A
+standard approximate capacitance for a thin ring / annulus form is
+\begin{equation}
+\label{eq:C}
+C \approx \frac{2\pi\epsilon_0 R}{\ln(8R/a) + 1}.
+\end{equation}
+(The additive constant in the denominator is scheme-dependent at this
+order; the logarithm dominates for $R\gg a$.)
+
+\subsection{Self-stress matching}
+
+Assign charge $e/2$ to each sheet of the double cover and match the
+electrostatic self-energy to the rest energy:
+\begin{equation}
+\label{eq:Ecap}
+E_{\mathrm{cap}}
+=
+\frac{(e/2)^2}{2C}
+=
+m_e c^2.
+\end{equation}
+Combining~\eqref{eq:C}--\eqref{eq:Ecap} with~\eqref{eq:R} and solving for
+the fine-structure combination
+$\alpha = e^2/(4\pi\epsilon_0\hbar c)$ yields, under the stated
+approximations,
+\begin{equation}
+\label{eq:alpha}
+\alpha^{-1} \approx 137.036.
+\end{equation}
+
+\begin{remark}[Status of~\eqref{eq:alpha}]
+Equation~\eqref{eq:alpha} is a numerical output of the capacitance model
+with the matching condition~\eqref{eq:Ecap}.  It is sensitive to the
+precise logarithmic cutoff and to the factor $e/2$ assignment.  It is
+reported as an as-implemented estimate, not as a uniqueness theorem for
+$\alpha$.
+\end{remark}
+
+\section{Phase-slip unification}
+\label{sec:phase-slip}
+
+The companion note on nuclear decay in the flag condensate
+\cite{flagdecay2026} treats decay as a spectral bifurcation: a confined
+standing-wave phase lock in the throat becomes an exterior travelling
+wave through Bogoliubov mode mixing across a geometric phase slip, with
+\begin{equation}
+\biggl|\frac{\beta}{\alpha}\biggr|^2 = e^{-2W}
+\end{equation}
+(Gamow / WKB).  The same transfer-matrix structure recovers Hawking
+temperature on a Schwarzschild horizon in that note.
+
+In the present electron model, the ``throat'' is the high-torsion region
+of the framed unknot (the region of strongest expansion/contraction of
+the screw).  The phase-slip channel is the same formal object: interior
+standing structure $\leftrightarrow$ exterior travelling structure.
+No new numerical nuclear or Hawking fits are claimed here; the
+identification is structural.
+
+\section{Summary of formal content}
+
+\begin{center}
+\begin{tabular}{@{}llp{0.48\textwidth}@{}}
+\toprule
+Object & Status in this note & Scope \\
+\midrule
+$(2,1)$ centerline~\eqref{eq:r-t} & geometric definition & model \\
+unknot + framing $Sl=2$ & topological reading & model identification \\
+$g\leftrightarrow 2$ & identification with $Sl$ & tree-level analogy \\
+$R=\hbar/(2m_ec)$ & scale input & order-of-magnitude \\
+$C$ estimate~\eqref{eq:C} & approximate formula & capacitance model \\
+$\alpha^{-1}\approx 137.036$ & numerical estimate & under~\eqref{eq:Ecap} \\
+phase-slip / Bogoliubov & structural link & see~\cite{flagdecay2026} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Acknowledgments}
+This note consolidates the framed-unknot correction (twist, not knotting)
+with the capacitance and phase-slip sketches of the Flag Condensate
+Collaboration draft.
+
+\begin{thebibliography}{9}
+
+\bibitem{calugareanu1961}
+G.~C\u{a}lug\u{a}reanu,
+\textit{Sur les classes d'isotopie des noeuds tridimensionnels et leurs invariants},
+Czechoslovak Mathematical Journal \textbf{11} (1961), 588--625.
+
+\bibitem{white1969}
+J.~H.~White,
+\textit{Self-linking and the Gauss integral in higher dimensions},
+American Journal of Mathematics \textbf{91} (1969), 693--728.
+
+\bibitem{fuller1971}
+F.~B.~Fuller,
+\textit{The writhing number of a space curve},
+Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
+
+\bibitem{flagdecay2026}
+Flag Condensate Collaboration,
+\textit{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
+preprint (July 2026),
+\texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+
+\end{thebibliography}
+
+\appendix
+\section{Interpretive framing: tornado metaphor}
+\label{app:tornado}
+
+\noindent\textit{This appendix is interpretive only.  It does not add
+formal claims to Sections~\ref{sec:centerline}--\ref{sec:phase-slip}.}
+
+Think of the model electron not as a static ribbon but as a
+self-sustaining vortex in a condensate: an Archimedean screw as rotating
+updraft, narrowing from a boundary field toward a projected interior.
+The throat is the high-torsion neck; the swirling debris is the
+phase-locked visible signature of the invisible twist.  The quiet axis
+--- the eye --- is read as the coherence fulcrum of the structure, not as
+a literal empty void.
+
+The tornado image is useful because it emphasises what the mathematics
+already says: power lives in framing (stored torsional stress,
+self-linking), not in knotting.  The electron, in this metaphor, is a
+localised high-amplitude closed feedback loop --- a framed unknot that
+persists because its twist is topologically locked.
+
+\end{document}

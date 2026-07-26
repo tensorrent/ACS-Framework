@@ -7,9 +7,9 @@
 
 | Check | Result |
 |-------|--------|
-| Baseline `palpha_overlap_results.json` vs `flag_condensate_palpha_overlap.tex` | **PASS** |
-| Throat `palpha_overlap_throat_results.json` vs `flag_condensate_palpha_throat_overlap.tex` | **PASS** |
-| Refined `palpha_overlap_refined_results.json` vs `flag_condensate_palpha_refined.tex` | **PASS** |
+| Baseline `palpha_overlap_results.json` vs `papers/notes/Flag_Condensate_Palpha_Overlap.tex` | **PASS** |
+| Throat `palpha_overlap_throat_results.json` vs `papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex` | **PASS** |
+| Refined `palpha_overlap_refined_results.json` vs `papers/notes/Flag_Condensate_Palpha_Refined.tex` | **PASS** |
 | ACS copies under `acs-framework-public/papers/notes/` vs JSON | **PASS** (same rounded values) |
 | Per-isotope table spot checks (212Po, 244Cm) | **PASS** |
 | `log10 P_ext` vs `t_Gamow/t_meas` on base 14 | **PASS** (|Δ| ≤ 0.005) |
@@ -51,5 +51,5 @@ Gamow Robin BC on [0,b] does **not** improve global-S RMS vs Dirichlet box at R 
 ## Artifacts
 
 - Scripts: `code/palpha_overlap/palpha_overlap*.py`, `isotope_catalog.py`
-- JSON: `docs/palpha_overlap_*_results.json`, `palpha_overlap_extended_results.json`
+- JSON: `docs/palpha_overlap/palpha_overlap_*_results.json`, `palpha_overlap_extended_results.json`
 - Papers: `flag_condensate_palpha_*.tex` (+ ACS `papers/notes/` copies)

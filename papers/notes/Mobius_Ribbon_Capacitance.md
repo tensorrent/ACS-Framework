@@ -55,8 +55,8 @@ Reference in comparisons: α⁻¹≈137.035999084 (CODATA-style). Runtime `scipy
 
 ## Files
 
-- Code: `rh_papers_may21/acs-framework/code/capacitance_ribbon/ribbon_capacitance.py`
-- Results: `rh_papers_may21/acs-framework/docs/capacitance_ribbon_results.json`
-- Logs: `rh_papers_may21/acs-framework/docs/capacitance_ribbon_logs/`
+- Code: `code/capacitance_ribbon/ribbon_capacitance.py`
+- Results: (not committed to this repository; regenerate by running the script)
+- Logs: (run logs not committed to this repository)
 - Formal TeX: `mobius_ribbon_capacitance.tex`
 - Parent note: `mobius_screw_electron.tex`

@@ -137,7 +137,7 @@ Companion exact ACS TE automaton (already in-repo):
 \texttt{verify\_issue7\_pipeline.py} reruns all Issue~\texttt{\#7}
 scripts, rewrites canonical stdout logs, checks stdout-vs-JSON
 consistency, and verifies SHA-256 anchors listed in the companion
-markdown artefacts under \texttt{docs/issue7/}.
+markdown artefacts under \texttt{docs/}.
 
 \section{Results}
 
@@ -203,8 +203,8 @@ hash checks $0$.
 \section{Reproducibility}
 
 Canonical artefacts and SHA-256 anchors are listed in
-\texttt{docs/issue7/issue7\_paper\_section9\_and\_4over3.md}
-and \texttt{docs/issue7/issue7\_takeup\_section9\_and\_4over3.md}.
+\texttt{docs/issue7\_paper\_section9\_and\_4over3.md}
+and \texttt{docs/issue7\_takeup\_section9\_and\_4over3.md}.
 
 Observed environment for float suite and anchors:
 Python~$3.14.6$, NumPy~$2.5.0$,
@@ -228,7 +228,7 @@ python3 code/issue7/verify_issue7_pipeline.py
         diagonalisation / commutator norms) are anchored to one machine
         (macOS~$15.3.2$ arm64, Python~$3.14.6$, NumPy~$2.5.0$), with
         same-machine byte-identical reruns recorded in
-        \texttt{docs/issue7/issue7\_verification\_report.json}.
+        \texttt{docs/issue7\_verification\_report.json}.
         The exact Section~9 kill test and
         \texttt{integer\_acs.py} use integer/\texttt{Fraction} on the
         decision path; for those diagnostics, cross-machine IEEE float

@@ -421,3 +421,62 @@ overshooting the floor by ~8.5× at d=2.
 The *scaling law* T_min=(2πe)^d/q is **FALSIFIED (T4)** in its degree dependence — an
 overclaim in LF01's T_min correction, surfaced exactly where the strip-mine predicted the
 discriminator would be (d>1). Conductor (q) scaling at d=1 holds. Q3 closed.
+
+---
+
+### 2026-07-26 — Möbius-screw: *Sl = 2* as the geometric origin of *g = 2* — **KILLED** · T2 structural / T1 numerical
+
+**Target.** `papers/notes/Mobius_Screw_Electron.tex` §3.3 identifies the torus-framing
+self-linking number of the (2,1) centerline, `Sl = p·q = 2`, with the tree-level Dirac
+value `g = 2`, on the stated ground that `Sl = 2` "matches the 4π (two-turn) return of a
+spin-½ frame." The note labels this a model identification, not a derivation. The kill
+question: does the *value* 2 do any of the work?
+
+**Instrument.** `code/framed_unknot/framing_transformer.py` — evaluates every stage of
+the chain `γ → U → (Sl = Tw + Wr) → F: S¹→SO(3) → q: S¹→SU(2)`, and reads off the
+holonomy `σ = q(4π)/q(0)`, which is `+1` when the frame lift closes after one circuit
+and `−1` when it needs two. Control family: round circles with `n` framing twists
+(`Wr = 0`, `|Sl| = n`), which measures the map `Sl → σ` directly rather than assuming it.
+
+**Confirmed (not killed).** The note's geometry is sound. `T·U = 0` to 2.2e-16, so the
+torus normal is a genuine framing; `Tw = −1.033761`, `Wr = −0.966239`, `Tw + Wr =
+−2.000000`; and independently `Lk(γ, γ + 0.10a·U) = −2.000000`. `|Sl| = pq = 2` as
+claimed. (Sign: the embedding as parameterised is left-handed. `Tw` and `Wr` separately
+are *not* invariants — they move with `a/R` — only the sum is.)
+
+**Also confirmed.** The frame loop *is* spinorial: `σ = −1`, nontrivial in
+`π₁(SO(3)) = ℤ/2`, proved in closed form from the quaternion lift
+`q(φ) = [cos(φ/2) + k sin(φ/2)][cos(φ/4) − j sin(φ/4)]`, `q(4π) = (1)(−1) = −1`, and
+confirmed numerically three independent ways. The model does land on the spinorial side
+of a genuine invariant.
+
+**The kill.** For torus curves the longitude half-angle advances by `πp` and the meridian
+half-angle by `πq`, so `σ = (−1)^(p+q)`; with `Sl = pq` and `gcd(p,q) = 1` this is
+equivalently `σ = (−1)^(Sl+1)`. The control family reproduces it exactly:
+
+| n | Sl | σ | class |
+|---|----|---|-------|
+| −2 | +2 | −1 | spinorial |
+| −1 | +1 | +1 | trivial |
+| 0 | 0 | −1 | **spinorial** |
+| 1 | −1 | +1 | trivial |
+| 2 | −2 | −1 | spinorial |
+
+**The `Sl = 0` row is the kill.** An ordinary round circle with an untwisted framing is
+spinorial in precisely the same sense as the Möbius screw with `|Sl| = 2`. The
+spin-relevant content of the self-linking number is one bit — its parity — and `2` and
+`0` are the same bit. The value 2 therefore carries no spin information that 0 does not,
+and cannot be what produces the double cover. **Mechanism of the error:** matching the
+integer 2 across two formalisms in which it arises for unrelated reasons (`pq` on one
+side, the order of `π₁(SO(3))` on the other).
+
+**Verdict.** `Sl = 2 ↔ g = 2` as a *geometric origin* claim is **FALSIFIED (T4)**. The
+surviving statement is narrower and real: the model's double cover comes from the **odd
+meridian winding q = 1** — the `φ/2` half-angle in the parameterisation — not from the
+product `pq`. That is a ℤ/2 statement and cannot by itself yield a magnitude, so any
+successor claiming a value for `g` needs a mechanism this does not supply. Suggested
+successor target: compute the current distribution on the ribbon and its magnetic moment
+against the angular momentum, which would produce a dimensionful `g` that can then fail.
+
+Full write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex`.
+Artifact: `docs/framed_unknot_results.json`.

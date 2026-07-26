@@ -132,7 +132,28 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 | File | Notes | Status |
 |------|-------|--------|
 | `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped) |
-
+| `papers/notes/Framing_Transformer_Spin_Parity.tex` | Framing transformer of the same curve: CWF decomposition, $SU(2)$ lift of the frame loop, parity law | Computation (see claim table below) |
 | `papers/notes/Klein_Foam_Monad.tex` | Klein-foam Monad postulation (TR-2026-FF06-KFM); cites Möbius + nuclear-decay notes; RC1-scoped | Postulation / ontology |
 | `papers/notes/Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel; Geiger–Nuttall and Hawking transfer-matrix fits as reported in-note | Companion programme note |
+
+### Framing transformer — claim → evidence → tier
+
+Paper: `papers/notes/Framing_Transformer_Spin_Parity.tex` ·
+Code: `code/framed_unknot/` · Artifact: `docs/framed_unknot_results.json`
+Verify: `python3 code/framed_unknot/framing_transformer.py`
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Torus normal is a genuine framing ($T\cdot U=0$ to $2.2\times10^{-16}$) | **T1** | `framing_transformer.py` |
+| $Tw+Wr = Sl$, magnitude $\lvert Sl\rvert = pq = 2$ (two independent routes) | **T1** | twist/writhe integrals vs. Gauss linking integral |
+| Frame loop is spinorial: $\sigma = -1$, nontrivial in $\pi_1(SO(3))=\mathbb{Z}/2$ | **T2** | closed-form quaternion lift, Prop. 1; confirmed numerically 3 ways |
+| Parity law $\sigma = (-1)^{Sl+1} = (-1)^{p+q}$ | **T2/T1** | proved for torus curves; measured on twisted-circle controls $n=-2\ldots4$ |
+| $Sl = 2$ as the geometric origin of $g = 2$ | **T4** | parity law: $Sl=2$ and $Sl=0$ are the same $\mathbb{Z}/2$ class, so the magnitude carries no spin information |
+
+> **Scope:** the falsified row retires the *reading* of $Sl=2$ as producing the
+> double cover; it does not touch the geometry, the winding numbers, or the
+> $\lvert Sl\rvert=2$ computation of the Möbius-screw note, all of which are
+> confirmed here. What survives is that the model's double cover comes from the
+> odd meridian winding $q=1$ (the $\varphi/2$ half-angle), which is a
+> $\mathbb{Z}/2$ statement and cannot by itself yield a magnitude.
 

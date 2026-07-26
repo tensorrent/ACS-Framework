@@ -1,0 +1,327 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=0.85in}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=red!70!black
+}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{The Framing Transformer:\\
+Where the Spin-$1/2$ Content of the M\"obius-Screw Actually Lives}\\[0.35em]
+\large Companion computation to \textit{The M\"obius-Screw Electron}}
+\author{Flag Condensate Collaboration\\
+\small\textit{Sovereign-Stack ACS Research Program}}
+\date{July 26, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The M\"obius-screw note models the electron as a framed unknot with
+self-linking number $Sl=2$ under the torus framing, and identifies
+$Sl \leftrightarrow g$ as a bookkeeping statement.  This note computes
+the full chain of maps from the centerline to the $SU(2)$ lift of its
+frame field, and evaluates every stage.  Three results.
+\emph{(i)} The C\u{a}lug\u{a}reanu decomposition is confirmed
+numerically: $Tw = -1.0338$, $Wr = -0.9662$, $Tw+Wr = -2.000000$, and the
+Gauss linking integral of the centerline with its framing pushoff returns
+$-2.000000$; the magnitude $|Sl| = pq = 2$ is as stated, the sign records
+that the embedding as parameterised is left-handed.
+\emph{(ii)} The frame loop is genuinely \emph{spinorial}: its class in
+$\pi_1(SO(3)) \cong \mathbb{Z}/2$ is non-trivial, so the $SU(2)$ lift
+does not close after one circuit.  This is proved in closed form, not
+merely computed.
+\emph{(iii)} The spin content is carried by a \emph{parity bit}, not by
+the value $2$.  For torus curves the holonomy is
+$\sigma = (-1)^{p+q} = (-1)^{Sl+1}$, so $Sl = 2$ and $Sl = 0$ lie in the
+same class: an untwisted round circle is spinorial in exactly the same
+sense.  The magnitude of $Sl$ carries no spin information, which
+withdraws the support the $Sl=2 \leftrightarrow g=2$ identification was
+taken to have.  What survives is sharper and smaller: the double cover in
+this model comes from the meridian half-angle $\varphi/2$ in the
+parameterisation, i.e.\ from the \emph{odd} meridian winding $q=1$.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Scope}
+
+This note is a computation, not a new model.  It takes the centerline and
+framing already defined in the M\"obius-screw note and asks a single
+question: \emph{at which stage, if any, does spin-$1/2$ enter?}  Every
+number below is produced by
+\texttt{code/framed\_unknot/framing\_transformer.py} and archived in
+\texttt{docs/framed\_unknot\_results.json}.
+
+Nothing here bears on QED, on radiative corrections to $g-2$, or on the
+capacitance estimate of $\alpha$.  The result is topological.
+
+\section{The transformer chain}
+
+The object is the closed curve, $\varphi \in [0,4\pi)$,
+\begin{equation}
+\label{eq:curve}
+\bm{\gamma}(\varphi) =
+\begin{pmatrix}
+\bigl(R + a\cos(\varphi/2)\bigr)\cos\varphi \\
+\bigl(R + a\cos(\varphi/2)\bigr)\sin\varphi \\
+a\sin(\varphi/2)
+\end{pmatrix},
+\end{equation}
+which is the $(p,q) = (2,1)$ curve on the torus of radii $(R,a)$:
+longitude angle $\theta = \varphi$, meridian angle $\psi = \varphi/2$.
+The torus surface normal
+\begin{equation}
+\label{eq:framing}
+\bm{U}(\varphi) = \bigl(\cos(\varphi/2)\cos\varphi,\;
+                        \cos(\varphi/2)\sin\varphi,\;
+                        \sin(\varphi/2)\bigr)
+\end{equation}
+is the natural framing.  Because $\bm{\gamma}$ lies in the surface whose
+normal is $\bm{U}$, orthogonality $\bm{T}\cdot\bm{U} = 0$ holds
+identically (verified to $2.2\times10^{-16}$).
+
+The chain from geometry to spin is
+\[
+\bm{\gamma}
+\;\xrightarrow{\ \text{framing}\ }\;
+\bm{U}
+\;\xrightarrow{\ \text{CWF}\ }\;
+Sl = Tw + Wr
+\;\xrightarrow{\ \text{adapted frame}\ }\;
+F : S^1 \to SO(3)
+\;\xrightarrow{\ \text{lift}\ }\;
+q : S^1 \to SU(2),
+\]
+with $F(\varphi) = [\bm{T},\bm{U},\bm{T}\times\bm{U}]$.  The last arrow is
+the only stage at which a double cover can appear, and whether it
+succeeds is decided by the single sign
+\begin{equation}
+\label{eq:sigma}
+\sigma \;=\; \frac{q(4\pi)}{q(0)} \in \{+1,-1\},
+\end{equation}
+$\sigma = +1$ meaning the lift closes (frame returns after one circuit)
+and $\sigma = -1$ meaning it does not (two circuits required).
+
+\section{Stage 1: the C\u{a}lug\u{a}reanu decomposition}
+
+Twist is evaluated as
+$Tw = \tfrac{1}{2\pi}\oint (\bm{T}\times\bm{U})\cdot \bm{U}'\,d\varphi$,
+writhe by the Gauss double integral, and $Sl$ independently as the linking
+number $\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+\epsilon\bm{U})$.
+
+\begin{center}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Quantity & Value & Method \\
+\midrule
+$Tw$                 & $-1.033761$ & twist integral \\
+$Wr$                 & $-0.966239$ & Gauss double integral \\
+$Tw + Wr$            & $-2.000000$ & C\u{a}lug\u{a}reanu sum \\
+$\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+0.10a\bm{U})$ & $-2.000000$ & Gauss linking integral \\
+$\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+0.05a\bm{U})$ & $-2.000019$ & same, halved offset \\
+$pq$                 & $2$         & torus-framing formula \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The magnitude $|Sl| = 2$ claimed in the M\"obius-screw note is confirmed
+by two independent routes.  The negative sign is not an error: it records
+that the embedding \eqref{eq:curve}, with meridian angle advancing as
+$+\varphi/2$, is left-handed under the standard Gauss convention.  Only
+$|Sl|$ and its parity are used below.
+
+\begin{remark}[What is and is not topological here]
+$Tw$ and $Wr$ individually depend on $R$ and $a$ and are not invariants;
+only their sum is.  The near-equal split
+$(-1.03, -0.97)$ at $a/R = 0.3$ is a coincidence of that aspect ratio, not
+a structural fact, and should not be read as ``one unit of twist plus one
+unit of writhe.''
+\end{remark}
+
+\section{Stage 2: the $SU(2)$ lift, in closed form}
+
+The framing \eqref{eq:framing} is exactly the sphere parameterisation at
+longitude $\varphi$ and latitude $\varphi/2$, so
+$\bm{U}(\varphi) = A(\varphi)\,\bm{e}_x$ with
+\begin{equation}
+A(\varphi) = R_z(\varphi)\, R_y(-\varphi/2).
+\end{equation}
+Lifting each factor to unit quaternions
+($R_z(t)\mapsto \cos\tfrac{t}{2} + k\sin\tfrac{t}{2}$,
+ $R_y(t)\mapsto \cos\tfrac{t}{2} + j\sin\tfrac{t}{2}$) gives the
+continuous lift with $q(0)=1$,
+\begin{equation}
+\label{eq:lift}
+q(\varphi) =
+\Bigl[\cos\tfrac{\varphi}{2} + k\,\sin\tfrac{\varphi}{2}\Bigr]
+\Bigl[\cos\tfrac{\varphi}{4} - j\,\sin\tfrac{\varphi}{4}\Bigr].
+\end{equation}
+
+\begin{proposition}[Spinorial holonomy]
+\label{prop:spinorial}
+For the curve \eqref{eq:curve} with framing \eqref{eq:framing},
+\[
+q(4\pi) = \bigl[\cos 2\pi + k \sin 2\pi\bigr]\,
+          \bigl[\cos \pi - j \sin \pi\bigr]
+        = (1)(-1) = -1 ,
+\]
+so $\sigma = -1$: the frame loop represents the non-trivial class of
+$\pi_1(SO(3)) \cong \mathbb{Z}/2$ and its $SU(2)$ lift does not close
+after one circuit of the curve.
+\end{proposition}
+
+\begin{proof}[Where the sign comes from]
+The meridian factor.  Over the closed curve the meridian angle advances
+by $2\pi$, so its half-angle in \eqref{eq:lift} advances by only $\pi$,
+landing on $-1$.  The longitude factor advances by $4\pi$, half-angle
+$2\pi$, landing on $+1$ and contributing nothing.
+\end{proof}
+
+Proposition~\ref{prop:spinorial} is confirmed numerically three ways, all
+returning $\sigma = -1.000000$: the adapted frame $[\bm{T},\bm{U},
+\bm{T}\times\bm{U}]$ lifted by continuity, the framing field $A(\varphi)$
+lifted by continuity, and direct evaluation of \eqref{eq:lift}.
+
+\section{Stage 3: the value $2$ does no work}
+
+Generalising Proposition~\ref{prop:spinorial} to the $(p,q)$ torus curve
+with torus framing: the longitude half-angle advances by $\pi p$ and the
+meridian half-angle by $\pi q$, so
+\begin{equation}
+\label{eq:parity}
+\sigma = (-1)^{p+q}.
+\end{equation}
+Since $Sl = pq$ and $\gcd(p,q)=1$ forbids both being even, $p+q$ is odd
+exactly when $pq$ is even, hence
+\begin{equation}
+\label{eq:parity2}
+\sigma = (-1)^{Sl+1}.
+\end{equation}
+
+This was checked against an independent control family --- round circles
+carrying $n$ framing twists, for which $Wr = 0$ and $|Sl| = n$ --- with
+the measured result reproducing \eqref{eq:parity2} exactly:
+
+\begin{center}
+\begin{tabular}{@{}rrrrl@{}}
+\toprule
+$n$ & $Tw$ & $Wr$ & $Sl$ & class \\
+\midrule
+$-2$ & $+2$ & $0$ & $+2$ & spinorial \\
+$-1$ & $+1$ & $0$ & $+1$ & trivial \\
+$0$  & $0$  & $0$ & $0$  & spinorial \\
+$1$  & $-1$ & $0$ & $-1$ & trivial \\
+$2$  & $-2$ & $0$ & $-2$ & spinorial \\
+$3$  & $-3$ & $0$ & $-3$ & trivial \\
+$4$  & $-4$ & $0$ & $-4$ & spinorial \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{corollary}[The identification $Sl=2 \leftrightarrow g=2$ loses its support]
+\label{cor:kill}
+The spin-relevant content of the self-linking number is one bit, its
+parity.  A framed loop with $Sl = 0$ --- an ordinary round circle with an
+untwisted framing --- is spinorial in precisely the same sense as the
+M\"obius screw with $|Sl| = 2$.  The \emph{value} $2$ therefore carries no
+spin information that $0$ does not also carry, and cannot be what
+produces the double cover.
+\end{corollary}
+
+\begin{remark}[Status change]
+The M\"obius-screw note (\S3.3) writes that $Sl = 2$ ``matches the $4\pi$
+(two-turn) return of a spin-$1/2$ frame,'' and labels this a model
+identification rather than a derivation.  Corollary~\ref{cor:kill}
+removes the geometric motivation for the identification itself: the
+matching quantity is a $\mathbb{Z}/2$ class, and $2$ and $0$ are the same
+class.  Under the repository's tier discipline this is a
+\textbf{T4 (explicitly falsified)} outcome for the reading of $Sl = 2$ as
+the geometric origin of $g = 2$, and should be recorded in the
+Elimination Ledger.  The rest of the M\"obius-screw note is untouched:
+the geometry, the winding numbers, and the $|Sl| = 2$ computation are all
+confirmed.
+\end{remark}
+
+\section{What survives, and it is worth keeping}
+
+Something real remains, and it is more specific than what was claimed.
+The double cover in this model is produced by the \textbf{meridian
+half-angle} $\varphi/2$ appearing in \eqref{eq:curve} and
+\eqref{eq:framing} --- that is, by the \emph{odd meridian winding}
+$q = 1$, via \eqref{eq:parity}.  The screw's defining feature, that the
+frame must traverse the curve twice to return, is a genuine topological
+property of the shape, proved in Proposition~\ref{prop:spinorial}, and it
+is exactly the $720^\circ$ property of a spin-$1/2$ frame.
+
+So the model does land on the spinorial side of a genuine $\mathbb{Z}/2$
+invariant.  That is a legitimate structural result and it is what the
+tornado/Archimedean-screw picture was reaching for.  It is also
+considerably weaker than a derivation of $g$: a $\mathbb{Z}/2$ bit cannot
+produce a real number, and any model claiming a magnitude from this
+structure needs a mechanism that \eqref{eq:parity} does not supply.
+
+\begin{remark}[Falsifiable successor]
+The next testable step is not a larger analogy but a smaller question:
+does the framed-loop geometry generate a \emph{magnetic moment coupling},
+by computing the current distribution on the ribbon and its magnetic
+moment against the angular momentum?  That would produce a $g$ with
+dimensions and a value, and could then fail.  The parity result above
+neither supports nor blocks it.
+\end{remark}
+
+\section*{Reproduction}
+
+\begin{verbatim}
+python3 code/framed_unknot/framing_transformer.py
+\end{verbatim}
+Grid $N = 2000$ for the $(2,1)$ curve, $N = 1200$ for the controls,
+$R = 1$, $a = 0.3$.  Results archived at
+\texttt{docs/framed\_unknot\_results.json}.
+
+\begin{thebibliography}{9}
+
+\bibitem{calugareanu1961}
+G.~C\u{a}lug\u{a}reanu,
+\textit{Sur les classes d'isotopie des noeuds tridimensionnels et leurs invariants},
+Czechoslovak Mathematical Journal \textbf{11} (1961), 588--625.
+
+\bibitem{white1969}
+J.~H.~White,
+\textit{Self-linking and the Gauss integral in higher dimensions},
+American Journal of Mathematics \textbf{91} (1969), 693--728.
+
+\bibitem{fuller1971}
+F.~B.~Fuller,
+\textit{The writhing number of a space curve},
+Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
+
+\bibitem{mobiusscrew2026}
+Flag Condensate Collaboration,
+\textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$ and a
+Capacitance Model of $\alpha$},
+preprint (July 2026),
+\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+
+\end{thebibliography}
+
+\end{document}

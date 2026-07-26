@@ -142,7 +142,7 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 ### Framing transformer — claim → evidence → tier
 
 Paper: `papers/notes/Framing_Transformer_Spin_Parity.tex` ·
-Code: `code/framed_unknot/` · Artifacts: `docs/framed_unknot_results.json`, `docs/framed_unknot_moment_ratio.json`
+Code: `code/framed_unknot/` · Artifacts: `docs/framed_unknot_results.json`, `docs/framed_unknot_moment_ratio.json`, `docs/framed_unknot_one_object.json`
 Verify: `python3 code/framed_unknot/framing_transformer.py` and `python3 code/framed_unknot/moment_ratio.py`
 
 | Claim | Tier | Evidence |
@@ -154,6 +154,10 @@ Verify: `python3 code/framed_unknot/framing_transformer.py` and `python3 code/fr
 | $Sl = 2$ as the geometric origin of $g = 2$ | **T4** | parity law: $Sl=2$ and $Sl=0$ are the same $\mathbb{Z}/2$ class, so the magnitude carries no spin information |
 | Framed-loop geometry yields $g\neq 1$ (successor test) | **T4/T2** | `code/framed_unknot/moment_ratio.py`: $\mu$ and $\langle L\rangle$ share the vector area $A$, so $g=1$ exactly for every closed curve |
 | Magnetic helicity of this geometry $= \Phi^2 Sl$ | **T2(known)** | Moffatt 1969; Moffatt--Ricca 1992 — the dynamo reading supplies the same integer, not a magnitude |
+| $(2,1)$ is two Euler angles of one rotation, $A=R_z(\varphi)R_y(-\varphi/2)$ | **T1** | `code/framed_unknot/one_object.py` — matches the direct torus normal to $0.0\times10^{0}$ |
+| Framed curve $\equiv$ one quaternion curve on $S^3$ (frame-Hopf) | **T1/T2(known)** | same; framing recovered from $q$ alone to $3.3\times10^{-16}$. Needham arXiv:1708.09124 §2 |
+| Four quaternion coords span the first Laplace eigenspace on $S^3$, $\lambda=-3$, degeneracy 4 $=(\tfrac12,\tfrac12)$ | **T1/T2(known)** | same, measured $-3.00000$ per axis — the representation-theoretic home of spin-$\tfrac12$ |
+| Transformer chain requires rational winding | **T2** | same — irrational slope never closes, so no $Sl$ and no $\pi_1$ class exists |
 
 > **Scope:** the falsified row retires the *reading* of $Sl=2$ as producing the
 > double cover; it does not touch the geometry, the winding numbers, or the

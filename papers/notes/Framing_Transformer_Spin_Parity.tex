@@ -454,6 +454,96 @@ co-located charge and mass gives $g=1$ like everything else --- but it
 poses the question in the only form that could survive: what, in this
 geometry, separates where the charge sits from where the mass sits?
 
+\section{One object, four axes --- and the Laplace eigenspace}
+\label{sec:oneobject}
+
+Three structural readings of this geometry turn out to be exactly right,
+and together they relocate where spin-$1/2$ lives.  All are verified in
+\texttt{code/framed\_unknot/one\_object.py}.
+
+\subsection{$(2,1)$ is the $xy$-axis twisted}
+
+The pair $(p,q) = (2,1)$ is not two independent windings.  It is two
+Euler angles of a \emph{single} rotation, locked at a $2\!:\!1$ rate:
+\begin{equation}
+\bm{U}(\varphi) = A(\varphi)\,\bm{e}_x,
+\qquad A(\varphi) = R_z(\varphi)\,R_y(-\varphi/2),
+\end{equation}
+so $p = 2$ is the azimuthal turn in the $xy$-plane and $q = 1$ is the
+tilt.  Checked against the direct torus normal, the difference is
+$0.000\times10^{0}$ --- not small, but identically zero.  This is why the
+lift factorises the way it does in \eqref{eq:lift}, and why the sign is
+carried entirely by the half-angle of the tilt.
+
+\subsection{The framed curve is one quaternion curve}
+
+A framed curve looks like $3+1$ pieces of data --- a centerline plus a
+normal field --- only in the naive presentation.  Through the frame-Hopf
+map it is a \emph{single} quaternion-valued curve $q(\varphi)$ on $S^3$,
+from which the framing and the remaining frame leg are recovered by
+conjugation alone:
+\begin{equation}
+\bm{U} = q\,\bm{e}_x\,\bar q, \qquad \bm{V} = q\,\bm{e}_z\,\bar q .
+\end{equation}
+Reconstructing from $q$ and nothing else reproduces the direct formulas
+to $3.3\times10^{-16}$, with $|q| = 1$ to $2.2\times10^{-16}$.  Four
+numbers, one object.  (This is Needham's construction,
+\cite{needham2017}~\S2.)
+
+\subsection{Laplace: where spin-$1/2$ actually enters}
+
+The four quaternion coordinates are not an arbitrary basis.  Restricted
+to $S^3 = SU(2)$ they are exactly the first nonzero eigenspace of the
+Laplace--Beltrami operator:
+\begin{equation}
+\Delta_{S^3}\, x_i = -3\, x_i,
+\qquad \text{degeneracy } (k+1)^2 = 4 \text{ at } k=1,
+\end{equation}
+measured here as $-3.00000$ on each of the four axes (max error
+$8\times10^{-7}$ by finite differences on $2\times10^4$ sampled points).
+Under $SU(2)_L \times SU(2)_R$ that eigenspace is the
+$(\tfrac12,\tfrac12)$ representation.
+
+\begin{remark}[The relocation]
+This is the honest home of spin-$1/2$ in this picture, and it is not the
+self-linking number.  Spin enters as a \emph{Laplace eigenspace on the
+quaternion sphere} --- i.e.\ through representation theory, which is
+precisely where L\'evy-Leblond~\cite{levyleblond1967} locates $g = 2$ as
+well.  \S5 showed the linking number contributes one parity bit;
+\S\ref{sec:moment} showed the geometry contributes $g = 1$.  What is left
+carrying the spin structure is the rep theory of $S^3$, which was never a
+geometric claim about the electron's shape.
+\end{remark}
+
+\subsection{The chain silently requires rationality}
+
+Worth recording because nothing above states it: the whole transformer
+presupposes a \emph{closed} curve, and a torus curve closes iff its
+winding ratio $q/p$ is rational.
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Winding ratio & Closes after \\
+\midrule
+$1/2$ \ \ (2,1) & 2 turns \\
+$2/3$ \ \ (3,2) & 3 turns \\
+$3/5$ \ \ (5,3) & 5 turns \\
+$1/\phi$ (golden) & never --- dense \\
+$1/\sqrt{2}$ & never --- dense \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At irrational slope the curve never closes, fills the torus densely, and
+has \emph{no} self-linking number and \emph{no} $\pi_1$ class at all.
+There is a real tension here worth naming: KAM theory makes the noble
+(most irrational, golden-ratio) windings the \emph{most} robust invariant
+tori under perturbation, while topological quantisation --- everything in
+this note --- requires the rational ones.  Maximal dynamical stability
+and topological quantisation pull in opposite directions on a torus.  Any
+model that wants both owes an account of which it is choosing.
+
 \section{Relation to the established literature}
 \label{sec:lit}
 

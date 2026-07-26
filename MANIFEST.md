@@ -2,7 +2,10 @@
 
 # MANIFEST — ACS Complete Bundle
 
-Assembled 2026-06-27. Seed `20260423`. All code below was executed at assembly time.
+Core bundle assembled 2026-06-27; sections below the core (Issue #7, Flag
+Condensate, framing transformer) were appended later and carry their own dates.
+Seed `20260423`. All code referenced was executed at the time its section was
+written.
 
 ## Four-tier verification hierarchy (tiers never promote)
 

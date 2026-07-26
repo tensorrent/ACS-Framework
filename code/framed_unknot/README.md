@@ -65,3 +65,38 @@ python3 code/framed_unknot/framing_transformer.py
 
 Requires `numpy` only. Runtime ~1 min (dominated by the O(N²) Gauss double
 integrals at N = 2000). Writes `docs/framed_unknot_results.json`.
+
+---
+
+## `moment_ratio.py` — the successor test, run
+
+Asks whether the geometry can produce a g-factor at all. It cannot.
+
+For charge `q` and mass `m` traversing the centerline once per period `T`, both
+moments are proportional to the same vector area `A = ½ ∮ r × dl`:
+
+```
+mu = I·A = (q/T)·A        <L> = (m/T) ∮ r × dr = (2m/T)·A
+mu / <L> = q/2m     =>    g = 1   exactly, for every closed curve
+```
+
+| curve | A_z / π |
+|---|---|
+| Möbius screw (2,1), a/R = 0.30 | +2.09000 |
+| Möbius screw (2,1), a/R = 0.70 | +2.49000 |
+| Möbius screw (2,1), a/R = 0.97 | +2.94090 |
+| round circle, one turn | +1.00000 |
+| round circle, two turns | +2.00000 |
+
+The double winding is real — 2.09× a single loop — and useless, because the same
+factor sits in `mu` and `<L>` and cancels. Same failure mode as the `Sl` kill: a
+genuine 2 in the geometry that carries no information about `g`. Note `A_z` is not
+even an invariant (2.09π → 2.94π across the throat sweep) while `Sl` does not move.
+
+**No-go:** no model with charge and mass circulating at uniform `q/m` gives `g ≠ 1`,
+whatever the winding, framing, twist, or throat. Obtaining `g ≠ 1` requires
+decoupling the charge and mass distributions.
+
+```bash
+python3 code/framed_unknot/moment_ratio.py     # writes docs/framed_unknot_moment_ratio.json
+```

@@ -1,0 +1,44 @@
+{
+  "description": "Magnetic moment vs angular momentum for the framed unknot",
+  "source": "code/framed_unknot/moment_ratio.py",
+  "companion_note": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+  "result": {
+    "g_factor": 1.0,
+    "exact": true,
+    "shape_independent": true,
+    "reason": "mu and <L> are both proportional to the same vector area A, so every geometric factor cancels in the ratio mu/<L> = q/2m."
+  },
+  "vector_areas": [
+    {
+      "name": "Mobius screw (2,1), a/R=0.3",
+      "Az": 6.56592864600267,
+      "Amag": 6.567450413464167,
+      "note": ""
+    },
+    {
+      "name": "Mobius screw (2,1), a/R=0.7",
+      "Az": 7.822565707438559,
+      "Amag": 7.860340784684155,
+      "note": ""
+    },
+    {
+      "name": "Mobius screw (2,1), a/R=0.97",
+      "Az": 9.239109834942223,
+      "Amag": 9.356576456994476,
+      "note": ""
+    },
+    {
+      "name": "round circle, 1 turn",
+      "Az": 3.141592653589793,
+      "Amag": 3.141592653589793,
+      "note": "reference"
+    },
+    {
+      "name": "round circle, 2 turns",
+      "Az": 6.283185307179586,
+      "Amag": 6.283185307179586,
+      "note": "double-wound"
+    }
+  ],
+  "winding_ratio_screw_over_single_loop": 2.0900000000000007
+}

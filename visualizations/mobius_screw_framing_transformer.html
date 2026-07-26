@@ -380,7 +380,8 @@
     <p class="standfirst">
       The Möbius-screw electron is a closed curve carrying a framing. Between that
       shape and any statement about spin sits a chain of four maps. This is each
-      one, evaluated — and the point at which the number 2 stops doing any work.
+      one, evaluated — and the two separate places where the number 2 turns out to
+      do no work at all.
     </p>
     <div class="chain" aria-label="The transformer chain">
       <span class="node">γ(φ)</span><span class="arrow">──framing──▸</span>
@@ -621,6 +622,52 @@ q(4π) = ( <b>−1</b>, 0, 0, 0 )   <span class="c">← the meridian half-angle 
   <section class="plate">
     <div class="plate-head">
       <span class="plate-num">05</span>
+      <h2>The successor test, run — and the same 2 cancels again</h2>
+      <span class="sub">μ vs ⟨L⟩ · g = 1</span>
+    </div>
+    <div class="prose">
+      <p>
+        Stop matching integers: compute the shape's magnetic moment against its
+        angular momentum and get a g with dimensions, one that can fail. Let charge
+        q and mass m traverse the centerline once per period T. Both moments turn out
+        to be proportional to the <em>same</em> vector area.
+      </p>
+      <div class="eq">
+A = ½ ∮ r × dl<br><br>
+μ  = I·A = (q/T)·A &nbsp;&nbsp;&nbsp; ⟨L⟩ = (m/T) ∮ r × dr = (2m/T)·A<br><br>
+μ ⁄ ⟨L⟩ = q/2m  <span class="c">⟹</span>  <b>g = 1</b>  <span class="c">exactly, for every closed curve</span>
+      </div>
+      <p>
+        <strong>The double winding is completely real, and completely useless.</strong>
+        The screw carries 2.09× the vector area of a single loop — but that factor sits
+        in μ and in ⟨L⟩ identically and cancels. It is the same failure as plate 04: a
+        genuine 2 in the geometry that carries no information about g.
+      </p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>curve</th><th>A<sub>z</sub> ⁄ π</th><th>g</th></tr></thead>
+        <tbody>
+          <tr><td>Möbius screw (2,1), a/R = 0.30</td><td>+2.09000</td><td>1</td></tr>
+          <tr><td>Möbius screw (2,1), a/R = 0.70</td><td>+2.49000</td><td>1</td></tr>
+          <tr><td>Möbius screw (2,1), a/R = 0.97</td><td>+2.94090</td><td>1</td></tr>
+          <tr><td>round circle, one turn</td><td>+1.00000</td><td>1</td></tr>
+          <tr><td>round circle, two turns</td><td>+2.00000</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose">
+      <p>
+        Note that A<sub>z</sub> is not even an invariant — it runs from 2.09π to 2.94π
+        across the throat sweep, while Sl does not move at all.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PLATE 06 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">06</span>
       <h2>What this costs, and what it buys</h2>
       <span class="sub">verdict</span>
     </div>
@@ -651,10 +698,43 @@ q(4π) = ( <b>−1</b>, 0, 0, 0 )   <span class="c">← the meridian half-angle 
         reaching for.
       </p>
       <p>
-        It is also a ℤ/2 statement, and a single bit cannot produce a real number. The
-        honest successor is not a larger analogy but a smaller question: compute the
-        current distribution on the ribbon and its magnetic moment against the angular
-        momentum. That yields a g with dimensions and a value — and can then fail.
+        It is also a ℤ/2 statement, and a single bit cannot produce a real number.
+      </p>
+    </div>
+
+    <div class="verdict">
+      <span class="tag">No-go · T2</span>
+      <p>
+        <strong>No geometry can move g.</strong> Any model in which charge and mass
+        circulate together at uniform q/m gives g = 1 exactly — whatever the winding,
+        framing, twist, or throat. That is just the classical orbital g-factor, and it
+        is shape-independent. The successor test as posed is closed.
+      </p>
+      <p>
+        What it opens is better posed than what it closed. The requirement is now
+        structural rather than numerical: <strong>decouple where the charge sits from
+        where the mass sits.</strong> That is a real constraint on any successor model,
+        and it is checkable.
+      </p>
+    </div>
+
+    <div class="verdict keep">
+      <span class="tag">On the dynamo reading</span>
+      <p>
+        One part of it is a theorem, not an analogy. For a thin flux tube of flux Φ the
+        magnetic helicity is <strong>H = ∫A·B = Φ²(Tw + Wr) = Φ²·Sl</strong> — so the
+        Călugăreanu quantity in plate 02 <em>is</em> the helicity of this geometry
+        (Moffatt 1969; Moffatt &amp; Ricca 1992). Stretch-twist-fold dynamo action is
+        exactly the Tw ↔ Wr trade plotted there. The bookkeeping is the same bookkeeping.
+      </p>
+      <p>
+        Two things block it as a particle model, and neither is topological. A dynamo
+        <em>grows</em> — it has a growth rate and consumes kinetic energy from a flow,
+        while a stable particle is stationary. And since H = Φ²·Sl, it hands back the
+        same integer in units of Φ²: physical content, but no new magnitude. The
+        stationary neighbour is the <strong>force-free Taylor state</strong> (∇×B = λB,
+        a spheromak) — right dynamical class, and λ carries dimensions of inverse
+        length. It still does not evade the no-go on its own.
       </p>
     </div>
   </section>

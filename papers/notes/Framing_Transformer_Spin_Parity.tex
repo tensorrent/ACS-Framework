@@ -351,14 +351,108 @@ claimed to be.  But it inherits the object's limits exactly: the throat
 is not an extra structure that could supply a magnitude, because it is
 reachable by deformation from a shape that has no throat at all.
 
-\begin{remark}[Falsifiable successor]
-The next testable step is not a larger analogy but a smaller question:
-does the framed-loop geometry generate a \emph{magnetic moment coupling},
-by computing the current distribution on the ribbon and its magnetic
-moment against the angular momentum?  That would produce a $g$ with
-dimensions and a value, and could then fail.  The parity result above
-neither supports nor blocks it.
-\end{remark}
+\section{The successor test, run: geometry gives $g=1$}
+\label{sec:moment}
+
+The obvious next step is not a larger analogy but a smaller question:
+compute the shape's \emph{magnetic moment} against its \emph{angular
+momentum} and read off a $g$ that has dimensions and can fail.  We ran it
+(\texttt{code/framed\_unknot/moment\_ratio.py}).  It fails, and the way it
+fails is instructive.
+
+Let a particle of charge $q$ and mass $m$ traverse the closed centerline
+once per period $T$, and write the vector area
+\begin{equation}
+\bm{A} = \tfrac{1}{2}\oint \bm{r}\times d\bm{l}.
+\end{equation}
+Then the current is $I = q/T$, and
+\begin{equation}
+\bm{\mu} = I\bm{A} = \frac{q}{T}\bm{A},
+\qquad
+\langle \bm{L}\rangle = \frac{m}{T}\oint \bm{r}\times d\bm{r}
+                      = \frac{2m}{T}\bm{A}.
+\end{equation}
+Both are proportional to the \emph{same} geometric factor, so
+\begin{equation}
+\label{eq:g1}
+\frac{\bm{\mu}}{\langle\bm{L}\rangle} = \frac{q}{2m}
+\qquad\Longrightarrow\qquad
+g = 1 \quad\text{exactly, for every closed curve.}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Curve & $A_z$ & $A_z/\pi$ \\
+\midrule
+M\"obius screw $(2,1)$, $a/R = 0.30$ & $+6.56593$ & $+2.09000$ \\
+M\"obius screw $(2,1)$, $a/R = 0.70$ & $+7.82257$ & $+2.49000$ \\
+M\"obius screw $(2,1)$, $a/R = 0.97$ & $+9.23911$ & $+2.94090$ \\
+round circle, one turn               & $+3.14159$ & $+1.00000$ \\
+round circle, two turns              & $+6.28319$ & $+2.00000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The double winding is entirely real: the screw carries $2.09\times$ the
+vector area of a single loop.  It is also useless for $g$, because that
+factor enters $\bm{\mu}$ and $\langle\bm{L}\rangle$ identically and
+cancels --- the same way the $2$ in $Sl$ cancelled down to a parity bit in
+\S5.  Note too that $A_z$ is \emph{not} an invariant: it runs from
+$2.09\pi$ to $2.94\pi$ across the throat sweep of \S\ref{sec:throat},
+unlike $Sl$, which does not move at all.
+
+\begin{corollary}[No-go for geometric $g$]
+\label{cor:nogo}
+No model in which charge and mass circulate together with a uniform
+$q/m$ ratio can produce $g \neq 1$ by geometry, whatever the winding,
+framing, twist, or throat.  Equation~\eqref{eq:g1} is the classical
+orbital $g$-factor, and it is shape-independent.  Obtaining $g \neq 1$
+requires \emph{decoupling the charge and mass distributions} --- a
+specific structural requirement, and a far better-posed target than
+looking for a $2$ in the geometry.
+\end{corollary}
+
+\subsection{On the dynamo reading}
+\label{sec:dynamo}
+
+A natural physical reading of this shape is a dynamo, and one part of
+that instinct is exactly right --- it is a theorem, not an analogy.  For
+a thin magnetic flux tube of flux $\Phi$, the magnetic helicity is
+\begin{equation}
+H = \int \bm{A}\cdot\bm{B}\,d^3x = \Phi^2\,(Tw + Wr) = \Phi^2 Sl,
+\end{equation}
+so the C\u{a}lug\u{a}reanu quantity computed in \S3 \emph{is} the magnetic
+helicity of a flux tube with this geometry
+(Moffatt~\cite{moffatt1969}; Moffatt--Ricca~\cite{moffattricca1992}).
+Dynamo action is likewise about exactly the $Tw \leftrightarrow Wr$ trade
+seen in \S3: the stretch--twist--fold mechanism converts writhe into
+twist while doubling flux.  The bookkeeping is the same bookkeeping.
+
+Two things block the reading as an electron model, and neither is
+topological.
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt]
+  \item \textbf{A dynamo grows.}  It has a growth rate and amplifies
+    field by consuming kinetic energy from a flow.  A stable particle is
+    a stationary state --- no growth, no energy source, no dissipation.
+    The dynamical class is wrong.
+  \item \textbf{Helicity is the invariant we already have.}  Since
+    $H = \Phi^2 Sl$, the dynamo framing supplies the same integer, in the
+    same units of $\Phi^2$.  It adds physical content but no new
+    magnitude, and Corollary~\ref{cor:nogo} still applies.
+\end{enumerate}
+
+The nearest object that \emph{is} stationary is the force-free or Taylor
+state: by Woltjer's theorem, a plasma relaxing at fixed magnetic helicity
+minimises energy at $\nabla\times\bm{B} = \lambda\bm{B}$, a
+self-organised helicity-carrying equilibrium (a spheromak).  That is the
+right dynamical class, and $\lambda$ carries dimensions of inverse
+length, so unlike the parity bit it does set a scale.  It still does not
+evade Corollary~\ref{cor:nogo} on its own --- a force-free state with
+co-located charge and mass gives $g=1$ like everything else --- but it
+poses the question in the only form that could survive: what, in this
+geometry, separates where the charge sits from where the mass sits?
 
 \section{Relation to the established literature}
 \label{sec:lit}
@@ -451,6 +545,16 @@ American Journal of Mathematics \textbf{91} (1969), 693--728.
 F.~B.~Fuller,
 \textit{The writhing number of a space curve},
 Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
+
+\bibitem{moffatt1969}
+H.~K.~Moffatt,
+\textit{The degree of knottedness of tangled vortex lines},
+Journal of Fluid Mechanics \textbf{35} (1969), 117--129.
+
+\bibitem{moffattricca1992}
+H.~K.~Moffatt and R.~L.~Ricca,
+\textit{Helicity and the C\u{a}lug\u{a}reanu invariant},
+Proceedings of the Royal Society A \textbf{439} (1992), 411--429.
 
 \bibitem{dennishannay2005}
 M.~R.~Dennis and J.~H.~Hannay,

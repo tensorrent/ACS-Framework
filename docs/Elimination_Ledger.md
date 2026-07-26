@@ -505,3 +505,61 @@ against the angular momentum, which would produce a dimensionful `g` that can th
 
 Full write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex`.
 Artifact: `docs/framed_unknot_results.json`.
+
+---
+
+### 2026-07-26 — Successor test: can the framed-loop geometry produce a g-factor? — **KILLED (g = 1)** · T2 structural / T1 numerical
+
+**Target.** The successor proposed when `Sl = 2 ↔ g = 2` was killed: stop matching
+integers, compute the shape's magnetic moment against its angular momentum, and get a
+dimensionful `g` that can fail. Prompted by the reading of the shape as a **dynamo**.
+
+**Instrument.** `code/framed_unknot/moment_ratio.py` · artifact
+`docs/framed_unknot_moment_ratio.json`.
+
+**Result.** For a charge `q` and mass `m` circulating the closed centerline with period
+`T`, both moments are proportional to the same vector area `A = ½∮ r × dl`:
+
+```
+mu = I·A = (q/T)·A          <L> = (m/T)·∮ r × dr = (2m/T)·A
+mu / <L> = q/2m       =>    g = 1   exactly, for every closed curve
+```
+
+| curve | A_z / π |
+|---|---|
+| Möbius screw (2,1), a/R = 0.30 | +2.09000 |
+| Möbius screw (2,1), a/R = 0.70 | +2.49000 |
+| Möbius screw (2,1), a/R = 0.97 | +2.94090 |
+| round circle, one turn | +1.00000 |
+| round circle, two turns | +2.00000 |
+
+**The double winding is real and it is useless.** The screw carries 2.09× the vector area
+of a single loop — but that factor enters `mu` and `<L>` identically and cancels. This is
+the *same failure mode* as the `Sl` kill one entry above: a genuine factor of 2 in the
+geometry that carries no information about `g`. Note also that `A_z` is not an invariant
+(2.09π → 2.94π across the throat sweep), unlike `Sl`, which does not move.
+
+**Verdict.** **T2 no-go:** no model with charge and mass circulating at uniform `q/m` can
+give `g ≠ 1` by geometry — whatever the winding, framing, twist, or throat. Eq. (g=1) is
+just the classical orbital g-factor, which is shape-independent. This closes the successor
+as posed.
+
+**What it opens.** The requirement is now specific and structural rather than numerical:
+**decouple where the charge sits from where the mass sits.** That is a far better-posed
+target than hunting a 2 in the geometry. (The Möbius-screw note's own `e/2`-per-sheet
+charge assignment is exactly such a knob — though §4.2 of that note already records that
+the α estimate built on it does not survive its own revision path.)
+
+**On the dynamo reading.** One part is a theorem, not an analogy: for a thin flux tube of
+flux Φ, magnetic helicity `H = ∫A·B = Φ²(Tw + Wr) = Φ²·Sl` (Moffatt 1969; Moffatt & Ricca,
+Proc. R. Soc. A **439** (1992) 411). So the Călugăreanu quantity *is* the helicity of this
+geometry, and stretch-twist-fold dynamo action is exactly the `Tw ↔ Wr` trade already
+plotted. Two things block it as a particle model, neither topological: **(i)** a dynamo
+grows — it has a growth rate and consumes kinetic energy from a flow, while a stable
+particle is stationary; **(ii)** since `H = Φ²·Sl`, it supplies the same integer we
+already had, in units of Φ², adding physical content but no magnitude. The stationary
+neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed helicity to
+∇×B = λB — a spheromak), which is the right dynamical class and whose λ does carry
+dimensions of inverse length. It still does not evade the no-go on its own.
+
+Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.

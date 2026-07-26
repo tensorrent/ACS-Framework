@@ -1,3 +1,5 @@
+> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+
 # Efficiency Benchmark Report — Flag Condensate / Pα / Density Engine Harness
 
 **Scope (RC1):** As-implemented **harness performance** on the stated test machine — wall time, throughput, scaling, and **disk/memory memo** speedups. This report does **not** claim physical engine efficiency, alpha-decay accuracy, or uniqueness of the density-engine metaphor.
@@ -7,10 +9,10 @@
 | **Date (UTC)** | 2026-07-23 |
 | **Platform** | darwin · Python 3.14.6 |
 | **Timing tool** | `/usr/bin/time -l` (macOS) + `perf_counter` microbench |
-| **Runner** | `rh_papers_may21/acs-framework/code/benchmark_efficiency.py` |
-| **Raw JSON** | `rh_papers_may21/acs-framework/docs/efficiency_benchmark_results.json` |
+| **Runner** | `code/benchmark_efficiency.py` |
+| **Raw JSON** | `docs/efficiency_benchmark_results.json` |
 | **Status** | **pass** |
-| **Memo root** | `/Users/coo-koba42/dev/rh_papers_may21/acs-framework/.cache` |
+| **Memo root** | `.cache/` (repo root, on the authoring machine) |
 
 ---
 
@@ -73,9 +75,9 @@ Memo blobs live under `.cache/bie_capacitance/` and `.cache/palpha_eigen/` (giti
 
 | Path | Description |
 |------|-------------|
-| `rh_papers_may21/acs-framework/code/acs_memo.py` | Disk + memory memo |
-| `rh_papers_may21/acs-framework/code/benchmark_efficiency.py` | Unified runner |
-| `rh_papers_may21/acs-framework/docs/efficiency_benchmark_results.json` | JSON |
+| `code/acs_memo.py` | Disk + memory memo |
+| `code/benchmark_efficiency.py` | Unified runner |
+| `docs/efficiency_benchmark_results.json` | JSON |
 | `Aiso_build_artifacts/density_engine_many_worlds/EFFICIENCY_BENCHMARK_REPORT.md` | This report |
 
-**Re-run:** `python3 rh_papers_may21/acs-framework/code/benchmark_efficiency.py`
+**Re-run:** `python3 code/benchmark_efficiency.py`

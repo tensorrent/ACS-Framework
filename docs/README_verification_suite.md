@@ -1,7 +1,12 @@
 > **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
 
-# ACS Verification Suite — 72 Scripts
+# ACS Verification Suite
 ## ACS Papers A/B/C (Wallace, 2026)
+
+All scripts live in `code/acs_codebase/extras/` and are run from that directory.
+That directory holds the full standalone script pool; the tables below index the
+subset tied to Papers A/B/C. Run `ls code/acs_codebase/extras/*.py | wc -l` for the
+current total.
 
 All scripts require Python 3.8+ with NumPy and SciPy.
 SymPy is required for the exact-arithmetic scripts.
@@ -10,12 +15,13 @@ No proprietary software needed.
 ### How to run everything:
 ```bash
 pip install numpy scipy sympy
+cd code/acs_codebase/extras
 for f in *.py; do python3 "$f"; done
 ```
 
 ---
 
-## Phases 1–3 (Trilogy core — 57 scripts)
+## Phases 1–3 (Trilogy core)
 
 ### Algebra and Selection
 | Script | Verifies | Paper |
@@ -37,7 +43,6 @@ for f in *.py; do python3 "$f"; done
 | `higgs_potential.py` | Sombrero potential from ΔI landscape | A §6.6 |
 | `higgs_mass_ratio.py` | m_H = 124.7 GeV (0.42% match) | A §6.6 |
 | `higgs_derivation.py` | λ = 2√3/27 Koide projection | A §6.6 |
-| `higgs_channel_decomp.py` | L3 symmetric/antisymmetric channels | A §6.6 |
 | `neutrino_honest.py` | See-saw product formula (0.1%) | A §6.3 |
 | `neutrino_seesaw_v2.py` | M_R ≈ 49 keV prediction | A §6.3 |
 | `spin_network_lindblad.py` | WdW attractor ⟨H⟩ = 3×10⁻⁶ | A §5 |
@@ -59,7 +64,7 @@ for f in *.py; do python3 "$f"; done
 
 ---
 
-## Phases 4–10 (Exploration — 15 scripts)
+## Phases 4–10 (Exploration)
 
 ### Riemann Tensor Analysis (NEW — this session)
 | Script | Verifies | Paper B section |

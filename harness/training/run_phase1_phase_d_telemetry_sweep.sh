@@ -5,12 +5,12 @@
 # Phase D: telemetry auxiliary weight sweep (0.03, 0.05, 0.1) with x50 merged GSM train.
 # Matches Phase C: same SEEDS/EPOCHS/hparams as run_phase1_tune_batch.sh defaults; gsm_merged_telemetry_x50.jsonl.
 # Run from repo root:
-#   bash tent_io/harness/training/run_phase1_phase_d_telemetry_sweep.sh
+#   bash harness/training/run_phase1_phase_d_telemetry_sweep.sh
 # Background:
-#   nohup bash tent_io/harness/training/run_phase1_phase_d_telemetry_sweep.sh > tent_io/harness/reports/training/sweep_phase_d_nohup.log 2>&1 &
+#   nohup bash harness/training/run_phase1_phase_d_telemetry_sweep.sh > harness/reports/training/sweep_phase_d_nohup.log 2>&1 &
 set -euo pipefail
 _HERE="$(cd "$(dirname "$0")" && pwd)"
-# Repo root = parent of harness/ (works for dev/tent_io/harness/training and release TR-*/harness/training).
+# Repo root = parent of harness/.
 REPO_ROOT="$(cd "${_HERE}/../.." && pwd)"
 # Optional: PHASE_D_BASE_SAVE=/path/to/sweep_phase_d_<stamp> to append more weights without a new stamp.
 # Optional: PHASE_D_WEIGHTS="0.05 0.1" to resume a partial sweep.

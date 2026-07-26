@@ -47,10 +47,9 @@ def run_command(cmd, cwd=None):
 def main():
     print("🚀 Running complete ACS Verification Suite...\n")
     
-    python_bin = "/Users/coo-koba42/dev/.venv/bin/python"
-    if not os.path.exists(python_bin):
-        python_bin = sys.executable
-        
+    # Prefer an activated virtualenv, else the interpreter running this script.
+    python_bin = os.environ.get("ACS_PYTHON", "").strip() or sys.executable
+
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     
     report = {

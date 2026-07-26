@@ -26,6 +26,10 @@ from typing import Any
 import numpy as np
 from datetime import datetime, timezone
 
+# harness/training/<this file>  ->  repository root
+REPO_ROOT = Path(__file__).resolve().parents[2]
+HARNESS_ROOT = REPO_ROOT / "harness"
+
 TOKEN_RE = re.compile(r"[a-z0-9_]+")
 NUM_RE = re.compile(r"-?\d+(?:\.\d+)?")
 
@@ -391,7 +395,7 @@ def _default_save_dir() -> Path:
     env = os.environ.get("TENT_TRAINING_SAVE_DIR", "").strip()
     if env:
         return Path(env)
-    return Path("/Users/coo-koba42/dev/tent_io/harness/reports/training")
+    return HARNESS_ROOT / "reports" / "training"
 
 
 def main() -> int:
@@ -399,22 +403,22 @@ def main() -> int:
     parser.add_argument(
         "--mmlu-train-jsonl",
         type=Path,
-        default=Path("/Users/coo-koba42/dev/tent_io/harness/fixtures/training/mmlu_train.jsonl"),
+        default=HARNESS_ROOT / "fixtures" / "training" / "mmlu_train.jsonl",
     )
     parser.add_argument(
         "--mmlu-test-jsonl",
         type=Path,
-        default=Path("/Users/coo-koba42/dev/tent_io/harness/fixtures/training/mmlu_test.jsonl"),
+        default=HARNESS_ROOT / "fixtures" / "training" / "mmlu_test.jsonl",
     )
     parser.add_argument(
         "--gsm8k-train-jsonl",
         type=Path,
-        default=Path("/Users/coo-koba42/dev/tent_io/harness/fixtures/training/gsm8k_train.jsonl"),
+        default=HARNESS_ROOT / "fixtures" / "training" / "gsm8k_train.jsonl",
     )
     parser.add_argument(
         "--gsm8k-test-jsonl",
         type=Path,
-        default=Path("/Users/coo-koba42/dev/tent_io/harness/fixtures/training/gsm8k_test.jsonl"),
+        default=HARNESS_ROOT / "fixtures" / "training" / "gsm8k_test.jsonl",
     )
     parser.add_argument(
         "--telemetry-aux-weight",
@@ -570,7 +574,7 @@ def main() -> int:
     parser.add_argument(
         "--merkle-map",
         type=Path,
-        default=Path("/Users/coo-koba42/dev/tent_io/harness/reports/upg/upg_merkle_tensor_scroll.current.json"),
+        default=HARNESS_ROOT / "reports" / "upg" / "upg_merkle_tensor_scroll.current.json",
     )
     parser.add_argument("--merkle-max-events", type=int, default=128)
     parser.add_argument(

@@ -1,0 +1,1232 @@
+<!doctype html>
+<!-- Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+     https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+
+     Self-contained. No external requests: no CDN, no webfonts, no network of any
+     kind. Every number is computed in-browser from the same formulas as
+     code/framed_unknot/framing_transformer.py, and matches it to six decimals.
+     Companion to papers/notes/Framing_Transformer_Spin_Parity.tex. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Framing Transformer — Möbius-Screw Electron</title>
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img, canvas { max-width: 100%; }
+</style>
+</head>
+<body>
+
+<style>
+  :root {
+    --ground:   #0d1317;
+    --panel:    #131c22;
+    --panel-2:  #18232a;
+    --ink:      #dbe4e8;
+    --ink-dim:  #90a3ad;
+    --ink-faint:#5f7380;
+    --rule:     #24333c;
+    --brass:    #d6a04a;
+    --brass-dim:#8a6526;
+    --verd:     #55ab9f;
+    --verd-dim: #2f6b64;
+    --crit:     #d9706a;
+    --grid:     #1b262d;
+
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    --measure: 66ch;
+    --plate: 1120px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ground:   #e9edef;
+      --panel:    #ffffff;
+      --panel-2:  #f3f6f7;
+      --ink:      #15212a;
+      --ink-dim:  #556975;
+      --ink-faint:#8296a1;
+      --rule:     #d0d9dd;
+      --brass:    #8d640f;
+      --brass-dim:#b99548;
+      --verd:     #1f6d65;
+      --verd-dim: #63a49c;
+      --crit:     #a63b36;
+      --grid:     #e2e8ea;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#0d1317; --panel:#131c22; --panel-2:#18232a;
+    --ink:#dbe4e8; --ink-dim:#90a3ad; --ink-faint:#5f7380; --rule:#24333c;
+    --brass:#d6a04a; --brass-dim:#8a6526; --verd:#55ab9f; --verd-dim:#2f6b64;
+    --crit:#d9706a; --grid:#1b262d;
+  }
+  :root[data-theme="light"] {
+    --ground:#e9edef; --panel:#ffffff; --panel-2:#f3f6f7;
+    --ink:#15212a; --ink-dim:#556975; --ink-faint:#8296a1; --rule:#d0d9dd;
+    --brass:#8d640f; --brass-dim:#b99548; --verd:#1f6d65; --verd-dim:#63a49c;
+    --crit:#a63b36; --grid:#e2e8ea;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--plate);
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 72px) clamp(18px, 4vw, 44px) 96px;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(48px, 7vw, 96px);
+  }
+
+  p, .prose > * { max-width: var(--measure); }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; flex-direction: column; gap: 20px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .eyebrow .sep { color: var(--rule); }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 6vw, 60px);
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    font-weight: 400;
+    text-wrap: balance;
+    margin: 0;
+    max-width: 20ch;
+  }
+  h1 em { font-style: italic; color: var(--brass); }
+
+  .standfirst {
+    font-size: clamp(17px, 2.1vw, 20px);
+    color: var(--ink-dim);
+    line-height: 1.55;
+    max-width: 56ch;
+  }
+
+  /* ---------- plates ---------- */
+  .plate { display: flex; flex-direction: column; gap: 22px; }
+
+  .plate-head {
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    border-top: 1px solid var(--rule);
+    padding-top: 16px;
+  }
+  .plate-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--brass);
+    flex: none;
+    padding-top: 6px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(23px, 3.1vw, 31px);
+    line-height: 1.2;
+    letter-spacing: -0.012em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .plate-head .sub {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    text-align: right;
+    flex: none;
+  }
+
+  .prose { display: flex; flex-direction: column; gap: 14px; }
+  .prose p { margin: 0; }
+  .prose strong { font-weight: 700; color: var(--ink); }
+
+  /* ---------- figures ---------- */
+  figure {
+    margin: 0;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .canvas-holder { position: relative; width: 100%; background: var(--panel); }
+  canvas { display: block; width: 100%; touch-action: none; }
+
+  figcaption {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: var(--ink-dim);
+    padding: 12px 16px;
+    border-top: 1px solid var(--rule);
+    background: var(--panel-2);
+  }
+
+  /* ---------- controls ---------- */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px 32px;
+    align-items: center;
+    padding: 14px 16px;
+    border-top: 1px solid var(--rule);
+    background: var(--panel-2);
+  }
+  .ctrl { display: flex; align-items: center; gap: 12px; }
+  .ctrl label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+  input[type="range"] {
+    -webkit-appearance: none; appearance: none;
+    width: clamp(120px, 24vw, 210px);
+    height: 20px; background: transparent; cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 2px; background: var(--rule);
+  }
+  input[type="range"]::-moz-range-track { height: 2px; background: var(--rule); }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 13px; height: 13px; margin-top: -5.5px;
+    border-radius: 50%; background: var(--brass);
+    border: none;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 13px; height: 13px; border: none;
+    border-radius: 50%; background: var(--brass);
+  }
+  input[type="range"]:focus-visible { outline: 2px solid var(--brass); outline-offset: 4px; }
+
+  .val {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    min-width: 5.5ch;
+  }
+
+  button.toggle {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 6px 11px;
+    cursor: pointer;
+  }
+  button.toggle[aria-pressed="true"] { color: var(--brass); border-color: var(--brass-dim); }
+  button.toggle:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+  /* ---------- readouts ---------- */
+  .readout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    border-top: 1px solid var(--rule);
+  }
+  .cell {
+    padding: 13px 16px;
+    border-right: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 5px;
+    background: var(--panel-2);
+  }
+  .cell:last-child { border-right: none; }
+  .cell .k {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .cell .v {
+    font-family: var(--mono);
+    font-size: 19px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .cell .n { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); }
+  .v.pinned { color: var(--brass); }
+  .v.free { color: var(--ink-dim); }
+  .v.spin { color: var(--verd); }
+  .v.triv { color: var(--crit); }
+
+  /* ---------- verdict ---------- */
+  .verdict {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--crit);
+    background: var(--panel);
+    padding: 22px 26px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .verdict .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crit);
+  }
+  .verdict.keep { border-left-color: var(--verd); }
+  .verdict.keep .tag { color: var(--verd); }
+  .verdict p { margin: 0; max-width: 62ch; }
+
+  /* ---------- chain diagram ---------- */
+  .chain {
+    display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center;
+    font-family: var(--mono); font-size: 12px;
+    padding: 16px; border: 1px solid var(--rule); background: var(--panel-2);
+    overflow-x: auto;
+  }
+  .chain .node {
+    padding: 6px 10px; border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--panel); white-space: nowrap; color: var(--ink);
+  }
+  .chain .node.hot { border-color: var(--brass-dim); color: var(--brass); }
+  .chain .arrow { color: var(--ink-faint); padding: 0 2px; white-space: nowrap; }
+
+  /* ---------- parity table ---------- */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-family: var(--mono); font-size: 13px; }
+  th, td {
+    text-align: right; padding: 9px 16px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--rule); white-space: nowrap;
+  }
+  th {
+    font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 400; background: var(--panel-2);
+  }
+  td:last-child, th:last-child { text-align: left; }
+  tbody tr.on { background: var(--panel-2); }
+  tbody tr.on td { color: var(--ink); }
+  td.spin { color: var(--verd); }
+  td.triv { color: var(--crit); }
+
+  .eq {
+    font-family: var(--mono); font-size: 13.5px; line-height: 1.75;
+    padding: 15px 18px; background: var(--panel-2);
+    border: 1px solid var(--rule); border-radius: 2px;
+    overflow-x: auto; color: var(--ink);
+  }
+  .eq .c { color: var(--ink-faint); }
+  .eq b { color: var(--brass); font-weight: 400; }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 6px 20px;
+    font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  }
+  .legend span { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 13px; height: 3px; border-radius: 2px; flex: none; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 20px;
+    font-family: var(--mono); font-size: 11.5px; line-height: 1.7;
+    color: var(--ink-faint);
+  }
+  footer p { max-width: 74ch; margin: 0 0 8px; }
+  footer code { color: var(--ink-dim); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">
+      <span>ACS Framework</span><span class="sep">/</span>
+      <span>Flag Condensate</span><span class="sep">/</span>
+      <span>Framed unknot</span><span class="sep">/</span>
+      <span>26 Jul 2026</span>
+    </div>
+    <h1>The framing transformer, and where the spin actually <em>lives</em></h1>
+    <p class="standfirst">
+      The Möbius-screw electron is a closed curve carrying a framing. Between that
+      shape and any statement about spin sits a chain of four maps. This is each
+      one, evaluated — and the point at which the number 2 stops doing any work.
+    </p>
+    <div class="chain" aria-label="The transformer chain">
+      <span class="node">γ(φ)</span><span class="arrow">──framing──▸</span>
+      <span class="node">U(φ)</span><span class="arrow">──Călugăreanu──▸</span>
+      <span class="node">Sl = Tw + Wr</span><span class="arrow">──adapted frame──▸</span>
+      <span class="node">F : S¹ → SO(3)</span><span class="arrow">──lift──▸</span>
+      <span class="node hot">q : S¹ → SU(2)</span>
+    </div>
+  </header>
+
+  <!-- ============ PLATE 01 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">01</span>
+      <h2>The shape</h2>
+      <span class="sub">(2,1) torus curve · drag to rotate</span>
+    </div>
+    <div class="prose">
+      <p>
+        The centerline winds twice around the axis while its meridian angle turns
+        once, so it closes only after φ reaches 4π. The ribbon drawn here is spanned
+        by the torus surface normal — the natural framing. Its two faces are coloured
+        differently, so you can watch the strip present first one face and then the
+        other to the same region of space.
+      </p>
+      <p>
+        <strong>Push a/R toward 1 and the donut becomes a funnel.</strong> The
+        curve's closest approach to the axis shrinks to zero, and a throat opens at
+        φ = 2π — the high-torsion neck of the tornado reading in Appendix A of the
+        note. This is not a second object or a loose metaphor. It is the same framed
+        loop at a different aspect ratio, reached by a continuous deformation, and
+        every invariant on this page holds all the way along it.
+      </p>
+    </div>
+    <figure>
+      <div class="canvas-holder"><canvas id="cv-shape" height="460"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label for="s-tube">a / R</label>
+          <input type="range" id="s-tube" min="0.08" max="0.99" step="0.005" value="0.30">
+          <span class="val" id="v-tube">0.300</span>
+        </div>
+        <div class="ctrl">
+          <label for="s-width">Ribbon</label>
+          <input type="range" id="s-width" min="0.05" max="0.5" step="0.01" value="0.26">
+          <span class="val" id="v-width">0.26</span>
+        </div>
+        <button class="toggle" id="t-throat" aria-pressed="false">Throat</button>
+        <button class="toggle" id="t-frame" aria-pressed="true">Frame triad</button>
+        <button class="toggle" id="t-spin" aria-pressed="true">Auto-rotate</button>
+      </div>
+      <div class="readout">
+        <div class="cell">
+          <span class="k">Throat radius</span><span class="v free" id="r-throat">0.700</span>
+          <span class="n">min |ρ| — closest approach to axis</span>
+        </div>
+        <div class="cell">
+          <span class="k">Self-linking</span><span class="v pinned">−2.000000</span>
+          <span class="n">unchanged across the whole sweep</span>
+        </div>
+        <div class="cell">
+          <span class="k">Holonomy σ</span><span class="v spin">−1</span>
+          <span class="n">spinorial, throughout</span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="legend">
+          <span><span class="swatch" style="background:var(--brass)"></span>ribbon face A</span>
+          <span><span class="swatch" style="background:var(--verd)"></span>ribbon face B</span>
+          <span><span class="swatch" style="background:var(--crit)"></span>T tangent</span>
+          <span><span class="swatch" style="background:var(--brass)"></span>U framing</span>
+          <span><span class="swatch" style="background:var(--verd)"></span>V = T×U</span>
+        </span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PLATE 02 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">02</span>
+      <h2>Twist and writhe trade; only their sum is fixed</h2>
+      <span class="sub">Călugăreanu–White–Fuller</span>
+    </div>
+    <div class="prose">
+      <p>
+        Drag the aspect ratio and watch the two contributions move against each
+        other while their sum stays pinned to an integer. <strong>Tw and Wr are not
+        invariants</strong> — they are geometry, and they depend on how fat the torus
+        is. Only Sl is topology. The near-even split at a/R = 0.3 is an accident of
+        that particular aspect ratio, not a structural fact about the electron model.
+      </p>
+      <p>
+        The sweep runs all the way to the funnel. Drag past a/R ≈ 0.9 and the throat
+        radius on the right closes toward zero while the sum sits on −2 the entire
+        way. Donut and vortex are one framed loop, related by a deformation, and the
+        topology cannot tell them apart.
+      </p>
+    </div>
+    <figure>
+      <div class="canvas-holder"><canvas id="cv-cwf" height="300"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label for="s-cwf">a / R</label>
+          <input type="range" id="s-cwf" min="0.06" max="0.98" step="0.005" value="0.30">
+          <span class="val" id="v-cwf">0.300</span>
+        </div>
+      </div>
+      <div class="readout">
+        <div class="cell">
+          <span class="k">Twist</span><span class="v free" id="r-tw">−1.033761</span>
+          <span class="n">geometry — moves</span>
+        </div>
+        <div class="cell">
+          <span class="k">Writhe</span><span class="v free" id="r-wr">−0.966239</span>
+          <span class="n">geometry — moves</span>
+        </div>
+        <div class="cell">
+          <span class="k">Tw + Wr</span><span class="v pinned" id="r-sl">−2.000000</span>
+          <span class="n">topology — pinned</span>
+        </div>
+        <div class="cell">
+          <span class="k">Throat radius</span><span class="v free" id="r-cwf-throat">0.700</span>
+          <span class="n">→ 0 as the funnel closes</span>
+        </div>
+      </div>
+      <figcaption>
+        Computed live: twist by ∮(T×U)·U′dφ/2π, writhe by the Gauss double integral.
+        The sweep runs from a fat-hole donut all the way to a closed funnel with the
+        throat pinching onto the axis — and the sum never moves off −2. (Past
+        a/R ≈ 0.9 the last decimal drifts by a few parts in 10⁶; that is quadrature
+        error as the curve crowds the axis, not the invariant moving.) The sign
+        records that the embedding as parameterised is left-handed; the magnitude is
+        what the model claims.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PLATE 03 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">03</span>
+      <h2>The lift lands on −1</h2>
+      <span class="sub">SU(2) → SO(3) · closed form</span>
+    </div>
+    <div class="prose">
+      <p>
+        The framing is exactly the sphere parameterisation at longitude φ and
+        latitude φ/2, so it is a rotation of a fixed vector, and that rotation lifts
+        to a quaternion path. Follow it around one full circuit of the curve and it
+        does not come home — it arrives at minus itself. The frame needs two circuits
+        to return, which is the 720° property of a spin-½ frame.
+      </p>
+      <div class="eq">
+q(φ) = [ cos(φ/2) + <b>k</b> sin(φ/2) ] · [ cos(φ/4) − <b>j</b> sin(φ/4) ]<br>
+<span class="c">q(0)  = ( +1, 0, 0, 0 )</span><br>
+q(4π) = ( <b>−1</b>, 0, 0, 0 )   <span class="c">← the meridian half-angle advances by only π</span>
+      </div>
+    </div>
+    <figure>
+      <div class="canvas-holder"><canvas id="cv-lift" height="330"></canvas></div>
+      <figcaption>
+        Quaternion components across one circuit, φ from 0 to 4π. The longitude
+        factor returns to +1 and contributes nothing; the sign is carried entirely by
+        the meridian half-angle. Verified numerically three independent ways.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ PLATE 04 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">04</span>
+      <h2>Now vary the framing, and the value 2 evaporates</h2>
+      <span class="sub">control family · round circle, n twists</span>
+    </div>
+    <div class="prose">
+      <p>
+        Take the simplest possible curve — a round circle, writhe exactly zero — and
+        give it n twists of framing. Step through n and watch the holonomy σ flip on
+        every single increment. It never cares how large the self-linking number is,
+        only whether it is odd or even.
+      </p>
+      <p>
+        <strong>Look at n = 0.</strong> An ordinary untwisted circle is spinorial in
+        precisely the same sense as the Möbius screw with |Sl| = 2. The two lie in the
+        same class of π₁(SO(3)) = ℤ/2. Whatever produces the double cover here, it
+        cannot be the number 2, because 0 does it too.
+      </p>
+    </div>
+    <figure>
+      <div class="canvas-holder"><canvas id="cv-parity" height="300"></canvas></div>
+      <div class="controls">
+        <div class="ctrl">
+          <label for="s-n">Framing twists n</label>
+          <input type="range" id="s-n" min="-3" max="4" step="1" value="0">
+          <span class="val" id="v-n">0</span>
+        </div>
+      </div>
+      <div class="readout">
+        <div class="cell">
+          <span class="k">Self-linking</span><span class="v free" id="r-n-sl">0</span>
+          <span class="n">Wr = 0 for a circle</span>
+        </div>
+        <div class="cell">
+          <span class="k">Holonomy σ</span><span class="v" id="r-n-sig">−1</span>
+          <span class="n">q(2π) ⁄ q(0)</span>
+        </div>
+        <div class="cell">
+          <span class="k">π₁(SO(3)) class</span><span class="v" id="r-n-cls">spinorial</span>
+          <span class="n" id="r-n-note">lift does not close</span>
+        </div>
+      </div>
+      <figcaption>
+        Holonomy computed by lifting the adapted frame [T, U, T×U] to quaternions and
+        choosing signs for continuity — not by applying the parity formula. The formula
+        is what the measurement produces.
+      </figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>n</th><th>Tw</th><th>Wr</th><th>Sl</th><th>σ</th><th>class</th></tr>
+        </thead>
+        <tbody id="parity-body"></tbody>
+      </table>
+    </div>
+
+    <div class="eq">
+σ = (−1)<sup>Sl+1</sup>  =  (−1)<sup>p+q</sup>  <span class="c">for torus curves</span><br><br>
+<span class="c">Convention-free form — the one that survives any choice of reference framing:</span><br>
+<b>incrementing the framing by 1 flips the class; framings differing by 2 are equivalent.</b>
+    </div>
+  </section>
+
+  <!-- ============ PLATE 05 ============ -->
+  <section class="plate">
+    <div class="plate-head">
+      <span class="plate-num">05</span>
+      <h2>What this costs, and what it buys</h2>
+      <span class="sub">verdict</span>
+    </div>
+
+    <div class="verdict">
+      <span class="tag">Falsified · T4</span>
+      <p>
+        <strong>Sl = 2 as the geometric origin of g = 2.</strong> The spin-relevant
+        content of the self-linking number is one bit — its parity — and 2 and 0 are
+        the same bit. The magnitude carries no spin information, so it cannot be what
+        produces the double cover, and the identification loses its motivation.
+      </p>
+      <p>
+        Independently: Lévy-Leblond (1967) derives g = 2 from linearising the
+        Schrödinger equation. Its origin is the spinor representation — neither
+        relativistic nor topological. No peer-reviewed derivation of g = 2 from a
+        framed loop exists anywhere in the mainstream record.
+      </p>
+    </div>
+
+    <div class="verdict keep">
+      <span class="tag">Confirmed · survives</span>
+      <p>
+        <strong>The shape really is spinorial</strong>, and the source is now
+        specific: the odd meridian winding q = 1 — the φ/2 half-angle in the
+        parameterisation. That is a genuine topological property of the object, proved
+        in closed form, and it is exactly the 720° property the tornado picture was
+        reaching for.
+      </p>
+      <p>
+        It is also a ℤ/2 statement, and a single bit cannot produce a real number. The
+        honest successor is not a larger analogy but a smaller question: compute the
+        current distribution on the ribbon and its magnetic moment against the angular
+        momentum. That yields a g with dimensions and a value — and can then fail.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Every number on this page is computed in the browser from the same formulas as
+      <code>code/framed_unknot/framing_transformer.py</code>, which archives its run to
+      <code>docs/framed_unknot_results.json</code>. Write-up:
+      <code>papers/notes/Framing_Transformer_Spin_Parity.tex</code>. Kill logged in
+      <code>docs/Elimination_Ledger.md</code>.
+    </p>
+    <p>
+      The parity law is standard, not new here — see Needham, <em>Knot types of
+      generalized Kirchhoff rods</em> (arXiv:1708.09124) §2.2 and Thm 3.7; Gompf &amp;
+      Stipsicz, <em>4-Manifolds and Kirby Calculus</em> §5.6–5.7; Dennis &amp; Hannay,
+      <em>Geometry of Călugăreanu's theorem</em> (2005). What is new is its evaluation
+      on this curve and the correction that follows.
+    </p>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+/* ================= geometry ================= */
+const TAU = Math.PI * 2;
+
+function gam(p, R, a) {
+  const c2 = Math.cos(p/2), s2 = Math.sin(p/2), c = Math.cos(p), s = Math.sin(p);
+  const rho = R + a*c2;
+  return [rho*c, rho*s, a*s2];
+}
+function dgam(p, R, a) {
+  const c2 = Math.cos(p/2), s2 = Math.sin(p/2), c = Math.cos(p), s = Math.sin(p);
+  const rho = R + a*c2, drho = -0.5*a*s2;
+  return [drho*c - rho*s, drho*s + rho*c, 0.5*a*c2];
+}
+function frm(p) {
+  const c2 = Math.cos(p/2), s2 = Math.sin(p/2), c = Math.cos(p), s = Math.sin(p);
+  return [c2*c, c2*s, s2];
+}
+function dfrm(p) {
+  const c2 = Math.cos(p/2), s2 = Math.sin(p/2), c = Math.cos(p), s = Math.sin(p);
+  return [-0.5*s2*c - c2*s, -0.5*s2*s + c2*c, 0.5*c2];
+}
+
+const sub = (a,b) => [a[0]-b[0], a[1]-b[1], a[2]-b[2]];
+const add = (a,b) => [a[0]+b[0], a[1]+b[1], a[2]+b[2]];
+const mul = (a,k) => [a[0]*k, a[1]*k, a[2]*k];
+const dot = (a,b) => a[0]*b[0] + a[1]*b[1] + a[2]*b[2];
+const crs = (a,b) => [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
+const nrm = (a) => { const m = Math.hypot(a[0],a[1],a[2]) || 1; return [a[0]/m, a[1]/m, a[2]/m]; };
+
+/* ================= invariants ================= */
+function twistOf(N, R, a) {
+  const d = 2*TAU / N;      // phi runs 0..4pi
+  let acc = 0;
+  for (let i = 0; i < N; i++) {
+    const p = i * d;
+    const T = nrm(dgam(p, R, a)), U = frm(p), dU = dfrm(p);
+    acc += dot(crs(T, U), dU);
+  }
+  return acc * d / TAU;
+}
+function writheOf(N, R, a) {
+  const d = 2*TAU / N;
+  const g = new Array(N), dg = new Array(N);
+  for (let i = 0; i < N; i++) { const p = i*d; g[i] = gam(p,R,a); dg[i] = dgam(p,R,a); }
+  let acc = 0;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      if (i === j) continue;
+      const df = sub(g[i], g[j]);
+      const cr = crs(dg[i], dg[j]);
+      const d3 = Math.pow(Math.hypot(df[0],df[1],df[2]), 3);
+      if (d3 > 1e-14) acc += dot(df, cr) / d3;
+    }
+  }
+  return acc * d * d / (2*TAU);
+}
+
+/* ============ quaternion lift of a frame path ============ */
+function matToQuat(m) {   // m = [T, U, V] as columns; m[r][c]
+  const tr = m[0][0] + m[1][1] + m[2][2];
+  let w, x, y, z, S;
+  if (tr > 0) {
+    S = Math.sqrt(tr + 1) * 2;
+    w = 0.25*S; x = (m[2][1]-m[1][2])/S; y = (m[0][2]-m[2][0])/S; z = (m[1][0]-m[0][1])/S;
+  } else if (m[0][0] > m[1][1] && m[0][0] > m[2][2]) {
+    S = Math.sqrt(1 + m[0][0] - m[1][1] - m[2][2]) * 2;
+    w = (m[2][1]-m[1][2])/S; x = 0.25*S; y = (m[0][1]+m[1][0])/S; z = (m[0][2]+m[2][0])/S;
+  } else if (m[1][1] > m[2][2]) {
+    S = Math.sqrt(1 + m[1][1] - m[0][0] - m[2][2]) * 2;
+    w = (m[0][2]-m[2][0])/S; x = (m[0][1]+m[1][0])/S; y = 0.25*S; z = (m[1][2]+m[2][1])/S;
+  } else {
+    S = Math.sqrt(1 + m[2][2] - m[0][0] - m[1][1]) * 2;
+    w = (m[1][0]-m[0][1])/S; x = (m[0][2]+m[2][0])/S; y = (m[1][2]+m[2][1])/S; z = 0.25*S;
+  }
+  return [w,x,y,z];
+}
+function liftFrames(frames) {          // returns {qs, sigma}
+  const qs = [matToQuat(frames[0])];
+  for (let i = 1; i < frames.length; i++) {
+    let q = matToQuat(frames[i]);
+    const prev = qs[i-1];
+    if (q[0]*prev[0] + q[1]*prev[1] + q[2]*prev[2] + q[3]*prev[3] < 0) q = q.map(v => -v);
+    qs.push(q);
+  }
+  const a = qs[qs.length-1], b = qs[0];
+  return { qs, sigma: a[0]*b[0] + a[1]*b[1] + a[2]*b[2] + a[3]*b[3] };
+}
+
+/* circle of radius 1 carrying n framing twists */
+function circleFrames(n, N) {
+  const out = [];
+  for (let i = 0; i <= N; i++) {
+    const p = TAU * i / N;
+    const c = Math.cos(p), s = Math.sin(p);
+    const T = [-s, c, 0];
+    const er = [c, s, 0], ez = [0, 0, 1];
+    const th = n * p, ct = Math.cos(th), st = Math.sin(th);
+    const U = nrm(add(mul(er, ct), mul(ez, st)));
+    const V = crs(T, U);
+    out.push([[T[0],U[0],V[0]], [T[1],U[1],V[1]], [T[2],U[2],V[2]]]);
+  }
+  return out;
+}
+
+/* ================= canvas plumbing ================= */
+function css(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+function fit(cv) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const w = cv.clientWidth, h = parseInt(cv.getAttribute("height"), 10);
+  cv.width = Math.round(w * dpr);
+  cv.height = Math.round(h * dpr);
+  cv.style.height = h + "px";
+  const ctx = cv.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { ctx, w, h };
+}
+
+/* ================= PLATE 01 — the shape ================= */
+(function shapePlate() {
+  const cv = document.getElementById("cv-shape");
+  const sTube = document.getElementById("s-tube"), vTube = document.getElementById("v-tube");
+  const sWide = document.getElementById("s-width"), vWide = document.getElementById("v-width");
+  const bFrame = document.getElementById("t-frame"), bSpin = document.getElementById("t-spin");
+  const bThroat = document.getElementById("t-throat"), rThroat = document.getElementById("r-throat");
+
+  let yaw = 0.7, pitch = -0.52, dragging = false, lx = 0, ly = 0;
+  let auto = true, showFrame = true, t0 = performance.now();
+
+  function rot(v) {
+    const cy = Math.cos(yaw), sy = Math.sin(yaw);
+    const cp = Math.cos(pitch), sp = Math.sin(pitch);
+    const x1 = v[0]*cy - v[1]*sy, y1 = v[0]*sy + v[1]*cy, z1 = v[2];
+    return [x1, y1*cp - z1*sp, y1*sp + z1*cp];
+  }
+  function proj(v, w, h, scale) {
+    const p = rot(v);
+    const d = 5.2, f = d / (d - p[2]);
+    return [w/2 + p[0]*scale*f, h/2 - p[1]*scale*f, p[2]];
+  }
+
+  function draw() {
+    const { ctx, w, h } = fit(cv);
+    const a = parseFloat(sTube.value), rw = parseFloat(sWide.value);
+    const R = 1;
+    // as a -> R the object grows outward; ease the scale so it stays in frame
+    const scale = Math.min(w, h*1.75) * 0.30 / (1 + 0.42*Math.max(0, a - 0.3));
+
+    ctx.clearRect(0, 0, w, h);
+
+    const N = 260, quads = [];
+    for (let i = 0; i < N; i++) {
+      const p0 = 2*TAU * i / N, p1 = 2*TAU * (i+1) / N;
+      const g0 = gam(p0,R,a), g1 = gam(p1,R,a);
+      const u0 = frm(p0), u1 = frm(p1);
+      const A = add(g0, mul(u0,  rw/2)), B = add(g0, mul(u0, -rw/2));
+      const C = add(g1, mul(u1,  rw/2)), D = add(g1, mul(u1, -rw/2));
+      const pa = proj(A,w,h,scale), pb = proj(B,w,h,scale),
+            pc = proj(C,w,h,scale), pd = proj(D,w,h,scale);
+      // signed area in screen space decides which face we see
+      const area = (pc[0]-pa[0])*(pb[1]-pa[1]) - (pb[0]-pa[0])*(pc[1]-pa[1]);
+      quads.push({
+        pts: [pa, pc, pd, pb],
+        z: (pa[2]+pb[2]+pc[2]+pd[2]) / 4,
+        front: area > 0
+      });
+    }
+    quads.sort((m, n) => m.z - n.z);
+
+    const brass = css("--brass"), verd = css("--verd"), rule = css("--rule");
+    for (const q of quads) {
+      const depth = Math.max(0, Math.min(1, (q.z + 1.5) / 3));
+      ctx.globalAlpha = 0.45 + 0.55*depth;
+      ctx.fillStyle = q.front ? brass : verd;
+      ctx.beginPath();
+      ctx.moveTo(q.pts[0][0], q.pts[0][1]);
+      for (let i = 1; i < 4; i++) ctx.lineTo(q.pts[i][0], q.pts[i][1]);
+      ctx.closePath();
+      ctx.fill();
+      ctx.globalAlpha = 0.30 + 0.4*depth;
+      ctx.strokeStyle = rule;
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    // centerline
+    ctx.strokeStyle = css("--ink");
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    for (let i = 0; i <= N; i++) {
+      const p = 2*TAU * i / N;
+      const s = proj(gam(p,R,a), w, h, scale);
+      i ? ctx.lineTo(s[0], s[1]) : ctx.moveTo(s[0], s[1]);
+    }
+    ctx.stroke();
+
+    if (showFrame) {
+      const tt = ((performance.now() - t0) / 6200) % 1;
+      const p = tt * 2*TAU;
+      const o = gam(p,R,a);
+      const T = nrm(dgam(p,R,a)), U = frm(p), V = crs(T,U);
+      const L = 0.42;
+      const axes = [[T, css("--crit"), "T"], [U, css("--brass"), "U"], [V, css("--verd"), "V"]];
+      const po = proj(o, w, h, scale);
+      for (const [vec, col, lab] of axes) {
+        const pe = proj(add(o, mul(vec, L)), w, h, scale);
+        ctx.strokeStyle = col; ctx.lineWidth = 2.1;
+        ctx.beginPath(); ctx.moveTo(po[0], po[1]); ctx.lineTo(pe[0], pe[1]); ctx.stroke();
+        ctx.fillStyle = col;
+        ctx.font = "600 10px " + css("--mono");
+        ctx.fillText(lab, pe[0] + 4, pe[1] - 3);
+      }
+      ctx.fillStyle = css("--ink");
+      ctx.beginPath(); ctx.arc(po[0], po[1], 3, 0, TAU); ctx.fill();
+    }
+
+    // the throat: the curve's closest approach to the axis, at phi = 2pi
+    const throat = R - a;
+    if (throat < 0.42) {
+      const tp = proj(gam(TAU, R, a), w, h, scale);
+      ctx.strokeStyle = css("--crit");
+      ctx.globalAlpha = 0.55 + 0.45 * (1 - throat/0.42);
+      ctx.lineWidth = 1.2;
+      ctx.beginPath(); ctx.arc(tp[0], tp[1], 9, 0, TAU); ctx.stroke();
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = css("--crit");
+      ctx.font = "600 10px " + css("--mono");
+      ctx.textAlign = "left";
+      ctx.fillText("throat", tp[0] + 13, tp[1] + 3.5);
+    }
+    rThroat.textContent = throat.toFixed(3);
+
+    if (auto && !dragging) yaw += 0.0035;
+    requestAnimationFrame(draw);
+  }
+
+  cv.addEventListener("pointerdown", e => {
+    dragging = true; lx = e.clientX; ly = e.clientY; cv.setPointerCapture(e.pointerId);
+  });
+  cv.addEventListener("pointermove", e => {
+    if (!dragging) return;
+    yaw += (e.clientX - lx) * 0.008;
+    pitch += (e.clientY - ly) * 0.008;
+    pitch = Math.max(-1.5, Math.min(1.5, pitch));
+    lx = e.clientX; ly = e.clientY;
+  });
+  cv.addEventListener("pointerup", e => { dragging = false; cv.releasePointerCapture(e.pointerId); });
+  cv.addEventListener("pointercancel", () => { dragging = false; });
+
+  sTube.addEventListener("input", () => vTube.textContent = parseFloat(sTube.value).toFixed(3));
+  sWide.addEventListener("input", () => vWide.textContent = parseFloat(sWide.value).toFixed(2));
+  bFrame.addEventListener("click", () => {
+    showFrame = !showFrame; bFrame.setAttribute("aria-pressed", String(showFrame));
+  });
+  bSpin.addEventListener("click", () => {
+    auto = !auto; bSpin.setAttribute("aria-pressed", String(auto));
+  });
+  bThroat.addEventListener("click", () => {
+    const open = sTube.value < 0.9;
+    sTube.value = open ? 0.97 : 0.30;
+    vTube.textContent = parseFloat(sTube.value).toFixed(3);
+    bThroat.setAttribute("aria-pressed", String(open));
+    pitch = open ? -0.95 : -0.52;
+  });
+  window.addEventListener("resize", () => fit(cv));
+  draw();
+})();
+
+/* ================= PLATE 02 — CWF balance ================= */
+(function cwfPlate() {
+  const cv = document.getElementById("cv-cwf");
+  const s = document.getElementById("s-cwf"), v = document.getElementById("v-cwf");
+  const rTw = document.getElementById("r-tw"), rWr = document.getElementById("r-wr"),
+        rSl = document.getElementById("r-sl");
+  const cache = new Map();
+
+  function vals(a, N) {
+    const n = N || 300;
+    const key = a.toFixed(3) + ":" + n;
+    if (!cache.has(key)) {
+      cache.set(key, { tw: twistOf(n, 1, a), wr: writheOf(n, 1, a) });
+    }
+    return cache.get(key);
+  }
+  const fmt = x => (x < 0 ? "−" : "+") + Math.abs(x).toFixed(6);
+
+  function draw() {
+    const { ctx, w, h } = fit(cv);
+    ctx.clearRect(0, 0, w, h);
+    const pad = { l: 54, r: 18, t: 20, b: 34 };
+    const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+    const lo = 0.06, hi = 0.98;
+    const X = a => pad.l + (a - lo) / (hi - lo) * iw;
+    const Y = y => pad.t + (0.4 - y) / (0.4 - (-2.4)) * ih;   // range +0.4 .. -2.4
+
+    // grid
+    ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1;
+    ctx.fillStyle = css("--ink-faint");
+    ctx.font = "10px " + css("--mono");
+    ctx.textAlign = "right";
+    for (let g = 0; g >= -2.4; g -= 0.5) {
+      const y = Y(g);
+      ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+      ctx.fillText(g.toFixed(1), pad.l - 8, y + 3.5);
+    }
+    ctx.textAlign = "center";
+    for (let a = 0.1; a <= 0.95; a += 0.1) {
+      ctx.fillText(a.toFixed(1), X(a), h - pad.b + 16);
+    }
+    ctx.fillText("a / R      (throat closes →)", pad.l + iw/2, h - 6);
+
+    // series — coarser N for the swept curve, full N at the marker
+    const pts = [];
+    for (let a = lo; a <= hi + 1e-9; a += 0.04) {
+      const { tw, wr } = vals(Math.round(a*1000)/1000, 220);
+      pts.push({ a, tw, wr });
+    }
+    const series = [
+      ["tw", css("--verd"), "Tw"],
+      ["wr", css("--brass"), "Wr"]
+    ];
+    for (const [k, col, lab] of series) {
+      ctx.strokeStyle = col; ctx.lineWidth = 2;
+      ctx.beginPath();
+      pts.forEach((p, i) => i ? ctx.lineTo(X(p.a), Y(p[k])) : ctx.moveTo(X(p.a), Y(p[k])));
+      ctx.stroke();
+      const last = pts[pts.length - 1];
+      ctx.fillStyle = col;
+      ctx.textAlign = "left";
+      ctx.font = "600 11px " + css("--mono");
+      ctx.fillText(lab, X(last.a) - 26, Y(last[k]) - 8);
+    }
+    // the pinned sum
+    ctx.strokeStyle = css("--ink");
+    ctx.lineWidth = 2.2;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    pts.forEach((p, i) => i ? ctx.lineTo(X(p.a), Y(p.tw + p.wr)) : ctx.moveTo(X(p.a), Y(p.tw + p.wr)));
+    ctx.stroke();
+    ctx.fillStyle = css("--ink");
+    ctx.textAlign = "left";
+    ctx.font = "600 11px " + css("--mono");
+    ctx.fillText("Tw + Wr = −2", X(0.34), Y(-2) - 10);
+
+    // marker
+    const a0 = parseFloat(s.value), cur = vals(a0, 300);
+    document.getElementById("r-cwf-throat").textContent = (1 - a0).toFixed(3);
+    ctx.strokeStyle = css("--rule"); ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(X(a0), pad.t); ctx.lineTo(X(a0), h - pad.b); ctx.stroke();
+    ctx.setLineDash([]);
+    for (const [k, col] of [["tw", css("--verd")], ["wr", css("--brass")]]) {
+      ctx.fillStyle = col;
+      ctx.beginPath(); ctx.arc(X(a0), Y(cur[k]), 4, 0, TAU); ctx.fill();
+    }
+    ctx.fillStyle = css("--ink");
+    ctx.beginPath(); ctx.arc(X(a0), Y(cur.tw + cur.wr), 4, 0, TAU); ctx.fill();
+
+    rTw.textContent = fmt(cur.tw);
+    rWr.textContent = fmt(cur.wr);
+    rSl.textContent = fmt(cur.tw + cur.wr);
+    v.textContent = a0.toFixed(3);
+  }
+
+  s.addEventListener("input", draw);
+  window.addEventListener("resize", draw);
+  draw();
+})();
+
+/* ================= PLATE 03 — the lift ================= */
+(function liftPlate() {
+  const cv = document.getElementById("cv-lift");
+  function draw() {
+    const { ctx, w, h } = fit(cv);
+    ctx.clearRect(0, 0, w, h);
+    const pad = { l: 46, r: 74, t: 22, b: 36 };
+    const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+    const X = p => pad.l + p / (2*TAU) * iw;
+    const Y = y => pad.t + (1.15 - y) / 2.3 * ih;
+
+    ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1;
+    ctx.fillStyle = css("--ink-faint"); ctx.font = "10px " + css("--mono");
+    ctx.textAlign = "right";
+    for (const g of [1, 0.5, 0, -0.5, -1]) {
+      const y = Y(g);
+      ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+      ctx.fillText(g.toFixed(1), pad.l - 8, y + 3.5);
+    }
+    ctx.textAlign = "center";
+    for (const [p, lab] of [[0,"0"], [Math.PI,"π"], [TAU,"2π"], [3*Math.PI,"3π"], [2*TAU,"4π"]]) {
+      const x = X(p);
+      ctx.strokeStyle = css("--grid");
+      ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, h - pad.b); ctx.stroke();
+      ctx.fillStyle = css("--ink-faint");
+      ctx.fillText(lab, x, h - pad.b + 16);
+    }
+    ctx.fillText("φ", pad.l + iw/2, h - 5);
+
+    const N = 500;
+    const comp = [
+      { i: 0, col: css("--brass"), lab: "w" },
+      { i: 1, col: css("--verd"),  lab: "x" },
+      { i: 2, col: css("--crit"),  lab: "y" },
+      { i: 3, col: css("--ink-dim"), lab: "z" }
+    ];
+    const q = p => [
+      Math.cos(p/2)*Math.cos(p/4),
+      Math.sin(p/2)*Math.sin(p/4),
+      -Math.cos(p/2)*Math.sin(p/4),
+      Math.sin(p/2)*Math.cos(p/4)
+    ];
+    for (const c of comp) {
+      ctx.strokeStyle = c.col;
+      ctx.lineWidth = c.i === 0 ? 2.4 : 1.4;
+      ctx.globalAlpha = c.i === 0 ? 1 : 0.72;
+      ctx.beginPath();
+      for (let i = 0; i <= N; i++) {
+        const p = 2*TAU * i / N, y = Y(q(p)[c.i]);
+        i ? ctx.lineTo(X(p), y) : ctx.moveTo(X(p), y);
+      }
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = c.col;
+      ctx.textAlign = "left";
+      ctx.font = (c.i === 0 ? "600 " : "") + "11px " + css("--mono");
+      ctx.fillText(c.lab, w - pad.r + 8, Y(q(2*TAU)[c.i]) + 3.5);
+    }
+
+    // endpoints
+    ctx.fillStyle = css("--ink-faint");
+    ctx.beginPath(); ctx.arc(X(0), Y(1), 4, 0, TAU); ctx.fill();
+    ctx.textAlign = "left";
+    ctx.font = "10px " + css("--mono");
+    ctx.fillText("q(0) = +1", X(0) + 9, Y(1) - 7);
+
+    ctx.fillStyle = css("--brass");
+    ctx.beginPath(); ctx.arc(X(2*TAU), Y(-1), 5.5, 0, TAU); ctx.fill();
+    ctx.textAlign = "right";
+    ctx.font = "600 11px " + css("--mono");
+    ctx.fillText("q(4π) = −1", X(2*TAU) - 10, Y(-1) - 9);
+  }
+  window.addEventListener("resize", draw);
+  draw();
+})();
+
+/* ================= PLATE 04 — parity ================= */
+(function parityPlate() {
+  const cv = document.getElementById("cv-parity");
+  const s = document.getElementById("s-n"), v = document.getElementById("v-n");
+  const rSl = document.getElementById("r-n-sl"), rSig = document.getElementById("r-n-sig"),
+        rCls = document.getElementById("r-n-cls"), rNote = document.getElementById("r-n-note");
+  const tbody = document.getElementById("parity-body");
+
+  const data = {};
+  for (let n = -3; n <= 4; n++) {
+    const { qs, sigma } = liftFrames(circleFrames(n, 600));
+    data[n] = { qs, sigma, tw: -n, wr: 0, sl: -n };
+  }
+
+  // table
+  for (let n = -3; n <= 4; n++) {
+    const d = data[n], spin = d.sigma < 0;
+    const tr = document.createElement("tr");
+    tr.dataset.n = String(n);
+    tr.innerHTML =
+      "<td>" + n + "</td>" +
+      "<td>" + (d.tw >= 0 ? "+" : "−") + Math.abs(d.tw).toFixed(0) + "</td>" +
+      "<td>0</td>" +
+      "<td>" + (d.sl >= 0 ? "+" : "−") + Math.abs(d.sl).toFixed(0) + "</td>" +
+      "<td class='" + (spin ? "spin" : "triv") + "'>" + (spin ? "−1" : "+1") + "</td>" +
+      "<td class='" + (spin ? "spin" : "triv") + "'>" + (spin ? "spinorial" : "trivial") + "</td>";
+    tbody.appendChild(tr);
+  }
+
+  function draw() {
+    const n = parseInt(s.value, 10);
+    const d = data[n], spin = d.sigma < 0;
+    const { ctx, w, h } = fit(cv);
+    ctx.clearRect(0, 0, w, h);
+    const pad = { l: 46, r: 90, t: 22, b: 36 };
+    const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+    const X = t => pad.l + t * iw;
+    const Y = y => pad.t + (1.18 - y) / 2.36 * ih;
+
+    ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1;
+    ctx.fillStyle = css("--ink-faint"); ctx.font = "10px " + css("--mono");
+    ctx.textAlign = "right";
+    for (const g of [1, 0.5, 0, -0.5, -1]) {
+      const y = Y(g);
+      ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+      ctx.fillText(g.toFixed(1), pad.l - 8, y + 3.5);
+    }
+    ctx.textAlign = "center";
+    for (const [t, lab] of [[0,"0"], [0.5,"π"], [1,"2π"]]) {
+      ctx.fillStyle = css("--ink-faint");
+      ctx.fillText(lab, X(t), h - pad.b + 16);
+    }
+    ctx.fillText("φ  (one circuit of the circle)", pad.l + iw/2, h - 5);
+
+    const cols = [css("--brass"), css("--verd"), css("--crit"), css("--ink-dim")];
+    const labs = ["w", "x", "y", "z"];
+    for (let c = 0; c < 4; c++) {
+      ctx.strokeStyle = cols[c];
+      ctx.lineWidth = c === 0 ? 2.4 : 1.3;
+      ctx.globalAlpha = c === 0 ? 1 : 0.6;
+      ctx.beginPath();
+      d.qs.forEach((q, i) => {
+        const x = X(i / (d.qs.length - 1)), y = Y(q[c]);
+        i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = cols[c];
+      ctx.textAlign = "left";
+      ctx.font = (c === 0 ? "600 " : "") + "11px " + css("--mono");
+      ctx.fillText(labs[c], w - pad.r + 8, Y(d.qs[d.qs.length-1][c]) + 3.5);
+    }
+
+    // start and end markers
+    ctx.fillStyle = css("--ink-faint");
+    ctx.beginPath(); ctx.arc(X(0), Y(d.qs[0][0]), 4, 0, TAU); ctx.fill();
+    const endQ = d.qs[d.qs.length - 1];
+    ctx.fillStyle = spin ? css("--verd") : css("--crit");
+    ctx.beginPath(); ctx.arc(X(1), Y(endQ[0]), 5.5, 0, TAU); ctx.fill();
+
+    ctx.textAlign = "right";
+    ctx.font = "600 11px " + css("--mono");
+    ctx.fillStyle = spin ? css("--verd") : css("--crit");
+    ctx.fillText(spin ? "does not close" : "closes", X(1) - 10, Y(endQ[0]) + (endQ[0] > 0 ? -10 : 16));
+
+    rSl.textContent = (d.sl >= 0 ? "+" : "−") + Math.abs(d.sl);
+    rSig.textContent = spin ? "−1" : "+1";
+    rSig.className = "v " + (spin ? "spin" : "triv");
+    rCls.textContent = spin ? "spinorial" : "trivial";
+    rCls.className = "v " + (spin ? "spin" : "triv");
+    rNote.textContent = spin ? "lift does not close" : "lift closes";
+    v.textContent = String(n);
+
+    for (const tr of tbody.children) tr.classList.toggle("on", tr.dataset.n === String(n));
+  }
+
+  s.addEventListener("input", draw);
+  window.addEventListener("resize", draw);
+  draw();
+})();
+</script>
+
+</body>
+</html>

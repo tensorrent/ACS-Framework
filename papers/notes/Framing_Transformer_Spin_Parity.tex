@@ -58,6 +58,10 @@ withdraws the support the $Sl=2 \leftrightarrow g=2$ identification was
 taken to have.  What survives is sharper and smaller: the double cover in
 this model comes from the meridian half-angle $\varphi/2$ in the
 parameterisation, i.e.\ from the \emph{odd} meridian winding $q=1$.
+The parity law itself is not new --- it is standard in the framed-curve
+and Kirby-calculus literature (\S\ref{sec:lit}) --- and the contribution
+here is its evaluation on this curve, together with the resulting
+correction.
 \end{abstract}
 
 \tableofcontents
@@ -218,6 +222,27 @@ exactly when $pq$ is even, hence
 \sigma = (-1)^{Sl+1}.
 \end{equation}
 
+\begin{remark}[Convention, stated so it cannot be misread]
+\label{rem:convention}
+Equation~\eqref{eq:parity2} is normalised to the adapted frame
+$[\bm{T},\bm{U},\bm{T}\times\bm{U}]$ with $Sl$ measured against the
+Seifert ($0$-) framing.  In that normalisation the round unknot with the
+$0$-framing is the \emph{generator} of $\pi_1(SO(3))$ --- it does not
+lift --- because the tangent indicatrix itself contributes one turn.
+Absolute parity statements are therefore convention-dependent and easy to
+get backwards.  The convention-free form, which is what should be quoted,
+is:
+\begin{quote}
+\emph{Incrementing the framing by $1$ flips the $\pi_1(SO(3))$ class;
+framings differing by $2$ lie in the same component.}
+\end{quote}
+This is the belt trick, and it is the statement that survives any choice
+of reference framing.  Compare Needham~\cite{needham2017}, Thm.~3.7,
+where an $|h|$-fold covered circle of self-linking $k$ has closed
+quaternion lift iff $h+k$ is even --- which for $h=1$ reproduces the
+control column below exactly.
+\end{remark}
+
 This was checked against an independent control family --- round circles
 carrying $n$ framing twists, for which $Wr = 0$ and $|Sl| = n$ --- with
 the measured result reproducing \eqref{eq:parity2} exactly:
@@ -289,6 +314,72 @@ dimensions and a value, and could then fail.  The parity result above
 neither supports nor blocks it.
 \end{remark}
 
+\section{Relation to the established literature}
+\label{sec:lit}
+
+The results of \S\S3--5 are not new mathematics.  They are a computation
+of known structure applied to this specific curve, and it is worth
+recording exactly which parts are textbook, because that is what makes
+the T4 verdict binding rather than merely our opinion.
+
+\paragraph{The parity law is known.}
+That the space of closed framed curves in $\mathbb{R}^3$ has exactly two
+path components, distinguished by the parity of the self-linking number,
+with the mechanism being the double cover $SU(2)\to SO(3)$, is stated
+outright by Needham~\cite{needham2017}, \S2.2, in the framed-curve
+setting.  The same fact appears in Kirby calculus as: a framing of a knot
+induces a spin structure on it, \emph{even} framings giving the bounding
+structure and \emph{odd} framings the non-bounding one
+(Gompf--Stipsicz~\cite{gompfstipsicz1999}, \S5.6--5.7).  The explicit
+quaternionic frame-Hopf map and the closed/anti-closed dichotomy used in
+\S4 are Needham's \S2.  For the C\u{a}lug\u{a}reanu decomposition the
+modern geometric reference is Dennis--Hannay~\cite{dennishannay2005}.
+Our \eqref{eq:lift} and Proposition~\ref{prop:spinorial} are that
+machinery evaluated on \eqref{eq:curve}; the value added is the specific
+evaluation, not the framework.
+
+\paragraph{Framing genuinely carries spin data --- at the level of a
+$\mathbb{Z}/2$.}
+This is real and load-bearing elsewhere in physics.  It is why
+Chern--Simons theory needs Atiyah's $2$-framings~\cite{atiyah1990} or
+$p_1$-structures rather than framings; the current careful treatment is
+Freed--Teleman~\cite{freedteleman2026}.  It is also why the topological
+route to \emph{half-integer angular momentum} works at all:
+Finkelstein--Rubinstein~\cite{finkelsteinrubinstein1968} and, in the form
+closest to the present note, Wilczek--Zee~\cite{wilczekzee1983}, where a
+\emph{linking number} (the Hopf term) produces fractional spin and
+statistics in $2{+}1$ dimensions.  So ``linking number $\to$ spin'' is a
+real mechanism.  What it produces is a phase and a statistics sector, not
+a gyromagnetic ratio.
+
+\paragraph{The step to $g$ is made nowhere.}
+A literature sweep for a peer-reviewed derivation of $g=2$ from a framed
+loop, ribbon, or self-linking structure returns nothing in the mainstream
+record.  Decisively in the other direction,
+L\'evy-Leblond~\cite{levyleblond1967} showed that $g=2$ follows from
+\emph{linearising the Schr\"odinger equation} --- it is a consequence of
+the spinor representation, and is neither relativistic nor topological in
+origin.  Any geometric account of $g$ has to beat that, and none does.
+
+The nearby speculative literature should be cited, if at all, with its
+standing attached.  Kelvin's vortex atoms are historical only.
+Battey-Pratt \& Racey (1980) is published but effectively uncited outside
+fringe work and should not be used as authority.  Schiller's strand model
+appears in peer-reviewed venues but its substance is self-published with
+no independent uptake.  Bilson-Thompson's braided preons are
+peer-reviewed and have modest uptake within loop quantum gravity, but the
+author states explicitly that the model does \emph{not} explain the
+origin of spin --- ribbon twist there encodes electric charge.  Hestenes'
+geometric-algebra reformulation of the Dirac equation is mathematically
+sound; the physical zitterbewegung reading is a minority interpretation
+and recovers $g=2$ from the Dirac equation, which already supplies it.
+
+\paragraph{One trap worth naming.}
+``Half-integer hopfion'' and ``fractional skyrmion'' in the 2024--2026
+condensed-matter literature mean a half-integer \emph{topological index},
+not half-integer \emph{angular momentum}.  These are not spin-$1/2$
+objects and must not be cited as precedent for one.
+
 \section*{Reproduction}
 
 \begin{verbatim}
@@ -314,6 +405,55 @@ American Journal of Mathematics \textbf{91} (1969), 693--728.
 F.~B.~Fuller,
 \textit{The writhing number of a space curve},
 Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
+
+\bibitem{dennishannay2005}
+M.~R.~Dennis and J.~H.~Hannay,
+\textit{Geometry of C\u{a}lug\u{a}reanu's theorem},
+Proceedings of the Royal Society A \textbf{461} (2005), 3245--3254,
+\texttt{arXiv:math-ph/0503012}.
+
+\bibitem{needham2017}
+T.~Needham,
+\textit{Knot types of generalized Kirchhoff rods},
+\texttt{arXiv:1708.09124} (2017), \S2.2 and Thm.~3.7.
+
+\bibitem{gompfstipsicz1999}
+R.~E.~Gompf and A.~I.~Stipsicz,
+\textit{4-Manifolds and Kirby Calculus},
+Graduate Studies in Mathematics \textbf{20}, American Mathematical
+Society (1999), \S5.6--5.7.
+
+\bibitem{atiyah1990}
+M.~F.~Atiyah,
+\textit{On framings of 3-manifolds},
+Topology \textbf{29} (1990), 1--7.
+
+\bibitem{freedteleman2026}
+D.~S.~Freed and C.~Teleman,
+\textit{The role of $p_1$-structures in 3-dimensional Chern--Simons
+theories},
+\texttt{arXiv:2603.11291} (2026).
+
+\bibitem{finkelsteinrubinstein1968}
+D.~Finkelstein and J.~Rubinstein,
+\textit{Connection between spin, statistics, and kinks},
+Journal of Mathematical Physics \textbf{9} (1968), 1762--1779.
+
+\bibitem{wilczekzee1983}
+F.~Wilczek and A.~Zee,
+\textit{Linking numbers, spin, and statistics of solitons},
+Physical Review Letters \textbf{51} (1983), 2250--2252.
+
+\bibitem{levyleblond1967}
+J.-M.~L\'evy-Leblond,
+\textit{Nonrelativistic particles and wave equations},
+Communications in Mathematical Physics \textbf{6} (1967), 286--311.
+
+\bibitem{staley2010}
+M.~Staley,
+\textit{Understanding quaternions and the Dirac belt trick},
+European Journal of Physics \textbf{31} (2010), 467--478,
+\texttt{arXiv:1001.1778}.
 
 \bibitem{mobiusscrew2026}
 Flag Condensate Collaboration,

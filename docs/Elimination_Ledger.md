@@ -470,6 +470,31 @@ and cannot be what produces the double cover. **Mechanism of the error:** matchi
 integer 2 across two formalisms in which it arises for unrelated reasons (`pq` on one
 side, the order of `π₁(SO(3))` on the other).
 
+**Independent corroboration (literature).** The parity law is not our result — it is
+standard. Needham (arXiv:1708.09124 §2.2, Thm 3.7) states that framed-loop space has two
+path components distinguished by self-linking parity, via the SU(2)→SO(3) double cover,
+and his `h + k` even criterion reproduces our control column exactly at `h = 1`. Gompf &
+Stipsicz §5.6–5.7 give the Kirby-calculus form (even framings → bounding spin structure,
+odd → non-bounding). Our normalization convention is the standard trap and matches: with
+the adapted frame `[T, U, T×U]` and Seifert reference, the 0-framed round unknot *is* the
+generator of π₁(SO(3)). **Convention-free statement, which is what should be quoted:**
+incrementing the framing by 1 flips the class; framings differing by 2 are equivalent.
+
+**The decisive external point.** Lévy-Leblond, *Nonrelativistic particles and wave
+equations*, Comm. Math. Phys. **6** (1967) 286, derives `g = 2` from **linearizing the
+Schrödinger equation** — it is a consequence of the spinor representation, neither
+relativistic nor topological in origin. A literature sweep found **no** peer-reviewed
+derivation of `g = 2` from a framed loop, ribbon, or self-linking structure anywhere in
+the mainstream record. The nearby speculative work does not fill the gap: Bilson-Thompson
+states outright that his braided-preon model does not explain the origin of spin (twist
+encodes charge); Battey-Pratt & Racey (1980) is effectively uncited outside fringe
+literature; Schiller's strand model has no independent uptake. Note also that
+"half-integer hopfion"/"fractional skyrmion" in the 2024–26 condensed-matter literature
+means half-integer *topological index*, not half-integer *angular momentum*, and is not
+precedent. The genuine "linking number → fractional spin" result is Wilczek & Zee,
+PRL **51** (1983) 2250, which produces a phase and a statistics sector — not a
+gyromagnetic ratio.
+
 **Verdict.** `Sl = 2 ↔ g = 2` as a *geometric origin* claim is **FALSIFIED (T4)**. The
 surviving statement is narrower and real: the model's double cover comes from the **odd
 meridian winding q = 1** — the `φ/2` half-angle in the parameterisation — not from the

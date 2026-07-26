@@ -14,17 +14,27 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
 │   │   ├── Palatini_Gauge_Attractor.tex   # Paper A: SU(3) closure attractor in Palatini gravity
-│   │   ├── Riemann_Spectral_ACS_ext.tex # Paper B: Extended spectral Riemann hypothesis form
+│   │   ├── Riemann_Spectral_Critical_Line.tex # Paper B: Extended spectral Riemann hypothesis form
 │   │   ├── Spectral_Witness_Refinement.tex # Paper B': Retitled, tightened witness survival variant
 │   │   └── Holographic_Spectral_Inversion.tex         # Paper C: Holographic resolution & ER=EPR correspondence
 │   ├── notes/                        # Mathematical companion notes
 │   │   ├── Pythagorean_Lattice_Limits.tex # Note N1: Pythagorean structure in minimal PS algebra
-│   │   ├── Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
-│   │   └── Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator.tex   # Note N3: Prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless
+│   │   ├── Adjoint_Clifford_Signature_Selection.tex   # Note N2: Metric signature from adjoint spectral activity
+│   │   ├── Prime_Gap_Transition_Operator.tex   # Note N3: Dynamical transition operators over prime-gap ensembles
+│   │   ├── Mobius_Screw_Electron.tex # Flag Condensate: framed-unknot electron model
+│   │   ├── Framing_Transformer_Spin_Parity.tex # Companion: SU(2) lift of the frame loop; Sl=2 <-> g=2 falsified (T4)
+│   │   ├── Mobius_Ribbon_Capacitance.tex # Annulus / conformal-modulus / BIE revisions of the alpha estimate
+│   │   ├── Klein_Foam_Monad.tex      # Klein-foam Monad postulation (ontology)
+│   │   ├── Flag_Condensate_Nuclear_Decay.tex # Phase-slip / Bogoliubov Gamow channel
+│   │   ├── Flag_Condensate_Palpha_Overlap.tex # Pα overlap trilogy: baseline
+│   │   ├── Flag_Condensate_Palpha_Refined.tex # Pα overlap trilogy: refined + extended catalog
+│   │   ├── Flag_Condensate_Palpha_Throat_Overlap.tex # Pα overlap trilogy: throat channel
+│   │   └── Density_Engine_Many_Worlds.tex # Density Engine interpretive note
 │   ├── methodology/                  # Empirical tools and frameworks
 │   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
 │   │   ├── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
-│   │   └── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
+│   │   ├── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
+│   │   └── Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex # I7: Section 9 cone chain & 4/3 kill tests
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
 │   │   ├── The_Geometry_Engine.tex   # Reference engine specification
@@ -44,16 +54,27 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── tests/                    # Pytest verification suite (42 passing assertions)
 │   │   └── extras/                   # Specialized standalone verification scripts
 │   ├── notes_verification/           # Companion scripts for Notes N1, N2, and N3
-│   └── hp_knife_suite/               # Hilbert-Pólya shuffle-knife verification suite
-│       └── data_zeros/               # Extracted zeros and generation scripts
+│   ├── hp_knife_suite/               # Hilbert-Pólya shuffle-knife verification suite
+│   │   └── data_zeros/               # Extracted zeros and generation scripts
+│   ├── issue7/                       # Section 9 cone-chain & 4/3 kill tests
+│   ├── palpha_overlap/               # Pα overlap / Gamow channel computations
+│   ├── capacitance_ribbon/           # Möbius-ribbon capacitance revisions of α
+│   ├── framed_unknot/                # Framing transformer: CWF + SU(2) lift
+│   ├── acs_memo.py                   # Shared memoisation/telemetry helper
+│   └── benchmark_efficiency.py       # Efficiency benchmark runner
 │
-├── docs/                             # Framework documentation
+├── docs/                             # Framework documentation & run artifacts
 │   ├── ACS_Technical_Whitepaper.md   # Consolidated mathematical/physical whitepaper
-│   ├── ACS_Master_Index.md           # Page/line index for all manuscripts
+│   ├── ACS_Master_Index.md           # Page/line index (historical snapshot, May 2026)
 │   ├── ACS_Corpus_Map.md             # Logical map of the theoretical claims
-│   ├── Elimination_Ledger.md         # Detailed record of the 8 falsified claims
+│   ├── Elimination_Ledger.md         # Append-only kill queue & logged falsifications
 │   ├── README_verification_suite.md  # Detailed developer guide for the code
-│   └── ACS_FRAMEWORK_SKILL.md        # LLM context instruction module
+│   ├── ACS_FRAMEWORK_SKILL.md        # LLM context instruction module
+│   ├── PaperA_changelog.md, PaperB_changelog_extended.md, PaperC_changelog.md
+│   ├── BUGFIX_LOG.md, EFFICIENCY_BENCHMARK_REPORT.md, palpha_audit_log.md
+│   ├── issue7_*.json, issue7_logs/   # Section 9 run artifacts (sha256-pinned)
+│   ├── palpha_overlap/               # Pα overlap run artifacts
+│   └── framed_unknot_results.json    # Framing transformer run artifact
 │
 ├── harness/                          # Execution and telemetry scripts
 │   └── training/                     # Unified Phase-1 training and telemetry sweeps
@@ -85,11 +106,21 @@ To run the automated verification suite for the core trilogy (requires `numpy`, 
 ```bash
 cd code/acs_codebase
 pip install -r requirements.txt
-python -m pytest -v
+python -m pytest -v          # 42 passed
 ```
 
+`pytest.ini` scopes collection to `tests/`. For the full single-command
+reproduction (suite plus the paper-level checks), use `bash verify_all.sh`.
+
 ### 2. Standalone Verification Scripts
-The individual claims and physical parameters are calculated by standalone python modules in `code/acs_codebase/extras/`:
+The individual claims and physical parameters are calculated by standalone python modules in `code/acs_codebase/extras/`.
+
+> **Note on `extras/`:** the tree as a whole is heritage material and is *not*
+> the verification surface — see `code/acs_codebase/extras/README.md`. The three
+> scripts below are the exception: they are cited as evidence in
+> [MANIFEST.md](MANIFEST.md) and are expected to run clean. Some extras scripts
+> additionally require `mpmath` and `matplotlib`, which are not in
+> `requirements.txt`.
 
 *   **Barbero-Immirzi Parameter ($\gamma \approx 0.274$):**
     ```bash

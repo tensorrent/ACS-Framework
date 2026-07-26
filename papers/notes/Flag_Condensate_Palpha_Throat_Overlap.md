@@ -73,9 +73,9 @@ Comparison: Gaussian/HO; optional WS with exponential\(\times R_m/r\) tail match
 
 Simpson, \(N=4096\) on \([0,R]\).
 
-- Script: `rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_throat.py`
-- JSON: `rh_papers_may21/acs-framework/docs/palpha_overlap_throat_results.json`
-- Logs: `rh_papers_may21/acs-framework/docs/palpha_overlap_throat_logs/`
+- Script: `code/palpha_overlap/palpha_overlap_throat.py`
+- JSON: `docs/palpha_overlap/palpha_overlap_throat_results.json`
+- Logs: (run logs not committed to this repository)
 
 ---
 
@@ -131,8 +131,8 @@ Advanced the flat \([0,R]\) proxy to AdS-like throat weight \(w=R/r\) with Woods
 
 ## Code / artifacts
 
-- Script: `rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_throat.py`
-- Results: `rh_papers_may21/acs-framework/docs/palpha_overlap_throat_results.json`
-- Logs: `rh_papers_may21/acs-framework/docs/palpha_overlap_throat_logs/`
-- Baseline proxy: `flag_condensate_palpha_overlap.tex` / `docs/palpha_overlap_results.json`
+- Script: `code/palpha_overlap/palpha_overlap_throat.py`
+- Results: `docs/palpha_overlap/palpha_overlap_throat_results.json`
+- Logs: (run logs not committed to this repository)
+- Baseline proxy: `papers/notes/Flag_Condensate_Palpha_Overlap.tex` / `docs/palpha_overlap/palpha_overlap_results.json`
 - Companion: `flag_condensate_nuclear_decay.tex`

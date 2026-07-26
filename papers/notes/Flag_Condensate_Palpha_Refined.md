@@ -143,9 +143,9 @@ Typical \(V_0\sim36\)–\(43\,\mathrm{MeV}\) on this set.
 
 ## Artifacts
 
-- Code: `rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap_refined.py`
-- JSON: `rh_papers_may21/acs-framework/docs/palpha_overlap_refined_results.json`
-- Logs: `rh_papers_may21/acs-framework/docs/palpha_overlap_refined_logs/`
+- Code: `code/palpha_overlap/palpha_overlap_refined.py`
+- JSON: `docs/palpha_overlap/palpha_overlap_refined_results.json`
+- Logs: (run logs not committed to this repository)
 - Baselines retained: `palpha_overlap.py`, `palpha_overlap_throat.py`
 
 ---

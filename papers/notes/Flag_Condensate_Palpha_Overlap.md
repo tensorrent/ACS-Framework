@@ -47,7 +47,7 @@ Optional: \(P_S=S\,P_{\mathrm{model}}\).
 
 ## Numerical protocol
 
-Simpson quadrature, \(N=4096\) on \([0,R]\). Code: `rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap.py`. JSON: `rh_papers_may21/acs-framework/docs/palpha_overlap_results.json`. Logs: `docs/palpha_overlap_logs/`.
+Simpson quadrature, \(N=4096\) on \([0,R]\). Code: `code/palpha_overlap/palpha_overlap.py`. JSON: `docs/palpha_overlap/palpha_overlap_results.json`. Logs: (run logs not committed to this repository).
 
 ---
 
@@ -94,8 +94,8 @@ Standing-wave overlap sequel to the nuclear-decay note: confined \(\ell=0\) flag
 
 ## Code / artifacts
 
-- Script: `rh_papers_may21/acs-framework/code/palpha_overlap/palpha_overlap.py`
-- Results: `rh_papers_may21/acs-framework/docs/palpha_overlap_results.json`
-- Logs: `rh_papers_may21/acs-framework/docs/palpha_overlap_logs/`
+- Script: `code/palpha_overlap/palpha_overlap.py`
+- Results: `docs/palpha_overlap/palpha_overlap_results.json`
+- Logs: (run logs not committed to this repository)
 - Companion: `flag_condensate_nuclear_decay.tex` / `acs-framework-public/papers/notes/Flag_Condensate_Nuclear_Decay.tex`
 - Throat/WS sequel: `flag_condensate_palpha_throat_overlap.tex` / `acs-framework-public/papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex`

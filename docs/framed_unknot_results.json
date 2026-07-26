@@ -1,0 +1,57 @@
+{
+  "description": "Framing transformer of the Mobius-screw centerline",
+  "source": "code/framed_unknot/framing_transformer.py",
+  "companion_note": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+  "parameters": {
+    "R": 1.0,
+    "a": 0.3,
+    "N_curve": 2000,
+    "N_control": 1200
+  },
+  "mobius_screw": {
+    "orthogonality_max_abs_T_dot_U": 2.220446049250313e-16,
+    "twist": -1.033761211165586,
+    "writhe": -0.9662387842923104,
+    "twist_plus_writhe": -1.9999999954578964,
+    "self_linking_by_gauss_linking": {
+      "0.1": -2.000000000235007,
+      "0.05": -2.0000192878827874
+    },
+    "self_linking_magnitude_expected_pq": 2,
+    "sigma_adapted_frame": -1.0,
+    "sigma_framing_field": -1.0,
+    "sigma_closed_form": -1.0,
+    "pi1_SO3_class": "nontrivial (spinorial)"
+  },
+  "control_twisted_circles": {
+    "-2": {
+      "Sl": 1.9999999999999998,
+      "sigma": -1.0
+    },
+    "-1": {
+      "Sl": 0.9999999999999999,
+      "sigma": 1.0
+    },
+    "0": {
+      "Sl": 0.0,
+      "sigma": -1.0
+    },
+    "1": {
+      "Sl": -0.9999999999999999,
+      "sigma": 1.0
+    },
+    "2": {
+      "Sl": -1.9999999999999998,
+      "sigma": -1.0
+    },
+    "3": {
+      "Sl": -3.0,
+      "sigma": 1.0
+    },
+    "4": {
+      "Sl": -3.9999999999999996,
+      "sigma": -1.0
+    }
+  },
+  "measured_rule": "sigma = (-1)^(Sl+1); equivalently (-1)^(p+q) for torus curves. Spin content is the parity of Sl, not its magnitude."
+}

@@ -2,7 +2,10 @@
 
 # MANIFEST — ACS Complete Bundle
 
-Assembled 2026-06-27. Seed `20260423`. All code below was executed at assembly time.
+Core bundle assembled 2026-06-27; sections below the core (Issue #7, Flag
+Condensate, framing transformer) were appended later and carry their own dates.
+Seed `20260423`. All code referenced was executed at the time its section was
+written.
 
 ## Four-tier verification hierarchy (tiers never promote)
 
@@ -27,8 +30,8 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | core_trilogy/Spectral_Witness_Refinement | B' (May 30) | retitled, tightened |
 | core_trilogy/Holographic_Spectral_Inversion | C | holographic resolution / ER=EPR algebraic |
 | notes/Pythagorean_Lattice_Limits | N1 | |
-| notes/Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Adjoint_Clifford_Signature_Selection | N2 | grading-selection theorem |
-| notes/Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Prime_Gap_Transition_Operator | N3 | prime-gap Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles |
+| notes/Adjoint_Clifford_Signature_Selection | N2 | grading-selection theorem |
+| notes/Prime_Gap_Transition_Operator | N3 | prime-gap transition operator |
 | methodology/Spectral_Rigidity_Shuffle_Knife | — | the discriminant itself |
 | methodology/Form_Function_Relativity | FF06g | the form/function label is frame-relative (companion to FF06e) |
 | later_FF06_series/ (8 papers) | — | June methodology/geometry thread; documents only |
@@ -86,9 +89,9 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | N1 — IR lattice imprint is null vs PDG | **T4** | `code/notes_verification/test_lattice_imprint.py` |
 | N2 — general grading selection theorem | **T2** | `code/notes_verification/test_signature_selection.py` (bilinearity + weighted max-cut) |
 | N2 — G₂ exceptional-algebra counterexample | **T2** | same (cluster coherence fails for multi-length root clusters) |
-| N3 — Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
+| N3 — transition operator P_m; ker = Dirichlet characters | **T1/T3** | `notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md`, `hp_knife_suite/data_zeros/cyclotomic_*` |
 
-> **N3 fresh-eyes note (2026-06-27):** the Dynamical Dynamical Dynamical Dynamical Dynamical Transition Operators over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembless over Prime Gap Ensembles's eigenvalues are bounded
+> **N3 fresh-eyes note (2026-06-27):** the transition operator's eigenvalues are bounded
 > dynamical modes (|λ| ≈ 0.01–0.3), **not** an unbounded spectrum claimed to *be* the
 > Riemann zeros. Its connection to L-functions is via the kernel (characters), not the
 > eigenvalues. Recorded so the bundle does not overstate N3.
@@ -98,7 +101,7 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 ## Falsified claims ledger
 `docs/Elimination_Ledger.md` — the eight explicitly falsified claims
 (ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
-chirality, Route A/C Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras in Clifford Algebras, CW 6→5). First-class results.
+chirality, Route A/C signature selection, CW 6→5). First-class results.
 
 ## Reproduction notes
 - Seed `20260423` throughout. PDG v = 246.22 GeV canonical.
@@ -132,7 +135,28 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 | File | Notes | Status |
 |------|-------|--------|
 | `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped) |
-
+| `papers/notes/Framing_Transformer_Spin_Parity.tex` | Framing transformer of the same curve: CWF decomposition, $SU(2)$ lift of the frame loop, parity law | Computation (see claim table below) |
 | `papers/notes/Klein_Foam_Monad.tex` | Klein-foam Monad postulation (TR-2026-FF06-KFM); cites Möbius + nuclear-decay notes; RC1-scoped | Postulation / ontology |
 | `papers/notes/Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel; Geiger–Nuttall and Hawking transfer-matrix fits as reported in-note | Companion programme note |
+
+### Framing transformer — claim → evidence → tier
+
+Paper: `papers/notes/Framing_Transformer_Spin_Parity.tex` ·
+Code: `code/framed_unknot/` · Artifact: `docs/framed_unknot_results.json`
+Verify: `python3 code/framed_unknot/framing_transformer.py`
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Torus normal is a genuine framing ($T\cdot U=0$ to $2.2\times10^{-16}$) | **T1** | `framing_transformer.py` |
+| $Tw+Wr = Sl$, magnitude $\lvert Sl\rvert = pq = 2$ (two independent routes) | **T1** | twist/writhe integrals vs. Gauss linking integral |
+| Frame loop is spinorial: $\sigma = -1$, nontrivial in $\pi_1(SO(3))=\mathbb{Z}/2$ | **T2** | closed-form quaternion lift, Prop. 1; confirmed numerically 3 ways |
+| Parity law $\sigma = (-1)^{Sl+1} = (-1)^{p+q}$ | **T2/T1** | proved for torus curves; measured on twisted-circle controls $n=-2\ldots4$ |
+| $Sl = 2$ as the geometric origin of $g = 2$ | **T4** | parity law: $Sl=2$ and $Sl=0$ are the same $\mathbb{Z}/2$ class, so the magnitude carries no spin information |
+
+> **Scope:** the falsified row retires the *reading* of $Sl=2$ as producing the
+> double cover; it does not touch the geometry, the winding numbers, or the
+> $\lvert Sl\rvert=2$ computation of the Möbius-screw note, all of which are
+> confirmed here. What survives is that the model's double cover comes from the
+> odd meridian winding $q=1$ (the $\varphi/2$ half-angle), which is a
+> $\mathbb{Z}/2$ statement and cannot by itself yield a magnitude.
 

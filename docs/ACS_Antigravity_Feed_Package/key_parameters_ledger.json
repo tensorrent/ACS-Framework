@@ -1,6 +1,6 @@
 {
   "project": "Asymmetric Codependent Systems (ACS) Framework",
-  "last_updated": "2026-06-27",
+  "last_updated": "2026-07-17",
   "canonical_seed": "20260423",
   "verification_tiers": {
     "T1": "Machine-verified (runnable test suites)",
@@ -51,6 +51,11 @@
       "value": "0:1:4",
       "tier": "T2",
       "mechanism": "Palatini torsion sector projection"
+    },
+    "torsion_coupling_spectrum": {
+      "value": "4 (x9, Sym0 block) : 6 (x6, o(4) block)",
+      "tier": "T1",
+      "mechanism": "exact eigenvalues of C = sum ad_Ta^dag ad_Ta on sl(4); block-scalar => torsion coupling resolves only the Palatini split"
     }
   },
   "proved_theorems": [
@@ -105,6 +110,12 @@
       "tier": "T2",
       "falsification_evidence": "[h,omega] spans sl(4) rank=15 (gl4_asymmetry_map.py); Function=[k_dir,Form] annihilates BCH hierarchy (vacuum_theta0.py); theta0=2/9 is fit necessarily",
       "ledger_ref": "F-5"
+    },
+    {
+      "label": "EM-as-torsion-annihilator (both forms)",
+      "tier": "T4",
+      "falsification_evidence": "centralizer of full torsion sector Sym0(4) in sl(4) is {0} (nothing is torsion-null); Q=J3+K3+T_BL/2 not in ker(ad_T_BL); coupling operator is block-scalar with exact spectrum {4 (x9 sym), 6 (x6 o(4))} so no direction is graded; test_conjecture_em_torsion_annihilator.py",
+      "ledger_ref": "F-6"
     }
   ],
   "open_problems": [

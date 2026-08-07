@@ -95,11 +95,11 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 
 > **StrickenBy{C1.4-D1, 2026-07-06}:** α₂ and β_c were previously listed as free parameters (unconstrained) in the 7-input ledger propagation. Struck and relocated to Locked: α₂ = 0 is proved theorem #3 (§4.3, Phase 50 representation theory); β_c = 0 is proved theorem #4 (§4.3, Phase 51/52 equal-VEV no-go). Replaced in free table by v_R and μ_Δ (the actual $v_R$-sector VEV/mass parameters). Consistent with Paper A Table 1 (tab:branch-A-ledger).
 
-### 4.3 Proved Theorems (10)
+### 4.3 Proved Theorems (9) and one numerical selection
 
 | # | Result | Location | Method |
 |---|--------|----------|--------|
-| 1 | SU(3) closure attractor | Paper A | BCH + computational |
+| 1 | SU(3) closure attractor — **T3, numerical selection, not a uniqueness theorem** (see MANIFEST) | Paper A | BCH + 50k-sample computational search |
 | 2 | λ_φ = 2√3/27 | Paper A | Koide projection |
 | 3 | α₂ = 0 | Paper A §5.5.1 | T^A Φ = 0 |
 | 4 | β_c = 0 no-go | Paper A §5.5.1 | Mass matrix rank |

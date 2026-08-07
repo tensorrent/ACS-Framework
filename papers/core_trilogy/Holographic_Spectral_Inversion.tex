@@ -337,15 +337,17 @@ $f' = C_0'$ (the new dynamic actors, now Function) and $g' = S$
 but their positions in the ACS coupling are exchanged: $f' \leftrightarrow g'$.
 
 \textbf{Step~3 (BCH sign reversal).}
-The BCH--TE morphism gives $\DI(f, g) = \eps^2\,\mathbb{E}[f - g] + \Order{\eps^3}$.
+The BCH--TE morphism gives $\DI(f, g) = \eps\,\mathbb{E}[f - g] + \Order{\eps^2}$.
 Under role reversal $f \leftrightarrow g$:
 \[
-  \DI(g, f) = \eps^2\,\mathbb{E}[g - f] = -\eps^2\,\mathbb{E}[f - g]
-  = -\DI(f, g) + \Order{\eps^3}.
+  \DI(g, f) = \eps\,\mathbb{E}[g - f] = -\eps\,\mathbb{E}[f - g]
+  = -\DI(f, g) + \Order{\eps^2}.
 \]
-The first-order transfer entropy flips sign exactly.  Higher-order
-corrections are $\Order{\eps^3}$ and do not alter the sign for
-sufficiently small coupling.
+The first-order transfer entropy flips sign exactly.  The second-order
+term $2\eps^2\langle [f,g],\cdot\rangle$ is likewise odd under the
+exchange, since $[g,f] = -[f,g]$; remaining corrections are
+$\Order{\eps^3}$ and do not alter the sign for sufficiently small
+coupling.
 
 \textbf{Step~4 (Conclusion).}
 The sign of $\DI$ inverts when $S$ transitions from solution to

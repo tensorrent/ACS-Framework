@@ -14,6 +14,14 @@ Severity: **high** = affects the credibility or reproducibility of a load-bearin
 
 ## High (8)
 
+> **Status (2026-08-07):** draft fixes for all eight high-severity items are proposed on
+> branch `claude/repo-cleanup-public-u5wyz8` (pending author review). H1/H2 add tier
+> annotations to the skill and whitepaper; H3 annotates uncommitted kill scripts with a
+> provenance note; H4 corrects the order-counting in thm:inversion Step 3; H5 repoints the
+> chiral-mode citations at the computational section; H6 makes Theorem T4-prime explicitly
+> conditional on the minimum-gap bound; H7 adds a reconciliation note to One Mechanism
+> Many Forms; H8 amends the three reproduction appendices to state artifact status.
+
 ### H1. `docs/ACS_FRAMEWORK_SKILL.md`
 
 Section 4.3 'Proved Theorems (10)' lists 'SU(3) closure attractor' as theorem #1 with method 'BCH + computational', but MANIFEST tiers it T3 ('numerical, not a uniqueness theorem') — a direct violation of the skill's own rule 'Never let Tier 3 pass as Tier 2' (sec 3).

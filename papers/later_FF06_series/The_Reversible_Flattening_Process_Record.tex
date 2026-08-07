@@ -592,6 +592,15 @@ artifacts: \texttt{verify\_ledger.py} (the 14/14 ledger); \texttt{predictive\_te
 30-domain test); the Rust \texttt{shape\_engine} crate with \texttt{cargo test} (8/8) and
 \texttt{verify.sh} (503-record diff); and \texttt{motif\_test\_suite.py} with
 \texttt{check2\_gcd\_overlap.py} (the AISO integration, each with a discriminating self-test).
+
+\emph{Artifact status (2026-08-07).} Of the artifacts above, only display copies are
+committed to the public repository: \texttt{verify\_ledger\_disp.py},
+\texttt{predictive\_test\_disp.py}, \texttt{shape\_engine\_disp.py}, and
+\texttt{dominance\_engine\_disp.py} (this directory) are the canonical source listings
+of the corresponding engines. The runnable originals, the Rust crate, and the
+motif-memory suite were run on external session machines and are not in the
+repository; claims resting on them are reproducible from the display listings plus
+the recorded outputs, not by direct execution as shipped.
 Falsified conjectures are retained in the record with their mechanisms (Section~\ref{sec:negative});
 methodological corrections are appended, never erased.
 

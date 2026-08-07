@@ -1,6 +1,8 @@
 # ACS Framework (Asymmetric Codependent Systems)
 
-This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework. 
+This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework.
+
+**Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — coined vocabulary · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
 
 ---
 
@@ -10,6 +12,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 .
 ├── MANIFEST.md                       # Claim-to-code mapping & verification matrix
 ├── README.md                         # This file
+├── GLOSSARY.md                       # Glossary of coined vocabulary used across the corpus
 ├── LICENSE                           # Sovereign Integrity Protocol License (SIP License v1.1)
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
@@ -29,7 +32,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── Flag_Condensate_Palpha_Overlap.tex # Pα overlap trilogy: baseline
 │   │   ├── Flag_Condensate_Palpha_Refined.tex # Pα overlap trilogy: refined + extended catalog
 │   │   ├── Flag_Condensate_Palpha_Throat_Overlap.tex # Pα overlap trilogy: throat channel
-│   │   └── Density_Engine_Many_Worlds.tex # Density Engine interpretive note
+│   │   ├── Density_Engine_Many_Worlds.tex # Density Engine interpretive note
+│   │   └── Critical_Line_As_Fibered_Object.tex # Fork C: the critical line as a two-sided seam
 │   ├── methodology/                  # Empirical tools and frameworks
 │   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
 │   │   ├── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)

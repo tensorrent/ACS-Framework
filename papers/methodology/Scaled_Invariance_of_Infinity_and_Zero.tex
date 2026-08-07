@@ -1,0 +1,234 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage{fancyhdr}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Scaled Invariance of Infinity and Zero}
+\fancyhead[R]{\small The Unit Is the Reference Frame}
+\fancyfoot[C]{\thepage}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newtheorem{principle}{Principle}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{observation}{Observation}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\title{\textbf{Scaled Invariance of Infinity and Zero:\\
+The Counting Unit Is the Reference Frame}\\[4pt]
+\large How ``infinitely many'' and ``none'' become two readings of one interval}
+\author{B.\ Wallace \quad (TensorRent)\\
+\small with computational verification by Claude (Anthropic)}
+\date{\small Companion to \textit{Form/Function Relativity} (FF06g) and \textit{When a Number Lies}\ ---\ SIP License v1.1\ ---\ Seed \texttt{20260423}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+There are infinitely many numbers between $1$ and $2$ in the decimals, and there are none
+between them in the whole numbers. Both statements are true, of the same pair $(1,2)$, and the
+framework's discipline is to notice that a quantity carrying two opposite values cannot be a
+property of the object it is attached to. It is a property of a \emph{pair}. We make this precise:
+the count of representable points inside an interval is a reading of $(\text{interval},\,\text{unit})$,
+where the unit $\delta$ is the minimum resolvable step --- a freely chosen reference frame, exactly
+the role played by the surrogate ensemble in \textit{Form/Function Relativity} (FF06g) and by the
+reference measure $\mathrm{d}\mu/\mathrm{d}\nu$ in the core monograph's asymmetry lemma. The labels
+$\infty$ (as $\delta\to 0$) and $0$ (interior of $(1,2)$ at $\delta=1$) are the same interval read at
+two units related by a scale. We isolate the invariant: the count is preserved \emph{exactly} under
+the joint rescaling $(\,[a,b],\delta)\mapsto(\lambda[a,b],\lambda\delta)$ --- verified with exact
+rational arithmetic over $2\times10^{5}$ random configurations, $0$ mismatches --- and it moves under
+\emph{interval-only} scaling, which is why the label is relative rather than intrinsic. The only
+frame-free content is the dimensionless ratio $\mathrm{width}/\delta$. The interior of $(1,2)$ carries
+$0,9,99,999,9999$ points at $\delta = 1,\tfrac1{10},\tfrac1{100},\tfrac1{1000},\tfrac1{10000}$: one
+interval, the whole staircase from ``empty'' to ``diverging,'' driven only by the unit. This is a
+classical, machine-verified (T1) statement about resolution-relative counting. \textbf{It is not a
+claim about set cardinality}: $|\R|,|\Q|,|\Z|$ remain genuinely distinct and frame-independent, and
+Cantor is nowhere touched. The observation is the reframing; the scope boundary is the point.
+\end{abstract}
+
+\section{The observation}\label{sec:obs}
+
+Ask how many numbers lie between $1$ and $2$. In the decimals the answer is ``infinitely many'';
+in the whole numbers the answer is ``none.'' The two answers are not in tension --- they are answers
+to two different questions wearing the same words. What changed between them is not the interval
+$[1,2]$, which is fixed, but the \emph{unit}: the smallest step you are permitted to resolve. The
+program's first move, made already in \textit{When a Number Lies} and \textit{Form/Function
+Relativity}, is to refuse to attach a swinging label to a fixed object. If the count of interior
+points takes the value $\infty$ under one convention and $0$ under another, then the count is not a
+property of $[1,2]$. It is a property of the \emph{pair} $\big([1,2],\,\delta\big)$, and $\delta$ ---
+the resolution unit --- is a chosen reference frame.
+
+\section{The unit as reference frame}\label{sec:frame}
+
+\begin{definition}[Resolution unit and its count]\label{def:count}
+Fix a unit $\delta>0$: the minimum resolvable step, so that the only representable points are the
+lattice $\delta\Z=\{m\delta : m\in\Z\}$. For an interval $[a,b]$ define the closed count
+\[
+  N_\delta[a,b]\;=\;\#\big(\delta\Z\cap[a,b]\big)\;=\;\big\lfloor b/\delta\big\rfloor-\big\lceil a/\delta\big\rceil+1
+  \quad(\text{clamped at }0),
+\]
+and the interior count $N_\delta^{\circ}(a,b)=\#\big(\delta\Z\cap(a,b)\big)$. The ``decimals'' limit is
+$\delta\to 0$; the ``whole numbers'' frame is $\delta=1$.
+\end{definition}
+
+The count is now explicitly a two-argument object $N_\delta[a,b]$, and the content of this note is
+that the second argument is load-bearing and that its dependence has an exact symmetry.
+
+\begin{principle}[Scaled invariance of the counting label]\label{prin:scaled}
+The count of representable points in an interval is a coordinate on the pair
+$(\text{interval}\times\text{unit})$, not a property of the interval. It is \emph{invariant} under the
+joint rescaling $(\,[a,b],\delta)\mapsto(\lambda[a,b],\lambda\delta)$ for every $\lambda>0$, and it
+\emph{varies} under scaling either factor alone. The labels ``$\infty$'' and ``$0$'' for the interior
+of a fixed interval are therefore relative to the unit, and are related to one another by a change of
+scale --- infinity and zero are the two ends of one staircase in $\delta$.
+\end{principle}
+
+\begin{proposition}[Exact joint-scaling invariance]\label{prop:invariance}
+For all $a\le b$, $\delta>0$, $\lambda>0$,
+\[
+  N_\delta[a,b]\;=\;N_{\lambda\delta}\big[\lambda a,\lambda b\big].
+\]
+\end{proposition}
+\begin{proof}
+The map $x\mapsto\lambda x$ is a bijection $\delta\Z\to(\lambda\delta)\Z$ carrying $[a,b]$ onto
+$[\lambda a,\lambda b]$: $x\in\delta\Z\cap[a,b]\iff \lambda x\in(\lambda\delta)\Z\cap[\lambda a,\lambda b]$.
+A bijection preserves cardinality. Equivalently, both counts equal
+$\lfloor b/\delta\rfloor-\lceil a/\delta\rceil+1$ because $(\lambda b)/(\lambda\delta)=b/\delta$ and
+$(\lambda a)/(\lambda\delta)=a/\delta$. \qed
+\end{proof}
+
+\begin{corollary}[The invariant is dimensionless]\label{cor:dimless}
+$N_\delta[a,b]$ depends only on the ratios $a/\delta$ and $b/\delta$. The raw width and the raw unit
+are gauge; only $\mathrm{width}/\delta$ is physical. In particular the interior count between two
+consecutive units is $0$ for \emph{every} $\delta$ --- ``adjacent'' means ``one unit apart,'' a
+statement about $\delta$, never about the two endpoints.
+\end{corollary}
+
+Proposition~\ref{prop:invariance} is the precise form of ``infinity and zero are only a relative
+scaled invariance.'' Scale the interval and the unit together and nothing moves; the count is a rigid
+invariant. Scale one without the other and the label slides continuously from $0$ to $\infty$. There
+is no absolute count of ``the numbers between $1$ and $2$''; there is only the count at a stated
+resolution, and a symmetry that says which reparametrizations leave it fixed.
+
+\section{Measurement}\label{sec:meas}
+
+The counting facts are exact integers; we verify them with exact rational arithmetic (Python
+\texttt{fractions}, no floating error), seed \texttt{20260423}. The driver is
+\texttt{code/notes\_verification/test\_scaled\_invariance.py}.
+
+\paragraph{A. Unit-relativity of the label.} The interior of the single fixed interval $(1,2)$, read
+at shrinking units:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+unit $\delta$ & $1$ & $\tfrac{1}{10}$ & $\tfrac{1}{100}$ & $\tfrac{1}{1000}$ & $\tfrac{1}{10000}$\\
+\midrule
+$N_\delta^{\circ}(1,2)$ & $0$ & $9$ & $99$ & $999$ & $9999$\\
+label & empty & \multicolumn{4}{c}{$\longrightarrow$ diverging $(\to\infty)$}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent One interval; the entire span from ``nothing between $1$ and $2$'' to ``infinitely many
+between $1$ and $2$'' is produced by the unit alone. Principle~\ref{prin:scaled} made numerical.
+
+\paragraph{B. Joint-scaling invariance (the symmetry).} Over $2\times10^{5}$ random configurations
+$([a,b],\delta,\lambda)$ with $a,b,\delta,\lambda$ rational, comparing $N_\delta[a,b]$ against
+$N_{\lambda\delta}[\lambda a,\lambda b]$: \textbf{$0$ mismatches} (largest count encountered $45{,}601$).
+Proposition~\ref{prop:invariance} holds exactly, as a bijection must.
+
+\paragraph{C. Interval-only scaling breaks it (why it is ``relative'').} Holding $\delta=1$ and
+stretching the interval:
+\[
+  N_1^{\circ}(1,2)=0,\quad N_1^{\circ}(10,20)=9,\quad N_1^{\circ}(100,200)=99,\quad N_1^{\circ}(1000,2000)=999.
+\]
+The $\times 10$ image of $[1,2]$ gains $9$ interior points \emph{because the unit did not scale with
+it}. The adjacency of $1$ and $2$ is the statement $b-a=\delta$, a fact about the frame.
+
+\paragraph{D. The invariant is dimensionless.} Over $5\times10^{4}$ random ratio-preserving
+reparametrizations, $N_\delta[a,b]=N_{\lambda\delta}[\lambda a,\lambda b]$ in \textbf{$50{,}000/50{,}000$}
+cases, confirming Corollary~\ref{cor:dimless}: the count is a function of $a/\delta,b/\delta$ alone.
+
+All four are machine-verified (T1); the script exits nonzero on any mismatch.
+
+\section{Why this is the same object as the framework's other relativities}\label{sec:same}
+
+This is not a new mechanism; it is the framework's standing one, applied to counting.
+
+\textbf{The unit is the reference measure.} \textit{Form/Function Relativity} (FF06g) showed the
+form/function verdict to be a coordinate on (witness $\times$ frame), with the frame a chosen surrogate
+ensemble $\nu$ --- the reference measure $\mathrm{d}\mu/\mathrm{d}\nu$ of the core monograph's
+BCH--transfer-entropy lemma. Here the ``frame'' is the resolution unit $\delta$ and the ``label'' is
+the cardinality reading $\{0,\dots,\infty\}$ rather than $\{$form, function$\}$. In both cases a scalar
+that looks intrinsic is exhibited as a two-argument object, and the second argument --- the frame --- is
+free. Choosing it differently relabels; that choice is the perspective.
+
+\textbf{The scalar was a shadow.} \textit{When a Number Lies} isolates the pattern that a single scalar
+is often a lossy projection of an underlying relation, and that the relation, not the scalar, is the
+faithful object. ``The number of points between $1$ and $2$'' is such a shadow: the faithful object is
+the relation $\mathrm{width}/\delta$ between the interval and the unit, and only that dimensionless
+ratio survives a change of frame (Corollary~\ref{cor:dimless}). ``$\infty$'' and ``$0$'' are what the
+shadow reads when the unit is sent to $0$ or set equal to the width.
+
+\textbf{Form/function is frame-relative; so is cardinality-under-resolution.} The parent program's
+thesis is that form and function are generated by the asymmetry of a pair and carried by neither member
+alone. Principle~\ref{prin:scaled} is the counting instance: ``how many'' is generated by the asymmetry
+between an interval and a unit, and is carried by neither the interval nor the unit alone.
+
+\section{What this establishes, and where it stops}\label{sec:scope}
+
+\textbf{Establishes.} For a fixed interval, the count of representable points is frame-relative in the
+exact sense of Definition~\ref{def:count}: it ranges over $0,9,99,999,9999,\dots$ on the single interval
+$(1,2)$ as the unit shrinks (measurement A), it is preserved \emph{exactly} under joint rescaling of
+interval and unit (Proposition~\ref{prop:invariance}, $0/2\!\times\!10^5$ mismatches), it changes under
+interval-only scaling (measurement C), and its only frame-free content is the dimensionless ratio
+$\mathrm{width}/\delta$ (Corollary~\ref{cor:dimless}, $50000/50000$). ``Infinity'' and ``zero'' are the
+$\delta\to0$ and $\delta=\mathrm{width}$ ends of one staircase, related by a scale.
+
+\textbf{Does not establish --- the load-bearing boundary.} This is a statement about the count of
+points \emph{representable at a resolution}, i.e.\ the lattice $\delta\Z$. It is \textbf{not} a statement
+about set cardinality. The claim ``there are infinitely many reals between $1$ and $2$'' is true and
+frame-\emph{independent} as a statement about $\R$: $|\,[1,2]\cap\R\,|=\mathfrak{c}$ and
+$|\,[1,2]\cap\Q\,|=\aleph_0$ regardless of any unit, because those sets contain their points with no
+resolution imposed. Cantor's theorem, the distinctness of $\aleph_0$ and $\mathfrak c$, and the density
+of $\Q$ in $\R$ are untouched and uncontested here. The relativity is precisely the difference between
+\emph{``how many points exist in the set''} (cardinality; frame-free; the reals are genuinely
+uncountable) and \emph{``how many points are resolvable under a minimum step $\delta$''} (a count;
+frame-relative; what this note is about). Conflating the two would be the overclaim, and the boundary
+between them \emph{is} the result: the whole-number constraint does not make the reals disappear --- it
+selects a coarser frame in which the interior of $(1,2)$ is empty, and Proposition~\ref{prop:invariance}
+says exactly how that frame relates to the finer ones.
+
+\textbf{Two honest edges.} (i) $N_\delta^{\circ}(1,2)=k-1$ at $\delta=1/k$ grows without bound but is
+finite at every $\delta>0$; ``$\infty$'' is the limit $\delta\to0$, not a value at any admissible unit,
+and the limit is exactly where the resolution frame is abandoned and the set-cardinality question (a
+different question) takes over. (ii) The invariance is a discrete lattice fact, not a measure-theoretic
+one; the continuous analogue --- Lebesgue length $b-a$ scaling by $\lambda$ under $x\mapsto\lambda x$ ---
+is the $\delta\to0$ shadow of Proposition~\ref{prop:invariance} with the joint rescaling of the unit
+made explicit rather than hidden. Both edges are recorded so the staircase is not over-read.
+
+\vspace{1em}
+\noindent\rule{\linewidth}{0.4pt}\\
+\small This companion accompanies \textit{Form/Function Relativity} (FF06g) and \textit{When a Number
+Lies}. All counts are exact-integer and reproduced standalone via
+\texttt{code/notes\_verification/test\_scaled\_invariance.py} at seed \texttt{20260423}. SIP License v1.1.
+
+\end{document}

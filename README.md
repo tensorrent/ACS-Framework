@@ -1,6 +1,8 @@
 # ACS Framework (Asymmetric Codependent Systems)
 
-This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework. 
+This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework.
+
+**Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — coined vocabulary · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
 
 ---
 
@@ -10,6 +12,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 .
 ├── MANIFEST.md                       # Claim-to-code mapping & verification matrix
 ├── README.md                         # This file
+├── GLOSSARY.md                       # Glossary of coined vocabulary used across the corpus
 ├── LICENSE                           # Sovereign Integrity Protocol License (SIP License v1.1)
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
@@ -29,11 +32,13 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── Flag_Condensate_Palpha_Overlap.tex # Pα overlap trilogy: baseline
 │   │   ├── Flag_Condensate_Palpha_Refined.tex # Pα overlap trilogy: refined + extended catalog
 │   │   ├── Flag_Condensate_Palpha_Throat_Overlap.tex # Pα overlap trilogy: throat channel
-│   │   └── Density_Engine_Many_Worlds.tex # Density Engine interpretive note
+│   │   ├── Density_Engine_Many_Worlds.tex # Density Engine interpretive note
+│   │   └── Critical_Line_As_Fibered_Object.tex # Fork C: the critical line as a two-sided seam
 │   ├── methodology/                  # Empirical tools and frameworks
 │   │   ├── Spectral_Rigidity_Shuffle_Knife.tex # FF06e: The original shuffle-knife discriminant
 │   │   ├── Prime_Carrier_Position_Form_Factor.tex # FF06f: Positive ID of the prime carrier as the position pair correlation (explicit formula, r=0.9975)
 │   │   ├── Form_Function_Relativity.tex # FF06g: The form/function label is relative to the reference frame (companion to FF06e)
+│   │   ├── Scaled_Invariance_of_Infinity_and_Zero.tex # FF06h: ∞/0 are resolution-relative counting labels; the joint-scaling invariant is width/δ (companion to FF06g)
 │   │   └── Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex # I7: Section 9 cone chain & 4/3 kill tests
 │   ├── later_FF06_series/            # Chronological research thread documents
 │   │   ├── Three_Layer_Decomposition.tex # Level decomposition of the Riemann zeros
@@ -53,7 +58,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   │   ├── src/                      # Source implementations for Papers A, B, and C
 │   │   ├── tests/                    # Pytest verification suite (42 passing assertions)
 │   │   └── extras/                   # Specialized standalone verification scripts
-│   ├── notes_verification/           # Companion scripts for Notes N1, N2, and N3
+│   ├── notes_verification/           # Companion scripts for Notes N1, N2, N3, and FF06h (scaled invariance)
 │   ├── hp_knife_suite/               # Hilbert-Pólya shuffle-knife verification suite
 │   │   └── data_zeros/               # Extracted zeros and generation scripts
 │   ├── issue7/                       # Section 9 cone-chain & 4/3 kill tests
@@ -146,6 +151,13 @@ python hp_signed_lfunction.py  # Checks zeta weights and quadratic L-function si
 python hp_phase_test.py        # Validates complex character phases (demodulation R = 0.99)
 python hp_form_function_relativity.py         # Form/function label is frame-relative (2 exact frames, ~2s)
 python hp_form_function_relativity.py --full  # adds the GUE-full(bulk) rung (dense diagonalisation, ~7 min)
+```
+
+### 4. Companion Note Verifications
+Standalone exact-arithmetic checks for the methodology notes (standard library only):
+
+```bash
+python code/notes_verification/test_scaled_invariance.py  # FF06h: ∞/0 are resolution-relative; joint-scaling invariant width/δ (A–D PASS, <1s)
 ```
 
 ---

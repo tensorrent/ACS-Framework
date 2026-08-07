@@ -424,6 +424,97 @@ discriminator would be (d>1). Conductor (q) scaling at d=1 holds. Q3 closed.
 
 ---
 
+### 2026-07-17 — EM-as-torsion-annihilator ("electromagnetism is the fundamental degradation") — **KILLED, both forms** · T1 machine / T4 falsified
+
+Conjecture (stated before computation): the electromagnetic direction
+Q = J3 + K3 + T_BL/2 is the unique direction in sl(4,R) annihilated by the
+Palatini torsion sector — strong form against the full 9-dim sector
+T = [Sym0(4), o(4)], weak form against the B−L vacuum direction alone.
+Kill test: `code/acs_codebase/extras/test_conjecture_em_torsion_annihilator.py`
+(exact rationals, no floats in any decision).
+
+**Strong form KILLED.** T = Sym0(4) exactly (dim 9 = 9, containment verified),
+and the centralizer of Sym0(4) in sl(4) is **{0}**: only multiples of the
+identity commute with all of Sym0(4), and tracelessness removes those. The
+full torsion sector annihilates *nothing* — no direction, EM or otherwise,
+is a torsion-null residue of the full sector.
+
+**Weak form KILLED.** Q (in the geometric J3+K3+T_BL/2 embedding) is **not**
+in ker(ad_{T_BL}): its J3+K3 component carries the A(0,3) col-lep generator,
+which T_BL moves. The kernel itself is the 9-dim sl(3)⊕u(1) block — so even
+the diagonal-embedded photon (∝ T_BL) shares "torsion-null" with every colour
+direction. Neither embedding gives uniqueness.
+
+**Positive residue (the survivor, machine-verified exact).** The canonical
+torsion-coupling operator C = Σ_a ad_{T_a}†ad_{T_a} (orthonormal torsion
+basis, Frobenius metric) has **exactly two eigenvalues on sl(4)**:
+**4** (multiplicity 9, the symmetric/torsion block) and **6** (multiplicity 6,
+the o(4) Lorentz block). C is block-scalar: the only structure torsion
+coupling resolves at the algebra level is the Palatini split itself. No
+direction inside either block is graded, so **no algebra-level coupling
+computation of this form can single out an electromagnetic residue
+direction** — any "EM as degradation" mechanism must be sought in the
+representation/embedding where charges act, not in the adjoint algebra.
+That boundary is the space this kill collapses.
+
+### 2026-07-17 — Condensate-as-collapse ("the slag of the furnace") — **SURVIVED, all four forms** · T1 machine / exact
+
+Clarified conjecture (image/omega-limit dual of the killed F-6 kernel form):
+matter/condensate is the COLLAPSED terminal output of the torsion flow, not
+the protected base. Kill test:
+`code/acs_codebase/extras/test_conjecture_condensate_collapse.py` (exact
+rationals; four independently kill-able sub-claims, all stated first).
+
+- **C1 SURVIVED** — ad_{T_BL} is semisimple over Q with exact spectrum
+  {−4/3 (×3), 0 (×9), +4/3 (×3)}; every direction outside the exact 12-dim
+  exceptional subspace V0⊕V− collapses projectively onto the 3-dim dominant
+  sector V+. The terminal form is universal.
+- **C2 SURVIVED** — V+ is abelian and nilpotent of order 2 (A·B = 0):
+  the collapsed sector is terminal; it cannot regenerate structure.
+- **C3 SURVIVED** — in the fermion fundamental 4, V+ consists EXACTLY of the
+  three lepton→quark transition operators, and the collapse rate +4/3 equals
+  the B−L charge transferred per transition (1/3 − (−1) = 4/3), exactly.
+- **C4 SURVIVED** — the flow-invariant (uncollapsed) sector V0 is EXACTLY
+  sl(3) ⊕ u(1)_{B−L}: the gauge structure is the furnace; it is never slag.
+
+**Scope boundary (enforced in the script):** these are exact statements about
+projective alignment of a linear hyperbolic flow on sl(4,R) and its action on
+the fundamental 4. "Collapse" here is NOT decoherence/measurement; nothing is
+established about physical spacetime or cosmology. The names correspond
+structurally; the physics identification remains conjecture (T3 narrative at
+best). What is locked: the flow sorts the algebra into gauge-invariant vs
+matter-transitional sectors with the 4/3 = Δ(B−L) identity — machine-verified.
+
+### 2026-07-17 — Hypercone-through-the-slice (projection picture) — **SURVIVED, all three forms** · T1 exact (C1,C2) / T3 measured (C3)
+
+Picture: the 15-dim sl(4) cloud is the object; experience is a slice; a
+higher-dimensional cone intersecting the slice is seen as evolving
+spheroids/hyperbolae. Kill test:
+`code/acs_codebase/extras/test_conjecture_hypercone_projection.py`.
+
+- **C1 SURVIVED (exact)** — real 2-param slice x·D + y·S03 in the fermion
+  4-rep has nonzero eigenvalue sheets exactly ±√(x²+y²): a true double cone.
+  Any 1-param sub-slice sees the hyperbola 2√(t²+g²) — the cone poking
+  through, apex off-slice. Degeneracy codim 2 → β = 1 class.
+- **C2 SURVIVED (exact)** — adding the chirality direction z·(i·A03) (the
+  same i the J-map sl(3)→su(3) introduces, Prop 9.7) gives sheets exactly
+  ±√(x²+y²+z²): degeneracy codim 3 → β = 2 class. The repulsion exponent
+  is a DIMENSION COUNTER: β = codim − 1.
+- **C3 SURVIVED (measured)** — the repo's 100k Riemann zeros, unfolded,
+  give fitted small-spacing exponent **β = 2.019** (Poisson 0 / GOE 1 /
+  GUE 2). The shadow carries the imprint of a codimension-3 conical
+  structure — the complex/chirality class.
+
+**Scope boundary (enforced in-script):** the cone is in parameter space,
+not physical space. Not established: that 3-space is a slice of the cloud,
+that the zeros are such an operator's spectrum (open problem #2 stands),
+or anything about spacetime/matter. What is locked: β counts hidden cone
+dimensions exactly, and the zeros' measured β ≈ 2 selects the chirality
+class — consistent with, and giving countable content to, the projection
+picture.
+
+---
+
 ### 2026-07-26 — Möbius-screw: *Sl = 2* as the geometric origin of *g = 2* — **KILLED** · T2 structural / T1 numerical
 
 **Target.** `papers/notes/Mobius_Screw_Electron.tex` §3.3 identifies the torus-framing
@@ -470,6 +561,31 @@ and cannot be what produces the double cover. **Mechanism of the error:** matchi
 integer 2 across two formalisms in which it arises for unrelated reasons (`pq` on one
 side, the order of `π₁(SO(3))` on the other).
 
+**Independent corroboration (literature).** The parity law is not our result — it is
+standard. Needham (arXiv:1708.09124 §2.2, Thm 3.7) states that framed-loop space has two
+path components distinguished by self-linking parity, via the SU(2)→SO(3) double cover,
+and his `h + k` even criterion reproduces our control column exactly at `h = 1`. Gompf &
+Stipsicz §5.6–5.7 give the Kirby-calculus form (even framings → bounding spin structure,
+odd → non-bounding). Our normalization convention is the standard trap and matches: with
+the adapted frame `[T, U, T×U]` and Seifert reference, the 0-framed round unknot *is* the
+generator of π₁(SO(3)). **Convention-free statement, which is what should be quoted:**
+incrementing the framing by 1 flips the class; framings differing by 2 are equivalent.
+
+**The decisive external point.** Lévy-Leblond, *Nonrelativistic particles and wave
+equations*, Comm. Math. Phys. **6** (1967) 286, derives `g = 2` from **linearizing the
+Schrödinger equation** — it is a consequence of the spinor representation, neither
+relativistic nor topological in origin. A literature sweep found **no** peer-reviewed
+derivation of `g = 2` from a framed loop, ribbon, or self-linking structure anywhere in
+the mainstream record. The nearby speculative work does not fill the gap: Bilson-Thompson
+states outright that his braided-preon model does not explain the origin of spin (twist
+encodes charge); Battey-Pratt & Racey (1980) is effectively uncited outside fringe
+literature; Schiller's strand model has no independent uptake. Note also that
+"half-integer hopfion"/"fractional skyrmion" in the 2024–26 condensed-matter literature
+means half-integer *topological index*, not half-integer *angular momentum*, and is not
+precedent. The genuine "linking number → fractional spin" result is Wilczek & Zee,
+PRL **51** (1983) 2250, which produces a phase and a statistics sector — not a
+gyromagnetic ratio.
+
 **Verdict.** `Sl = 2 ↔ g = 2` as a *geometric origin* claim is **FALSIFIED (T4)**. The
 surviving statement is narrower and real: the model's double cover comes from the **odd
 meridian winding q = 1** — the `φ/2` half-angle in the parameterisation — not from the
@@ -480,3 +596,61 @@ against the angular momentum, which would produce a dimensionful `g` that can th
 
 Full write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex`.
 Artifact: `docs/framed_unknot_results.json`.
+
+---
+
+### 2026-07-26 — Successor test: can the framed-loop geometry produce a g-factor? — **KILLED (g = 1)** · T2 structural / T1 numerical
+
+**Target.** The successor proposed when `Sl = 2 ↔ g = 2` was killed: stop matching
+integers, compute the shape's magnetic moment against its angular momentum, and get a
+dimensionful `g` that can fail. Prompted by the reading of the shape as a **dynamo**.
+
+**Instrument.** `code/framed_unknot/moment_ratio.py` · artifact
+`docs/framed_unknot_moment_ratio.json`.
+
+**Result.** For a charge `q` and mass `m` circulating the closed centerline with period
+`T`, both moments are proportional to the same vector area `A = ½∮ r × dl`:
+
+```
+mu = I·A = (q/T)·A          <L> = (m/T)·∮ r × dr = (2m/T)·A
+mu / <L> = q/2m       =>    g = 1   exactly, for every closed curve
+```
+
+| curve | A_z / π |
+|---|---|
+| Möbius screw (2,1), a/R = 0.30 | +2.09000 |
+| Möbius screw (2,1), a/R = 0.70 | +2.49000 |
+| Möbius screw (2,1), a/R = 0.97 | +2.94090 |
+| round circle, one turn | +1.00000 |
+| round circle, two turns | +2.00000 |
+
+**The double winding is real and it is useless.** The screw carries 2.09× the vector area
+of a single loop — but that factor enters `mu` and `<L>` identically and cancels. This is
+the *same failure mode* as the `Sl` kill one entry above: a genuine factor of 2 in the
+geometry that carries no information about `g`. Note also that `A_z` is not an invariant
+(2.09π → 2.94π across the throat sweep), unlike `Sl`, which does not move.
+
+**Verdict.** **T2 no-go:** no model with charge and mass circulating at uniform `q/m` can
+give `g ≠ 1` by geometry — whatever the winding, framing, twist, or throat. Eq. (g=1) is
+just the classical orbital g-factor, which is shape-independent. This closes the successor
+as posed.
+
+**What it opens.** The requirement is now specific and structural rather than numerical:
+**decouple where the charge sits from where the mass sits.** That is a far better-posed
+target than hunting a 2 in the geometry. (The Möbius-screw note's own `e/2`-per-sheet
+charge assignment is exactly such a knob — though §4.2 of that note already records that
+the α estimate built on it does not survive its own revision path.)
+
+**On the dynamo reading.** One part is a theorem, not an analogy: for a thin flux tube of
+flux Φ, magnetic helicity `H = ∫A·B = Φ²(Tw + Wr) = Φ²·Sl` (Moffatt 1969; Moffatt & Ricca,
+Proc. R. Soc. A **439** (1992) 411). So the Călugăreanu quantity *is* the helicity of this
+geometry, and stretch-twist-fold dynamo action is exactly the `Tw ↔ Wr` trade already
+plotted. Two things block it as a particle model, neither topological: **(i)** a dynamo
+grows — it has a growth rate and consumes kinetic energy from a flow, while a stable
+particle is stationary; **(ii)** since `H = Φ²·Sl`, it supplies the same integer we
+already had, in units of Φ², adding physical content but no magnitude. The stationary
+neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed helicity to
+∇×B = λB — a spheromak), which is the right dynamical class and whose λ does carry
+dimensions of inverse length. It still does not evade the no-go on its own.
+
+Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.

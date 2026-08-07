@@ -4,7 +4,7 @@
 # https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
 # Multi-seed stability barrage: residual_product head + auto LR decay + fixed hyperparams.
 # Goal: config-level stability via compare_runs --aggregate-by-config (stability_score).
-# Run from repo root: bash tent_io/harness/training/run_phase1_tune_batch.sh
+# Run from repo root: bash harness/training/run_phase1_tune_batch.sh
 # Override: SEEDS, EPOCHS, HIDDEN_DIM, BASE_LR, MIN_EPOCH, PATIENCE, HEAD_DECAY_MULT, LR_DECAY_GAMMA, FREEZE_AFTER_EPOCH (>0 freezes
 # w_shared/b_shared after that epoch; heads keep training), SAVE_DIR (--save-dir for artifacts),
 # SAVE_DIR_SUFFIX (optional; appended to SAVE_DIR for weight sweeps / variants — requires SAVE_DIR set),
@@ -13,7 +13,7 @@
 # Locked control stack (post-tuning): MIN_EPOCH=24, PATIENCE=2, HEAD_DECAY_MULT=0.5, FREEZE_AFTER_EPOCH=24.
 set -euo pipefail
 _HERE="$(cd "$(dirname "$0")" && pwd)"
-# Parent of harness/ (tent_io in the dev tree, or release root in TR-* snapshots).
+# Parent of harness/ (the repository root).
 REPO_ROOT="$(cd "${_HERE}/../.." && pwd)"
 PY="${PYTHON:-python3}"
 TRAIN="${REPO_ROOT}/harness/training/train_unified_phase1.py"

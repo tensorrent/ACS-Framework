@@ -43,7 +43,7 @@ CONJECTURE → EXPLICIT COMPUTATION → RESULT
 
 | Tier | Standard | Example |
 |------|----------|---------|
-| **1. Machine-verified** | Automated test passes, reproducible by running code | `verify_n2_signature.py`: 4/4 PASS |
+| **1. Machine-verified** | Automated test passes, reproducible by running code | `code/notes_verification/test_signature_selection.py`: 4/4 PASS |
 | **2. Proved in paper** | Complete mathematical proof, human-verified | N2 Theorem 1: cluster coherence via bilinearity |
 | **3. Numerically verified** | Consistent across tests, not yet theorem-level | Compact → trivial grading (16 cases) |
 | **4. Explicitly falsified** | Computation shows claim is false, documented | CW 6→5 reduction: fermion-dominated, boundary min; T_min=(2πe)^d/q height floor at d=2 |
@@ -131,7 +131,7 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 1 | FeynRules/UFO export | Engineering | LHC-testable predictions |
 | 2 | Hilbert-Pólya operator | Different domain | RH connection |
 | 3 | Action principle for S̃_g | Variational theory | First-principles derivation |
-| 4 | L-functions extension | LMFDB zeros | Paper B generality (Partially closed: per-tone/octave extension done across d∈{1,2}; aggregate/Landau SNR-gated. See [NOTE_landau_identity_transport_20260705.md](file:///Users/coo-koba42/dev/TR-2026-FF06-ACS/code/instrument_suite/xfer/docs/NOTE_landau_identity_transport_20260705.md)) |
+| 4 | L-functions extension | LMFDB zeros | Paper B generality (Partially closed: per-tone/octave extension done across d∈{1,2}; aggregate/Landau SNR-gated. See `NOTE_landau_identity_transport_20260705.md` in the TR-2026-FF06-ACS instrument suite, which is not included in this repository) |
 | 5 | SM from GL(4) fiber | Conceptual breakthrough | Full SM derivation |
 | 6 | ER=EPR correspondence | Conceptual breakthrough | Holographic interpretation |
 
@@ -384,12 +384,13 @@ Never mix S\_f and S̃\_g without specifying which regime.
 ### 7.3 Compilation and Verification
 
 ```bash
-# Compile all (3 passes for cross-refs)
-for d in papers/core_trilogy/ papers/notes/ papers/methodology/ papers/later_FF06_series/; do
-    cd "$d" && pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
-    pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
-    pdflatex -interaction=nonstopmode main.tex >/dev/null 2>&1
-    rm -f main.aux main.log main.out main.toc && cd ../..
+# Compile all (3 passes each for cross-refs). Every .tex here is its own document —
+# there is no shared main.tex.
+for tex in papers/core_trilogy/*.tex papers/notes/*.tex papers/methodology/*.tex papers/later_FF06_series/*.tex; do
+    d=$(dirname "$tex"); b=$(basename "$tex" .tex)
+    ( cd "$d" \
+      && for _ in 1 2 3; do pdflatex -interaction=nonstopmode "$b.tex" >/dev/null 2>&1; done \
+      && rm -f "$b.aux" "$b.log" "$b.out" "$b.toc" )
 done
 
 # Citation check (should print nothing)
@@ -401,8 +402,9 @@ for doc in papers/core_trilogy/*.tex papers/notes/*.tex; do
     done
 done
 
-# Run all tests
-python3 code/verify_n2_signature.py && python3 code/verify_n1_lattice.py && python3 code/verify_cw_analysis.py
+# Run the note verifications (N2 signature selection, N1 lattice imprint)
+python3 code/notes_verification/test_signature_selection.py \
+  && python3 code/notes_verification/test_lattice_imprint.py
 ```
 
 ### 7.4 After Any Edit

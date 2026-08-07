@@ -32,7 +32,7 @@
 | INV-4 | **bracket(Function, Function) → Form; holonomy(bracket, Function) → irreducible Form** | FF06a, structural | The operator-type ladder |
 | INV-5 | **Inversion arc: a system that solves a constraint becomes the constraint (ΔI flips sign)** | FF06c, echoed everywhere | "Holographic resolution principle" |
 | INV-6 | **Tensegrity / nested codependence; self-similarity** | FF06b, FF06c, AISO | zero modes of rigidity matrix = gauge freedoms; Menger-sponge "each cell carries the whole" |
-| INV-7 | **Adversarial compression + 4-tier honesty ledger** | Every paper | proven / numerically-verified / conjectured / falsified; negatives are first-class; scope stated |
+| INV-7 | **Adversarial compression + 4-tier honesty ledger** | Every paper | T1 machine-verified / T2 proved / T3 numerically verified / T4 falsified; negatives are first-class; scope stated |
 | INV-8 | **"Right locally, wrong globally"** (glass-box) | FF06c + new papers | each lens valid in scope, over-reaching when universalised |
 
 ### Locked numerical invariants (derived, never refit)

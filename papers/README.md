@@ -32,6 +32,7 @@ subset used by the root monograph.
 | — | `Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel |
 | — | `Flag_Condensate_Palpha_{Overlap,Refined,Throat_Overlap}.tex` | Pα overlap trilogy |
 | — | `Density_Engine_Many_Worlds.tex` | Density Engine interpretive note |
+| — | `Critical_Line_As_Fibered_Object.tex` | The critical line as a two-sided seam (Fork C synthesis) |
 
 ## `methodology/` — empirical tools
 
@@ -40,6 +41,7 @@ subset used by the root monograph.
 | FF06e | `Spectral_Rigidity_Shuffle_Knife.tex` |
 | FF06f | `Prime_Carrier_Position_Form_Factor.tex` |
 | FF06g | `Form_Function_Relativity.tex` |
+| FF06h | `Scaled_Invariance_of_Infinity_and_Zero.tex` |
 | I7 | `Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex` |
 
 ## `later_FF06_series/` — chronological research thread

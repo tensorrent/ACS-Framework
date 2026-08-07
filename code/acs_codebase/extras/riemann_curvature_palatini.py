@@ -120,6 +120,14 @@ def ricci(R, coords):
     return Ric
 
 
+def ricci_scalar(Ric, g):
+    """Full trace R = g^{mu nu} R_{mu nu}.  (Vanishes in vacuum; for a
+    matter/Lambda source it is the curvature scalar in eps_{abcd}R^{ab}^e^c = 0.)"""
+    n = g.shape[0]
+    ginv = g.inv()
+    return _simp(sum(ginv[i, j] * Ric[i, j] for i in range(n) for j in range(n)))
+
+
 def lower_first(R, g, coords):
     """R_{rho sigma mu nu} = g_{rho lambda} R^lambda_{sigma mu nu}."""
     n = len(coords)
@@ -216,11 +224,16 @@ def main():
     R = riemann(Gamma, coords)
     print("  [eq.2] Riemann tensor R^rho_{sigma mu nu} assembled from Gamma.")
 
-    # (3) vacuum Einstein equation: Ricci must vanish
+    # (3) vacuum Einstein equation: Ricci tensor AND scalar must vanish
     Ric = ricci(R, coords)
     vacuum = all(_iszero(Ric[i, j]) for i in range(4) for j in range(4))
-    print(f"  [eq.3] vacuum Einstein eq.   R_mu_nu = 0                   : {vacuum}")
+    print(f"  [eq.3] Ricci tensor          R_mu_nu = 0 (vacuum Einstein): {vacuum}")
     assert vacuum, f"Ricci tensor did not vanish:\n{Ric}"
+
+    Rscalar = ricci_scalar(Ric, g)
+    scalar_ok = _iszero(Rscalar)
+    print(f"  [eq.3] Ricci scalar   R = g^mn R_mn = {Rscalar}                       : {scalar_ok}")
+    assert scalar_ok, f"Ricci scalar did not vanish: {Rscalar}"
 
     # curvature is genuinely nonzero — the invariant closed form is exact
     Rlow = lower_first(R, g, coords)

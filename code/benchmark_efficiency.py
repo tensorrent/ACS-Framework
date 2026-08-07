@@ -5,7 +5,7 @@ Unified efficiency benchmark for Flag Condensate / Pα / Density Engine harness.
 RC1 scope: measures as-implemented script wall time, throughput, and scaling
 in the stated test environment — not physical engine efficiency or uniqueness.
 
-Writes: rh_papers_may21/acs-framework/docs/efficiency_benchmark_results.json
+Writes: docs/efficiency_benchmark_results.json
 """
 
 from __future__ import annotations
@@ -41,6 +41,15 @@ REPORT_OUT = (
     if (_MONOREPO / "Aiso_build_artifacts").is_dir()
     else (_ACS_ROOT / "docs" / "EFFICIENCY_BENCHMARK_REPORT.md")
 )
+
+
+def _relpath(p: Path) -> str:
+    """Render a path repo-relative when possible (keeps reports machine-independent)."""
+    try:
+        return str(Path(p).resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(p)
+
 
 FAST_RUN_THRESHOLD_S = 5.0
 DEFAULT_REPEATS = 3
@@ -708,7 +717,7 @@ def cache_speedup_benchmarks(before: dict[str, Any] | None) -> dict[str, Any]:
             )
 
     return {
-        "memo_root": str(acs_memo.memo_root()),
+        "memo_root": _relpath(acs_memo.memo_root()),
         "memo_stats_after": dict(acs_memo.STATS),
         "before_baseline_utc": before_utc,
         "before_ribbon_wall_s": before_ribbon,
@@ -779,10 +788,10 @@ def write_efficiency_report(result: dict[str, Any]) -> None:
         f"| **Platform** | {result.get('environment', {}).get('platform')} · "
         f"Python {result.get('environment', {}).get('python')} |",
         "| **Timing tool** | `/usr/bin/time -l` (macOS) + `perf_counter` microbench |",
-        "| **Runner** | `rh_papers_may21/acs-framework/code/benchmark_efficiency.py` |",
-        "| **Raw JSON** | `rh_papers_may21/acs-framework/docs/efficiency_benchmark_results.json` |",
+        "| **Runner** | `code/benchmark_efficiency.py` |",
+        "| **Raw JSON** | `docs/efficiency_benchmark_results.json` |",
         f"| **Status** | **{result.get('status')}** |",
-        f"| **Memo root** | `{cache.get('memo_root', 'rh_papers_may21/acs-framework/.cache/')}` |",
+        f"| **Memo root** | `{cache.get('memo_root', '.cache/')}` |",
         "",
         "---",
         "",
@@ -880,13 +889,13 @@ def write_efficiency_report(result: dict[str, Any]) -> None:
             "",
             "| Path | Description |",
             "|------|-------------|",
-            "| `rh_papers_may21/acs-framework/code/acs_memo.py` | Disk + memory memo |",
-            "| `rh_papers_may21/acs-framework/code/benchmark_efficiency.py` | Unified runner |",
-            "| `rh_papers_may21/acs-framework/docs/efficiency_benchmark_results.json` | JSON |",
+            "| `code/acs_memo.py` | Disk + memory memo |",
+            "| `code/benchmark_efficiency.py` | Unified runner |",
+            "| `docs/efficiency_benchmark_results.json` | JSON |",
             "| `Aiso_build_artifacts/density_engine_many_worlds/EFFICIENCY_BENCHMARK_REPORT.md` | "
             "This report |",
             "",
-            "**Re-run:** `python3 rh_papers_may21/acs-framework/code/benchmark_efficiency.py`",
+            "**Re-run:** `python3 code/benchmark_efficiency.py`",
             "",
         ]
     )

@@ -30,7 +30,7 @@
 \author{Bradley Wallace\\
 \small \textit{Independent Researcher / TensorRent}\\
 \small with Claude (Anthropic) as instrument and aggregator\\
-\small \texttt{The Reversible Flattening Process Record}}
+\small Document key: \textsf{Process Record} (corpus index)}
 \date{June 2026}
 
 \begin{document}
@@ -190,7 +190,7 @@ promoted above its evidence.
 A branch-and-bound search over exponent vectors (knapsack-on-exponents with an admissible bound)
 found the maximal divisor count below very large bounds: $d=103680$ at $10^{18}$ (7\,ms),
 $1.81\times10^{10}$ at $10^{50}$ (1.4\,s), $3.01\times10^{14}$ at $10^{80}$ (33\,s), anchored
-against brute force at small bounds ($d=12,32,240,320$ at $N\le 60,840,720720,2162160$). The
+against brute force at small bounds ($d=12,\ 32,\ 240,\ 320$ at $N \in \{60,\ 840,\ 720720,\ 2162160\}$). The
 result is real. The \emph{attribution} was initially wrong and is corrected in
 Section~\ref{sec:walls}: the speed comes from the highly-composite/knapsack structure of the
 problem, not from the relational representation, which is a bystander here.
@@ -336,6 +336,10 @@ program that reports only wins would have silently swept up.
 \section{Engineering Verification}\label{sec:engineering}
 
 The mathematics was tested against running code, where resemblance is cheapest and most dangerous.
+\emph{Source-availability note:} the engineering-side evidence in this section and the next ---
+the live OmniForge/AISO source, the kernel whitepaper, and the production merge path --- is private,
+unpublished material not contained in this repository; the falsifications and the surviving
+integration are auditable from the recorded outcomes here, not reproducible from the public record.
 
 \subsection{Rust cross-language exactness (\TT, promoted from \Tw)}
 The integer-only shape engine was transcribed to Rust and checked against the

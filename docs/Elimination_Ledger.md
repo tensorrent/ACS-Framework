@@ -36,7 +36,8 @@ clothes.
 
 ### Swing now — cheap, decisive, high collapse
 
-**T1-TARGET — Framework constants: invariant or refraction?** `IN-PROGRESS → see KILLS LOGGED 2026-06-06`
+**Q1-TARGET — Framework constants: invariant or refraction?** `IN-PROGRESS → see KILLS LOGGED 2026-06-06`
+*(renamed from "T1-TARGET" to avoid collision with the Tier-1 label; matches "Q1" in the scorecard)*
 Kill target: "λ_φ = 2√3/27, h̃/h = 2/3, g₄ = g_L = g_R = 4/3, γ = 0.274 are
 representation-independent invariants." Kill test: apply kill-criterion to each.
 Kill condition: value moves under a valid representation/normalization/convention/scale
@@ -86,7 +87,7 @@ flagged tension. Cost: medium.
 ### 2026-06-06 — Target 1: framework constants invariant-or-refraction — **T2 STRUCTURAL**
 
 **Method note.** The ACS derivation code for these four constants is not reachable in
-this environment (`computatioanal_work_ACS` contains the TENT classifier notes, not
+this environment (`computatioanal_work_ACS` — *sic*, directory name recorded as-is — contains the TENT classifier notes, not
 the Koide-projection / Palatini-bracket / Barbero–Immirzi pipelines). So this is the
 kill-criterion applied **structurally** (path (b)), not a numerical recomputation
 under an instrument swap. Verdicts are T2, argued from each constant's construction
@@ -328,11 +329,18 @@ Self-corrections this session: two broken statistics caught before reading as si
 
 ## OOS01 RESULTS (2026-06-06, Mac via Antigravity) — reviewed & re-tiered
 
+> **External-label key.** *OOS01* = the first out-of-session kill campaign (external run,
+> 2026-06-06). *Antigravity* = the external agent/machine session that executed that
+> campaign (its verdicts are reviewed and re-tiered here, not accepted as-is). *W2F* = the
+> external session's working-to-file log; not committed to this repository. *Category A\** =
+> that log's top regression-severity class. *trinity-wasm* = a private codebase whose
+> benchmark inputs are not vendored here; the Q2 bench is therefore externally-verified-only.
+
 ### Q2 BRA speed — **KILLED (T1, measured)**, with a precision confound noted
-Matched op identified at last: Gabor wave-packet render/energy (`bra_render`/`bra_energy`),
+Matched op identified: Gabor wave-packet render/energy (`bra_render`/`bra_energy`),
 replacing TF `exp(-dt²/2w²)·exp(2πi f dt)` (f32). Measured ns/op (release rlib):
 BRA-f64 is **1.37–1.82× SLOWER** than TF-f32 across N=16..1024. The withdrawn "489×
-faster" is obliterated — not faster, slower. Speed-superiority KILLED (T1).
+faster" is contradicted by direct measurement — not faster, slower. Speed-superiority KILLED (T1).
 **Confound (honest):** the bench is BRA-**f64** vs TF-**f32**; f64 carries ~1.5–2× the
 work, so at matched precision (f64-vs-f64) BRA is plausibly ~par, not 489×. So: "faster
 than the TF you'd actually run (f32)" → FALSE; "competitive at matched f64" → untested,

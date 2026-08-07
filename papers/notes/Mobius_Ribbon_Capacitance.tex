@@ -37,7 +37,7 @@ Annulus, Conformal Modulus, and BIE Revisions of the $\alpha$ Estimate}\\[0.35em
 The companion framed-unknot electron note~\cite{mobius2026} obtains
 $\alpha^{-1}\approx 137.036$ from an annulus / thin-ring capacitance
 and a self-stress match $(e/2)^2/(2C)=m_e c^2$.  That note
-(\S4.1) asks for a conformal-map and boundary-integral revision of
+(\S4.2) asks for a conformal-map and boundary-integral revision of
 $C$.  This sequel implements three as-reported models at fixed
 spin-radius input $R=\hbar/(2m_e c)$: (i)~the baseline annulus
 formula; (ii)~a double-cover strip$\to$annulus conformal-modulus
@@ -159,8 +159,9 @@ aspect window where the half-width is panel-resolved
 Code path:
 \texttt{code/capacitance\_ribbon/ribbon\_capacitance.py}.
 Artifacts:
-the script's stdout (results JSON and run logs not committed to this
-repository).
+\texttt{docs/capacitance\_ribbon\_results.json} (machine-readable results)
+and \texttt{docs/capacitance\_ribbon\_run.log} (full run log), regenerated
+from the script above.
 
 \subsection{Worked demo at $a/R=0.05$}
 
@@ -217,7 +218,7 @@ The companion value $\alpha^{-1}\approx 137.036$ is recovered by the
 annulus closed form at a tuned $a/R$.  Under the conformal and BIE
 revisions implemented here, the same moderate geometric aspect does
 \emph{not} reproduce that figure.  This is the geometric-fidelity
-caveat of~\cite{mobius2026}, \S4.1, made quantitative.
+caveat of~\cite{mobius2026}, \S4.2, made quantitative.
 \end{remark}
 
 \section{Summary}
@@ -237,7 +238,7 @@ $\alpha^{-1}$ via~\eqref{eq:alphaC} & model output; not a uniqueness claim \\
 
 \section*{Acknowledgments}
 This sequel answers the revision path stated in~\cite{mobius2026},
-\S4.1 (geometric fidelity of the capacitance model).
+\S4.2 (geometric fidelity of the capacitance model).
 
 \begin{thebibliography}{9}
 
@@ -246,7 +247,6 @@ Flag Condensate Collaboration,
 \textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$
 and a Capacitance Model of $\alpha$},
 preprint (July 2026),
-\texttt{mobius\_screw\_electron.tex} /
 \texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
 
 \end{thebibliography}

@@ -12,7 +12,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small Three-Layer Decomposition of the Riemann Zeros}
-\fancyhead[R]{\small Three Layer Decomposition}
+\fancyhead[R]{\small Three-Layer Decomposition}
 \fancyfoot[C]{\thepage}
 
 \newtheorem{observation}{Observation}
@@ -52,6 +52,8 @@ density & $\langle N(T)\rangle$ & smooth analysis (no arithmetic) \\
 
 The two load-bearing claims are that the positions are prime-governed and the spacings are not. We establish both, and then note they are the same statement.
 
+Tier labels follow the corpus convention: T1 = machine-verified (reproducible by running the cited code), T2 = proved, T3 = numerically verified at finite scale (not theorem-level), T4 = explicitly falsified. The spacing-blindness result of \S3 is a finite-scale perturbation measurement and is tiered T3 accordingly.
+
 \section{Positions are owned by the primes (T1)}
 
 The Riemann--von Mangoldt explicit formula gives the oscillatory part of the count as a sum over prime powers,
@@ -83,7 +85,7 @@ $100{,}000$ & $3000$ & $0.840$ & $0.706$ & $\mathbf{+122\sigma}$ \\
 \]
 (primes to $3\times10^2,10^3,3\times10^3,10^4,3\times10^4,10^5$). The residual has lag-1 autocorrelation $0.057$ --- white. An unstructured, monotonically shrinking residual is the signature of a truncated convergent sum (with Gibbs ringing at the step discontinuities of the staircase), not a structural ceiling. We therefore read the limit as full reconstruction: \emph{the primes own the positions entirely}, with no non-prime residual to chase.
 
-\section{Spacings are pure GUE, arithmetic-blind (T2)}
+\section{Spacings are pure GUE, arithmetic-blind (T3)}
 
 We test whether arithmetic, imposed on a self-adjoint operator, can move its \emph{spacing} statistics toward the zeros. Take a GUE core $H_0=(A+A^\dagger)/2$ and add a prime-log diagonal at strength $\varepsilon$, comparing the spacing-histogram distance to the true zeros against the noise band of pure-GUE draws.
 

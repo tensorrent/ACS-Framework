@@ -223,12 +223,20 @@ python3 code/issue7/verify_issue7_pipeline.py
 \section{Limitations}
 
 \begin{itemize}[leftmargin=1.4em,itemsep=2pt]
-  \item Float NumPy Section~9 scripts remain single-platform
-        anchored.\footnote{Float NumPy Section~9 scripts (exact
-        diagonalisation / commutator norms) are anchored to one machine
+  \item Float NumPy Section~9 scripts are byte-anchored to a single
+        platform; their \emph{verdicts} are now cross-platform
+        confirmed.\footnote{Float NumPy Section~9 scripts (exact
+        diagonalisation / commutator norms) are byte-anchored to one machine
         (macOS~$15.3.2$ arm64, Python~$3.14.6$, NumPy~$2.5.0$), with
         same-machine byte-identical reruns recorded in
-        \texttt{docs/issue7\_verification\_report.json}.
+        \texttt{docs/issue7\_verification\_report.json}.  A second-platform
+        replication (Linux x86\_64, Python~$3.11$, NumPy~$2.4$;
+        \texttt{docs/issue7\_linux\_replication/}) reproduces every
+        decision-level output exactly (all \texttt{supports\_chain}
+        booleans and support rates identical; float values agree to
+        $\sim\!10^{-12}$), and the exact-arithmetic artifact is
+        byte-identical across the two platforms --- the tolerance-based
+        cross-platform anchor this limitation called for.
         The exact Section~9 kill test and
         \texttt{integer\_acs.py} use integer/\texttt{Fraction} on the
         decision path; for those diagnostics, cross-machine IEEE float

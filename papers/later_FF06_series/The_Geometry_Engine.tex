@@ -37,7 +37,7 @@ We develop a representation in which a number's \emph{multiplicative} structure 
 box whose sides are primes and whose dimensions are exponents --- and operations that conserve volume are
 answered directly from the shape without computing the value. A 91-line reference engine implements this;
 all twelve of its operations are verified exact against integer ground truth. Benchmarked head-to-head
-against standard methods across ten ontologies of applied mathematics and computer science, the engine wins
+against standard methods across eleven benchmark tasks spanning nine ontologies of applied mathematics and computer science, the engine wins
 decisively where the standard method is forced to flatten rich multiplicative structure --- multiplicative
 functions ($81\times$), the prime structure of binomial coefficients without expansion ($13\times$),
 exact rationals, canonical fingerprinting --- and loses, flatly reported, where the query needs only partial
@@ -268,12 +268,17 @@ and the advantage map and seam law are measured rather than asserted. Reconstruc
 approximate (Gibbs ringing, finite zero count, a $\sim\!5\%$ staircase band). A Rust/OmniForge transcription
 is pending: the verification environment lacked a Rust toolchain, so all artifacts are a Python reference
 implementation plus a locked specification, and no unverified Rust was produced. Falsified claims are
-retained: Mersenne-as-prime, single-deletion-as-primality, geometry-beats-division, the gap-pruning
-heuristic ($-0.029$), and the primorial-champions sub-claim.
+retained: \emph{Mersenne-as-prime} (treating $2^p-1$, $p$ prime, as prime inside the engine),
+\emph{single-deletion-as-primality} (a one-deletion test proposed as a primality criterion), and
+\emph{geometry-beats-division} (the claim that shape operations outrun trial division on its home
+ground) --- all three killed in the engine's pre-registered test rounds, whose run artifacts predate
+this bundle and are not committed here; the \emph{gap-pruning heuristic} (tested in \S6 at
+correlation $-0.029$ and discarded); and the \emph{primorial-champions} sub-claim (killed by direct
+measurement --- a primorial compresses by only $1.25\times$; see the Process Record).
 
 \vspace{1em}
 \noindent\rule{\linewidth}{0.4pt}\\
-\small Companion to \textit{Colour from Gravity} through \textit{Three Layer Decomposition} (Papers~a--f). Reference engine, harness, and specification accompany this paper.
+\small Companion to \textit{Colour from Gravity} through \textit{Three-Layer Decomposition} (Papers~a--f). Reference engine, harness, and specification accompany this paper.
 SIP License v1.1. Seed \texttt{20260423}.
 
 \end{document}

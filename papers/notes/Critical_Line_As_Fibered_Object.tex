@@ -196,8 +196,9 @@ carry, simultaneously, \emph{real} periodic-orbit amplitudes ($|\!\operatorname{
 $\beta = 2.00$, the zero-face local law). The first pulls to a time-reversal-invariant ($\beta=1$)
 operator, the second to a time-reversal-broken ($\beta=2$) one.
 
-The companion hypercone test (\texttt{test\_conjecture\_hypercone\_projection.py}, branch
-\texttt{claude/torsion-topological-condensation-h6v40k}) supplies the geometry that resolves the
+The companion hypercone test
+(\texttt{code/acs\_codebase/extras/test\_conjecture\_hypercone\_projection.py})
+supplies the geometry that resolves the
 tension: eigenvalue degeneracies of Hermitian families are \emph{cones}, the repulsion exponent
 counts the cone's codimension ($\beta = \mathrm{codim} - 1$), and the chirality direction --- the
 $i$ the J-map introduces --- is exactly what buys the third dimension (measured on the zeros:
@@ -226,7 +227,8 @@ $\mathrm{Fix}(\iota)$ before the twist, cannot isolate the ladder before splitti
   \text{faces}\ \prec\ \text{ladder}\ \prec\ \text{twist}\ \prec\ \text{involution}.
 \]
 No permutation composes into a defined object; the other orders are undefined, not merely
-worse.\footnote{The cumulative folk tale is the exact shape: each piece is swallowed \emph{to
+worse.\footnote{The cumulative-tale pattern (\emph{This Is the House That Jack Built}; cf.\
+Aarne--Thompson--Uther chain-tale types) is the exact shape: each piece is added \emph{to
 catch} the previous one, the order cannot be permuted, the cascade is deterministic, and it has a
 terminal state. ``Why is it this way'' is answered by pointing back one dependency edge.} The
 bundle MANIFEST lists the pieces as a flat, commutative table; the seam is the same pieces under
@@ -251,8 +253,9 @@ Kept first-class.
         non-circular $L$-zeros hardened the rung-1 twist ($R=0.99$) and confirmed the parity law
         to rung~3, but the rung-2 \emph{phase} magnitude stayed at the demodulation noise floor
         ($\sim\!0.26$) and did \emph{not} improve --- the $p^2$-line phase is below resolution at
-        accessible heights (T3). Reported as a negative, not spun. Rung-1 twist, quadratic and
-        rung-3 signs, the parity law, and the seam density law are decisive (T1).
+        accessible heights (T3). Reported as an unresolved negative. The quadratic and
+        rung-3 \emph{signs} and the parity law are exact (T1); the rung-1 twist ($R=0.99$)
+        and the seam density law ($\sim\!0.99$ coupling) are statistical fits (T3).
   \item \textbf{Tower depth is background-limited.} The $p^{-k/2}$ ladder is resolved to rung~3
         only for small primes ($p\le 7$ at $10^5$ zeros); the cube line drowns beyond, and rung~4
         is not attempted. The repetition tower is confirmed to depth~3 where measurable, no deeper.
@@ -272,5 +275,16 @@ exact miniature + GOE/GUE/chiral discriminator),
 \texttt{data\_zeros/generate\_more\_lzeros.py} (the non-circular $L$-zero generator);
 \texttt{code/acs\_codebase/src/paper\_c/er\_epr\_algebraic.py} (non-traversability). Nothing here
 proves RH; negatives are kept first-class.
+
+\section*{Companion documents (repo paths)}
+Nicknames used above resolve to repository files as follows:
+\emph{Paper~B$'$} $=$ \texttt{papers/core\_trilogy/Spectral\_Witness\_Refinement.tex};
+\emph{Paper~C} $=$ \texttt{papers/core\_trilogy/Holographic\_Spectral\_Inversion.tex};
+\emph{The Geometry Engine} $=$ \texttt{papers/later\_FF06\_series/The\_Geometry\_Engine.tex};
+\emph{The Reversible Flattening} $=$ \texttt{papers/later\_FF06\_series/The\_Reversible\_Flattening.tex};
+the bundle MANIFEST $=$ \texttt{MANIFEST.md}.
+(Filename note: this file is named \texttt{Critical\_Line\_As\_Fibered\_Object.tex} after the
+superseded ``fibered object'' framing; the seam framing in the text is the current one, and the
+filename is retained for link stability.)
 
 \end{document}

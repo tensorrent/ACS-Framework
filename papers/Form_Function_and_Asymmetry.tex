@@ -45,7 +45,7 @@
 \newcommand{\FuncF}{\boldsymbol{\Phi}}
 \newcommand{\dI}{\,\mathrm{d}}
 \newcommand{\Order}[1]{\mathcal{O}(#1)}
-\renewcommand{\Form}{\mathbf{e}}
+\providecommand{\Form}{\mathbf{e}}
 \providecommand{\Func}{\boldsymbol{\omega}}
 \newcommand{\TE}{\mathrm{TE}}
 
@@ -56,8 +56,7 @@
        and Holographic Resolution in Coupled Nonlinear Systems}
 
 \author{Bradley Wallace\\[0.3em]
-        \small \textit{Independent Researcher}\\[0.2em]
-        \small \texttt{Form, Function, and Asymmetry}}
+        \small \textit{Independent Researcher}}
 
 \date{March 2026}
 
@@ -95,7 +94,7 @@ We show that the ACS structure is realised across four domains:
 (Function) generate curvature through their asymmetric bracket, with
 $T^a = 0$ the ACS vacuum equilibrium reached dynamically, not imposed externally;
 (ii)~\emph{analytic number theory}, where the Riemann Hypothesis
-\emph{implies} stationarity of the prime--zero ACS (Theorem~4.1; the converse,
+\emph{implies} stationarity of the prime--zero ACS (Section~4; the converse,
 Conjecture~T4$'$, is a new approach to RH);
 (iii)~\emph{discrete geometry}, where tensegrity zero-modes correspond
 to gauge freedoms of the lattice gauge theory on the same graph
@@ -452,8 +451,10 @@ $\alpha_4 = \mathbb{E}_\mu[[f,g],[f,g]]/24 + \cdots \neq 0$ generically,
 and by induction on the BCH--Campbell--Dynkin series (convergent for
 $\|\varepsilon\| < \pi$) some $\alpha_n \neq 0$.
 
-In either generic case $\DI(\varepsilon) \neq 0$.  The numerical results in
-Table~1 and the exact integer automaton in Section~\ref{sec:new} confirm this.
+In either generic case $\DI(\varepsilon) \neq 0$.  The numerical results and
+the exact integer automaton in Section~\ref{sec:new} confirm this.
+(The induction step above uses the convergence of the BCH--Campbell--Dynkin
+series in an informal way; see the honest assessment in Section~11.4.)
 \end{proof}
 
 \subsection{The BCH--transfer-entropy morphism}
@@ -1325,7 +1326,7 @@ bracket implies combination frequencies $\gamma_k \pm \gamma_j$ not present in t
 original zero list --- the zeros mixing with \emph{each other} (same-species). This is
 not a resonance with the primes: no direct zero--prime frequency alignment is observed,
 and the difference-tone channel across the prime--zero boundary is tested and falsified
-(cf.\ \emph{Spectral Witness Refinement} \S7.2; Elimination Ledger).
+(cf.\ \emph{Spectral Witness Refinement} \S7.2, \texttt{papers/core\_trilogy/Spectral\_Witness\_Refinement.tex}; Elimination Ledger, \texttt{docs/Elimination\_Ledger.md}).
 
 The cross-species relation is of a different kind. The primes form the structural
 boundary (the instrument), but the explicit formula $\psi(x)$ does not make the two
@@ -1522,7 +1523,7 @@ spinor bundle.
 
 \subsection{Selection principle: why $\mathfrak{sl}(3,\mathbb{R})$ and no other}
 
-\begin{proposition}[Closure attractor uniqueness]\label{prop:selection}
+\begin{proposition}[Closure attractor selection (numerical)]\label{prop:selection}
 Define the closure defect functional on $k$-dimensional subspaces $V \subset \mathfrak{sl}(4,\mathbb{R})$:
 \[
   \mathcal{D}(V) = \frac{\sum_{i<j} \| [T_i, T_j] - \Pi_V([T_i, T_j]) \|}{\sum_{i<j} \|[T_i, T_j]\|},
@@ -1539,8 +1540,10 @@ Then among 8-dimensional subspaces of $\mathfrak{sl}(4,\mathbb{R})$:
     $\eps \leq 0.01$ and below $0.15$ for $\eps \leq 0.05$.
 \end{enumerate}
 The subalgebra $\mathfrak{sl}(3,\mathbb{R})$ is therefore the unique
-closure attractor among 8-dimensional subspaces of $\mathfrak{sl}(4,\mathbb{R})$:
-no competing structure was observed.
+closure attractor among the \emph{sampled} 8-dimensional subspaces of
+$\mathfrak{sl}(4,\mathbb{R})$: no competing structure was observed.  (This is a
+numerical selection result over 100 samples, not a classification theorem;
+the 50{,}000-sample confirmation is reported in Paper~A.)
 \end{proposition}
 
 \begin{proof}
@@ -1585,11 +1588,16 @@ closing, all generators skew-Hermitian, and all brackets traceless.
 \end{proposition}
 
 \begin{proof}
-Exhaustive scan over the parameter space
+The ``only if'' direction of condition (ii) is algebraic: for real $T$,
+$\mathrm{sym}(T)$ is Hermitian and $\mathrm{anti}(T)$ is skew-Hermitian, so
+$J(T)^\dagger = \bar{\alpha}\,\mathrm{sym}(T) - \bar{\beta}\,\mathrm{anti}(T)$,
+and skew-Hermiticity $J(T)^\dagger = -J(T)$ for all $T$ forces
+$\bar{\alpha} = -\alpha$ and $\bar{\beta} = \beta$, i.e.\
+$\alpha \in i\mathbb{R}$, $\beta \in \mathbb{R}$.  The ``if'' direction and
+closure preservation are verified computationally: a grid scan over
 $(\mathrm{Re}\,\alpha, \mathrm{Im}\,\alpha, \mathrm{Re}\,\beta, \mathrm{Im}\,\beta)
-\in [-2,2]^4$ at resolution $0.5$.  All solutions satisfying both constraints
-have $\alpha \in i\mathbb{R}$, $\beta \in \mathbb{R}$.  The $28$ bracket
-closures are verified symbolically.
+\in [-2,2]^4$ at resolution $0.5$ confirms both constraints exactly on the
+predicted locus, and the $28$ bracket closures are verified symbolically.
 Script: \texttt{chirality\_uniqueness.py}.
 \end{proof}
 
@@ -1834,7 +1842,7 @@ $\mathfrak{su}(2)_L \times \mathfrak{u}(1)_Y$ from the $O(4)$ fiber after vacuum
 The full SM algebra thus requires \emph{two} geometric sources, not one:
 the Pati--Salam embedding for colour, and the fiber decomposition for the electroweak sector.
 
-Four further claims are required for full 
+Four further claims are required to complete
 Conjecture~\ref{conj:SM}, and all four remain open:
 
 \medskip
@@ -1971,7 +1979,7 @@ on the horizon; incorporating this boundary condition into the ACS
 framework is future work.
 
 \begin{remark}[Correction of the naive formula]
-The previous Postulate~10.2 used the weight-fraction formula
+An earlier draft's weight-fraction postulate (superseded; not part of this document) used the formula
 $\DI(\gamma) = |1-\gamma^2|/(1+\gamma^2)$, giving $\gamma = 1$ --- off by
 a factor of $\sim\!4$.  The error was treating $\Gamma$ and $K$ as continuous
 fields with quadratic norm weighting, ignoring both the Lie bracket $[\Gamma, K]$
@@ -2217,7 +2225,7 @@ $[x^2, |y|]\psi = x^2|y|\psi - |y|x^2\psi \neq 0$ in general,
 confirming the non-Abelian structure.
 \end{proof}
 
-\section{Exact Symbolic Verification of Lemma~2.9}
+\section{Exact Symbolic Verification of the BCH--TE Morphism (Lemma~\ref{lem:bch-te})}
 \label{app:exact}
 
 We implemented the continuous‑time TE definition in the symbolic algebra
@@ -2252,7 +2260,7 @@ No standard IEEE~754 double-precision floating point was used in any
 result reported in this paper, except where explicitly noted.
 
 \begin{itemize}[noitemsep]
-  \item \textbf{Coupled oscillator simulations (Section~2.3):}
+  \item \textbf{Coupled oscillator simulations (archived earlier-draft experiment; no corresponding section in this version):}
     $\omega_1 = 1.0$, $\omega_2 = \sqrt{2}$,
     initial conditions $(x_0, \dot{x}_0, y_0, \dot{y}_0) = (1, 0, 0.5, 0.3)$,
     integrated via \texttt{scipy.integrate.odeint} with step $\Delta t = 0.01$,
@@ -2298,7 +2306,7 @@ result reported in this paper, except where explicitly noted.
     \emph{Scaling to $N = 200$ zeros and $p \leq 15 \times 10^6$ is planned;
     the results reported here use the smaller sample.}
 
-  \item \textbf{Lemma~2.9 symbolic verification (Appendix~B):}
+  \item \textbf{BCH--TE morphism symbolic verification (Lemma~\ref{lem:bch-te}, Appendix~B):}
     Generic polynomial vector fields $f = (ax^2, by)$, $g = (cx, dy^2)$
     on $\mathbb{R}^2$.  Cartan formula, bracket antisymmetry, and factor-of-2
     cancellation verified symbolically over $\mathbb{Q}[a,b,c,d]$ with all

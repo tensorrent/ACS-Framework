@@ -39,7 +39,7 @@ The prime-resonance witness of the shuffle-knife study is a scalar built from th
 \qquad
 P(f) \;=\; \frac1N\Bigl\lvert\,\sum_{j=1}^{N} e^{-i f \gamma_j}\,\Bigr\rvert^{2},
 \end{equation}
-summed here over $p\in\{2,3,5,7,11,13\}$, with $\gamma_1<\dots<\gamma_N$ the ordinates of the nontrivial zeros. The knife showed that $\mathcal P$ collapses under a marginal-matched permutation of the spacings $s_i=\gamma_{i+1}-\gamma_i$: the signal is destroyed when the \emph{order} of the spacings is destroyed. A natural but unguarded reading of that collapse --- one we recorded in an internal strip-mine synthesis --- is that the prime signal is inaccessible to any two-point statistic and must reside in higher-order phase coherence, so that recovering it (the ``converse machine'' of the analogous Fan--Wan lesson) would require a genuinely new, higher-order instrument.
+summed here over $p\in\{2,3,5,7,11,13\}$, with $\gamma_1<\dots<\gamma_N$ the ordinates of the nontrivial zeros. The knife showed that $\mathcal P$ collapses under a marginal-matched permutation of the spacings $s_i=\gamma_{i+1}-\gamma_i$: the signal is destroyed when the \emph{order} of the spacings is destroyed. A natural but unguarded reading of that collapse --- recorded in a working synthesis during the elimination campaign (see \texttt{docs/Elimination\_Ledger.md}) --- is that the prime signal is inaccessible to any two-point statistic and must reside in higher-order phase coherence, so that recovering it would require a genuinely new, higher-order instrument (a ``converse machine'': an instrument built to detect exactly the structure a destructive test showed was being destroyed).
 
 That reading conflates two different two-point objects. Expanding \eqref{eq:power},
 \begin{equation}\label{eq:pair}
@@ -58,7 +58,7 @@ $\mathcal P$ is a linear functional of $\rho_2$ alone; hence any transformation 
 
 \section{Method}\label{sec:method}
 
-All measurements reuse the functional \eqref{eq:power} verbatim from the shuffle-knife suite (canonical seed $20260423$) and the first $N$ ordinates of the Riemann zeros. We evaluate the following, each a distinct answer to ``two-point of what?'':
+All measurements use the functional \eqref{eq:power} --- the complex-exponential power form of the shuffle-knife suite's prime-resonance witness (FF06e uses the cosine form $\langle\cos(\gamma\log p)\rangle^2$ over $p \le 29$; \eqref{eq:power} is its coherent-power generalisation, and the prime set here is $p \le 13$) --- with the canonical seed $20260423$ and the first $N$ ordinates of the Riemann zeros. We evaluate the following, each a distinct answer to ``two-point of what?'':
 \begin{description}[leftmargin=1.6em,itemsep=2pt]
   \item[Baseline.] $\mathcal P$ on the ordered zeros.
   \item[Spacing floor.] $\mathcal P$ after a random permutation of $\{s_i\}$ (one-point spacing distribution only). Averaged over $300$ permutations.
@@ -145,6 +145,6 @@ The raw peak $\lvert\sum_j e^{-i(\log2)\gamma_j}\rvert^2$ grows faster than $N$ 
 
 \vspace{1em}
 \noindent\rule{\linewidth}{0.4pt}\\
-\small Companion to \textit{Spectral Rigidity and Shuffled Spacing Discriminant} and to \textit{Riemann Spectral Critical Line}. All measurements use the real first $N$ Riemann zeros and the canonical seed $20260423$; the functional \eqref{eq:power} is the shuffle-knife prime-resonance witness reused verbatim, and the reconstruction/sweep are reproducible standalone. Nothing here proves the Riemann Hypothesis or constructs a Hilbert--P\'olya operator; ``carrier'' means ``the two-point object the prime-resonance functional is a functional of,'' identified and calibrated. SIP License v1.1.
+\small Companion to \textit{Spectral Rigidity and Shuffled Spacing Discriminant} and to \textit{Riemann Spectral Critical Line}. All measurements use the real first $N$ Riemann zeros and the canonical seed $20260423$; the functional \eqref{eq:power} is the coherent-power generalisation of the shuffle-knife prime-resonance witness (cosine form, $p \le 29$, in FF06e; complex-exponential form, $p \le 13$, here), and the reconstruction/sweep are reproducible standalone. Nothing here proves the Riemann Hypothesis or constructs a Hilbert--P\'olya operator; ``carrier'' means ``the two-point object the prime-resonance functional is a functional of,'' identified and calibrated. SIP License v1.1.
 
 \end{document}

@@ -16,7 +16,7 @@
 | FF06-N3 | Dynamical Transition Operators over Prime Gap Ensembles on (Z/mZ)* | Number theory / operator | 8 | Note |
 | FF06b' | Spectral Witness Survival and the Character of the Transport Obstruction | Number theory + bridge | 13 | New |
 | FF06e | Spectral Rigidity and Shuffled Spacing Discriminant | Methodology + zeros | 4 | New |
-| FF06f | Density, Positions, Spacings (three-layer decomposition) | Number theory | 4 | New |
+| FF06f | Prime carrier position form factor (`papers/methodology/Prime_Carrier_Position_Form_Factor.tex`); the three-layer decomposition is the separate `papers/later_FF06_series/Three_Layer_Decomposition.tex` | Number theory | 4 | New |
 | FF06g | Form/Function Relativity: The Reference Frame Is the Perspective | Methodology + zeros | 4 | New |
 | AISO | Full-Stack Design Invariables + TENT v10 | Engineering / trust | — | Living |
 
@@ -63,7 +63,7 @@
 | tan β (bi-doublet VEV ratio) | (0, ∞) | **gauge-protected flat direction** — cannot be fixed perturbatively |
 | v_R (right-handed breaking scale) | unconstrained | sets proton decay / heavy boson masses |
 | v (EW VEV) | 246.22 GeV | calibration (measured) |
-| Free-parameter count | **4 free + 2 calibration = 6** | down from SM's 19+ |
+| Free-parameter count | **6–7 inputs (4–5 free + 2 calibration)** | down from SM's 19+; row-level bookkeeping differs between Paper A's ledger (6) and the skill module's (7) — see the §4.2 count note there |
 | Claim status | proven / numerical / conjecture / falsified | moves between papers as results sharpen or die |
 
 **The pattern:** framework = Form (constant); each domain = a Function realized within it. The corpus is itself a Form/Function object.
@@ -114,16 +114,16 @@
 | F-11 | CW 6→5 parameter reduction | tan β gauge-protected flat direction | RG-invariance + multiplicative QCD + β-indep thresholds | FF06a |
 | F-12 | "115-dim subalgebra" | turned out gl(12) on proper saturation | re-computation | framework |
 | F-13 | N3 uniform-X conjecture | falsified in tested range | computation | N3 |
-| F-14 (this session) | acid-to-water: assembly order selects outcome | greedy jams ~5.5 regardless of order | packing sim | session |
-| F-15 (this session) | order-asymmetry as stable signed lever | sign oscillates / decays with N | scaling | session |
-| F-16 (this session) | shell-commensuration of the asymmetry | crossings not at centered-hex numbers | computation | session |
-| F-17 (this session) | sound & light = two octaves of one EM medium | 4/4 pre-registered tests fail (octave, speed, vacuum, v² law) | physics | session |
-| F-18 (this session) | particle/wave = infinite Mandelbrot self-similarity | flower/snowflake are generative w/ characteristic scale | phyllotaxis test | session |
-| F-19 (this session) | "same gap": central # residual = Higgs quartic residual | charge (θ cancels) vs coupling (magnitude) | computation | FF06b' |
-| F-20 (this session) | quartic residual is high-scale boundary | λ crosses λ_ACS once near EW (~130–180 GeV), runs down | 1-loop RGE | FF06b'/test10 |
-| F-21 (this session) | H = symmetrized duality | balanced involutions break GUE; only H-commuting one preserves | involution search | session |
-| F-22 (this session) | H via arithmetic diagonal perturbation | cosmetic when weak, breaks GUE when strong; no selection regime | spacing test | FF06f |
-| F-23 (this session) | lag-1 beyond-GUE | gap 0.050 inside 0.08 apparatus band (dual-reference) | M=3200 extrapolation | FF06b'/test09 |
+| F-14 (2026-06-06 kill campaign) | acid-to-water: assembly order selects outcome | greedy jams ~5.5 regardless of order | packing sim | session |
+| F-15 (2026-06-06 kill campaign) | order-asymmetry as stable signed lever | sign oscillates / decays with N | scaling | session |
+| F-16 (2026-06-06 kill campaign) | shell-commensuration of the asymmetry | crossings not at centered-hex numbers | computation | session |
+| F-17 (2026-06-06 kill campaign) | sound & light = two octaves of one EM medium | 4/4 pre-registered tests fail (octave, speed, vacuum, v² law) | physics | session |
+| F-18 (2026-06-06 kill campaign) | particle/wave = infinite Mandelbrot self-similarity | flower/snowflake are generative w/ characteristic scale | phyllotaxis test | session |
+| F-19 (2026-06-06 kill campaign) | "same gap": central # residual = Higgs quartic residual | charge (θ cancels) vs coupling (magnitude) | computation | FF06b' |
+| F-20 (2026-06-06 kill campaign) | quartic residual is high-scale boundary | λ crosses λ_ACS once near EW (~130–180 GeV), runs down | 1-loop RGE | FF06b'/test10 |
+| F-21 (2026-06-06 kill campaign) | H = symmetrized duality | balanced involutions break GUE; only H-commuting one preserves | involution search | session |
+| F-22 (2026-06-06 kill campaign) | H via arithmetic diagonal perturbation | cosmetic when weak, breaks GUE when strong; no selection regime | spacing test | FF06f |
+| F-23 (2026-06-06 kill campaign) | lag-1 beyond-GUE | gap 0.050 inside 0.08 apparatus band (dual-reference) | M=3200 extrapolation | FF06b'/test09 |
 
 ---
 
@@ -138,7 +138,7 @@
 | O-5 | Full SM from GL(4) fiber | conceptual breakthrough | complete derivation |
 | O-6 | ER=EPR correspondence | conceptual breakthrough | holographic interpretation |
 | O-7 | Barbero–Immirzi physical value 0.2375 | external Chern–Simons computation | γ from first principles (0.274 is unconstrained value) |
-| O-8 | Neutrino tension | PS gauge-sector suppression | naive see-saw sin²2θ ≈ 4×10⁻⁶ vs X-ray < 10⁻¹⁰ |
+| O-8 | Neutrino tension — **RESOLVED** (Elimination Ledger Q7: PS gauge suppression clears the X-ray bound; decoupling caveat recorded) | PS gauge-sector suppression | naive see-saw sin²2θ ≈ 4×10⁻⁶ vs X-ray < 10⁻¹⁰ |
 
 ---
 
@@ -174,7 +174,7 @@
      FF06a       FF06b/f    FF06c      AISO         realized in the
         │          │          │          │          constant Form)
    su(3) from   positions  inversion  routing/
-   Palatini     = primes   = c/a-thm  qualia
+   Palatini     = primes   = c/a-theorem (the RG inversion arc, Paper C)  qualia
    6 params    spacings              stack
    (4 free)    = GUE
 ```
@@ -183,4 +183,4 @@
 
 ---
 
-*Map built from the project folder. Tier labels: 1 = machine-verified, 2 = proved in paper, 3 = numerically verified (not theorem), 4 = explicitly falsified. Failures F-14 through F-23 are from the current session; all others are from the manuscripts as written.*
+*Map built from the project folder. Tier labels: 1 = machine-verified, 2 = proved in paper, 3 = numerically verified (not theorem), 4 = explicitly falsified. Failures F-14 through F-23 are from the 2026-06-06 kill campaign; verdict details in docs/Elimination_Ledger.md (KILLS LOGGED 2026-06-06 and OOS01 sections); all others are from the manuscripts as written.*

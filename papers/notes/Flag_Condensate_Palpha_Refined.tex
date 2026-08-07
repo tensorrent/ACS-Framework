@@ -64,7 +64,7 @@ On the stated set, parametric $S(A,Z)$ LOO RMS $=0.2862$ reduces
 residuals most among \emph{non-tautological} protocols (vs throat+WS
 global-$S$ RMS $=0.8247$).  The eigenmode raises Pearson $r$ to
 $+0.9676$ but leaves global-$S$ RMS essentially unchanged ($0.8257$).
-RC1 scope: documented proxies --- not uniqueness.
+RC1 (Release Candidate 1) scope: documented proxies --- not uniqueness.
 \end{abstract}
 
 \vspace{0.1em}
@@ -78,7 +78,7 @@ listed isotope-resolved $S$ and self-consistent WS+Coulomb eigenmodes as
 open.  This note implements both as comparison channels on the unchanged
 table of~\cite{NuclearDecay2026}.
 
-\begin{remark}[RC1 scope]
+\begin{remark}[RC1 scope (RC1 = Release Candidate 1, the bundle's first consolidated claim-discipline pass)]
 Per-isotope $S_i$ zeros that isotope's residual by construction and is
 reported only as a diagnostic.  Predictive claims use parametric $S$ with
 LOO, or Channel~B with one global $S$.  No uniqueness of many-body
@@ -97,7 +97,8 @@ literally audio production.  In the metaphor, one global spectroscopic
 factor $S$ behaves as a master fader on $P_{\mathrm{model}}$; parametric
 $S(A,Z)$ is clip-level automation fit per isotope; Dirichlet at $R$
 mutes the interior flag lane past the throat wall, whereas Channel~C
-routes a Gamow send into $[R,b]$.
+imposes an outgoing (Gamow) boundary condition on $[R,b]$ --- in the
+metaphor, a ``Gamow send.''
 
 \begin{figure}[H]
 \centering
@@ -351,11 +352,16 @@ stated 14-isotope set.  LOO applies only to parametric $S$.}
 flat Gaussian & $-0.3905$ & $+0.8882$ & $1.7705$ & $0.8220$ / --- \\
 throat + WS & $-0.4607$ & $+0.8875$ & $1.7099$ & $0.8247$ / --- \\
 refined eigenmode & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
-Gamow outgoing & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
+Gamow outgoing$^{*}$ & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
 parametric $S(A,Z)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.2862$ \\
 parametric $S(R)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.4695$ \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.3em}
+{\footnotesize $^{*}$Identical to the refined-eigenmode row by construction:
+under the $E_0 = Q_\alpha$ protocol Channel~C reproduces Channel~B's interior
+metrics exactly (Section~8).}
 \end{table}
 
 \begin{remark}[Which channel reduces residuals most?]
@@ -418,17 +424,17 @@ parametric RMS as documented.  Absolute uniqueness is not claimed.
   ACS Theoretical Physics Working Group,
   \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
   ACS Framework note (2026),
-  \texttt{flag\_condensate\_nuclear\_decay.tex}.
+  \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
 \bibitem{PalphaOverlap2026}
   ACS Theoretical Physics Working Group,
   \emph{Standing-Wave Overlap Proxy for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{flag\_condensate\_palpha\_overlap.tex}.
+  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
 \bibitem{PalphaThroat2026}
   ACS Theoretical Physics Working Group,
   \emph{Throat-Geometry Overlap for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{flag\_condensate\_palpha\_throat\_overlap.tex}.
+  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Throat\_Overlap.tex}.
 \end{thebibliography}
 
 \end{document}

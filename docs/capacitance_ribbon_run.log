@@ -1,0 +1,403 @@
+Möbius-ribbon capacitance sequel — as-implemented model outputs
+R = hbar/(2 m_e c) = 1.930796e-13 m
+CODATA-style alpha^{-1} reference = 137.035999178
+
+Demo a/R = 0.05
+  annulus:    C=1.768098e-24 F   alpha^{-1}=3.037587
+  conformal:  C=3.174101e-24 F   alpha^{-1}=1.692054
+  BIE:        C=1.441075e-23 F   alpha^{-1}=0.372691
+
+Comparison table (alpha^{-1}):
+         a/R       annulus     conformal           BIE
+  1.0000e-04      6.144891      3.245732             —
+  1.7113e-04      5.876256      3.111415             —
+  2.9286e-04      5.607621      2.977097             —
+  5.0119e-04      5.338986      2.842780             —
+  8.5770e-04      5.070351      2.708462             —
+  1.4678e-03      4.801716      2.574145             —
+  2.5119e-03      4.533081      2.439827             —
+  3.1623e-03      4.417952      2.382263             —
+  4.2987e-03      4.264446      2.305510             —
+  4.7068e-03      4.219093      2.282833             —
+  7.0057e-03      4.020233      2.183403      0.418692
+  7.3564e-03      3.995812      2.171192      0.418186
+  1.0428e-02      3.821373      2.083972      0.414158
+  1.2589e-02      3.727177      2.036873      0.411553
+  1.5521e-02      3.622514      1.984541      0.408132
+  2.1544e-02      3.458542      1.902553      0.401168
+  2.3101e-02      3.423654      1.885108      0.399367
+  3.4385e-02      3.224794      1.785672      0.386443
+  3.6869e-02      3.189907      1.768226      0.383673
+  5.1179e-02      3.025935      1.686227      0.368599
+  6.3096e-02      2.921272      1.633881      0.357432
+  7.6176e-02      2.827075      1.586764      0.346406
+  1.0798e-01      2.652637      1.499484      0.323725
+  1.1338e-01      2.628216      1.487261      0.320312
+  1.6876e-01      2.429356      1.387668      0.290826
+  1.8478e-01      2.384002      1.364932      0.283751
+  2.5119e-01      2.230496      1.287878             —
+  3.1623e-01      2.115367      1.229930             —
+
+Best on scanned grid vs CODATA:
+  annulus: {'status': 'ok', 'a_over_R': 0.0001, 'alpha_inv': 6.144890956828009, 'abs_err_vs_codata': 130.8911082207621, 'rel_err_vs_codata': 0.9551585642188472, 'note': 'best on scanned grid only; annulus/conformal analytic match to CODATA requires extreme a/R outside BIE-valid regime'}
+  conformal: {'status': 'ok', 'a_over_R': 0.0001, 'alpha_inv': 3.2457322734498244, 'abs_err_vs_codata': 133.7902669041403, 'rel_err_vs_codata': 0.9763147472713097, 'note': 'best on scanned grid only; annulus/conformal analytic match to CODATA requires extreme a/R outside BIE-valid regime'}
+  bie: {'status': 'ok', 'a_over_R': 0.007005748547909681, 'alpha_inv': 0.41869239570774963, 'abs_err_vs_codata': 136.61730678188238, 'rel_err_vs_codata': 0.9969446539725292, 'note': 'best on BIE-valid aspect window only'}
+
+Analytic CODATA match (annulus / conformal):
+  annulus: {'a_over_R': 2.0390502990896787e-118, 'alpha_inv': 137.03599917759013, 'note': 'annulus closed form (ln(8R/a)+1)/2 matches CODATA at this extreme a/R=2.039050e-118; not a geometric prediction of a'}
+  conformal: {'status': 'ok', 'a_over_R': 3.82385490596299e-237, 'C_F': 3.919226819898165e-26, 'alpha_inv': 137.03599917759016, 'note': 'root of conformal model vs CODATA; typically extreme a/R'}
+
+Wrote /home/user/ACS-Framework/docs/capacitance_ribbon_results.json
+{
+  "scope": {
+    "claim_discipline": "RC1 as-implemented model outputs; not a uniqueness proof of alpha",
+    "inputs": {
+      "R": "hbar/(2 m_e c) [spin-radius scale input]",
+      "charge_split": "e/2 per double-cover sheet",
+      "aspect": "a/R (ribbon half-width / R) or conformal modulus from strip geometry"
+    },
+    "outputs": {
+      "C": "capacitance in farads under stated model",
+      "alpha_inv": "from (e/2)^2/(2C) = m_e c^2 combined with alpha = e^2/(4 pi eps0 hbar c)"
+    },
+    "reference_alpha_inv": 137.03599917759013
+  },
+  "constants": {
+    "eps0": 8.8541878188e-12,
+    "hbar": 1.0545718176461565e-34,
+    "m_e": 9.1093837139e-31,
+    "c": 299792458.0,
+    "e": 1.602176634e-19,
+    "R_spin_m": 1.9307963371761877e-13,
+    "alpha_inv_codata": 137.03599917759013,
+    "precision": "float64 / scipy.constants"
+  },
+  "formulas": {
+    "annulus_C": "2*pi*eps0*R / (ln(8R/a) + 1)",
+    "conformal_annulus_C": "strip L=cover*2*pi*R, W=2a; rho=exp(2a/(cover*R)); R_m=cover*R; a_eff=(r_out-r_in)/2; C=2*pi*eps0*R_m/(ln(8 R_m/a_eff)+1)",
+    "bie_mobius_C": "constant-panel single-layer BIE on M\u00f6bius ribbon about (2,1) centerline; C=Q/V at V=1 with regularized self-panel terms",
+    "alpha_from_C": "pi*eps0*R/C  <=>  (e/2)^2/(2C)=m_e c^2",
+    "centerline": "r(t)=((R+a cos t)cos 2t, (R+a cos t)sin 2t, a sin t), t in [0,2pi)"
+  },
+  "demo_point": {
+    "a_over_R": 0.05,
+    "C_annulus_F": 1.7680980976103404e-24,
+    "C_conformal_F": 3.1741014016267638e-24,
+    "C_bie_F": 1.441074957380683e-23,
+    "alpha_inv_annulus": 3.0375869076169137,
+    "alpha_inv_conformal": 1.6920542078242897,
+    "alpha_inv_bie": 0.37269065048812533,
+    "conformal_diagnostics": {
+      "L_over_R": 12.566370614359172,
+      "W_over_R": 0.1,
+      "rho": 1.0512710963760241,
+      "R_m_over_R": 2.0,
+      "a_eff_over_R": 0.05000520849609617,
+      "modulus_ln_rho_over_2pi": 0.007957747154594767
+    }
+  },
+  "comparison_table": [
+    {
+      "a_over_R": 0.0001,
+      "alpha_inv_annulus": 6.144890956828009,
+      "alpha_inv_conformal": 3.2457322734498244,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 8.740190298602015e-25,
+      "C_conformal_F": 1.6547118431844892e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0001711328304161781,
+      "alpha_inv_annulus": 5.876256029312037,
+      "alpha_inv_conformal": 3.1114148094909377,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 9.139750899030046e-25,
+      "C_conformal_F": 1.726144523160593e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.00029286445646252375,
+      "alpha_inv_annulus": 5.607621101796066,
+      "alpha_inv_conformal": 2.977097345144586,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 9.577593662602031e-25,
+      "C_conformal_F": 1.804022848444247e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0005011872336272725,
+      "alpha_inv_annulus": 5.338986174280094,
+      "alpha_inv_conformal": 2.8427798796634844,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.0059497172996017e-24,
+      "C_conformal_F": 1.8892604633600077e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0008576958985908946,
+      "alpha_inv_annulus": 5.070351246764121,
+      "alpha_inv_conformal": 2.7084624108591067,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.059246464652944e-24,
+      "C_conformal_F": 1.9829522503803088e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0014677992676220704,
+      "alpha_inv_annulus": 4.801716319248149,
+      "alpha_inv_conformal": 2.5741449323220333,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.1185066496232524e-24,
+      "C_conformal_F": 2.0864216172314747e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0025118864315095794,
+      "alpha_inv_annulus": 4.5330813917321775,
+      "alpha_inv_conformal": 2.439827425281355,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.1847904700054976e-24,
+      "C_conformal_F": 2.2012834092412085e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0031622776601683794,
+      "alpha_inv_annulus": 4.417952137082475,
+      "alpha_inv_conformal": 2.382262759514566,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.2156654182836566e-24,
+      "C_conformal_F": 2.254474915175999e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.004298662347082277,
+      "alpha_inv_annulus": 4.264446464216205,
+      "alpha_inv_conformal": 2.3055098347637646,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.2594252683790398e-24,
+      "C_conformal_F": 2.329528832061503e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.0047068165596092495,
+      "alpha_inv_annulus": 4.219092515414808,
+      "alpha_inv_conformal": 2.2828328220753273,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 1.2729637032278981e-24,
+      "C_conformal_F": 2.3526697096465354e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.007005748547909681,
+      "alpha_inv_annulus": 4.02023289374714,
+      "alpha_inv_conformal": 2.1834027307584245,
+      "alpha_inv_bie": 0.41869239570774963,
+      "C_annulus_F": 1.335930473340718e-24,
+      "C_conformal_F": 2.4598080587807833e-24,
+      "C_bie_F": 1.2827440115326016e-23
+    },
+    {
+      "a_over_R": 0.007356422544596414,
+      "alpha_inv_annulus": 3.9958115367002334,
+      "alpha_inv_conformal": 2.1711919997721,
+      "alpha_inv_bie": 0.4181861894073741,
+      "C_annulus_F": 1.3440953316628999e-24,
+      "C_conformal_F": 2.4736419594615696e-24,
+      "C_bie_F": 1.2842967483681412e-23
+    },
+    {
+      "a_over_R": 0.010427538888537678,
+      "alpha_inv_annulus": 3.8213732720794726,
+      "alpha_inv_conformal": 2.083972298539423,
+      "alpha_inv_bie": 0.4141578124825076,
+      "C_annulus_F": 1.4054506718630357e-24,
+      "C_conformal_F": 2.5771703570377096e-24,
+      "C_bie_F": 1.2967886807424117e-23
+    },
+    {
+      "a_over_R": 0.012589254117941675,
+      "alpha_inv_annulus": 3.7271766091842613,
+      "alpha_inv_conformal": 2.0368734488038887,
+      "alpha_inv_bie": 0.4115526823468163,
+      "C_annulus_F": 1.4409705242969415e-24,
+      "C_conformal_F": 2.6367625518597647e-24,
+      "C_bie_F": 1.3049973583108852e-23
+    },
+    {
+      "a_over_R": 0.015520620891311995,
+      "alpha_inv_annulus": 3.622513650411805,
+      "alpha_inv_conformal": 1.9845411110835003,
+      "alpha_inv_bie": 0.4081318433736202,
+      "C_annulus_F": 1.482603559567815e-24,
+      "C_conformal_F": 2.706293965233742e-24,
+      "C_bie_F": 1.3159354556333751e-23
+    },
+    {
+      "a_over_R": 0.021544346900318843,
+      "alpha_inv_annulus": 3.4585416816682892,
+      "alpha_inv_conformal": 1.9025528010044641,
+      "alpha_inv_bie": 0.40116781191066303,
+      "C_annulus_F": 1.5528948692886256e-24,
+      "C_conformal_F": 2.8229185701695223e-24,
+      "C_bie_F": 1.3387793021339326e-23
+    },
+    {
+      "a_over_R": 0.023101297000831605,
+      "alpha_inv_annulus": 3.423654028744137,
+      "alpha_inv_conformal": 1.885108250475078,
+      "alpha_inv_bie": 0.39936672712646687,
+      "C_annulus_F": 1.5687191484864018e-24,
+      "C_conformal_F": 2.8490414973941284e-24,
+      "C_bie_F": 1.3448169984833998e-23
+    },
+    {
+      "a_over_R": 0.03438457306945525,
+      "alpha_inv_annulus": 3.2247944070764696,
+      "alpha_inv_conformal": 1.7856716831863795,
+      "alpha_inv_bie": 0.3864427218773572,
+      "C_annulus_F": 1.6654555158300932e-24,
+      "C_conformal_F": 3.0076926700768932e-24,
+      "C_bie_F": 1.3897924138905176e-23
+    },
+    {
+      "a_over_R": 0.03686945064519577,
+      "alpha_inv_annulus": 3.1899067541523176,
+      "alpha_inv_conformal": 1.76822601241414,
+      "alpha_inv_bie": 0.3836729732590195,
+      "C_annulus_F": 1.683670416288002e-24,
+      "C_conformal_F": 3.0373671662882687e-24,
+      "C_bie_F": 1.3998253739540108e-23
+    },
+    {
+      "a_over_R": 0.05117889550210738,
+      "alpha_inv_annulus": 3.0259347854088023,
+      "alpha_inv_conformal": 1.686226904280061,
+      "alpha_inv_bie": 0.3685986097192953,
+      "C_annulus_F": 1.7749066035995074e-24,
+      "C_conformal_F": 3.1850705376905357e-24,
+      "C_bie_F": 1.4570732203177908e-23
+    },
+    {
+      "a_over_R": 0.0630957344480193,
+      "alpha_inv_annulus": 2.9212718266363455,
+      "alpha_inv_conformal": 1.633881240336915,
+      "alpha_inv_bie": 0.3574318248780044,
+      "C_annulus_F": 1.838497733662674e-24,
+      "C_conformal_F": 3.287112612649904e-24,
+      "C_bie_F": 1.502594693272386e-23
+    },
+    {
+      "a_over_R": 0.07617600310246124,
+      "alpha_inv_annulus": 2.8270751637411347,
+      "alpha_inv_conformal": 1.5867639342723032,
+      "alpha_inv_bie": 0.3464056676307197,
+      "C_annulus_F": 1.899755514662829e-24,
+      "C_conformal_F": 3.384720005718174e-24,
+      "C_bie_F": 1.550422563642621e-23
+    },
+    {
+      "a_over_R": 0.10797751623277094,
+      "alpha_inv_annulus": 2.6526368991203735,
+      "alpha_inv_conformal": 1.4994838070811687,
+      "alpha_inv_bie": 0.3237250689938358,
+      "C_annulus_F": 2.024684054747375e-24,
+      "C_conformal_F": 3.581733665492539e-24,
+      "C_bie_F": 1.6590471814173307e-23
+    },
+    {
+      "a_over_R": 0.11338235012178496,
+      "alpha_inv_annulus": 2.6282155420734665,
+      "alpha_inv_conformal": 1.4872606684643361,
+      "alpha_inv_bie": 0.32031208293857083,
+      "C_annulus_F": 2.043497402213221e-24,
+      "C_conformal_F": 3.611170352692165e-24,
+      "C_bie_F": 1.6767246441070222e-23
+    },
+    {
+      "a_over_R": 0.16876124757881478,
+      "alpha_inv_annulus": 2.4293559204057993,
+      "alpha_inv_conformal": 1.3876681553187729,
+      "alpha_inv_bie": 0.2908257782601818,
+      "C_annulus_F": 2.210771829508791e-24,
+      "C_conformal_F": 3.8703429289618466e-24,
+      "C_bie_F": 1.8467247521224545e-23
+    },
+    {
+      "a_over_R": 0.18478497974222907,
+      "alpha_inv_annulus": 2.3840019716044014,
+      "alpha_inv_conformal": 1.364932199920858,
+      "alpha_inv_bie": 0.28375131458421865,
+      "C_annulus_F": 2.2528301975644332e-24,
+      "C_conformal_F": 3.934812024359123e-24,
+      "C_bie_F": 1.8927671367984018e-23
+    },
+    {
+      "a_over_R": 0.251188643150958,
+      "alpha_inv_annulus": 2.2304962987381316,
+      "alpha_inv_conformal": 1.2878780425086644,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 2.4078729185616493e-24,
+      "C_conformal_F": 4.170233093051129e-24,
+      "C_bie_F": null
+    },
+    {
+      "a_over_R": 0.31622776601683794,
+      "alpha_inv_annulus": 2.1153670440884293,
+      "alpha_inv_conformal": 1.2299295171978022,
+      "alpha_inv_bie": null,
+      "C_annulus_F": 2.5389218611931e-24,
+      "C_conformal_F": 4.366714968285289e-24,
+      "C_bie_F": null
+    }
+  ],
+  "best_on_grid": {
+    "annulus": {
+      "status": "ok",
+      "a_over_R": 0.0001,
+      "alpha_inv": 6.144890956828009,
+      "abs_err_vs_codata": 130.8911082207621,
+      "rel_err_vs_codata": 0.9551585642188472,
+      "note": "best on scanned grid only; annulus/conformal analytic match to CODATA requires extreme a/R outside BIE-valid regime"
+    },
+    "conformal": {
+      "status": "ok",
+      "a_over_R": 0.0001,
+      "alpha_inv": 3.2457322734498244,
+      "abs_err_vs_codata": 133.7902669041403,
+      "rel_err_vs_codata": 0.9763147472713097,
+      "note": "best on scanned grid only; annulus/conformal analytic match to CODATA requires extreme a/R outside BIE-valid regime"
+    },
+    "bie": {
+      "status": "ok",
+      "a_over_R": 0.007005748547909681,
+      "alpha_inv": 0.41869239570774963,
+      "abs_err_vs_codata": 136.61730678188238,
+      "rel_err_vs_codata": 0.9969446539725292,
+      "note": "best on BIE-valid aspect window only"
+    }
+  },
+  "analytic_codata_match": {
+    "annulus": {
+      "a_over_R": 2.0390502990896787e-118,
+      "alpha_inv": 137.03599917759013,
+      "note": "annulus closed form (ln(8R/a)+1)/2 matches CODATA at this extreme a/R=2.039050e-118; not a geometric prediction of a"
+    },
+    "conformal": {
+      "status": "ok",
+      "a_over_R": 3.82385490596299e-237,
+      "C_F": 3.919226819898165e-26,
+      "alpha_inv": 137.03599917759016,
+      "note": "root of conformal model vs CODATA; typically extreme a/R"
+    }
+  },
+  "scan_meta": {
+    "bie_mesh": {
+      "n_u": 40,
+      "n_v": 5
+    },
+    "bie_aspect_window": {
+      "min": 0.005,
+      "max": 0.25
+    }
+  }
+}

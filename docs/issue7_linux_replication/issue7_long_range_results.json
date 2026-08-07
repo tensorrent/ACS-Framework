@@ -1,0 +1,178 @@
+{
+  "sweeps": {
+    "alpha_3": {
+      "model": "long_range_ising",
+      "alpha": 3.0,
+      "settings": {
+        "n_sites": [
+          6,
+          7
+        ],
+        "h_values": [
+          0.5,
+          0.7,
+          0.8999999999999999,
+          1.1,
+          1.2999999999999998,
+          1.5,
+          1.7,
+          1.9,
+          2.0999999999999996,
+          2.3
+        ],
+        "thresholds": [
+          0.01,
+          0.003,
+          0.001
+        ],
+        "t_points": 70,
+        "t_max": 2.8,
+        "j": 1.0
+      },
+      "summary": {
+        "support_cases": 2,
+        "total_cases": 6,
+        "support_rate": 0.3333333333333333
+      },
+      "cases": [
+        {
+          "n_sites": 6,
+          "threshold": 0.01,
+          "corr_gap_xi": -0.6024491117334013,
+          "corr_gap_leak_max": 0.20456966002677948,
+          "corr_gap_leak_mean": 0.520734221455658,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 6,
+          "threshold": 0.003,
+          "corr_gap_xi": -0.6024491117334013,
+          "corr_gap_leak_max": -0.011682740925402581,
+          "corr_gap_leak_mean": 0.19689560310133308,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 6,
+          "threshold": 0.001,
+          "corr_gap_xi": -0.6024491117334013,
+          "corr_gap_leak_max": -0.7012933126440203,
+          "corr_gap_leak_mean": -0.6928274552454203,
+          "supports_chain": true
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.01,
+          "corr_gap_xi": -0.5787181258242907,
+          "corr_gap_leak_max": -0.026334535508158067,
+          "corr_gap_leak_mean": 0.5133888290840487,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.003,
+          "corr_gap_xi": -0.5787181258242907,
+          "corr_gap_leak_max": 0.4984628731259102,
+          "corr_gap_leak_mean": 0.6025680759999008,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.001,
+          "corr_gap_xi": -0.5787181258242907,
+          "corr_gap_leak_max": -0.7137433965953848,
+          "corr_gap_leak_mean": -0.6341945323345914,
+          "supports_chain": true
+        }
+      ]
+    },
+    "alpha_2": {
+      "model": "long_range_ising",
+      "alpha": 2.0,
+      "settings": {
+        "n_sites": [
+          6,
+          7
+        ],
+        "h_values": [
+          0.5,
+          0.7,
+          0.8999999999999999,
+          1.1,
+          1.2999999999999998,
+          1.5,
+          1.7,
+          1.9,
+          2.0999999999999996,
+          2.3
+        ],
+        "thresholds": [
+          0.01,
+          0.003,
+          0.001
+        ],
+        "t_points": 70,
+        "t_max": 2.8,
+        "j": 1.0
+      },
+      "summary": {
+        "support_cases": 3,
+        "total_cases": 6,
+        "support_rate": 0.5
+      },
+      "cases": [
+        {
+          "n_sites": 6,
+          "threshold": 0.01,
+          "corr_gap_xi": -0.5959152611087574,
+          "corr_gap_leak_max": -0.509266231997881,
+          "corr_gap_leak_mean": -0.25536080558007473,
+          "supports_chain": true
+        },
+        {
+          "n_sites": 6,
+          "threshold": 0.003,
+          "corr_gap_xi": -0.5959152611087574,
+          "corr_gap_leak_max": 0.157449619213307,
+          "corr_gap_leak_mean": 0.10491049874255612,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 6,
+          "threshold": 0.001,
+          "corr_gap_xi": -0.5959152611087574,
+          "corr_gap_leak_max": -0.659306052698186,
+          "corr_gap_leak_mean": -0.6924278814934797,
+          "supports_chain": true
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.01,
+          "corr_gap_xi": -0.5728909303278651,
+          "corr_gap_leak_max": -0.1259102792855077,
+          "corr_gap_leak_mean": 0.0028491834381176883,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.003,
+          "corr_gap_xi": -0.5728909303278651,
+          "corr_gap_leak_max": 0.21415285506932852,
+          "corr_gap_leak_mean": 0.1329729070382638,
+          "supports_chain": false
+        },
+        {
+          "n_sites": 7,
+          "threshold": 0.001,
+          "corr_gap_xi": -0.5728909303278651,
+          "corr_gap_leak_max": -0.6657281550370212,
+          "corr_gap_leak_mean": -0.645651730349409,
+          "supports_chain": true
+        }
+      ]
+    }
+  },
+  "meta": {
+    "combined_support_cases": 5,
+    "combined_total_cases": 12
+  }
+}

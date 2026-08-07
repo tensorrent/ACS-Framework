@@ -91,7 +91,7 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\FormF}{\mathbf{F}}
 \newcommand{\FuncF}{\boldsymbol{\Phi}}
-\renewcommand{\Form}{\mathbf{e}}
+\providecommand{\Form}{\mathbf{e}}
 \providecommand{\Func}{\boldsymbol{\omega}}
 \newcommand{\Lie}[2]{[#1,\,#2]}
 
@@ -173,11 +173,11 @@ the emergent volume measures the 3rd-order holonomy.
 
 \noindent\textit{This paper is the third in a trilogy.
 Paper~A~\cite{Wallace2026a} develops the ACS framework and its
-application to gauge theory (57 verification scripts).
+application to gauge theory (with its accompanying verification suite).
 Paper~B~\cite{Wallace2026b} applies the framework to number theory
 and the Riemann Hypothesis.  This paper explores the universal
 structural consequence --- the inversion arc --- and requires only
-the BCH--TE morphism (Lemma~2.5 of~\cite{Wallace2026a}) and the
+the BCH--TE morphism lemma of~\cite{Wallace2026a} and the
 definitions of Form, Function, and $\DI$.}
 
 \medskip\noindent
@@ -214,8 +214,8 @@ formally articulated by Lakatos~\cite{Lakatos1976} as ``proofs and
 refutations.''  Several previously stated claims were narrowed during
 this process: a universal ``$2\pi$ inversion at three steps'' was
 found to be representation-specific; the Wronskian on scalar zero
-modes was found to fail the Leibniz axiom (Paper~B,
-Section~5); a three-class rather than four-class spectral taxonomy
+modes was found to fail the Leibniz axiom (Paper~B, the
+not-a-Poisson-bracket remark in its Section~2); a three-class rather than four-class spectral taxonomy
 emerges from Jordan--Chevalley decomposition (Section~\ref{sec:taxonomy}).
 Each correction tightens rather than weakens the framework.  We
 distinguish throughout between proved theorems, conjectures explicitly
@@ -323,7 +323,7 @@ The information asymmetry has inverted.  The key has become the lock.
 \end{theorem}
 
 \begin{proof}
-The proof follows from the BCH--TE morphism (Lemma~2.5 of~\cite{Wallace2026a}).
+The proof follows from the BCH--TE morphism lemma of~\cite{Wallace2026a}.
 
 \textbf{Step~1 (Role assignment).}
 When $S$ is a solution, let $f = S$ (the outward-flowing operator, Form)
@@ -579,7 +579,8 @@ distinct invariant subspaces.
 The taxonomy is mathematically standard~\cite{Jacobson1979,Bourbaki1989};
 its relevance here is to clarify that the three-fold closure
 $\mathrm{ad}^3 = (16/9)\,\mathrm{ad}$ in $\mathfrak{sl}(4,\mathbb{R})$
-(Theorem~C of Paper~A~\cite{Wallace2026a}) is an algebraic statement
+(the three-fold Cayley--Hamilton saturation established in the torsion-hierarchy
+appendix of Paper~A~\cite{Wallace2026a}) is an algebraic statement
 about the minimal polynomial of $\mathrm{ad}_{T_{B-L}}$ --- not a
 geometric ``$2\pi$ inversion at three steps.''  The latter applies
 only in the elliptic case.
@@ -691,7 +692,8 @@ map.  We flag this as a research direction, not a derived consequence.
 
 \subsection{The unified object}
 
-All five domains (gauge theory, number theory, discrete geometry, renormalisation group, and quantum gravity) are projections of a single structure: an ACS on a space where 
+All six tabulated domains (gauge theory, gravity, number theory, discrete
+geometry, renormalisation group, and quantum gravity) are projections of a single structure: an ACS on a space where 
 Form and Function are the two independent fields, with the bracket 
 $[f, g]$ generating curvature and the holonomy $[[f,g],\cdot]$ 
 being the emergent pattern.
@@ -710,7 +712,7 @@ RG flow & UV couplings & IR couplings & $\beta$-function & $c$-theorem \\
 Quantum gravity & $\tilde{E}^a_i$ & $A^i_a$ & LQG constraints & Spin foam \\
 \bottomrule
 \end{tabular}
-\caption{All five domains as projections of the ACS framework.}
+\caption{All six domains as projections of the ACS framework.}
 \end{table}
 
 \subsection{Open problems}
@@ -794,12 +796,13 @@ without full derivation).
     Tier~0 (zero coupling, 9~generators) and Tier~2 (coupling $32/9$,
     6~generators).  The hierarchy 0:1:4 between unbroken, electroweak,
     and colour-lepton generators follows from the $T_{B{-}L}$ eigenvalue
-    spectrum (Paper~A, \S 6.8).
+    spectrum (Paper~A, torsion-hierarchy appendix~\cite{Wallace2026a}).
 
   \item \textbf{Bosonic vacuum energy cancellation: theorem.}
     $\sum_{X \in \mathfrak{sl}(4)} \|[T_{B{-}L}, X]\|^2 \cdot K(X,X) = 0$
     exactly, in rational arithmetic.  Reduces the cosmological constant
-    problem from $10^{121}$ to $\sim 10^{55}$ (Paper~A, \S 6.8).
+    problem from $10^{121}$ to $\sim 10^{55}$ (Paper~A, torsion-hierarchy
+    appendix~\cite{Wallace2026a}).
 
   \item \textbf{Corrections from the exploration session (updated).}
     (a)~$\tan\beta = 1/2$ was a misidentification of the Yukawa ratio
@@ -902,7 +905,7 @@ theory, the VEV in the Higgs sector.
 %% ─────────────────────────────────────────────────────────────────────────────
 \appendix
 
-\section{Historical Precursors: Newton, Russell, and Mersenne}
+\section{Historical Precursors: Newton, Newlands, and Mersenne}
 \label{sec:history}
 
 The ACS framework has unexpected antecedents in three historical
@@ -926,12 +929,16 @@ The identification is not metaphorical: QCD colour charge is named after
 optical colour precisely because the combinatorics match.  The ACS recovers
 both from the same structure --- the Palatini bracket on GL(4).
 
-\subsection{Russell's wavelength spiral and atomic octaves}
+\subsection{The element spiral and atomic octaves (de Chancourtois, Newlands)}
 
-In 1867, Alexander Reina Russell proposed a wavelength-based spiral
-arrangement of the elements, predating Mendeleev's periodic table.
-Russell's key observation: chemical periodicity has an \emph{octave}
-structure, with noble gases as the ``silent'' nodes.
+Two documented pre-Mendeleev arrangements anticipate the structure used
+here: in 1862 A.-E.~B\'eguyer de Chancourtois proposed a helical
+(``telluric screw'') arrangement of the elements, and in 1865 John
+Newlands observed the \emph{law of octaves} --- chemical periodicity
+with an octave structure, the noble-gas positions later emerging as the
+``silent'' nodes.  (An earlier draft attributed this to ``Alexander
+Reina Russell, 1867''; we could not document such a figure and have
+replaced the attribution with the standard history.)
 
 In the ACS framework:
 \begin{itemize}[noitemsep]
@@ -941,7 +948,7 @@ In the ACS framework:
     configurations where the electron Form and nuclear Function are in
     perfect information balance;
   \item Chemical reactivity ($\DI \neq 0$) is the departure from the attractor;
-  \item Russell's spiral IS the ACS layered resolution: each ``octave'' is
+  \item The element spiral is read as the ACS layered resolution: each ``octave'' is
     one BCH order of the atomic Hamiltonian, with the noble gas at its
     $\DI = 0$ fixed point.
 \end{itemize}

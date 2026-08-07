@@ -112,7 +112,7 @@ Searching directly in exponent space for the integer $n\le N$ maximizing the div
 forms $n$. An exact branch-and-bound with a \emph{provably admissible} upper bound (budget all remaining
 log-room on the cheapest prime, each unit buying at most a factor of two) computes the true maximum out to
 $N=10^{80}$ in tens of seconds, sixty-two orders of magnitude past the $\sim 10^{18}$ wall of integer
-enumeration. It is anchored to brute force at $N\le 60,840,720720,2162160$ ($d=12,32,240,320$), all exact.
+enumeration. It is anchored to brute force at $N \in \{60,\ 840,\ 720720,\ 2162160\}$ ($d=12,\ 32,\ 240,\ 320$), all exact.
 Two earlier versions were \emph{falsified} en route and are retained in the record: a greedy heuristic
 (suboptimal, failed the anchor) and a tighter bound that was not admissible (pruned true optima, returned
 wrong answers). The verified-optimal version is the one of record.
@@ -149,7 +149,7 @@ the scalar destroys needed structure. Otherwise scalar abstraction is correct or
 \end{theorem}
 
 This is stated as the organizing law of the study; (i)--(iii) are each witnessed by HITs and each violation
-by a DOWNGRADED or FALSE-FIT or SEAM result above. It is an empirical-structural characterization, not a
+by a DOWNGRADED or FALSE-FIT or SPLIT result above. It is an empirical-structural characterization, not a
 formal theorem in the proof-theoretic sense.
 
 \section{The strongest instance: when no number can exist}
@@ -183,7 +183,8 @@ truth'' --- on a foundational result (Arrow/Condorcet) rather than on any benchm
 
 Per the program's discipline, falsifications are first-class outputs. Beyond the two search heuristics
 falsified in \S3, this principle's integration into the AISO/OmniForge architecture was tested against live
-source and falsified four times: the multiplicative-fit of the BRA charge (the real charge composes
+source (private, unpublished --- not contained in this repository; the verdicts are auditable from
+the recorded outcomes only) and falsified four times: the multiplicative-fit of the BRA charge (the real charge composes
 additively by table-sum, confirmed from the kernel whitepaper); a dual-engine geometric router (the live
 constraints are ordinal thresholds and the live relation is transitive --- no cycles --- confirmed against
 the routing/CDCL source); and trust/Merkle layers (additive and hash-destroyed respectively). The geometry

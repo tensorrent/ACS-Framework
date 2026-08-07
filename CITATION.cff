@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use or discuss this work, please cite it as below."
+title: "ACS Framework (Asymmetric Codependent Systems)"
+abstract: >-
+  Canonical manuscripts, mathematical notes, verification suites, and
+  reproduction harnesses for the Asymmetric Codependent Systems (ACS)
+  theoretical framework. All claims are tracked under a four-tier
+  verification hierarchy (machine-verified / proved / numerically
+  verified / falsified), with falsifications logged openly in an
+  elimination ledger.
+type: software
+authors:
+  - family-names: Wallace
+    given-names: Brad
+    affiliation: "Independent Researcher"
+repository-code: "https://github.com/tensorrent/ACS-Framework"
+license-url: "https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE"
+keywords:
+  - theoretical physics
+  - Palatini gravity
+  - gauge group selection
+  - Riemann zeta function
+  - spectral analysis
+  - random matrix theory
+  - falsification
+  - verification
+date-released: 2026-08-07

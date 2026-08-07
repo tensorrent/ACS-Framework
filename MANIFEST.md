@@ -110,9 +110,10 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 ---
 
 ## Falsified claims ledger
-`docs/Elimination_Ledger.md` — the eight explicitly falsified claims
-(ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
-chirality, Route A/C signature selection, CW 6→5). First-class results.
+`docs/Elimination_Ledger.md` — the living, append-only kill log. Early entries include
+ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intrinsic
+chirality, Route A/C signature selection, and CW 6→5; later campaigns added further
+kills (T_min scaling, Sl=2↔g=2, EM-as-torsion-annihilator, and others). First-class results.
 
 ## Reproduction notes
 - Seed `20260423` throughout. PDG v = 246.22 GeV canonical.

@@ -2,7 +2,7 @@
 
 This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework.
 
-**Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — coined vocabulary · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
+**Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — glossary and index of key terms · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
 
 ---
 
@@ -12,7 +12,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 .
 ├── MANIFEST.md                       # Claim-to-code mapping & verification matrix
 ├── README.md                         # This file
-├── GLOSSARY.md                       # Glossary of coined vocabulary used across the corpus
+├── GLOSSARY.md                       # Glossary & index of key terms (full corpus vocabulary)
+├── CITATION.cff                      # Citation metadata
 ├── LICENSE                           # Sovereign Integrity Protocol License (SIP License v1.1)
 ├── papers/                           # Research manuscripts and notes
 │   ├── core_trilogy/                 # The core three papers of the framework
@@ -77,6 +78,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   ├── ACS_FRAMEWORK_SKILL.md        # LLM context instruction module
 │   ├── PaperA_changelog.md, PaperB_changelog_extended.md, PaperC_changelog.md
 │   ├── BUGFIX_LOG.md, EFFICIENCY_BENCHMARK_REPORT.md, palpha_audit_log.md
+│   ├── Editorial_Audit_2026-08-07.md # Open editorial-consistency findings (full-corpus review)
+│   ├── Cross_Repo_Glossary_Extract.md # Historical cross-repository glossary extract
 │   ├── issue7_*.json, issue7_logs/   # Section 9 run artifacts (sha256-pinned)
 │   ├── palpha_overlap/               # Pα overlap run artifacts
 │   └── framed_unknot_results.json    # Framing transformer run artifact

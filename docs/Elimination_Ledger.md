@@ -11,6 +11,15 @@ the gold is there; remove everything that isn't.
 - Tiers: **T1** machine-verified / **T2** proven-or-by-inspection / **T3** numerical / **T4** falsified
 - Status tags: `QUEUED` / `IN-PROGRESS` / `KILLED` / `SURVIVED` / `SPLIT` / `BLOCKED`
 
+> **Provenance note (2026-08-07).** Several kill-test scripts below are cited at
+> ephemeral paths (`/tmp/…`) or without a path; those scripts were run on external
+> session machines and were **not committed to this repository**. For the affected
+> entries the recorded verdict rests on the logged outputs quoted in this ledger, not
+> on a rerunnable artifact — i.e. the practical reproducibility standard is (b)
+> structural/logged rather than (a) recomputable, in the sense of the tiering note
+> above. Entries citing repo-relative paths under `code/` are rerunnable as stated.
+> Affected citations are annotated inline.
+
 **Engine kill-criterion (tomographic invariance).** A quantity is a **REFRACTION**
 if its value moves under a legitimate change of instrument (representation /
 normalization / convention / scale / window). It is an **INVARIANT (candidate)** if
@@ -140,7 +149,7 @@ instrument swap (g₄, γ, λ_φ) or an RGE integration (h̃/h).
 
 ### 2026-06-06 — Target Q3: T_min height floor (2πe)^d/q — **SURVIVED (scoped)** · T2 value / T3 empirical
 
-Code: `/tmp/q3_floor.py` (zeta zeros, N=100000).
+Code: `/tmp/q3_floor.py` (zeta zeros, N=100000). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 **Floor value is an analytic invariant, not a refraction.** For d=1,q=1 the floor is
 the exact zero of the Riemann–von Mangoldt main term: (T/2π)(log(T/2π)−1) = 0 at
@@ -166,7 +175,7 @@ subsample-index bug, discarded. Per-height count-error values stand.
 
 ### 2026-06-06 — Target Q6: residual prime-orbit off-diagonal mechanism — **KILLED** · T2 structural / T3 numerical
 
-Code: `/tmp/q6_offdiag.py` (explicit-formula dual periodogram, first 3000 zeros, Hann taper).
+Code: `/tmp/q6_offdiag.py` (explicit-formula dual periodogram, first 3000 zeros, Hann taper). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 **No residual peaked off-diagonal mechanism exists.** Power ratio to local baseline:
 fundamentals log2/3/5/7 ≈ 3–4×10⁸; prime-power harmonics 2log2, 3log2, 2log3, 2log5 ≈
@@ -190,7 +199,7 @@ diagonal (forced by Λ), smooth Montgomery off-diagonal (confirmed), no third op
 
 ### 2026-06-06 — Target Q5: Hilbert–Pólya operator candidates — **CLASS KILLS (GOE, GSE) + xp-alone killed-as-sufficient** · T3 numerical / T2 structural
 
-Code: `/tmp/q5_hp.py` (zeta zeros 10000–40000, RvM-smooth unfolding).
+Code: `/tmp/q5_hp.py` (zeta zeros 10000–40000, RvM-smooth unfolding). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 Strip-mine done at the **class level** (cannot construct/diagonalize a genuine
 self-adjoint operator here — that is the open problem itself). The data forces
@@ -220,7 +229,7 @@ full-operator search remains open, BLOCKED on a construction, not on data).
 
 ### 2026-06-06 — Target Q4: ΔI ≡ RG c-function (FF06Σ Link 3) — **INSTRUMENT BUILT + STRUCTURAL DAMAGE; numerical kill BLOCKED on ΔI def** · T1 instrument / T2 structural
 
-Testbed: `q4_cfunction_testbed.py` (TFIM = free Majorana, M=14 exact diagonalization).
+Testbed: `q4_cfunction_testbed.py` (TFIM = free Majorana, M=14 exact diagonalization). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 **Blocker (honest).** The FF06Σ Link-3 statement and the formal ΔI being identified
 with c are NOT in the reachable corpus. The only ΔI present is the TENT/CDCL routing
@@ -255,7 +264,7 @@ disambiguation is now the load-bearing question.
 
 ### 2026-06-06 — Target Q4 (cont.): instrument pushed to large L — **PRODUCTION-GRADE, gate-validated** · T1
 
-Code: `/tmp/q4_largeL.py`; folded into `q4_cfunction_testbed.py` (`bdg_S`, `c_function_large`).
+Code: `/tmp/q4_largeL.py`; folded into `q4_cfunction_testbed.py` (`bdg_S`, `c_function_large`). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 Free-fermion BdG method, **validation gate PASS**: reproduces exact diagonalization to
 1e-13–1e-15 on the same open chain (M=12, h=1.0/1.3, L=1/3/6) — instrument trusted at
@@ -268,7 +277,7 @@ identity dead unless ΔI unbounded & canonically normalized) stands independent 
 
 ### 2026-06-06 — Target Q7: neutrino seesaw / X-ray tension — **RESOLVED (survives), decoupling caveat** · T3 estimate / T2 structural
 
-Code: `/tmp/q7_neutrino.py`. Inputs: framework's stated naive sin²(2θ)=4×10⁻⁶ and
+Code: `/tmp/q7_neutrino.py`. *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)* Inputs: framework's stated naive sin²(2θ)=4×10⁻⁶ and
 X-ray bound 10⁻¹⁰; PDG M_W=80.4 GeV; v=246.22; generic seesaw × stated (M_W/M_WR)²
 suppression (NOT the full FF06 mechanism — verdict is conditional on this reading).
 
@@ -374,7 +383,7 @@ REFRACTION (T1): g₄'s 4/3, γ's 0.274, λ_φ's 0.1283. BLOCKED: Q3 (d,q) law, 
 
 ### 2026-06-06 — Target Q4 (monotonicity reading) — **RESOLVED; target now fully closed** · T1 numerical / T2 theorem
 
-Code: `/tmp/q4_monotonicity.py` (validated BdG instrument, M=400).
+Code: `/tmp/q4_monotonicity.py` (validated BdG instrument, M=400). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
 
 The only surviving reading of ΔI ≡ c was the monotonicity analogy. Tested locally:
 the entropic/MI c-function is monotone non-increasing along the mass flow for every
@@ -395,7 +404,7 @@ TE-undefined-on-static argument). Highest-collapse target retired.
 ### 2026-06-06 — Target Q3 (d,q) scaling law — **FALSIFIED (T4)** — the degree dependence is wrong
 ### (LMFDB unreachable from sandbox; zeros COMPUTED directly instead — better: reproducible)
 
-Code: `q3_scaling_test.py` (mpmath Dirichlet L zeros + ζ zeros; genuine degree-2 L-function
+Code: `q3_scaling_test.py` *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)* (mpmath Dirichlet L zeros + ζ zeros; genuine degree-2 L-function
 built as the Dedekind zeta of Q(i) = ζ·L(χ₋₄), conductor q=4).
 
 Earlier Q3 was SURVIVED-scoped: only the d=1,q=1 point (ζ) was testable, and the floor

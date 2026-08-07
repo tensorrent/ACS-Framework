@@ -138,7 +138,8 @@ sequence $\{\gamma_k\}$ (Function) are coupled through the explicit formula
 $\psi(x) = x - \sum_\rho x^\rho/\rho$.  We show (Theorem~\ref{thm:FN-acs})
 that the Riemann Hypothesis implies stationarity of the spectral function
 $F_N(x)$ via the AM--GM inequality, and propose the converse
-(Conjecture~T4$'$) as a new characterisation of RH.  A variance-based
+(Conjecture~T4$'$; proved in Section~\ref{sec:converse} conditionally
+on an unproved minimum-gap bound) as a new characterisation of RH.  A variance-based
 argument, confirmed numerically with 100 Riemann zeros from the Odlyzko
 tables, shows that off-critical zeros produce unbounded variance growth
 in $F_N$.  The stationarity diagnostic is then empirically validated
@@ -241,8 +242,9 @@ The Riemann Hypothesis \emph{implies} stationarity of $F_N(x)$:
 off-critical zeros ($\sigma \neq \tfrac{1}{2}$) break the 
 Form--Function balance, producing a non-stationary $F_N$ via the 
 AM--GM inequality $x^\sigma + x^{1-\sigma} \geq 2x^{1/2}$. 
-The converse (stationarity $\Rightarrow$ RH) is Conjecture~T4$^\prime$ 
-(Section~\ref{sec:open}).
+The converse (stationarity $\Rightarrow$ RH) is Conjecture~T4$^\prime$
+(Section~\ref{sec:open}); a version conditional on a minimum-gap bound
+is proved as Theorem~\ref{thm:T4prime}.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
@@ -675,8 +677,11 @@ Say $F_N$ is \emph{uniformly stationary} if $\sup_{X > 2} \mathcal{S}(N, X) < \i
 for all $N$.
 \end{definition}
 
-\begin{theorem}[T4$'$: stationarity $\Leftrightarrow$ RH]\label{thm:T4prime}
-The following are equivalent:
+\begin{theorem}[T4$'$, conditional: stationarity $\Leftrightarrow$ RH]\label{thm:T4prime}
+Assume the minimum-gap bound $\delta_N = \min_{k \neq j \leq N} |\gamma_k - \gamma_j| > 0$
+holds for every $N$ with the induced cross-term constant $C < 1$ of
+Step~3 below (verified numerically to $N = 200$; not proved
+unconditionally).  Then the following are equivalent:
 \begin{enumerate}[label=(\roman*)]
   \item All non-trivial zeros of $\zeta(s)$ satisfy $\mathrm{Re}(s) = \tfrac{1}{2}$.
   \item $F_N$ is uniformly stationary for all $N$.

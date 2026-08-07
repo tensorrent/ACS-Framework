@@ -39,9 +39,9 @@ The Palatini decomposition splits $\mathfrak{sl}(4, \mathbb{R})$ into two sector
 2. **Torsion Sector (9-dimensional):** The remaining generators, representing spacetime torsion.
 
 ### 2.2 SU(3) Closure and the Chirality Map
-Among all possible 8-dimensional subspaces of $\mathfrak{sl}(4, \mathbb{R})$, the split real form $\mathfrak{sl}(3, \mathbb{R})$ is the unique subalgebra that achieves numerically exact closure under the bracket map:
+Among 50,000 uniformly sampled 8-dimensional subspaces of $\mathfrak{sl}(4, \mathbb{R})$, the split real form $\mathfrak{sl}(3, \mathbb{R})$ is the only subspace found to achieve numerically exact closure under the bracket map (**T3** — a numerical selection result consistent with Dynkin's classification, not a proved uniqueness theorem; see MANIFEST):
 
-$$\mathcal{D}_{\mathfrak{sl}(3, \mathbb{R})} < 10^{-14}$$
+$$\mathcal{D}_{\mathfrak{sl}(3, \mathbb{R})} < 10^{-14}, \qquad \mathcal{D}(V) > 0.49 \text{ for every sampled alternative } V$$
 
 To recover the compact $\mathfrak{su}(3)$ strong force gauge group, we define a complex linear chirality map $J$ on the generators:
 
@@ -51,10 +51,12 @@ Under $J$, the Cartan classification maps the non-compact generators of $\mathfr
 
 $$\mathfrak{sl}(3, \mathbb{R}) \xrightarrow{J} \mathfrak{su}(3)$$
 
-### 2.3 Physical Invariants Derived from Palatini Closure
-- **Higgs Quartic Coupling:** Derived from the geometric projection of the holonomy onto the Higgs direction:
+### 2.3 Derived Parameters from Palatini Closure
+> **Status note (per the Elimination Ledger, OOS01/Q1, T1 machine-verified):** the *relations* below survive changes of normalisation convention, but the *bare numerical values* are **refractions** — they move under legitimate changes of trace normalisation or state-counting prescription and are therefore prescription-dependent, not invariants.
+
+- **Higgs Quartic Coupling:** from the geometric projection of the holonomy onto the Higgs direction (value scales with the Killing-form norm convention):
   $$\lambda_\phi = \frac{2\sqrt{3}}{27} \approx 0.1283$$
-- **Barbero-Immirzi Parameter:** Derived from the information-balance condition ($\Delta I = 0$) over the discrete spin area spectrum:
+- **Barbero-Immirzi Parameter:** from the information-balance condition ($\Delta I = 0$) over the discrete spin area spectrum (value depends on the SU(2) vs SO(3) counting prescription: $0.274067$ vs $0.190206$):
   $$\sum_j (2j+1)e^{-2\pi\gamma\sqrt{j(j+1)}} = 1 \implies \gamma \approx 0.274067$$
 
 ---

@@ -146,10 +146,12 @@ Verify: `python3 code/issue7/verify_issue7_pipeline.py`
 
 | File | Notes | Status |
 |------|-------|--------|
-| `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped) |
+| `papers/notes/Mobius_Screw_Electron.tex` | Framed unknot $(2,1)$; $Sl=2\leftrightarrow g=2$ (model ID); capacitance estimate $\alpha^{-1}\approx 137.036$ | Design / estimate (RC1-scoped*) |
 | `papers/notes/Framing_Transformer_Spin_Parity.tex` | Framing transformer of the same curve: CWF decomposition, $SU(2)$ lift of the frame loop, parity law | Computation (see claim table below) |
-| `papers/notes/Klein_Foam_Monad.tex` | Klein-foam Monad postulation (TR-2026-FF06-KFM); cites Möbius + nuclear-decay notes; RC1-scoped | Postulation / ontology |
+| `papers/notes/Klein_Foam_Monad.tex` | Klein-foam Monad postulation (TR-2026-FF06-KFM); cites Möbius + nuclear-decay notes; RC1-scoped* | Postulation / ontology |
 | `papers/notes/Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel; Geiger–Nuttall and Hawking transfer-matrix fits as reported in-note | Companion programme note |
+
+\* RC1 = Release Candidate 1, the bundle's first consolidated claim-discipline pass; "RC1-scoped" marks claims whose stated scope was fixed in that pass.
 
 ### Framing transformer — claim → evidence → tier
 

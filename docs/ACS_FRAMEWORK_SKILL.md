@@ -15,7 +15,7 @@
 
 This skill encodes the complete ACS (Asymmetric Codependent Systems) research program: the methodology, the computational toolkit, the current framework state, the document collection, and the honesty standards. It enables continuation of ACS research with full context, or application of the adversarial compression methodology to new problems.
 
-The ACS framework derives the Pati-Salam gauge structure SU(4)\_C × SU(2)\_L × SU(2)\_R from the Palatini bracket [e, ω] on sl(4, ℝ), reducing the Standard Model's 19+ parameters to 6 inputs.
+The ACS framework derives the Pati-Salam gauge structure SU(4)\_C × SU(2)\_L × SU(2)\_R from the Palatini bracket [e, ω] on sl(4, ℝ), reducing the Standard Model's 19+ parameters to 6–7 inputs (Branch A; see the §4.2 count note).
 
 ---
 
@@ -66,7 +66,14 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 
 **Total: 87 pages, ~6500 lines TeX. Zero undefined citations across all documents.**
 
-### 4.2 Parameter Ledger (7 Inputs)
+### 4.2 Parameter Ledger (Branch A)
+
+> **Count note.** This ledger's row-level count is **5 free + 2 calibrations = 7**,
+> the post-StrickenBy bookkeeping with v_R and μ_Δ enumerated separately. Paper A's
+> Branch-A table (`tab:branch-A-ledger`) rolls the v_R sector into the calibrations
+> and totals **6 (= 4 free + 2 calib.)**. The physical content (which directions are
+> locked vs free) is identical in both bookkeepings; the row-level reconciliation is
+> tracked in `docs/Editorial_Audit_2026-08-07.md`.
 
 **Free parameters (5):**
 
@@ -124,14 +131,19 @@ When reporting results, always state which tier. Never let Tier 3 pass as Tier 2
 | 8 | **CW 6→5** | **Gauge-protected flat direction** | **RG invariance + multiplicative QCD + β-independent thresholds** |
 | 9 | **T_min height floor** | **$T_{\min} = (2\pi e)^d/q$** | **Falsified (T4) at $d > 1$; true floor scales as $2\pi e \cdot q^{-1/d}$. Re-anchored to the SNR measurability criterion.** |
 
-### 4.5 Open Problems (6)
+### 4.5 Open Problems (6 listed; corpus map lists 8)
+
+> The corpus map (`docs/ACS_Corpus_Map.md` §6, O-1–O-8) additionally lists the
+> Barbero-Immirzi physical value (O-7) and the neutrino X-ray tension (O-8); the
+> neutrino tension has since been **resolved** by the Elimination Ledger's Q7 entry
+> (PS gauge suppression clears the bound — survives with a decoupling caveat).
 
 | # | Problem | Requires | Impact |
 |---|---------|----------|--------|
 | 1 | FeynRules/UFO export | Engineering | LHC-testable predictions |
 | 2 | Hilbert-Pólya operator | Different domain | RH connection |
 | 3 | Action principle for S̃_g | Variational theory | First-principles derivation |
-| 4 | L-functions extension | LMFDB zeros | Paper B generality (Partially closed: per-tone/octave extension done across d∈{1,2}; aggregate/Landau SNR-gated. See `NOTE_landau_identity_transport_20260705.md` in the TR-2026-FF06-ACS instrument suite, which is not included in this repository) |
+| 4 | L-functions extension | LMFDB zeros | Paper B generality. Repo-resident evidence: the per-tone/octave extension across d∈{1,2} in Paper B §7 and `code/hp_knife_suite/` (T1/T3). A further partial closure (aggregate/Landau SNR-gated) rests on an external note not included in this repository, so the status here remains **open with partial repo-resident progress** |
 | 5 | SM from GL(4) fiber | Conceptual breakthrough | Full SM derivation |
 | 6 | ER=EPR correspondence | Conceptual breakthrough | Holographic interpretation |
 
@@ -429,7 +441,7 @@ python3 code/notes_verification/test_signature_selection.py \
                                  └─ Jacobi truncation (order 4+ vanishes)
 
 Gauge structure: SU(4)_C × SU(2)_L × SU(2)_R  (Pati-Salam, 1974)
-Parameters: 19+ (SM) → 6 (ACS Branch A) = 4 free + 2 calibrations
+Parameters: 19+ (SM) → 6–7 (ACS Branch A; 4–5 free + 2 calibrations, see §4.2 count note)
 ```
 
 ---

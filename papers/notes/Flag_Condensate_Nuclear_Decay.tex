@@ -98,16 +98,17 @@ where $h_\ell^{(1)}$ is the spherical Hankel function of the first kind. Here, $
 \subsection{Euclidean Deformation}
 In flat space $\mathbb{R}^4$, the classical Yang-Mills BPST instanton action~\cite{bpst1975} is a pure topological invariant:
 \begin{equation}
-S_0 = \frac{8\pi^2}{g_{\text{weak}}^2}.
+S_0 = \frac{8\pi^2}{g^2},
 \end{equation}
+with $g$ the gauge coupling of the confining sector under consideration.
 However, the colour-confining throat radius $R$ introduces a physical scale that breaks conformal invariance. The metric of the effective throat takes an AdS-like warped geometry:
 \begin{equation}
 \dd s^2 = \frac{R^2}{r^2}\dd r^2 + \frac{r^2}{R^2}\eta_{\mu\nu}\dd x^\mu \dd x^\nu.
 \end{equation}
-Evaluating the Euclidean action on this background gives the deformed action $\delta S(R, V_C)$:
+Evaluating the Euclidean action on this background gives the deformed action $\delta S(R)$ (the dependence on the Coulomb barrier $V_C$ enters through $\kappa$):
 \begin{align}
 S_E &= S_0 + \delta S(R) \nonumber \\
-    &= \frac{8\pi^2}{g_{\text{weak}}^2} + 2\int_{R}^{b} \kappa(r)\,\dd r,
+    &= \frac{8\pi^2}{g^2} + 2\int_{R}^{b} \kappa(r)\,\dd r,
 \end{align}
 where $\kappa(r) = \frac{\sqrt{2\mu (V(r) - E)}}{\hbar}$ is the wave suppression parameter. In the semiclassical limit where throat radius $R \ll b$, the geometric deformation term $\delta S(R) \gg S_0$ dominates the action penalty.
 
@@ -137,7 +138,7 @@ For allowed regions ($V < E$):
 M_i = \begin{pmatrix} \cos(k_i \Delta r) & \frac{1}{k_i}\sin(k_i \Delta r) \\ -k_i \sin(k_i \Delta r) & \cos(k_i \Delta r) \end{pmatrix}.
 \end{equation}
 
-The total barrier transfer matrix $M = \prod_{i=1}^N M_i$ is real and satisfies $\det(M) = 1.0$. The exact transmission coefficient $T$ is computed from matrix elements:
+The total barrier transfer matrix $M = \prod_{i=1}^N M_i$ is real and satisfies $\det(M) = 1.0$. The transfer-matrix transmission coefficient $T$ is computed from matrix elements:
 \begin{equation}
 T = \frac{4 k_{\text{in}} k_{\text{out}}}{(k_{\text{out}} M_{11} + k_{\text{in}} M_{22})^2 + (k_{\text{in}} k_{\text{out}} M_{12} - M_{21})^2}.
 \end{equation}
@@ -151,7 +152,7 @@ The transmission coefficient equals the squared mode-mixing ratio:
 \begin{equation}
 T = \left|\frac{\beta_k}{\alpha_k}\right|^2 = \ee^{-2W}.
 \end{equation}
-Thus, the decay probability per assault cycle $\nu = v/(2R)$ gives the exact half-life:
+Thus, the decay probability per assault cycle $\nu = v/(2R)$ gives the model half-life (with $P_\alpha$ data-extracted, per the Remark above):
 \begin{equation}
 \lambda = \nu \cdot P_\alpha \cdot \ee^{-2W} \implies t_{1/2} = \frac{\ln 2}{\lambda},
 \end{equation}
@@ -219,7 +220,7 @@ in~\cite{PalphaOverlap2026}; absolute scale may still need $S$, and
 many-body uniqueness is not claimed.
 \end{remark}
 
-\section{Universal Geometric Unification}
+\section{Four-Domain Phase-Defect Pattern}
 
 Applying the identical transfer matrix / Bogoliubov formulation across
 four domains exhibits a shared structural pattern (phase defect $W$,
@@ -254,10 +255,15 @@ when $c$ is restored.
 \midrule
 Nuclear Decay ($^{238}\text{U}$) & 41.517 & $t_{1/2} = 4.47 \times 10^9$ yr \\
 Black Hole ($1 M_\odot$) & 0.000 & $T_H = 6.17 \times 10^{-8}$ K \\
-Sphaleron (Electroweak) & 90.000 & $B+L$ Violation Rate \\
-Superconductor (NbTi) & 17.400 & Fluxon Nucleation Rate \\
+Sphaleron (Electroweak)$^{\dagger}$ & $\sim 90$ & $B+L$ Violation Rate \\
+Superconductor (NbTi)$^{\dagger}$ & $\sim 17.4$ & Fluxon Nucleation Rate \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.3em}
+{\footnotesize $^{\dagger}$Illustrative order-of-magnitude entries from standard
+literature estimates; unlike the nuclear column they are not derived or
+cross-validated in this note's code.}
 \end{table}
 
 \section{Conclusion}
@@ -282,7 +288,7 @@ developed in~\cite{Mobius2026}, and the broader ontology in~\cite{KFM2026}.
 \bibitem{geiger1911} H. Geiger and J. M. Nuttall, \emph{The ranges of the $\alpha$ particles from uranium}, Phil. Mag. \textbf{22}, 613 (1911).
 \bibitem{Mobius2026} Flag Condensate Collaboration, \emph{The M\"obius-Screw Electron}, ACS Framework note (2026), \texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
 \bibitem{KFM2026} B. Wallace, \emph{The Klein-Foam Monad}, ACS Framework note (2026), \texttt{papers/notes/Klein\_Foam\_Monad.tex}.
-\bibitem{PalphaOverlap2026} ACS Theoretical Physics Working Group, \emph{Standing-Wave Overlap Proxy for Alpha Preformation}, ACS Framework note (2026), \texttt{flag\_condensate\_palpha\_overlap.tex} / \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
+\bibitem{PalphaOverlap2026} ACS Theoretical Physics Working Group, \emph{Standing-Wave Overlap Proxy for Alpha Preformation}, ACS Framework note (2026), \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
 \end{thebibliography}
 
 \end{document}

@@ -92,11 +92,11 @@ For any bulk generators $X, Y$, the boundary projection satisfies:
 
 $$B([X, Y], Z) = 0 \quad \forall Z \in \mathfrak{g}_{\text{bulk}}$$
 
-This algebraic orthogonality enforces the ER=EPR holographic correspondence, where bulk Einstein-Rosen wormhole geometries map to boundary EPR entanglement via the algebra's radical.
+This algebraic orthogonality provides an algebraic correspondence consistent with ER=EPR (**T2/T3** per MANIFEST; the full holographic correspondence remains an open problem, corpus map O-6), where bulk Einstein-Rosen wormhole geometries would map to boundary EPR entanglement via the algebra's radical.
 
 ---
 
-## 5. Deterministic AI Stack Governance (Paper D)
+## 5. Deterministic AI Stack Governance (Paper D = `papers/ACS_Deterministic_AI_Stack_PDR.tex`, with the formal companion `papers/discrete_geometry_formalism.tex`)
 
 ### 5.1 The Constraint-Attractor Cycle
 The ACS Deterministic AI Stack is governed by a closed constraint-attractor loop that prevents model drift:

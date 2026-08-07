@@ -49,10 +49,10 @@
 \large A reproducible computational study on the Riemann zeros,\\
 with companion results on the $\mathfrak{sl}(4,\mathbb{R})$ Palatini transport}
 
-\author{B.~Wallace\\ \small TensorRent --- geometry / state-field side}
+\author{B.~Wallace\\ \small Independent Researcher}
 \date{\small Revision incorporating adversarial hardening of \S\S6--7,\\
 \small the forced-value verification and central-number derivation of \S9,\\
-\small and the charge/coupling epistemic split of \S13. \\[2pt]
+\small and the charge/coupling epistemic split of \S12. \\[2pt]
 \small Canonical seed \textbf{20260423}. Data: first $10^5$ non-trivial zeros of $\zeta(s)$, accurate to $3\times10^{-9}$.}
 
 \begin{document}
@@ -118,9 +118,9 @@ Tier & Meaning \\
 9 & \textbf{Real ACS holonomy verified (new)} & torsion coupling $32/9$; mixed verdict & T1 \\
 9 & \textbf{Central number forced (new)} & $\to$ quark $B\!-\!L$ charge $1/3$ via $K=32/3$ & T2 \\
 10 & Conditional uniformity height floor & $T_{\min}=(2\pi e)^d/q$ & T3 \\
-13 & \textbf{``Same gap'' conjecture (new)} & charge $\neq$ coupling residual & T4 \\
-13 & \textbf{Quartic residual high-scale reading (new)} & RGE: matches at EW scale, not high scale & T4 \\
-13 & \textbf{Charge / coupling epistemic split (new)} & charges forced exact; couplings $\sim1\%$ residual & T2 \\
+12 & \textbf{``Same gap'' conjecture (new)} & charge $\neq$ coupling residual & T4 \\
+12 & \textbf{Quartic residual high-scale reading (new)} & RGE: matches at EW scale, not high scale & T4 \\
+12 & \textbf{Charge / coupling epistemic split (new)} & charges forced exact; couplings $\sim1\%$ residual & T2 \\
 \bottomrule
 \end{longtable}
 \end{center}
@@ -289,9 +289,9 @@ A geometric filter scores each witness by coherence across phase-preserving rega
 
 The forcing of the \S9 central number raises a natural question: is its residual the same as the well-known $0.85\%$ residual in the Higgs-quartic derivation ($\lambda_{\text{ACS}}=2\sqrt3/27=0.1283$ vs.\ $\lambda_{\text{SM}}=0.1294$)? If so, closing one closes the other. We test this directly and record two negatives that, together, sharpen the framework's epistemic status.
 
-\textbf{13.1 ``Same gap'' conjecture --- FALSIFIED (T4).} The \S9 central number closed because it is a \emph{charge} --- an eigenvalue ratio --- so the holonomy path scale $\theta$ cancels. The Higgs quartic $\lambda$ is a \emph{coupling} --- a magnitude --- which has no ratio for the scale to cancel through. Anatomy of the quartic chain confirms the asymmetry: the factors $(4/3)^2$ and Koide $2/3$ are exact (charge/projection-type), while the Killing/kinetic normalisation carries the entire residual. The $\theta$-cancellation that closed \S9 therefore cannot act on $\lambda$. The two residuals are not the same gap; they share only the Killing form $K=32/3$.
+\textbf{12.1 ``Same gap'' conjecture --- FALSIFIED (T4).} The \S9 central number closed because it is a \emph{charge} --- an eigenvalue ratio --- so the holonomy path scale $\theta$ cancels. The Higgs quartic $\lambda$ is a \emph{coupling} --- a magnitude --- which has no ratio for the scale to cancel through. Anatomy of the quartic chain confirms the asymmetry: the factors $(4/3)^2$ and Koide $2/3$ are exact (charge/projection-type), while the Killing/kinetic normalisation carries the entire residual. The $\theta$-cancellation that closed \S9 therefore cannot act on $\lambda$. The two residuals are not the same gap; they share only the Killing form $K=32/3$.
 
-\textbf{13.2 High-scale-boundary reading --- FALSIFIED (T4).} A natural rescue is that $\lambda_{\text{ACS}}$ is a high-scale algebraic boundary value and the $0.85\%$ is renormalisation-group running down to $m_H$, with the correct sign ($\lambda_{\text{ACS}}<\lambda_{\text{SM}}$, consistent with top-Yukawa-dominated running). We test this with the full one-loop SM RGE system (quartic, top Yukawa, three gauge couplings, coupled), integrating $\lambda$ upward from $m_H=125.25$~GeV:
+\textbf{12.2 High-scale-boundary reading --- FALSIFIED (T4).} A natural rescue is that $\lambda_{\text{ACS}}$ is a high-scale algebraic boundary value and the $0.85\%$ is renormalisation-group running down to $m_H$, with the correct sign ($\lambda_{\text{ACS}}<\lambda_{\text{SM}}$, consistent with top-Yukawa-dominated running). We test this with the full one-loop SM RGE system (quartic, top Yukawa, three gauge couplings, coupled), integrating $\lambda$ upward from $m_H=125.25$~GeV:
 \begin{center}
 \begin{tabular}{lcccccc}
 \toprule
@@ -303,7 +303,7 @@ $\lambda(\mu)$ & $0.1294$ & $0.0954$ & $0.0381$ & $0.0159$ & $0.0085$ & $0.0091$
 \end{center}
 The quartic crosses $\lambda_{\text{ACS}}=0.1283$ exactly once, at $\mu\approx132$~GeV --- $0.05$ e-folds above $m_H$, essentially at the electroweak scale --- then falls monotonically (the familiar near-metastability dip to $\sim0.008$ at $10^{13}$~GeV) and does not return. The high-scale reading is thus falsified: were $\lambda_{\text{ACS}}$ a high-scale boundary value, it would have to match $\lambda_{\text{SM}}$ run \emph{up} to that scale ($\sim0.008$--$0.04$), not the EW-scale $0.1283$. The algebraic quartic matches the \emph{physical, electroweak-scale} value directly. The $0.85\%$ is therefore an EW-scale normalisation offset --- a tree/threshold-level canonical-field matching --- not running, and not a high-scale boundary condition. (One-loop with standard inputs; two-loop and precise threshold matching shift the crossing scale slightly but cannot move it from $\sim m_H$ to a GUT scale.)
 
-\textbf{13.3 The charge/coupling split (T2).} The two negatives expose a clean classification of the framework's predictions:
+\textbf{12.3 The charge/coupling split (T2).} The two negatives expose a clean classification of the framework's predictions:
 \begin{itemize}[nosep]
 \item \textbf{Charge-type observables} (eigenvalues, charges, ratios: the $B\!-\!L$ charges, colour weights, the \S9 central number) are \emph{forced exactly} --- they are scale-free, so the holonomy/path scale cancels.
 \item \textbf{Coupling-type observables} (dimensionful or magnitude-valued: the Higgs quartic, masses) carry an \emph{irreducible $\sim1\%$ residual} --- an EW-scale canonical-field normalisation that the charge argument cannot remove, and whose precise mechanism (threshold vs.\ wavefunction normalisation) remains underived.
@@ -504,10 +504,14 @@ print("QUOTIENT B-L: ||[D,H]||=%.2f central#=%.3f"%(diag3(D_quo),central(D_quo))
 \end{lstlisting}
 
 \section{Companion documents}
-\texttt{where\_my\_hunches\_went.md} (narrative letter) $\cdot$ \texttt{operator\_constraints.md} (constraint list C1--C12) $\cdot$ \texttt{uniformity\_addendum.md} (conditional-uniformity full statement) $\cdot$ \texttt{admissibility\_note.md} (filter, two failures, coupling). Source framework: \emph{Colour from Gravity}.
+The working notes cited in earlier drafts (narrative letter, constraint list
+C1--C12, conditional-uniformity addendum, admissibility note) were session
+artifacts and are not committed to the repository; their surviving content is
+consolidated in \texttt{docs/Elimination\_Ledger.md} and \texttt{MANIFEST.md}.
+Source framework: \emph{Colour from Gravity}.
 
 \vspace{1em}
 \noindent\rule{\textwidth}{0.4pt}\\
-\small All numbers regenerated from the drivers in Appendices A--B. Negatives kept first-class. Nothing tuned to a known answer. The charge/coupling split (\S13) is the organising result: charge-type predictions are forced exactly; coupling-type predictions carry an EW-scale $\sim1\%$ normalisation residual.
+\small All numbers regenerated from the drivers in Appendices A--B. Negatives kept first-class. Nothing tuned to a known answer. The charge/coupling split (\S12) is the organising result: charge-type predictions are forced exactly; coupling-type predictions carry an EW-scale $\sim1\%$ normalisation residual.
 
 \end{document}

@@ -9,16 +9,16 @@
 \usepackage{xcolor}
 \usepackage{physics}
 
-\title{\textbf{The ACS Deterministic AI Stack:}\\
-A Dynamical Epistemic Algebra over Finite Rewrite Orbits}
-\author{Formal Specification}
-\date{\today}
+\title{\textbf{A Dynamical Epistemic Algebra over Finite Rewrite Orbits}\\
+\large Formal specification companion to the ACS Deterministic AI Stack PDR}
+\author{Bradley Wallace\\ \small Independent Researcher}
+\date{2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We formalize the discrete operator geometry stack of the ACS Deterministic AI architecture. Rather than asserting a continuum geometric ontology or a strict categorical renormalization group, we rigorously define the system as a multi-parameter, non-commuting dynamical system on matrix-valued states, analyzed through iterated projection-valued observables. We explicitly construct the scheme-indexed action semigroup, the nonlinear observation functor, and the cross-scheme coherence obstruction tensor. In this framework, traditionally geometric quantities---such as curvature, renormalization flow, fixed points, and holonomy---are fully de-sublimated into rigorously computable secondary statistics on an orbit sheaf of measurement trajectories.
+We formalize the discrete operator geometry stack of the ACS Deterministic AI architecture. Rather than asserting a continuum geometric ontology or a strict categorical renormalization group, we rigorously define the system as a multi-parameter, non-commuting dynamical system on matrix-valued states, analyzed through iterated projection-valued observables. We explicitly construct the scheme-indexed action semigroup, the nonlinear observation map (a lossy projection, deliberately not a functor --- no categorical structure is assumed), and the cross-scheme coherence obstruction tensor. In this framework, traditionally geometric quantities---such as curvature, renormalization flow, fixed points, and holonomy---are fully de-sublimated into rigorously computable secondary statistics on an orbit sheaf of measurement trajectories.
 \end{abstract}
 
 \section{The Mathematical Object}
@@ -42,7 +42,7 @@ The dynamics are driven by a family of nonlinear update maps, indexed by a set o
 \end{equation}
 Crucially, these maps are \textit{not} required to compose coherently across schemes. The operations do not form a strict category or groupoid, as composition lacks guaranteed naturality ($\mathcal{R}_\alpha \circ \mathcal{R}_\beta \neq \mathcal{R}_{\alpha\beta}$). Instead, they generate a non-commutative semigroup action representing scheme-dependent rewrite operations.
 
-\subsection{The Observation Functor ($\Phi$)}
+\subsection{The Observation Map ($\Phi$)}
 Information about the state is extracted via a deliberately lossy, nonlinear projection map into a finite-dimensional measurement space:
 \begin{equation}
     \Phi : \mathcal{A} \to \mathbb{R}^m
@@ -67,7 +67,7 @@ All traditional ``physics-like'' quantities are rigorously recast as secondary s
 
 \section{The Coherence Obstruction Tensor}
 
-The final structural layer of the theory quantifies the exact conjugacy failure of the discretization schemes. Because the rewrite algebra is non-associative, we define the \textbf{coherence obstruction tensor} between any two schemes $\alpha$ and $\beta$ as the explicit commutator of their transformations:
+The final structural layer of the theory quantifies the exact conjugacy failure of the discretization schemes. Because the rewrite maps do not commute, we define the \textbf{coherence obstruction tensor} between any two schemes $\alpha$ and $\beta$ as the explicit commutator of their transformations:
 \begin{equation}
     [\mathcal{R}_\alpha, \mathcal{R}_\beta](A) = \mathcal{R}_\alpha(\mathcal{R}_\beta(A)) - \mathcal{R}_\beta(\mathcal{R}_\alpha(A))
 \end{equation}

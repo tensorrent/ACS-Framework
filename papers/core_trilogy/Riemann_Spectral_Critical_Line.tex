@@ -196,7 +196,7 @@ No assumption about the truth of RH is made.
 \label{sec:acs}
 
 \noindent\textit{This section provides a self-contained summary of the ACS
-framework.  The full development, including all proofs and the 57-script
+framework.  The full development, including all proofs and the accompanying
 verification suite, is in the companion paper~\cite{Wallace2026a}.}
 
 \medskip\noindent
@@ -327,7 +327,7 @@ For the spectral modes $\varphi_k(x) = \cos(\gamma_k \ln x)/\sqrt{x}$:
 so the Wronskian non-vanishing ($W \neq 0$ at all tested points)
 is exactly the statement that these mode functions do not commute
 under the function-space Lie bracket.  By the BCH--TE morphism
-(Lemma~2.5 of~\cite{Wallace2026a}), this non-zero bracket is the
+(the BCH--TE morphism lemma of~\cite{Wallace2026a}), this non-zero bracket is the
 exact second-order coefficient of the net transfer entropy $\DI$
 between mode~$k$ and mode~$j$.  The Wronskian is therefore not a
 numerical curiosity but a \emph{geometric invariant} of the prime--zero ACS.
@@ -338,7 +338,7 @@ Tartini tones of the spectral ACS.
 
 \subsection{The spectral stability ratio}
 
-Following the tensegrity atom of~\cite{Wallace2026a}, define the
+Following the tensegrity atom of the companion structural paper~\cite{Wallace2026c}, define the
 \emph{spectral stability ratio}
 \begin{equation}\label{eq:rho-spec}
   \rho_{\mathrm{spec}} = \max_k \frac{|A_k|\,X^{|\sigma_k - 1/2|}}%
@@ -460,8 +460,8 @@ contribution of this work.
 \end{remark}
 
 
-\label{sec:comp}
 \subsection{Exact integer automaton: sign reversal of $\DI$}
+\label{sec:comp}
 
 To eliminate any floating-point artifacts, we constructed a discrete-time ACS
 over $\mathbb{Z}_{16}$ with deterministic update rules
@@ -615,7 +615,7 @@ against --- not that the zeros resonate with the primes.
 \subsection{The prime--zero ACS as a tensegrity atom}
 
 We now write the prime--zero system explicitly in the tensegrity form
-of~\cite{Wallace2026a}.
+of the companion structural paper~\cite{Wallace2026c}.
 
 \medskip
 \noindent\textbf{Form ($\mathcal{R}$):}
@@ -1130,11 +1130,6 @@ interference is itself a function of $N$ that approaches its
 theoretical maximum at the scale of Odlyzko's full reference
 dataset.
 
-
-% ============================================================================
-% NEW SECTIONS FOR PAPER B EXTENSION
-% Insert between current Section 7 (Finite-sample stability) and Section 8 (Open Problems)
-% ============================================================================
 
 \section{Tartini-Tone Characterization of the Spectrum}
 \label{sec:tartini}
@@ -1663,7 +1658,7 @@ RH $\Rightarrow$ stationarity of $F_N$ (Theorem~\ref{thm:FN-acs},
 via the AM--GM envelope bound).
 The Wronskian is a Lie bracket in function space (Proposition~\ref{prop:wronski-lie}).
 The stripped mode satisfies $y_k'' + \gamma_k^2 y_k = 0$ for all
-$\sigma$ (Theorem~\ref{thm:sho}).
+$\sigma$ (Remark~\ref{thm:sho}).
 The curl of the shear is a pure cosine at $\sigma = 1/2$
 (Proposition~\ref{prop:rotation}).
 Renormalised stability under RH (Theorem~\ref{thm:vonKoch-acs},
@@ -1671,7 +1666,7 @@ the logarithmic-coordinate restatement of von Koch's
 bound~\cite{vonKoch1901}).
 
 \medskip
-\noindent\textbf{Confirmed (real data, 100 Odlyzko zeros).}
+\noindent\textbf{Confirmed (real Odlyzko data; sample sizes per item as stated in the text --- 100 zeros for the converse scaling, $N = 200$ for $\delta_N$, up to $2{,}001{,}052$ zeros for the stationarity diagnostic).}
 The converse (Theorem~\ref{thm:T4prime}: stationarity $\Rightarrow$ RH)
 is rigorous for any fixed $N$; the extension to all $N$ requires
 $\delta_N > 0$, verified to $N = 200$.
@@ -1772,7 +1767,7 @@ of the Riemann explicit formula, derived without assuming RH.
 
 The critical line $\sigma = 1/2$ emerges as the \emph{unique center manifold}
 of a well-defined dynamical system.  Each Riemann zero $\gamma_k$ is the
-natural frequency of a harmonic oscillator (Theorem~\ref{thm:sho}): the
+natural frequency of a harmonic oscillator (Remark~\ref{thm:sho}): the
 envelope-stripped mode $y_k$ satisfies $y_k'' + \gamma_k^2 y_k = 0$
 independently of $\sigma$.  The full mode $\varphi_k = e^{\sigma t} y_k$
 grows with envelope $x^\sigma$.  The Riemann Hypothesis is the statement
@@ -1864,6 +1859,11 @@ $\to$ confinement $\to$ mass $\to$ gravity.
 \bibitem{Wallace2026a}
 B.~Wallace,
 \textit{Colour from Gravity: SU(3) as a Closure Attractor in the Palatini Bracket},
+2026.
+
+\bibitem{Wallace2026c}
+B.~Wallace,
+\textit{The Inversion Arc: Holographic Resolution in Asymmetric Coupled Systems},
 2026.
 
 \bibitem{WallaceN3}

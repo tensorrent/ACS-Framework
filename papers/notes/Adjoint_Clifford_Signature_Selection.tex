@@ -32,8 +32,9 @@
 \title{Grading Selection from Adjoint Spectral Activity\\
 in $\sln{n}$}
 \author{B.~Wallace\thanks{Independent researcher.}}
-\date{May 2026 \\ \textit{Adjoint Spectral Minimization and Bipartite Signature Selection in Clifford Algebras} \\
-Companion to \textit{Colour from Gravity}}
+\date{May 2026 \\ \textit{Adjoint Spectral Minimization and Bipartite Grading Selection in $\sln{n}$} \\
+Companion to \textit{Colour from Gravity} \\
+{\footnotesize (Legacy filename \texttt{Adjoint\_Clifford\_Signature\_Selection} retained for link stability; the Clifford-algebra extension is future work.)}}
 
 \begin{document}
 \maketitle
@@ -60,9 +61,9 @@ weighted max-cut on the complete graph $K_m$ with edge weights
 $w_{ij} = g(|t_i - t_j|)\,n_i\,n_j$.  For binary splits ($m = 2$),
 the minimiser is unique and places the minority cluster in the
 $P$-negative eigenspace; for $\TBL = \mathrm{diag}(1/3,1/3,1/3,-1)$,
-the selected grading has $(3,1)$ shape.  If $f(0) > 0$, the
-zero-mode contribution can change the selected grading
-(Proposition~\ref{prop:zero-mode}).
+the selected grading has $(3,1)$ shape.  If the zero-mode weight $f$
+of Proposition~\ref{prop:zero-mode} satisfies $f(0) > 0$, the
+zero-mode contribution can change the selected grading.
 
 The result is verified across $\sln{3}$--$\sln{6}$ (nine Cartan
 structures including binary and ternary splits), six spectral
@@ -258,8 +259,9 @@ over symmetric involutions $P$.  Then:
     $|C_1| = k < n/2$, the unique minimiser places the minority
     cluster in $I_-$, giving
     $\widetilde{\mathcal{S}}_g^{\min} = -2k(n{-}k)\,g(\lambda)$.
-  \item[(iv)] \emph{(Structural stability.)}  Under perturbation
-    $T \to T + \varepsilon H$, the minimiser changes only at
+  \item[(iv)] \emph{(Structural stability --- numerically supported,
+    not proved here (T3); see Section~\ref{sec:numerics}.)}  Under
+    perturbation $T \to T + \varepsilon H$, the minimiser changes only at
     eigenvalue-crossing transitions where the cluster structure of
     $T$ changes.
 \end{enumerate}
@@ -518,23 +520,23 @@ cases, the minimiser matches the weighted odd-support prediction of
 Theorem~\ref{thm:selection}.  Binary eigenvalue splits consistently
 select grading aligned with the minority cluster; ternary splits
 (e.g., $2{+}2{+}1$ in $\sln{5}$) are correctly handled by the
-weighted criterion of part~(iii).
+weighted max-cut criterion of part~(ii).
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}lllll@{}}
+\begin{tabular}{@{}llll@{}}
 \toprule
 Algebra & Cartan element & Eigenvalue structure & Selected grading \\
 \midrule
 $\sln{3}$ & $(1/2, 1/2, -1)$ & $2+1$ & $(2,1)$ \\
 $\sln{4}$ & $(1/3, 1/3, 1/3, -1)$ & $3+1$ & $(3,1)$ \\
 $\sln{4}$ & $(1, 1, -1, -1)$ & $2+2$ & $(2,2)$ split \\
-$\sln{5}$ & $(1/4)^4, -1)$ & $4+1$ & $(4,1)$ \\
-$\sln{5}$ & $(1/3)^3, (-1/2)^2)$ & $3+2$ & $(3,2)$ \\
+$\sln{5}$ & $((1/4)^4, -1)$ & $4+1$ & $(4,1)$ \\
+$\sln{5}$ & $((1/3)^3, (-1/2)^2)$ & $3+2$ & $(3,2)$ \\
 $\sln{5}$ & $(1, 1, -1, -1, 0)$ & $2+2+1$ (ternary) & $(3,2)$ \\
-$\sln{6}$ & $(1/5)^5, -1)$ & $5+1$ & $(5,1)$ \\
-$\sln{6}$ & $(1/4)^4, (-1/2)^2)$ & $4+2$ & $(4,2)$ \\
-$\sln{6}$ & $(1/3)^3, (-1/3)^3)$ & $3+3$ & $(3,3)$ \\
+$\sln{6}$ & $((1/5)^5, -1)$ & $5+1$ & $(5,1)$ \\
+$\sln{6}$ & $((1/4)^4, (-1/2)^2)$ & $4+2$ & $(4,2)$ \\
+$\sln{6}$ & $((1/3)^3, (-1/3)^3)$ & $3+3$ & $(3,3)$ \\
 \bottomrule
 \end{tabular}
 \caption{Grading selected by $\widetilde{\mathcal{S}}_g$ with $g(x) = x^2$
@@ -555,7 +557,7 @@ eigenvalue-crossing transitions
 ($\varepsilon \approx 0.3$--$1.0$ depending on direction) where the
 multiplicity structure transitions from $3{+}1$ to $2{+}2$.
 Perturbations that deepen the minority gap strengthen the selection
-monotonically with no bifurcation to $\varepsilon = 2$.  Grading
+monotonically, with no bifurcation up to $\varepsilon = 2$.  Grading
 selection undergoes a discrete transition precisely at
 eigenvalue-crossing loci of the Cartan spectrum, where the
 multiplicity structure changes.  This confirms the selection is not

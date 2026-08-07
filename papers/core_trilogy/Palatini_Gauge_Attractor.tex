@@ -144,7 +144,7 @@
 \newcommand{\FuncF}{\boldsymbol{\Phi}}
 \newcommand{\dI}{\,\mathrm{d}}
 \newcommand{\Order}[1]{\mathcal{O}(#1)}
-\renewcommand{\Form}{\mathbf{e}}
+\providecommand{\Form}{\mathbf{e}}
 \providecommand{\Func}{\boldsymbol{\omega}}
 \newcommand{\TE}{\mathrm{TE}}
 
@@ -214,7 +214,7 @@ real form.  The mechanism $\mathfrak{sl}(3,\mathbb{R}) \xrightarrow{J} \mathfrak
 is verified (all 28 brackets close; all generators skew-Hermitian).
 The Barbero--Immirzi parameter $\gamma = 0.274$ is recovered from the
 ACS information-balance condition.  All computational claims are backed
-by a 76-script verification suite.  Predictions: a 49~keV sterile
+by the accompanying verification suite.  Predictions: a 49~keV sterile
 neutrino, $\theta_{\mathrm{QCD}}=0$ exactly, and a torsion coupling
 hierarchy $0{:}1{:}4$.
 \end{minipage}
@@ -532,8 +532,8 @@ $\alpha_4 = \mathbb{E}_\mu[[f,g],[f,g]]/24 + \cdots \neq 0$ generically,
 and by induction on the BCH--Campbell--Dynkin series (convergent for
 $\|\varepsilon\| < \pi$) some $\alpha_n \neq 0$.
 
-In either generic case $\DI(\varepsilon) \neq 0$.  The numerical results in
-Table~1 and the exact integer automaton in the computational verification (Section~\ref{sec:gl4}) confirm this.
+In either generic case $\DI(\varepsilon) \neq 0$.  The numerical results and
+the exact integer automaton confirmation (Section~2.4) confirm this.
 \end{proof}
 
 \subsection{The BCH--transfer-entropy morphism}
@@ -802,7 +802,7 @@ ACS coupling term} between Form ($e$) and Function ($\omega$).  In the
 vacuum Palatini formulation, this coupling vanishes: $T^a = 0$ is the
 \emph{ACS equilibrium state} reached dynamically by the field equations,
 not an external constraint.  Activating $T^a\neq 0$ introduces chirality
-(see the computational verification (Section~\ref{sec:gl4}) for computational evidence).
+(computational evidence in Section~\ref{sec:gl4}).
 \end{lemma}
 
 \begin{proof}
@@ -813,7 +813,7 @@ of motion} for the vacuum gravitational ACS.  Geometrically it means the
 1st-order Form--Function coupling vanishes in vacuum, leaving only the
 2nd-order bracket $R^{ab} = d\omega^{ab} + \omega^a{}_c\wedge\omega^{cb}$.
 
-Torsion becomes non-zero in two ways, neither of which requires spinors
+Torsion becomes non-zero in three ways, none of which requires spinors
 to be postulated in advance:
 \begin{enumerate}[noitemsep,label=(\alph*)]
   \item \textbf{Spin sources (Einstein--Cartan)}: augmenting the action by
@@ -837,9 +837,9 @@ Section~\ref{sec:gl4}; it is computational evidence, not a theorem.)
 \end{proof}
 
 \begin{remark}
-The Bianchi identity $D_{[\mu}F_{\nu\rho]} = 0$ is the \emph{self-resolving} 
-property of the self-resolving property: the gauge system encodes its 
-own curvature constraint in its own field equations.  
+The Bianchi identity $D_{[\mu}F_{\nu\rho]} = 0$ is the \emph{self-resolving}
+property of the gauge system: it encodes its own curvature constraint
+in its own field equations.  
 There is no hidden violation of gauge invariance that is not 
 immediately visible in $F$.  This is the physics realisation of the 
 self-resolving structure defined later.
@@ -1007,7 +1007,7 @@ augmentation over $\mathbb{Q}$.
 \begin{remark}[Torsion sector, chirality, and the colour skeleton]
 The $9$-dimensional torsion sector $[\mathrm{Sym}_0(4),\mathfrak{o}(4)]$ decomposes under $\mathrm{SU}(2)_L\times\mathrm{SU}(2)_R$
 as the $(\mathbf{3},\mathbf{3})$ representation --- exactly the degrees of freedom that carry geometric chirality
-in the torsion lattice computation (the computational verification (Section~\ref{sec:gl4})).
+in the torsion lattice computation (Section~\ref{sec:gl4}).
 
 This sector contains $5$ of the $8$ generators of $\mathfrak{sl}(3,\mathbb{R})$:
 the Cartan subalgebra (colour charge quantum numbers) and the symmetric root
@@ -1377,7 +1377,7 @@ Three routes to this complexification remain viable:
 \begin{enumerate}[label=(\alph*)]
   \item \textbf{Torsion-induced spinor structure (primary route).}
     Non-zero torsion $T^a \neq 0$ generates chiral zero-modes
-    (the computational verification (Section~\ref{sec:gl4})) whose spinor structure provides a natural
+    (computationally verified in Section~\ref{sec:gl4}) whose spinor structure provides a natural
     complex structure on the fiber.  If this complexification maps
     $\mathfrak{sl}(3,\mathbb{R})$ to $\mathfrak{su}(3)$, the colour
     algebra is fully contained in the Palatini ACS without extra dimensions.
@@ -1404,7 +1404,8 @@ The compact real form $\mathfrak{su}(3)$ is obtained by taking the generators
 to be skew-Hermitian: $iT_a$.  In the Palatini ACS, the bracket $[e,\omega]$
 produces real matrices; the extra factor $i$ must come from the spinor bundle,
 which introduces a complex structure on the tangent space.  This is why
-the existence of chiral zero-modes (the computational verification (Section~\ref{sec:gl4})) is crucial:
+the existence of chiral zero-modes (computational verification,
+Section~\ref{sec:gl4}) is crucial:
 it signals that the spinor bundle is already active, providing precisely
 the complexification needed.  The computation showing
 $\mathfrak{sl}(3,\mathbb{R}) \subset \mathfrak{sl}(4,\mathbb{R})$ is exact
@@ -1434,8 +1435,8 @@ $\mathfrak{su}(2)_L \times \mathfrak{u}(1)_Y$ from the $O(4)$ fiber after vacuum
 The full SM algebra thus requires \emph{two} geometric sources, not one:
 the Pati--Salam embedding for colour, and the fiber decomposition for the electroweak sector.
 
-Four further claims are required for full 
-the SM generation conjecture, and all four remain open:
+Four further claims are required to complete the SM generation
+conjecture, and all four remain open:
 
 \medskip
 \noindent\textbf{(i) Unification of the two sources.}
@@ -1511,14 +1512,14 @@ symmetry-breaking VEV), which the ACS framework does not yet determine.
 The weak force couples only to left-handed fields.  
 The generator $\mathfrak{su}(2)_L$ cannot be identified within $\mathfrak{so}(3,1)$ 
 alone; it requires the spinor bundle.  
-The torsion result (the computational verification (Section~\ref{sec:gl4})) suggests that 
+The torsion result (Section~\ref{sec:gl4}) suggests that 
 non-zero torsion $T^a \neq 0$ is the mechanism, 
 since it produced chiral asymmetry (spectral index scaling with volume) 
 from geometry alone.
 
 \medskip
 
-The precise question replacing the original the SM generation conjecture is:
+The precise question replacing the original SM generation conjecture is:
 
 \begin{conjecture}[Precise GL(4) generation]\label{conj:gl4-precise}
 Let $(e^a{}_\mu, \omega^{ab}{}_\mu)$ be ACS fields on $\mathcal{Y}^{14}$.  
@@ -1782,7 +1783,8 @@ no derivation from the transfer entropy definition has been achieved.
   \item \textbf{Spin foam~\cite{EPRL2008}:} Face amplitudes $=$ ACS 1st-order couplings;
     vertex amplitudes $=$ 3rd-order holonomies; Regge limit $=$ $\DI \to 0$.
   \item \textbf{Black holes:} Horizon $=$ ACS inversion surface; $S_{\text{BH}}$
-    from $\Delta I$ saturation; matches holographic resolution (D6).
+    from $\Delta I$ saturation; matches the holographic-resolution
+    definition of Paper~C~\cite{Wallace2026c}.
   \item \textbf{Planck corrections:} Gravitational wave dispersion acquires
     frequency-dependent correction $\delta v/c \sim \lambda (f/f_P)^2$ from $\DI_{\mu\nu}$.
 \end{enumerate}
@@ -2300,7 +2302,7 @@ Recent phenomenological work on the minimal PS
 model~\cite{MinimalPS2025} and modular flavour
 symmetries~\cite{Belfkir2025} provides the comparison standards
 for fermion mass predictions.
-A detailed comparison is given in Paper~C~\cite{WallaceC}.
+A detailed comparison is given in Paper~C~\cite{Wallace2026c}.
 
 \subsection*{Derived matches: PDG comparison}
 \label{sec:pdg-comparison}
@@ -2324,15 +2326,19 @@ $\theta_{\mathrm{QCD}}$      & 0         & 0          & ---      & exact & real 
 \end{center}
 
 \noindent
-Nine of eleven matches are within 2$\sigma$ of the PDG central value.
+Seven of the nine tabulated observables are within 2$\sigma$ of the PDG
+central value (counting the exact $\theta_{\mathrm{QCD}}$ match).
 The $\theta_{13}^{\mathrm{PMNS}}$ prediction ($9.2^\circ$ vs.\ $8.57^\circ$, 5.2$\sigma$) is the
 weakest match and may indicate a missing higher-order correction in the TBM + Cabibbo
 parametrisation.  The Higgs mass pull ($3.2\sigma$) traces to the
 incomplete normalisation chain (Section~6.6).
 
-\subsection*{Computational limitations}
+\subsection*{Computational limitations (shared verification suite)}
 
-The verification suite uses 100 Riemann zeros (Odlyzko tables) and
+These limitations span the trilogy's shared verification suite; the
+Riemann-zero and Wronskian items pertain to the spectral analysis of
+Paper~B~\cite{Wallace2026b} and are recorded in its reproducibility notes
+as well.  The suite uses 100 Riemann zeros (Odlyzko tables) and
 50{,}000 random subspaces (Grassmannian sampling).  Extension to
 $10{,}000$ zeros or $10^6$ subspaces would strengthen confidence bounds
 but is not expected to change qualitative results, since all tested
@@ -2613,7 +2619,9 @@ variational problem whose coefficients are fixed by the Killing form.
 \label{sec:torsion-hierarchy}
 
 All 15 independent generators of $\mathfrak{sl}(4,\mathbb{R})$ fall
-into exactly three tiers under the torsion VEV $\|[T_{B{-}L}, X]\|^2$:
+into exactly two tiers under the torsion VEV $\|[T_{B{-}L}, X]\|^2$:
+(the separate 0:1:4 hierarchy quoted for gravitational-wave couplings is a
+different object; see the Predictions section)
 
 \medskip
 \noindent
@@ -3129,11 +3137,6 @@ arXiv:2504.01893 [hep-ph] (2025).
 \bibitem{WallaceB}
 B.~Wallace,
 \textit{Spectral Susceptibility and Renormalized Stability on the Riemann Critical Line},
-2026.
-
-\bibitem{WallaceC}
-B.~Wallace,
-\textit{The Inversion Arc: Holographic Resolution in Asymmetric Coupled Systems},
 2026.
 
 \bibitem{Lakatos1976}

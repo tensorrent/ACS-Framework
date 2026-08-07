@@ -72,9 +72,13 @@ correction.
 This note is a computation, not a new model.  It takes the centerline and
 framing already defined in the M\"obius-screw note and asks a single
 question: \emph{at which stage, if any, does spin-$1/2$ enter?}  Every
-number below is produced by
-\texttt{code/framed\_unknot/framing\_transformer.py} and archived in
-\texttt{docs/framed\_unknot\_results.json}.
+number below is produced by the three scripts
+\texttt{code/framed\_unknot/framing\_transformer.py} (Sections~2--5),
+\texttt{code/framed\_unknot/moment\_ratio.py} (Section~6), and
+\texttt{code/framed\_unknot/one\_object.py} (Section~7), archived in
+\texttt{docs/framed\_unknot\_results.json},
+\texttt{docs/framed\_unknot\_moment\_ratio.json}, and
+\texttt{docs/framed\_unknot\_one\_object.json} respectively.
 
 Nothing here bears on QED, on radiative corrections to $g-2$, or on the
 capacitance estimate of $\alpha$.  The result is topological.
@@ -287,7 +291,7 @@ the geometry, the winding numbers, and the $|Sl| = 2$ computation are all
 confirmed.
 \end{remark}
 
-\section{What survives, and it is worth keeping}
+\section{What survives}
 
 Something real remains, and it is more specific than what was claimed.
 The double cover in this model is produced by the \textbf{meridian
@@ -337,7 +341,7 @@ $0.999$& $0.001$ & $-1.10597$ & $-0.89403$ & $-1$ \\
 \end{center}
 
 $Tw + Wr = -2.000000$ at every row, and the holonomy stays $\sigma = -1$
-throughout.  This is what isotopy invariance looks like when you watch it:
+throughout.  This is isotopy invariance exhibited directly:
 the deformation is continuous and embedded for all $a < R$, degenerating
 only in the limit, so donut and vortex are one framed loop and the
 topology cannot distinguish them.  Note also that $Tw$ is
@@ -471,7 +475,7 @@ Euler angles of a \emph{single} rotation, locked at a $2\!:\!1$ rate:
 \end{equation}
 so $p = 2$ is the azimuthal turn in the $xy$-plane and $q = 1$ is the
 tilt.  Checked against the direct torus normal, the difference is
-$0.000\times10^{0}$ --- not small, but identically zero.  This is why the
+identically zero (0 to machine precision) --- not merely small.  This is why the
 lift factorises the way it does in \eqref{eq:lift}, and why the sign is
 carried entirely by the half-angle of the tilt.
 

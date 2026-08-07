@@ -2,8 +2,11 @@
 
 # ACS Framework — Master Document Index
 
+> **Historical snapshot as of May 3, 2026** — it indexes only the five documents that
+> existed at that date. For the current state of the corpus see [`MANIFEST.md`](../MANIFEST.md).
+
 **Date:** May 3, 2026
-**Status:** All documents final, all cross-references resolved, all compilations clean.
+**Status:** As of the snapshot date: all documents final, all cross-references resolved, all compilations clean.
 
 ---
 
@@ -30,21 +33,21 @@
 
 | File | Purpose | Tests |
 |---|---|---|
-| `acs_codebase.tar.gz` | Trilogy verification (42 tests) | 42/42 |
-| `test_lattice_imprint.py` | N1 IR null test (PDG masses) | Verified |
-| `test_signature_selection.py` | N2 verification (4 test blocks) | 4/4 |
-| OmniForge `verify_tr2026_ff06.py` | CI pipeline (FF06 + N2) | 32/32 |
+| `code/acs_codebase/` | Trilogy verification (42 tests) | 42/42 |
+| `code/notes_verification/test_lattice_imprint.py` | N1 IR null test (PDG masses) | Verified |
+| `code/notes_verification/test_signature_selection.py` | N2 verification (4 test blocks) | 4/4 |
+| OmniForge `verify_tr2026_ff06.py` (not included in this repository) | CI pipeline (FF06 + N2) | 32/32 |
 
 ## Supporting Documents
 
 | File | Purpose |
 |---|---|
-| `ACS_CS_Applications.md` | 10 CS use cases with logic schemas |
-| `PaperA_changelog.md` | Paper A edit log |
-| `PaperB_changelog.md` | Paper B edit log |
-| `PaperC_changelog.md` | Paper C edit log |
-| `Music_Thread_Closure_Summary.md` | Music-thread compression record |
-| `Trilogy_Edit_Summary.md` | Overall edit summary |
+| `docs/PaperA_changelog.md` | Paper A edit log |
+| `docs/PaperB_changelog_extended.md` | Paper B edit log |
+| `docs/PaperC_changelog.md` | Paper C edit log |
+| `ACS_CS_Applications.md` | 10 CS use cases with logic schemas (not included in this repository) |
+| `Music_Thread_Closure_Summary.md` | Music-thread compression record (not included in this repository) |
+| `Trilogy_Edit_Summary.md` | Overall edit summary (not included in this repository) |
 
 ---
 

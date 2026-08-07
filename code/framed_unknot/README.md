@@ -65,3 +65,75 @@ python3 code/framed_unknot/framing_transformer.py
 
 Requires `numpy` only. Runtime ~1 min (dominated by the O(N²) Gauss double
 integrals at N = 2000). Writes `docs/framed_unknot_results.json`.
+
+---
+
+## `moment_ratio.py` — the successor test, run
+
+Asks whether the geometry can produce a g-factor at all. It cannot.
+
+For charge `q` and mass `m` traversing the centerline once per period `T`, both
+moments are proportional to the same vector area `A = ½ ∮ r × dl`:
+
+```
+mu = I·A = (q/T)·A        <L> = (m/T) ∮ r × dr = (2m/T)·A
+mu / <L> = q/2m     =>    g = 1   exactly, for every closed curve
+```
+
+| curve | A_z / π |
+|---|---|
+| Möbius screw (2,1), a/R = 0.30 | +2.09000 |
+| Möbius screw (2,1), a/R = 0.70 | +2.49000 |
+| Möbius screw (2,1), a/R = 0.97 | +2.94090 |
+| round circle, one turn | +1.00000 |
+| round circle, two turns | +2.00000 |
+
+The double winding is real — 2.09× a single loop — and useless, because the same
+factor sits in `mu` and `<L>` and cancels. Same failure mode as the `Sl` kill: a
+genuine 2 in the geometry that carries no information about `g`. Note `A_z` is not
+even an invariant (2.09π → 2.94π across the throat sweep) while `Sl` does not move.
+
+**No-go:** no model with charge and mass circulating at uniform `q/m` gives `g ≠ 1`,
+whatever the winding, framing, twist, or throat. Obtaining `g ≠ 1` requires
+decoupling the charge and mass distributions.
+
+```bash
+python3 code/framed_unknot/moment_ratio.py     # writes docs/framed_unknot_moment_ratio.json
+```
+
+---
+
+## `one_object.py` — the framed curve as a single quaternion curve
+
+Three structural checks, all passing:
+
+| Check | Result |
+|---|---|
+| `(2,1)` is two Euler angles of one rotation: `U = Rz(φ)Ry(−φ/2)e_x` | matches the direct torus normal to **0.0e+00** |
+| Framed curve ≡ one quaternion curve: `U = q e_x q̄`, `V = q e_z q̄` | recovered from `q` alone to **3.3e−16** |
+| Four quaternion coords = first Laplace eigenspace on S³ | `Δ x_i = −3.00000 x_i`, degeneracy 4 |
+
+**What this relocates.** `p = 2` and `q = 1` are not two independent windings —
+they are the azimuthal turn and the tilt of a *single* rotation locked at 2:1,
+which is why the quaternion lift factorises and why the sign is carried entirely
+by the tilt's half-angle. And a framed curve isn't a centerline plus a normal
+field; through the frame-Hopf map it is four numbers, one object on S³.
+
+The Laplace result is the important one. The four coordinates restricted to
+S³ = SU(2) span the first nonzero eigenspace, eigenvalue −3, degeneracy
+`(k+1)² = 4`, which under SU(2)×SU(2) is the `(½,½)` representation. **That is
+where spin-½ actually enters this picture** — representation theory on the
+quaternion sphere, the same place Lévy-Leblond (1967) puts g = 2 — not the
+linking number, which contributes only a parity bit, and not the geometry, which
+gives g = 1.
+
+**Also recorded:** the whole chain presupposes a *closed* curve, and a torus curve
+closes iff `q/p` is rational. Golden-ratio and `1/√2` windings never close, fill
+the torus densely, and have no self-linking number and no π₁ class at all. Worth
+naming the tension: KAM theory makes the *most irrational* windings the most
+robust invariant tori under perturbation, while topological quantisation needs the
+rational ones. They pull opposite ways.
+
+```bash
+python3 code/framed_unknot/one_object.py    # writes docs/framed_unknot_one_object.json
+```

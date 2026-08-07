@@ -5,7 +5,7 @@ Disk + in-memory memo for ACS harness numerics (BIE capacitance, Gamow/eigen sol
 RC1: cache is a harness convenience — not a claim about physics uniqueness.
 Disable with ACS_MEMO=0. Override root with ACS_MEMO_DIR.
 
-Default root: rh_papers_may21/acs-framework/.cache/
+Default root: `.cache/` at the repository root.
 """
 
 from __future__ import annotations

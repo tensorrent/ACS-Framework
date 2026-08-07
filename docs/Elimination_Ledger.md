@@ -470,6 +470,31 @@ and cannot be what produces the double cover. **Mechanism of the error:** matchi
 integer 2 across two formalisms in which it arises for unrelated reasons (`pq` on one
 side, the order of `π₁(SO(3))` on the other).
 
+**Independent corroboration (literature).** The parity law is not our result — it is
+standard. Needham (arXiv:1708.09124 §2.2, Thm 3.7) states that framed-loop space has two
+path components distinguished by self-linking parity, via the SU(2)→SO(3) double cover,
+and his `h + k` even criterion reproduces our control column exactly at `h = 1`. Gompf &
+Stipsicz §5.6–5.7 give the Kirby-calculus form (even framings → bounding spin structure,
+odd → non-bounding). Our normalization convention is the standard trap and matches: with
+the adapted frame `[T, U, T×U]` and Seifert reference, the 0-framed round unknot *is* the
+generator of π₁(SO(3)). **Convention-free statement, which is what should be quoted:**
+incrementing the framing by 1 flips the class; framings differing by 2 are equivalent.
+
+**The decisive external point.** Lévy-Leblond, *Nonrelativistic particles and wave
+equations*, Comm. Math. Phys. **6** (1967) 286, derives `g = 2` from **linearizing the
+Schrödinger equation** — it is a consequence of the spinor representation, neither
+relativistic nor topological in origin. A literature sweep found **no** peer-reviewed
+derivation of `g = 2` from a framed loop, ribbon, or self-linking structure anywhere in
+the mainstream record. The nearby speculative work does not fill the gap: Bilson-Thompson
+states outright that his braided-preon model does not explain the origin of spin (twist
+encodes charge); Battey-Pratt & Racey (1980) is effectively uncited outside fringe
+literature; Schiller's strand model has no independent uptake. Note also that
+"half-integer hopfion"/"fractional skyrmion" in the 2024–26 condensed-matter literature
+means half-integer *topological index*, not half-integer *angular momentum*, and is not
+precedent. The genuine "linking number → fractional spin" result is Wilczek & Zee,
+PRL **51** (1983) 2250, which produces a phase and a statistics sector — not a
+gyromagnetic ratio.
+
 **Verdict.** `Sl = 2 ↔ g = 2` as a *geometric origin* claim is **FALSIFIED (T4)**. The
 surviving statement is narrower and real: the model's double cover comes from the **odd
 meridian winding q = 1** — the `φ/2` half-angle in the parameterisation — not from the
@@ -480,3 +505,61 @@ against the angular momentum, which would produce a dimensionful `g` that can th
 
 Full write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex`.
 Artifact: `docs/framed_unknot_results.json`.
+
+---
+
+### 2026-07-26 — Successor test: can the framed-loop geometry produce a g-factor? — **KILLED (g = 1)** · T2 structural / T1 numerical
+
+**Target.** The successor proposed when `Sl = 2 ↔ g = 2` was killed: stop matching
+integers, compute the shape's magnetic moment against its angular momentum, and get a
+dimensionful `g` that can fail. Prompted by the reading of the shape as a **dynamo**.
+
+**Instrument.** `code/framed_unknot/moment_ratio.py` · artifact
+`docs/framed_unknot_moment_ratio.json`.
+
+**Result.** For a charge `q` and mass `m` circulating the closed centerline with period
+`T`, both moments are proportional to the same vector area `A = ½∮ r × dl`:
+
+```
+mu = I·A = (q/T)·A          <L> = (m/T)·∮ r × dr = (2m/T)·A
+mu / <L> = q/2m       =>    g = 1   exactly, for every closed curve
+```
+
+| curve | A_z / π |
+|---|---|
+| Möbius screw (2,1), a/R = 0.30 | +2.09000 |
+| Möbius screw (2,1), a/R = 0.70 | +2.49000 |
+| Möbius screw (2,1), a/R = 0.97 | +2.94090 |
+| round circle, one turn | +1.00000 |
+| round circle, two turns | +2.00000 |
+
+**The double winding is real and it is useless.** The screw carries 2.09× the vector area
+of a single loop — but that factor enters `mu` and `<L>` identically and cancels. This is
+the *same failure mode* as the `Sl` kill one entry above: a genuine factor of 2 in the
+geometry that carries no information about `g`. Note also that `A_z` is not an invariant
+(2.09π → 2.94π across the throat sweep), unlike `Sl`, which does not move.
+
+**Verdict.** **T2 no-go:** no model with charge and mass circulating at uniform `q/m` can
+give `g ≠ 1` by geometry — whatever the winding, framing, twist, or throat. Eq. (g=1) is
+just the classical orbital g-factor, which is shape-independent. This closes the successor
+as posed.
+
+**What it opens.** The requirement is now specific and structural rather than numerical:
+**decouple where the charge sits from where the mass sits.** That is a far better-posed
+target than hunting a 2 in the geometry. (The Möbius-screw note's own `e/2`-per-sheet
+charge assignment is exactly such a knob — though §4.2 of that note already records that
+the α estimate built on it does not survive its own revision path.)
+
+**On the dynamo reading.** One part is a theorem, not an analogy: for a thin flux tube of
+flux Φ, magnetic helicity `H = ∫A·B = Φ²(Tw + Wr) = Φ²·Sl` (Moffatt 1969; Moffatt & Ricca,
+Proc. R. Soc. A **439** (1992) 411). So the Călugăreanu quantity *is* the helicity of this
+geometry, and stretch-twist-fold dynamo action is exactly the `Tw ↔ Wr` trade already
+plotted. Two things block it as a particle model, neither topological: **(i)** a dynamo
+grows — it has a growth rate and consumes kinetic energy from a flow, while a stable
+particle is stationary; **(ii)** since `H = Φ²·Sl`, it supplies the same integer we
+already had, in units of Φ², adding physical content but no magnitude. The stationary
+neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed helicity to
+∇×B = λB — a spheromak), which is the right dynamical class and whose λ does carry
+dimensions of inverse length. It still does not evade the no-go on its own.
+
+Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.

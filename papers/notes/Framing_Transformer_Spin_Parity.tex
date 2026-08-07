@@ -58,6 +58,10 @@ withdraws the support the $Sl=2 \leftrightarrow g=2$ identification was
 taken to have.  What survives is sharper and smaller: the double cover in
 this model comes from the meridian half-angle $\varphi/2$ in the
 parameterisation, i.e.\ from the \emph{odd} meridian winding $q=1$.
+The parity law itself is not new --- it is standard in the framed-curve
+and Kirby-calculus literature (\S\ref{sec:lit}) --- and the contribution
+here is its evaluation on this curve, together with the resulting
+correction.
 \end{abstract}
 
 \tableofcontents
@@ -218,6 +222,27 @@ exactly when $pq$ is even, hence
 \sigma = (-1)^{Sl+1}.
 \end{equation}
 
+\begin{remark}[Convention, stated so it cannot be misread]
+\label{rem:convention}
+Equation~\eqref{eq:parity2} is normalised to the adapted frame
+$[\bm{T},\bm{U},\bm{T}\times\bm{U}]$ with $Sl$ measured against the
+Seifert ($0$-) framing.  In that normalisation the round unknot with the
+$0$-framing is the \emph{generator} of $\pi_1(SO(3))$ --- it does not
+lift --- because the tangent indicatrix itself contributes one turn.
+Absolute parity statements are therefore convention-dependent and easy to
+get backwards.  The convention-free form, which is what should be quoted,
+is:
+\begin{quote}
+\emph{Incrementing the framing by $1$ flips the $\pi_1(SO(3))$ class;
+framings differing by $2$ lie in the same component.}
+\end{quote}
+This is the belt trick, and it is the statement that survives any choice
+of reference framing.  Compare Needham~\cite{needham2017}, Thm.~3.7,
+where an $|h|$-fold covered circle of self-linking $k$ has closed
+quaternion lift iff $h+k$ is even --- which for $h=1$ reproduces the
+control column below exactly.
+\end{remark}
+
 This was checked against an independent control family --- round circles
 carrying $n$ framing twists, for which $Wr = 0$ and $|Sl| = n$ --- with
 the measured result reproducing \eqref{eq:parity2} exactly:
@@ -280,14 +305,310 @@ considerably weaker than a derivation of $g$: a $\mathbb{Z}/2$ bit cannot
 produce a real number, and any model claiming a magnitude from this
 structure needs a mechanism that \eqref{eq:parity} does not supply.
 
-\begin{remark}[Falsifiable successor]
-The next testable step is not a larger analogy but a smaller question:
-does the framed-loop geometry generate a \emph{magnetic moment coupling},
-by computing the current distribution on the ribbon and its magnetic
-moment against the angular momentum?  That would produce a $g$ with
-dimensions and a value, and could then fail.  The parity result above
-neither supports nor blocks it.
+\subsection{The tornado picture is the same object, not a metaphor}
+\label{sec:throat}
+
+Appendix~A of the M\"obius-screw note offers a ``tornado'' reading --- a
+funnel narrowing to a high-torsion throat around a quiet axis --- and
+labels it interpretive, adding no formal claims.  That labelling is more
+conservative than it needs to be.  Sweeping the aspect ratio $a/R$
+towards $1$ carries the curve continuously from a fat-hole torus to
+exactly that funnel: since $\rho(\varphi) = R + a\cos(\varphi/2)$, the
+closest approach to the axis is $\rho_{\min} = R - a$, attained at
+$\varphi = 2\pi$, and it shrinks to zero as $a \to R$.  The throat is not
+an added feature of the picture; it is where the centerline meets the
+axis.
+
+Across that entire sweep the invariants do not move:
+
+\begin{center}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$a/R$ & $\rho_{\min}$ & $Tw$ & $Wr$ & $\sigma$ \\
+\midrule
+$0.30$ & $0.700$ & $-1.03376$ & $-0.96624$ & $-1$ \\
+$0.50$ & $0.500$ & $-1.09066$ & $-0.90934$ & $-1$ \\
+$0.70$ & $0.300$ & $-1.14910$ & $-0.85090$ & $-1$ \\
+$0.85$ & $0.150$ & $-1.15375$ & $-0.84625$ & $-1$ \\
+$0.97$ & $0.030$ & $-1.11872$ & $-0.88128$ & $-1$ \\
+$0.999$& $0.001$ & $-1.10597$ & $-0.89403$ & $-1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$Tw + Wr = -2.000000$ at every row, and the holonomy stays $\sigma = -1$
+throughout.  This is what isotopy invariance looks like when you watch it:
+the deformation is continuous and embedded for all $a < R$, degenerating
+only in the limit, so donut and vortex are one framed loop and the
+topology cannot distinguish them.  Note also that $Tw$ is
+\emph{non-monotonic} across the sweep, turning over near $a/R \approx
+0.85$ --- further evidence that the individual terms are geometry with no
+invariant meaning.
+
+The consequence cuts both ways.  The tornado picture is licensed as a
+faithful drawing of the formal object, which it was not previously
+claimed to be.  But it inherits the object's limits exactly: the throat
+is not an extra structure that could supply a magnitude, because it is
+reachable by deformation from a shape that has no throat at all.
+
+\section{The successor test, run: geometry gives $g=1$}
+\label{sec:moment}
+
+The obvious next step is not a larger analogy but a smaller question:
+compute the shape's \emph{magnetic moment} against its \emph{angular
+momentum} and read off a $g$ that has dimensions and can fail.  We ran it
+(\texttt{code/framed\_unknot/moment\_ratio.py}).  It fails, and the way it
+fails is instructive.
+
+Let a particle of charge $q$ and mass $m$ traverse the closed centerline
+once per period $T$, and write the vector area
+\begin{equation}
+\bm{A} = \tfrac{1}{2}\oint \bm{r}\times d\bm{l}.
+\end{equation}
+Then the current is $I = q/T$, and
+\begin{equation}
+\bm{\mu} = I\bm{A} = \frac{q}{T}\bm{A},
+\qquad
+\langle \bm{L}\rangle = \frac{m}{T}\oint \bm{r}\times d\bm{r}
+                      = \frac{2m}{T}\bm{A}.
+\end{equation}
+Both are proportional to the \emph{same} geometric factor, so
+\begin{equation}
+\label{eq:g1}
+\frac{\bm{\mu}}{\langle\bm{L}\rangle} = \frac{q}{2m}
+\qquad\Longrightarrow\qquad
+g = 1 \quad\text{exactly, for every closed curve.}
+\end{equation}
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Curve & $A_z$ & $A_z/\pi$ \\
+\midrule
+M\"obius screw $(2,1)$, $a/R = 0.30$ & $+6.56593$ & $+2.09000$ \\
+M\"obius screw $(2,1)$, $a/R = 0.70$ & $+7.82257$ & $+2.49000$ \\
+M\"obius screw $(2,1)$, $a/R = 0.97$ & $+9.23911$ & $+2.94090$ \\
+round circle, one turn               & $+3.14159$ & $+1.00000$ \\
+round circle, two turns              & $+6.28319$ & $+2.00000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The double winding is entirely real: the screw carries $2.09\times$ the
+vector area of a single loop.  It is also useless for $g$, because that
+factor enters $\bm{\mu}$ and $\langle\bm{L}\rangle$ identically and
+cancels --- the same way the $2$ in $Sl$ cancelled down to a parity bit in
+\S5.  Note too that $A_z$ is \emph{not} an invariant: it runs from
+$2.09\pi$ to $2.94\pi$ across the throat sweep of \S\ref{sec:throat},
+unlike $Sl$, which does not move at all.
+
+\begin{corollary}[No-go for geometric $g$]
+\label{cor:nogo}
+No model in which charge and mass circulate together with a uniform
+$q/m$ ratio can produce $g \neq 1$ by geometry, whatever the winding,
+framing, twist, or throat.  Equation~\eqref{eq:g1} is the classical
+orbital $g$-factor, and it is shape-independent.  Obtaining $g \neq 1$
+requires \emph{decoupling the charge and mass distributions} --- a
+specific structural requirement, and a far better-posed target than
+looking for a $2$ in the geometry.
+\end{corollary}
+
+\subsection{On the dynamo reading}
+\label{sec:dynamo}
+
+A natural physical reading of this shape is a dynamo, and one part of
+that instinct is exactly right --- it is a theorem, not an analogy.  For
+a thin magnetic flux tube of flux $\Phi$, the magnetic helicity is
+\begin{equation}
+H = \int \bm{A}\cdot\bm{B}\,d^3x = \Phi^2\,(Tw + Wr) = \Phi^2 Sl,
+\end{equation}
+so the C\u{a}lug\u{a}reanu quantity computed in \S3 \emph{is} the magnetic
+helicity of a flux tube with this geometry
+(Moffatt~\cite{moffatt1969}; Moffatt--Ricca~\cite{moffattricca1992}).
+Dynamo action is likewise about exactly the $Tw \leftrightarrow Wr$ trade
+seen in \S3: the stretch--twist--fold mechanism converts writhe into
+twist while doubling flux.  The bookkeeping is the same bookkeeping.
+
+Two things block the reading as an electron model, and neither is
+topological.
+
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt]
+  \item \textbf{A dynamo grows.}  It has a growth rate and amplifies
+    field by consuming kinetic energy from a flow.  A stable particle is
+    a stationary state --- no growth, no energy source, no dissipation.
+    The dynamical class is wrong.
+  \item \textbf{Helicity is the invariant we already have.}  Since
+    $H = \Phi^2 Sl$, the dynamo framing supplies the same integer, in the
+    same units of $\Phi^2$.  It adds physical content but no new
+    magnitude, and Corollary~\ref{cor:nogo} still applies.
+\end{enumerate}
+
+The nearest object that \emph{is} stationary is the force-free or Taylor
+state: by Woltjer's theorem, a plasma relaxing at fixed magnetic helicity
+minimises energy at $\nabla\times\bm{B} = \lambda\bm{B}$, a
+self-organised helicity-carrying equilibrium (a spheromak).  That is the
+right dynamical class, and $\lambda$ carries dimensions of inverse
+length, so unlike the parity bit it does set a scale.  It still does not
+evade Corollary~\ref{cor:nogo} on its own --- a force-free state with
+co-located charge and mass gives $g=1$ like everything else --- but it
+poses the question in the only form that could survive: what, in this
+geometry, separates where the charge sits from where the mass sits?
+
+\section{One object, four axes --- and the Laplace eigenspace}
+\label{sec:oneobject}
+
+Three structural readings of this geometry turn out to be exactly right,
+and together they relocate where spin-$1/2$ lives.  All are verified in
+\texttt{code/framed\_unknot/one\_object.py}.
+
+\subsection{$(2,1)$ is the $xy$-axis twisted}
+
+The pair $(p,q) = (2,1)$ is not two independent windings.  It is two
+Euler angles of a \emph{single} rotation, locked at a $2\!:\!1$ rate:
+\begin{equation}
+\bm{U}(\varphi) = A(\varphi)\,\bm{e}_x,
+\qquad A(\varphi) = R_z(\varphi)\,R_y(-\varphi/2),
+\end{equation}
+so $p = 2$ is the azimuthal turn in the $xy$-plane and $q = 1$ is the
+tilt.  Checked against the direct torus normal, the difference is
+$0.000\times10^{0}$ --- not small, but identically zero.  This is why the
+lift factorises the way it does in \eqref{eq:lift}, and why the sign is
+carried entirely by the half-angle of the tilt.
+
+\subsection{The framed curve is one quaternion curve}
+
+A framed curve looks like $3+1$ pieces of data --- a centerline plus a
+normal field --- only in the naive presentation.  Through the frame-Hopf
+map it is a \emph{single} quaternion-valued curve $q(\varphi)$ on $S^3$,
+from which the framing and the remaining frame leg are recovered by
+conjugation alone:
+\begin{equation}
+\bm{U} = q\,\bm{e}_x\,\bar q, \qquad \bm{V} = q\,\bm{e}_z\,\bar q .
+\end{equation}
+Reconstructing from $q$ and nothing else reproduces the direct formulas
+to $3.3\times10^{-16}$, with $|q| = 1$ to $2.2\times10^{-16}$.  Four
+numbers, one object.  (This is Needham's construction,
+\cite{needham2017}~\S2.)
+
+\subsection{Laplace: where spin-$1/2$ actually enters}
+
+The four quaternion coordinates are not an arbitrary basis.  Restricted
+to $S^3 = SU(2)$ they are exactly the first nonzero eigenspace of the
+Laplace--Beltrami operator:
+\begin{equation}
+\Delta_{S^3}\, x_i = -3\, x_i,
+\qquad \text{degeneracy } (k+1)^2 = 4 \text{ at } k=1,
+\end{equation}
+measured here as $-3.00000$ on each of the four axes (max error
+$8\times10^{-7}$ by finite differences on $2\times10^4$ sampled points).
+Under $SU(2)_L \times SU(2)_R$ that eigenspace is the
+$(\tfrac12,\tfrac12)$ representation.
+
+\begin{remark}[The relocation]
+This is the honest home of spin-$1/2$ in this picture, and it is not the
+self-linking number.  Spin enters as a \emph{Laplace eigenspace on the
+quaternion sphere} --- i.e.\ through representation theory, which is
+precisely where L\'evy-Leblond~\cite{levyleblond1967} locates $g = 2$ as
+well.  \S5 showed the linking number contributes one parity bit;
+\S\ref{sec:moment} showed the geometry contributes $g = 1$.  What is left
+carrying the spin structure is the rep theory of $S^3$, which was never a
+geometric claim about the electron's shape.
 \end{remark}
+
+\subsection{The chain silently requires rationality}
+
+Worth recording because nothing above states it: the whole transformer
+presupposes a \emph{closed} curve, and a torus curve closes iff its
+winding ratio $q/p$ is rational.
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Winding ratio & Closes after \\
+\midrule
+$1/2$ \ \ (2,1) & 2 turns \\
+$2/3$ \ \ (3,2) & 3 turns \\
+$3/5$ \ \ (5,3) & 5 turns \\
+$1/\phi$ (golden) & never --- dense \\
+$1/\sqrt{2}$ & never --- dense \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At irrational slope the curve never closes, fills the torus densely, and
+has \emph{no} self-linking number and \emph{no} $\pi_1$ class at all.
+There is a real tension here worth naming: KAM theory makes the noble
+(most irrational, golden-ratio) windings the \emph{most} robust invariant
+tori under perturbation, while topological quantisation --- everything in
+this note --- requires the rational ones.  Maximal dynamical stability
+and topological quantisation pull in opposite directions on a torus.  Any
+model that wants both owes an account of which it is choosing.
+
+\section{Relation to the established literature}
+\label{sec:lit}
+
+The results of \S\S3--5 are not new mathematics.  They are a computation
+of known structure applied to this specific curve, and it is worth
+recording exactly which parts are textbook, because that is what makes
+the T4 verdict binding rather than merely our opinion.
+
+\paragraph{The parity law is known.}
+That the space of closed framed curves in $\mathbb{R}^3$ has exactly two
+path components, distinguished by the parity of the self-linking number,
+with the mechanism being the double cover $SU(2)\to SO(3)$, is stated
+outright by Needham~\cite{needham2017}, \S2.2, in the framed-curve
+setting.  The same fact appears in Kirby calculus as: a framing of a knot
+induces a spin structure on it, \emph{even} framings giving the bounding
+structure and \emph{odd} framings the non-bounding one
+(Gompf--Stipsicz~\cite{gompfstipsicz1999}, \S5.6--5.7).  The explicit
+quaternionic frame-Hopf map and the closed/anti-closed dichotomy used in
+\S4 are Needham's \S2.  For the C\u{a}lug\u{a}reanu decomposition the
+modern geometric reference is Dennis--Hannay~\cite{dennishannay2005}.
+Our \eqref{eq:lift} and Proposition~\ref{prop:spinorial} are that
+machinery evaluated on \eqref{eq:curve}; the value added is the specific
+evaluation, not the framework.
+
+\paragraph{Framing genuinely carries spin data --- at the level of a
+$\mathbb{Z}/2$.}
+This is real and load-bearing elsewhere in physics.  It is why
+Chern--Simons theory needs Atiyah's $2$-framings~\cite{atiyah1990} or
+$p_1$-structures rather than framings; the current careful treatment is
+Freed--Teleman~\cite{freedteleman2026}.  It is also why the topological
+route to \emph{half-integer angular momentum} works at all:
+Finkelstein--Rubinstein~\cite{finkelsteinrubinstein1968} and, in the form
+closest to the present note, Wilczek--Zee~\cite{wilczekzee1983}, where a
+\emph{linking number} (the Hopf term) produces fractional spin and
+statistics in $2{+}1$ dimensions.  So ``linking number $\to$ spin'' is a
+real mechanism.  What it produces is a phase and a statistics sector, not
+a gyromagnetic ratio.
+
+\paragraph{The step to $g$ is made nowhere.}
+A literature sweep for a peer-reviewed derivation of $g=2$ from a framed
+loop, ribbon, or self-linking structure returns nothing in the mainstream
+record.  Decisively in the other direction,
+L\'evy-Leblond~\cite{levyleblond1967} showed that $g=2$ follows from
+\emph{linearising the Schr\"odinger equation} --- it is a consequence of
+the spinor representation, and is neither relativistic nor topological in
+origin.  Any geometric account of $g$ has to beat that, and none does.
+
+The nearby speculative literature should be cited, if at all, with its
+standing attached.  Kelvin's vortex atoms are historical only.
+Battey-Pratt \& Racey (1980) is published but effectively uncited outside
+fringe work and should not be used as authority.  Schiller's strand model
+appears in peer-reviewed venues but its substance is self-published with
+no independent uptake.  Bilson-Thompson's braided preons are
+peer-reviewed and have modest uptake within loop quantum gravity, but the
+author states explicitly that the model does \emph{not} explain the
+origin of spin --- ribbon twist there encodes electric charge.  Hestenes'
+geometric-algebra reformulation of the Dirac equation is mathematically
+sound; the physical zitterbewegung reading is a minority interpretation
+and recovers $g=2$ from the Dirac equation, which already supplies it.
+
+\paragraph{One trap worth naming.}
+``Half-integer hopfion'' and ``fractional skyrmion'' in the 2024--2026
+condensed-matter literature mean a half-integer \emph{topological index},
+not half-integer \emph{angular momentum}.  These are not spin-$1/2$
+objects and must not be cited as precedent for one.
 
 \section*{Reproduction}
 
@@ -314,6 +635,65 @@ American Journal of Mathematics \textbf{91} (1969), 693--728.
 F.~B.~Fuller,
 \textit{The writhing number of a space curve},
 Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
+
+\bibitem{moffatt1969}
+H.~K.~Moffatt,
+\textit{The degree of knottedness of tangled vortex lines},
+Journal of Fluid Mechanics \textbf{35} (1969), 117--129.
+
+\bibitem{moffattricca1992}
+H.~K.~Moffatt and R.~L.~Ricca,
+\textit{Helicity and the C\u{a}lug\u{a}reanu invariant},
+Proceedings of the Royal Society A \textbf{439} (1992), 411--429.
+
+\bibitem{dennishannay2005}
+M.~R.~Dennis and J.~H.~Hannay,
+\textit{Geometry of C\u{a}lug\u{a}reanu's theorem},
+Proceedings of the Royal Society A \textbf{461} (2005), 3245--3254,
+\texttt{arXiv:math-ph/0503012}.
+
+\bibitem{needham2017}
+T.~Needham,
+\textit{Knot types of generalized Kirchhoff rods},
+\texttt{arXiv:1708.09124} (2017), \S2.2 and Thm.~3.7.
+
+\bibitem{gompfstipsicz1999}
+R.~E.~Gompf and A.~I.~Stipsicz,
+\textit{4-Manifolds and Kirby Calculus},
+Graduate Studies in Mathematics \textbf{20}, American Mathematical
+Society (1999), \S5.6--5.7.
+
+\bibitem{atiyah1990}
+M.~F.~Atiyah,
+\textit{On framings of 3-manifolds},
+Topology \textbf{29} (1990), 1--7.
+
+\bibitem{freedteleman2026}
+D.~S.~Freed and C.~Teleman,
+\textit{The role of $p_1$-structures in 3-dimensional Chern--Simons
+theories},
+\texttt{arXiv:2603.11291} (2026).
+
+\bibitem{finkelsteinrubinstein1968}
+D.~Finkelstein and J.~Rubinstein,
+\textit{Connection between spin, statistics, and kinks},
+Journal of Mathematical Physics \textbf{9} (1968), 1762--1779.
+
+\bibitem{wilczekzee1983}
+F.~Wilczek and A.~Zee,
+\textit{Linking numbers, spin, and statistics of solitons},
+Physical Review Letters \textbf{51} (1983), 2250--2252.
+
+\bibitem{levyleblond1967}
+J.-M.~L\'evy-Leblond,
+\textit{Nonrelativistic particles and wave equations},
+Communications in Mathematical Physics \textbf{6} (1967), 286--311.
+
+\bibitem{staley2010}
+M.~Staley,
+\textit{Understanding quaternions and the Dirac belt trick},
+European Journal of Physics \textbf{31} (2010), 467--478,
+\texttt{arXiv:1001.1778}.
 
 \bibitem{mobiusscrew2026}
 Flag Condensate Collaboration,

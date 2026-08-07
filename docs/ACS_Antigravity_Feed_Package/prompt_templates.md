@@ -43,7 +43,7 @@ Task:
 Run the consolidated verification suite and standalone extras to audit the state of the repository.
 
 Instructions:
-1. Locate the virtual environment at `/Users/coo-koba42/dev/.venv/bin/python`.
+1. Use a Python 3 interpreter with the repository requirements installed (`pip install -r code/acs_codebase/requirements.txt`); set `ACS_PYTHON` if it is not the default `python3`.
 2. Run the main pytest suite:
    pytest code/acs_codebase/ -v
 3. Execute the key standalone scripts under code/acs_codebase/extras/:

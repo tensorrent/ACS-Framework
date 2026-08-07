@@ -450,7 +450,7 @@ Parameters: 19+ (SM) → 6 (ACS Branch A) = 4 free + 2 calibrations
 ## 10. What To Do When Starting a New Session
 
 1. Read this skill to load the full context
-2. Check `references/framework_state.md` for current parameter ledger and open problems
+2. Check `docs/ACS_Corpus_Map.md` (parameter ledger, open problems) and `docs/Elimination_Ledger.md` (current kill log)
 3. Ask the user which cluster of problems to work on
 4. Apply adversarial compression: conjecture → test → compress or kill
 5. After any paper edit: compile → check refs → run tests → bundle

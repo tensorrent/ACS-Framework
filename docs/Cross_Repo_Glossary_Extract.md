@@ -9,10 +9,9 @@ Coined and specialized vocabulary used in this repository: what each named objec
 its domain and codomain, what it composes with, where it is defined, and whether it is
 built or specified.
 
-**This is an extract.** The canonical cross-repo catalogue — covering every tensorrent
-repository, with the full status ledger and the coverage/provenance notes — lives at
-`dev/docs/GLOSSARY.md`. Section numbers below are that document's numbering, so
-cross-references to sections not reproduced here resolve against the canonical copy.
+**This is an extract.** It is drawn from a larger internal catalogue that is not public.
+Section numbers below are that document's numbering, so cross-references to sections not
+reproduced here will not resolve within this repository.
 
 Compiled 2026-07-30 from source and spec files. Every entry cites its defining location.
 
@@ -34,7 +33,7 @@ These are intentional. Both senses are load-bearing and are **not** interchangea
 | Word | Sense A | Sense B | Distinguish by |
 |---|---|---|---|
 | **well** | *concept well* — a named attractor in router concept space, `{id, keywords[]}` | *reasoning well* — one of 8 thinking archetypes (Deductive, Skeptical, Narrative, Systems, Ethical, Compression, Exploratory, Grounding) | A is data in `wells.json`; B is an enum in `orchestrator.ts` |
-| **motif** | *memory motif* — a recurring event window promoted to a name | *color motif* — a 16-hex content address of a byte block | A is in `motif-memory.ts`; B is in `spectral_assembler.ts`. The repo flags the collision explicitly at `aiso/frontend/tools/well-port/PRD.md:198` |
+| **motif** | *memory motif* — a recurring event window promoted to a name | *color motif* — a 16-hex content address of a byte block | A is in `motif-memory.ts`; B is in `spectral_assembler.ts`. The collision is flagged explicitly in an internal design document |
 | **scroll** | *reasoning scroll* — append-only decision ledger | *storage scroll* — CRDT event log with frontier root | *codec scroll* — hash-linked chunk chain | All three are append-only and hash-chained; the storage sense adds CRDT merge, the codec sense adds Merkle proofs over 216-byte blocks |
 | **vixel** | *AISO routing sense* — signal carrier / Merkle path node | *sovereign_vixel sense* — a 32³ octree encoded as a single 32768-bit Tupper integer | A is active and typed; B is a 49-line aspirational prototype |
 | **ring** | *access ring* — R0–R4 visibility level resolved from auth factors | **Not** an algebraic ring | Always the access sense in `rings.ts`; the algebraic sense appears only in the FHE work as `F_P` |
@@ -59,17 +58,16 @@ These are intentional. Both senses are load-bearing and are **not** interchangea
 
 These are defects rather than design, and a reviewer should treat cross-repo claims about them with care.
 
-**EigenCharge / the F369 table.** At least three distinct constructions carry this name:
+**EigenCharge / the F369 table.** At least three distinct constructions carry this name across
+the program's codebases. They differ in table length, in the trace definition, and in the hash
+used to reduce it; the details are internal and are not reproduced here.
 
-| Where | Table size | Trace definition | Hash |
-|---|---|---|---|
-| `aiso/frontend` (Trinity) | 12,000 entries | positional — byte index rotated by position | FNV-64 |
-| `HashCloud-SPE/crates/consensus` | 369 entries, distinct primes | `Σ F369[byte % 369]` | FNV-64 (v1) / SipHash-2-4 keyed on `UBC_ID` (v2) |
-| `omniforge-full/python` | 512 entries | closed-form recurrence `t[i] = (i(i−1)/2)·3 − ⌊i/3⌋·6 + ⌊i/9⌋·9` | FNV-1a |
+The consequence is the part that matters to a reader of this repository: **charges produced by
+these constructions are not comparable**, and the "same word charges bit-identically across
+runtimes" contract holds only *within* the Trinity family (Rust / WASM / TypeScript), where it is
+enforced by an equivalence test.
 
-The closed-form recurrence is shared, the table lengths and the reduction are not. **Charges from these three are not comparable**, and the "same word charges bit-identically across runtimes" contract holds only *within* the Trinity family (Rust / WASM / TypeScript), where it is enforced by an equivalence test.
-
-**SPE.** Canonically **Symbolic Pointer Engine**. The expansion "Storage Proof Engine" appears once, in `koba42-prime-thread-scroll/docs/HASHCLOUD_PRIME_SCROLL_INTEGRATION.md`, and is a mis-expansion.
+**SPE.** Canonically **Symbolic Pointer Engine**. The expansion "Storage Proof Engine" appears once, in an internal integration document, and is a mis-expansion.
 
 **Ephemeral mask discipline.** The papers assert masks drawn uniformly and used once. Three implementations use a **constant mask `r = 1`** instead — `prime-field-bigint.ts:41`, `homomorphic-prime-fhe.ts:26`, `multi-key-threshold-fhe.ts:42` — and the H-PSI alert token hard-codes `alertMask = 0xabcdef123456n`. These do not satisfy the information-theoretic secrecy argument the papers state. Only `interactive-client-assisted-fhe.ts`, `multi-ring-shift-cipher.ts`, `homomorphic-csam-psi-matcher.ts`, and `unified-private-ai-platform.ts` take a caller-supplied uniform mask.
 

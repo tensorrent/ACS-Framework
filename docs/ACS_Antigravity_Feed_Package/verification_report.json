@@ -1,7 +1,7 @@
 {
   "timestamp": "2026-07-02T23:40:18Z",
-  "python_executor": "/Users/coo-koba42/dev/.venv/bin/python",
-  "base_directory": "/Users/coo-koba42/dev/acs-framework-public",
+  "python_executor": "python",
+  "base_directory": ".",
   "results": {
     "core_pytest_suite": {
       "status": "PASS",

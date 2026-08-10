@@ -3,48 +3,48 @@
   "runs": [
     {
       "name": "section9",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/section9_toy_kill_test.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/section9_stdout.txt",
+      "script": "code/issue7/section9_toy_kill_test.py",
+      "stdout_file": "docs/issue7_logs/section9_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "5e3d49a49ef53fde92fd29855912852c5a90a5a857c2d0010770a1642434f4f9",
       "stdout_lines": 13
     },
     {
       "name": "mechanism_4over3",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/mechanism_4over3_test.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/mechanism_4over3_stdout.txt",
+      "script": "code/issue7/mechanism_4over3_test.py",
+      "stdout_file": "docs/issue7_logs/mechanism_4over3_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "be1ff08ab3fbb8b8aebaff1ed5e504ff63ac20de661a31fb0d450e36c6ca3146",
       "stdout_lines": 19
     },
     {
       "name": "exhaustive",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/exhaustive_issue7.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/exhaustive_stdout.txt",
+      "script": "code/issue7/exhaustive_issue7.py",
+      "stdout_file": "docs/issue7_logs/exhaustive_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "ec79dc64dedc9aa392dfc0fc5c0d5f4714717028b4e9f65ac470073072e119ac",
       "stdout_lines": 5
     },
     {
       "name": "cross_model",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/cross_model_kill_pass.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/cross_model_stdout.txt",
+      "script": "code/issue7/cross_model_kill_pass.py",
+      "stdout_file": "docs/issue7_logs/cross_model_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "b69406e5f4f980ec9127a355208bb03e28077a9ff77dee36209b3d80c8f515d0",
       "stdout_lines": 5
     },
     {
       "name": "long_range",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/long_range_kill_pass.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/long_range_stdout.txt",
+      "script": "code/issue7/long_range_kill_pass.py",
+      "stdout_file": "docs/issue7_logs/long_range_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "51924950d9b4c577948f11df2cdeb7390a7124f11c3d9b04480230476298a6c3",
       "stdout_lines": 5
     },
     {
       "name": "section9_exact",
-      "script": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/code/issue7/section9_exact_kill_test.py",
-      "stdout_file": "/Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_logs/section9_exact_stdout.txt",
+      "script": "code/issue7/section9_exact_kill_test.py",
+      "stdout_file": "docs/issue7_logs/section9_exact_stdout.txt",
       "exit_code": 0,
       "stdout_sha256": "08469f911d19dd9bb7934067b1e5503b7e872eb7bd2aeecab1aedcb9673661fc",
       "stdout_lines": 13

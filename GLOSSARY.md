@@ -1119,7 +1119,9 @@ The append-only catalogue of falsifications, refractions, and survivals in the A
 
 ### FF06 series paper labels
 
-The corpus's internal naming scheme for its papers, used for cross-reference: FF06a (Colour from Gravity / Palatini bracket), FF06b and FF06b' (Riemann spectral side; Spectral Witness Survival and the Transport Obstruction), FF06c (the Inversion Arc), FF06e (the Shuffle Knife / Spectral Rigidity and Shuffled Spacing Discriminant), FF06g (The Geometry Engine), FF06h (When a Number Lies), FF06i (The Reversible Flattening), FF06J (the consolidating Monograph), FF06K (the Process Record), plus LF01 (the L-function finite-window localisation note) and N3 (the prime-gap operator).
+The corpus's internal naming scheme for its papers, used for cross-reference: FF06a (Colour from Gravity / Palatini bracket), FF06b and FF06b' (Riemann spectral side; Spectral Witness Survival and the Transport Obstruction), FF06c (the Inversion Arc), FF06e (the Shuffle Knife / Spectral Rigidity and Shuffled Spacing Discriminant), FF06f (Prime Carrier Position Form Factor), FF06i (The Reversible Flattening), FF06J (the consolidating Monograph), FF06K (the Process Record), K1 (The Elimination Ledger), Sigma (One Mechanism, Many Forms), plus LF01 (the L-function finite-window localisation note) and N3 (the prime-gap operator). There is no FF06d.
+
+**Collision warning — FF06g and FF06h each name two different papers.** Two lettering schemes grew in parallel and both are entrenched, so neither has been retired. Disambiguate with a subtree suffix: **FF06g-M** = Form/Function Relativity and **FF06h-M** = Scaled Invariance of Infinity and Zero (both in `papers/methodology/`); **FF06g-L** = The Geometry Engine and **FF06h-L** = When a Number Lies (both in `papers/later_FF06_series/`). A bare FF06g or FF06h is ambiguous and must be resolved from context. See `papers/README.md` for the canonical table.
 
 **Source:** papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex footer (lines 600-607); One_Mechanism_Many_Forms_Sigma.tex footer (lines 270-276)
 
@@ -1473,9 +1475,12 @@ The principle that the Jacobi identity [[A,B],C] + [[B,C],A] + [[C,A],B] = 0 ens
 | FF06 series paper labels | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
 | FF06e — see shuffle knife | [The spectral-Riemann program (Papers B and B-prime, with companions)](#the-spectral-riemann-program-papers-b-and-b-prime-with-companions) |
 | FF06f decomposition — see Positional duality | [Framework core](#framework-core) |
-| FF06g — see Form/Function Relativity | [Framework core](#framework-core) |
-| FF06g — see Geometry Engine | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
-| FF06h — see scaled invariance of the counting label | [The spectral-Riemann program (Papers B and B-prime, with companions)](#the-spectral-riemann-program-papers-b-and-b-prime-with-companions) |
+| FF06g (AMBIGUOUS — see collision warning under FF06 series paper labels) | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
+| FF06g-M — see Form/Function Relativity | [Framework core](#framework-core) |
+| FF06g-L — see Geometry Engine | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
+| FF06h (AMBIGUOUS — see collision warning under FF06 series paper labels) | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
+| FF06h-L — see When a Number Lies | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
+| FF06h-M — see scaled invariance of the counting label | [The spectral-Riemann program (Papers B and B-prime, with companions)](#the-spectral-riemann-program-papers-b-and-b-prime-with-companions) |
 | FF06i (parent paper) — see Reversible flattening (the thesis) | [Number representation and the FF06 thread](#number-representation-and-the-ff06-thread) |
 | First-class negative | [Verification and governance vocabulary](#verification-and-governance-vocabulary) |
 | Flag Condensate | [Physical models: the Flag Condensate and electron notes](#physical-models-the-flag-condensate-and-electron-notes) |

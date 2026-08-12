@@ -40,16 +40,47 @@ subset used by the root monograph.
 |------|------|
 | FF06e | `Spectral_Rigidity_Shuffle_Knife.tex` |
 | FF06f | `Prime_Carrier_Position_Form_Factor.tex` |
-| FF06g | `Form_Function_Relativity.tex` |
-| FF06h | `Scaled_Invariance_of_Infinity_and_Zero.tex` |
+| **FF06g-M** | `Form_Function_Relativity.tex` |
+| **FF06h-M** | `Scaled_Invariance_of_Infinity_and_Zero.tex` |
 | I7 | `Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex` |
 
 ## `later_FF06_series/` — chronological research thread
 
-Eight documents, including `The_Elimination_Ledger.tex` (K1) and
-`One_Mechanism_Many_Forms_Sigma.tex` (Σ). The four `*_disp.py` files here are
-display copies of engine code used in that thread; the verification code proper
-lives under [`../code/`](../code).
+| Role | File |
+|------|------|
+| **FF06g-L** | `The_Geometry_Engine.tex` |
+| **FF06h-L** | `When_a_Number_Lies.tex` |
+| FF06i | `The_Reversible_Flattening.tex` |
+| FF06J | `The_Reversible_Flattening_Monograph.tex` |
+| FF06K | `The_Reversible_Flattening_Process_Record.tex` |
+| K1 | `The_Elimination_Ledger.tex` |
+| Σ | `One_Mechanism_Many_Forms_Sigma.tex` |
+| — | `Three_Layer_Decomposition.tex` |
+
+The four `*_disp.py` files here are display copies of engine code used in that
+thread; the verification code proper lives under [`../code/`](../code).
+
+### ⚠️ The FF06 g/h collision — read before citing by letter
+
+Two independent lettering schemes grew in parallel, and **the bare labels
+`FF06g` and `FF06h` each name two different papers**:
+
+| Bare label | In `methodology/` | In `later_FF06_series/` |
+|---|---|---|
+| `FF06g` | Form/Function Relativity | The Geometry Engine |
+| `FF06h` | Scaled Invariance of ∞ and 0 | When a Number Lies |
+
+Both schemes are entrenched in existing documents, so neither is being
+retired. Instead, **use the suffixed forms**: `-M` for the `methodology/`
+paper, `-L` for the `later_FF06_series/` paper. A bare `FF06g` or `FF06h`
+should be read as ambiguous and resolved by looking at the surrounding
+subtree. Unsuffixed letters elsewhere in the series (e, f, i, J, K, K1, Σ)
+are unambiguous and need no qualifier.
+
+A second, resolved case: `FF06f` designates
+`methodology/Prime_Carrier_Position_Form_Factor.tex`. Some older text used it
+loosely for the three-layer decomposition, which is the separate
+`later_FF06_series/Three_Layer_Decomposition.tex`.
 
 ## Root-level
 

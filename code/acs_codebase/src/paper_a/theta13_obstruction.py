@@ -6,7 +6,8 @@ Paper A §6 — theta_13 discrepancy analysis
 ============================================
 The PMNS angle theta_13 is observed at 8.57 +/- 0.12 degrees.
 A naive Palatini-derived prediction theta_13 = arcsin(lambda_W / sqrt(2))
-gives ~9.18 degrees, a 5.2 sigma pull from observation.
+gives 9.216 degrees, a 5.38 sigma pull from observation
+(PDG theta_13 = 8.57 +/- 0.12 deg).
 
 Question: can cross-couplings between the bi-doublet and Delta_R
 shift the prediction to match data?

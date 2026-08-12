@@ -1,3 +1,24 @@
+"""
+SUPERSEDED (2026-08-12) -- do not use for paper figures.
+
+Replaced by scripts/generate_paper_figures.py, which writes into the repository
+tree instead of the authoring-machine path below, computes every data figure at
+run time, and additionally produces the six figures this script never covered
+(fig_closure_attractor, fig_torsion_tiers, fig_hero_nesting,
+fig_variance_scaling, fig_flow_field, fig_wronskian_heatmap).
+
+Two provenance defects in this file are the reason it was replaced:
+
+  * FIGURE 2 (fig_selection) plots np.random.uniform(0.55, 0.78, 100) -- a
+    synthetic histogram standing in for closure defects that were never
+    computed.  The replacement samples the Grassmannian for real.
+  * FIGURE 5 (fig_sign_reversal) hard-codes DI = +/-1.19, which contradicts the
+    +/-1.4986 the papers quote and that extras/integer_acs.py actually produces.
+
+Retained unmodified as the historical record of how the original figures were
+made.
+"""
+
 #!/usr/bin/env python3
 
 # Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):

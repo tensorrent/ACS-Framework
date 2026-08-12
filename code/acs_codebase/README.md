@@ -23,7 +23,7 @@ python -m pytest tests/ -v
 
 # Run individual paper sections
 python -m src.paper_a.branch_a_vacuum
-python -m src.paper_b.resolvent_renormalized
+python -m src.paper_b.renormalized_stability
 python -m src.paper_c.killing_orthogonality
 ```
 
@@ -49,9 +49,9 @@ Expected runtime: under 60 seconds on a standard laptop.
 | `paper_c/killing_orthogonality.py` | tr([X,Y]·X) = 0 (theorem + 1000-trial scaling) | Paper C §5.3 |
 | `paper_c/orthogonal_complement_probe.py` | dim B⊥ = n²-2 reconstruction algorithm | Paper C §5.4 |
 | `paper_c/spectral_taxonomy.py` | Three-class adjoint flow taxonomy | Paper C §5.5 |
-| `paper_c/holonomy_representation.py` | 2π inversion is representation-specific | Paper C §5.5 |
-| `paper_c/frenet_serret.py` | A³ = -(κ²+χ²)A — elliptic class instance | Paper C §5.5 |
-| `paper_c/core_rope_ring.py` | R³ = R — hyperbolic class instance | Paper C §5.5 |
+| `paper_c/spectral_taxonomy.py` (`classify_ad_T_BL`) | 2π inversion is representation-specific | Paper C §5.5 |
+| `paper_c/spectral_taxonomy.py` (`frenet_serret_check`) | A³ = -(κ²+χ²)A — elliptic class instance | Paper C §5.5 |
+| `paper_c/spectral_taxonomy.py` (`core_rope_check`) | R³ = R — hyperbolic class instance | Paper C §5.5 |
 
 ---
 
@@ -76,10 +76,11 @@ acs_codebase/
 │   ├── paper_a/                 # Phenomenology and parameter pruning
 │   ├── paper_b/                 # Spectral reinterpretation
 │   └── paper_c/                 # Algebraic closure framework
-├── tests/                       # pytest-compatible verification tests
-│   ├── paper_a/
-│   ├── paper_b/
-│   └── paper_c/
+├── tests/                       # pytest verification suite (flat; 42 assertions)
+│   ├── conftest.py
+│   ├── test_paper_a.py          # 14 assertions
+│   ├── test_paper_b.py          # 10 assertions
+│   └── test_paper_c.py          # 18 assertions
 ├── docs/
 │   ├── ledger.md                # Full status of every claim
 │   ├── numerical_pitfalls.md    # Scale-separation, cancellation, precision notes
@@ -118,7 +119,7 @@ Computations may be freely reproduced and extended; please cite when published.
 
 ## Known limitations
 
-1. **No FeynRules/UFO model.** Paper A's Lagrangian is specified in standard PS form (see `src/paper_a/lagrangian_specification.md`) but has not been exported to FeynRules. This is Phase D1 of the roadmap — estimated 1-2 months of postdoc work.
+1. **No FeynRules/UFO model.** Paper A's Lagrangian is specified in standard PS form (see `extras/task2_lagrangian.py` and `extras/task_D_lagrangian.py`) but has not been exported to FeynRules. This is Phase D1 of the roadmap — estimated 1-2 months of postdoc work.
 
 2. **No Coleman-Weinberg analysis.** The β_c → tan β analysis is tree-level only. Whether one-loop CW corrections fix tan β uniquely is open. Estimated 2-4 weeks of focused symbolic work.
 

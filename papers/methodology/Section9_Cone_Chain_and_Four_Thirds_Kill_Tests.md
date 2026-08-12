@@ -259,12 +259,12 @@ and is therefore not hash-anchored in narrative documents.
 
 ## 6. Limitations and residual risk
 
-- Float NumPy Section 9 scripts remain single-platform anchored.[^platform]
+- Float NumPy Section 9 scripts are byte-anchored to a single platform; their *verdicts* are now cross-platform confirmed.[^platform]
 - Exact Section 9 / integer ACS diagnostics are float-free on the decision path.
 - Finite-size and finite-window coverage can miss alternate regimes.
 - No claim is made beyond tested models and tested parameter windows.
 
-[^platform]: Float NumPy Section 9 scripts (exact diagonalization / commutator norms) remain single-platform anchored (macOS 15.3.2 arm64, Python 3.14.6, NumPy 2.5.0), with same-machine byte-identical reruns recorded in `docs/issue7_verification_report.json`. The exact Section 9 kill test (`section9_exact_kill_test.py`) and the ACS integer automaton (`integer_acs.py`) use integer / `Fraction` on the decision path; for those diagnostics, cross-machine IEEE float drift is not a concern and a second platform is not required. The 4/3 lattice/identity checks are likewise exact.
+[^platform]: Float NumPy Section 9 scripts (exact diagonalization / commutator norms) are byte-anchored to one machine (macOS 15.3.2 arm64, Python 3.14.6, NumPy 2.5.0), with same-machine byte-identical reruns recorded in `docs/issue7_verification_report.json`. A second-platform replication (Linux x86_64, Python 3.11, NumPy 2.4; `docs/issue7_linux_replication/`) reproduces every decision-level output exactly (all `supports_chain` booleans and support rates identical; float values agree to ~1e-12), and the exact-arithmetic artifact is byte-identical across the two platforms — the tolerance-based cross-platform anchor this limitation called for. The exact Section 9 kill test (`section9_exact_kill_test.py`) and the ACS integer automaton (`integer_acs.py`) use integer / `Fraction` on the decision path; for those diagnostics, cross-machine IEEE float drift is not a concern and a second platform is not required. The 4/3 lattice/identity checks are likewise exact.
 
 ## 7. Conclusion
 

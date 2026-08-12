@@ -17,7 +17,7 @@
 | FF06b' | Spectral Witness Survival and the Character of the Transport Obstruction | Number theory + bridge | 13 | New |
 | FF06e | Spectral Rigidity and Shuffled Spacing Discriminant | Methodology + zeros | 4 | New |
 | FF06f | Prime carrier position form factor (`papers/methodology/Prime_Carrier_Position_Form_Factor.tex`); the three-layer decomposition is the separate `papers/later_FF06_series/Three_Layer_Decomposition.tex` | Number theory | 4 | New |
-| FF06g | Form/Function Relativity: The Reference Frame Is the Perspective | Methodology + zeros | 4 | New |
+| FF06g-M | Form/Function Relativity: The Reference Frame Is the Perspective (`papers/methodology/`; **not** FF06g-L = The Geometry Engine in `papers/later_FF06_series/` — see `papers/README.md`) | Methodology + zeros | 4 | New |
 | AISO | Full-Stack Design Invariables + TENT v10 | Engineering / trust | — | Living |
 
 ---

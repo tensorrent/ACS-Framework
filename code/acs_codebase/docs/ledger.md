@@ -21,7 +21,7 @@ Categories:
 | α₂ = 0 forbidden by representation theory | Rigorous | T^A Φ = 0 for Φ ~ (1,2,2) | `src/paper_a/branch_a_vacuum.py` (docstring) |
 | Reduced potential admits stable vacuum | Rigorous | decimal-precision Cramer's rule, 9 alpha_1 values | `src/paper_a/branch_a_vacuum.py` |
 | Custodial Δρ ~ 4×10⁻²⁹ at 1-loop heavy | Rigorous | safety factor ~5×10²⁴ vs bound | `src/paper_a/branch_a_vacuum.py` |
-| λ_eff = 2√3/27 within 1.01% of λ_SM | Rigorous | direct comparison with m_H = 125.25 | `src/paper_a/branch_a_vacuum.py` |
+| λ_eff = 2√3/27 within 0.84% of λ_SM | Rigorous | direct comparison with m_H = 125.25, v = 246.22 GeV (PDG); the 1.01% figure quoted previously used v = 246 | `src/paper_a/branch_a_vacuum.py` |
 | β_c at tree level forces tan β = ±1 | Rigorous | symbolic extremization → cos(2β) = 0 | `src/paper_a/betac_tan_beta.py` |
 | M_u = M_d when κ_1 = κ_2 (no-go) | Rigorous | symbolic + numerical, both interpretations of h̃/h | `src/paper_a/yukawa_no_go.py` |
 | θ_13 not fixable by cross-couplings | Rigorous | v_R requirement conflicts with proton decay | `src/paper_a/theta13_obstruction.py` |

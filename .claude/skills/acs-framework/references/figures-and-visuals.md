@@ -2,57 +2,69 @@
 
 ---
 
-## 1. ⚠️ CRITICAL: every checked-in figure PDF is a placeholder
+## 1. Figure build (rebuilt 2026-08-12)
 
-**Verified independently.** All **27 PDFs** across `papers/figures/` (12) and
-`papers/core_trilogy/figures/` (15) are **87,577 bytes each** and reduce to just **two MD5 hashes**:
+**Build command:** `python3 scripts/generate_paper_figures.py` (needs `matplotlib`, which is *not*
+in `requirements.txt`). Writes into `papers/figures/` (12 files) and
+`papers/core_trilogy/figures/` (15 — the same 12 plus the three Paper-B figures). The build is
+**byte-reproducible**: each figure is rendered once with the PDF `CreationDate` suppressed and
+copied, so the two directories stay byte-identical and reruns produce identical bytes.
 
-- `eb258498205fd89e518c1df6e76720d8` — **24 files**
-- `78214c6a67347a0ebaadd7f39e284b90` — **3 files** (`fig_flow_field`, `fig_variance_scaling`, `fig_wronskian_heatmap`, core_trilogy only)
+Every figure declares a provenance kind:
 
-Decompressing the content streams shows **all 27 are the same document** — a compiled multi-page
-LaTeX *paper*, not a figure. Extracted text fragments read `sl(4,R)`, `⟨2,3⟩`, `h̃/h = 2/3`,
-`T_{B−L} = diag(1/3,1/3,1/3,−1)`, `SU(5)`, `SO(10)` — i.e. a build of
-**`papers/notes/Pythagorean_Lattice_Limits.tex`**. The two hashes differ in exactly **3,327 bytes**
-inside one content stream — two near-identical builds of the same paper.
+| Kind | Count | Meaning |
+|---|---|---|
+| `computed` | 12 | every plotted number produced at run time from the repo's verified sources (`src/common/lie_algebra`, the committed Odlyzko zeros, exact rational arithmetic) |
+| `tabulated` | 1 | `fig_chirality` — quoted from the monograph torsion-lattice table, source named |
+| `schematic` | 2 | `fig_layers_cycle`, `fig_hero_nesting` — diagrams, no numerical claim beyond labels |
 
-**Consequences:**
-- **No real figure content exists in the repo.** Compiling any paper today would embed the Pythagorean-lattice paper 9–13 times.
-- The 12 shared filenames are duplicated **byte-identically** between the two directories; `papers/core_trilogy/figures/` additionally holds the three Paper-B figure names.
-- Every paper declares `\graphicspath{{figures/}}`. **Paper C has a graphicspath but no `\includegraphics` at all** — it is genuinely figure-free.
-- All generator scripts write to `OUTDIR = "/home/claude/figures"` — an absolute path **outside the repo** — so no script here ever populates `papers/figures/`.
+**Values the build reproduces** (from its own run notes): D(𝔰𝔩(3,ℝ)) = 3.18×10⁻¹⁶ against a minimum
+of **0.508** over 2,000 random 8-dim subspaces · Z(γ)=1 at **γ = 0.274067** · torsion couplings
+{0, 32/9} on the A/S basis and 8/9 on the EW-adapted J/K generators (ratio **0:1:4**) · ΔI =
+−0.00006, −0.00006, **−1.49863, +1.49874** (obtained by invoking `extras/integer_acs.py`, not
+re-derived) · variance-scaling ratios 2.722 / 4.329 / 6.916 / 10.938, max deviation from X^{0.2}
+**1.13%** (Paper B says <2%).
 
-**Partially self-documented:** `docs/PaperB_changelog_extended.md:88` records "some have known empty
-boxes — `fig_variance_scaling`, `fig_flow_field`, `fig_wronskian_heatmap` were missing in v2M too",
-and lists "Replace placeholder figures" as outstanding work item 1. **The changelog does not note
-that the other 12 are also placeholders.**
+### What was wrong before
 
-**If asked to fix figures:** regenerate from `code/acs_codebase/extras/generate_figures.py`,
-`ricci_flow.py`, and `colour_geometry.py` after repointing `OUTDIR`; three (`fig_closure_attractor`,
-`fig_torsion_tiers`, `fig_hero_nesting`) and the three Paper-B figures have **no generator at all**
-and would need writing from scratch.
+Until 2026-08-12 **all 27 figure PDFs were placeholders**: identical 87,577-byte builds of
+`Pythagorean_Lattice_Limits.tex` (two variants, 24 + 3 by MD5, differing in 3,327 bytes).
+Compiling any paper embedded that note 9–13 times. Only three were previously documented as
+missing (`PaperB_changelog_extended.md`). The old generator
+(`code/acs_codebase/extras/generate_figures.py`, now carrying a superseded banner) wrote to
+`/home/claude/figures` — outside the repo — covered only 9 of the 15 figures, and carried two
+provenance defects that were fixed rather than ported:
 
----
+- `fig_selection` plotted `np.random.uniform(0.55, 0.78, 100)` — a **synthetic** histogram standing in for closure defects that were never computed.
+- `fig_sign_reversal` hard-coded ΔI = ±1.19, contradicting the ±1.499 the papers quote.
+
+### Known open item
+
+**O-A — Wronskian magnitudes.** Recomputing `fig_wronskian_heatmap` under convention C2
+(φ_k = cos(γ_k ln x)/√x, t = 1, σ = ½) gives |W| ∈ [2.5×10⁻², 1.03×10¹]; Paper B states
+[8.6×10⁻⁵, 0.19]. The structural claims the figure carries — antisymmetry, **no zero entry** —
+hold either way. The scale question is a normalisation the plotting script cannot settle; it is
+logged in the audit rather than silently reconciled.
 
 ## 2. Figure inventory
 
 | # | Filename | Used by (paper : line, width) | Generator |
 |---|---|---|---|
-| 1 | `fig_layers_cycle` | Palatini:480 (0.85tw); Form_Function:399 — `fig:layers` | `extras/generate_figures.py` FIG 6 |
+| 1 | `fig_layers_cycle` | Palatini:480 (0.85tw); Form_Function:399 — `fig:layers` | build script (schematic) |
 | 2 | `fig_ricci_flow` | Palatini:878; Form_Function:793 — `fig:ricci` | `extras/ricci_flow.py:461` |
-| 3 | `fig_closure_attractor` | Palatini:1087 (0.75tw) — `fig:selection` | **none** |
-| 4 | `fig_selection` | Form_Function:1560 (0.65tw) — `fig:selection` | `generate_figures.py` FIG 2 |
-| 5 | `fig_colour_weights` | Palatini:1199; Form_Function:1648 — `fig:colour-weights` | `generate_figures.py` FIG 1 |
+| 3 | `fig_closure_attractor` | Palatini:1087 (0.75tw) — `fig:selection` | build script (new in 2026-08-12 build) |
+| 4 | `fig_selection` | Form_Function:1560 (0.65tw) — `fig:selection` | build script (computed) |
+| 5 | `fig_colour_weights` | Palatini:1199; Form_Function:1648 — `fig:colour-weights` | build script (computed) |
 | 6 | `fig_nuclear_geometry` | Palatini:1252; Form_Function:1701 — `fig:nuclear` | `extras/colour_geometry.py:344` |
 | 7 | `fig_rep_gallery` | Palatini:1265; Form_Function:1714 — `fig:rep-gallery` | `extras/colour_geometry.py:281` |
-| 8 | `fig_barbero_immirzi` | Palatini:1642; Form_Function:1994 — `fig:BI` | `generate_figures.py` FIG 4 |
-| 9 | `fig_torsion_tiers` | Palatini:2646 (0.75tw) — `fig:torsion-tiers` | **none** |
-| 10 | `fig_hero_nesting` | Palatini:2847 (0.92tw) — `fig:hero` | **none** |
-| 11 | `fig_chirality` | Form_Function:1232 — `fig:chirality` | `generate_figures.py` FIG 3 |
-| 12 | `fig_sign_reversal` | Riemann_Spectral:494; Form_Function:1270 — `fig:sign-reversal` | `generate_figures.py` FIG 5 |
-| 13 | `fig_variance_scaling` | Riemann_Spectral:840 — `fig:variance` | **none** (documented placeholder) |
-| 14 | `fig_flow_field` | Riemann_Spectral:937 — `fig:flow` | **none** (documented placeholder) |
-| 15 | `fig_wronskian_heatmap` | Riemann_Spectral:978 — `fig:wronskian` | **none** (documented placeholder) |
+| 8 | `fig_barbero_immirzi` | Palatini:1642; Form_Function:1994 — `fig:BI` | build script (computed) |
+| 9 | `fig_torsion_tiers` | Palatini:2646 (0.75tw) — `fig:torsion-tiers` | build script (new in 2026-08-12 build) |
+| 10 | `fig_hero_nesting` | Palatini:2847 (0.92tw) — `fig:hero` | build script (new in 2026-08-12 build) |
+| 11 | `fig_chirality` | Form_Function:1232 — `fig:chirality` | build script (computed) |
+| 12 | `fig_sign_reversal` | Riemann_Spectral:494; Form_Function:1270 — `fig:sign-reversal` | build script (computed) |
+| 13 | `fig_variance_scaling` | Riemann_Spectral:840 — `fig:variance` | build script (new in 2026-08-12 build) |
+| 14 | `fig_flow_field` | Riemann_Spectral:937 — `fig:flow` | build script (new in 2026-08-12 build) |
+| 15 | `fig_wronskian_heatmap` | Riemann_Spectral:978 — `fig:wronskian` | build script (new in 2026-08-12 build) |
 
 ### What each is meant to show
 
@@ -64,18 +76,17 @@ confinement.
 
 **2. `fig_ricci_flow`** — Six panels. Top: Ricci scalar R for the sphere (R>0), flat torus (R=0),
 Poincaré disk (R<0). Bottom: Ricci flow from a "bumpy sphere" to a uniformised surface, with the
-convergence curve showing **curvature variance reduced 41× in 800 steps**. "Ricci flow is the ACS
+convergence curve showing monotone decay. ⚠️ The "41×" quoted in the papers is a **standard deviation** ratio (variance ≈1.7×10³) — corrected 2026-08-12; the figure no longer asserts a factor. "Ricci flow is the ACS
 evolving toward information balance."
 
 **3. `fig_closure_attractor`** — Closure-defect histogram for **2,000** randomly sampled 8-dim
 subspaces of 𝔰𝔩(4,ℝ). 𝔰𝔩(3,ℝ) at **D = 1.4×10⁻¹⁶** (red line); minimum random defect **0.50** (gold
 dashed). "The gap of 10¹⁵ … is consistent across 50,000 samples (not all shown)."
 
-**4. `fig_selection`** — The monograph's smaller-N version of the same plot: **100** samples, none
-below **0.54**. ⚠️ **Both #3 and #4 carry `\label{fig:selection}`** — the same claim at two different
-sample counts and thresholds. Worse: the generator draws 100 uniform samples in [0.55, 0.78] with
-`np.random.seed(42)` and an axvline at D = 0 — **the histogram is synthetic/illustrative, not the
-actual sampled defects.**
+**4. `fig_selection`** — The monograph's smaller-N version: the first **100** samples of the same
+canonical-seed draw, minimum **0.578**. ⚠️ Both #3 and #4 carry `\label{fig:selection}`, in
+different documents (no clash, but easy to confuse). The synthetic-histogram defect is **fixed**:
+both now sample the Grassmannian for real.
 
 **5. `fig_colour_weights`** — Weight diagram of the fundamental **3** of 𝔰𝔲(3): weights at (1,0) red,
 (−1,1) blue, (0,−1) green, plus a hollow "White (0,0)" marker at the origin (the lepton). Axes h₁,
@@ -99,10 +110,12 @@ correlations introduced by the **global singlet projection**" (SU(2) Chern–Sim
 constraint**." Both texts are in the repo; Paper A explicitly says the monograph's local mechanism
 *fails*.
 
-**9. `fig_torsion_tiers`** — All 15 generators of 𝔰𝔩(4,ℝ) under ‖[T_{B−L}, X]‖²: Tier 0 (zero
-coupling, 9 generators including the colour 𝔰𝔲(3) block) vs Tier 2 (coupling 32/9, 6 generators
-connecting colour and lepton sectors). Each antisymmetric A_{i3} with K = −16 is matched by a
-symmetric S_{i3} with K = +16 ⇒ exact vacuum-energy cancellation. ⚠️ `Editorial_Audit:239` flags a
+**9. `fig_torsion_tiers`** — Now **two panels**. Left: all 15 generators under ‖[T_{B−L}, X]‖² on
+the eigenvector-adapted A/S basis — Tier 0 (9 generators) vs Tier 2 (32/9, 6 generators). Right:
+the same couplings on the EW-adapted J_i, K_i, which are equal-weight mixtures and so carry
+¼·32/9 = 8/9, giving the ratio **0:1:4**. The two readings are consistent; 8/9 is not a third
+eigenvalue. Each antisymmetric A_{i3} with K = −16 is matched by a
+symmetric S_{i3} with K = +16 ⇒ exact vacuum-energy cancellation. *(Resolved 2026-08-12; `Editorial_Audit:239` had flagged a
 **three-way contradiction**: body text says "exactly three tiers", this caption says "two tiers", the
 abstract advertises a 0:1:4 (three-value) hierarchy.
 
@@ -118,23 +131,23 @@ with Atiyah–Singer for uniform torsion density. Generator hard-codes sizes [8,
 indices [16,40,72,120,176,320].
 
 **12. `fig_sign_reversal`** — Four-bar chart of ΔI under f↔g swap on ℤ₁₆, exact integer arithmetic:
-Uncoupled 0.0, Symmetric 0.0, Asymmetric (f=x², g=|x−8|) −1.19, Swapped +1.19. ⚠️ **The generator
-plots ±1.19 while the paper text and glossary quote the automaton at ∓1.499.**
+Uncoupled 0.0, Symmetric 0.0, Asymmetric (f=x², g=|x−8|) −1.19, Swapped +1.19. ✅ **Fixed 2026-08-12**: the figure now invokes `extras/integer_acs.py` and plots what it
+returns (−1.49863 / +1.49874).
 
-**13. `fig_variance_scaling`** *(never generated)* — Variance ratio Var[T₁₂](σ=0.6)/Var[T₁₂](σ=0.5)
+**13. `fig_variance_scaling`** *(created 2026-08-12)* — Variance ratio Var[T₁₂](σ=0.6)/Var[T₁₂](σ=0.5)
 with 50 Odlyzko zeros over three decades of X; data vs the predicted X^{0.2} dashed line, matching
 to better than 2%.
 
-**14. `fig_flow_field`** *(never generated)* — Tensor flow for γ₁ = 14.13. Left: at σ = ½ a closed
+**14. `fig_flow_field`** *(created 2026-08-12)* — Tensor flow for γ₁ = 14.13. Left: at σ = ½ a closed
 loop (pure rotation, no radial drift). Right: at σ = 0.7 an outward spiral. **This is the missing
 visual for the "unique center manifold" result** — arguably the most load-bearing absent figure in
 the repo.
 
-**15. `fig_wronskian_heatmap`** *(never generated)* — W[φ_k, φ_j] at t=1, σ=½ for the first 20 zeros;
+**15. `fig_wronskian_heatmap`** *(created 2026-08-12)* — W[φ_k, φ_j] at t=1, σ=½ for the first 20 zeros;
 antisymmetric structure visible, no entry zero, checkerboard from difference-frequency sign
 alternation.
 
-### Figures generated by the codebase but referenced by no paper
+### Figures generated by heritage scripts but referenced by no paper
 `fig_russell_spiral`, `fig_quantum_acs`, `fig_devolution`, `fig_koide_rg_flow`, `fig_newton_qcd`,
 `fig_mersenne_bridge`, `fig_colour_3d`, `fig_higgs_landscape`, `fig_higgs_sombrero` — all in
 `code/acs_codebase/extras/`, none present as PDFs. Separately,

@@ -41,7 +41,7 @@ for f in *.py; do python3 "$f"; done
 | `theta0_cabibbo.py` | tan θ₀ = λ_W to 0.23% | A §6.1 |
 | `koide_rg_flow.py` | Koide ratio stable under 1-loop RG | A §6.5 |
 | `higgs_potential.py` | Sombrero potential from ΔI landscape | A §6.6 |
-| `higgs_mass_ratio.py` | m_H = 124.7 GeV (0.42% match) | A §6.6 |
+| `higgs_mass_ratio.py` | m_H/v = 0.506306 vs 0.508691 (0.47% match, m_H = 124.66 GeV); the closed form is selected by a 17-candidate search, not derived | A §6.6 |
 | `higgs_derivation.py` | λ = 2√3/27 Koide projection | A §6.6 |
 | `neutrino_honest.py` | See-saw product formula (0.1%) | A §6.3 |
 | `neutrino_seesaw_v2.py` | M_R ≈ 49 keV prediction | A §6.3 |

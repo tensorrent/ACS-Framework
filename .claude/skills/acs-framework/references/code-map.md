@@ -286,7 +286,7 @@ seeding, but are harmless — the results are seed-independent theorems.
 
 ## 7. ⚠️ Broken, stale, or contradicting
 
-### Stale README references (`code/acs_codebase/README.md`)
+### Stale README references (`code/acs_codebase/README.md`) — **all fixed 2026-08-12**
 - Lists `paper_c/holonomy_representation.py`, `frenet_serret.py`, `core_rope_ring.py` — **none exist**; those checks are functions inside `spectral_taxonomy.py`.
 - Quick-start says `python -m src.paper_b.resolvent_renormalized` — **no such module** (it's `renormalized_stability`).
 - Shows `tests/paper_a/`, `tests/paper_b/`, `tests/paper_c/` subdirectories — tests are **flat files**.
@@ -294,11 +294,11 @@ seeding, but are harmless — the results are seed-independent theorems.
 - Says extras is "~100 scripts"; actual **109**. The top-level README says "~130" — also off.
 
 ### Numbers that disagree with their own docs
-- `theta13_obstruction.py` docstring: "≈9.18 degrees, a 5.2σ pull". Code prints **9.216° / +5.38σ**.
-- `ledger.md`: "λ_eff within **1.01%**". Code prints **0.84%** with the canonical v = 246.22 (1.01% is the v=246 value, which the docstring itself calls a rounding artefact).
-- `docs/README_verification_suite.md`: `higgs_mass_ratio.py` → "0.42% match". Actual run: **0.47%**.
+- ~~`theta13_obstruction.py` docstring "≈9.18 degrees, a 5.2σ pull"~~ **fixed 2026-08-12** to 9.216° / 5.38σ (matching the code); Paper A's table likewise updated to 5.4σ.
+- ~~`ledger.md` "λ_eff within 1.01%"~~ **fixed 2026-08-12** to **0.84%** (canonical v = 246.22); the row now records that 1.01% was the v = 246 value.
+- ~~`README_verification_suite.md` "0.42% match"~~ **fixed 2026-08-12** to **0.47%**, with the 17-candidate search disclosed in the same row.
 - `barbero_immirzi_correct.py` claims γ = 0.274067 "matches the Meissner partition function approach" three lines after printing "Commonly cited Meissner value: γ ≈ 0.2375" and "Discrepancy: 0.036567."
-- **⚠️ The top-level README bills `koide_clebsch_gordan.py` as "Koide Lepton Mass Relation (0.001% fit)". The script's *own output is a failure*** — best θ₀ = 3.86°/3.92° vs the 12.73° target, self-annotated "CONCESSION CONFIRMED (T2 derived negative)". The 0.001% refers to Koide's *empirical* formula, not to anything this script derives. **A reader running it will see the opposite of what the README advertises.**
+- ~~The top-level README billed `koide_clebsch_gordan.py` as a clean "0.001% fit"~~ **fixed 2026-08-12**: it now states both the confirmed part (Koide's *empirical* relation at 0.001%) and the logged negative (θ₀ = 3.86°/3.92° vs 12.73°, `CONCESSION CONFIRMED (T2 derived negative)`).
 
 ### Selection-by-search dressed as derivation
 - `higgs_mass_ratio.py` computes a bracket-based m_H/v, gets a poor answer, then searches **17 hand-written closed forms** in λ_W and 4/3 and reports the winner as "THE RESULT / ← EXACT". `higgs_derivation.py` exists specifically to try (and fail) to derive that formula. **Treat as numerology, not derivation.**
@@ -358,7 +358,7 @@ discrepancy with Paper A's ledger (audit M3).
 
 Three-category ledger (Rigorous / Conjectural / Disproved), one row per claim.
 
-- **Paper A (17 rows).** Rigorous: Theorem C (residual 0.00e+00); 5 quartics pre-pruning; Palatini locks (cited, not re-derived); α₂ = 0 (docstring-level evidence only); stable vacuum over 9 α₁; Δρ ~4e-29; λ_eff within 1.01% (see §7); β_c ⇒ tan β = ±1; M_u = M_d no-go; θ₁₃ not rescuable; TM1/TM2 fail; Branch A locks at 6 inputs. Conjectural: CW fixing tan β (2–4 weeks); h̃/h = 2/3 matrix-vs-invariant interpretation; FeynRules export.
+- **Paper A (17 rows).** Rigorous: Theorem C (residual 0.00e+00); 5 quartics pre-pruning; Palatini locks (cited, not re-derived); α₂ = 0 (docstring-level evidence only); stable vacuum over 9 α₁; Δρ ~4e-29; λ_eff within 0.84% (corrected 2026-08-12; see §7); β_c ⇒ tan β = ±1; M_u = M_d no-go; θ₁₃ not rescuable; TM1/TM2 fail; Branch A locks at 6 inputs. Conjectural: CW fixing tan β (2–4 weeks); h̃/h = 2/3 matrix-vs-invariant interpretation; FeynRules export.
 - **Paper B (12 rows).** Rigorous: simple poles at γ_k; the resolvent identity **explicitly labelled "tautological"**; Δ_norm bounded under RH (forward direction, von Koch 1901); off-critical divergence; BK counting. **Disproved:** Wronskian as Poisson bracket, and consequently the **plasma-Hamiltonian foundation** (demoted to analogy). Open: BK exact spectrum (26+ yrs), HP construction (100+ yrs), the converse.
 - **Paper C (18 rows).** All the taxonomy/orthogonality results. **Disproved:** universal "2π inversion at three steps" — representation-specific.
 - **8 first-class negative results:** α₂ forbidden; β_c excluded at tree level; equal-VEV forbidden; Wronskian ≠ Poisson; 2π inversion not universal; TM1/TM2 rejected; θ₁₃ rescue impossible; **θ₀ not derivable from the Palatini bracket algebra** ([h,ω] spans all of 𝔰𝔩(4), rank 15).

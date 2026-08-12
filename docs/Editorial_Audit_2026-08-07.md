@@ -884,3 +884,101 @@ Apparent inconsistency between Table 3's caption ('All z-scores fall in [-0.7, +
 *Suggested fix:* State explicitly that the caption range refers to N = 5 and that the -0.71 value is from the N = 7 run.
 
 **Resolution:** Fixed in the 2026-08-07 full pass (see the corresponding commit for the exact edit).
+
+---
+
+## Coherence pass — 2026-08-12
+
+A follow-up pass addressing flags raised by a full-corpus re-read. Unlike the
+2026-08-07 findings, several of these are **substantive corrections**, not
+editorial consistency: two mislabelled quantities and one inflated count had
+propagated from source code into paper claims.
+
+### Substantive corrections
+
+**C1. Ricci-flow "41×" was a standard deviation reported as a variance.**
+`extras/ricci_flow.py` computed `R_initial_std / R_final_std` and correctly
+labelled it "std reduced 41.1x" at one print site, then reprinted the *same
+quantity* as "Curvature variance reduced 41.1x in 800 steps" at another. That
+second string is the one that propagated into Paper A §3.3, the monograph, the
+`fig_ricci_flow` caption, and two places in Paper C. Corrected everywhere to
+"standard deviation reduced 41×"; the corresponding variance reduction is
+≈1.7×10³. The script now prints both quantities under their correct names.
+*Files:* `extras/ricci_flow.py`, `Palatini_Gauge_Attractor.tex`,
+`Form_Function_and_Asymmetry.tex`, `Holographic_Spectral_Inversion.tex` (×2).
+
+**C2. The PDG comparison table counted two non-PDG rows.**
+γ_BI was tabulated with a "PDG" value of 0.274 ± 0.003 — it is not a
+PDG-measured quantity; the comparison is against the Meissner *theoretical*
+value under the same counting prescription. θ_QCD was tabulated against an
+experimental *bound*, not a measurement. Both were included in the headline
+"seven of the nine tabulated observables are within 2σ". Corrected: the two rows
+are separated into a labelled "reference comparisons (not PDG measurements)"
+block with footnotes, and the count is restated as **five of the seven
+PDG-measured observables within 2σ**, with m_H (3.2σ) and θ₁₃ (5.4σ) as the two
+exceptions. This supersedes the suggested fix under M20, which proposed
+"seven of nine".
+*File:* `Palatini_Gauge_Attractor.tex`.
+
+**C3. All 27 figure PDFs were placeholders.** Every file in `papers/figures/`
+and `papers/core_trilogy/figures/` was an identical 87,577-byte build of
+`Pythagorean_Lattice_Limits.tex` (two variants, 24 + 3 by MD5, differing in
+3,327 bytes). Compiling any paper embedded that note 9–13 times. Only three
+(`fig_variance_scaling`, `fig_flow_field`, `fig_wronskian_heatmap`) were
+previously documented as missing, in `PaperB_changelog_extended.md`. Replaced by
+`scripts/generate_paper_figures.py`, which writes into the repository tree
+(the old generator wrote to `/home/claude/figures`, outside the repo), produces
+all 15 figures including the six that had no generator at all, and is
+byte-reproducible across runs. Two provenance defects in the old generator were
+fixed rather than carried over:
+  * `fig_selection` plotted `np.random.uniform(0.55, 0.78, 100)` — a synthetic
+    histogram standing in for closure defects that were never computed. Now
+    sampled from the real Grassmannian via `src/common/lie_algebra`.
+  * `fig_sign_reversal` hard-coded ΔI = ±1.19, contradicting the ±1.499 the
+    papers quote. The figure now invokes `extras/integer_acs.py` and plots what
+    it returns (−1.49863 / +1.49874).
+Each figure now declares its provenance as `computed` (12), `tabulated` (1), or
+`schematic` (2). The superseded generator is retained with a banner.
+
+**C4. The torsion hierarchy was stated three inconsistent ways.** Paper A's
+abstract advertised "0:1:4", its body said "exactly two tiers", the figure
+caption said two tiers, and Paper C asserted that 0:1:4 "follows from the
+T_BL eigenvalue spectrum" — the reading Paper A disclaimed. All four are now
+reconciled by an explicit computation rather than a wording choice: the spectrum
+of ad_{T_BL} is {0⁽⁹⁾, (±4/3)⁽³⁾}, so on **eigenvectors** the coupling takes
+exactly two values, 0 and 32/9. The electroweak generators J_i, K_i are *not*
+eigenvectors — each is an equal-weight mixture of one Tier-0 and one Tier-2
+generator, e.g. J₁ = (A₀₁ + A₂₃)/2 — and therefore inherits
+¼ · 32/9 = 8/9, giving 0 : 8/9 : 32/9 = **0 : 1 : 4**. Both statements are
+correct about different generator sets; 8/9 is not a third eigenvalue. Verified
+in exact rational arithmetic (`scripts/generate_paper_figures.py`,
+`torsion_couplings`); `fig_torsion_tiers` now shows both readings side by side.
+*(Supersedes M19.)*
+
+### Consistency corrections
+
+| # | Finding | Resolution |
+|---|---|---|
+| C5 | Root README billed `koide_clebsch_gordan.py` as a "0.001% fit". The script's own headline verdict is a **logged negative**: θ₀ from the chirality map gives 3.86°/3.92° against the observed 12.73°, closing with `CONCESSION CONFIRMED (T2 derived negative)`. The 0.001% refers to Koide's *empirical* relation, not to anything the script derives. | Fixed: README now states both what is confirmed and what is a negative. |
+| C6 | Root README presented `higgs_mass_ratio.py` as a derivation. The winning closed form is **selected by a 17-candidate search**; `higgs_derivation.py` exists to derive it and does not succeed. | Fixed: labelled as numerology pending derivation, in README and `README_verification_suite.md`. |
+| C7 | `theta13_obstruction.py` docstring said "~9.18 degrees, a 5.2 sigma pull"; the code prints 9.216° / +5.38σ. Paper A's table also read 5.2σ. | Fixed in both; table now 9.216° / 5.4σ. |
+| C8 | `ledger.md` recorded λ_eff "within 1.01% of λ_SM" — the value obtained with v = 246. With canonical PDG v = 246.22 the code prints 0.84%. | Fixed, with the provenance of the old figure noted. |
+| C9 | `README_verification_suite.md` recorded `higgs_mass_ratio.py` as a "0.42% match"; the script prints 0.47%. | Fixed. |
+| C10 | `key_parameters_ledger.json` still listed g₄, λ_φ and γ under `locked_invariants` at **T2**, contradicting the OOS01/Q1 machine-confirmed **T1 REFRACTION** verdicts in the Elimination Ledger. It also uses an F-numbering that does not match the corpus map's F-1…F-23. | Retiered to T1 with SPLIT/KILLED/SURVIVED status and per-entry mechanism; both divergences now flagged in-file. MANIFEST and the Elimination Ledger remain canonical. |
+| C11 | `code/acs_codebase/README.md` referenced three `paper_c/` modules that do not exist (their checks live inside `spectral_taxonomy.py`), a `src.paper_b.resolvent_renormalized` module (actually `renormalized_stability`), a nonexistent `lagrangian_specification.md`, and a per-paper `tests/` subdirectory layout (tests are flat). | All five fixed; the tests tree now shows the real flat layout with per-file assertion counts. |
+| C12 | `Klein_Foam_Monad.tex` still carried the Sl = 2 ↔ g = 2 identification and the μ = (e/m_e)·Sl·(ħ/2) argument with no reference to the 2026-07-26 falsification. | Dated T4 status remark added, stating both kills (the parity law, and the g = 1 no-go) and what survives (the odd meridian winding q = 1). |
+| C13 | `Flag_Condensate_Nuclear_Decay.md` overclaimed relative to its own `.tex` on six points ("complete derivation", "exact" Bogoliubov relation, "proving" the slope is geometric, "complete/exact structural identity"). | Aligned with the `.tex` and given a status header; P_α restated as extracted, not predicted; the sphaleron and fluxon rows restated as illustrative literature estimates. |
+| C14 | The Section 9 `.md` mirrors still said the float suite "remains single-platform anchored", though the Linux x86_64 replication had been completed and is recorded in the `.tex`. | Both mirrors synced to the `.tex` wording. |
+| C15 | Paper B uses three distinct φ_k normalisations without saying so, which is why the same Wronskian appears once at ~10⁴ and once bounded by 0.19. | A notation remark (`rem:phi-conventions`) now names all three conventions (C1/C2/C3), states which is live where, and notes that the normalisation cancels in ratios but not in absolute magnitudes. |
+
+### Open, not fixed
+
+**O-A. Wronskian magnitude convention.** Regenerating `fig_wronskian_heatmap`
+under convention C2 (φ_k = cos(γ_k ln x)/√x, t = 1, σ = ½) gives
+|W| ∈ [2.5×10⁻², 1.03×10¹], where Paper B §"Range" states
+|W| ∈ [8.6×10⁻⁵, 0.19]. The qualitative claims the figure carries — antisymmetry,
+and **no zero entry** among the off-diagonal elements — both hold. The magnitude
+discrepancy is a normalisation question the plotting script cannot settle, and
+is flagged here rather than silently reconciled. The figure asserts structure,
+not magnitudes; resolving the scale requires the author to confirm which
+normalisation the quoted range was computed under.

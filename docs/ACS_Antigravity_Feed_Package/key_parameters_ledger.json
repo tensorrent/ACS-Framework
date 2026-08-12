@@ -1,6 +1,6 @@
 {
   "project": "Asymmetric Codependent Systems (ACS) Framework",
-  "last_updated": "2026-07-17",
+  "last_updated": "2026-08-12",
   "canonical_seed": "20260423",
   "verification_tiers": {
     "T1": "Machine-verified (runnable test suites)",
@@ -12,25 +12,37 @@
     "g_4": {
       "value": "1.3333333333333333",
       "rational": "4/3",
-      "tier": "T2",
-      "mechanism": "Palatini bracket Casimir coefficient C_2"
+      "tier": "T1",
+      "mechanism": "Palatini bracket Casimir coefficient C_2",
+      "status": "SPLIT",
+      "classification": "refraction (value) / invariant (relation)",
+      "note": "The bare value 4/3 moves to 2/3 under Tr(T^a T^b) = (1/2)delta vs delta. The INVARIANT is the equality g_4 = g_L = g_R, not the number. See docs/Elimination_Ledger.md, target Q1 / OOS01."
     },
     "lambda_phi": {
       "value": "0.12830005981977056",
       "rational": "2*sqrt(3)/27",
-      "tier": "T2",
-      "mechanism": "Koide Higgs quartic projection"
+      "tier": "T1",
+      "mechanism": "Koide Higgs quartic projection",
+      "status": "SPLIT",
+      "classification": "refraction (value) / invariant (Koide-projection geometry)",
+      "note": "Scales with the Killing-form normalisation. The identification 'the physical Higgs quartic IS 2sqrt(3)/27' is scale-conditioned (it crosses the running quartic only near mu ~ 132 GeV). See docs/Elimination_Ledger.md, target Q1 / OOS01."
     },
     "h_tilde_over_h": {
       "value": "0.6666666666666666",
       "rational": "2/3",
-      "tier": "T2",
-      "mechanism": "Koide Yukawa ratio"
+      "tier": "T1",
+      "mechanism": "Koide Yukawa ratio",
+      "status": "SURVIVED",
+      "classification": "invariant (candidate)",
+      "note": "The only one of the four framework constants to survive the tomographic instrument swap: dimensionless, normalisation-cancelling, d/d(ln mu) ~ 0."
     },
     "gamma_unconstrained": {
       "value": "0.274067",
-      "tier": "T2",
-      "mechanism": "ACS unconstrained Meissner partition function solution Z(gamma) = 1"
+      "tier": "T1",
+      "mechanism": "ACS unconstrained Meissner partition function solution Z(gamma) = 1",
+      "status": "KILLED",
+      "classification": "refraction",
+      "note": "0.274067 under SU(2)/half-integer counting becomes 0.190206 under SO(3)/integer counting (|delta gamma| = 0.0839): the number is counting-prescription dependent. See docs/Elimination_Ledger.md, target Q1 / OOS01."
     },
     "gamma_physical": {
       "value": "0.2375",
@@ -131,5 +143,7 @@
       "id": 3,
       "problem": "Formulating the variational action principle for the generalized information-dynamics Lagrangian."
     }
-  ]
+  ],
+  "locked_invariants_note": "WARNING: 'locked' here means 'derived, never refit' -- it does NOT mean instrument-independent. Three of these four bare values were machine-confirmed as REFRACTIONS by the OOS01 kill campaign (2026-06-06). The relations survive; the bare normalisation- or scale-laden numbers mostly do not. MANIFEST.md and docs/Elimination_Ledger.md are canonical where this file disagrees.",
+  "falsification_numbering_note": "The F-numbers used in explicitly_falsified_claims are LOCAL to this file and do NOT match the F-1..F-23 register in docs/ACS_Corpus_Map.md section 5. Cite falsifications by claim text, not by F-number alone."
 }

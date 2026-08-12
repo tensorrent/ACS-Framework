@@ -216,7 +216,9 @@ The Barbero--Immirzi parameter $\gamma = 0.274$ is recovered from the
 ACS information-balance condition.  All computational claims are backed
 by the accompanying verification suite.  Predictions: a 49~keV sterile
 neutrino, $\theta_{\mathrm{QCD}}=0$ exactly, and a torsion coupling
-hierarchy $0{:}1{:}4$.
+hierarchy $0{:}1{:}4$ across the unbroken, electroweak and colour-lepton
+generators (on eigenvectors of $\mathrm{ad}_{T_{B-L}}$ this is a two-valued
+spectrum, $0$ and $32/9$; see the torsion-hierarchy section).
 \end{minipage}
 \end{center}
 
@@ -880,7 +882,8 @@ than any other.
 for the sphere ($R > 0$), flat torus ($R = 0$), and Poincar\'{e} disk
 ($R < 0$).  Bottom row: Ricci flow from a ``bumpy sphere'' (non-uniform
 $R$, left) to a uniformised surface (right), with the convergence curve
-showing curvature variance reduced $41\times$ in $800$ steps.
+showing the curvature standard deviation reduced $41\times$ in $800$ steps
+(equivalently, the variance reduced $\sim\!1.7\times10^{3}$).
 Ricci flow is the ACS evolving toward information balance: the attractor
 is constant $\DI$ across the manifold.}
 \label{fig:ricci}
@@ -2315,23 +2318,41 @@ Observable & ACS & PDG & $\sigma_{\mathrm{PDG}}$ & Pull & Mechanism \\
 $m_H$ (GeV)                  & 124.7     & 125.25     & 0.17     & 3.2$\sigma$ & Koide projection \\
 $\sin^2\theta_W(M_Z)$        & 0.2312    & 0.23121    & 0.00004  & 0.3$\sigma$ & PS structure \\
 $\alpha_s$ (26 GeV)           & 0.1415    & 0.140      & 0.005    & 0.3$\sigma$ & $g = 4/3$ \\
-$\gamma_{\mathrm{BI}}$       & 0.274     & 0.274      & 0.003    & 0.0$\sigma$ & TE balance \\
 $\theta_0^{\mathrm{Koide}}$ (deg) & 12.76 & 12.73     & 0.03     & 1.0$\sigma$ & Cabibbo chain \\
 $\theta_{12}^{\mathrm{PMNS}}$ (deg) & 32.4 & 33.41   & 0.75     & 1.3$\sigma$ & TBM + Cabibbo \\
-$\theta_{13}^{\mathrm{PMNS}}$ (deg) & 9.2  & 8.57    & 0.12     & 5.2$\sigma$ & $\lambda_W/\sqrt{2}$ \\
+$\theta_{13}^{\mathrm{PMNS}}$ (deg) & 9.216 & 8.57   & 0.12     & 5.4$\sigma$ & $\lambda_W/\sqrt{2}$ \\
 $m_\nu M_R$ (eV$^2$)         & 2400      & 2401       & 50       & 0.0$\sigma$ & see-saw \\
-$\theta_{\mathrm{QCD}}$      & 0         & 0          & ---      & exact & real $\mathfrak{sl}(4)$ \\
+\midrule
+\multicolumn{6}{l}{\footnotesize\itshape Reference comparisons (not PDG measurements):} \\
+$\gamma_{\mathrm{BI}}$       & 0.274     & 0.274$^{\dagger}$ & 0.003 & --- & TE balance \\
+$\theta_{\mathrm{QCD}}$      & 0         & $<10^{-10}\,^{\ddagger}$ & --- & consistent & real $\mathfrak{sl}(4)$ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \noindent
-Seven of the nine tabulated observables are within 2$\sigma$ of the PDG
-central value (counting the exact $\theta_{\mathrm{QCD}}$ match).
-The $\theta_{13}^{\mathrm{PMNS}}$ prediction ($9.2^\circ$ vs.\ $8.57^\circ$, 5.2$\sigma$) is the
-weakest match and may indicate a missing higher-order correction in the TBM + Cabibbo
-parametrisation.  The Higgs mass pull ($3.2\sigma$) traces to the
-incomplete normalisation chain (Section~6.6).
+$^{\dagger}$~The Barbero--Immirzi parameter is not a PDG-measured quantity; the
+comparison is against the Meissner theoretical value under the same (SU(2),
+all-half-integer) counting prescription, and the agreement is therefore
+internal to that prescription rather than experimental.  The
+Domagala--Lewandowski value is $0.2375$; see the discussion of the $15\%$ gap.
+$^{\ddagger}$~$\theta_{\mathrm{QCD}}$ is bounded, not measured; the neutron
+electric dipole moment gives $|\theta_{\mathrm{QCD}}| \lesssim 10^{-10}$.  The
+prediction is consistent with that bound, which is a weaker statement than a
+$\sigma$-level match.
+
+\medskip
+\noindent
+\textbf{Counting.}  Of the seven PDG-measured observables tabulated above,
+\emph{five} lie within 2$\sigma$ ($\sin^2\theta_W$, $\alpha_s$,
+$\theta_0^{\mathrm{Koide}}$, $\theta_{12}^{\mathrm{PMNS}}$, $m_\nu M_R$) and two
+do not.  The $\theta_{13}^{\mathrm{PMNS}}$ prediction ($9.216^\circ$ vs.\
+$8.57^\circ$, 5.4$\sigma$) is the weakest match and may indicate a missing
+higher-order correction in the TBM + Cabibbo parametrisation.  The Higgs mass
+pull ($3.2\sigma$) traces to the incomplete normalisation chain
+(Section~6.6).  Earlier versions of this table quoted ``seven of nine within
+2$\sigma$'' by counting $\gamma_{\mathrm{BI}}$ and $\theta_{\mathrm{QCD}}$ as
+PDG observables; they are not, and the corrected count is stated above.
 
 \subsection*{Computational limitations (shared verification suite)}
 
@@ -2618,10 +2639,35 @@ variational problem whose coefficients are fixed by the Killing form.
 \subsection{Torsion coupling hierarchy and vacuum energy cancellation}
 \label{sec:torsion-hierarchy}
 
-All 15 independent generators of $\mathfrak{sl}(4,\mathbb{R})$ fall
-into exactly two tiers under the torsion VEV $\|[T_{B{-}L}, X]\|^2$:
-(the separate 0:1:4 hierarchy quoted for gravitational-wave couplings is a
-different object; see the Predictions section)
+On a basis adapted to the eigenvectors of $\mathrm{ad}_{T_{B{-}L}}$, all 15
+independent generators of $\mathfrak{sl}(4,\mathbb{R})$ fall into exactly
+\emph{two} tiers under the torsion VEV $\|[T_{B{-}L}, X]\|^2$.
+
+\medskip
+\noindent
+\textbf{Two tiers, or $0{:}1{:}4$?}  Both statements appear in this paper and
+they are consistent; they are statements about different generator sets, and
+the distinction is worth making explicit because it has caused confusion.
+The spectrum of $\mathrm{ad}_{T_{B{-}L}}$ is $\{0^{(9)}, (\pm 4/3)^{(3)}\}$, so
+on \emph{eigenvectors} the coupling $\|[T_{B{-}L},X]\|^2$ takes exactly two
+values, $0$ and $32/9$.  That is the basis-independent statement, and it is the
+one tabulated below.  The electroweak generators $J_i, K_i$ of
+$\mathfrak{so}(4) = \mathfrak{su}(2)_L \oplus \mathfrak{su}(2)_R$, however, are
+\emph{not} eigenvectors: each is an equal-weight combination of one Tier-0 and
+one Tier-2 generator, for instance $J_1 = (A_{01} + A_{23})/2$ with
+$\|[T_{B{-}L},A_{01}]\|^2 = 0$ and $\|[T_{B{-}L},A_{23}]\|^2 = 32/9$.  Each
+therefore inherits
+\[
+  \|[T_{B{-}L}, J_i]\|^2 \;=\; \tfrac14 \cdot \tfrac{32}{9} \;=\; \tfrac89 ,
+\]
+and the three physically-named sectors --- unbroken, electroweak, colour-lepton
+--- carry couplings $0 : 8/9 : 32/9 = 0:1:4$.  The $0{:}1{:}4$ ratio is thus a
+real statement about the electroweak-adapted generators, not a third eigenvalue;
+it is reported as such in the Predictions section, where it governs the
+GW-matter coupling hierarchy.  Both readings are verified in exact rational
+arithmetic by \texttt{scripts/generate\_paper\_figures.py} (function
+\texttt{torsion\_couplings}) and by
+\texttt{code/acs\_codebase/extras/torsion\_hierarchy.py}.
 
 \medskip
 \noindent
@@ -2645,10 +2691,14 @@ See Figure~\ref{fig:torsion-tiers}.
 \centering
 \includegraphics[width=0.75\textwidth]{fig_torsion_tiers}
 \caption{The torsion coupling hierarchy of $\mathfrak{sl}(4,\mathbb{R})$.
-All 15 generators fall into two tiers under $\|[T_{B{-}L}, X]\|^2$:
-Tier~0 (zero coupling, 9~generators including the colour $\mathfrak{su}(3)$
-block) and Tier~2 (coupling $32/9$, 6~generators connecting the colour
-and lepton sectors).  The Palatini pairing ensures that each antisymmetric
+Left: on the eigenvector-adapted $A/S$ basis all 15 generators fall into
+two tiers under $\|[T_{B{-}L}, X]\|^2$: Tier~0 (zero coupling, 9~generators
+including the colour $\mathfrak{su}(3)$ block) and Tier~2 (coupling $32/9$,
+6~generators connecting the colour and lepton sectors).  Right: the same
+couplings read on the electroweak-adapted generators, where $J_i, K_i$ are
+equal-weight mixtures of a Tier-0 and a Tier-2 generator and so carry
+$\tfrac14\cdot\tfrac{32}{9} = \tfrac89$, giving the ratio $0:1:4$.  The two
+readings are consistent: $8/9$ is not a third eigenvalue.  The Palatini pairing ensures that each antisymmetric
 generator $A_{i3}$ with $K = -16$ is matched by a symmetric partner
 $S_{i3}$ with $K = +16$, yielding exact cancellation of the
 torsion-weighted vacuum energy.}
@@ -2904,6 +2954,8 @@ Current $B \to \tau\nu$ data show a $1.7\sigma$ excess consistent with
 $\tan\beta \sim 30$--50 for $m_{H^+} \sim 500$~GeV.
 
 \textbf{4.\ \ GW-spin coupling hierarchy 0:1:4 (long-term).}
+Across the unbroken, electroweak and colour-lepton generators
+($0 : 8/9 : 32/9$; see the torsion-hierarchy section).
 The torsion correction to GW-matter coupling is suppressed by
 $(v_R/M_{\mathrm{Pl}})^2 \lesssim 10^{-6}$, below the sensitivity of
 current and near-future detectors.  This prediction requires

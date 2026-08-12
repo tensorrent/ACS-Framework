@@ -16,7 +16,7 @@ questions without opening the papers. Load a reference file only for depth.
 | `references/governance-and-claims.md` | The full claim ledger, every kill, the audit, the license, open problems |
 | `references/code-map.md` | What runs, what the 42 assertions assert, data artifacts, what's broken |
 | `references/glossary.md` | Distilled vocabulary, by cluster — replaces the 292 KB GLOSSARY.md |
-| `references/figures-and-visuals.md` | Figure inventory (all placeholders — see below) and the two interactive pages |
+| `references/figures-and-visuals.md` | Figure inventory, the build script, and the two interactive pages |
 | `references/history.md` | How the repo got here: timeline, PRs #1–#12, research arcs, the corruption incident |
 
 ---
@@ -55,12 +55,11 @@ killed and the kills kept.
    (`code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt`, actually 99,999 lines).
 7. **The Riemann Hypothesis is nowhere claimed proved, and no Hilbert–Pólya operator is
    constructed.** Every hp_knife script says so in its own output. Do not let a summary imply otherwise.
-8. **`.tex` is authoritative over `.md`** where they differ. This matters most for
-   `Flag_Condensate_Nuclear_Decay` (the `.md` badly overclaims) and Section 9 (the `.md` platform
-   caveat is stale).
+8. **`.tex` is authoritative over `.md`** where they differ. The `Flag_Condensate_Nuclear_Decay`
+   and Section 9 mirrors were realigned 2026-08-12; assume drift elsewhere until checked.
 9. **Canonical sources of truth: `MANIFEST.md` + `docs/Elimination_Ledger.md`.**
-   `key_parameters_ledger.json` is stale (still lists three killed refractions as locked T2
-   invariants, and uses a different F-numbering).
+   `key_parameters_ledger.json` was retiered to match them 2026-08-12, but still uses its own
+   F-numbering — cite falsifications by claim text, not F-number.
 10. **License is SIP v1.1 — not open source.** Reading/citing/reproducing is free; anything touching
     revenue needs a written license and triggers an automatic perpetual 8.4% obligation.
 
@@ -95,12 +94,12 @@ Cayley–Hamilton saturation, not a 2π inversion**: ‖exp(2π ad_{T_{B−L}})�
 spec(ad_{T_{B−L}}) = **{0(×9), ±4/3(×3)}** · **ad³ = (16/9)·ad** · K(T_{B−L},T_{B−L}) = **32/3** ·
 tier-2 torsion coupling **32/9** · torsion-coupling operator spectrum **{4(×9), 6(×6)}** ·
 ρ_vac^bosonic = **exactly 0** (+512/3 − 512/3) · Koide projection **2/3 to 1e-16** ·
-𝒟(𝔰𝔩(3,ℝ)) < 1e-14 vs min random **0.49**.
+𝒟(𝔰𝔩(3,ℝ)) < 1e-14 vs min random **0.49** (recomputed at 2,000 samples: 3.2e-16 vs **0.508**).
 
 **Physics.** λ_φ = **2√3/27 = 0.1283** vs λ_SM 0.1294 (**0.84%**) · m_H = **124.7 GeV** vs 125.25
 (3.2σ) · g₄ = g_L = g_R = **4/3** · h̃/h = **2/3** (the only full invariant) · N_gen = **3** ·
 γ_BI = **0.274067** (SU(2)) / 0.190206 (SO(3)) vs DL **0.2375** · θ_QCD = **0 exactly** ·
-θ₁₃ = 9.216° vs 8.57 ± 0.12 → **+5.38σ, the weakest prediction** · sterile ν **49 keV**, X-ray line
+θ₁₃ = 9.216° vs 8.57 ± 0.12 → **+5.38σ, the weakest prediction** · PDG table: **5 of 7** measured observables within 2σ · sterile ν **49 keV**, X-ray line
 **24.5 keV** · Branch A = **6 inputs** vs SM 19+ (3.2×) · CC reduced 10¹²¹ → ~10⁵⁵.
 
 **Spectral.** Form/function split at 10⁵ zeros, 60 surrogates: arithmetic **z ≈ 11,497**, lag-1 **97**
@@ -148,23 +147,34 @@ three lepton→quark transition operators, collapse rate 4/3 = Δ(B−L)); hyper
 
 ## Traps — things that will bite you
 
+> **Corrected 2026-08-12** (coherence pass; see `docs/Editorial_Audit_2026-08-07.md`, section
+> "Coherence pass"): the 27 placeholder figure PDFs are replaced by a real, byte-reproducible
+> build (`scripts/generate_paper_figures.py`); the torsion 0:1:4 vs two-tier contradiction is
+> resolved by exact computation (different generator sets — 8/9 is not a third eigenvalue); the
+> Ricci "41× variance" was a **standard deviation** mislabel (variance ≈1.7×10³); and the PDG
+> table's "seven of nine within 2σ" counted two non-PDG rows, now restated as **five of seven**.
+
 1. **The FF06 lettering collides.** FF06g and FF06h each name **two different papers** depending on
    subtree (`methodology/` vs `later_FF06_series/`). GLOSSARY.md indexes both without resolving.
    **Always disambiguate by filename.** FF06f likewise names two papers across README vs corpus map.
-2. **All 27 figure PDFs are placeholders** — identical 87,577-byte builds of
-   `Pythagorean_Lattice_Limits.tex`, in two variants. Compiling any paper embeds it 9–13 times.
-   Three figures have no generator at all; three more are documented as never generated.
-3. **Paper B has three incompatible φ_k conventions.** This is why the same Wronskian appears once at
-   ~10⁴ and once bounded by 0.19. Track which is live.
-4. **`koide_clebsch_gordan.py` does the opposite of what the README says.** README bills it as a
-   "0.001% fit"; the script's own output is a **documented failure** (θ₀ = 3.86° vs 12.73° target,
-   self-annotated as a T2 derived-negative). The 0.001% is Koide's empirical formula, not a derivation.
-5. **`higgs_mass_ratio.py` is numerology.** It computes a bracket-based ratio, gets a poor answer,
-   then searches **17 hand-written closed forms** and reports the winner as "← EXACT."
-6. **The 0:1:4 torsion hierarchy contradicts itself** across Paper A's abstract (three values), Paper
-   A's body (two tiers), the figure caption (two tiers), and Paper C (reasserts 0:1:4).
-7. **γ_BI is listed in the PDG comparison table** as "PDG 0.274 ± 0.003." It is not a measured
-   quantity; the 0.0σ pull compares to a *theoretical* value.
+   *(Still open.)*
+2. **Paper B uses three φ_k conventions** — now documented in `rem:phi-conventions`: C1
+   log-argument, C2 envelope-stripped (all Wronskian tables), C3 general-σ. The normalisation
+   cancels in ratios and in every stationarity statement, but not in absolute magnitudes.
+3. **`koide_clebsch_gordan.py`'s headline verdict is a logged negative** — θ₀ = 3.86°/3.92° vs the
+   observed 12.73°, closing with `CONCESSION CONFIRMED (T2 derived negative)`. The 0.001% belongs
+   to Koide's *empirical* relation, not to anything the script derives.
+4. **`higgs_mass_ratio.py` is numerology.** It computes a bracket-based ratio, gets a poor answer,
+   then searches **17 hand-written closed forms** and reports the winner as "← EXACT";
+   `higgs_derivation.py` exists to derive it and does not succeed. Both now labelled as such.
+5. **The `.md` mirrors drift from the `.tex`.** `.tex` is authoritative. The nuclear-decay and
+   Section 9 mirrors were corrected 2026-08-12; assume drift elsewhere until checked.
+6. **Wronskian magnitudes are convention-dependent and currently unreconciled.** Recomputing under
+   C2 gives |W| ∈ [2.5×10⁻², 10.3] where Paper B quotes [8.6×10⁻⁵, 0.19]. Antisymmetry and the
+   no-zero-entry claim hold either way. Logged as open item **O-A** in the audit.
+7. **`key_parameters_ledger.json` was stale and is now retiered**, but still uses an F-numbering
+   that does not match the corpus map's F-1…F-23. Cite falsifications by claim text, not F-number.
+
 8. **Local `main` is stale** at the PR #8 merge, 37 commits behind `origin/main` (`08abbbd`).
 9. **Running any artifact script overwrites tracked JSON in `docs/`** (they resolve
    `Path(__file__).parents[2]/"docs"`), and the Pα scripts write to the *wrong* path, creating

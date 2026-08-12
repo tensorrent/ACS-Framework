@@ -225,6 +225,27 @@ we define:
 \end{equation}
 evaluated at $x = \ln p$ for primes $p$.
 
+\begin{remark}[Notation: three mode conventions are in use]
+\label{rem:phi-conventions}
+This paper uses $\varphi_k$ in three distinct normalisations, and the reader
+must track which is live, because the same object (notably the Wronskian
+$W[\varphi_k,\varphi_j]$) takes numerically very different values under them.
+\textbf{(C1)} the \emph{log-argument} form above,
+$\varphi_k(x) = \tfrac12\cos(\gamma_k x) + \gamma_k\sin(\gamma_k x)$ with
+$x = \ln p$, used in this section and for the stationarity measure.
+\textbf{(C2)} the \emph{envelope-stripped} form
+$\varphi_k(x) = \cos(\gamma_k \ln x)/\sqrt{x}$, used in the Wronskian
+sections and in all Wronskian tables --- this is the convention under which
+$|W| \in [8.6\times10^{-5},\, 0.19]$.
+\textbf{(C3)} the \emph{general-$\sigma$} form
+$\varphi_k(t) = e^{\sigma t}\left[\sigma\cos(\gamma_k t) + \gamma_k\sin(\gamma_k t)\right]/(\sigma^2+\gamma_k^2)$,
+used only in the harmonic-oscillator remark.  The three agree in what they
+represent --- a single zero's contribution to the explicit formula --- and
+differ only by an $x$-dependent normalisation, which cancels in every ratio
+and in every stationarity statement, but not in absolute magnitudes.  Where a
+numerical magnitude is quoted below, the convention is named.
+\end{remark}
+
 \begin{theorem}[$F_N(x)$ stationarity as ACS consequence]\label{thm:FN-acs}\label{thm:T4}
 The pair $(\mathrm{Form}, \mathrm{Func}) = (\{p_n\}, \{\gamma_k\})$ --- prime 
 distribution and Riemann zero distribution --- constitutes an ACS in which:

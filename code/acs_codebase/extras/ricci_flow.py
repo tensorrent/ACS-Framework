@@ -259,7 +259,9 @@ K_final = K_history[-1]
 
 print(f"  Initial curvature: mean={np.mean(K_initial):.4f}, std={np.std(K_initial):.4f}")
 print(f"  Final curvature:   mean={np.mean(K_final):.4f}, std={np.std(K_final):.4f}")
-print(f"  Variance reduction: {np.std(K_initial)/max(np.std(K_final),1e-10):.1f}x")
+print(f"  Std reduction: {np.std(K_initial)/max(np.std(K_final),1e-10):.1f}x"
+      f"  (variance reduction: "
+      f"{(np.std(K_initial)/max(np.std(K_final),1e-10))**2:.1f}x)")
 
 # ═══════════════════════════════════════════════════════════════
 print(f"\n── Part 3: Connecting Ricci to ΔI ──\n")
@@ -488,7 +490,8 @@ print(f"""
 
   Ricci flow convergence:
     Starting from non-uniform curvature, the flow uniformizes R.
-    Curvature variance reduced {R_initial_std/max(R_final_std,1e-10):.1f}x in 800 steps.
+    Curvature standard deviation reduced {R_initial_std/max(R_final_std,1e-10):.1f}x in 800 steps
+    (equivalently, variance reduced {(R_initial_std/max(R_final_std,1e-10))**2:.0f}x).
     This is the ACS evolving toward its attractor: constant ΔI.
 
   The sign of R determines the ACS direction:

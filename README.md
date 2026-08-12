@@ -130,15 +130,25 @@ The individual claims and physical parameters are calculated by standalone pytho
 > additionally require `mpmath` and `matplotlib`, which are not in
 > `requirements.txt`.
 
-*   **Barbero-Immirzi Parameter ($\gamma \approx 0.274$):**
+*   **Barbero-Immirzi Parameter ($\gamma = 0.274067$):** solves $Z(\gamma)=1$ for the
+    unconstrained SU(2) counting. The physical Domagala-Lewandowski value is $0.2375$;
+    closing that $15\%$ gap is open problem O-7.
     ```bash
     python code/acs_codebase/extras/barbero_immirzi_correct.py
     ```
-*   **Koide Lepton Mass Relation ($0.001\%$ fit):**
+*   **Koide relation and the $\theta_0$ negative:** confirms that the Koide empirical
+    relation fits the charged leptons to $0.001\%$, **and** reports a logged negative —
+    the chirality map does *not* derive $\theta_0$. The script's best basis/scan values
+    are $3.86^\circ$ / $3.92^\circ$ against the observed $12.73^\circ$, and it closes with
+    `CONCESSION CONFIRMED (T2 derived negative)`. Read the output: the $0.001\%$ refers to
+    Koide's empirical formula, not to anything this script derives.
     ```bash
     python code/acs_codebase/extras/koide_clebsch_gordan.py
     ```
-*   **Higgs Mass Ratio ($m_H/v \approx 0.506$ vs. physical $0.508$):**
+*   **Higgs Mass Ratio ($m_H/v = 0.506306$ vs. physical $0.508691$, $0.47\%$):** note that
+    the winning closed form $\tfrac{4}{3\pi}\sqrt{2\pi\lambda_W}$ is **selected by a
+    17-candidate search**, not derived; `higgs_derivation.py` exists to attempt that
+    derivation and does not succeed. Treat the match as numerology pending a derivation.
     ```bash
     python code/acs_codebase/extras/higgs_mass_ratio.py
     ```

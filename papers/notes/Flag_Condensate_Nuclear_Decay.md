@@ -2,6 +2,13 @@
 
 # Nuclear Decay as a Spectral Bifurcation of the Flag Condensate: Instanton Action, Bogoliubov Mode Mixing, and Geometric Unification
 
+> **Status note (2026-08-12).** This Markdown rendering previously overstated the
+> `.tex` source on four points ("complete derivation", "exact" Bogoliubov relation,
+> "proving" the slope is geometric, "complete/exact structural identity"). Those have
+> been brought into line with the `.tex`, which is authoritative per `papers/README.md`.
+> $P_\alpha$ is **extracted from data, not predicted**; the sphaleron and superconductor
+> rows are illustrative literature estimates, not results of this note.
+
 **ACS Theoretical Physics Working Group**  
 *Sovereign-Stack ACS Research Program & Flag Condensate Project*  
 `research@acs-foundation.org` — July 21, 2026
@@ -9,7 +16,7 @@
 ---
 
 ## Abstract
-We present a complete, particle-free derivation of nuclear decay and quantum tunneling within the Algebraic Conductance State (ACS) flag-condensate ontology. By representing the nucleus as a confined standing-wave phase lock of canonically conjugate real field components $\phi$ (cosine mode) and $\pi$ (sine mode), decay is reinterpreted as a spectral bifurcation into a travelling wave driven by geometric phase slips across the colour-confining throat. We derive the WKB Gamow transmission factor $T = e^{-2W}$ directly from the Euclidean deformation of the BPST instanton action $\delta S(R)$ on the curved throat metric. Utilizing a numerically stable $2\times 2$ transfer matrix framework, we verify the exact Bogoliubov mode-mixing relation $|\beta/\alpha|^2 = e^{-2W}$ across 14 alpha-emitting isotopes ($^{212}\text{Po}$ to $^{238}\text{U}$) spanning 24 orders of magnitude in half-life. This yields a Geiger-Nuttall linearity of $R^2 = 0.9939$ with a predicted-to-measured slope ratio of $1.0000$, proving that the decay slope is fundamentally geometric while the intercept encodes the alpha-cluster preformation amplitude $P_\alpha \approx 10^{-2.3}$. Finally, applying the identical transfer matrix formulation to Schwarzschild black hole horizons recovers the Hawking temperature $T_H = \frac{\hbar\kappa}{2\pi k_B}$ with exact numerical precision, establishing nuclear decay, Hawking radiation, electroweak sphaleron transitions, and fluxon nucleation as distinct geometric limits of a single underlying phase-defect mechanism.
+We present a particle-free *model* of nuclear decay and quantum tunneling within the Algebraic Conductance State (ACS) flag-condensate ontology. By representing the nucleus as a confined standing-wave phase lock of canonically conjugate real field components $\phi$ (cosine mode) and $\pi$ (sine mode), decay is reinterpreted as a spectral bifurcation into a travelling wave driven by geometric phase slips across the colour-confining throat. We derive the WKB Gamow transmission factor $T = e^{-2W}$ directly from the Euclidean deformation of the BPST instanton action $\delta S(R)$ on the curved throat metric. Utilizing a numerically stable $2\times 2$ transfer matrix framework, we verify the Bogoliubov mode-mixing relation $|\beta/\alpha|^2 = e^{-2W}$ across 14 alpha-emitting isotopes ($^{212}\text{Po}$ to $^{238}\text{U}$) spanning 24 orders of magnitude in half-life. This yields a Geiger-Nuttall linearity of $R^2 = 0.9939$ with a predicted-to-measured slope ratio of $1.0000$, indicating that the decay slope is fixed geometrically while the intercept encodes the alpha-cluster preformation amplitude $P_\alpha \approx 10^{-2.3}$. Finally, applying the identical transfer matrix formulation to Schwarzschild black hole horizons recovers the Hawking temperature $T_H = \frac{\hbar\kappa}{2\pi k_B}$, exhibiting nuclear decay, Hawking radiation, electroweak sphaleron transitions, and fluxon nucleation as sharing one transfer-matrix form. Absolute physical identity beyond that shared structural form is **not** claimed; the sphaleron and fluxon entries are illustrative order-of-magnitude estimates from the literature, not derived or cross-validated here.
 
 ---
 
@@ -122,7 +129,7 @@ This confirms that the slope of the Geiger-Nuttall law is purely geometric (dete
 ---
 
 ## 6. Universal Geometric Unification
-Applying the identical transfer matrix / Bogoliubov formulation across four fundamental physical domains demonstrates complete structural identity:
+Applying the identical transfer matrix / Bogoliubov formulation across four fundamental physical domains exhibits a shared transfer-matrix structure (structural parallel, not asserted identity):
 
 ### Table 2: Four-Domain Phase-Defect Unification
 | Domain | Phase Defect $W$ | Observable |
@@ -141,7 +148,7 @@ $$T_H = \frac{\hbar \kappa}{2\pi c k_B} = \frac{\hbar c^3}{8\pi G M k_B}$$
 ---
 
 ## 7. Conclusion
-We have demonstrated that alpha radioactivity requires no particle-based tunneling postulates. Nuclear decay is a localized spectral bifurcation of the flag field $\Phi = (\phi + i\pi)/\sqrt{2}$ from a confined standing wave to a propagating travelling wave. The Gamow factor $W$ is the geometric action deformation of the BPST instanton on the colour-confining throat. The exact mathematical identity between nuclear decay, Hawking radiation, electroweak sphalerons, and superconducting fluxons confirms that all four phenomena are manifestations of a unified phase-defect mechanism.
+We have demonstrated that alpha radioactivity requires no particle-based tunneling postulates. Nuclear decay is a localized spectral bifurcation of the flag field $\Phi = (\phi + i\pi)/\sqrt{2}$ from a confined standing wave to a propagating travelling wave. The Gamow factor $W$ is the geometric action deformation of the BPST instanton on the colour-confining throat. The shared transfer-matrix form across nuclear decay, Hawking radiation, electroweak sphalerons, and superconducting fluxons is a structural parallel. It is consistent with — but does not establish — a unified phase-defect mechanism; $P_\alpha$ is extracted from Geiger-Nuttall intercepts, not predicted.
 
 
 ## Note on Pα (revision 2026-07-22)

@@ -608,11 +608,16 @@ Checker: `scripts/ym_comparison_checker.py`.
 
 ## 10. ⚠️ The stale JSON ledger
 
-`docs/ACS_Antigravity_Feed_Package/key_parameters_ledger.json` (last_updated 2026-07-17) still lists
-`g_4`, `lambda_phi`, and `gamma_unconstrained` under **`locked_invariants`** at **T2**, which
-contradicts the Elimination Ledger's OOS01 **T1 REFRACTION** verdicts on all three bare values. It
-also uses a different F-numbering. **Treat the JSON as a partially stale agent-feed artifact;
-MANIFEST + Elimination_Ledger are canonical.**
+`docs/ACS_Antigravity_Feed_Package/key_parameters_ledger.json` **was** stale — it listed `g_4`,
+`lambda_phi` and `gamma_unconstrained` under `locked_invariants` at **T2**, contradicting the
+Elimination Ledger's OOS01 **T1 REFRACTION** verdicts. **Retiered 2026-08-12**: all four framework
+constants now carry T1 with an explicit status (`SPLIT` / `KILLED` / `SURVIVED`), a `classification`
+field, and the mechanism; a `locked_invariants_note` warns that "locked" means "derived, never
+refit", *not* instrument-independent.
+
+⚠️ **Still divergent:** the JSON's `explicitly_falsified_claims` uses its own F-numbering, which does
+**not** match the corpus map's F-1…F-23. This is now flagged in-file. **Cite falsifications by claim
+text, not F-number alone. MANIFEST + Elimination_Ledger remain canonical.**
 
 The feed package's `prompt_templates.md` contains three role templates that all instruct "Load the
 ACS Framework skill from docs/ACS_FRAMEWORK_SKILL.md", enforce the adversarial compression cycle,

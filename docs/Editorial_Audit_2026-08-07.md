@@ -971,14 +971,43 @@ in exact rational arithmetic (`scripts/generate_paper_figures.py`,
 | C14 | The Section 9 `.md` mirrors still said the float suite "remains single-platform anchored", though the Linux x86_64 replication had been completed and is recorded in the `.tex`. | Both mirrors synced to the `.tex` wording. |
 | C15 | Paper B uses three distinct φ_k normalisations without saying so, which is why the same Wronskian appears once at ~10⁴ and once bounded by 0.19. | A notation remark (`rem:phi-conventions`) now names all three conventions (C1/C2/C3), states which is live where, and notes that the normalisation cancels in ratios but not in absolute magnitudes. |
 
+### Closed on follow-up (same pass)
+
+**O-A. Wronskian magnitude convention — RESOLVED.** Initially logged as open:
+regenerating `fig_wronskian_heatmap` under convention C2 gave
+|W| ∈ [2.5×10⁻², 1.03×10¹] against Paper B's stated [8.6×10⁻⁵, 0.19]. Tracing
+the citation settled it — the quoted range comes from
+`extras/riemann_tensor.py`, which uses **convention C3**,
+φ_k(t) = e^{σt}[σ cos(γ_k t) + γ_k sin(γ_k t)] / (σ² + γ_k²), evaluated in
+t = ln x at t = 1, σ = ½. The 1/(σ²+γ_k²) factor sets the scale: ≈1/200 at γ₁,
+≈1/4900 by γ₅₀, entering twice in a bracket of two modes. Recomputing under C3
+over all C(50,2) = 1225 pairs of the first 50 zeros gives min |W| =
+**8.589×10⁻⁵** and max **0.1921**, with no vanishing entry — reproducing the
+quoted range. So the paper was correct throughout; the discrepancy was an error
+in the *replacement figure*, which had used C2.
+
+Two corrections followed: `fig_wronskian_heatmap` now uses C3, and the build
+carries a **self-check** that recomputes the paper's own 1225-pair sample every
+run and reports MATCH/MISMATCH against [8.6×10⁻⁵, 0.19]. The
+`rem:phi-conventions` note added earlier in this pass had attributed the range
+to C2; corrected to C3, with the numbers and the mechanism stated.
+
+**O-B. The FF06 g/h lettering collision — RESOLVED by disambiguation.** Two
+lettering schemes grew in parallel, so bare `FF06g` and `FF06h` each named two
+different papers (`methodology/Form_Function_Relativity` vs
+`later_FF06_series/The_Geometry_Engine`; `methodology/Scaled_Invariance_of_Infinity_and_Zero`
+vs `later_FF06_series/When_a_Number_Lies`), and `GLOSSARY.md` indexed both
+readings without resolving them. Neither scheme is retired — both are entrenched
+in existing documents, and renaming would break live cross-references. Instead a
+**subtree suffix** is introduced: `-M` for the `methodology/` paper, `-L` for the
+`later_FF06_series/` paper. A bare `FF06g`/`FF06h` is now explicitly documented
+as ambiguous. Applied in `papers/README.md` (canonical table plus the full
+`later_FF06_series/` role listing, which had not previously been tabulated),
+`GLOSSARY.md` (entry rewritten; the two colliding index rows split into
+`-M`/`-L` rows with an AMBIGUOUS marker for the bare form), and
+`docs/ACS_Corpus_Map.md`. Letters e, f, i, J, K, K1 and Σ are unambiguous and
+need no qualifier. *(Supersedes M-95, which covered only the FF06f case.)*
+
 ### Open, not fixed
 
-**O-A. Wronskian magnitude convention.** Regenerating `fig_wronskian_heatmap`
-under convention C2 (φ_k = cos(γ_k ln x)/√x, t = 1, σ = ½) gives
-|W| ∈ [2.5×10⁻², 1.03×10¹], where Paper B §"Range" states
-|W| ∈ [8.6×10⁻⁵, 0.19]. The qualitative claims the figure carries — antisymmetry,
-and **no zero entry** among the off-diagonal elements — both hold. The magnitude
-discrepancy is a normalisation question the plotting script cannot settle, and
-is flagged here rather than silently reconciled. The figure asserts structure,
-not magnitudes; resolving the scale requires the author to confirm which
-normalisation the quoted range was computed under.
+None from this pass.

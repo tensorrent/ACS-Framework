@@ -234,16 +234,30 @@ $W[\varphi_k,\varphi_j]$) takes numerically very different values under them.
 $\varphi_k(x) = \tfrac12\cos(\gamma_k x) + \gamma_k\sin(\gamma_k x)$ with
 $x = \ln p$, used in this section and for the stationarity measure.
 \textbf{(C2)} the \emph{envelope-stripped} form
-$\varphi_k(x) = \cos(\gamma_k \ln x)/\sqrt{x}$, used in the Wronskian
-sections and in all Wronskian tables --- this is the convention under which
-$|W| \in [8.6\times10^{-5},\, 0.19]$.
+$\varphi_k(x) = \cos(\gamma_k \ln x)/\sqrt{x}$, used where the modes are
+displayed against $\ln x$.
 \textbf{(C3)} the \emph{general-$\sigma$} form
 $\varphi_k(t) = e^{\sigma t}\left[\sigma\cos(\gamma_k t) + \gamma_k\sin(\gamma_k t)\right]/(\sigma^2+\gamma_k^2)$,
-used only in the harmonic-oscillator remark.  The three agree in what they
-represent --- a single zero's contribution to the explicit formula --- and
-differ only by an $x$-dependent normalisation, which cancels in every ratio
-and in every stationarity statement, but not in absolute magnitudes.  Where a
-numerical magnitude is quoted below, the convention is named.
+used in the harmonic-oscillator remark \emph{and in every quoted Wronskian
+magnitude}.  The three agree in what they represent --- a single zero's
+contribution to the explicit formula --- and differ only by normalisation,
+which cancels in every ratio and in every stationarity statement, but not in
+absolute magnitudes.
+
+\medskip
+\noindent
+\textbf{Which convention the Wronskian numbers use.}  The range
+$|W| \in [8.6\times10^{-5},\, 0.19]$ quoted below is computed under
+\textbf{C3}, in the $t = \ln x$ variable at $t = 1$, $\sigma = 1/2$, over all
+$\binom{50}{2} = 1225$ pairs of the first 50 zeros.  The $1/(\sigma^2+\gamma_k^2)$
+factor is what sets the scale: it is $\approx 1/200$ at $\gamma_1$ and
+$\approx 1/4900$ by $\gamma_{50}$, and it enters twice in a bracket of two
+modes.  Recomputing gives $\min |W| = 8.589\times10^{-5}$ and
+$\max |W| = 0.1921$, with no vanishing entry --- reproducing the quoted range.
+The same bracket evaluated under C2 spans $[6.4\times10^{-4},\, 19.2]$, some
+five orders of magnitude higher; the non-vanishing conclusion is identical
+under either, but the magnitudes are not comparable across conventions.
+(Source: \texttt{code/acs\_codebase/extras/riemann\_tensor.py}.)
 \end{remark}
 
 \begin{theorem}[$F_N(x)$ stationarity as ACS consequence]\label{thm:FN-acs}\label{thm:T4}

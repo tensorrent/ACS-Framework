@@ -38,13 +38,14 @@ provenance defects that were fixed rather than ported:
 - `fig_selection` plotted `np.random.uniform(0.55, 0.78, 100)` — a **synthetic** histogram standing in for closure defects that were never computed.
 - `fig_sign_reversal` hard-coded ΔI = ±1.19, contradicting the ±1.499 the papers quote.
 
-### Known open item
+### Wronskian convention (resolved)
 
-**O-A — Wronskian magnitudes.** Recomputing `fig_wronskian_heatmap` under convention C2
-(φ_k = cos(γ_k ln x)/√x, t = 1, σ = ½) gives |W| ∈ [2.5×10⁻², 1.03×10¹]; Paper B states
-[8.6×10⁻⁵, 0.19]. The structural claims the figure carries — antisymmetry, **no zero entry** —
-hold either way. The scale question is a normalisation the plotting script cannot settle; it is
-logged in the audit rather than silently reconciled.
+`fig_wronskian_heatmap` uses **convention C3** — φ_k(t) = e^{σt}[σcos(γ_k t) + γ_k sin(γ_k t)]/(σ²+γ_k²),
+t = 1, σ = ½ — which is what `extras/riemann_tensor.py` uses and what Paper B's quoted
+|W| ∈ [8.6×10⁻⁵, 0.19] was computed under. The build **self-checks** this every run: it recomputes
+the paper's own sample (1225 pairs of the first 50 zeros) and reports MATCH/MISMATCH. Current
+result: [8.589×10⁻⁵, 0.1921] — MATCH. An earlier draft of this figure used C2 and spanned
+[6.4×10⁻⁴, 19.2]; **magnitudes are not comparable across conventions.**
 
 ## 2. Figure inventory
 

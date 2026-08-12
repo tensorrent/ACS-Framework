@@ -153,11 +153,14 @@ three lepton→quark transition operators, collapse rate 4/3 = Δ(B−L)); hyper
 > resolved by exact computation (different generator sets — 8/9 is not a third eigenvalue); the
 > Ricci "41× variance" was a **standard deviation** mislabel (variance ≈1.7×10³); and the PDG
 > table's "seven of nine within 2σ" counted two non-PDG rows, now restated as **five of seven**.
+> The two items first logged as open (Wronskian normalisation, FF06 lettering) were both closed
+> on follow-up — see traps 1 and 6.
 
-1. **The FF06 lettering collides.** FF06g and FF06h each name **two different papers** depending on
-   subtree (`methodology/` vs `later_FF06_series/`). GLOSSARY.md indexes both without resolving.
-   **Always disambiguate by filename.** FF06f likewise names two papers across README vs corpus map.
-   *(Still open.)*
+1. **The FF06 lettering collided; now disambiguated by suffix.** Bare `FF06g`/`FF06h` each named
+   two papers. Use **`-M`** for the `methodology/` paper and **`-L`** for the
+   `later_FF06_series/` one: FF06g-M = Form/Function Relativity, FF06g-L = The Geometry Engine;
+   FF06h-M = Scaled Invariance of ∞/0, FF06h-L = When a Number Lies. **A bare FF06g/FF06h in any
+   older text is ambiguous** — resolve from the subtree. Canonical table: `papers/README.md`.
 2. **Paper B uses three φ_k conventions** — now documented in `rem:phi-conventions`: C1
    log-argument, C2 envelope-stripped (all Wronskian tables), C3 general-σ. The normalisation
    cancels in ratios and in every stationarity statement, but not in absolute magnitudes.
@@ -169,9 +172,12 @@ three lepton→quark transition operators, collapse rate 4/3 = Δ(B−L)); hyper
    `higgs_derivation.py` exists to derive it and does not succeed. Both now labelled as such.
 5. **The `.md` mirrors drift from the `.tex`.** `.tex` is authoritative. The nuclear-decay and
    Section 9 mirrors were corrected 2026-08-12; assume drift elsewhere until checked.
-6. **Wronskian magnitudes are convention-dependent and currently unreconciled.** Recomputing under
-   C2 gives |W| ∈ [2.5×10⁻², 10.3] where Paper B quotes [8.6×10⁻⁵, 0.19]. Antisymmetry and the
-   no-zero-entry claim hold either way. Logged as open item **O-A** in the audit.
+6. **Wronskian magnitudes are convention-dependent — the quoted range is C3, not C2.**
+   Paper B's |W| ∈ [8.6×10⁻⁵, 0.19] comes from `extras/riemann_tensor.py` under
+   φ_k(t) = e^{σt}[σcos(γ_k t) + γ_k sin(γ_k t)]/(σ²+γ_k²) at t = 1, σ = ½, over 1225 pairs of the
+   first 50 zeros; recomputed as **8.589×10⁻⁵ / 0.1921**. The 1/(σ²+γ_k²) factor sets the scale and
+   enters twice. Under C2 the same bracket spans [6.4×10⁻⁴, 19.2]. **Never compare magnitudes
+   across conventions.** The figure build self-checks against the stated range every run.
 7. **`key_parameters_ledger.json` was stale and is now retiered**, but still uses an F-numbering
    that does not match the corpus map's F-1…F-23. Cite falsifications by claim text, not F-number.
 

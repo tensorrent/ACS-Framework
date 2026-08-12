@@ -689,18 +689,41 @@ def fig_flow_field():
 
 
 def fig_wronskian_heatmap():
+    """Uses convention C3 -- the same normalisation as the quoted range.
+
+    phi_k(t) = e^{sigma t}[sigma cos(gamma_k t) + gamma_k sin(gamma_k t)]
+               / (sigma^2 + gamma_k^2)
+    W[k,j] = phi_k phi_j' - phi_k' phi_j, at t = 1, sigma = 1/2.
+    This is extras/riemann_tensor.py's convention; under it the first 50
+    zeros reproduce Paper B's |W| in [8.6e-5, 0.19].
+    """
     gam = load_zeros(20)
-    x = np.e                                   # t = ln x = 1
-    c, s = np.cos(gam * np.log(x)), np.sin(gam * np.log(x))
-    # phi_k(x) = cos(gamma_k ln x)/sqrt(x);  W[k,j] = phi_k' phi_j - phi_j' phi_k
-    W = (np.outer(gam * s, c) - np.outer(c, gam * s)) * x ** -2
-    W = -W                                     # orientation: W[k,j] = phi_k' phi_j - ...
+    t, sig = 1.0, 0.5
+    denom = sig ** 2 + gam ** 2
+    e = np.exp(sig * t)
+    a = sig * np.cos(gam * t) + gam * np.sin(gam * t)
+    da = -sig * gam * np.sin(gam * t) + gam ** 2 * np.cos(gam * t)
+    phi = e * a / denom
+    dphi = e * (sig * a + da) / denom
+    W = np.outer(phi, dphi) - np.outer(dphi, phi)
+
     off = W[~np.eye(len(gam), dtype=bool)]
-    note(f"Wronskian at t=1, sigma=1/2: |W| in [{np.abs(off).min():.3e}, "
-         f"{np.abs(off).max():.3e}]; zero off-diagonal entries = "
-         f"{int((np.abs(off) < 1e-12).sum())}")
-    note("Wronskian magnitudes depend on the phi_k normalisation convention; "
-         "Paper B quotes [8.6e-5, 0.19] for its stated convention")
+    note(f"Wronskian (C3, t=1, sigma=1/2, 20 zeros): |W| in "
+         f"[{np.abs(off).min():.3e}, {np.abs(off).max():.3e}]; "
+         f"zero off-diagonal entries = {int((np.abs(off) < 1e-14).sum())}")
+
+    # Reproduce the paper's stated range on its own sample (first 50 zeros).
+    g50 = load_zeros(50)
+    d50 = sig ** 2 + g50 ** 2
+    a50 = sig * np.cos(g50 * t) + g50 * np.sin(g50 * t)
+    da50 = -sig * g50 * np.sin(g50 * t) + g50 ** 2 * np.cos(g50 * t)
+    p50 = np.exp(sig * t) * a50 / d50
+    dp50 = np.exp(sig * t) * (sig * a50 + da50) / d50
+    W50 = np.abs(np.outer(p50, dp50) - np.outer(dp50, p50))
+    o50 = W50[~np.eye(50, dtype=bool)]
+    note(f"  cross-check on the paper's own sample (1225 pairs of 50 zeros): "
+         f"|W| in [{o50.min():.3e}, {o50.max():.3e}] vs Paper B [8.6e-5, 0.19] "
+         f"-- {'MATCH' if abs(o50.min()-8.6e-5) < 5e-7 else 'MISMATCH'}")
 
     fig, ax = plt.subplots(figsize=(4.2, 3.5))
     lim = float(np.abs(W).max())

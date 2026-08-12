@@ -671,3 +671,95 @@ neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed hel
 dimensions of inverse length. It still does not evade the no-go on its own.
 
 Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.
+
+---
+
+### 2026-08-12 — "ACS explains the Exodus electrostatic anomaly" — **KILLED, three independent grounds** · T2 structural
+
+**Conjecture (ours, stated before the evidence was gathered).** Charles Buhler
+(Exodus Propulsion Technologies) reports that second-order time-independent
+perturbation theory on two static charges reproduces Coulomb's law, and that going to
+**third order** produces a term cubic in charge with a built-in asymmetry —
+*"one of the charges was weighed twice, multiplied by itself, and then… multiplied by
+the first charge. So there's already an asymmetry in the charges. Even with two
+charges."* (APEC 2025-08-02; Michels 2026-03-30.) Our `def:nested` independently
+locates emergence at the **third-order holonomy** [[f,g],f] + [[f,g],g], which
+expands schematically as f²g + fg² against his Q₁²Q₂ + Q₁Q₂². The conjecture: these
+are the same structure, and ACS therefore supplies the mechanism for the force he
+measures.
+
+Note the target: this kills **our own proposed application**, not his experiment.
+Whether his measured force is real is an experimental question and is not
+adjudicated here.
+
+**Kill conditions, fixed in advance.** Survives only if all three hold —
+**K1** his asymmetry is asymmetry in the ACS sense (ACS-2: f ≢ g as *operator
+types*); **K2** ΔI is defined on the system he models; **K3** ACS contains content
+linking an information asymmetry to a **net linear force**. All three failed.
+
+**K1 KILLED.** His own statement of the asymmetry: *"it's a function of Q₁Q₂² or
+Q₁²Q₂. So already it's asymmetric just by the order."* Q₁, Q₂ are commuting
+c-numbers — [Q₁,Q₂] = 0 — so his is a **polynomial-degree asymmetry among commuting
+scalars**. ACS-2 requires non-commuting operator *types*. On commuting charges
+α₂ = ⟨[f,g],·⟩ = 0 and α₃ = [[f,g],f]+[[f,g],g] = 0: **every ACS term above first
+order vanishes identically**. The f²g ↔ Q₁²Q₂ resemblance is shape without shared
+content — the corpus's named **false-fit** mode.
+
+**K2 KILLED.** Buhler is explicit and repeats it unprompted: *"the QED doing
+Coulomb's law is a second-order equation, **using time-independent perturbation
+theory**."* His perturbing operator is H′ = A_μJ^μ with **J^μ = (ρ,0,0,0)** — zero
+spatial current, by design (*"I'm in pure electrostatics mode"*, 2018). Our own Q4
+kill (2026-06-06) established that transfer entropy is **undefined on a static,
+time-translation-invariant** configuration. ΔI is therefore not small on his object
+but undefined, and the BCH expansion has nothing to expand. Invoking ACS here repeats
+the category error that retired ΔI ≡ c-function.
+
+**K3 KILLED.** Full-corpus search for *momentum conservation / net momentum / thrust
+/ propulsion / reactionless* across `papers/**` and `docs/**` returns **zero hits**;
+the bare word *momentum* occurs only as **angular** momentum in the g-factor work and
+in the rhetorical chain *"vibrations → momentum → colour → …"*. Momentum
+conservation is the crux of any thruster claim; ACS has never addressed it. The
+bridge would have to be built from nothing.
+
+**Nearest genuine connection, and why it does not reach.** The framed-unknot no-go
+(2026-07-26) proves g = 1 exactly for any closed curve with uniform q/m, and opens
+*"decouple where the charge sits from where the mass sits."* Buhler's device does
+satisfy that condition physically (charge on conductive surfaces, mass in the potting
+epoxy). But our no-go concerns a **magnetic moment over an angular momentum**; his
+claim is **net linear thrust**, and by K3 nothing in the corpus connects them. Real at
+the level of the question, absent at the level of the mechanism. Separately, the
+720°/360° winding asymmetry has no counterpart in a DC device with no rotation, and
+p+q = 3 is a **parity** input (σ = (−1)^{p+q}, one bit) — reading magnitude into that
+3 would recommit the error the *Sl = 2 ↔ g = 2* kill was logged for.
+
+**External evidence (reported, not adjudicated).** Tajmar, Kößling & Neunzig,
+arXiv:2402.15640 (verified against the primary PDF) tested asymmetric capacitors
+(copper disc vs 0.64 mm wire tip), dielectric-gradient capacitors (low/high εᵣ
+inserts along E) and trapezoidal dielectrics (gradient ⊥ E), epoxy-potted and
+shielded, at **10⁻⁷ mbar** with laser-interferometer readout and voice-coil in-situ
+calibration, to 40 kV: *"All types of capacitors tested … did not show any weight
+change nor did they produce any anomalous force."* Representative row: εᵣ = 6000 at
+30 kV → **−9.5 ± 13.5 nN**, against Buhler's ~10 mN at 30–40 kV — a factor
+**≈7.4 × 10⁵**. Tajmar did not test Buhler's specific blade geometry, but did test
+the four parameters Buhler's patent names as governing; his own best geometry gain is
+~6×, which cannot bridge 10⁶.
+
+**Concessions kept.** The ion-wind objection **fails** here (mean free path ~50 m at
+10⁻⁶ torr; a collisionless ion rocket at 10 mN / 30 kV needs ~76 mA and kilowatts
+against claimed microamps) — critics leading with it are attacking the wrong
+mechanism. Buhler's conduct is careful: he declines the antigravity framing, states
+his theory tentatively, concedes the energy problem, and distinguishes witnesses who
+*saw* from those who *reproduced*. Chester's correction — α enters at classical level
+too, so its appearance is not evidence of quantum origin — is the sharpest point
+against the premise, and Buhler accepted it.
+
+**What it opens (the transferable residue).** One well-posed discriminator survives,
+independent of whether Tajmar's null generalises: **does the force require the
+leakage current?** His theory says no (J spatial = 0); his apparatus always carries
+0.1–0.2 µA during measurement. If the effect requires the current, his static theory
+models the wrong object and the system is a driven dissipative steady state — the one
+regime where ΔI is defined at all. If the effect is genuinely current-independent,
+ACS has nothing to say by K2 and the route should be abandoned rather than repaired.
+Either outcome is informative; the test is one afternoon on existing apparatus.
+
+Write-up: `docs/Exodus_Electrostatic_Anomaly_Analysis.md`.

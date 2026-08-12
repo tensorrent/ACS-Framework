@@ -139,6 +139,18 @@ three** · Pα LOO 0.286 (n=14) → **1.355 (n=29)** · α⁻¹ best on grid **6
 | **Prime–zero acoustic resonance** | Cross-species is **complementary cancellation**, not resonance. Prime logs are incommensurable — unique factorisation, spectrally expressed |
 | **The four "locked constants" as invariants** | g₄, γ, λ_φ all **refractions** under instrument swap. Only **h̃/h = 2/3** survives. *"The relations survive; the bare numbers mostly don't"* |
 
+**External-application kill (2026-08-12).** *"ACS explains the Exodus electrostatic
+anomaly"* — **KILLED on three independent grounds**, any one sufficient: (K1) Buhler's
+Q₁²Q₂ asymmetry is polynomial-degree among **commuting** scalars, while ACS-2 requires
+non-commuting operator *types* — on commuting charges every ACS term above first order
+vanishes identically; (K2) his perturbing operator is H′ = A_μJ^μ with **J^μ = (ρ,0,0,0)**,
+a static configuration, and ΔI is **undefined** there by the Q4 precedent; (K3) the corpus
+has **zero** linear-momentum/thrust content. External: Tajmar arXiv:2402.15640 tested
+asymmetric and dielectric-gradient capacitors at 10⁻⁷ mbar and found null (εᵣ=6000 at 30 kV
+→ −9.5 ± 13.5 nN vs a ~10 mN claim, ≈7.4×10⁵×). **Surviving discriminator:** does the force
+require the 0.1–0.2 µA leakage current? Write-up: `docs/Exodus_Electrostatic_Anomaly_Analysis.md`.
+*Do not re-propose this bridge without addressing K1–K3.*
+
 **Survivors from the same campaign:** condensate-as-collapse (all four forms — V₊ is exactly the
 three lepton→quark transition operators, collapse rate 4/3 = Δ(B−L)); hypercone projection
 (β = codim − 1, which then resolved the HP wall); the height floor **value** 2πe at d=1.

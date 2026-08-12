@@ -115,6 +115,16 @@ ad³=2·ad, universal 2π inversion, Wronskian-Poisson, IR lattice imprint, intr
 chirality, Route A/C signature selection, and CW 6→5; later campaigns added further
 kills (T_min scaling, Sl=2↔g=2, EM-as-torsion-annihilator, and others). First-class results.
 
+**External-application kills.** The ledger also records kills aimed at *proposed
+applications* of the framework to outside claims, not only at its own internal
+results. Current entry: **"ACS explains the Exodus electrostatic anomaly" — KILLED,
+three independent grounds** (2026-08-12, T2 structural; write-up
+`docs/Exodus_Electrostatic_Anomaly_Analysis.md`). The bridge fails because the
+reported asymmetry is polynomial-degree among *commuting* scalars where ACS-2 needs
+non-commuting operator types; because ΔI is undefined on a static configuration (the
+Q4 precedent); and because the corpus contains no linear-momentum content. That
+document adjudicates **our** conjecture, not the external experiment.
+
 ## Reproduction notes
 - Seed `20260423` throughout. PDG v = 246.22 GeV canonical.
 - Riemann zeros: Odlyzko first 100,000, `data_zeros/riemann_zeros_100k.txt`.

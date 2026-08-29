@@ -188,9 +188,12 @@ Verify: `python3 code/framed_unknot/framing_transformer.py` and `python3 code/fr
 
 Manuscript (archived as submitted): `papers/notes/Constraint_Projection_Framework.tex`
 Audit: `papers/notes/Constraint_Projection_Framework_Audit.tex` ·
-Code: `code/constraint_projection/` · Artifact: `docs/constraint_projection_audit.json`
-Ledger: `docs/Elimination_Ledger.md`, 2026-08-29
-Verify: `python3 code/constraint_projection/cpf_audit.py`
+Code: `code/constraint_projection/` · Artifacts:
+`docs/constraint_projection_audit.json`, `docs/constraint_projection_full_verification.json`
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-29 (kill + second-pass correction)
+Verify: `python3 code/constraint_projection/cpf_audit.py` (first pass, C1–C8)
+and `python3 code/constraint_projection/cpf_full_verification.py` (full, V1–V9;
+`--deep` recomputes the §7 contour integrals, ~4 min)
 
 > **The manuscript is archived, not endorsed.** Every load-bearing claim is **T4**.
 > It is kept because negatives are first-class outputs here, and because two of its
@@ -202,12 +205,12 @@ Verify: `python3 code/constraint_projection/cpf_audit.py`
 | $\alpha^{-1} = \ln(8R/a)+1 = 137.035999171$ | **T4** | `cpf_audit.py` C1 — the stated inputs give $L\alpha=2$, i.e. $\alpha^{-1}=\tfrac12(\ln(8R/a)+1)$; a factor of 2 is dropped. Correction already published in `Mobius_Ribbon_Capacitance.tex` eq. `(alpha_ann)` |
 | The cutoff $a$ is not free / zero free parameters | **T4** | `cpf_audit.py` C2 — four mutually exclusive requirements on $a/R$ spanning **117.4 decades** ($5.0\times10^{-1}$, $6.66\times10^{-59}$, $2.04\times10^{-118}$, $1.49\times10^{-39}$). One free parameter, fitted per section |
 | Axiom III: $\exists\,\phi\in\mathrm{Diff}(\mathcal{M})$, $\phi_*=\left(\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right)$ | **T4** | `cpf_audit.py` C3 — clauses (1)–(2) force $\mathcal{M}=$ Klein bottle; $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ is finite, $\phi_*$ is parabolic of infinite order, and $\phi_*D\phi_*^{-1}\neq D$. **The axiom has no model** |
-| $\mathcal{M}\cong$ Klein bottle from clauses (1)–(2) | **T2** | same — correct and unique; the one piece of topology in the paper that does what it claims |
+| $\mathcal{M}\cong$ Klein bottle from clauses (1)–(2) | **T2/T1** | `cpf_full_verification.py` V1 — Euler-characteristic census ($\chi(N_k)=2-k$, cover genus $h=k-1$, so $h=1$ only at $k=2$) + Smith normal form on the CW complex ($H_2=0$, $H_1=\mathbb{Z}\oplus\mathbb{Z}/2$). Correct and unique; the one piece of topology in the paper that does what it claims. ($H_2=0$ is implied by $w_1\neq0$, so that clause adds nothing) |
 | $g=Sl=2$, $s=Sl/4=1/2$ | **T4** | `cpf_audit.py` C4 — restates the kills of 2026-07-26: $\sigma=(-1)^{Sl+1}$ (one parity bit) and $g=1$ exactly for every closed curve |
-| $k(\varepsilon)=0 \Leftrightarrow$ RH $\Leftrightarrow \Omega_k=0$ | **T4** | `cpf_audit.py` C5 — $\beta$ enters only via $(\tfrac12-\beta)^2$, the invariant of $\beta\mapsto1-\beta$, so the functional is blind to off-line zeros; and on-line zeros give $k=-2N/\varepsilon\to-\infty$, inverting the criterion |
+| $k(\varepsilon)=0 \Leftrightarrow$ RH $\Leftrightarrow \Omega_k=0$ | **T4** | `cpf_full_verification.py` V5 — the **defining integral** equals $2\pi N(T)/T \to \log(T/2\pi e) \to +\infty$ (residue theorem; ratio $\to 1$ numerically), real, positive and $\varepsilon$-independent, where the claimed sum is negative and $\varepsilon$-dependent. Separately the claimed sum is invariant under $\beta\mapsto1-\beta$, hence blind |
 | $S_{\mathrm{LF}} = 2\sqrt2$ under the stated operators | **T3** | `cpf_audit.py` C6 — **arithmetically confirmed** to machine precision, Tsirelson-saturating |
-| That sum is a Local Friendliness inequality / falsifies AOE | **T4** | same — no friend setting ($x{=}1$) appears; it is CHSH. LF violation would falsify the *conjunction* AOE ∧ Locality ∧ No-Superdeterminism |
-| $\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}\lvert\nabla\psi\rvert^2$ solves rotation curves without exotic particles | **T4** | `cpf_audit.py` C7 — the split contains $\tfrac12\rho v^2$ (double counted in $T_{00}$), and the mechanism needs $m\sim9.6\times10^{-24}$ eV, an ultralight scalar |
+| That sum is a Local Friendliness inequality / falsifies AOE | **T4** | `cpf_full_verification.py` V6 — the **LF bound on that expression is 4** (LP over all four $(a_1,b_1)$ branches; equals the no-signalling bound, since no $x{=}1$ term appears). $2\sqrt2 < 4$: **no LF violation**, and Tsirelson forbids one. The "$>2$" is the Bell local bound |
+| $\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}\lvert\nabla\psi\rvert^2$ solves rotation curves without exotic particles | **T4** | `cpf_audit.py` C7 + `cpf_full_verification.py` V7 — the split contains $\tfrac12\rho v^2$ (double counted in $T_{00}$); it is **not** the Bohm quantum potential $-\tfrac{\hbar^2}{2m}\nabla^2R/R$, so the named mechanism is not the one used; and it needs $m\sim9.6\times10^{-24}$ eV, an ultralight scalar |
 | $L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$ m; UV complete | **T4** | `cpf_audit.py` C2 — 19 decades off on the manuscript's own $a$, 79 on the corrected one; the corrected $a$ is $10^{-96}\,\ell_P$ |
 | Axiom I: $\mathcal{B}$ non-amenable | **T4** | `cpf_audit.py` C8 — $\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$ is malformed; both standard readings are abelian, hence amenable, and $\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ is compact with a Haar probability measure |
 
@@ -215,6 +218,17 @@ Verify: `python3 code/constraint_projection/cpf_audit.py`
 > functional detecting off-line zeros must be **odd** under $\beta\mapsto1-\beta$;
 > any construction whose $\beta$-dependence factors through $(\tfrac12-\beta)^2$ is
 > blind by the functional equation. This bounds a class, not a single attempt.
+
+> **Second pass, 2026-08-29 — two of our own verdicts corrected, both understated.**
+> The first pass settled three checks by structural argument rather than computation.
+> Running them moved two verdicts, both *against* the manuscript: the LF bound is **4**
+> (so §5 exhibits no LF violation at all, and Tsirelson forbids one), and §7's
+> **defining integral** — never evaluated in the first pass — equals
+> $2\pi N(T)/T\to\log(T/2\pi e)\to+\infty$, which is the Riemann–von Mangoldt smooth
+> counting term, not the claimed sum. Method rule kept: **evaluate the object the
+> target actually defines, not the object it claims that object equals.**
+> V9 re-executes `code/framed_unknot/` rather than citing it: $Tw+Wr=-2.000000$,
+> $\sigma=-1$ three ways, $g=1.000000$; both artifacts byte-identical.
 
 > **Scope:** the audit assesses §§2–8 against the manuscript's own stated inputs.
 > The interpretive material of §§1 and 9 (relational measurement) makes no

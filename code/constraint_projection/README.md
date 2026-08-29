@@ -6,7 +6,9 @@ Companion computation to `papers/notes/Constraint_Projection_Framework_Audit.tex
 Target: `papers/notes/Constraint_Projection_Framework.tex` (archived as submitted).
 
 ```bash
-python3 code/constraint_projection/cpf_audit.py
+python3 code/constraint_projection/cpf_audit.py              # first pass, C1-C8, ~2 s
+python3 code/constraint_projection/cpf_full_verification.py  # full pass, V1-V9, ~30 s
+python3 code/constraint_projection/cpf_full_verification.py --deep   # + contour integrals, ~4 min
 ```
 
 Deps: `numpy`, `sympy`, `mpmath` (60-digit precision for the cutoff arithmetic).
@@ -40,3 +42,32 @@ Each check is written so the manuscript could pass it; no verdict is assumed.
   correct step inside a failed argument is still reported correct.
 - The script only ever writes `docs/constraint_projection_audit.json`; it does not
   touch any other tracked artifact.
+
+
+## Second pass — `cpf_full_verification.py`
+
+The first pass settled three of its eight checks by structural argument rather than
+computation. This one computes all of them. **Two verdicts moved, both against the
+manuscript.**
+
+| Check | Question | Result |
+|-------|----------|--------|
+| **V1** | Which closed surface has double cover $T^2$? | Klein bottle, uniquely — Euler census + Smith normal form |
+| **V2** | Does Axiom III's $\phi$ exist? | No — exhaustive search over 390,625 integer matrices; centraliser has order 4 |
+| **V3** | Is the $\alpha$ step a derivation? | No — $L\alpha=2$, and the cutoff step returns *any* target ($42$, $1000$, $-7$) |
+| **V4** | How many cutoffs? | Four, 117.4 decades apart; plus $\Lambda_{\rm eff}$ vs Planck |
+| **V5** | What does §7's **integral** equal? | $2\pi N(T)/T \to \log(T/2\pi e) \to +\infty$ — **not** the claimed sum |
+| **V6** | What is the **LF** bound on §5's sum? | **4** (LP) — so $2\sqrt2$ violates no LF inequality |
+| **V7** | Is it the Bohm quantum potential? | No — $Q=-\frac{\hbar^2}{2m}\nabla^2R/R$, not $\lvert\nabla\psi\rvert^2$ |
+| **V8** | Is the reservoir non-amenable? | No — Følner sequences; every abelian group is amenable |
+| **V9** | Do the prior kills reproduce? | Yes — `framed_unknot/` re-executed, byte-identical |
+
+`--deep` recomputes V5's contour integrals with `mpmath` (contour split at the zero
+ordinates); without it the recorded values are reported and the residue argument is
+still derived symbolically.
+
+> **Note on the committed artifact.** `docs/constraint_projection_full_verification.json`
+> was produced by a `--deep` run, so its V5 numerics are genuinely recomputed
+> (`deep_mode: true`). A default run reproduces the same table from the recorded values
+> and writes `deep_mode: false` — expect that one-field diff if you re-run without the
+> flag.

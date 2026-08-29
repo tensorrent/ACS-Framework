@@ -50,8 +50,10 @@
 \textbf{Tier: T4 (explicitly falsified) on every load-bearing claim.}
 This manuscript is archived \emph{as submitted}; the text below has not been
 corrected. An independent audit --- \texttt{papers/notes/Constraint\_Projection\_Framework\_Audit.tex},
-instrument \texttt{code/constraint\_projection/cpf\_audit.py}, artifact
-\texttt{docs/constraint\_projection\_audit.json} --- finds:
+instruments \texttt{code/constraint\_projection/cpf\_audit.py} and
+\texttt{cpf\_full\_verification.py}, artifacts
+\texttt{docs/constraint\_projection\_audit.json} and
+\texttt{docs/constraint\_projection\_full\_verification.json} --- finds:
 
 \begin{itemize}\itemsep2pt
 \item \S3: the stated inputs give $\alpha^{-1} = \tfrac12(\ln(8R/a)+1)$, not
@@ -68,17 +70,22 @@ instrument \texttt{code/constraint\_projection/cpf\_audit.py}, artifact
 \item \S5: $g = Sl = 2$ and the $Sl\!\to\!$ spin route were falsified in this
   repository on 2026-07-26 ($\sigma=(-1)^{Sl+1}$, one parity bit; and $g=1$
   exactly for every closed curve).
-\item \S7: the functional depends on $\beta$ only through $(\tfrac12-\beta)^2$,
-  the invariant of the functional equation's involution $\beta\mapsto1-\beta$, so
-  it cannot see an off-line zero; and on the critical line every term equals
-  $-1/\varepsilon^2$, so RH makes $k$ divergent rather than zero.
-\item \S6: $S=2\sqrt2$ is arithmetically correct, but no friend setting appears
-  in the sum --- it is CHSH, not a Local Friendliness inequality, and LF
-  violation would falsify a conjunction, not AOE alone.
+\item \S7: the \emph{defining integral} equals $2\pi N(T)/T\to\log(T/2\pi e)\to
+  +\infty$ (residue theorem, confirmed numerically) --- real, positive,
+  $\varepsilon$-independent and divergent, where the claimed sum is negative and
+  $\varepsilon$-dependent. Separately, the claimed sum depends on $\beta$ only
+  through $(\tfrac12-\beta)^2$, the invariant of $\beta\mapsto1-\beta$, so it cannot
+  see an off-line zero.
+\item \S5: $S=2\sqrt2$ is arithmetically correct, but the Local Friendliness bound
+  on that expression is $\mathbf{4}$, not $2$ (LP-verified) --- no friend setting
+  appears in the sum, so the LF polytope's projection onto those settings is the
+  full no-signalling polytope. $2\sqrt2<4$: there is \textbf{no LF violation}, and
+  Tsirelson forbids one. The ``$>2$'' is the Bell local bound.
 \item \S6 (dark matter): $(\hbar^2/2m)|\nabla\psi|^2$ contains
   $\tfrac12\rho v^2$, the visible matter's own kinetic energy, which
-  $T_{00}$ then counts twice; and the mechanism needs $m\sim10^{-23}$~eV --- an
-  exotic ultralight scalar.
+  $T_{00}$ then counts twice; it is not the Bohm quantum potential
+  $-\tfrac{\hbar^2}{2m}\nabla^2R/R$, so the named mechanism is not the one used;
+  and it needs $m\sim10^{-23}$~eV --- an exotic ultralight scalar.
 \item Axiom I is false under every reading ($\mathbb{A}_\mathbb{Q}/\mathbb{Q}$
   and the idele class group are abelian, hence amenable). Two citations are
   wrong, one a placeholder identifier.

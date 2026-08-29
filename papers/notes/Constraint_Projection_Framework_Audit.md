@@ -19,8 +19,19 @@ take four mutually exclusive values spanning 117 decades; an axiom with no model
 claims falsified in this repository's Elimination Ledger on 2026-07-26 and restated here
 without reference.
 
-Instrument: `code/constraint_projection/cpf_audit.py` · Artifact:
-`docs/constraint_projection_audit.json` · Ledger: `docs/Elimination_Ledger.md`, 2026-08-29.
+**Revised 2026-08-29 (second pass).** A full verification run recomputed every step the
+first pass had settled by structural argument. Two verdicts moved, both *against* the
+manuscript, and both are corrected in place below with the earlier reading stated:
+§5 — the Local Friendliness bound on the manuscript's sum is **4**, not 2, so S = 2√2
+violates no LF inequality at all; and §7 — the *defining integral*, which the first pass
+never evaluated, equals 2πN(T)/T → log(T/2πe) → +∞.
+
+Instruments: `code/constraint_projection/cpf_audit.py` (first pass) and
+`code/constraint_projection/cpf_full_verification.py` (full pass, V1–V9; `--deep`
+recomputes the §7 contour integrals) · Artifacts:
+`docs/constraint_projection_audit.json`,
+`docs/constraint_projection_full_verification.json` · Ledger:
+`docs/Elimination_Ledger.md`, 2026-08-29.
 
 ---
 
@@ -32,11 +43,12 @@ Instrument: `code/constraint_projection/cpf_audit.py` · Artifact:
 | zero free parameters | **T4** | a/R fitted per section; four incompatible values, 117 decades apart |
 | Axiom III (φ\* parabolic) | **T4** | M is forced to be the Klein bottle; MCG(K) = Z/2 ⊕ Z/2 is finite |
 | g = Sl = 2, s = Sl/4 | **T4** | already killed 2026-07-26; Sl carries one parity bit, and g = 1 for every closed curve |
-| k = 0 ⟺ RH ⟺ Ω_k = 0 | **T4** | functional invariant under β → 1−β; on-line zeros give k → −∞ |
+| k = 0 ⟺ RH ⟺ Ω_k = 0 | **T4** | the defining integral equals 2πN(T)/T → log(T/2πe) → +∞, not the claimed sum; and the claimed sum is invariant under β → 1−β |
 | L_IR = R²/a ≈ 1.3×10²⁶ m | **T4** | 19–79 decades off, depending on which a is used |
 | ρ_DM = (ħ²/2m)\|∇ψ\|² | **T4** | contains ½ρv²; needs m ~ 10⁻²³ eV |
 | Axiom I (non-amenable B) | **T4** | every abelian group is amenable |
-| S_LF = 2√2 | **T3** | **arithmetically correct**; but it is CHSH, not an LF inequality |
+| S_LF = 2√2 | **T3** | **arithmetically correct** |
+| that sum violates LF / falsifies AOE | **T4** | the LF bound on it is **4** (LP-verified); 2√2 < 4, so no LF violation, and Tsirelson forbids one |
 
 Tiers never promote.
 
@@ -164,9 +176,58 @@ describes a different object.
 
 ---
 
-## §7 — the curvature functional cannot see an off-line zero
+## §7 — the defining integral was never evaluated; it diverges
 
-Three independent failures of `k(ε) = 2ε Σ_ρ 1/((½−β)² − ε²)`:
+§7 defines
+
+```
+k(ε) = lim_{T→∞} (1/T) ∫₀^T [ ζ'/ζ(½+ε+it) − ζ'/ζ(½−ε+it) ] dt        (*)
+```
+
+asserts via Guinand–Weil that this equals `2ε Σ_ρ 1/((½−β)² − ε²)`, and concludes
+k = 0 ⟹ RH ⟹ Ω_k = 0.
+
+> **Correction to the first pass.** The first pass tested only the *claimed sum*. It
+> did not evaluate (\*). Doing so is decisive on its own.
+
+**Proposition.** For 0 < ε < ½,
+
+```
+(1/T) ∫₀^T [...] dt  =  2πN(T)/T + O(log T / T)  →  log(T/2πe)  →  +∞
+```
+
+real, positive, **independent of ε**, and **divergent**.
+
+*Proof.* Take the rectangle with corners ½±ε and ½±ε+iT. The pole of ζ at s = 1 lies
+outside for ε < ½; the poles of ζ'/ζ inside are the zeros with 0 < γ < T. The two
+vertical sides contribute i·I(T), so `i·I(T) + ∫_bot + ∫_top = 2πi·N(T)`, giving
+`I(T) = 2πN(T) + i(∫_bot + ∫_top)` with ∫_bot an O(1) real constant and ∫_top = O(log T).
+Divide by T and apply Riemann–von Mangoldt. ∎
+
+Verified numerically (V5, `--deep`):
+
+| T | ε | N(T) | Re[(1/T)I] | 2πN(T)/T | ratio | claimed −2N/ε |
+|---|---|---|---|---|---|---|
+| 20 | 0.10 | 1 | 0.323180 | 0.314159 | 1.0287 | −20 |
+| 20 | 0.25 | 1 | 0.336315 | 0.314159 | 1.0705 | −8 |
+| 40 | 0.10 | 6 | 0.946835 | 0.942478 | 1.0046 | −120 |
+| 40 | 0.25 | 6 | 0.953112 | 0.942478 | 1.0113 | −48 |
+| 60 | 0.10 | 13 | 1.359827 | 1.361357 | 0.9989 | −260 |
+| 60 | 0.25 | 13 | 1.357772 | 1.361357 | 0.9974 | −104 |
+| 80 | 0.10 | 21 | 1.645536 | 1.649336 | 0.9977 | −420 |
+| 80 | 0.25 | 21 | 1.640179 | 1.649336 | 0.9944 | −168 |
+
+The ratio → 1; Re[(1/T)I] agrees across ε to under 1%; Im[(1/T)I] → 0. At T = 80,
+ε = 0.1 the computed value is **+1.6455** and the claimed one is **−420**: opposite in
+sign, and off by a factor of 255.
+
+> **What (\*) actually computes** is log(T/2πe) — the Riemann–von Mangoldt *smooth
+> counting term*, which this repository already reproduces independently
+> (`src/paper_b/berry_keating_counting.py`, T2(known)). So (\*) is a correct and
+> standard object; it is simply not the object §7 says it is, and it converges to
+> nothing.
+
+Three further failures afflict the claimed sum even on its own terms:
 
 1. **Blind by construction.** β enters only through `(½−β)²` — exactly the invariant of the
    functional equation's involution `β ↦ 1−β`. ζ's zero set is symmetric under that
@@ -195,18 +256,41 @@ With `A(θ) = cos θ σ_z + sin θ σ_x` on |Φ⁺⟩ and the stated angles, the
 > **S = 2√2 = 2.8284271247…**, saturating the Tsirelson bound to machine precision.
 > **Confirmed, T3.**
 
-The identification does not survive. Only settings {2,3} appear on either wing. The setting
-that makes an EWFS an EWFS — x = 1 / y = 1, *open the lab and read the friend's
-already-recorded outcome* — enters no term of the sum. With two settings per wing this
-expression **is CHSH**; its local bound is 2 because that is the CHSH bound, not because of
-anything about observers. So:
+The identification does not survive — and it fails harder than the first pass recorded.
 
-- §5 demonstrates ordinary Bell nonlocality, experimentally established since 1982, not a
-  Local Friendliness violation. Bong et al.'s LF facets involve the x=1 row precisely
-  because that is where Absoluteness of Observed Events enters the derivation.
-- "Falsifying AOE" overstates even a genuine LF violation, which falsifies the
-  **conjunction** of AOE, Locality and No-Superdeterminism. No single conjunct is singled
-  out, and the cited source says so.
+> **Correction to the first pass.** The first pass concluded "it is CHSH; its local bound
+> is 2." True, but it compares against the wrong polytope.
+
+**Proposition.** For S = E(A₂B₂)+E(A₂B₃)+E(A₃B₂)−E(A₃B₃),
+
+```
+max over LF = 4 = max over no-signalling,      while     max over local = 2
+```
+
+*Proof.* LF (Bong et al.) states p(ab|xy) = Σ_λ q(λ) p_λ(ab|xy) with every p_λ
+no-signalling and p_λ(a|x=1), p_λ(b|y=1) deterministic, where x=1 is "open the lab and
+read the friend's already-recorded outcome." Maximising a linear functional over a convex
+hull equals maximising over the generators, so the LF bound is the largest of four LPs,
+one per (a₁,b₁) ∈ {±1}². All four return **4.000000000** (V6).
+
+Structurally: S contains no term with x=1 or y=1. Given *any* no-signalling behaviour q on
+{2,3}×{2,3}, set a₁ = b₁ = +1 and define the mixed rows by the product form δ(a,+1)·q_B(b|y)
+and q_A(a|x)·δ(b,+1); every no-signalling constraint is met, so q extends. The LF
+polytope's projection onto the {2,3} block is therefore the **full no-signalling
+polytope**, with CHSH maximum 4. ∎
+
+**Corollary.** S = 2√2 ≈ 2.828 < 4. The manuscript's value **violates no Local
+Friendliness inequality**, and by Tsirelson no quantum state or measurement could make
+this expression do so. The "> 2" in §5 is the Bell local bound.
+
+So:
+
+- §5 demonstrates ordinary Bell nonlocality, established since 1982. It says nothing about
+  AOE, because the expression it evaluates is insensitive to AOE by construction — the LF
+  assumption constrains only the rows containing setting 1, and those rows do not appear.
+  Bong et al.'s LF facets involve the x=1 row for exactly this reason.
+- Even a genuine LF violation would not "falsify AOE": the LF theorem falsifies the
+  **conjunction** of AOE, Locality and No-Superdeterminism, and the cited source says so.
 - The C₆/D₆ axial frame, the projection onto it, and the super-observer structure are
   **inert** — none appears anywhere in the algebra that produces 2√2.
 
@@ -223,6 +307,11 @@ With ψ = Re^(iS/ħ), the split is exact:
 
 - **(i) Double counting.** The second term is the visible matter's own kinetic energy
   density. `T₀₀ = ρ_vis c² + ρ_DM c²` then counts it a second time, as dark.
+- **(i′) It is not the quantum potential.** The Madelung/Bohm "quantum pressure" — the
+  term that actually shapes a rotation curve in every wave-dark-matter model — is
+  `Q = −(ħ²/2m)∇²R/R`, an energy *per particle* that may be negative. The manuscript's
+  expression is a positive-definite energy *density* built from R′², not R″/R. Different
+  objects: §6 does not use the mechanism it names. *(Added on the second pass.)*
 - **(ii) The Re/Im story is wrong.** `|∇ψ|²` is not a function of Im ψ alone, and the
   Re/Im split is not gauge invariant — a global U(1) phase rotates one into the other.
   EM coupling enters through the covariant derivative.
@@ -268,8 +357,11 @@ coordinates — nothing supplies the time direction — and a 2-parameter integr
 
 1. **S = 2√2** under the stated operators and state (T3) — a correct computation of a
    known quantity.
-2. **M = Klein bottle** from clauses (1)–(2) is correct and unique — the one piece of
-   topology in the paper that does what it claims. Clause (3) is what fails.
+2. **M = Klein bottle** from clauses (1)–(2) is correct and unique — confirmed by an
+   Euler-characteristic census (χ(N_k) = 2−k, cover genus h = k−1, so h = 1 only at k = 2)
+   and by computing H_*(K;Z) from the CW complex via Smith normal form. The one piece of
+   topology in the paper that does what it claims. Clause (3) is what fails. *(Minor: H₂ = 0
+   holds for every closed non-orientable surface, so that clause is implied by w₁ ≠ 0.)*
 3. `ln(8R/a)` is the right functional form for a thin-ring self-energy, inherited correctly
    from the parent note; the prefactor, the additive constant, and the cutoff are wrong.
 
@@ -283,12 +375,14 @@ coordinates — nothing supplies the time direction — and a 2-parameter integr
   modular-parameter argument, is gone.
 - **g** — the ledger's standing successor applies unchanged: **decouple where the charge
   sits from where the mass sits.** No framing, twist or trace-matching substitutes for it.
-- **§7** — a functional detecting off-line zeros must be **odd** under β ↦ 1−β. Any
-  construction whose β-dependence factors through (½−β)² is blind for the same reason.
-  *This is the one genuinely new structural boundary the audit produces: it bounds a class,
-  not a single attempt.*
-- **§5** — include the x=1 / y=1 rows and test an actual LF facet. The result would then be
-  about observers, and would falsify a conjunction, which must be stated as such.
+- **§7** — two repairs. (a) Redo the Guinand–Weil step: the defining integral is 2πN(T)/T,
+  so any claim about it must survive the Proposition above. (b) A functional detecting
+  off-line zeros must be **odd** under β ↦ 1−β; any construction whose β-dependence factors
+  through (½−β)² is blind for the same reason. *(b) is the one genuinely new structural
+  boundary the audit produces: it bounds a class, not a single attempt.*
+- **§5** — an LF test must contain the x=1 / y=1 rows; by the Proposition above an
+  expression without them cannot violate LF at any quantum value. Take an actual LF facet
+  from Bong et al. and evaluate it.
 - **§6** — accepting the ultralight mass makes this fuzzy dark matter: real and testable,
   but a proposal *with* an exotic particle, inheriting that literature's constraints.
 
@@ -306,8 +400,10 @@ mode this corpus names as primary: **overclaiming**.
 
 - Manuscript (as submitted): `papers/notes/Constraint_Projection_Framework.tex`
 - Formal TeX (authoritative): `papers/notes/Constraint_Projection_Framework_Audit.tex`
-- Instrument: `code/constraint_projection/cpf_audit.py`
-- Artifact: `docs/constraint_projection_audit.json`
+- Instruments: `code/constraint_projection/cpf_audit.py` (first pass),
+  `code/constraint_projection/cpf_full_verification.py` (full pass, V1–V9)
+- Artifacts: `docs/constraint_projection_audit.json`,
+  `docs/constraint_projection_full_verification.json`
 - Ledger entry: `docs/Elimination_Ledger.md`, 2026-08-29
 - Prior repo results relied on: `papers/notes/Mobius_Ribbon_Capacitance.tex`,
   `papers/notes/Framing_Transformer_Spin_Parity.tex`, `code/framed_unknot/`

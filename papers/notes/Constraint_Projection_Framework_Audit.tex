@@ -23,6 +23,7 @@
 
 \newtheorem{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
 \newtheorem{remark}{Remark}
 
 \newcommand{\Sl}{\mathit{Sl}}
@@ -52,9 +53,20 @@ Elimination Ledger on 2026-07-26 and restated here without reference
 (\S\ref{sec:spin}). Sections~\ref{sec:riemann}--\ref{sec:citations} treat the
 curvature functional, the Wigner's-friend sum, the dark-matter identification, and
 Axioms~I--II. \S\ref{sec:survives} states what survives and what it would take to
-repair each leg. Instrument:
-\texttt{code/constraint\_projection/cpf\_audit.py}; artifact
-\texttt{docs/constraint\_projection\_audit.json}.
+repair each leg.
+
+\textbf{Revised 2026-08-29 (second pass).} A full verification run
+(\texttt{cpf\_full\_verification.py}) recomputed every step that the first pass had
+settled by structural argument. Two verdicts moved, both \emph{against} the
+manuscript, and both are corrected in place below with the earlier reading stated:
+\S\ref{sec:ewfs} --- the Local Friendliness bound on the manuscript's sum is
+\textbf{4}, not $2$, so $S=2\sqrt2$ violates no LF inequality at all; and
+\S\ref{sec:riemann} --- the \emph{defining integral} of \S7, which the first pass
+never evaluated, equals $2\pi N(T)/T \to \log(T/2\pi e) \to +\infty$.
+Instruments: \texttt{code/constraint\_projection/cpf\_audit.py} (first pass),
+\texttt{code/constraint\_projection/cpf\_full\_verification.py} (full);
+artifacts \texttt{docs/constraint\_projection\_audit.json},
+\texttt{docs/constraint\_projection\_full\_verification.json}.
 \end{abstract}
 
 %-------------------------------------------------------------------------------
@@ -87,15 +99,17 @@ Axiom III ($\phi_*$ parabolic) & \textbf{T4} & $\mathcal{M}$ is forced to be the
   Klein bottle; $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ is finite \\
 $g=\Sl=2$, $s=\Sl/4$ & \textbf{T4} & already killed 2026-07-26; $\Sl$ carries one
   parity bit, and $g=1$ for every closed curve \\
-$k=0\Leftrightarrow$ RH $\Leftrightarrow\Omega_k=0$ & \textbf{T4} & functional is
-  invariant under $\beta\mapsto1-\beta$; on-line zeros give $k\to-\infty$ \\
+$k=0\Leftrightarrow$ RH $\Leftrightarrow\Omega_k=0$ & \textbf{T4} & the defining
+  integral equals $2\pi N(T)/T\to\log(T/2\pi e)\to+\infty$, not the claimed sum; and
+  the claimed sum is invariant under $\beta\mapsto1-\beta$ \\
 $L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$~m & \textbf{T4} & $19$--$79$ decades
   off, depending on which $a$ is used \\
 $\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}|\nabla\psi|^2$ & \textbf{T4} & contains
   $\tfrac12\rho v^2$; needs $m\sim10^{-23}$~eV \\
 Axiom I (non-amenable $\mathcal{B}$) & \textbf{T4} & every abelian group is amenable \\
-$S_{\mathrm{LF}}=2\sqrt2$ & \textbf{T3} & \emph{arithmetically correct}; but it is
-  CHSH, not an LF inequality \\
+$S_{\mathrm{LF}}=2\sqrt2$ & \textbf{T3} & \emph{arithmetically correct} \\
+that sum violates LF / falsifies AOE & \textbf{T4} & the LF bound on it is $\mathbf{4}$
+  (LP-verified); $2\sqrt2<4$, so there is no LF violation, and Tsirelson forbids one \\
 \bottomrule
 \end{tabular}
 \caption{Claim ledger for the CPF manuscript. Tiers never promote.}
@@ -314,13 +328,79 @@ magnitude --- which is precisely the gap the ledger recorded when it killed (a).
 \section{\S7: the curvature functional cannot see an off-line zero}
 \label{sec:riemann}
 
-The manuscript's functional is
+\S7 defines
 \[
-k(\varepsilon) = 2\varepsilon\sum_\rho
-\frac{1}{(\tfrac12-\beta)^2 - \varepsilon^2},
+k(\varepsilon) = \lim_{T\to\infty}\frac1T\int_0^T\!\Bigl[
+\tfrac{\zeta'}{\zeta}\bigl(\tfrac12{+}\varepsilon{+}it\bigr)
+-\tfrac{\zeta'}{\zeta}\bigl(\tfrac12{-}\varepsilon{+}it\bigr)\Bigr]dt,
+\tag{$\ast$}
 \]
-with the claim that $k=0$ requires $\beta=\tfrac12$ for all $\rho$, hence RH, hence
-$\Omega_k=0$. Three independent failures:
+asserts via Guinand--Weil that this equals
+$2\varepsilon\sum_\rho\bigl[(\tfrac12-\beta)^2-\varepsilon^2\bigr]^{-1}$, and
+concludes that $k=0$ forces $\beta=\tfrac12$, hence RH, hence $\Omega_k=0$.
+
+\begin{remark}[Correction to the first pass]
+The first pass tested only the \emph{claimed sum}. It did not evaluate $(\ast)$.
+Doing so is decisive on its own, and is presented first below.
+\end{remark}
+
+\begin{proposition}[$(\ast)$ diverges, and is not the claimed sum]
+\label{prop:integral}
+For $0<\varepsilon<\tfrac12$,
+\[
+\frac1T\int_0^T\!\bigl[\cdots\bigr]dt \;=\; \frac{2\pi N(T)}{T} + O\!\Bigl(\frac{\log T}{T}\Bigr)
+\;\longrightarrow\; \log\frac{T}{2\pi e}\;\longrightarrow\;+\infty ,
+\]
+where $N(T)$ counts zeros with $0<\gamma<T$. The limit is \emph{real}, \emph{positive},
+\emph{independent of $\varepsilon$}, and \emph{divergent}.
+\end{proposition}
+
+\begin{proof}
+Take the rectangle with corners $\tfrac12\pm\varepsilon$ and
+$\tfrac12\pm\varepsilon+iT$. The pole of $\zeta$ at $s=1$ lies outside it for
+$\varepsilon<\tfrac12$; the poles of $\zeta'/\zeta$ inside are the zeros with
+$0<\gamma<T$, each of residue equal to its multiplicity. Writing $I(T)$ for the
+integral in $(\ast)$, the two vertical sides contribute $i\,I(T)$, so
+$i\,I(T)+\int_{\mathrm{bot}}+\int_{\mathrm{top}} = 2\pi i\,N(T)$, giving
+$I(T)=2\pi N(T)+i(\int_{\mathrm{bot}}+\int_{\mathrm{top}})$. The bottom integral is a
+fixed $O(1)$ real number and the top is $O(\log T)$. Divide by $T$ and apply
+Riemann--von Mangoldt, $N(T)=\tfrac{T}{2\pi}\log\tfrac{T}{2\pi e}+O(\log T)$.
+\end{proof}
+
+Verified numerically (\texttt{cpf\_full\_verification.py}, V5, \texttt{--deep}):
+
+\begin{center}\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$T$ & $\varepsilon$ & $N(T)$ & $\Re[\tfrac1T I]$ & $2\pi N(T)/T$ & ratio &
+  claimed $-2N/\varepsilon$ \\
+\midrule
+20 & 0.10 & 1  & 0.323180 & 0.314159 & 1.0287 & $-20$ \\
+20 & 0.25 & 1  & 0.336315 & 0.314159 & 1.0705 & $-8$ \\
+40 & 0.10 & 6  & 0.946835 & 0.942478 & 1.0046 & $-120$ \\
+40 & 0.25 & 6  & 0.953112 & 0.942478 & 1.0113 & $-48$ \\
+60 & 0.10 & 13 & 1.359827 & 1.361357 & 0.9989 & $-260$ \\
+60 & 0.25 & 13 & 1.357772 & 1.361357 & 0.9974 & $-104$ \\
+80 & 0.10 & 21 & 1.645536 & 1.649336 & 0.9977 & $-420$ \\
+80 & 0.25 & 21 & 1.640179 & 1.649336 & 0.9944 & $-168$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The ratio converges to $1$; $\Re[\tfrac1T I]$ agrees across $\varepsilon$ to under
+$1\%$, and $\Im[\tfrac1T I]\to0$ as the boundary terms die. At $T=80$,
+$\varepsilon=0.1$ the computed value is $+1.6455$ and the claimed one is $-420$:
+they differ in sign and by a factor of $255$.
+
+\begin{remark}
+The quantity $(\ast)$ actually computes is $\log(T/2\pi e)$ --- the Riemann--von
+Mangoldt \emph{smooth counting term}, which this repository already reproduces
+independently (\texttt{src/paper\_b/berry\_keating\_counting.py}, T2(known)). So
+$(\ast)$ is a correct and standard object; it is simply not the object \S7 says it
+is, and it converges to nothing.
+\end{remark}
+
+Three further failures afflict the claimed sum even taken on its own terms:
 
 \textbf{(i) Blindness.} $\beta$ enters only through $(\tfrac12-\beta)^2$, which is
 exactly the invariant of the functional equation's involution $\beta\mapsto1-\beta$.
@@ -364,22 +444,63 @@ S = 2\sqrt2 = 2.8284271247\ldots,
 \]
 saturating the Tsirelson bound to machine precision. \textbf{Confirmed, T3.}
 
-The identification does not survive. Only settings $\{2,3\}$ appear on either wing.
-The setting that makes an Extended Wigner's Friend Scenario what it is --- $x=1$ /
-$y=1$, ``open the lab and read the friend's already-recorded outcome'' --- enters no
-term of the sum. With two settings per wing this expression \emph{is} CHSH; its
-local bound is $2$ because that is the CHSH bound, not because of anything about
-observers. Consequently:
+The identification does not survive --- and it fails harder than the first pass of
+this audit recorded.
+
+\begin{remark}[Correction to the first pass]
+\label{rem:lf-correction}
+The first pass concluded ``it is CHSH; its local bound is $2$.'' That is true but
+understates the failure, because it compares against the wrong polytope. The
+quantity that matters is the bound the \emph{Local Friendliness} polytope places on
+this expression, and that bound is $4$.
+\end{remark}
+
+\begin{proposition}[The LF bound on the manuscript's sum is $4$]
+\label{prop:lf4}
+Let $S = E(A_2B_2)+E(A_2B_3)+E(A_3B_2)-E(A_3B_3)$. Then
+\[
+\max_{\mathrm{LF}} S = 4 = \max_{\mathrm{NS}} S,
+\qquad\text{while}\qquad \max_{\mathrm{local}} S = 2 .
+\]
+\end{proposition}
+
+\begin{proof}
+Local Friendliness (Bong \emph{et al.}) states that
+$p(ab|xy)=\sum_\lambda q(\lambda)\,p_\lambda(ab|xy)$ with every $p_\lambda$
+no-signalling and $p_\lambda(a|x{=}1)$, $p_\lambda(b|y{=}1)$ deterministic, where
+$x=1$ is ``open the lab and read the friend's already-recorded outcome.'' Maximising
+a linear functional over a convex hull equals maximising over the generators, so
+$\max_{\mathrm{LF}}S$ is the largest of four linear programs, one per
+$(a_1,b_1)\in\{\pm1\}^2$. All four return $4.000000000$
+(\texttt{cpf\_full\_verification.py}, V6).
+
+Structurally: $S$ contains no term with $x=1$ or $y=1$. Given \emph{any}
+no-signalling behaviour $q$ on $\{2,3\}\times\{2,3\}$, set $a_1=b_1=+1$ and define
+the mixed rows by the product form $\delta(a,+1)\,q_B(b|y)$ and
+$q_A(a|x)\,\delta(b,+1)$. Every no-signalling constraint is met, so $q$ extends.
+Hence the LF polytope's projection onto the $\{2,3\}$ block is the \emph{full}
+no-signalling polytope, whose maximum for a CHSH-form functional is $4$.
+\end{proof}
+
+\begin{corollary}
+$S = 2\sqrt2 \approx 2.828 < 4$. The manuscript's value \textbf{violates no Local
+Friendliness inequality}, and by Tsirelson no quantum state or measurement could
+make this expression do so. The ``$>2$'' in \S5 is the Bell local bound.
+\end{corollary}
+
+Consequently:
 
 \begin{itemize}[leftmargin=1.2em]
 \item \S5 demonstrates ordinary Bell nonlocality, experimentally established since
-  1982, not a Local Friendliness violation. The LF facets of Bong \emph{et al.}
-  involve the $x=1$ row precisely because that is where Absoluteness of Observed
-  Events enters the derivation.
-\item ``Falsifying AOE'' overstates even a genuine LF violation. The LF theorem
+  1982. It says nothing about Absoluteness of Observed Events, because the
+  expression it evaluates is insensitive to AOE by construction --- the LF
+  assumption constrains only the rows containing setting $1$, and those rows do not
+  appear. The LF facets of Bong \emph{et al.} involve the $x=1$ row for exactly this
+  reason.
+\item Even a genuine LF violation would not ``falsify AOE.'' The LF theorem
   falsifies the \emph{conjunction} of Absoluteness of Observed Events, Locality and
-  No-Superdeterminism. No single conjunct is singled out, and this is stated
-  explicitly in the source the manuscript cites.
+  No-Superdeterminism; no single conjunct is singled out, and the source the
+  manuscript cites says so.
 \item The $C_6/D_6$ axial frame, the projection of $|\Phi^+\rangle$ onto it, and the
   super-observer structure are inert: none appears anywhere in the algebra that
   produces $2\sqrt2$.
@@ -402,6 +523,18 @@ an exact split (\texttt{cpf\_audit.py}, check~C7).
 of the visible matter itself. The manuscript's
 $T_{00} = \rho_{\mathrm{vis}}c^2 + \rho_{\mathrm{DM}}c^2$ then counts it a second
 time, as dark.
+
+\textbf{(i$'$) It is not the quantum potential.} The Madelung/Bohm ``quantum
+pressure'' --- the term that actually shapes a rotation curve in every wave-dark-matter
+model --- is
+\[
+Q = -\frac{\hbar^2}{2m}\frac{\nabla^2 R}{R},
+\]
+an energy \emph{per particle} that may be negative. The manuscript's
+$\tfrac{\hbar^2}{2m}|\nabla\psi|^2$ is a positive-definite energy \emph{density}
+built from $R'^2$, not from $R''/R$. They are different objects, so \S6 does not use
+the mechanism it names. (Added on the second pass; the first pass did not check
+this.)
 
 \textbf{(ii) The $\Re/\Im$ story is wrong.} $|\nabla\psi|^2$ is not a function of
 $\Im\psi$ alone, and the $\Re/\Im$ split is not gauge invariant --- a global $U(1)$
@@ -464,8 +597,12 @@ so ``Fredholm'' is not established.
 \item $S = 2\sqrt2$ under the stated operators and state (\textbf{T3}, confirmed).
   It is CHSH at Tsirelson saturation --- a correct computation of a known quantity.
 \item The identification $\mathcal{M} = $ Klein bottle from clauses (1)--(2) of
-  Axiom III is correct and, as the manuscript says, unique. It is the one piece of
-  topology in the paper that does what it claims. Clause~(3) is what fails.
+  Axiom III is correct and, as the manuscript says, unique --- confirmed by an
+  Euler-characteristic census ($\chi(N_k)=2-k$, cover genus $h=k-1$, so $h=1$ only at
+  $k=2$) and by computing $H_*(K;\mathbb{Z})$ from the CW complex via Smith normal
+  form. It is the one piece of topology in the paper that does what it claims.
+  Clause~(3) is what fails. (Minor: $H_2=0$ holds for \emph{every} closed
+  non-orientable surface, so that clause is implied by $w_1\neq0$ and adds nothing.)
 \item The observation that $\ln(8R/a)$ is the right functional form for a thin-ring
   self-energy is inherited correctly from the parent note; only the prefactor,
   the additive constant, and the cutoff are wrong.
@@ -487,13 +624,17 @@ so ``Fredholm'' is not established.
   \textbf{decouple where the charge sits from where the mass sits}. That is the only
   known route past $g=1$, and no framing, twist or trace matching will substitute
   for it.
-\item \emph{\S7}: a functional that detects off-line zeros must be \emph{odd} under
-  $\beta\mapsto1-\beta$, not even. Any construction whose $\beta$-dependence
-  factors through $(\tfrac12-\beta)^2$ is blind for the same reason, so this is a
-  structural constraint on the whole approach, not a fixable sign.
-\item \emph{\S5}: include the $x=1$ / $y=1$ rows and test an actual LF facet. The
-  result would then be about observers rather than about CHSH --- and would falsify
-  a conjunction, which must be stated as such.
+\item \emph{\S7}: two separate repairs are needed. (a) Redo the Guinand--Weil step:
+  the defining integral is $2\pi N(T)/T$, so any claim about it must survive
+  Proposition~\ref{prop:integral}. (b) A functional that detects off-line zeros must
+  be \emph{odd} under $\beta\mapsto1-\beta$, not even; any construction whose
+  $\beta$-dependence factors through $(\tfrac12-\beta)^2$ is blind for the same
+  reason. (b) is a structural constraint on the whole approach, not a fixable sign.
+\item \emph{\S5}: an LF test must contain the $x=1$ / $y=1$ rows --- by
+  Proposition~\ref{prop:lf4} an expression without them cannot violate LF at any
+  quantum value. Take an actual LF facet from Bong \emph{et al.} and evaluate it.
+  The result would then be about observers, and would falsify a conjunction, which
+  must be stated as such.
 \item \emph{\S6}: if the ultralight-scalar mass is accepted, the model becomes
   fuzzy dark matter, which is a real and testable proposal --- but it is then a
   proposal \emph{with} an exotic particle, and inherits that literature's
@@ -512,10 +653,15 @@ corpus names as primary: \emph{overclaiming}.
 %-------------------------------------------------------------------------------
 \section*{Verification}
 
-Instrument: \texttt{code/constraint\_projection/cpf\_audit.py} (checks C1--C8;
-\texttt{numpy}, \texttt{sympy}, \texttt{mpmath}). Artifact:
-\texttt{docs/constraint\_projection\_audit.json}. Ledger entry:
-\texttt{docs/Elimination\_Ledger.md}, 2026-08-29. Constants: CODATA 2022,
+Instruments: \texttt{code/constraint\_projection/cpf\_audit.py} (first pass, checks
+C1--C8) and \texttt{code/constraint\_projection/cpf\_full\_verification.py} (full
+pass, V1--V9; \texttt{--deep} recomputes the \S7 contour integrals, ${\sim}4$ min).
+Deps \texttt{numpy}, \texttt{scipy}, \texttt{sympy}, \texttt{mpmath}. Artifacts:
+\texttt{docs/constraint\_projection\_audit.json},
+\texttt{docs/constraint\_projection\_full\_verification.json}. Ledger entries:
+\texttt{docs/Elimination\_Ledger.md}, 2026-08-29 (kill and second-pass correction).
+V9 re-executes \texttt{code/framed\_unknot/} rather than citing it; both artifacts
+regenerated byte-identically. Constants: CODATA 2022,
 $\alpha^{-1} = 137.035999177(21)$. Prior repository results relied on:
 \texttt{papers/notes/Mobius\_Ribbon\_Capacitance.tex} (the corrected annulus
 relation), \texttt{papers/notes/Framing\_Transformer\_Spin\_Parity.tex} and

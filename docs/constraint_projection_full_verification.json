@@ -1,0 +1,389 @@
+{
+  "description": "Full verification of the Constraint Projection Framework manuscript",
+  "source": "code/constraint_projection/cpf_full_verification.py",
+  "target_manuscript": "papers/notes/Constraint_Projection_Framework.tex",
+  "companion_note": "papers/notes/Constraint_Projection_Framework_Audit.tex",
+  "first_pass": "code/constraint_projection/cpf_audit.py",
+  "deep_mode": true,
+  "constants": {
+    "alpha_inv_CODATA_2022": "137.035999177",
+    "R_spin_metres": "1.930796339e-13"
+  },
+  "checks": {
+    "V1_surface": {
+      "surfaces_with_T2_double_cover": [
+        "Klein bottle"
+      ],
+      "unique": true,
+      "H2_K": "0",
+      "H1_K": "Z + Z/2",
+      "H2_is_redundant": "implied by w_1 != 0 for closed surfaces",
+      "verdict": "CLAUSES (1)-(2) CORRECT; M = Klein bottle uniquely"
+    },
+    "V2_axiom_iii": {
+      "matrices_searched": 390625,
+      "centraliser": [
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "centraliser_order": 4,
+      "centraliser_traces": [
+        -2,
+        0,
+        0,
+        2
+      ],
+      "phi_star_order": "infinite",
+      "phi_conj_D": [
+        [
+          1,
+          -4
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "phi_in_centraliser": false,
+      "trace_2_elements": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "verdict": "UNSATISFIABLE (exhaustively confirmed)"
+    },
+    "V3_alpha": {
+      "L_times_alpha": 2,
+      "corrected_relation": "alpha^-1 = (ln(8R/a)+1)/2",
+      "dimensionally_consistent": true,
+      "circularity_sweep": [
+        {
+          "target": "137.035999171",
+          "a_over_R": "6.65896e-59",
+          "recovered": "137.035999171",
+          "exact": true
+        },
+        {
+          "target": "42",
+          "a_over_R": "1.25031e-17",
+          "recovered": "42.0",
+          "exact": true
+        },
+        {
+          "target": "1000",
+          "a_over_R": "1.10383e-433",
+          "recovered": "1000.0",
+          "exact": true
+        },
+        {
+          "target": "3.14159",
+          "a_over_R": "0.939743",
+          "recovered": "3.14159",
+          "exact": true
+        },
+        {
+          "target": "-7",
+          "a_over_R": "23847.7",
+          "recovered": "-7.0",
+          "exact": true
+        }
+      ],
+      "ring_capacitance_standard": "C = 4 pi^2 eps_0 R / ln(8R/a)",
+      "ring_inductance_standard": "L = mu_0 R [ln(8R/a) - 7/4]",
+      "constant_sensitivity": "d(alpha^-1)/d(const) = 1/2",
+      "codata_2022_offset_sigma": "0.286",
+      "verdict": "FALSE -- factor of 2 dropped, and the cutoff step is an identity"
+    },
+    "V4_cutoff": {
+      "constraints": [
+        {
+          "constraint": "tau = i a/R = i/2 (Sec 3)",
+          "a_over_R": "0.5",
+          "a_m": "9.6539817e-14",
+          "a_over_lP": "5.973e+21",
+          "alpha_inv_manuscript": "3.77258872224",
+          "alpha_inv_corrected": "1.88629436112",
+          "L_IR_m": "3.8615927e-13"
+        },
+        {
+          "constraint": "a/R = 8 exp(-136.035999171) (Sec 3)",
+          "a_over_R": "6.6589569e-59",
+          "a_m": "1.285709e-71",
+          "a_over_lP": "7.955e-37",
+          "alpha_inv_manuscript": "137.035999171",
+          "alpha_inv_corrected": "68.5179995855",
+          "L_IR_m": "2.8995477e+45"
+        },
+        {
+          "constraint": "CODATA on the corrected relation",
+          "a_over_R": "2.0390503e-118",
+          "a_m": "3.9369909e-131",
+          "a_over_lP": "2.436e-96",
+          "alpha_inv_manuscript": "274.071998354",
+          "alpha_inv_corrected": "137.035999177",
+          "L_IR_m": "9.4690962e+104"
+        },
+        {
+          "constraint": "L_IR = 1.3e26 m (Sec 8)",
+          "a_over_R": "1.485228e-39",
+          "a_m": "2.8676727e-52",
+          "a_over_lP": "1.774e-17",
+          "alpha_inv_manuscript": "92.4846919044",
+          "alpha_inv_corrected": "46.2423459522",
+          "L_IR_m": "1.3e+26"
+        }
+      ],
+      "decades_spanned": "117.39",
+      "lambda_model_m2": "5.91716e-53",
+      "lambda_observed_m2": "1.09091e-52",
+      "lambda_ratio": "1.844",
+      "verdict": "FALSE -- one free parameter, fitted four incompatible ways"
+    },
+    "V5_riemann": {
+      "summand": "1/(-epsilon**2 + (1/2 - beta)**2)",
+      "invariant_under_functional_equation": true,
+      "value_on_critical_line": "-1/epsilon**2",
+      "residue_prediction": "(1/T) I(T) -> 2 pi N(T)/T -> log(T/2 pi e) -> +infinity",
+      "numerics": [
+        {
+          "T": 20,
+          "eps": 0.1,
+          "N": 1,
+          "re_k": 0.323179833010518,
+          "two_pi_N_over_T": 0.3141592653589793,
+          "ratio": 1.0287133586247446,
+          "log_T_2pie": 0.15785520714464574,
+          "im_k": 0.03292571663032325
+        },
+        {
+          "T": 20,
+          "eps": 0.25,
+          "N": 1,
+          "re_k": 0.3363150175817545,
+          "two_pi_N_over_T": 0.3141592653589793,
+          "ratio": 1.0705239496834784,
+          "log_T_2pie": 0.15785520714464574,
+          "im_k": 0.0865985554821272
+        },
+        {
+          "T": 40,
+          "eps": 0.1,
+          "N": 6,
+          "re_k": 0.9468350181305987,
+          "two_pi_N_over_T": 0.9424777960769379,
+          "ratio": 1.0046231561865941,
+          "log_T_2pie": 0.851002387704591,
+          "im_k": 0.01819591386748175
+        },
+        {
+          "T": 40,
+          "eps": 0.25,
+          "N": 6,
+          "re_k": 0.9531121092203214,
+          "two_pi_N_over_T": 0.9424777960769379,
+          "ratio": 1.0112833566877106,
+          "log_T_2pie": 0.851002387704591,
+          "im_k": 0.04763181400955395
+        },
+        {
+          "T": 60,
+          "eps": 0.1,
+          "N": 13,
+          "re_k": 1.3598273378776233,
+          "two_pi_N_over_T": 1.3613568165555772,
+          "ratio": 0.9988765041909999,
+          "log_T_2pie": 1.2564674958127553,
+          "im_k": 0.01280640757691199
+        },
+        {
+          "T": 60,
+          "eps": 0.25,
+          "N": 13,
+          "re_k": 1.3577722513786863,
+          "two_pi_N_over_T": 1.3613568165555772,
+          "ratio": 0.9973669172304435,
+          "log_T_2pie": 1.2564674958127553,
+          "im_k": 0.03344402584109326
+        },
+        {
+          "T": 80,
+          "eps": 0.1,
+          "N": 21,
+          "re_k": 1.6455363233183893,
+          "two_pi_N_over_T": 1.6493361431346414,
+          "ratio": 0.9976961519747998,
+          "log_T_2pie": 1.5441495682645363,
+          "im_k": 0.009964414350091304
+        },
+        {
+          "T": 80,
+          "eps": 0.25,
+          "N": 21,
+          "re_k": 1.640179213733612,
+          "two_pi_N_over_T": 1.6493361431346414,
+          "ratio": 0.9944481120848864,
+          "log_T_2pie": 1.5441495682645363,
+          "im_k": 0.025982037725983786
+        }
+      ],
+      "recomputed": true,
+      "verdict": "FALSE -- claimed evaluation is wrong in sign, in eps-dependence, and in convergence; the functional is also blind by construction"
+    },
+    "V6_local_friendliness": {
+      "S_quantum": 2.82842712474619,
+      "tsirelson": 2.8284271247461903,
+      "bell_local_bound": 2.0,
+      "LF_bound": 4.0,
+      "no_signalling_bound": 4.0,
+      "lf_branches": {
+        "a1=+1,b1=+1": 4.0,
+        "a1=+1,b1=-1": 4.0,
+        "a1=-1,b1=+1": 4.0,
+        "a1=-1,b1=-1": 4.0
+      },
+      "friend_setting_in_sum": false,
+      "violates_bell": true,
+      "violates_LF": false,
+      "verdict": "ARITHMETIC TRUE; LF BOUND IS 4, SO THERE IS NO LF VIOLATION"
+    },
+    "V7_dark_matter": {
+      "split_exact": true,
+      "bulk_term": "R^2 S'^2/2m = (1/2) rho v^2",
+      "bohm_quantum_potential": "-R''*hbar**2/(2*R*m)",
+      "manuscript_uses_bohm_potential": false,
+      "flat_curve_requires": "rho ~ r^-2",
+      "mass_required_eV": "9.58576e-24",
+      "m_e_over_m_required": "5.33081e+28",
+      "verdict": "FALSE -- double counts, is not the quantum potential, and needs an ultralight exotic scalar"
+    },
+    "V8_amenability": {
+      "folner_Z": [
+        {
+          "n": 10,
+          "g": 1,
+          "ratio": 0.2
+        },
+        {
+          "n": 10,
+          "g": 7,
+          "ratio": 1.4
+        },
+        {
+          "n": 100,
+          "g": 1,
+          "ratio": 0.02
+        },
+        {
+          "n": 100,
+          "g": 7,
+          "ratio": 0.14
+        },
+        {
+          "n": 10000,
+          "g": 1,
+          "ratio": 0.0002
+        },
+        {
+          "n": 10000,
+          "g": 7,
+          "ratio": 0.0014
+        },
+        {
+          "n": 1000000,
+          "g": 1,
+          "ratio": 2e-06
+        },
+        {
+          "n": 1000000,
+          "g": 7,
+          "ratio": 1.4e-05
+        },
+        {
+          "n": 100000000,
+          "g": 1,
+          "ratio": 2e-08
+        },
+        {
+          "n": 100000000,
+          "g": 7,
+          "ratio": 1.4e-07
+        }
+      ],
+      "A_Q_mod_Q": "compact abelian -> Haar probability measure exists",
+      "idele_class_group": "abelian -> amenable",
+      "as_written": "undefined (Q^x is multiplicative)",
+      "verdict": "FALSE under every reading"
+    },
+    "V9_prior_results": {
+      "Tw_plus_Wr": -2.0,
+      "sigma": -1.0,
+      "g_factor": 1.0,
+      "Sl_zero_also_spinorial": true,
+      "artifact_drift": false,
+      "s_on_repo_sign": -0.5,
+      "knot_type": "(2,1) has q=1 -> unknot",
+      "verdict": "PRIOR KILLS RE-CONFIRMED BY RE-EXECUTION"
+    }
+  },
+  "summary": {
+    "V1_surface": "CLAUSES (1)-(2) CORRECT; M = Klein bottle uniquely",
+    "V2_axiom_iii": "UNSATISFIABLE (exhaustively confirmed)",
+    "V3_alpha": "FALSE -- factor of 2 dropped, and the cutoff step is an identity",
+    "V4_cutoff": "FALSE -- one free parameter, fitted four incompatible ways",
+    "V5_riemann": "FALSE -- claimed evaluation is wrong in sign, in eps-dependence, and in convergence; the functional is also blind by construction",
+    "V6_local_friendliness": "ARITHMETIC TRUE; LF BOUND IS 4, SO THERE IS NO LF VIOLATION",
+    "V7_dark_matter": "FALSE -- double counts, is not the quantum potential, and needs an ultralight exotic scalar",
+    "V8_amenability": "FALSE under every reading",
+    "V9_prior_results": "PRIOR KILLS RE-CONFIRMED BY RE-EXECUTION"
+  },
+  "verdicts_changed_vs_first_pass": {
+    "V6": "LF bound is 4, not 2 -- there is no LF violation at all",
+    "V5": "the defining integral diverges to +log(T/2 pi e); the claimed sum is wrong in sign and eps-dependence",
+    "V7": "the expression is not the Bohm quantum potential"
+  }
+}

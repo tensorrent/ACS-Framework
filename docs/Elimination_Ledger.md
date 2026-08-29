@@ -877,3 +877,143 @@ failure mode this corpus names as primary: **overclaiming**.
 Full write-up: `papers/notes/Constraint_Projection_Framework_Audit.tex`.
 Instrument: `code/constraint_projection/cpf_audit.py`.
 Artifact: `docs/constraint_projection_audit.json`.
+
+---
+
+### 2026-08-29 — CPF second pass: full verification — **TWO OF OUR OWN VERDICTS CORRECTED (both understated)** · T1 machine / T2 proved
+
+**Why this entry exists.** The kill logged immediately above settled three of its eight
+checks by structural argument rather than computation. Tier honestly: (b) structural
+must never wear (a) recomputable's clothes. This pass computed all of them
+(`code/constraint_projection/cpf_full_verification.py`, V1–V9, artifact
+`docs/constraint_projection_full_verification.json`). Two verdicts moved. Both moved
+**against** the manuscript — the earlier readings were too generous, not too harsh —
+and both are corrected in place in the audit note with the earlier reading stated.
+
+**CORRECTION 1 (V6) — the EWFS section fails harder than we said.**
+The first pass wrote: "no friend setting appears; it is CHSH, whose local bound is 2."
+True, but it compares against the wrong polytope. Computing the actual Local
+Friendliness bound by linear programming:
+
+```
+local (Bell/CHSH) bound      = 2.0000000000
+quantum value (Tsirelson)    = 2.8284271247
+LOCAL FRIENDLINESS bound     = 4.0000000000   <- all four (a1,b1) branches
+no-signalling bound          = 4.0000000000
+```
+
+LF (Bong et al.) is `p(ab|xy) = SUM_lam q(lam) p_lam(ab|xy)` with each `p_lam`
+no-signalling and `p_lam(a|x=1)`, `p_lam(b|y=1)` deterministic. Maximising a linear
+functional over a convex hull = maximising over the generators, so the LF bound is the
+max of four LPs. All four return exactly 4.
+
+The structural reason: the manuscript's sum contains no `x=1` or `y=1` term, and **any**
+no-signalling behaviour on `{2,3}x{2,3}` extends to a full LF behaviour (take
+`a1=b1=+1` and the product form `delta(a,+1) q_B(b|y)` on the mixed rows). So the LF
+polytope's projection onto that block is the *full* no-signalling polytope.
+
+**Consequence: `S = 2 sqrt 2 = 2.828 < 4`. The manuscript violates NO Local Friendliness
+inequality**, and by Tsirelson no quantum state or measurement could make that
+expression do so. Its "`> 2`" is the Bell local bound. So §5 does not merely prove
+something weaker than claimed — it proves nothing about AOE at all, and could not.
+**T4, strengthened.**
+
+**CORRECTION 2 (V5) — we never evaluated §7's defining integral.**
+The first pass tested only the claimed *sum*. The manuscript's actual definition is
+
+```
+k(eps) = lim_{T->oo} (1/T) INT_0^T [ zeta'/zeta(1/2+eps+it) - zeta'/zeta(1/2-eps+it) ] dt
+```
+
+Residue theorem on the rectangle `1/2-eps .. 1/2+eps, 0 .. iT`: the pole of zeta at
+`s=1` is outside for `eps < 1/2`; the poles of `zeta'/zeta` inside are exactly the zeros
+with `0 < gamma < T`. The vertical sides give `i I(T)`, so
+`i I(T) + INT_bot + INT_top = 2 pi i N(T)`, hence
+`I(T) = 2 pi N(T) + i(INT_bot + INT_top)` with `INT_bot` an O(1) real constant and
+`INT_top = O(log T)`. Therefore
+
+```
+(1/T) I(T)  ->  2 pi N(T)/T  ->  log(T / 2 pi e)  ->  +infinity
+```
+
+**real, positive, eps-INDEPENDENT, and divergent.** Confirmed numerically (mpmath,
+contour split at the zero ordinates):
+
+| T | eps | N(T) | Re[(1/T)I] | 2 pi N(T)/T | ratio | claimed −2N/eps |
+|---|-----|------|-----------|-------------|-------|-----------------|
+| 20 | 0.10 | 1  | 0.323180 | 0.314159 | 1.0287 | −20 |
+| 20 | 0.25 | 1  | 0.336315 | 0.314159 | 1.0705 | −8 |
+| 40 | 0.10 | 6  | 0.946835 | 0.942478 | 1.0046 | −120 |
+| 40 | 0.25 | 6  | 0.953112 | 0.942478 | 1.0113 | −48 |
+| 60 | 0.10 | 13 | 1.359827 | 1.361357 | 0.9989 | −260 |
+| 60 | 0.25 | 13 | 1.357772 | 1.361357 | 0.9974 | −104 |
+| 80 | 0.10 | 21 | 1.645536 | 1.649336 | 0.9977 | −420 |
+| 80 | 0.25 | 21 | 1.640179 | 1.649336 | 0.9944 | −168 |
+
+Ratio → 1; `Re[(1/T)I]` agrees across `eps` to under 1%; `Im[(1/T)I]` → 0 as the
+boundary terms die. At `T=80, eps=0.1` the computed value is **+1.6455** against a
+claimed **−420**: opposite sign, factor 255.
+
+**So the Guinand–Weil step is simply wrong, independently of the blindness argument**
+(which stands: the claimed summand depends on `beta` only through `(1/2-beta)^2`, the
+invariant of the functional equation's involution).
+
+**Worth recording for its own sake:** what the manuscript's integral *actually*
+computes is `log(T/2 pi e)` — the **Riemann–von Mangoldt smooth counting term**, which
+this repository already reproduces independently
+(`src/paper_b/berry_keating_counting.py`, T2(known)). The object is correct and
+standard; it is not the object §7 says it is, and it converges to nothing.
+
+**ADDITION (V7) — the dark-matter term is not the quantum potential.**
+Not previously checked. The Madelung/Bohm "quantum pressure" that shapes a rotation
+curve in every wave-dark-matter model is `Q = -(hbar^2/2m) (grad^2 R)/R`, an energy per
+particle that may be negative. The manuscript's `(hbar^2/2m)|grad psi|^2` is a
+positive-definite energy *density* built from `R'^2`, not `R''/R`. Different objects:
+**§6 does not use the mechanism it names**, on top of double counting `(1/2) rho v^2`
+and needing `m ~ 9.6e-24 eV`.
+
+**Everything else held, and is now machine-verified rather than argued:**
+
+- **V1** — Euler-characteristic census (`chi(N_k) = 2-k`, cover genus `h = k-1`, so
+  `h=1` only at `k=2`) plus Smith normal form on the CW complex of `K`
+  (`H_2 = 0`, `H_1 = Z (+) Z/2`). Clauses (1)–(2) of Axiom III are **correct and
+  unique**. Minor: `H_2 = 0` holds for every closed non-orientable surface, so that
+  clause is implied by `w_1 != 0` and adds nothing.
+- **V2** — exhaustive search over **390,625** integer matrices (`|entries| <= 12`,
+  `det = +-1`) confirms the centraliser of `D = diag(1,-1)` has order exactly 4,
+  `Z/2 (+) Z/2`, traces `{-2, 0, 0, +2}`, with `+2` attained only by the identity.
+  `phi_*` is not in it. **Axiom III unsatisfiable, exhaustively.**
+- **V3** — `L * alpha = 2` symbolically; dimensional audit passes (the error is a
+  dropped *number*, not a units slip); and a **circularity sweep** shows
+  `a/R = 8 exp(-(X-1)) => alpha^-1 = X` for every target tried, including `X = 42`,
+  `X = 1000` and `X = -7`. The step carries no information. Provenance: the standard
+  thin-ring capacitance is `4 pi^2 eps_0 R / ln(8R/a)` — the manuscript's prefactor
+  (`2 pi`) and additive constant (`+1` vs `0`, `-7/4`, `-2`) match nothing, and
+  `d(alpha^-1)/d(const) = 1/2` makes the constant a second free knob.
+- **V4** — the four-cutoff table reconfirmed at 50 digits, spread **117.4 decades**.
+  Added: `Lambda_eff = 1/L_IR^2 = 5.917e-53` vs `Lambda_obs = 1.091e-52` m^-2, ratio
+  1.84 — a factor-2 match is automatic for any `L_IR ~ c/H_0`, so it restates the input.
+- **V8** — Folner sequences computed on `Z` (`|F_n sym (F_n+g)|/|F_n| -> 0`). Every
+  abelian group is amenable; `A_Q/Q` is compact abelian with a Haar probability
+  measure; the idele class group is abelian; `A_Q/Q^x` as literally written is
+  undefined. **Axiom I false under every reading.**
+- **V9** — the prior kills were **re-executed, not cited**:
+  `framing_transformer.py` returns `Tw + Wr = -2.000000`, `sigma = -1` three ways, and
+  the control row `Sl = 0 -> sigma = -1` (same class as `Sl = 2`);
+  `moment_ratio.py` returns `g = 1.000000` exactly. Both artifacts regenerated
+  byte-identically (no git drift).
+
+**Verdict unchanged in direction, sharpened in degree: T4 on every load-bearing claim.**
+The surviving items are `M = Klein bottle` (V1) and the arithmetic value `S = 2 sqrt 2`
+(V6) — the latter now known to be a correct computation of a quantity that cannot bear
+the weight §5 puts on it.
+
+**Method note for the ledger.** Both corrections came from computing a step the first
+pass had reasoned about instead of running. Both made our own verdict stronger, which
+is the less dangerous direction but not a safe one: an audit that understates is still
+an audit that was not run. The rule that produced them is worth keeping — **evaluate
+the object the target actually defines, not the object it claims that object equals.**
+
+Full write-up: `papers/notes/Constraint_Projection_Framework_Audit.tex` (revised).
+Instrument: `code/constraint_projection/cpf_full_verification.py`.
+Artifact: `docs/constraint_projection_full_verification.json`.

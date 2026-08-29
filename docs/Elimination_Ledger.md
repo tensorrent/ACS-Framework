@@ -671,3 +671,209 @@ neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed hel
 dimensions of inverse length. It still does not evade the no-go on its own.
 
 Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.
+
+---
+
+### 2026-08-29 — Constraint Projection Framework: "zero free parameters, all constants from one non-orientable surface" — **KILLED, every load-bearing claim** · T1 machine / T2 structural / T4 falsified
+
+**Target.** A submitted manuscript, archived as
+`papers/notes/Constraint_Projection_Framework.tex`, claiming a zero-free-parameter
+topological derivation of `alpha`, `g`, `s`, the dark-matter density, cosmological
+flatness (via RH) and the Hubble radius from a single non-orientable surface `M`
+with `w_1 != 0`, double cover `T^2`, and `Sl = 2`. The manuscript closes "the ledger
+is sealed." It swings directly at this program's own load-bearing claims, two of
+which are already entries below, so it is a high-collapse target at low cost.
+
+**Instrument.** `code/constraint_projection/cpf_audit.py` — eight checks (C1–C8),
+each written so the manuscript could pass it. Artifact
+`docs/constraint_projection_audit.json`. Full write-up:
+`papers/notes/Constraint_Projection_Framework_Audit.tex`.
+
+**C1 — the alpha derivation fails its own algebra.** From the manuscript's three
+stated inputs — `C_M = 2 pi eps0 R / L` with `L = ln(8R/a)+1`, the match
+`(e/2)^2/(2 C_M) = m_e c^2`, and `R = hbar/(2 m_e c)` — sympy returns `L * alpha = 2`,
+i.e.
+
+```
+alpha^-1 = (1/2)(ln(8R/a) + 1)        NOT   ln(8R/a) + 1
+```
+
+**This correction is already in the repository.** It is eq. `(alpha_ann)` of
+`papers/notes/Mobius_Ribbon_Capacitance.tex` (2026-07-22), which also records the
+CODATA-matching aspect `a/R = 8 exp(1 - 2 alpha^-1) ~ 2.04e-118` — recomputed here at
+60 digits as `2.03905e-118`, an exact match. The manuscript reproduces the parent
+note's *uncorrected* form and its `137.036`, citing neither the correction nor the
+conformal/BIE revisions that returned `alpha^-1 = O(1)` at moderate aspect.
+
+Separately, the step `a/R = 8 exp(-136.035999171)` => `alpha^-1 = 137.035999171` is an
+identity — `ln(8/(8 e^-x)) + 1 = x + 1` for any `x`. The target is inserted in the
+premise. The asserted mechanism (G-field eigenvalue gap, GQRE renormalization) is
+stated with no computation, and the GfE G-field is *algebraically constrained*, so a
+discrete UV spectrum does not follow from that action without further input.
+
+**C2 — the kill: one parameter, four incompatible values, 117 decades apart.** The
+manuscript's "zero free parameters" rests on "the cutoff `a` is not free." It places
+four requirements on `a`, at `R = hbar/(2 m_e c) = 1.9308e-13` m:
+
+| constraint (source) | a/R | alpha^-1 (corrected) | L_IR = R^2/a [m] |
+|---|---|---|---|
+| `tau = i a/R = i/2` (§3) | 5.00e-1 | 1.886 | 3.9e-13 |
+| `a/R = 8 exp(-136.036)` (§3) | 6.66e-59 | 68.518 | 2.9e+45 |
+| CODATA match on the corrected relation | 2.04e-118 | 137.035999177 | 9.5e+104 |
+| `L_IR = 1.3e26` m (§8) | 1.49e-39 | 46.242 | 1.3e+26 |
+
+§3 contradicts itself internally: `tau = i/2` gives `a/R = 1/2`, five lines before
+`a/R = 6.7e-59` — 58 decades apart, and `a/R = 1/2` returns `alpha^-1 = ln 16 + 1 =
+3.77`. The alpha leg and the L_IR leg cannot both run: the manuscript's own `a` puts
+L_IR 19 decades past the Hubble radius, the corrected `a` puts it 79 decades past, and
+forcing L_IR gives `alpha^-1 = 46.24`. **"UV complete" also fails:** the `a` the
+corrected relation needs is `3.94e-131` m, i.e. `1e-96` Planck lengths.
+
+**Verdict on the headline: the framework has exactly one free parameter, `a/R`,
+fitted separately in §3 and §8.** The Appendix-B parameter table is wrong as stated,
+and the comparison to the SM's 19 is not like-for-like — no mass, no mixing angle
+and no coupling other than alpha is produced.
+
+**C3 — Axiom III has no model (the structural kill).** Clauses (1)–(2) —
+closed, non-orientable, `w_1 != 0`, double cover `T^2` — force `M = Klein bottle
+K = T^2/<tau>`, `tau(x,y) = (x+1/2, -y)`, uniquely; that much is correct. Clause (3)
+asks for `phi in Diff(M)` with `phi_* = [[1,2],[0,1]]`. Any diffeo of `K` lifts to
+`T^2` and must normalise the deck group `{1, tau}`; that group is `Z/2`, so
+normalising means commuting. On `H_1(T^2) = Z^2` the linear part of `tau` is
+`D = diag(1,-1)`, and exact integer arithmetic gives:
+
+```
+[M, D] = 0  =>  M diagonal  =>  centraliser = {diag(+-1, +-1)} ~ Z/2 (+) Z/2, order 4
+                                (agrees with Lickorish 1963: MCG(K) = Z/2 (+) Z/2)
+phi_*^n = [[1, 2n], [0, 1]]  =>  phi_* is parabolic of INFINITE order
+phi_* D phi_*^-1 = [[1, -4], [0, -1]]  !=  D
+```
+
+A finite group has no element of infinite order, and `phi_*` does not commute with
+`D` in any case. **No such `phi` exists.** The weaker reading fails too: within the
+centraliser the available traces are `{+2, -2, 0, 0}` and `+2` is attained *only by
+the identity*, which is not a Dehn twist and supplies no self-linking number. So
+`Tr(phi_*) = 2 = Sl` has no carrier under either reading, and everything downstream
+of it — `tau = i/2` (§3), `g` and `s` (§4), `lambda_UV lambda_IR = 1/R^4` (§8) —
+rests on an axiom no surface satisfies.
+
+Second, independent obstruction in §3: the Klein bottle admits **no embedding in
+R^3**, only immersions with self-intersection, so the "double-cover annulus" whose
+capacitance §3 computes does not exist. `K` is also closed and has no boundary. The
+formula actually used is the thin-ring one, whose `ln(8R/a)` is the Kelvin–Maxwell
+ring *inductance* log; its additive constant there is `-7/4` or `-2`, never `+1`.
+
+**C4 — §4 restates two kills logged below on 2026-07-26, without reference.**
+`g = Sl = 2` was killed by the parity law `sigma = (-1)^(Sl+1)`: the `Sl = 0` round
+circle is spinorial in the same sense, so the content of `Sl` is one parity bit and
+the value 2 does no work. The magnitude route was then closed by a T2 no-go:
+`mu` and `<L>` share the same vector area, so `g = 1` exactly for every closed curve.
+The manuscript reproduces the *original mechanism of the error* — matching the
+integer 2 across formalisms where it arises for unrelated reasons — and now adds a
+third unrelated 2, the trace of a parabolic. Three further errors: the repo's own
+computation gives `Tw + Wr = -2.000000`, so `s = Sl/4` would give `s = -1/2`; a
+`(p,q)` torus knot with `q = 1` is the **unknot**, as the parent note already
+corrects; and the `4` in `s = Sl/4` is nowhere derived — Finkelstein–Rubinstein
+yields a `Z/2` sector, not a magnitude, which is exactly the gap that killed the
+claim the first time.
+
+**C5 — §7's curvature functional cannot see an off-line zero.** Three independent
+failures of `k(eps) = 2 eps SUM_rho 1/((1/2-beta)^2 - eps^2)`:
+
+1. **Blind by construction.** `beta` enters only through `(1/2 - beta)^2` — exactly
+   the invariant of the functional equation's involution `beta -> 1 - beta`. Since
+   zeta's zero set is symmetric under that involution, every off-line zero arrives
+   with a mirror partner contributing identically. Numerically, 50 zeros at
+   `eps = 0.1`: `beta = 0.5 + 0.2` and `beta = 0.5 - 0.2` both give `k = +333.33`.
+   The functional cannot distinguish RH from its negation.
+2. **Inverted sign.** On the critical line every summand is `-1/eps^2`, not 0, so
+   `k = -2N/eps` for `N` on-line zeros — divergent as `N -> oo`, zero for no finite
+   `eps`. RH makes `k` maximally divergent; the criterion points the wrong way.
+3. **Empirical direction.** `Omega_k = 0.0007 +- 0.0019`; no measurement establishes
+   an exact zero. A biconditional makes a theorem of arithmetic contingent on CMB
+   data, and would let a future curvature detection refute RH.
+
+Repo rule 7 stands: RH is nowhere claimed proved here. §7 claims an *equivalence*,
+which is a proof claim in both directions. The corpus's defensible statement remains
+Paper B's — RH => stationarity proved by AM–GM, converse conditional on an unproved
+minimum-gap bound verified only to N = 200.
+
+**C6 — §5 SURVIVES arithmetically, fails on identification.** `S = 2 sqrt 2 =
+2.8284271247` at Tsirelson saturation, confirmed to machine precision (**T3**). This
+is the one displayed number in the manuscript that survives its own computation. But
+only settings `{2,3}` appear on either wing: the friend setting `x=1 / y=1` enters no
+term. With two settings per wing this **is CHSH**, whose local bound is 2 for
+CHSH reasons, not observer reasons — so §5 demonstrates ordinary Bell nonlocality
+(measured since 1982), not a Local Friendliness violation. Bong et al.'s LF facets
+involve the `x=1` row precisely because that is where AOE enters. "Falsifying AOE"
+also overstates even a genuine LF violation, which falsifies the **conjunction** of
+AOE, Locality and No-Superdeterminism. The `C_6/D_6` axial frame and the
+super-observer structure are inert — neither appears in the algebra producing
+`2 sqrt 2`.
+
+**C7 — §6's dark matter double counts and needs an exotic scalar.** With
+`psi = R e^{iS/hbar}` the split is exact:
+
+```
+(hbar^2/2m)|grad psi|^2 = hbar^2 R'^2/(2m)  +  R^2 S'^2/(2m)
+                                               ^^^^^^^^^^^^^^ = (1/2) rho v^2
+```
+
+The second term is the visible matter's own kinetic energy density, which
+`T_00 = rho_vis c^2 + rho_DM c^2` then counts a second time as dark. The `Re/Im`
+story is also wrong: `|grad psi|^2` is not a function of `Im(psi)` alone, and the
+split is not gauge invariant — a global U(1) phase rotates one into the other; EM
+couples through the covariant derivative. **The scale is decisive:** quantum pressure
+shapes a rotation curve only when `lambda_dB` is galactic, requiring
+`m ~ 1.7e-59 kg = 9.6e-24 eV/c^2` — the fuzzy-dark-matter window, i.e. an ultralight
+scalar, which is exactly the "exotic particle" §6 claims to avoid. At `m_e`,
+`lambda_dB = 5.8e-10` m, 29 decades too short-ranged. The claim fails either way. No
+Jeans solution, rotation curve or dataset appears; "matching observations" is
+asserted.
+
+**C8 — Axiom I is false; Axiom II is ill-posed; two citations are wrong.**
+`A_Q/Q^x` is malformed (`Q^x` is multiplicative and does not act on the additive
+adeles by translation). Both standard readings — `A_Q/Q` and the idele class group
+`A_Q^x/Q^x` — are **abelian, hence amenable** (Markov–Kakutani), and `A_Q/Q` is
+compact, carrying a translation-invariant Haar *probability* measure. The axiom
+asserts no finitely additive translation-invariant probability measure exists; that
+is false under every reading, and non-amenability is load-bearing for the "non-amenable
+information reservoir" framing. Axiom II maps onto `R^{3,1}` but `delta^(3)` fixes
+only three coordinates — nothing supplies the time direction — and a 2-parameter
+integral against a 3-dimensional delta is generically distributional, so "Fredholm"
+is not established. Citations: `arXiv:2401.12345` is a placeholder (Bianconi,
+"Gravity from entropy," is `arXiv:2408.14391`, Phys. Rev. D **111**, 066001 (2025));
+"Tiesinga et al., Rev. Mod. Phys. **94**, 035002 (2023)" matches no CODATA article of
+record (CODATA 2018 = RMP **93**, 025010 (2021); CODATA 2022 = Mohr, Newell, Taylor &
+Tiesinga, RMP **97**, 025002 (2025), `alpha^-1 = 137.035999177(21)`). Proietti 2019
+and Finkelstein–Rubinstein 1968 check out.
+
+**Verdict.** **FALSIFIED (T4) on every load-bearing claim.** One displayed number
+survives its own computation — `S = 2 sqrt 2` — and it is CHSH. The remainder fails
+its own algebra (C1), fits the one parameter it denies having four different ways
+(C2), rests on an axiom with no model (C3), restates two logged kills (C4), inverts
+its own Riemann criterion while being blind to the functional equation (C5),
+double counts (C7), or is false as stated (C8).
+
+**What survives, narrowly.** `M = Klein bottle` from clauses (1)–(2) is correct and
+unique — the one piece of topology in the paper that does what it claims; clause (3)
+is what fails. `S = 2 sqrt 2` is a correct computation of a known quantity.
+
+**What it opens.** Nothing new: each repair path leads back to a successor question
+already on the board. The `g` leg needs the standing successor — *decouple where the
+charge sits from where the mass sits* — and no framing, twist or trace-matching
+substitutes for it. §7's leg yields one genuinely new structural constraint worth
+recording: **a functional that detects off-line zeros must be ODD under
+`beta -> 1 - beta`.** Any construction whose `beta`-dependence factors through
+`(1/2 - beta)^2` is blind for the same reason, so this bounds a class rather than a
+single attempt.
+
+**On the framing.** The manuscript's closing "the ledger is sealed" inverts this
+program's discipline. The Elimination Ledger is append-only precisely so that it is
+never sealed. A framework declaring zero free parameters while fitting one parameter
+four ways, and declaring completeness while restating falsified results, is the
+failure mode this corpus names as primary: **overclaiming**.
+
+Full write-up: `papers/notes/Constraint_Projection_Framework_Audit.tex`.
+Instrument: `code/constraint_projection/cpf_audit.py`.
+Artifact: `docs/constraint_projection_audit.json`.

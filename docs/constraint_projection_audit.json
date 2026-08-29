@@ -1,0 +1,188 @@
+{
+  "description": "Audit of the Constraint Projection Framework manuscript",
+  "source": "code/constraint_projection/cpf_audit.py",
+  "target_manuscript": "papers/notes/Constraint_Projection_Framework.tex",
+  "companion_note": "papers/notes/Constraint_Projection_Framework_Audit.tex",
+  "constants": {
+    "alpha_inv_CODATA_2022": "137.035999177",
+    "R_spin_metres": "1.930796339e-13"
+  },
+  "checks": {
+    "C1_self_energy_algebra": {
+      "manuscript_relation": "alpha^-1 = ln(8R/a) + 1",
+      "relation_implied_by_manuscript_inputs": "alpha^-1 = (ln(8R/a) + 1) / 2",
+      "L_times_alpha": "2",
+      "missing_factor": 2,
+      "verdict": "FALSE -- factor of 2 dropped",
+      "already_in_repo": "papers/notes/Mobius_Ribbon_Capacitance.tex eq. alpha_ann"
+    },
+    "C2_cutoff_consistency": {
+      "constraints": [
+        {
+          "constraint": "modular parameter tau = i a/R = i/2",
+          "manuscript_source": "S 3, 'the self-linking condition Tr(phi_*) = 2 fixes tau = i/2'",
+          "a_over_R": "0.5",
+          "a_metres": "9.65398e-14",
+          "a_over_planck_length": "5.973e+21",
+          "ln_8R_over_a_plus_1": "3.77258872224",
+          "alpha_inv_manuscript_formula": "3.77258872224",
+          "alpha_inv_corrected_formula": "1.88629436112",
+          "L_IR_equals_R2_over_a_metres": "3.86159e-13"
+        },
+        {
+          "constraint": "manuscript's own stated a/R",
+          "manuscript_source": "S 3, 'a/R = 8 exp(-136.035999171)'",
+          "a_over_R": "6.65896e-59",
+          "a_metres": "1.28571e-71",
+          "a_over_planck_length": "7.955e-37",
+          "ln_8R_over_a_plus_1": "137.035999171",
+          "alpha_inv_manuscript_formula": "137.035999171",
+          "alpha_inv_corrected_formula": "68.5179995855",
+          "L_IR_equals_R2_over_a_metres": "2.89955e+45"
+        },
+        {
+          "constraint": "a/R that the CORRECTED alpha relation needs",
+          "manuscript_source": "C1 above, alpha^-1 = (ln(8R/a)+1)/2 at CODATA 2022",
+          "a_over_R": "2.03905e-118",
+          "a_metres": "3.93699e-131",
+          "a_over_planck_length": "2.436e-96",
+          "ln_8R_over_a_plus_1": "274.071998354",
+          "alpha_inv_manuscript_formula": "274.071998354",
+          "alpha_inv_corrected_formula": "137.035999177",
+          "L_IR_equals_R2_over_a_metres": "9.4691e+104"
+        },
+        {
+          "constraint": "a/R that L_IR = R^2/a = 1.3e26 m needs",
+          "manuscript_source": "S 8, 'L_IR = R^2/a ~ 1.3e26 m'",
+          "a_over_R": "1.48523e-39",
+          "a_metres": "2.86767e-52",
+          "a_over_planck_length": "1.774e-17",
+          "ln_8R_over_a_plus_1": "92.4846919044",
+          "alpha_inv_manuscript_formula": "92.4846919044",
+          "alpha_inv_corrected_formula": "46.2423459522",
+          "L_IR_equals_R2_over_a_metres": "1.3e+26"
+        }
+      ],
+      "decades_spanned": "117.39",
+      "free_parameters_claimed": 0,
+      "free_parameters_actual": 1,
+      "verdict": "FALSE -- a is fitted per-section, four incompatible values"
+    },
+    "C3_axiom_iii_realisability": {
+      "M_forced_to_be": "Klein bottle",
+      "deck_linear_part": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "phi_star": [
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "phi_star_trace": 2,
+      "phi_star_order": "infinite (parabolic)",
+      "phi_conj_D": [
+        [
+          1,
+          -4
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "phi_commutes_with_D": false,
+      "centraliser_order": 4,
+      "centraliser_traces": {
+        "[[1, 0], [0, 1]]": 2,
+        "[[-1, 0], [0, -1]]": -2,
+        "[[1, 0], [0, -1]]": 0,
+        "[[-1, 0], [0, 1]]": 0
+      },
+      "mcg_klein_bottle": "Z/2 (+) Z/2 (Lickorish 1963) -- finite",
+      "only_element_with_trace_2": "identity",
+      "verdict": "UNSATISFIABLE -- Axiom III has no model"
+    },
+    "C4_spin_and_g_factor": {
+      "claim_g_equals_Sl": "T4 -- killed 2026-07-26 (parity bit, sigma = (-1)^(Sl+1))",
+      "claim_s_equals_Sl_over_4": "unsupported -- the 4 is not derived; FR gives Z/2, not a magnitude",
+      "geometric_g_no_go": "g = 1 exactly for every closed curve (T2 no-go)",
+      "repo_measured_Sl": -2.0,
+      "s_implied_by_repo_sign": -0.5,
+      "knot_type": "(2,1) has q = 1 -> unknot, not a knot",
+      "verdict": "RESTATES TWO ALREADY-FALSIFIED CLAIMS (T4)"
+    },
+    "C5_curvature_functional": {
+      "summand": "1/(-epsilon**2 + (1/2 - beta)**2)",
+      "invariant_under_functional_equation": true,
+      "value_on_critical_line": "-1/epsilon**2",
+      "k_for_N_online_zeros": "-2*N/epsilon",
+      "numeric_k_online": "-1000.0",
+      "numeric_k_beta_plus_delta": "333.3333333",
+      "numeric_k_beta_minus_delta": "333.3333333",
+      "mirror_images_identical": true,
+      "verdict": "FALSE -- blind by construction, and inverted in sign"
+    },
+    "C6_ewfs": {
+      "correlators": {
+        "E_A2B2": 0.7071067811865475,
+        "E_A2B3": 0.7071067811865475,
+        "E_A3B2": 0.7071067811865474,
+        "E_A3B3": -0.7071067811865472
+      },
+      "S": 2.82842712474619,
+      "tsirelson": 2.8284271247461903,
+      "arithmetic_confirmed": true,
+      "friend_setting_present": false,
+      "is_LF_inequality": false,
+      "identification": "CHSH relabelled; local bound 2 is the CHSH bound",
+      "AOE_claim": "overstated -- LF falsifies AOE AND Locality AND No-Superdeterminism",
+      "verdict": "ARITHMETIC TRUE, IDENTIFICATION FALSE"
+    },
+    "C7_dark_matter": {
+      "madelung_split_exact": true,
+      "bulk_term": "R^2 S'^2 / 2m = (1/2) rho v^2 -- the visible matter's own kinetic energy",
+      "double_counted_in_T00": true,
+      "mass_required_kg": "1.70882e-59",
+      "mass_required_eV": "9.58576e-24",
+      "electron_de_broglie_at_200kms_m": "5.78838e-10",
+      "m_e_over_m_required": "5.33081e+28",
+      "verdict": "FALSE -- double counts, and needs an ultralight exotic scalar"
+    },
+    "C8_axioms_and_citations": {
+      "axiom_I_type_error": "A_Q/Q^x is malformed; Q^x is multiplicative",
+      "axiom_I_amenability": "FALSE -- every abelian group is amenable; A_Q/Q is compact and carries a Haar probability measure",
+      "axiom_II_time_direction": "delta^{(3)} fixes 3 coordinates; R^{3,1} needs 4",
+      "klein_bottle_embedding": "no embedding in R^3; the capacitance has no referent",
+      "log_provenance": "ln(8R/a) is the thin-ring inductance log; its constant is -7/4 or -2",
+      "bianconi_identifier_given": "arXiv:2401.12345 (placeholder)",
+      "bianconi_identifier_actual": "arXiv:2408.14391, Phys. Rev. D 111, 066001 (2025)",
+      "gfe_G_field": "algebraically constrained; no wave equation, no derived eigenvalue gap",
+      "codata_given": "Rev. Mod. Phys. 94, 035002 (2023) -- matches no CODATA release",
+      "codata_2022_actual": "Mohr, Newell, Taylor & Tiesinga, Rev. Mod. Phys. 97, 025002 (2025)",
+      "alpha_inv_codata_2022": "137.035999177",
+      "verdict": "AXIOM I FALSE, AXIOM II ILL-POSED, TWO CITATIONS WRONG"
+    }
+  },
+  "summary": {
+    "C1_self_energy_algebra": "FALSE -- factor of 2 dropped",
+    "C2_cutoff_consistency": "FALSE -- a is fitted per-section, four incompatible values",
+    "C3_axiom_iii_realisability": "UNSATISFIABLE -- Axiom III has no model",
+    "C4_spin_and_g_factor": "RESTATES TWO ALREADY-FALSIFIED CLAIMS (T4)",
+    "C5_curvature_functional": "FALSE -- blind by construction, and inverted in sign",
+    "C6_ewfs": "ARITHMETIC TRUE, IDENTIFICATION FALSE",
+    "C7_dark_matter": "FALSE -- double counts, and needs an ultralight exotic scalar",
+    "C8_axioms_and_citations": "AXIOM I FALSE, AXIOM II ILL-POSED, TWO CITATIONS WRONG"
+  }
+}

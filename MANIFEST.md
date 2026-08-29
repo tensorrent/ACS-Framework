@@ -180,3 +180,42 @@ Verify: `python3 code/framed_unknot/framing_transformer.py` and `python3 code/fr
 > odd meridian winding $q=1$ (the $\varphi/2$ half-angle), which is a
 > $\mathbb{Z}/2$ statement and cannot by itself yield a magnitude.
 
+
+
+---
+
+## Constraint Projection Framework — submitted manuscript & audit (2026-08-29)
+
+Manuscript (archived as submitted): `papers/notes/Constraint_Projection_Framework.tex`
+Audit: `papers/notes/Constraint_Projection_Framework_Audit.tex` ·
+Code: `code/constraint_projection/` · Artifact: `docs/constraint_projection_audit.json`
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-29
+Verify: `python3 code/constraint_projection/cpf_audit.py`
+
+> **The manuscript is archived, not endorsed.** Every load-bearing claim is **T4**.
+> It is kept because negatives are first-class outputs here, and because two of its
+> claims are restatements of kills already in the ledger — which is itself a finding.
+> Do not cite any result from it without the audit.
+
+| Claim (manuscript) | Tier | Evidence |
+|-------|------|----------|
+| $\alpha^{-1} = \ln(8R/a)+1 = 137.035999171$ | **T4** | `cpf_audit.py` C1 — the stated inputs give $L\alpha=2$, i.e. $\alpha^{-1}=\tfrac12(\ln(8R/a)+1)$; a factor of 2 is dropped. Correction already published in `Mobius_Ribbon_Capacitance.tex` eq. `(alpha_ann)` |
+| The cutoff $a$ is not free / zero free parameters | **T4** | `cpf_audit.py` C2 — four mutually exclusive requirements on $a/R$ spanning **117.4 decades** ($5.0\times10^{-1}$, $6.66\times10^{-59}$, $2.04\times10^{-118}$, $1.49\times10^{-39}$). One free parameter, fitted per section |
+| Axiom III: $\exists\,\phi\in\mathrm{Diff}(\mathcal{M})$, $\phi_*=\left(\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right)$ | **T4** | `cpf_audit.py` C3 — clauses (1)–(2) force $\mathcal{M}=$ Klein bottle; $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ is finite, $\phi_*$ is parabolic of infinite order, and $\phi_*D\phi_*^{-1}\neq D$. **The axiom has no model** |
+| $\mathcal{M}\cong$ Klein bottle from clauses (1)–(2) | **T2** | same — correct and unique; the one piece of topology in the paper that does what it claims |
+| $g=Sl=2$, $s=Sl/4=1/2$ | **T4** | `cpf_audit.py` C4 — restates the kills of 2026-07-26: $\sigma=(-1)^{Sl+1}$ (one parity bit) and $g=1$ exactly for every closed curve |
+| $k(\varepsilon)=0 \Leftrightarrow$ RH $\Leftrightarrow \Omega_k=0$ | **T4** | `cpf_audit.py` C5 — $\beta$ enters only via $(\tfrac12-\beta)^2$, the invariant of $\beta\mapsto1-\beta$, so the functional is blind to off-line zeros; and on-line zeros give $k=-2N/\varepsilon\to-\infty$, inverting the criterion |
+| $S_{\mathrm{LF}} = 2\sqrt2$ under the stated operators | **T3** | `cpf_audit.py` C6 — **arithmetically confirmed** to machine precision, Tsirelson-saturating |
+| That sum is a Local Friendliness inequality / falsifies AOE | **T4** | same — no friend setting ($x{=}1$) appears; it is CHSH. LF violation would falsify the *conjunction* AOE ∧ Locality ∧ No-Superdeterminism |
+| $\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}\lvert\nabla\psi\rvert^2$ solves rotation curves without exotic particles | **T4** | `cpf_audit.py` C7 — the split contains $\tfrac12\rho v^2$ (double counted in $T_{00}$), and the mechanism needs $m\sim9.6\times10^{-24}$ eV, an ultralight scalar |
+| $L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$ m; UV complete | **T4** | `cpf_audit.py` C2 — 19 decades off on the manuscript's own $a$, 79 on the corrected one; the corrected $a$ is $10^{-96}\,\ell_P$ |
+| Axiom I: $\mathcal{B}$ non-amenable | **T4** | `cpf_audit.py` C8 — $\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$ is malformed; both standard readings are abelian, hence amenable, and $\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ is compact with a Haar probability measure |
+
+> **New structural boundary established (the one genuinely new output).** A
+> functional detecting off-line zeros must be **odd** under $\beta\mapsto1-\beta$;
+> any construction whose $\beta$-dependence factors through $(\tfrac12-\beta)^2$ is
+> blind by the functional equation. This bounds a class, not a single attempt.
+
+> **Scope:** the audit assesses §§2–8 against the manuscript's own stated inputs.
+> The interpretive material of §§1 and 9 (relational measurement) makes no
+> falsifiable claim and is not assessed. Nothing here bears on authorship or priority.

@@ -1257,3 +1257,99 @@ has three validations and an exact certificate.
 Instrument: `code/constraint_projection/cpf_triple_check.py` (`--full` adds the
 T=74,000 sweep and the LF quantum search).
 Artifact: `docs/constraint_projection_triple_check.json`.
+
+---
+
+### 2026-08-30 — Method adopted from external work: formal verification. **T0 introduced; our T1 label was overstated** · T0 machine-CHECKED
+
+**Provenance.** Anthropic published *"Learning more about Claude's mathematical
+capabilities"* (2026-08-10, `anthropic.com/research/riemann-zeta`): an unreleased model
+raised the unconditional lower bound on the fraction of ζ zeros satisfying RH from
+**41.6% to 67.2%**. Their own caveat: *"We don't expect that the techniques Claude used
+will lead to proving the Riemann hypothesis."* Not peer-reviewed; reviewed internally by
+Alpöge and Furman, externally by Conrey and Goldston.
+
+**The result does not bear on this corpus.** Checked: we cite no zero-density bound
+anywhere. Paper B's results are conditional-on-RH statements plus the center-manifold
+claim; 67.2% is unconditional zero density. **No contradiction and no windfall** — logged
+so nobody later mistakes it for either.
+
+**The METHOD is what transfers, and it exposed a real defect in our tiering.**
+Their pipeline ends in a **Lean 4 / Mathlib formalization passing a standard checker**.
+Ours ends in a Python assertion. Those are categorically different things wearing the
+same word:
+
+```
+MANIFEST T1: "Machine-verified -- automated test passes, reproducible by running the code"
+```
+
+When `cpf_triple_check.py` asserts `det M == (2Em - p^2)^2`, that is **sympy agreeing with
+sympy**. It is not a proof. The label is stronger than the thing, which is precisely the
+tiering dishonesty this ledger exists to catch — and we had been carrying it since the
+bundle was assembled.
+
+**T0 INTRODUCED — machine-CHECKED proof.** Strictly stronger than T1. Kernel-verified by a
+proof assistant, with axiom dependencies disclosed. **No existing claim changes tier**:
+T0 is a new classification earned by new evidence, not a promotion. Exactly one
+proposition holds it so far.
+
+**First T0 result.** `code/constraint_projection/lean/LFBound.lean` — the Local
+Friendliness bound on the CPF manuscript's §5 sum is **exactly 4**. This is the
+proposition that carried the 2026-08-29 correction to our *own* earlier verdict, which is
+why it was chosen first.
+
+```
+lean code/constraint_projection/lean/LFBound.lean     0.84 s, exit 0, no Mathlib
+```
+
+| theorem | content |
+|---|---|
+| `S_le_four` | `S <= 4` for any normalised non-negative behaviour |
+| `star_is_LF` | the explicit witness is a genuine LF branch |
+| `star_S_eq_four` | the witness attains `S = 4` |
+| `lf_bound_is_four` | attained **and** bounded ⇒ the LF maximum is 4 |
+
+**Axiom disclosure** (`#print axioms`): `star_is_LF` and `star_S_eq_four` **depend on no
+axioms at all** — pure computation. `S_le_four` and `lf_bound_is_four` use only
+`propext` and `Quot.sound`. **No `Classical.choice`**, so the development is constructive.
+No `sorry`; no `native_decide` (which would trust the compiler rather than the kernel).
+
+**The proof was shown capable of failing** (rule 3, adopted 2026-08-30). Lean rejects the
+file under each mutation: attainment `8 -> 9`; bound `<= 8 -> <= 7`; a single PR-box entry
+`1 -> 0`. A proof that passed under a corrupted witness would be vacuous.
+
+**Design choice: no Mathlib.** The file checks with a bare `lean` binary in under a
+second, so verification costs a reader 30 s of install rather than an hours-long build.
+The cost is that `IsGreatest` and set-builder notation are unavailable, so the theorem is
+stated as an explicit attained-and-bounded pair. Arithmetic is in **doubled integer
+units** (`B x y a b = 2·p(a,b|x,y)`); every probability in play is 0, ½ or 1, so doubling
+clears denominators and keeps everything in `Int` where `omega` and `decide` close the
+goals.
+
+**Scope — what is NOT formalised.** Nothing here is a statement about quantum mechanics.
+Two external facts complete the audit's argument and remain unformalised: Tsirelson caps
+any quantum value of this expression at `2 sqrt 2`, and the Bell local bound is 2
+(exhaustive over 64 strategies, numerical). Given those, `2 < 2 sqrt 2 < 4`. The upper
+bound in Lean also needs only normalisation and non-negativity, **not** the LF
+conditions — deliberate, and the honest reading is that all the content sits in
+attainment.
+
+**Two other methods from the same source, assessed honestly:**
+- **Prior-art search before claiming novelty** (they pulled 54 arXiv papers). **We have
+  not done this.** Our one claimed-new result — *a functional detecting off-line zeros
+  must be odd under `beta -> 1-beta`* — was asserted novel on judgement alone. **OPEN: it
+  needs a literature search before it stands as ours.**
+- **Validator/generator role separation** (13 of 60 subagents were validators, separate
+  from the 2 developing ideas). We have no structural separation: the same agent builds
+  the instrument and checks it. Rule 3 is a self-administered substitute for what role
+  separation buys structurally.
+
+**What does not transfer.** The 60-subagent scale is for searching a large *open*
+hypothesis space. Auditing a given manuscript has a space fixed by the document; more
+agents would not have found anything the triple-check missed. Recorded so the scale is not
+cargo-culted.
+
+**Where we were already ahead.** They logged 30 failed subagents and ~650 dead ideas. That
+is this ledger, and ours is append-only and older. No change.
+
+Instrument: `code/constraint_projection/lean/LFBound.lean` · `.../lean/README.md`.

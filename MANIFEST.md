@@ -7,10 +7,17 @@ Condensate, framing transformer) were appended later and carry their own dates.
 Seed `20260423`. All code referenced was executed at the time its section was
 written.
 
-## Four-tier verification hierarchy (tiers never promote)
+## Verification hierarchy (tiers never promote)
+
+> **T0 added 2026-08-30.** T1 has always meant *a script ran and asserted* — which is
+> weaker than "machine-verified" sounds: a sympy assertion is sympy agreeing with itself.
+> A kernel-checked proof is categorically different and gets its own, strictly stronger
+> tier. **No existing claim changed tier**; T0 is earned by new evidence, not promotion.
+> Exactly one proposition holds it so far — see `code/constraint_projection/lean/`.
 
 | Tier | Standard |
 |------|----------|
+| **T0** | Machine-**checked** — kernel-verified by a proof assistant, axiom dependencies disclosed (added 2026-08-30) |
 | **T1** | Machine-verified — automated test passes, reproducible by running the code |
 | **T2** | Proved in paper — complete mathematical proof, human-verified |
 | **T3** | Numerically verified — consistent across runs, not yet theorem-level |
@@ -315,3 +322,33 @@ the instruments before trusting them, and scales past toy sizes.
 > **Reproducibility note.** `ribbon_capacitance.py` was re-run this session and its
 > tracked artifact regenerated **byte-identically** (sole diff: a trailing newline),
 > independently confirming the repo's byte-reproducibility claim.
+
+
+---
+
+## Formal verification — first T0 result (2026-08-30)
+
+Code: `code/constraint_projection/lean/LFBound.lean` · `.../lean/README.md`
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `lean code/constraint_projection/lean/LFBound.lean` (~0.8 s, exit 0, **no Mathlib**)
+
+Method adopted from Anthropic's Riemann-zeta pipeline (2026-08-10), which ends in a Lean
+formalization passing a standard checker.
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| LF bound on the CPF §5 sum is exactly 4 | **T0** | `lf_bound_is_four` — attained by an explicit LF branch **and** an upper bound |
+| `S ≤ 4` on any normalised non-negative behaviour | **T0** | `S_le_four` (needs neither LF nor no-signalling) |
+| the witness is a genuine LF branch | **T0** | `star_is_LF` — **depends on no axioms** |
+| the witness attains `S = 4` | **T0** | `star_S_eq_four` — **depends on no axioms** |
+| the proof can fail | **T1** | 3 mutations, all REJECTED by Lean |
+
+> **Axioms disclosed:** only `propext` and `Quot.sound`; **no `Classical.choice`**, so the
+> development is constructive. No `sorry`, no `native_decide`.
+
+> **Not formalised:** Tsirelson (`2√2`) and the Bell bound (2) remain external/numerical.
+> The Lean file makes no quantum-mechanical claim.
+
+> **Open, from the same review:** our one claimed-new result — *a functional detecting
+> off-line zeros must be odd under β↦1−β* — was asserted novel on judgement, with **no
+> prior-art search**. It needs one before it stands as ours.

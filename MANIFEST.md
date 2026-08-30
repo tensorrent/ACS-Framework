@@ -221,10 +221,14 @@ and `python3 code/constraint_projection/cpf_full_verification.py` (full, V1–V9
 | $L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$ m; UV complete | **T4** | `cpf_audit.py` C2 — 19 decades off on the manuscript's own $a$, 79 on the corrected one; the corrected $a$ is $10^{-96}\,\ell_P$ |
 | Axiom I: $\mathcal{B}$ non-amenable | **T4** | `cpf_audit.py` C8 — $\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$ is malformed; both standard readings are abelian, hence amenable, and $\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ is compact with a Haar probability measure |
 
-> **New structural boundary established (the one genuinely new output).** A
-> functional detecting off-line zeros must be **odd** under $\beta\mapsto1-\beta$;
-> any construction whose $\beta$-dependence factors through $(\tfrac12-\beta)^2$ is
-> blind by the functional equation. This bounds a class, not a single attempt.
+> ~~**New structural boundary established (the one genuinely new output).**~~
+> **RETIRED 2026-08-30 — NOT NOVEL.** The statement (a functional detecting off-line
+> zeros must be **odd** under $\beta\mapsto1-\beta$; anything factoring through
+> $(\tfrac12-\beta)^2$ is blind) is **true but classical**. Davenport–Heilbronn (1936)
+> is the standard witness that functional-equation symmetry alone cannot locate zeros;
+> Weil's positivity criterion is the standard construction that beats it, with off-line
+> zeros appearing as negative eigenvalues. Found in one query on the first use of the
+> prior-art step. The reading of the manuscript's §7 stands; the *contribution* does not.
 
 > **Second pass, 2026-08-29 — two of our own verdicts corrected, both understated.**
 > The first pass settled three checks by structural argument rather than computation.
@@ -349,6 +353,37 @@ formalization passing a standard checker.
 > **Not formalised:** Tsirelson (`2√2`) and the Bell bound (2) remain external/numerical.
 > The Lean file makes no quantum-mechanical claim.
 
-> **Open, from the same review:** our one claimed-new result — *a functional detecting
-> off-line zeros must be odd under β↦1−β* — was asserted novel on judgement, with **no
-> prior-art search**. It needs one before it stands as ours.
+> **Closed 2026-08-30:** that prior-art search was run. The claim is **not novel** —
+> Davenport–Heilbronn and Weil positivity both predate it. Retired; see the ledger.
+> The prior-art step is now standing practice: no result is logged as novel until a
+> literature search has been run and recorded.
+
+
+---
+
+## Coherence audit — the CPF work used none of this repo's own methods (2026-08-30)
+
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+| Measurement | Tier | Evidence |
+|-------------|------|----------|
+| 4 CPF instruments, ~1,900 lines, **0 uses** of any repo-native method device | **T1** | grep for refraction / invariant / shuffle / surrogate / decoy / vantage / effective-rank |
+| The manuscript's $\alpha^{-1}$ is a **REFRACTION** by this ledger's own criterion | **T2** | moves to $O(1)$ under model swap (annulus→conformal→BIE); the additive constant $+1\to-7/4$ shifts it by exactly $11/8$ |
+| Decoy test on the $\alpha$ match — **never run** | — | open; a 2-parameter log form with one free parameter hits any target, so the decoy family is the whole family and the match carries zero bits |
+| Shuffle knife / surrogates **do not apply** to the CPF audit | **T2** | the audit is deductive (exact integers, finite group theory, rational certificates, a kernel-checked proof); there is no distribution to permute |
+
+> **Standing correction to practice.** An audit in this corpus should state up front which
+> of the program's own devices it applies and which it does not and why. Four instruments
+> went by without that. The verdicts were correct; the audit was simply built as though
+> the corpus had no methods of its own.
+
+### This program's own methodological inventions (none externally sourced)
+
+`shuffle knife` — marginal-matched surrogate; FORM/FUNCTION split, self-calibrating
+because the surrogate inherits the object's own distribution ·
+`tomographic invariance` — refraction vs invariant under instrument swap, with numerical
+(a) and structural (b) paths and an explicit rule never to let (b) wear (a)'s clothes ·
+`vantage-point census` — effective rank of witnesses ·
+`decoy discipline` · `strip-mine targeting` — rank by expected-space-collapsed per unit
+cost, weighted toward the program's *own* load-bearing claims ·
+`append-only elimination ledger` · `tiers never promote`.

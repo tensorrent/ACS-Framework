@@ -1353,3 +1353,115 @@ cargo-culted.
 is this ledger, and ours is append-only and older. No change.
 
 Instrument: `code/constraint_projection/lean/LFBound.lean` · `.../lean/README.md`.
+
+---
+
+### 2026-08-30 — Prior-art search (first use of the new method): our one claimed-new result is **NOT NEW — RETIRED** · T4 (novelty claim falsified)
+
+**The claim under test.** Logged 2026-08-29 and repeated in MANIFEST as *"the one
+genuinely new output"* of the CPF audit:
+
+> A functional detecting off-line zeros must be **odd** under `beta -> 1-beta`; any
+> construction whose `beta`-dependence factors through `(1/2-beta)^2` is blind by the
+> functional equation. This bounds a class, not a single attempt.
+
+It was asserted novel **on judgement alone, with no literature search** — flagged as the
+gap when we adopted Anthropic's prior-art step (they pulled 54 arXiv papers before
+claiming). This is the first run of that step, and it kills our claim immediately.
+
+**Prior art found.**
+
+1. **Davenport–Heilbronn (1936)** is the classical witness for exactly this. Their
+   function satisfies a Riemann-type functional equation — hence the full
+   `beta <-> 1-beta` symmetry — yet **has zeros off the critical line** (it is a linear
+   combination of two Dirichlet L-functions mod 5, and lacks an Euler product). So
+   functional-equation symmetry alone **cannot** locate zeros, and DH is the standard
+   counterexample making that precise. See *"Zeros of the Davenport–Heilbronn
+   counterexample"*, Math. Comp. **76** (2007) 2045.
+2. **Weil's positivity criterion** supplies the constructive complement we said was
+   needed. Weil's explicit formula defines a Hermitian/quadratic form whose positive
+   semidefiniteness is **equivalent to RH**, and off-line zeros appear as **negative
+   eigenvalues** — for finitely many off-line zeros the number of negative eigenvalues is
+   exactly half the number of zeros violating RH. That is precisely a functional that is
+   *not* blind, and its sensitivity is the **sign/definiteness structure** our
+   `(1/2-beta)^2` functional lacks. (AIM RH resource, `aimath.org/WWN/rh/articles/html/75a/`.)
+
+**Verdict.** The statement is **true but not ours**. It is the elementary direction of
+classical material: DH is the standard demonstration that the involution is not enough,
+and Weil positivity is the standard construction that beats it. **RETIRED as a novel
+result (T4 on the novelty claim).** The underlying observation stands as a correct reading
+of the CPF manuscript's §7 — it is simply not a contribution.
+
+**Note.** The Anthropic Riemann-zeta result logged above works in exactly this framework
+— *"a quadratic form induced by Weil, and positive- (respectively negative-)definite
+subspaces arising from zeros on (respectively off) the line."* Our "boundary" was a
+weaker, negative-side restatement of the frame that work is built on. Had we searched
+before claiming, we would have found it in one query.
+
+**Method note.** The prior-art step paid for itself on first use, and it cost one search.
+It is now standing practice: **no result is logged as novel until a literature search has
+been run and recorded.**
+
+---
+
+### 2026-08-30 — Coherence audit: the CPF work used **none** of this repo's own methods · T1 measured
+
+**Measurement.** Grep across all four CPF audit instruments for every method device this
+program invented:
+
+```
+                              refraction | invariant(candidate) | shuffle | surrogate
+                              | decoy | vantage | effective rank
+cpf_audit.py                  0 hits
+cpf_full_verification.py      0 hits
+cpf_triple_check.py           0 hits
+wave_equation_gfactor.py      0 hits
+```
+
+Four instruments, ~1,900 lines, **zero** uses or citations of the repo's own methodology.
+The audit was competent and reached correct verdicts, but it was built as though the
+corpus had no methods of its own.
+
+**What was available and what actually applies — assessed honestly, not padded:**
+
+| device | applies to the CPF audit? | verdict |
+|---|---|---|
+| **Tomographic invariance** (REFRACTION vs INVARIANT under instrument swap) | **YES — and we ran it without naming it** | coherence gap |
+| **Decoy discipline** (test a "privileged" value against decoys) | **YES — and we did NOT run it** | real gap |
+| **Vantage-point census / effective rank** | partially — as framing, not new computation | minor |
+| **Shuffle knife / marginal-matched surrogate** | **NO** | correctly not applicable |
+
+**The one real gap: decoys.** The manuscript's headline is that `alpha^-1 = 137.035999171`
+matches CODATA to `6e-9`. We killed it as circular (`ln(8/(8e^-x)) + 1 = x + 1` for any
+`x`, demonstrated across targets 42, 1000, −7). The **repo-native** form of that kill is
+sharper and was never run: a two-parameter log formula `A ln(B/r) + C` with one parameter
+free will hit *any* target to machine precision, so the decoy family is the whole family —
+the match carries **zero** bits. The existing kill is correct; the decoy framing states
+the strength of the result rather than only its failure mode.
+
+**The coherence gap: refraction.** The four-cutoff table and the annulus/conformal/BIE
+comparison **are** a tomographic-invariance test — `alpha^-1` moves under model swap (to
+`O(1)`) and under the additive constant (`+1 -> -7/4` shifts it by exactly `11/8`). By
+this ledger's own criterion, the manuscript's `alpha^-1` is a **REFRACTION**, not an
+invariant, and that is the corpus's own vocabulary for precisely this. The audit
+re-derived the device instead of citing it.
+
+**Where the shuffle knife genuinely does not apply — recorded so it is not cargo-culted.**
+The CPF audit is **deductive**: exact integer arithmetic, finite group theory, exact
+rational certificates, symbolic algebra, and now a kernel-checked proof. Marginal-matched
+surrogates test *statistical* claims against a matched null. There is no distribution to
+permute in "does `phi_* = [[1,2],[0,1]]` lie in a group of order 4." Not a gap.
+
+**Standing correction to practice.** An audit in this corpus should state, up front, which
+of the program's own devices it applies and which it does not and why. Four instruments
+went by without that.
+
+**Our own novel methods, for the record** (none of them externally sourced):
+`shuffle knife` (marginal-matched surrogate; FORM/FUNCTION split, self-calibrating because
+the surrogate inherits the object's own distribution) · `tomographic invariance`
+(refraction vs invariant under instrument swap, with both numerical (a) and structural (b)
+paths and an explicit rule never to let (b) wear (a)'s clothes) · `vantage-point census`
+(effective rank of witnesses — independent sightings or one reading refracted?) ·
+`decoy discipline` · `strip-mine targeting` (rank by expected-space-collapsed per unit
+cost, weighted toward the program's *own* load-bearing claims) · `append-only elimination
+ledger` · `tiers never promote`.

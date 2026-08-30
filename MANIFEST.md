@@ -403,6 +403,7 @@ Artifacts: `docs/alpha_decoy_test.json` · Ledger: `docs/Elimination_Ledger.md`,
 | The match carries **0 bits** | **T2** | 1 parameter fitted to 1 datum, residual DOF 0; the model reproduces every target in its range ($\alpha^{-1}=42$ at $a/R=1.25\times10^{-17}$) |
 | The quoted $6\times10^{-9}$ tracks **working precision**, not physics | **T1** | residual falls with `mp.dps`; improvable without limit |
 | Parameter-free reading predicts $\alpha^{-1} = 1.886$ | **T1** | from $\tau = ia/R = i/2$; wrong by a factor of **72.6** |
+| That 72.6× gap is an **artifact, not a scaling rule** | **T1/T2** | `alpha_scaling_test.py` — ratio runs 61→138 across the $\tau$ sweep; exponents for $\alpha$/$L_{\rm IR}$/$g$ are 1.0 / 20.7 / 0.00027; only $p=0$ reconciles the three instruments; 1 observable vs 2 parameters |
 | $\alpha^{-1}$ is a **REFRACTION** by the kill-criterion | **T2** | ~8× across annulus/conformal/BIE; $d(\alpha^{-1})/d(\text{const}) = 1/2$ exactly |
 | **Axiom III clause (3) unsatisfiable** | **T0** | `axiom_III_clause3_unsatisfiable` — centraliser is diagonal, $\varphi_*$ is not, its unimodular part is exactly four, $\varphi_*$ has infinite order |
 | Both Lean proofs can fail | **T1** | 3 + 4 mutations, all REJECTED |

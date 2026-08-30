@@ -1546,3 +1546,88 @@ topology is far beyond this file, and those facts are not in dispute — **the m
 error is algebraic, and the algebra is what is machine-checked.** Independent
 confirmation of the same four matrices by `Out(pi_1(K))` word algebra remains in
 `cpf_triple_check.py` X1, which shares no machinery with either.
+
+---
+
+### 2026-08-30 — Is the 72.648x alpha gap a scaling rule? — **ARTIFACT, on five independent grounds** · T1 machine / T2 structural
+
+**The hypothesis, and why it deserved a test.** The decoy test above found that taking
+the zero-free-parameter claim seriously — fixing `a/R = 1/2` from `tau = i a/R = i/2` —
+*predicts* `alpha^-1 = 1.886` against an observed `137.036`, a factor of **72.648**. A
+fair reading: that factor might not be noise. If it were systematic, the framework would
+be right in form and merely missing a power law. Worth testing, and testable, because a
+rule and an artifact make different predictions:
+
+> a **RULE** is a property of the theory — constant under convention changes, and
+> present wherever the theory meets data.
+> an **ARTIFACT** is a property of one arbitrary choice — it moves when the choice moves.
+
+Instrument `code/constraint_projection/alpha_scaling_test.py`, artifact
+`docs/alpha_scaling_test.json`.
+
+**S1 — the factor moves with the convention.** `tau` is a modelling choice, so sweep it:
+
+| tau | a/R | L | pred alpha^-1 | RATIO | exponent p |
+|---|---|---|---|---|---|
+| i/4 | 1/4 | 4.4657 | 2.2329 | **61.372** | 3.288 |
+| i/3 | 1/3 | 4.1781 | 2.0890 | **65.598** | 3.441 |
+| i/2 | 1/2 | 3.7726 | 1.8863 | **72.648** | 3.706 |
+| i | 1 | 3.0794 | 1.5397 | **89.001** | 4.375 |
+| 2i | 2 | 2.3863 | 1.1931 | **114.85** | 5.657 |
+| 3i | 3 | 1.9808 | 0.9904 | **138.36** | 7.198 |
+
+The ratio runs 61 → 138 (2.25x) and the exponent 3.29 → 7.20. Neither is a constant of
+the theory. **And the ratio is not independent data**: it is *defined* as
+`alpha^-1 / (L/2)`, so it carries exactly the information `alpha^-1` already carries.
+Asking whether 72.648 is meaningful is asking whether `137.036 = 72.648 x 1.886`, which
+is true by construction.
+
+**S2 — the neighbourhood is dense.** Of 11 short closed forms tried, **2** land within
+1e-3 of 72.648: `e^(30/7)` (8.5e-5) and `sqrt(5277)` (7.3e-5). The second is
+transparently meaningless, which is the point — near any 3-digit target the space of
+short closed forms is dense, so "it looks like a constant" carries no information. Same
+failure mode the alpha decoy family exhibited.
+
+**S3 — it does not transfer (decisive).** A missing power law is a property of the
+theory, so it must appear wherever the theory meets data:
+
+| observable | predicted | observed | ratio | = 72.648^k |
+|---|---|---|---|---|
+| alpha^-1 | 1.88629 | 137.036 | 72.6483 | **k = 1.0** |
+| L_IR [m] | 3.86159e-13 | 1.3e26 | 3.36649e+38 | **k = 20.7** |
+| g-factor | 2.0 | 2.00232 | 1.00116 | **k = 0.00027** |
+
+One rule requires ONE exponent. These are five orders of magnitude apart. And the alpha
+row reads `k = 1.0` **by construction** — 72.648 was *defined* as that ratio, so that row
+is the definition, not a confirmation.
+
+**S4 — no non-zero power reconciles the instruments (the strongest form, and the fairest
+test).** The repo has three independent electrostatic models of the *same* geometry at
+`a/R = 0.05`: annulus 3.037587, conformal 1.692054, BIE 0.372688. Under
+`alpha^-1 = K X^p`, all three describe one physical geometry so all must map to the same
+observed 137.036. But `K X1^p = K X2^p` with `X1 != X2` **forces `p = 0`**, and then
+`K = 137.036` — the answer itself. The only power law that reconciles the instruments is
+the one that **discards the geometry entirely**. That is not a correction to the theory;
+it is the removal of the theory.
+
+**S5 — underdetermined anyway.** Fitting `alpha^-1 = K L^p` needs at least two
+independent (input, output) pairs. The manuscript supplies **one** measured observable it
+claims to derive (`alpha`) against **two** parameters: residual DOF **−1**. Every `(K,p)`
+on the curve `K L^p = 137.036` fits perfectly — `p=1, K=36.32`; `p=2, K=9.628`;
+`p=4, K=0.6765`; `p=-1, K=516.98` — none preferred. *(The table's `p = 3.70567 →
+K = 1.0000006` row is not a near-miss: that exponent was derived from the requirement
+`K = 1`, and the residual is truncation in the 7 digits shown. Circular, and recorded as
+such so it is not read as a finding.)* The "natural" exponent `ln(137.036)/ln(L) =
+3.7056685` is not an integer, half-integer, or any recognisable index.
+
+**Verdict: ARTIFACT.** Five independent grounds, no verdict change to anything already
+logged — the alpha kill stands where it stood.
+
+**The hypothesis could have come out otherwise, and that is why it was worth running.**
+Had the ratio held near 72.648 across the `tau` sweep **and** reproduced the `L_IR` gap,
+that would have been genuine evidence of a missing power and would have reopened the
+alpha leg. It does neither. Recorded as a live alternative that was tested and failed,
+not as one dismissed.
+
+Instrument: `code/constraint_projection/alpha_scaling_test.py`.
+Artifact: `docs/alpha_scaling_test.json`.

@@ -12,6 +12,11 @@ export PATH="$HOME/.elan/bin:$PATH"
 
 lean code/constraint_projection/lean/LFBound.lean     # ~0.8 s; exit 0 = all theorems verified
 lean code/constraint_projection/lean/AxiomIII.lean    # ~0.9 s
+
+# PerZero.lean needs Mathlib (real analysis is outside Lean core):
+cd code/constraint_projection/lean/withMathlib
+lake exe cache get          # ~5 GB, once
+lake env lean PerZero.lean  # ~4 s; exit 0 = verified
 ```
 
 ## Why this exists
@@ -131,3 +136,51 @@ algebra is what is machine-checked.**
 **Independent confirmation:** `cpf_triple_check.py` X1 reaches the same four matrices by a
 route that never mentions the deck transformation — computing `Out(π₁(K))` from
 `⟨a,b | bab⁻¹ = a⁻¹⟩` by symbolic word algebra. The two methods share no machinery.
+
+
+## `withMathlib/PerZero.lean` — the per-zero 2π contribution (§7)
+
+Machine-checks the step the audit's exact evaluation of §7's integral rests on. For a
+zero at `β = ½` the two lines carry `α = +ε` and `α = −ε`:
+
+| Theorem | Content |
+|---|---|
+| `imag_cancels` | the imaginary parts cancel **exactly**, every `ε` — `α` enters only as `α²` |
+| `real_doubles` | the real parts combine to exactly `2[arctan((T−γ)/ε) + arctan(γ/ε)]` — `arctan` is odd |
+| `contribution_lt_two_pi` | that is **strictly below** `2π` at every finite `ε` |
+| `contribution_tendsto` | and **tends to** `2π` as `ε → 0⁺`, for `0 < γ < T` |
+| `per_zero_two_pi` | the package |
+
+**Why "→ 2π" and not "= 2π".** At any finite `ε` the contribution is strictly less; `2π`
+is a supremum approached, never attained. Stating it as an equality would be wrong, and
+the audit's prose said "→", so that is what is proved.
+
+**Axioms:** `propext`, `Classical.choice`, `Quot.sound` — non-constructive, as Mathlib's
+real analysis is. No `sorry`, no `native_decide`.
+
+### Mutation tests
+
+| mutation | result |
+|---|---|
+| contribution coefficient `2 → 3` | REJECTED |
+| limit `2π → 3π` | REJECTED |
+| bound `2π → π` | REJECTED |
+| `imagPart` made **odd** in `α` (`α² → α`) — cancellation must fail | REJECTED |
+| `realPart` sign flipped | REJECTED |
+
+### Scope — what is *not* proved
+
+That the closed form **is** the integral — the evaluation of `∫du/(α+iu)` itself — is not
+formalised; it is standard calculus, and is taken here as the *definition* of `realPart`
+and `imagPart`. What is proved is everything the audit's argument does **with** that
+closed form: the cancellation, the doubling, the bound, and the limit. Summing over the
+`N(T)` interior zeros then gives `2π·N(T)` — the residue count, without invoking the
+residue theorem.
+
+### Cost note
+
+This is the first proof here that needs Mathlib. `LFBound` and `AxiomIII` check with a
+bare `lean` binary in under a second; this one needs ℝ, `arctan` and filter limits, all
+outside Lean core. That raises a reader's verification cost from a 30-second install to a
+multi-gigabyte one — a real cost, and why it lives in its own directory rather than
+alongside the self-contained files.

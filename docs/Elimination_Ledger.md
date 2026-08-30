@@ -1631,3 +1631,63 @@ not as one dismissed.
 
 Instrument: `code/constraint_projection/alpha_scaling_test.py`.
 Artifact: `docs/alpha_scaling_test.json`.
+
+---
+
+### 2026-08-30 — Third T0: the per-zero 2π contribution machine-checked · T0
+
+`code/constraint_projection/lean/withMathlib/PerZero.lean`, `lake env lean` exit 0 in
+~4 s. Completes formal verification of the deductive core of the CPF audit.
+
+**Target.** The audit's exact evaluation of §7's defining integral (2026-08-30, X3) rests
+on one step: for real `alpha`, `INT du/(alpha+iu) = arctan(u/alpha) - (i/2)ln(alpha^2+u^2)`,
+so a zero at `beta = 1/2` sees `alpha = +eps` and `alpha = -eps`, the imaginary parts
+(depending on `alpha^2`) cancel, the real parts add, and the contribution is
+`2[arctan((T-gamma)/eps) + arctan(gamma/eps)] -> 2 pi`. That is the residue count derived
+without the residue theorem, and it was carrying the whole X3 result on Python plus a
+hand argument.
+
+| theorem | content |
+|---|---|
+| `imag_cancels` | the imaginary parts cancel **exactly**, for every `eps` — no hypothesis |
+| `real_doubles` | the real parts combine to exactly `2[arctan((T-g)/eps) + arctan(g/eps)]` |
+| `contribution_lt_two_pi` | that is **strictly below** `2 pi` at every finite `eps` |
+| `contribution_tendsto` | and **tends to** `2 pi` as `eps -> 0+`, for `0 < gamma < T` |
+| `per_zero_two_pi` | the package |
+
+**A correction to our own prose, forced by the formalisation.** The ledger and the audit
+both wrote the contribution "`-> 2 pi`", but `cpf_triple_check.py` X3's inline comment
+reads "`-> 2 pi` for any zero strictly inside", which invites reading it as an attained
+value. It is not: `arctan < pi/2` strictly, so at every finite `eps` the contribution is
+**strictly below** `2 pi`, and `2 pi` is a supremum approached in the limit. Formalising
+made the distinction unavoidable, and both statements are now in the file
+(`contribution_lt_two_pi` and `contribution_tendsto`) rather than one loose arrow. The
+numerics were never affected — X3's ratios approach 1 from both sides — but the wording
+was looser than the mathematics.
+
+**Axioms disclosed:** `propext`, `Classical.choice`, `Quot.sound`. Non-constructive, as
+Mathlib's real analysis is. No `sorry`; no `native_decide`.
+
+**Shown capable of failing:** Lean rejects the file under each of — contribution
+coefficient `2 -> 3`; limit `2 pi -> 3 pi`; bound `2 pi -> pi`; `imagPart` made **odd** in
+`alpha` (`alpha^2 -> alpha`, so the cancellation must fail); `realPart` sign flipped.
+The fourth is the important one: it targets the exact structural fact the argument turns
+on.
+
+**Scope.** That the closed form **is** the integral — the evaluation of `INT du/(alpha+iu)`
+itself — is not formalised; it is standard calculus and is taken as the *definition* of
+`realPart`/`imagPart`. What is proved is everything the audit does **with** it. Summing
+over the `N(T)` interior zeros gives `2 pi N(T)`.
+
+**Cost, recorded honestly.** This is the first proof here needing Mathlib: ℝ, `arctan` and
+filter limits are all outside Lean core. `LFBound` and `AxiomIII` check with a bare `lean`
+binary in under a second; this one needs a ~5 GB cache. That raises a reader's
+verification cost by orders of magnitude, which is why it sits in its own
+`withMathlib/` directory with its own `lakefile.toml` — the dependency boundary is visible
+in the tree rather than buried in an import line.
+
+**Formal-verification status after three T0 results.** The deductive core of the CPF audit
+is now machine-checked end to end: the LF bound (§5), Axiom III clause (3), and the
+per-zero contribution (§7). What remains outside the kernel is, in every case, either
+measured data or standard textbook results cited by name — never a step of our own
+reasoning.

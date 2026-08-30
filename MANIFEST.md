@@ -416,3 +416,39 @@ Artifacts: `docs/alpha_decoy_test.json` · Ledger: `docs/Elimination_Ledger.md`,
 > diffeomorphism of $K$ induces a matrix commuting with $D$, and that
 > $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ (Lickorish 1963), are **assumed and
 > cited**, not formalised — the manuscript's error is algebraic, and that is what is proved.
+
+
+---
+
+## Third T0 — the per-zero 2π contribution (2026-08-30)
+
+Code: `code/constraint_projection/lean/withMathlib/PerZero.lean` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `cd code/constraint_projection/lean/withMathlib && lake exe cache get && lake env lean PerZero.lean`
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Imaginary parts of the two lines cancel **exactly** | **T0** | `imag_cancels` — $\alpha$ enters only as $\alpha^2$; no hypothesis needed |
+| Real parts combine to $2[\arctan(\tfrac{T-\gamma}{\varepsilon}) + \arctan(\tfrac{\gamma}{\varepsilon})]$ | **T0** | `real_doubles` — $\arctan$ is odd |
+| That is **strictly below** $2\pi$ at every finite $\varepsilon$ | **T0** | `contribution_lt_two_pi` |
+| …and **tends to** $2\pi$ as $\varepsilon\to0^+$ for $0<\gamma<T$ | **T0** | `contribution_tendsto` |
+| The proof can fail | **T1** | 5 mutations, all REJECTED — including `imagPart` made odd in $\alpha$ |
+
+> **Wording corrected by the formalisation.** We had written the contribution "$\to 2\pi$"
+> in a way that invited reading it as attained. It is not: $\arctan < \pi/2$ strictly, so
+> $2\pi$ is a supremum approached, never reached. Both facts are now separate theorems.
+> The numerics were never affected; the prose was looser than the mathematics.
+
+> **Axioms:** `propext`, `Classical.choice`, `Quot.sound` — non-constructive, as Mathlib's
+> real analysis is.
+
+> **Cost.** First proof here needing Mathlib (~5 GB cache) rather than a bare `lean`
+> binary. Kept in `withMathlib/` with its own `lakefile.toml` so the dependency boundary
+> is visible in the tree.
+
+### Formal-verification status
+
+The deductive core of the CPF audit is now machine-checked end to end — **§5 LF bound**,
+**Axiom III clause (3)**, **§7 per-zero contribution**. What remains outside the kernel is
+in every case either measured data or standard textbook results cited by name, never a
+step of our own reasoning.

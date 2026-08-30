@@ -369,7 +369,7 @@ Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
 |-------------|------|----------|
 | 4 CPF instruments, ~1,900 lines, **0 uses** of any repo-native method device | **T1** | grep for refraction / invariant / shuffle / surrogate / decoy / vantage / effective-rank |
 | The manuscript's $\alpha^{-1}$ is a **REFRACTION** by this ledger's own criterion | **T2** | moves to $O(1)$ under model swap (annulus→conformal→BIE); the additive constant $+1\to-7/4$ shifts it by exactly $11/8$ |
-| Decoy test on the $\alpha$ match — **never run** | — | open; a 2-parameter log form with one free parameter hits any target, so the decoy family is the whole family and the match carries zero bits |
+| Decoy test on the $\alpha$ match — **RUN 2026-08-30** | **T1** | `alpha_decoy_test.py`: **14 of 14** decoy log-forms reproduce CODATA once each is given its own free cutoff. The test does **not** separate, where the T_min precedent did. Bits carried: **0** |
 | Shuffle knife / surrogates **do not apply** to the CPF audit | **T2** | the audit is deductive (exact integers, finite group theory, rational certificates, a kernel-checked proof); there is no distribution to permute |
 
 > **Standing correction to practice.** An audit in this corpus should state up front which
@@ -387,3 +387,31 @@ because the surrogate inherits the object's own distribution ·
 `decoy discipline` · `strip-mine targeting` — rank by expected-space-collapsed per unit
 cost, weighted toward the program's *own* load-bearing claims ·
 `append-only elimination ledger` · `tiers never promote`.
+
+
+---
+
+## Decoy test and the second T0 (2026-08-30)
+
+Code: `code/constraint_projection/alpha_decoy_test.py` ·
+`code/constraint_projection/lean/AxiomIII.lean`
+Artifacts: `docs/alpha_decoy_test.json` · Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| The manuscript's $\alpha$ form is **not privileged** | **T1** | 14 of 14 decoy log-forms hit CODATA to $<10^{-25}$; the test does not separate |
+| The match carries **0 bits** | **T2** | 1 parameter fitted to 1 datum, residual DOF 0; the model reproduces every target in its range ($\alpha^{-1}=42$ at $a/R=1.25\times10^{-17}$) |
+| The quoted $6\times10^{-9}$ tracks **working precision**, not physics | **T1** | residual falls with `mp.dps`; improvable without limit |
+| Parameter-free reading predicts $\alpha^{-1} = 1.886$ | **T1** | from $\tau = ia/R = i/2$; wrong by a factor of **72.6** |
+| $\alpha^{-1}$ is a **REFRACTION** by the kill-criterion | **T2** | ~8× across annulus/conformal/BIE; $d(\alpha^{-1})/d(\text{const}) = 1/2$ exactly |
+| **Axiom III clause (3) unsatisfiable** | **T0** | `axiom_III_clause3_unsatisfiable` — centraliser is diagonal, $\varphi_*$ is not, its unimodular part is exactly four, $\varphi_*$ has infinite order |
+| Both Lean proofs can fail | **T1** | 3 + 4 mutations, all REJECTED |
+
+> **Axioms.** `LFBound.lean` uses only `propext` and `Quot.sound` (constructive).
+> `AxiomIII.lean` additionally uses **`Classical.choice`** — not constructive. Disclosed
+> because the first file's constructivity was reported, so the second's loss of it must be.
+
+> **Scope of the Axiom III proof.** The *algebraic* obstruction is machine-checked. That a
+> diffeomorphism of $K$ induces a matrix commuting with $D$, and that
+> $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ (Lickorish 1963), are **assumed and
+> cited**, not formalised — the manuscript's error is algebraic, and that is what is proved.

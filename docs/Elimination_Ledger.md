@@ -1465,3 +1465,84 @@ paths and an explicit rule never to let (b) wear (a)'s clothes) · `vantage-poin
 `decoy discipline` · `strip-mine targeting` (rank by expected-space-collapsed per unit
 cost, weighted toward the program's *own* load-bearing claims) · `append-only elimination
 ledger` · `tiers never promote`.
+
+---
+
+### 2026-08-30 — Decoy test on the CPF alpha match, and the second T0 · T1 measured / T0 machine-checked
+
+Both items closed the two gaps named in the coherence audit above.
+
+**(A) DECOY TEST — the corpus's own discipline, applied to the CPF audit for the first
+time.** Precedent: the T_min height floor (2026-06-06), where decoy floors
+(`2πe·φ`, `(2πe)²/10`, `2πe/1.5`) were tested and **only** `2πe` gave a vanishing main
+term — that separation is what made `2πe` privileged rather than merely fitted.
+
+Instrument `code/constraint_projection/alpha_decoy_test.py`, artifact
+`docs/alpha_decoy_test.json`. Fourteen "geometric-looking" log-forms of the same species
+as the manuscript's, each solved for the cutoff `a/R` reproducing CODATA
+`alpha^-1 = 137.035999177`:
+
+```
+manuscript, as written:  ln(8/r) + 1          a/R = 6.65896e-59     residual 0.0
+manuscript, corrected:  (ln(8/r) + 1)/2       a/R = 2.03905e-118    residual 1.99e-59
+Kelvin-Maxwell ring:    (ln(8/r) - 7/4)/2     a/R = 1.30352e-119
+thin-ring capacitance:   ln(8/r)              a/R = 2.44969e-59
+different log argument:  ln(4/r) + 1          a/R = 3.32948e-59
+pi-flavoured:            ln(8/r) + pi/2       a/R = 1.17842e-58
+quadratic in the log:    sqrt(ln(8/r)^2 + 1)  a/R = 2.45865e-59
+power form:              (8/r)^(1/60)         a/R = 4.93185e-128
+   ... 14 of 14 reproduce CODATA to < 1e-25 (100% of the family)
+```
+
+**The decoy test does NOT separate.** Every form hits the target once allowed its own free
+cutoff. Where the T_min test isolated `2πe`, this isolates nothing. Two supporting
+measurements: **bits carried = 0** (one parameter fitted to one datum, residual DOF 0 —
+the model reproduces *every* target in its range, e.g. `alpha^-1 = 42` at
+`a/R = 1.25e-17`); and the quoted `6e-9` agreement **tracks the working precision**, not
+the physics — it is the manuscript's rounding of its own cutoff, improvable without limit
+by quoting more digits.
+
+**The parameter-free reading.** The one place the manuscript fixes `a/R` independently of
+`alpha` is `tau = i a/R = i/2`. Take the zero-free-parameter claim seriously and
+`alpha^-1` is then **predicted**: `1.886294361`, wrong by a factor of **72.6**. The
+137.036 is obtained by abandoning that condition and fitting instead. Both appear in §3,
+five lines apart.
+
+**Kill-criterion verdict, in this ledger's own vocabulary: REFRACTION.** The value moves
+~8x across legitimate models of the same geometry (annulus 3.037587 / conformal 1.692054 /
+BIE 0.372688 at `a/R = 0.05` — our recomputation reproduces the repo's recorded annulus
+value exactly), and `d(alpha^-1)/d(additive constant) = 1/2` exactly, so `+1 -> -7/4`
+shifts it by `11/8`. Not an invariant candidate.
+
+The existing circularity kill (C1/C2) was correct. **The decoy framing states its strength
+rather than only its failure mode:** the match is not merely circular, it is
+*uninformative* — no member of a 14-form family fails where the manuscript's form succeeds.
+
+**(B) SECOND T0 — Axiom III clause (3) machine-checked.**
+`code/constraint_projection/lean/AxiomIII.lean`, `lean` exit 0 in 0.93 s, no Mathlib.
+
+| theorem | content |
+|---|---|
+| `commutes_iff_diagonal` | the centraliser of `D = diag(1,-1)` is **exactly** the diagonal matrices |
+| `phi_not_commutes` | `phi_*` is not in it |
+| `phi_conj_D` | `phi_* D = [[1,-2],[0,-1]]` vs `D phi_* = [[1,2],[0,-1]]` |
+| `centraliser_unimodular` | its unimodular elements are **exactly the four** `diag(+-1,+-1)` |
+| `trace_two_only_identity` | trace `+2` in that group is attained **only by the identity** |
+| `phi_infinite_order` | `phi_*^n = [[1,2n],[0,1]] != I` for `n >= 1` |
+
+**Axioms disclosed:** `propext`, `Classical.choice`, `Quot.sound`. **Unlike `LFBound.lean`
+this development is NOT constructive** — `Classical.choice` enters through the automation.
+Recorded rather than hidden; the first file's constructivity was reported, so the second
+file's loss of it must be too.
+
+**Shown capable of failing:** Lean rejects the file under each of — `phi` made diagonal (so
+it *should* commute), `D` made the identity, one of the four centraliser elements dropped,
+and the power formula corrupted `2n -> 3n`.
+
+**Scope, stated deliberately.** Proved: the algebraic obstruction, in full. **Assumed and
+cited, not formalised:** that a diffeomorphism of `K` lifts to `T^2` and induces a matrix
+commuting with `D`, and that `MCG(K) = Z/2 (+) Z/2` (Lickorish 1963). Formalising surface
+topology is far beyond this file, and those facts are not in dispute — **the manuscript's
+error is algebraic, and the algebra is what is machine-checked.** Independent
+confirmation of the same four matrices by `Out(pi_1(K))` word algebra remains in
+`cpf_triple_check.py` X1, which shares no machinery with either.

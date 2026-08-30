@@ -11,6 +11,7 @@ curl -sSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y \
 export PATH="$HOME/.elan/bin:$PATH"
 
 lean code/constraint_projection/lean/LFBound.lean     # ~0.8 s; exit 0 = all theorems verified
+lean code/constraint_projection/lean/AxiomIII.lean    # ~0.9 s
 ```
 
 ## Why this exists
@@ -85,3 +86,48 @@ strategies, checked numerically in `cpf_triple_check.py`). Given those,
 Next candidates for formalisation: **Axiom III unsatisfiable** (finite group theory — the
 centraliser of `diag(1,−1)` in `GL(2,ℤ)` and the order of a parabolic) and the **per-zero
 `2π` contribution** in §7.
+
+
+## `AxiomIII.lean` — Axiom III clause (3) has no model
+
+The manuscript's Axiom III asks for `φ ∈ Diff(M)` with `φ_* = [[1,2],[0,1]]`, where
+clauses (1)–(2) have already forced `M` to be the Klein bottle. Everything downstream of
+`Tr(φ_*) = 2 = Sl` rests on it: `τ = i/2` (§3), `g` and `s` (§4), and
+`λ_UV·λ_IR = 1/R⁴` (§8).
+
+| Theorem | Content |
+|---|---|
+| `commutes_iff_diagonal` | the centraliser of `D = diag(1,−1)` is **exactly** the diagonal matrices |
+| `phi_not_commutes` | `φ_*` is not in it |
+| `phi_conj_D` | explicitly, `φ_*D = [[1,−2],[0,−1]]` while `Dφ_* = [[1,2],[0,−1]]` |
+| `centraliser_unimodular` | its unimodular elements are **exactly the four** `diag(±1,±1)` |
+| `trace_two_only_identity` | within that group, trace `+2` is attained **only by the identity** |
+| `phi_infinite_order` | `φ_*ⁿ = [[1,2n],[0,1]] ≠ I` for `n ≥ 1` — so it lies in no finite group |
+| `axiom_III_clause3_unsatisfiable` | the package |
+
+**Axioms:** `propext`, `Classical.choice`, `Quot.sound`. Unlike `LFBound.lean` this
+development is **not** constructive — `Classical.choice` enters through the automation.
+Disclosed rather than hidden.
+
+### Mutation tests
+
+| mutation | result |
+|---|---|
+| `φ` made diagonal (so it *should* commute) | REJECTED |
+| `D` made the identity (centraliser becomes everything) | REJECTED |
+| drop one of the four centraliser elements | REJECTED |
+| wrong power formula `2n → 3n` | REJECTED |
+
+### Scope — the boundary, stated deliberately
+
+**Proved:** the algebraic obstruction in full.
+
+**Assumed, cited, not formalised:** that a diffeomorphism of `K` lifts to `T²` and induces
+a matrix on `H₁` commuting with `D`, and that `MCG(K) = ℤ/2 ⊕ ℤ/2` (Lickorish, *Proc.
+Camb. Phil. Soc.* **59** (1963) 307). Formalising surface topology is far beyond this
+file, and those facts are not in dispute — **the manuscript's error is algebraic, and the
+algebra is what is machine-checked.**
+
+**Independent confirmation:** `cpf_triple_check.py` X1 reaches the same four matrices by a
+route that never mentions the deck transformation — computing `Out(π₁(K))` from
+`⟨a,b | bab⁻¹ = a⁻¹⟩` by symbolic word algebra. The two methods share no machinery.

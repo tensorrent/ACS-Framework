@@ -1,0 +1,136 @@
+{
+  "description": "Decoy test on the CPF alpha match (repo-native discipline)",
+  "source": "code/constraint_projection/alpha_decoy_test.py",
+  "precedent": "docs/Elimination_Ledger.md 2026-06-06, T_min height floor decoys",
+  "checks": {
+    "D1_decoy_family": {
+      "rows": [
+        {
+          "form": "manuscript, as written:  ln(8/r) + 1",
+          "cutoff": "6.6589569e-59",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "manuscript, corrected:  (ln(8/r) + 1)/2",
+          "cutoff": "2.0390503e-118",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "Kelvin-Maxwell ring:    (ln(8/r) - 7/4)/2",
+          "cutoff": "1.3035212e-119",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "external-inductance:    (ln(8/r) - 2)/2",
+          "cutoff": "1.0151834e-119",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "thin-ring capacitance:  ln(8/r)",
+          "cutoff": "2.4496933e-59",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "no additive constant:   ln(8/r)/2",
+          "cutoff": "7.5012469e-119",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "different log argument: ln(4/r) + 1",
+          "cutoff": "3.3294785e-59",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "different log argument: ln(16/r) + 1",
+          "cutoff": "1.3317914e-58",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "bare ratio:             ln(1/r)",
+          "cutoff": "3.0621167e-60",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "pi-flavoured:           ln(8/r) + pi/2",
+          "cutoff": "1.1784194e-58",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "Euler-flavoured:        ln(8/r) + euler",
+          "cutoff": "4.3630812e-59",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "quadratic in the log:   sqrt(ln(8/r)^2 + 1)",
+          "cutoff": "2.4586479e-59",
+          "residual": "0.0",
+          "hits": true
+        },
+        {
+          "form": "log-of-log correction:  ln(8/r) + ln(ln(8/r))",
+          "cutoff": "3.2373199e-57",
+          "residual": "1.99e-59",
+          "hits": true
+        },
+        {
+          "form": "power form:             (8/r)^(1/60)",
+          "cutoff": "4.9318487e-128",
+          "residual": "7.97e-59",
+          "hits": true
+        }
+      ],
+      "hits": 14,
+      "family_size": 14,
+      "privileged": false
+    },
+    "D2_information": {
+      "parameters": 1,
+      "targets": 1,
+      "residual_dof": 0,
+      "bits": 0
+    },
+    "D3_precision": {
+      "rows": [
+        {
+          "dps": 15,
+          "residual": "7.88e-15"
+        },
+        {
+          "dps": 30,
+          "residual": "7.26e-30"
+        },
+        {
+          "dps": 50,
+          "residual": "1.05e-49"
+        },
+        {
+          "dps": 80,
+          "residual": "0.0"
+        }
+      ]
+    },
+    "D4_parameter_free": {
+      "a_over_R": "1/2",
+      "predicted_manuscript": "3.772588722",
+      "predicted_corrected": "1.886294361",
+      "observed": "137.035999177",
+      "factor_off": "72.6483"
+    },
+    "D5_refraction": {
+      "model_swap_spread": "~8x at a/R = 0.05",
+      "d_alpha_d_constant": "1/2 exactly",
+      "verdict": "REFRACTION"
+    }
+  }
+}

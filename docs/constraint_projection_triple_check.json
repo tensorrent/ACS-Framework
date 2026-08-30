@@ -1,0 +1,254 @@
+{
+  "description": "Triple-check: every load-bearing CPF claim by >=2 independent methods",
+  "source": "code/constraint_projection/cpf_triple_check.py",
+  "full_mode": false,
+  "checks": {
+    "X1_mcg": {
+      "method_A_centraliser": [
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "method_B_out_pi1": [
+        [
+          [
+            -1,
+            0.0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0.0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "agree": true,
+      "order": 4,
+      "phi_star_present": false,
+      "verdict": "UNSATISFIABLE -- confirmed by two independent methods"
+    },
+    "X2_local_friendliness": {
+      "validation": {
+        "local_inside_LF": true,
+        "PR_box_outside_LF": true,
+        "quantum_outside_LF": true,
+        "quantum_slack": 1.19615242,
+        "closed_form_3sqrt3_minus_4": 1.196152422706632,
+        "searched_this_run": false
+      },
+      "LF_bound_LP": 4.0,
+      "LF_bound_exact": 4,
+      "bell_bound": 2,
+      "tsirelson": 2.8284271247461903,
+      "verdict": "LF BOUND IS 4 (two methods); NO LF VIOLATION IS REACHABLE"
+    },
+    "X3_riemann": {
+      "cross_check": [
+        {
+          "T": 20,
+          "eps": 0.1,
+          "exact": 0.3200811212760465,
+          "quad": 0.32318,
+          "diff": -0.0030988787239535354
+        },
+        {
+          "T": 20,
+          "eps": 0.25,
+          "exact": 0.3285685018165845,
+          "quad": 0.336315,
+          "diff": -0.0077464981834154956
+        },
+        {
+          "T": 40,
+          "eps": 0.1,
+          "exact": 0.9443512280559677,
+          "quad": 0.946835,
+          "diff": -0.0024837719440322648
+        },
+        {
+          "T": 40,
+          "eps": 0.25,
+          "exact": 0.9469027815429912,
+          "quad": 0.953112,
+          "diff": -0.006209218457008725
+        },
+        {
+          "T": 60,
+          "eps": 0.1,
+          "exact": 1.3577047911422317,
+          "quad": 1.359827,
+          "diff": -0.0021222088577681486
+        },
+        {
+          "T": 60,
+          "eps": 0.25,
+          "exact": 1.3524659863036677,
+          "quad": 1.357772,
+          "diff": -0.0053060136963323234
+        },
+        {
+          "T": 80,
+          "eps": 0.1,
+          "exact": 1.6436596684113671,
+          "quad": 1.645536,
+          "diff": -0.0018763315886329845
+        },
+        {
+          "T": 80,
+          "eps": 0.25,
+          "exact": 1.6354876539684688,
+          "quad": 1.640179,
+          "diff": -0.004691346031531207
+        }
+      ],
+      "scaling": [
+        {
+          "T": 100,
+          "N": 29,
+          "re": 1.8202646050555382,
+          "two_pi_N_over_T": 1.8221237390820801,
+          "ratio": 0.9989796883786397,
+          "log": 1.767293119578746,
+          "im": 0.00819467728148643
+        },
+        {
+          "T": 1000,
+          "N": 649,
+          "re": 4.076435023091776,
+          "two_pi_N_over_T": 4.077787264359552,
+          "ratio": 0.9996683884714647,
+          "log": 4.0698782125727915,
+          "im": 0.0010497266334549282
+        },
+        {
+          "T": 20000,
+          "N": 22491,
+          "re": 7.065756386839155,
+          "two_pi_N_over_T": 7.065756037188803,
+          "ratio": 1.0000000494852002,
+          "log": 7.065610486126783,
+          "im": 6.746499324001629e-05
+        },
+        {
+          "T": 74000,
+          "N": 98625,
+          "re": 8.37399829021197,
+          "two_pi_N_over_T": 8.374042580007927,
+          "ratio": 0.9999947110615293,
+          "log": 8.373943305776962,
+          "im": 2.0001799280738035e-05
+        }
+      ],
+      "eps_independence": [
+        {
+          "eps": 0.02,
+          "computed": 7.065758322154102,
+          "claimed": -2249100.0
+        },
+        {
+          "eps": 0.1,
+          "computed": 7.065756386839155,
+          "claimed": -449820.0
+        },
+        {
+          "eps": 0.4,
+          "computed": 7.065621958137557,
+          "claimed": -112455.0
+        }
+      ],
+      "max_T": 74000,
+      "zeros_used": 100000,
+      "verdict": "CONFIRMED BY TWO METHODS AT 900x THE ORIGINAL SCALE"
+    },
+    "X4_g_factor": {
+      "route1_det": "(2*E*m - p_1**2 - p_2**2 - p_3**2)**2",
+      "route1_rank_on_shell": 2,
+      "route2_pauli_identity": true,
+      "route3_clifford": true,
+      "g": 2,
+      "routes_agreeing": 3,
+      "verdict": "g = 2 CONFIRMED BY THREE INDEPENDENT ROUTES"
+    },
+    "X5_alpha": {
+      "source1_symbolic": 2,
+      "source2_published": "(1/2)(ln(8R/a)+1)",
+      "source3_instrument_a_over_R": 2.0390502990896787e-118,
+      "my_a_over_R": 2.0390503014962767e-118,
+      "relative_agreement": 1.1802543705266433e-09,
+      "verdict": "FACTOR OF 2 CONFIRMED BY THREE INDEPENDENT SOURCES"
+    }
+  },
+  "summary": {
+    "X1_mcg": "UNSATISFIABLE -- confirmed by two independent methods",
+    "X2_local_friendliness": "LF BOUND IS 4 (two methods); NO LF VIOLATION IS REACHABLE",
+    "X3_riemann": "CONFIRMED BY TWO METHODS AT 900x THE ORIGINAL SCALE",
+    "X4_g_factor": "g = 2 CONFIRMED BY THREE INDEPENDENT ROUTES",
+    "X5_alpha": "FACTOR OF 2 CONFIRMED BY THREE INDEPENDENT SOURCES"
+  }
+}

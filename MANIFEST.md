@@ -274,3 +274,44 @@ had never been *run* here. It is now.
 > **inverting the series for $\alpha^{-1}$ against a published anchor**, not by
 > re-reading the algebra. Rule added to the ledger: *anchor every series to a number
 > someone else published.*
+
+
+---
+
+## Triple-check — every load-bearing CPF claim by ≥2 independent methods (2026-08-30)
+
+Code: `code/constraint_projection/cpf_triple_check.py` ·
+Artifact: `docs/constraint_projection_triple_check.json` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `python3 code/constraint_projection/cpf_triple_check.py`
+(`--full` adds the T = 74,000 sweep and the LF quantum search, ~15 min)
+
+Two passes in two days each corrected a verdict that had been *reasoned about rather
+than run*. This pass attacks every claim from methods sharing no machinery, validates
+the instruments before trusting them, and scales past toy sizes.
+
+| Claim | Methods | Tier | Result |
+|-------|---------|------|--------|
+| Axiom III clause (3) unsatisfiable | deck-centraliser (390,625 matrices) **+** `Out(π₁(K))` by word algebra | **T1/T2** | both give order 4, `{diag(±1,±1)}`; `φ_*` in neither |
+| LF instrument is sound | 3 validations: local ⊆ LF, PR box ∉ LF, **quantum ∉ LF** (slack `3√3−4` at the maximally entangled state) | **T1** | all pass — the construction reproduces Bong et al. |
+| LF bound on the manuscript's sum = 4 | LP over 4 branches **+** exact rational certificate (no solver) | **T1/T2** | 4 exactly; `2 < 2√2 < 4`, so Tsirelson forbids any LF violation |
+| §7 integral → `2πN(T)/T → log(T/2πe)` | mpmath quadrature **+** exact closed form over 100k Odlyzko zeros | **T1** | ratio `0.999994` at T = 74,000 — **900× the original scale** |
+| §7 gap between the two methods | truncation-window sweep | **T1** | converges upward and stabilises: it was quadrature error, not disagreement |
+| §7 component decomposition | zero sum / pole / ψ separately | **T1** | only `2πN(T)/T` survives division by T; verified piece by piece |
+| `g = 2` | Lévy-Leblond 4×4 (`det M = (2Em−p²)²`, rank 2 on shell) **+** `σ·π` squaring **+** Dirac reduction | **T1/T2(known)** | three routes, all bottoming out in `{σᵢ,σⱼ} = 2δᵢⱼ` |
+| `α⁻¹ = ½(ln(8R/a)+1)` | symbolic solve **+** repo's published `eq. (alpha_ann)` **+** repo's BIE instrument re-run | **T1/T2** | agree to `1.2e-9` relative on `a/R = 2.039050e-118` |
+
+> **No verdict moved on this pass** — after two consecutive passes that each corrected
+> something, a third built specifically to break the results did not. But three of these
+> claims had rested on a **single** method, and X2 on a construction built from a
+> definition rather than from the source paper — the most fragile thing in the audit.
+> It now carries three validations and an exact certificate.
+
+> **Method rule added (third).** *An instrument is not trusted until it has been shown
+> capable of failing.* Validate that it excludes what it must exclude before believing
+> what it includes. Companions: *evaluate the object the target actually defines*
+> (2026-08-29) and *anchor every series to a number someone else published* (2026-08-30).
+
+> **Reproducibility note.** `ribbon_capacitance.py` was re-run this session and its
+> tracked artifact regenerated **byte-identically** (sole diff: a trailing newline),
+> independently confirming the repo's byte-reproducibility claim.

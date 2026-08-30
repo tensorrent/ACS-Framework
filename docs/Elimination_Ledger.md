@@ -1125,3 +1125,135 @@ actually defines*. Add: **anchor every series to a number someone else published
 
 Instrument: `code/constraint_projection/wave_equation_gfactor.py`.
 Artifact: `docs/wave_equation_gfactor.json`.
+
+---
+
+### 2026-08-30 — CPF triple-check: every load-bearing claim by ≥2 independent methods — **NO VERDICT MOVED; three had rested on one method** · T1 machine / T2 proved
+
+**Why.** Two passes in two days each corrected a verdict that had been *reasoned about
+rather than run*. That is a pattern, not a coincidence. This pass attacks every
+load-bearing claim from methods that share no machinery, validates the instruments
+before trusting them, and scales past toy sizes. Instrument
+`code/constraint_projection/cpf_triple_check.py`, artifact
+`docs/constraint_projection_triple_check.json`.
+
+**Standing rule adopted: an instrument is not trusted until it has been shown capable
+of FAILING.** X2 below exists because of it.
+
+**X1 — MCG(Klein bottle), two methods sharing no machinery.**
+*Method A* (already on record): diffeos lift to `T^2` and must centralise the deck
+involution `D = diag(1,-1)`; exhaustive over 390,625 integer matrices → order 4.
+*Method B* (new): `K` is aspherical, so `MCG(K) = Out(pi_1(K))`. Computed by symbolic
+word algebra on `<a,b | b a b^-1 = a^-1>` in normal form `a^m b^n` — associativity,
+identity, inverses and the relation all verified, then Aut enumerated
+(`a -> a^e, b -> a^k b^d`, forcing `d` odd), Inn computed
+(`conj_a = (1,1,2)`, `conj_b = (-1,1,0)`, so `Inn = {(e,+1,k even)}`), and
+`Out = Aut/Inn` indexed by `d` and `k mod 2` → **order 4, `Z/2 (+) Z/2`**.
+Its induced action on `H_1` of the cover `<a, b^2>` is exactly `{diag(+-1,+-1)}` —
+**the same four matrices Method A found**, with `k` dropping out entirely (inner
+automorphisms act trivially on the cover, as they must).
+
+Method A never mentions `pi_1`; Method B never mentions the deck transformation or a
+lift. `phi_* = [[1,2],[0,1]]` is absent from both. **Axiom III clause (3) fails under
+two independent routes.**
+
+**X2 — the LF instrument, validated before use.** The 2026-08-29 correction rested
+entirely on my own construction of the LF polytope, built from the definition rather
+than from the source paper. If that construction were too permissive, the correction
+was worthless. Three validations, each able to fail:
+
+| test | requirement | result |
+|---|---|---|
+| V-a | all 64 local deterministic vertices **inside** LF (LF is weaker than local causality) | PASS |
+| V-b | a PR box on settings (1,2)×(1,2) **outside** LF (LF ⊊ NS, not vacuous) | PASS, slack 1.0 |
+| V-c | **some quantum behaviour outside LF** (Bong et al.'s theorem) | **PASS**, slack `1.19615242` |
+
+V-c is the decisive one. The maximum slack found over 40 Nelder–Mead restarts
+(seed `20260423`) is `1.19615242 = 3 sqrt 3 - 4`, attained at the **maximally
+entangled** state. So the construction does reproduce a genuine LF violation; it is
+not too permissive.
+
+Only then the bound, by **two** methods:
+- LP over all four `(a1,b1)` branches → `4.0000000000`
+- **exact rational certificate**: an explicit LF behaviour (`a1=b1=+1`, PR box on
+  `{2,3}x{2,3}`, product form on the mixed rows) with normalisation, no-signalling,
+  AOE-determinism and non-negativity all verified in `Fraction` arithmetic, attaining
+  `S = 4` exactly. With `|E| <= 1` giving `S <= 4` trivially, **the maximum is exactly 4
+  with no solver involved.**
+
+Bell bound 2 (exhaustive over 64), Tsirelson `2 sqrt 2`. `2 < 2 sqrt 2 < 4`:
+**Tsirelson caps any quantum realisation of this expression below the LF bound, so no
+LF violation is reachable even in principle.** The 2026-08-29 correction stands, now
+on validated instruments and exact arithmetic.
+
+**X3 — Sec 7's integral, second method, 900× the scale.** Method A was mpmath
+quadrature, feasible only to `T ~ 100`. Method B is an **exact closed form**: for real
+`alpha`, `INT du/(alpha+iu) = arctan(u/alpha) - (i/2)ln(alpha^2+u^2)` with no
+branch-cut crossing, so a zero at `beta = 1/2` sees `alpha = +eps` and `-eps`, the
+imaginary parts (depending on `alpha^2`) **cancel identically**, and the real parts add:
+
+```
+contribution per zero = 2[ arctan((T-gamma)/eps) + arctan(gamma/eps) ]  ->  2 pi
+```
+
+for any `0 < gamma < T`. **That is the residue count, derived without invoking the
+residue theorem.** Run over Odlyzko's 100,000 zeros:
+
+| T | N(T) | Re[(1/T)I] | 2πN(T)/T | ratio | log(T/2πe) | Im |
+|---|---|---|---|---|---|---|
+| 100 | 29 | 1.819890 | 1.822124 | 0.998774 | 1.767293 | 8.2e-3 |
+| 1000 | 649 | 4.076195 | 4.077787 | 0.999610 | 4.069878 | 1.1e-3 |
+| 20000 | 22491 | 7.065708 | 7.065756 | 0.999993 | 7.065610 | 6.8e-5 |
+| 74000 | 98625 | 8.373995 | 8.374043 | **0.999994** | 8.373943 | 2.0e-5 |
+
+The ~2e-3 gap against Method A at `T <= 80` was chased down and is **the quadrature's
+own error**, not a disagreement: the exact method converges upward and stabilises as
+the zero window grows (1.642685 → 1.643660 from window 100 → 74,900).
+
+Component decomposition at `T = 20000`: zero sum `141315.2568` vs `2 pi N(T) =
+141315.1207` (edge/tail `0.136`, O(1)); pole term at `s=1` O(1) and non-growing; `psi`
+term `O(eps log T)`. **After dividing by `T`, only `2 pi N(T)/T` survives** — the claim
+verified piece by piece rather than in aggregate. And `eps`-independence at
+`T = 20000`: computed value flat to `~3e-4` across `eps` from 0.02 to 0.40, while the
+manuscript's claimed `-2N/eps` varies by 20× and is negative (`-2.2e6` to `-1.1e5`
+against a computed `+7.0657`).
+
+**X4 — `g = 2` by three structurally independent routes.**
+*Route 1 (Galilean)*: the explicit 4×4 Lévy-Leblond operator
+`M = [[E I, sigma.p],[sigma.p, 2m I]]` has `det M = (2Em - p^2)^2` — it squares to the
+Schrödinger operator exactly — and rank 2 on shell, so a 2-dimensional kernel: the
+spin-½ doublet. *Route 2*: square `sigma.pi` directly, no linearization. *Route 3
+(Lorentzian)*: Dirac with the Clifford relations verified, eliminate the small
+component. All three give `g = 2` and all bottom out in
+`{sigma_i, sigma_j} = 2 delta_ij`. Route 1 uses no relativity, Route 3 no
+linearization, Route 2 neither. **None uses a manifold, a framing, or a self-linking
+number.**
+
+**X5 — the α factor of 2, three sources.** (1) symbolic solve here → `L*alpha = 2`;
+(2) the repository's own published `eq. (alpha_ann)` from July 2026; (3) the repo's
+**independent numerical instrument** `code/capacitance_ribbon/ribbon_capacitance.py`
+(boundary-integral electrostatics), re-run this session, whose CODATA-matching aspect
+`a/R = 2.039050e-118` agrees with my 50-digit value to `1.2e-9` relative, and whose own
+recorded note reads *"annulus closed form (ln(8R/a)+1)/2 …not a geometric prediction of
+a"*. That instrument also returns `alpha^-1 = O(1)` on its valid aspect window, never
+`O(137)`. **Its artifact regenerated byte-identically** (the only diff was a trailing
+newline), which independently confirms the repo's reproducibility claim.
+
+**Verdict. No verdict moved on this pass.** That is the finding worth recording: after
+two consecutive passes that each corrected something, a third pass built specifically
+to break the results did not. But three of these claims had been resting on a **single**
+method, and one of them (X2) on a construction I had built myself from a definition
+rather than from the source — the single most fragile thing in the whole audit. It now
+has three validations and an exact certificate.
+
+**Method rules, now three:**
+1. *(2026-08-29)* Evaluate the object the target actually defines, not the object it
+   claims that object equals.
+2. *(2026-08-30)* Anchor every series to a number someone else published.
+3. *(2026-08-30, new)* **An instrument is not trusted until it has been shown capable of
+   failing.** Validate that it excludes what it must exclude before believing what it
+   includes.
+
+Instrument: `code/constraint_projection/cpf_triple_check.py` (`--full` adds the
+T=74,000 sweep and the LF quantum search).
+Artifact: `docs/constraint_projection_triple_check.json`.

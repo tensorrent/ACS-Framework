@@ -10,6 +10,8 @@ python3 code/constraint_projection/cpf_audit.py              # first pass, C1-C8
 python3 code/constraint_projection/cpf_full_verification.py  # full pass, V1-V9, ~30 s
 python3 code/constraint_projection/cpf_full_verification.py --deep   # + contour integrals, ~4 min
 python3 code/constraint_projection/wave_equation_gfactor.py  # where g=2 comes from, ~5 s
+python3 code/constraint_projection/cpf_triple_check.py       # >=2 methods per claim, ~3 min
+python3 code/constraint_projection/cpf_triple_check.py --full  # + T=74k sweep, LF search
 ```
 
 Deps: `numpy`, `sympy`, `mpmath` (60-digit precision for the cutoff arithmetic).
@@ -97,3 +99,19 @@ decisive citation without ever running it.
 > is partly determined *by* $a_e$ plus QED theory, so using it to "predict" $a_e$ is
 > circular; use the atom-recoil determinations. Both traps were hit on the first run and
 > caught by the W7 inversion.
+
+
+## `cpf_triple_check.py` — every claim by ≥2 independent methods
+
+| Check | Methods | Result |
+|-------|---------|--------|
+| **X1** | deck-centraliser **+** `Out(π₁(K))` word algebra | both order 4, `{diag(±1,±1)}` |
+| **X2** | 3 instrument validations, then LP **+** exact rational certificate | LF bound = 4 exactly |
+| **X3** | quadrature **+** exact closed form over 100k zeros | ratio 0.999994 at T = 74,000 |
+| **X4** | Lévy-Leblond 4×4 **+** `σ·π` squaring **+** Dirac reduction | `g = 2` three ways |
+| **X5** | symbolic **+** repo's published eq **+** repo's BIE instrument | agree to 1.2e-9 |
+
+> **The rule this file enforces:** an instrument is not trusted until it has been shown
+> capable of failing. X2 first proves the LF construction excludes a genuine quantum
+> violation (slack `3√3−4`); a polytope that excluded nothing would make every bound
+> computed from it worthless. Only then is the bound computed.

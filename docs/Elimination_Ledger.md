@@ -1017,3 +1017,111 @@ the object the target actually defines, not the object it claims that object equ
 Full write-up: `papers/notes/Constraint_Projection_Framework_Audit.tex` (revised).
 Instrument: `code/constraint_projection/cpf_full_verification.py`.
 Artifact: `docs/constraint_projection_full_verification.json`.
+
+---
+
+### 2026-08-30 — Successor to the `Sl = 2 <-> g = 2` kill: run Lévy-Leblond, then read the anomaly — **SUCCESSOR CLOSED; NEW EXPERIMENTAL KILL ON CPF COMPLETENESS** · T1 machine / T2(known) / T4 falsified
+
+**Why.** The 2026-07-26 kill closed on Lévy-Leblond (Comm. Math. Phys. **6** (1967) 286)
+as "the decisive external point": `g = 2` follows from **linearizing the Schrödinger
+equation**, so it is neither relativistic nor topological in origin. The repository has
+cited that result for a month without ever running it. Cited-not-run is exactly the
+tiering failure this ledger exists to catch. Instrument:
+`code/constraint_projection/wave_equation_gfactor.py`, artifact
+`docs/wave_equation_gfactor.json`.
+
+**W1–W3 — `g = 2` derived, machine-checked, from `su(2)` alone.**
+
+```
+sigma_i sigma_j = delta_ij + i eps_ijk sigma_k          verified, all 9 ordered pairs
+[pi_i, pi_j] = i q hbar eps_ijk B_k,  pi = p - qA
+(sigma.pi)^2 = pi^2 - q hbar (sigma.B)                  verified with NON-commuting pi
+E phi + (sigma.p) chi = 0,  (sigma.p) phi + 2m chi = 0  Levy-Leblond
+  => E phi = (sigma.p)^2 phi/(2m) = p^2 phi/(2m)        free Schrodinger
+  => minimal coupling + Pauli identity gives spin term -(q hbar/2m)(sigma.B)
+  => match  H = -mu.B,  mu = g(q/2m)S,  S = (hbar/2)sigma
+  => g = 2
+```
+
+**No `c`, no Lorentz transformation, no metric, no light cone** appears anywhere in that
+chain. It is a Galilean theory throughout. The whole factor of 2 lives in the single
+identity `(sigma.pi)^2 = pi^2 - q hbar (sigma.B)`.
+
+**W4 — `4 pi` periodicity needs a group, not a surface.** `exp(-i(2pi) sigma_z/2) = -I`,
+`exp(-i(4pi) sigma_z/2) = +I`: the nontrivial element of `pi_1(SO(3)) = Z/2` acting in the
+spinor rep. The CPF manuscript's §4 derives the same `4 pi` from "non-orientability of
+`M`" — a longer route to a fact `su(2)` already supplies, and (per the audit) one whose
+Axiom III has no model.
+
+**W5 — `g = 2` does not diagnose relativity either.** Squaring the Dirac operator gives
+the same Pauli term and the same tree-level 2. Galilean and Lorentzian theories agree
+exactly here. What separates frameworks is the **anomaly**.
+
+**W6 — read the data as it lies.**
+
+```
+g/2 measured = 1.00115965218059(13)     Fan, Myers, Sukra & Gabrielse, PRL 130, 071801 (2023)
+a_e          = 1.15965218059(13) e-3    0.13 ppt
+a_e from any 'g = 2 exactly' framework = 0
+separation   = 8.92e9 sigma
+```
+
+`g = 2` is right to three decimal places and wrong at the fourth.
+
+**W7 — the QED series, and a mistake caught by inverting it.** The first run of this
+comparison omitted the **mass-dependent** terms (muon and tau vacuum-polarization
+insertions, `A2(m_e/m_mu)`, `A2(m_e/m_tau)`), and separately compared against CODATA's
+`alpha`, which is partly determined **by** `a_e` plus QED theory — circular. The omitted
+terms total `2.75e-12`, about **20x the experimental uncertainty**, so a comparison
+without them is invalid. The error surfaced not by inspection but by **inverting the
+series for `alpha^-1`** and checking it against a published anchor:
+
+```
+this series + measured a_e  ->  alpha^-1 = 137.03599916622
+Fan et al. quote            ->  alpha^-1 = 137.035999166(15)
+agreement                   =   0.015 x their quoted uncertainty
+```
+
+**W8 — against independently measured `alpha`.** Rb (Morel 2020): residual `3.36e-13`,
+**2.1 sigma**. Cs (Parker 2018): residual `-1.02e-12`, **-3.9 sigma**. Rb and Cs disagree
+with *each other* at **5.5 sigma**. The dominant discrepancy in this sector is
+**experimental**, not a failure of QED. *(Caveat: this uncertainty propagation is cruder
+than a full CODATA adjustment; treat the per-source sigmas as indicative. The Cs figure
+runs larger than the ~2.4 sigma usually quoted.)*
+
+**W9 — the parameter count, which is the point.**
+
+| framework | inputs | g | matches data to |
+|---|---|---|---|
+| Lévy-Leblond (Galilean) | `su(2)` + linearization | 2 exactly | 3 decimals |
+| Dirac (tree) | `su(2)` + Lorentz | 2 exactly | 3 decimals |
+| QED | `alpha` (measured) + loops | 2(1 + a_e) | 12 digits |
+| CPF manuscript | Klein bottle + `Sl = 2` | 2 exactly | 3 decimals |
+
+**NEW KILL — the completeness claim, falsified experimentally at 8.92e9 sigma.**
+The prior entry killed `Sl = 2 <-> g = 2` as a *geometric origin* claim (the content of
+`Sl` is one parity bit). This adds an independent, experimental kill of a *different*
+claim: the manuscript's **completeness**. Lévy-Leblond and tree Dirac also stop at 2, and
+that is no mark against them — neither claims to be finished, and QED continues the
+series with an independently measured `alpha`. The manuscript claims **zero free
+parameters, UV/IR completeness, and "all constants."** `Sl` is an **integer** and the
+framework contains **no expansion parameter anywhere**, so it has no route to
+`1.16e-3` at any order. The stop is therefore terminal, and it is terminal on the
+manuscript's own headline observable. **T4.**
+
+**What this closes and what it opens.** The successor question posed on 2026-07-26 —
+"can the framed-loop geometry produce a g-factor?" — was answered *no* by the `g = 1`
+no-go. This entry answers the complementary question: **what does produce it**, and the
+answer is `su(2)` plus linearization, with zero geometric input. That removes the
+motivation for the geometric route rather than merely blocking it. The standing successor
+(**decouple where the charge sits from where the mass sits**) is unaffected and remains
+the only known route past `g = 1`.
+
+**Method note.** Second time in two days that a verdict was corrected by computing rather
+than reasoning, and again the correction was found by **anchoring to an independent
+published number** (here, inverting for `alpha^-1`) rather than by re-reading the
+algebra. Companion to the rule logged 2026-08-29: *evaluate the object the target
+actually defines*. Add: **anchor every series to a number someone else published.**
+
+Instrument: `code/constraint_projection/wave_equation_gfactor.py`.
+Artifact: `docs/wave_equation_gfactor.json`.

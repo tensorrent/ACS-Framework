@@ -317,6 +317,28 @@ and $g = 1$ \emph{exactly, for every closed curve} --- whatever the winding,
 framing, twist or throat. No amount of topology moves $g$ without decoupling where
 the charge sits from where the mass sits, which the manuscript does not do.
 
+\textbf{(b$'$) And the data kills the completeness claim outright.} Added 2026-08-30
+(\texttt{code/constraint\_projection/wave\_equation\_gfactor.py}). The measured
+anomaly is $a_e = 1.15965218059(13)\times10^{-3}$ (Fan \emph{et al.}, PRL \textbf{130},
+071801 (2023)), so any framework whose output is ``$g=2$ exactly'' sits
+$8.92\times10^{9}\sigma$ from the data. Lévy-Leblond and tree Dirac stop at $2$ as well,
+and that is no mark against them: neither claims to be finished, and QED continues the
+series using an independently measured $\alpha$. The manuscript claims zero free
+parameters, UV/IR completeness and ``all constants'' --- but $\Sl$ is an \emph{integer}
+and the framework contains no expansion parameter anywhere, so it has no route to
+$1.16\times10^{-3}$ at any order. The stop is terminal, and it is terminal on the
+manuscript's own headline observable.
+
+\textbf{(b$''$) Worse, the geometry was never needed.} Machine-checked in the same
+instrument: $g=2$ follows from the $su(2)$ algebra plus linearization of the
+\emph{Schrödinger} equation (Lévy-Leblond 1967) --- no $c$, no Lorentz transformation,
+no metric, and no surface. The entire factor of $2$ lives in the single identity
+$(\sigma\cdot\pi)^2 = \pi^2 - q\hbar\,(\sigma\cdot B)$. Likewise $4\pi$ periodicity is
+$\pi_1(SO(3))=\mathbb{Z}/2$ acting in the spinor representation
+($e^{-i(2\pi)\sigma_z/2} = -I$), which needs a group, not a non-orientable manifold. So
+\S4's two headline outputs are both supplied for free by structure the manuscript
+already assumes, by a route that does not pass through Axiom III.
+
 \textbf{(c) Two further errors.} The repository's own computation of the $(2,1)$
 centerline gives $\mathrm{Tw}+\mathrm{Wr} = -2.000000$; on $s=\Sl/4$ that is
 $s=-1/2$. And a $(p,q)$ torus knot with $q=1$ is the \emph{unknot}; the parent note

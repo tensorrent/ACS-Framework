@@ -9,6 +9,7 @@ Target: `papers/notes/Constraint_Projection_Framework.tex` (archived as submitte
 python3 code/constraint_projection/cpf_audit.py              # first pass, C1-C8, ~2 s
 python3 code/constraint_projection/cpf_full_verification.py  # full pass, V1-V9, ~30 s
 python3 code/constraint_projection/cpf_full_verification.py --deep   # + contour integrals, ~4 min
+python3 code/constraint_projection/wave_equation_gfactor.py  # where g=2 comes from, ~5 s
 ```
 
 Deps: `numpy`, `sympy`, `mpmath` (60-digit precision for the cutoff arithmetic).
@@ -71,3 +72,28 @@ still derived symbolically.
 > (`deep_mode: true`). A default run reproduces the same table from the recorded values
 > and writes `deep_mode: false` — expect that one-field diff if you re-run without the
 > flag.
+
+
+## `wave_equation_gfactor.py` — where $g=2$ actually comes from
+
+Successor to the 2026-07-26 `Sl = 2 ↔ g = 2` kill, which closed on Lévy-Leblond as its
+decisive citation without ever running it.
+
+| Check | Result |
+|-------|--------|
+| **W1** | $\sigma$ algebra verified, all 9 pairs |
+| **W2** | $(\sigma\cdot\pi)^2 = \pi^2 - q\hbar(\sigma\cdot B)$, symbolic, non-commuting $\pi_i$ |
+| **W3** | Lévy-Leblond → free Schrödinger → **$g = 2$**. No $c$, no Lorentz, no metric |
+| **W4** | $4\pi$ periodicity from $\pi_1(SO(3))$ — a group, not a surface |
+| **W5** | Tree Dirac gives 2 as well: $g=2$ diagnoses neither relativity nor topology |
+| **W6** | $a_e = 1.15965218059(13)\times10^{-3}$; "$g=2$" is $8.92\times10^9\sigma$ away |
+| **W7** | QED series, **validated by inverting for $\alpha^{-1}$** against Fan et al. |
+| **W8** | vs independent $\alpha$: Rb 2.1σ, Cs −3.9σ, Rb-vs-Cs 5.5σ |
+| **W9** | parameter count: topology buys nothing $su(2)$ didn't give free |
+
+> **Two traps this script exists to document.** (1) The mass-dependent QED terms
+> ($A_2(m_e/m_\mu)$, $A_2(m_e/m_\tau)$) contribute $2.75\times10^{-12}$ — roughly 20× the
+> experimental uncertainty. Omit them and any comparison is invalid. (2) CODATA's $\alpha$
+> is partly determined *by* $a_e$ plus QED theory, so using it to "predict" $a_e$ is
+> circular; use the atom-recoil determinations. Both traps were hit on the first run and
+> caught by the W7 inversion.

@@ -233,3 +233,44 @@ and `python3 code/constraint_projection/cpf_full_verification.py` (full, V1–V9
 > **Scope:** the audit assesses §§2–8 against the manuscript's own stated inputs.
 > The interpretive material of §§1 and 9 (relational measurement) makes no
 > falsifiable claim and is not assessed. Nothing here bears on authorship or priority.
+
+
+---
+
+## Where $g=2$ comes from — Lévy-Leblond run, and the measured anomaly (2026-08-30)
+
+Code: `code/constraint_projection/wave_equation_gfactor.py` ·
+Artifact: `docs/wave_equation_gfactor.json` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `python3 code/constraint_projection/wave_equation_gfactor.py` (~5 s)
+
+Successor to the 2026-07-26 `Sl = 2 ↔ g = 2` kill, which closed on Lévy-Leblond
+(Comm. Math. Phys. **6** (1967) 286) as its decisive external citation. That citation
+had never been *run* here. It is now.
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| $\sigma_i\sigma_j=\delta_{ij}+i\epsilon_{ijk}\sigma_k$ | **T1** | W1, all 9 ordered pairs |
+| $(\sigma\!\cdot\!\pi)^2=\pi^2-q\hbar(\sigma\!\cdot\!B)$ | **T1** | W2, symbolic with non-commuting $\pi_i$ |
+| Lévy-Leblond linearization reduces to free Schrödinger | **T2(known)** | W3 |
+| $g=2$ from $su(2)$ + linearization, **no relativity, no topology** | **T1/T2(known)** | W3 — no $c$, no Lorentz, no metric in the chain |
+| $4\pi$ periodicity from $\pi_1(SO(3))=\mathbb{Z}/2$, **no manifold** | **T1/T2(known)** | W4 — $e^{-i(2\pi)\sigma_z/2}=-I$ |
+| Tree Dirac gives the same $g=2$ | **T2(known)** | W5 — so $g=2$ diagnoses neither relativity nor topology |
+| $a_e = 1.15965218059(13)\times10^{-3}$ | **T3(measured)** | Fan et al., PRL **130**, 071801 (2023) |
+| Any "$g=2$ exactly" framework sits $8.92\times10^{9}\sigma$ from the data | **T1** | W6 |
+| QED series validated by inversion against a published $\alpha^{-1}$ | **T1** | W7 — recovers 137.03599916622 vs Fan et al. 137.035999166(15), agreeing to 0.015× their uncertainty |
+| QED vs independent $\alpha$: Rb 2.1σ, Cs −3.9σ; Rb vs Cs 5.5σ | **T3** | W8 — dominant discrepancy is *experimental*. Crude error propagation; sigmas indicative |
+| **CPF completeness claim falsified experimentally** | **T4** | W9 — $Sl$ is an integer and the framework has no expansion parameter, so no route to $1.16\times10^{-3}$ at any order |
+
+> **Scope.** W1–W5 are textbook; the contribution is that they are machine-checked rather
+> than cited, and that they need no surface, framing, or self-linking number. The new
+> result is W9: an *experimental* kill of the manuscript's completeness claim, independent
+> of the 2026-07-26 kill of its geometric-origin claim. Lévy-Leblond and tree Dirac stop
+> at $g=2$ too — that is no mark against them, since neither claims to be finished.
+
+> **Method note.** The first run of W7/W8 omitted the mass-dependent QED terms
+> ($2.75\times10^{-12}$, ~20× the experimental uncertainty) and compared against CODATA's
+> $\alpha$, which is partly determined *by* $a_e$ — circular. Both were caught by
+> **inverting the series for $\alpha^{-1}$ against a published anchor**, not by
+> re-reading the algebra. Rule added to the ledger: *anchor every series to a number
+> someone else published.*

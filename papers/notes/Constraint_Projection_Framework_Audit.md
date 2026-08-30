@@ -168,6 +168,22 @@ describes a different object.
   unrelated 2, the trace of a parabolic.
 - **(b) The magnitude route is closed by a no-go.** μ and ⟨L⟩ are both proportional to the
   same vector area, so `μ/⟨L⟩ = q/2m` and **g = 1 exactly, for every closed curve**.
+- **(b′) The data kills the completeness claim outright.** *(Added 2026-08-30,
+  `wave_equation_gfactor.py`.)* Measured `a_e = 1.15965218059(13)×10⁻³` (Fan et al., PRL
+  **130**, 071801 (2023)), so any framework outputting "g = 2 exactly" sits **8.92×10⁹ σ**
+  from the data. Lévy-Leblond and tree Dirac stop at 2 as well — no mark against them,
+  since neither claims to be finished and QED continues the series with an independently
+  measured α. The manuscript claims zero free parameters, UV/IR completeness and "all
+  constants"; `Sl` is an **integer** and the framework has **no expansion parameter**, so
+  there is no route to 1.16×10⁻³ at any order. Terminal, and terminal on its own headline
+  observable.
+- **(b″) The geometry was never needed.** Machine-checked: `g = 2` follows from the su(2)
+  algebra plus linearization of the *Schrödinger* equation (Lévy-Leblond 1967) — no `c`,
+  no Lorentz, no metric, no surface. The whole factor of 2 lives in
+  `(σ·π)² = π² − qħ(σ·B)`. And 4π periodicity is `π₁(SO(3)) = Z/2` in the spinor rep
+  (`exp(−i·2π·σ_z/2) = −I`) — a group, not a non-orientable manifold. §4's two headline
+  outputs are both free consequences of structure the manuscript already assumes, by a
+  route that never touches Axiom III.
 - **(c) Three further errors.** The repo's own computation gives `Tw + Wr = −2.000000`, so
   `s = Sl/4` would give s = −½. A (p,q) torus knot with q = 1 is the **unknot** — the
   parent note already carries this correction. And the 4 in `s = Sl/4` is nowhere derived:
@@ -401,9 +417,10 @@ mode this corpus names as primary: **overclaiming**.
 - Manuscript (as submitted): `papers/notes/Constraint_Projection_Framework.tex`
 - Formal TeX (authoritative): `papers/notes/Constraint_Projection_Framework_Audit.tex`
 - Instruments: `code/constraint_projection/cpf_audit.py` (first pass),
-  `code/constraint_projection/cpf_full_verification.py` (full pass, V1–V9)
+  `code/constraint_projection/cpf_full_verification.py` (full pass, V1–V9),
+  `code/constraint_projection/wave_equation_gfactor.py` (origin of g = 2, W1–W9)
 - Artifacts: `docs/constraint_projection_audit.json`,
-  `docs/constraint_projection_full_verification.json`
+  `docs/constraint_projection_full_verification.json`, `docs/wave_equation_gfactor.json`
 - Ledger entry: `docs/Elimination_Ledger.md`, 2026-08-29
 - Prior repo results relied on: `papers/notes/Mobius_Ribbon_Capacitance.tex`,
   `papers/notes/Framing_Transformer_Spin_Parity.tex`, `code/framed_unknot/`

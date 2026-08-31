@@ -595,3 +595,42 @@ statement of the path integral, and *"finite resolution"* is lattice regularisat
 > carried, from a different starting point, on the chance it would break. It did not. A
 > verdict that has survived two independent derivations is not the same object as one that
 > has survived a single pass.
+
+---
+
+## Green's theorem run against CPF (2026-08-31)
+
+Code: `code/constraint_projection/greens_theorem.py` ·
+Artifact: `docs/greens_theorem.json` · Ledger: `docs/Elimination_Ledger.md`
+
+Internal three times over: $\mathcal{M}$ is a 2-manifold so Green's is its native integral
+theorem; §9 makes the Divergence Theorem foundational; and §3's α derivation **is** a
+Green's-function calculation.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| $H_2(K;\mathbb{Z})=0$, $H_1(K;\mathbb{Z})=\mathbb{Z}\oplus\mathbb{Z}/2$ | **T1** | integer CW chain complex, Smith normal form |
+| **Axiom II states the obstruction itself** — $w_1\neq0$ *and* $H_2=0$ | **T2** | no fundamental class, no orientation ⟹ no Green's theorem in ordinary form |
+| §9 makes the Divergence Theorem foundational; **Axiom II removes it three pages earlier** | **T2** | same clause ($w_1\neq0$) that killed the spin structure in P3 |
+| Stokes survives for **twisted** forms — at the cost of a different electromagnetism | **T2** | $\ast F$ needs orientation; charge becomes a density; $\int F\wedge F$ unavailable |
+| **Any ordinary 2-form pulled back from $\mathcal{M}$ integrates to ZERO** on its orientation cover | **T2** | $\tau^*\omega=\omega$ and $\tau$ orientation-reversing ⟹ $\int\omega=-\int\omega$ |
+| Verified by Monte Carlo, not a grid (so quadrature can't impose the symmetry) | **T1** | 5 trials, 400k pts: $\int f/\int\vert f\vert \le 4.7\times10^{-3}$; descent residual 2.3e-14 |
+| So §3's *"capacitance of the double-cover annulus"* is **identically zero**, not merely small | **T2** | a non-zero answer needs twisted charge, fixing the "$e/2$" by twisting not assertion |
+| The Green's integral gives $C=4\pi^2\varepsilon_0R/\ln(8R/a)$ — **the 8 emerges** | **T1** | $\kappa\to2.0$ across $a/R$ from 1e-3 to 1e-20 |
+| The manuscript's $C$ is **$2\pi$ too small, in the prefactor** | **T1** | ratio 6.3062 at its own $L$; $2\pi=6.2832$; the "+1" is subleading |
+| Propagated: $L\alpha = 4\pi$, not 2 → cutoff $10^{-118}\to10^{-747}$ | **T1** | **629 decades worse**; Planck-floor reading degrades 5.08× → 32.5× |
+
+> **This was worth running because it could have helped.** A $2\pi$ prefactor error is the
+> single commonest way a derivation of α is wrong, and a $2\pi$ recovered in the right
+> direction would have closed a real part of the gap. It goes the wrong way.
+
+> **The same axiom clause keeps doing the damage.** $w_1(\mathcal{M})\neq0$ is what the
+> framework relies on for its spinor claim (§4) and its non-orientability (Axiom II). It is
+> also what removes the spin structure (P3) and now the integral theorem (G1). The property
+> being leaned on and the property doing the killing are the same property.
+
+> **An in-flight correction, twice.** The instrument first printed a $V$ line contradicting
+> the ratio table directly above it, and its summary hardcoded 31.9× where G4 computed
+> 32.54×. Both were the same failure — prose written *alongside* a number instead of *from*
+> it. The chain now derives $C$ from the measured $\kappa$ and the summary reads from the
+> result dict.

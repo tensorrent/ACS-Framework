@@ -1,0 +1,109 @@
+{
+  "description": "Green's theorem run against CPF",
+  "source": "code/constraint_projection/greens_theorem.py",
+  "checks": {
+    "G1_does_greens_hold": {
+      "H2_K_Z": "0",
+      "H1_K_Z": "Z + Z/2",
+      "d2_smith_normal_form": [
+        [
+          2,
+          0
+        ]
+      ],
+      "axiom_II_states_H2_zero": true,
+      "fundamental_class_exists": false,
+      "stokes_holds_for_ordinary_forms": false,
+      "stokes_holds_for_twisted_forms": true,
+      "verdict": "Axiom II itself removes the theorem Sec 9 makes foundational"
+    },
+    "G2_vanishing_theorem": {
+      "trials": [
+        {
+          "integral": -0.003001594450600905,
+          "mean_abs": 1.8292015906417003,
+          "ratio": 0.001640931467563353
+        },
+        {
+          "integral": 0.0029813535113637625,
+          "mean_abs": 1.1349984556892718,
+          "ratio": 0.0026267467558387294
+        },
+        {
+          "integral": -0.006137872502516089,
+          "mean_abs": 2.3070537450904167,
+          "ratio": 0.002660480933995552
+        },
+        {
+          "integral": 0.01640067617377221,
+          "mean_abs": 3.4967701240018703,
+          "ratio": 0.004690235729594514
+        },
+        {
+          "integral": -0.003045153124861993,
+          "mean_abs": 2.160158177033776,
+          "ratio": 0.0014096898816194324
+        }
+      ],
+      "worst_relative_residual": 0.004690235729594514,
+      "descent_constraint_max_residual": 2.2648549702353193e-14,
+      "verdict": "flux of any pullback 2-form vanishes on the orientation cover"
+    },
+    "G3_honest_capacitance": {
+      "rows": [
+        {
+          "a_over_R": "1e-3",
+          "computed": "17.9743926429",
+          "ln_8R_over_a": "8.98719682066",
+          "ratio": "1.999999889"
+        },
+        {
+          "a_over_R": "1e-5",
+          "computed": "27.1847340131",
+          "ln_8R_over_a": "13.5923670067",
+          "ratio": "2.0"
+        },
+        {
+          "a_over_R": "1e-8",
+          "computed": "41.0002445713",
+          "ln_8R_over_a": "20.5001222856",
+          "ratio": "2.0"
+        },
+        {
+          "a_over_R": "1e-12",
+          "computed": "59.4209253152",
+          "ln_8R_over_a": "29.7104626576",
+          "ratio": "2.0"
+        },
+        {
+          "a_over_R": "1e-20",
+          "computed": "96.2622868031",
+          "ln_8R_over_a": "48.1311434016",
+          "ratio": "2.0"
+        }
+      ],
+      "measured_kappa": "2.0",
+      "C_computed": "4 pi^2 eps0 R / ln(8R/a)",
+      "C_manuscript": "2 pi eps0 R / (ln(8R/a) + 1)",
+      "ratio_symbolic": "2*pi*(L + 1)/L",
+      "ratio_at_manuscript_L": "6.3061946",
+      "two_pi": "6.2831853",
+      "factor_8_emerges": true,
+      "verdict": "manuscript capacitance is 2 pi too small; the 8 is confirmed"
+    },
+    "G4_propagate": {
+      "L_solved": "32*pi**2*R*c**2*epsilon_0*m_e/e**2",
+      "L_after_R_substitution": "16*pi**2*c*epsilon_0*hbar/e**2",
+      "L_times_alpha": "4*pi",
+      "L_required_manuscript": "274.0719984",
+      "L_required_computed": "1722.045153",
+      "a_over_R_manuscript": "2.03905e-118",
+      "a_over_R_computed": "2.90186e-747",
+      "decades_worse": "628.847",
+      "planck_alpha_inv_manuscript": "26.957067",
+      "planck_alpha_inv_computed": "4.210773",
+      "planck_off_by_computed": "32.5441",
+      "verdict": "correct electrostatics makes the gap 2 pi worse in the exponent"
+    }
+  }
+}

@@ -2229,3 +2229,145 @@ the field's, not ours. Only the application is.
 already carried, from a different starting point, on the chance it would break. It did not.
 That is worth as much as a correction: a verdict that has survived two independent
 derivations is not the same object as one that has survived a single pass.
+
+---
+
+### 2026-08-31 — Green's theorem run against CPF — **THE FRAMEWORK'S OWN INTEGRAL THEOREM, AND AXIOM II REMOVES IT** · T2 proved / T1 machine
+
+**Why this is internal three times over.** `M` is a 2-manifold, so Green's theorem — not
+the 3D divergence theorem — is the native integral statement on it. §9 elevates the
+Divergence Theorem to a foundational *"relational identity"*. And §3's `α` derivation **is**
+a Green's-function calculation: a capacitance is Laplace's equation with a flux boundary
+condition. Nothing here is imported.
+
+Instrument: `code/constraint_projection/greens_theorem.py`.
+Artifact: `docs/greens_theorem.json`.
+
+**G1 — the manuscript states the obstruction itself, in Axiom II.** Green's theorem needs
+an orientation twice: the boundary's circulation sense, and `dA`. Equivalently Stokes needs
+a fundamental class. Computed from the integer CW chain complex by Smith normal form:
+
+```
+d2 = [2, 0]^T        d1 = [0, 0]
+ker(d2) = {}     ->  H_2(K; Z) = 0
+SNF(d2) = [2, 0]^T   H_1(K; Z) = Z^2 / <(2,0)> = Z + Z/2
+```
+
+And **Axiom II reads `w₁(M) ≠ 0, H₂(M;Z) = 0`.** Both clauses are the obstruction:
+`H₂ = 0` means no fundamental class, so an ordinary 2-form has no integral over `M`;
+`w₁ ≠ 0` means no orientation to give a circulation sense. **§9 makes the Divergence
+Theorem foundational; Axiom II removes it three pages earlier, in the manuscript's own
+notation.** Same shape as P3, and the same clause does both: `w₁ ≠ 0` killed the spin
+structure and now kills the integral theorem.
+
+*What survives, stated precisely.* Stokes is **not** simply false on a non-orientable
+manifold — it holds for **twisted** forms (densities, sections of `Λⁿ T*M ⊗ or(M)`). But
+that is not a free relabelling: the Hodge star needs an orientation, so `F` and `∗F` cannot
+both be ordinary forms; `E` and `B` then transform differently under orientation reversal
+and charge becomes a pseudo-scalar density; and `∫F∧F` is unavailable entirely. The theorem
+is recoverable, and the electromagnetism built on it is a **different theory** from the one
+written down.
+
+**G2 — the vanishing theorem, and it lands directly on §3's method.** §3 computes *"the
+capacitance of the double-cover annulus of `M`"*. The double cover of a non-orientable `M`
+is its **orientation** cover, whose deck map `τ` reverses orientation. For any ordinary
+2-form `ω` pulled back from `M` (so `τ*ω = ω`):
+
+```
+int_cover tau* omega = - int_cover omega      (tau reverses orientation)
+tau* omega = omega                            (omega descends)
+    =>  int omega = - int omega  =>  int omega = 0
+```
+
+**Any ordinary 2-form pulled back from a non-orientable base integrates to zero on its
+orientation double cover.** Verified numerically, by Monte Carlo rather than a grid (so the
+quadrature cannot itself impose the symmetry): for `T² = [0,1)²`, `τ(x,y) = (x+½, −y)`, and
+`f(x,y) = g(x,y) − g(x+½, −y)` for random Fourier `g`:
+
+| trial | N | ∫f | ∫\|f\| | ratio |
+|---|---|---|---|---|
+| 0 | 400,000 | −3.00e-03 | 1.829 | 1.64e-03 |
+| 1 | 400,000 | +2.98e-03 | 1.135 | 2.63e-03 |
+| 2 | 400,000 | −6.14e-03 | 2.307 | 2.66e-03 |
+| 3 | 400,000 | +1.64e-02 | 3.497 | 4.69e-03 |
+| 4 | 400,000 | −3.05e-03 | 2.160 | 1.41e-03 |
+
+Descent constraint `f + f∘τ = 0` holds to `2.3e-14`. The integral is zero to MC error while
+the integrand is `O(1)` — **structural vanishing, not a small number**.
+
+**The consequence: "the capacitance of the double-cover annulus" is, in ordinary forms,
+not small but identically zero.** To get a non-zero answer the charge must be a twisted
+form — and then the *"effective charge `e/2`"* is not a charge times a half; it is a
+density, and the factor is fixed by the twisting rather than asserted.
+
+**G3 — the capacitance computed honestly, and the factor 8 emerges.** Green's
+representation, evaluated on the ring, with the minor radius `a` regularising the integral
+rather than a cutoff imposed by hand:
+
+```
+V = (lambda R / 4 pi eps0) int_0^2pi dphi / sqrt(4R^2 sin^2(phi/2) + a^2)
+```
+
+| `a/R` | `4πε₀V/λ` | `ln(8R/a)` | ratio |
+|---|---|---|---|
+| 1e-3 | 17.9743926429 | 8.98719682066 | 1.999999889 |
+| 1e-5 | 27.1847340131 | 13.5923670067 | 2.0 |
+| 1e-8 | 41.0002445713 | 20.5001222856 | 2.0 |
+| 1e-12 | 59.4209253152 | 29.7104626576 | 2.0 |
+| 1e-20 | 96.2622868031 | 48.1311434016 | 2.0 |
+
+**The factor 8 is not put in — it comes out.** With `κ = 2` read off the table and
+`Q = 2πRλ`:
+
+```
+computed:     C = 4 pi^2 eps0 R / ln(8R/a)
+manuscript:   C = 2 pi   eps0 R / (ln(8R/a) + 1)
+ratio         = 2 pi (L+1)/L  =  6.3061946   at the manuscript's own L = 273.07
+                                 2 pi = 6.2831853
+```
+
+**The manuscript's capacitance is `2π` too small, in the PREFACTOR** — the `+1` is
+subleading and does not touch it.
+
+*Fairness note.* The manuscript's object is the double-cover annulus with a half-twist, not
+a plain torus. Three things: (i) the **form** `ln(8R/a)` it reports is the thin-ring form
+computed here, so the comparison is on its own terms; (ii) a half-twist changes the geometry
+by `O(1)` inside the log, not by `2π` in the prefactor; (iii) by G2 the quantity is not
+well-posed in ordinary forms at all.
+
+**G4 — propagated, and it goes the wrong way.**
+
+```
+with C = 4 pi^2 eps0 R / L and q = e/2:
+    L = 32 pi^2 eps0 R m_e c^2 / e^2
+    substituting R = hbar/(2 m_e c):   L * alpha = 4 pi      (vs 2 by the manuscript's C)
+
+required ln(8R/a):   manuscript 274.07      computed 1722.05
+required a/R:        2.039e-118             2.902e-747      -> 628.8 decades SMALLER
+Planck floor:        alpha^-1 = 26.96 (5.08x)   alpha^-1 = 4.21 (32.54x)
+```
+
+**Doing the electrostatics correctly does not rescue the derivation — it makes it worse by
+`2π` in the exponent.** The required cutoff falls from `10⁻¹¹⁸` to `10⁻⁷⁴⁷`, and the best
+absolute reading on the board (the Klein-Foam Planck floor, 5.08×) degrades to 32.5×.
+
+**Verdict.** Green's theorem was worth running precisely because it could have helped. **A
+`2π` prefactor error is the single commonest way a derivation of `α` is wrong**, and a `2π`
+recovered in the right direction would have closed a real part of the gap. It goes the
+wrong way: the framework's own integral theorem is unavailable on its own manifold by its
+own axiom (G1), its stated method computes an identically-zero quantity (G2), its
+capacitance is `2π` low (G3), and correcting that widens the cutoff requirement by 629
+decades (G4).
+
+*Method note (rule 1).* **Evaluate the object the target actually defines.** The manuscript
+asserts a capacitance; G3 computes one from the Green's function and lets the `8` and the
+`κ = 2` emerge rather than assuming them. Nothing in the technique is new — the thin-ring
+capacitance, Stokes for twisted forms, the orientation double cover and the Smith normal
+form are all standard and are the field's, not ours. Only the application is.
+
+*An in-flight correction.* The instrument's first draft printed `V = (λ/4πε₀)·ln(8R/a)`
+while the table directly above it reported a ratio of **2.0**. The final `C` was right and
+the intermediate line was not. The printed chain now derives `C` from the measured `κ`, so
+the conclusion cannot drift from the table again. A second instance: the summary block
+hardcoded `31.9×` where G4 computed `32.54×`; the summary now reads from the result dict.
+Both were the same failure — prose written alongside a number instead of from it.

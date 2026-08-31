@@ -2634,11 +2634,25 @@ instrument → observation → provenance**. Missing any link leaves exactly thr
 go get the observation, mark it explicitly unverified, or delete the claim. *Softening the
 language is not a fourth option.*
 
-**Live instance, recorded rather than resolved.** `PerZero.lean` is still building against
-Mathlib as this lands. Under the discipline it is marked **not observed this session** in both
-the PR body and here — not "presumably passes". Its two siblings were re-observed; it has not
-been. The 12 mutation tests are likewise flagged as carried forward from `f043dae`, not
-re-run.
+**Live instance, and how it resolved.** `PerZero.lean` was still building against Mathlib
+when this entry first landed, and was marked **not observed this session** in both the PR body
+and here — not "presumably passes". It has since completed and been read:
+
+```
+lake build CpfZero   ->   Built CpfZero (171s)
+                          Build completed successfully (2010 jobs)
+                          EXIT=0        errors/sorries in log: 0
+grep -c sorry        ->   PerZero 0, LFBound 0, AxiomIII 0   (no admitted goals)
+```
+
+**Note what the discipline caught even here.** The background task reported "exit code 0", but
+that was the *wrapper's* status — the command ended in an `echo`, which always succeeds. The
+kernel's verdict is the `EXIT=0` line inside the log, and it had to be read to be known. A
+shell's exit code is an instrument's *provenance*, not its *observation*. All three proofs are
+now re-observed this session.
+
+The 12 mutation tests remain flagged as carried forward from `f043dae`, **not re-run** — an
+open item recorded under option 2 rather than quietly dropped.
 
 **The catalogue.** The skill carries the ten real failures this was built from, because
 recognising the *shape* is what transfers. Their signature: **prose contradicting a number in

@@ -2639,11 +2639,21 @@ when this entry first landed, and was marked **not observed this session** in bo
 and here — not "presumably passes". It has since completed and been read:
 
 ```
-lake build CpfZero   ->   Built CpfZero (171s)
-                          Build completed successfully (2010 jobs)
-                          EXIT=0        errors/sorries in log: 0
-grep -c sorry        ->   PerZero 0, LFBound 0, AxiomIII 0   (no admitted goals)
+LFBound.lean, AxiomIII.lean   Lean 4.15.0        exit 0  (9.1s, 0.9s)
+PerZero.lean  lake build      Lean 4.34.0-rc2    Built CpfZero (171s)
+                                                 Build completed successfully (2010 jobs)
+                                                 EXIT=0    errors/sorries in log: 0
+grep -c sorry                 PerZero 0, LFBound 0, AxiomIII 0   (no admitted goals)
 ```
+
+**A provenance correction, caught by a dirty working tree.** The first version of this entry
+reported all three proofs under "Lean 4.15.0". That is true of the two standalone files and
+**false of `PerZero`**, which builds in a Mathlib project pinned to **v4.34.0-rc2** — and the
+repo's committed `withMathlib/lean-toolchain` read `v4.15.0`, a value nothing in this session
+ever built against. The toolchain file is corrected to what actually compiles. Two proofs at
+4.15.0, one at 4.34.0-rc2; the earlier single-version claim **collapsed three provenances into
+one**, which is the same failure shape as carrying a summary across runs. Provenance is a link
+in the chain, and one wrong link is a broken chain even when the observation is real.
 
 **Note what the discipline caught even here.** The background task reported "exit code 0", but
 that was the *wrapper's* status — the command ended in an `echo`, which always succeeds. The

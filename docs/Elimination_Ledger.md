@@ -1904,3 +1904,119 @@ normalisation gap to explain.
 
 Instrument: `code/constraint_projection/alpha_relational_boundary.py`.
 Artifact: `docs/alpha_relational_boundary.json`.
+
+---
+
+### 2026-08-31 — The Kelvin/Klein-Foam reading: "there are no particles, only the finite-resolution throat" — **THE READING IS RIGHT AND THE MANUSCRIPT IS WORSE FOR IT** · T2 structural / T1 machine / T4 (scoping)
+
+**The proposal, in the author's words.** `a` in `alpha^-1 = (1/2)(ln(8R/a)+1)` is not a
+particle cutoff. There are no particles. `a` is the *finite resolution of the throat* —
+the scale below which the foam has no more structure to resolve. This is not a
+re-parameterisation; it is a different ontology, and it deserved to be read against the
+programme's own prior note rather than against my summary of it.
+
+Read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_Capacitance.tex`.
+Instrument: `code/constraint_projection/klein_foam_reading.py`.
+Artifact: `docs/klein_foam_reading.json`.
+
+**K1 — the reading is STRUCTURALLY CORRECT, and this is a real result.** Verified
+symbolically, not asserted: under a joint rescaling `(R, a) -> (lambda R, lambda a)`,
+
+```
+alpha^-1(lambda R, lambda a) - alpha^-1(R, a) = 0     (sympy, exact)
+```
+
+`alpha^-1` depends on `R` and `a` **only through the ratio `R/a`**. It carries no absolute
+length. That is exactly the signature a no-particles, resolution-relative ontology
+predicts: the formula does not know how big anything is, only how many resolution elements
+fit across it. A cutoff reading would have no reason to produce that invariance; the
+resolution reading requires it. **The ontology is doing real work here.**
+
+This is also the same invariant this repo already isolated in FF06h — the physical content
+is `width/delta`, never a bare length — reached independently and from the other direction.
+
+**K2 — and it gives the best absolute prediction of any reading tested.** The Klein-Foam
+note supplies its own resolution floor; §`sec:scales` reads *"Micro (Planck / voxel):
+turbulent foam, phase-slip statistics"*. Taking the foam at its word:
+
+```
+a = l_Planck = 1.616255e-35 m,   R = R_e = 2.8179403e-15 m
+a/R      = 8.37092e-23
+alpha^-1 = 26.957067
+observed = 137.0359992          ->  off by 5.0835x
+```
+
+| reading | `a/R` | `alpha^-1` | off by |
+|---|---|---|---|
+| §3's `tau = i a/R = i/2` | 0.5 | 1.886 | 72.6x |
+| `a = R` | 1 | 1.540 | 89x |
+| §8 relational, `a L_IR = R^2` | 1.49e-39 | 46.24 | 2.96x (**parameter-free**) |
+| **Klein-Foam Planck floor** | **8.37e-23** | **26.96** | **5.08x** |
+| required by CODATA | 2.039e-118 | 137.036 | — |
+
+**Best absolute reading on the board.** Only the §8 relational condition beats it, and that
+one died on alpha-drift (12,575x past atomic clocks). Supplying a *principled* resolution
+moves the answer 14x closer than the manuscript's own `tau = i/2`.
+
+**K3 — the kill becomes INTERNAL, which is sharper than what we had.** The manuscript's
+`alpha` requires
+
+```
+a = 3.93699e-131 m  =  2.43587e-96 Planck lengths
+                    =  95.6 DECADES BELOW the foam's own declared floor
+```
+
+Before this reading, the objection was external: *a sub-Planckian cutoff is unphysical* —
+an appeal to outside physics the manuscript could in principle dispute. Under the
+Klein-Foam reading it is a **contradiction between two documents of the same programme**:
+the foam declares its resolution Planck-scale, and the manuscript's `alpha` needs one 96
+decades finer. The framework now refutes itself without help.
+
+**And the renaming does not move the arithmetic.** Cutoff or resolution, `alpha^-1 =
+(1/2)(ln(8R/a)+1)` still demands `a/R = 2.039e-118`. The ontological move may well be
+right; it is simply **orthogonal to the falsifiable content**. Same shape as CPF §9's
+relational-measurement material: a reframe that leaves the numbers untouched. A better
+name for `a` is not a different value of `a`.
+
+**K4 — the decisive finding, and it is not one I expected: the manuscript REGRESSED from
+the note.** Quoted from the files, not paraphrased:
+
+> **Klein_Foam_Monad.tex:** *"Absolute uniqueness and ``no free parameters'' claims are not asserted."*
+>
+> **Klein_Foam_Monad.tex:** *"as-implemented, not as a uniqueness theorem for $\alpha$."*
+>
+> **Klein_Foam_Monad.tex:** *"Free-parameter count depends on which quantities are treated as inputs ($R$, $a/R$, charge split); absolute ``zero free parameters'' is not claimed."*
+
+against
+
+> **CPF manuscript:** *"The framework contains zero free parameters and is both UV and IR complete."*
+>
+> **CPF manuscript:** *"CPF + GfE | 0 | All constants"*
+
+The Klein-Foam note **names `a/R` explicitly** as one of the inputs whose treatment
+determines the free-parameter count, and **declines to claim zero**. The CPF manuscript
+takes that same `a/R` and declares it not free.
+
+So this audit's central kill — *"zero free parameters is false; `a/R` is fitted"* — is
+something **this programme's own earlier note already said, in those words, a month
+before the manuscript**. The manuscript is not the Klein-Foam ontology developed further.
+It is the Klein-Foam ontology **with its scope stripped off**.
+
+**Verdict — a finding FOR the ontology and AGAINST the manuscript.** Three things the
+reading earns: the invariance is real (K1), it gives the best absolute prediction tested
+(K2), and it converts an external objection into an internal contradiction (K3). One thing
+it does not earn: any movement in `alpha`. And the fourth check is the one that matters —
+the epistemic position in `Klein_Foam_Monad.tex` was **correct**, and was lost in
+transmission to the manuscript. The scoped note is the better document.
+
+*Method note (rule 4).* Nothing here is a new technique. Reading a claim against the
+programme's own prior scoped statement of it is just source-checking; the joint-scaling
+test is dimensional analysis done symbolically. The only reason it produced anything is
+that it was pointed at our own corpus instead of at the literature — the coherence audit
+of 2026-08-30 flagged exactly that gap, and this is the first entry to close it.
+
+*Dead end logged as a win.* The instruction stands: success is documented failure as well.
+This route did not save `alpha` and was never going to — but it correctly identified that
+the ontology and the manuscript are **not the same claim**, and that only one of them was
+overclaiming. That distinction was not visible before the reading and could not have been
+reached by more arithmetic.

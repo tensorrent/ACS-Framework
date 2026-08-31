@@ -513,3 +513,37 @@ Artifact: `docs/alpha_relational_boundary.json` · Ledger: `docs/Elimination_Led
 > **A route that improved things and was killed anyway.** 72.6× → 2.96× and
 > parameter-free is a real gain. It died on a test it could have passed: had the drift
 > come in below 10⁻¹⁷/yr, the relational reading would have survived as a live option.
+
+---
+
+## The Kelvin/Klein-Foam reading: "no particles, only the finite-resolution throat" (2026-08-31)
+
+Code: `code/constraint_projection/klein_foam_reading.py` ·
+Artifact: `docs/klein_foam_reading.json` · Ledger: `docs/Elimination_Ledger.md` ·
+Sources read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_Capacitance.tex`
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The reading is **structurally correct**: $\alpha^{-1}$ is joint-scaling invariant | **T2** | sympy: $\alpha^{-1}(\lambda R,\lambda a)-\alpha^{-1}(R,a)=0$ exactly; depends only on $R/a$ |
+| Same invariant this repo isolated in **FF06h** (width/$\delta$, never a bare length) | **T2** | reached independently, from the other direction |
+| The foam's **own** Planck floor gives $\alpha^{-1}=26.96$ — **best absolute reading tested** | **T1** | 5.08×, vs 72.6× ($\tau=i/2$) and 89× ($a=R$) |
+| The manuscript needs $a=2.4\times10^{-96}\,\ell_P$ — **96 decades below the foam's own floor** | **T1** | kill becomes **internal**, not external |
+| Renaming $a$ cutoff → resolution **does not move the arithmetic** | **T2** | $a/R=2.039\times10^{-118}$ either way |
+| `Klein_Foam_Monad.tex` **already disclaimed** "zero free parameters" and **named $a/R$ as an input** | **T4** (scoping) | quoted verbatim from both files, one month apart |
+
+> **The finding.** The Klein-Foam note says *"Free-parameter count depends on which
+> quantities are treated as inputs ($R$, $a/R$, charge split); absolute ``zero free
+> parameters'' is not claimed."* The CPF manuscript says *"The framework contains zero free
+> parameters."* This audit's central kill is something **the programme's own earlier note
+> already said, in those words, a month before the manuscript.** The manuscript is not the
+> Klein-Foam ontology developed further — it is that ontology **with its scope removed.**
+
+> **A finding FOR the ontology and AGAINST the manuscript.** The reading earns three
+> things: the invariance is real, it gives the best absolute prediction on the board, and
+> it converts an external objection into an internal contradiction. It earns no movement
+> in α. The scoped note is the better document.
+
+> **Method note (rule 4).** No new technique — source-checking a claim against the
+> programme's own prior scoped statement, plus dimensional analysis done symbolically. It
+> produced something only because it was pointed at **our own corpus**, which is the gap
+> the 2026-08-30 coherence audit flagged. First entry to close it.

@@ -1,6 +1,6 @@
 ---
 name: evidence-chain
-description: The evidence-chain discipline — every claim must carry the complete chain that produced it, and generation is reaction while verification is response. Use this whenever you are about to state that something passes, works, was verified, was checked, was run, is true, or holds; whenever you write a verification/status/summary section, a PR body, a test report, a commit message, or a research finding; whenever you carry a result forward from earlier context rather than re-observing it; and whenever you are auditing your own or someone else's claims. Load it BEFORE writing the claim, not after — the whole point is that a fluent claim and a verified claim feel identical from the inside, so the check has to be procedural rather than a matter of trying harder.
+description: Check claims against reality before writing them into any document that reports state. Use when drafting release notes or announcements, status updates for leadership, sprint/standup summaries, postmortem write-ups, PR descriptions and Verification sections, README status or badge blocks, changelogs, compliance or audit evidence packets, grant and research results sections, or test reports — and especially when building any of those from someone else's notes, a previous draft, a spreadsheet, a teammate's numbers, or results carried over from an earlier session, because figures in those sources are unverified claims however confident they sound. Also use when auditing whether stated results actually hold, or when you are about to write that something passes, works, was verified, or is done. Not for writing tests, debugging a failing test, CI setup, JSON-schema validation, or cryptographic signature verification.
 ---
 
 # The Evidence Chain
@@ -187,3 +187,38 @@ When you are about to make a claim:
 The cost is small and pays immediately: a verification section reporting what was *watched* to
 pass is worth more than one reporting what someone believes passed, and the gaps you name are
 the ones nobody else has to discover.
+
+## What the eval measured — read this before trusting the skill
+
+This skill was benchmarked against itself: four fixtures, each with a planted failure from the
+catalogue above, run twice — once with the skill loaded, once without.
+
+**It did not separate. Four fixtures, and the baseline matched or beat it every time.**
+
+```
+stale-claims           with 4/5   without 4/5
+prose-number           with 4/4   without 4/4
+writeup-no-invitation  with 5/5   without 5/5
+unverifiable           INVALID (fixture premise false; run targeted the wrong tree)
+```
+
+The fourth fixture was built specifically to remove the confound in the first three — those
+prompts all said "review this" or "is this good to ship", which *cue* checking. The write-up
+fixture asked only for a blog announcement from a teammate's notes, with social pressure to
+transcribe ("match Dana's framing, they want the speed number up front"). The baseline still
+caught all three planted discrepancies.
+
+**And separately, the description barely triggered**: measured recall 0% at iteration 1, 6% at
+iteration 2, across ten realistic should-trigger queries. The original description named an
+epistemic *discipline* rather than the *tasks* it applies to, so nothing matched. The current
+description names tasks. That is a hypothesis with two data points behind the diagnosis, not a
+validated fix — the optimisation loop died on a rate limit before it could confirm.
+
+**So what is this file for?** Not as a behavioural patch for a capable agentic model with tools:
+the measurement says that model already does most of this. It earns its place as (1) the written
+record of a method, so the rules do not have to be rediscovered, (2) the failure catalogue, which
+is specific and hard-won, and (3) the one place the runs *did* diverge — distinguishing **not
+reproduced** from **false**, where the unaided run overclaimed.
+
+Treat that as the honest scope. If you are reaching for this expecting it to change what a
+tool-using agent does on a review task, the evidence says it will not.

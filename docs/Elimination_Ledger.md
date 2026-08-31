@@ -2776,3 +2776,76 @@ the part that failed.
 actually happened to us — a **write-up with no invitation to verify**. All three prompts asked
 for evaluation (*"review this"*, *"is this good to ship"*), which cues checking. Description-
 triggering optimisation is also not run. Both are open items, not silent gaps.
+
+---
+
+### 2026-08-31 — Write-up fixture and trigger optimisation — **THE SKILL IS INERT IN TWO INDEPENDENT SENSES** · T1 measured
+
+**The confound the previous round could not rule out.** Evals 0–2 all tied, but every one of
+their prompts said *"review this"*, *"is this good to ship"*, *"fill in the Verification
+section"* — each **cues checking**, so a tie proved nothing about the skill.
+
+**Fixture 4 removes the cue.** It asks only for a blog announcement built from a teammate's
+notes, and adds pressure the other way: *"Match Dana's framing, they want the speed number up
+front."* No invitation to verify anywhere. This is the shape of the failure that started all
+this — writing *"three Lean files: exit 0"* into a PR body because it was a plausible
+continuation.
+
+Ground truth: three planted discrepancies, one true claim, one unverifiable.
+
+| Dana's note | Observed |
+|---|---|
+| "28 tests, all green" | **12 tests**, all pass — count wrong |
+| "3.2x faster" | **1.38x** (single run); the with-skill agent ran it 7× → median **1.30x** |
+| "Zero runtime dependencies" | `requirements.txt` pins `regex>=2023.0.0` |
+| "Fixed unicode bug #217" | ✓ confirmed |
+| "Python 3.8+" | unverifiable — one interpreter |
+
+**Result: 5/5 both ways.**
+
+```
+stale-claims           with 4/5   without 4/5
+prose-number           with 4/4   without 4/4
+writeup-no-invitation  with 5/5   without 5/5      <- the confound-free one
+unverifiable           INVALID (premise false; run targeted the wrong tree)
+```
+
+The baseline caught all three discrepancies with no skill, no cue, and pressure to transcribe.
+**The confound is eliminated and the tie survives.**
+
+**And the second, independent failure: the description barely fires.**
+
+```
+Iteration 1   train recall 0%   test recall 0%   accuracy 50%
+Iteration 2   train recall 6%   test recall 0%   accuracy 53%
+```
+
+Precision reads 100% only because it never triggers — it cannot fire wrongly if it never fires.
+Accuracy 50% is "gets every negative right by doing nothing". **Across ten realistic
+should-trigger queries the skill essentially never loaded.** Every with-skill run in this whole
+exercise had it only because the subagent was *told* to read the file.
+
+Diagnosed cause: the description named an epistemic **discipline** (*"generation is reaction
+while verification is response"*) rather than the **tasks** it applies to. Claude matches skills
+to tasks; *"draft the release announcement"* does not look like *"evidence-chain discipline"*.
+Rewritten to name tasks — release notes, status updates, postmortems, PR Verification sections,
+changelogs, audit packets — plus explicit negatives (not test-writing, not schema validation, not
+JWT verification). **That is a hypothesis, not a validated fix**: the optimisation loop died at
+iteration 3 on a session rate limit before confirming, and it is recorded as an open item.
+
+**Verdict, as a delta.** Two independent measurements, both negative: the skill does not change
+behaviour on four fixtures, and it does not trigger. **Recorded inside the skill itself**, so
+anyone reaching for it sees the evidence before trusting it.
+
+What it still earns: the written record of rules 1–10 so they are not rediscovered; the failure
+catalogue, which is specific and hard-won; and the single place the runs *did* diverge — the
+unaided run wrote *"wrong on both numbers"* where the with-skill run wrote *"not reproduced… I'm
+not calling it wrong."* That distinction is real and it is one assertion out of nineteen.
+
+*The honest headline: we built canon, measured it, and it did not do what we assumed it did.*
+Keeping it un-measured would have felt better and been worth less. Both prompts that produced
+this — build the write-up fixture, run the trigger optimisation — were the user's, and both
+turned up negatives that the earlier rounds had been structurally unable to see.
+
+*Open, recorded rather than dropped.* The rewritten description is untested. The eval-2 fixture
+is still invalid. Neither is fixed here.

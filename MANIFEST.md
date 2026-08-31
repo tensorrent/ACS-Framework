@@ -634,3 +634,41 @@ Green's-function calculation.
 > 32.54×. Both were the same failure — prose written *alongside* a number instead of *from*
 > it. The chain now derives $C$ from the measured $\kappa$ and the summary reads from the
 > result dict.
+
+---
+
+## Exhaustion pass: the open thread closed, and rule 8 (2026-08-31)
+
+Code: `code/constraint_projection/twisted_ribbon_capacitance.py` ·
+Artifact: `docs/twisted_ribbon_capacitance.json` · Ledger: `docs/Elimination_Ledger.md`
+
+> **Rule 8.** *Run it to exhaustion and finish; leave nothing outside. A dead end and an
+> open path are both results — an unclosed hedge is neither.* Operationally: any sentence
+> conceding a limitation must be a computed result, an explicitly recorded open item, or
+> removed. *"It probably doesn't matter"* is none of the three.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| Audit of the corpus's own hedge language found **2 candidates, 1 genuinely open** | **T1** | scanned for "fairness note", "caveat", "not assessed", "to leading order", "approximate" |
+| The `wave_equation_gfactor` caveat is **correctly scoped, not load-bearing** | **T2** | it qualifies Rb-vs-Cs per-source σ; the 8.92e9σ is $a_e/u(a_e)$, no propagation |
+| G3's **fairness note was argued, not computed** — the open thread | — | three reasons given, all arguments |
+| BEM solver validated **before** use: sphere to **3.11e-4** of exact $4\pi\varepsilon_0 a$ | **T1** | rule 3; two radii, same relative error |
+| The plain torus also **re-derives G3 independently** | **T1** | solved-σ BEM vs Green's-function integral: 0.3–1.0% |
+| The half-twist moves the capacitance by **0.0133%** — not $2\pi$ | **T1** | washer 6.08266, Möbius 6.08185, full-twist 6.08195 |
+| Solved on the **manuscript's own non-orientable shape**, ratio is still 7.222× | **T1** | vs G3's predicted $2\pi(L+1)/L = 7.256$ at this $L$ — **0.46%** |
+| So the BEM confirms G3's **$L$-dependence**, not just one value | **T1** | test geometry chosen deliberately fat ($w/R=0.05$) so $L$ sits far from $2\pi$ |
+
+> **The asymmetry is the finding.** The half-twist is **electrostatically nearly free**
+> (0.0133%) — it does not rescue the $2\pi$, and a Möbius conductor is an ordinary
+> conductor. But it is **topologically expensive**: the same twist makes the surface
+> non-orientable, which removed the spin structure (P3), Green's theorem in ordinary form
+> (G1), and the flux of any pullback 2-form (G2). **Cheap where the framework needs it to
+> pay; expensive where it needs it to be free.** Neither side alone shows this.
+
+> **The rule had to run to know.** The fairness note turned out to be *correct* — computing
+> it changed no verdict. That is the point: a rule that only pays out when it overturns
+> something cannot be trusted when it stays silent.
+
+> **Nothing from the CPF work is now left outside**, except what is recorded as explicitly
+> out of scope: §§1 and 9's interpretive material, minus the Divergence-Theorem clause,
+> which *was* assessed because it is checkable.

@@ -1,0 +1,69 @@
+{
+  "description": "BEM capacitance of twisted ribbons; closes the G3 fairness note",
+  "source": "code/constraint_projection/twisted_ribbon_capacitance.py",
+  "checks": {
+    "E0_validate": {
+      "rows": [
+        {
+          "shape": "sphere a=1.0",
+          "computed": 12.562458048133939,
+          "exact": 12.566370614359172,
+          "rel_err": 0.0003113521274601405
+        },
+        {
+          "shape": "sphere a=2.5",
+          "computed": 31.40614512033485,
+          "exact": 31.41592653589793,
+          "rel_err": 0.0003113521274601405
+        },
+        {
+          "shape": "torus a=0.05",
+          "computed": 7.801413999407409,
+          "reference": 7.778732126544627,
+          "rel_err": 0.002915883012011955
+        },
+        {
+          "shape": "torus a=0.02",
+          "computed": 6.5237612848262305,
+          "reference": 6.589109773404777,
+          "rel_err": 0.009917650612273676
+        }
+      ],
+      "sphere_within_2pct": true,
+      "torus_within_10pct": true,
+      "verdict": "solver validated on an exact answer and on G3's analytic result"
+    },
+    "E1_twists": {
+      "C_over_eps0": {
+        "0": 6.082661181811487,
+        "1": 6.08185010639971,
+        "2": 6.081947941299298
+      },
+      "mobius_over_washer": 0.9998666578019828,
+      "full_twist_over_washer": 0.9998827420283869,
+      "half_twist_effect_percent": 0.013334219801719449,
+      "verdict": "the half-twist is a sub-percent effect, not a 2 pi effect"
+    },
+    "E2_against_manuscript": {
+      "C_mobius_bem": 6.08185010639971,
+      "C_ring_analytic": 6.109821564831349,
+      "C_manuscript": 0.8420843135258219,
+      "mobius_over_manuscript": 7.2223766773838785,
+      "L_here": 6.461468176353717,
+      "g3_predicted_ratio_here": 7.255593610631954,
+      "bem_vs_g3_prediction_pct": 0.45781138016607326,
+      "ratio_at_manuscript_L": 6.306194569736907,
+      "two_pi": 6.283185307179586,
+      "verdict": "BEM reproduces G3's L-dependence on the non-orientable shape"
+    },
+    "E3_cost": {
+      "capacitance_cost_percent": 0.013334219801719449,
+      "topological_cost": [
+        "no spin structure (P3)",
+        "no ordinary-form Green's theorem (G1)",
+        "vanishing pullback flux (G2)"
+      ],
+      "verdict": "cheap where it must pay, expensive where it must be free"
+    }
+  }
+}

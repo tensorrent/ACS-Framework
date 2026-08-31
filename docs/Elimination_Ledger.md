@@ -2371,3 +2371,118 @@ the intermediate line was not. The printed chain now derives `C` from the measur
 the conclusion cannot drift from the table again. A second instance: the summary block
 hardcoded `31.9×` where G4 computed `32.54×`; the summary now reads from the result dict.
 Both were the same failure — prose written alongside a number instead of from it.
+
+---
+
+### 2026-08-31 — Exhaustion pass: the one open thread closed by computation, and the rule that requires it · T1 machine
+
+**The standing instruction, stated as method.** *Run the plan to exhaustion and finish.
+Leave nothing outside. A dead end and an open path are both measures of success.* This
+entry does the second half of that for the CPF work: it audits what the previous entries
+left hanging and closes it.
+
+**The audit.** Rather than recall what was open, the previous entries and instruments were
+scanned for the language of an unfinished check — *"fairness note"*, *"caveat"*, *"not
+assessed"*, *"to leading order"*, *"would need"*, *"approximate"*. Two hits that were not
+merely reporting a computed result:
+
+| Hedge | Where | Disposition |
+|---|---|---|
+| *"Caveat: this uncertainty propagation is cruder than a full CODATA adjustment; treat the per-source sigmas as indicative"* | `wave_equation_gfactor.py:292` | **Correctly scoped, not load-bearing.** It qualifies the Rb-vs-Cs per-source σ, a few-σ question. The load-bearing number, `a_e` at **8.92e9σ**, is `a_e / u(a_e)` — no propagation enters it. Closed as stated. |
+| *"FAIRNESS NOTE. The manuscript's object is the double-cover annulus with a half-twist, not a plain torus"* | `greens_theorem.py:262` | **Genuinely open.** Three reasons were given for why the comparison still holds. All three were **arguments**. Closed below by computing it. |
+
+**An argument is not a result.** G3 compared the manuscript's capacitance against a thin
+**ring** and then argued that the half-twist could not account for the `2π`. Under the
+standing rule that is exactly a thing left outside. So: solve the actual non-orientable
+surface.
+
+Instrument: `code/constraint_projection/twisted_ribbon_capacitance.py`.
+Artifact: `docs/twisted_ribbon_capacitance.json`.
+
+Boundary-element solution for a ribbon with `k` half-twists,
+
+```
+r(phi,s) = ( (R + s cos(k phi/2)) cos phi, (R + s cos(k phi/2)) sin phi, s sin(k phi/2) )
+    k = 0  flat washer         orientable
+    k = 1  MOBIUS band         NON-orientable   <- the manuscript's object
+    k = 2  full-twist ring     orientable
+```
+
+with the exact uniform-rectangle self-integral on the diagonal (so patch anisotropy is
+handled, not assumed away), and `σ` **solved** rather than assumed uniform.
+
+**E0 — the solver validated before it is trusted (rule 3).** Two shapes with answers we did
+not produce:
+
+```
+sphere a=1.0   C/eps0 = 12.56246   exact 4 pi a = 12.56637   rel err 3.11e-4
+sphere a=2.5   C/eps0 = 31.40615   exact 4 pi a = 31.41593   rel err 3.11e-4
+torus  a=0.05  C/eps0 =  7.80141   G3 analytic  =  7.77873   rel err 2.9e-3
+torus  a=0.02  C/eps0 =  6.52376   G3 analytic  =  6.58911   rel err 9.9e-3
+```
+
+The sphere is exact and pins the absolute normalisation. **The torus row also re-derives G3
+independently** — a solved-`σ` BEM reaching the capacitance the Green's-function integral
+gave with uniform `λ`. Two methods, one answer.
+
+**E1 — the half-twist, computed.**
+
+```
+k=0  flat washer                        C/eps0 = 6.08266
+k=1  MOBIUS band (non-orientable)       C/eps0 = 6.08185
+k=2  full-twist ring                    C/eps0 = 6.08195
+
+C(Mobius)/C(washer) = 0.999867      -> the half-twist moves C by 0.0133%
+```
+
+**Not `2π`, and not any factor of order `2π`.** Electrostatically the twist is nearly
+invisible: the leading capacitance is set by the centreline length `2πR` and the transverse
+scale `w`, and a twist changes neither. It only re-orients the cross-section, which enters
+at `O(1)` inside the logarithm.
+
+**E2 — and this is stronger than a matching number.** The test geometry was chosen
+deliberately **fat** (`w/R = 0.05`), so `L` is small and G3's predicted ratio sits far from
+`2π`:
+
+```
+L here = ln(8R/a_eff)        =  6.46147
+G3 prediction 2 pi (L+1)/L   =  7.25559
+BEM measured                 =  7.22238        agree to 0.46%
+at the manuscript's L=273.07:  2 pi (L+1)/L -> 6.30619      (2 pi = 6.28319)
+```
+
+**The BEM reproduces G3's `L`-dependence, not merely one value of it** — a prediction that
+would have been easy to miss had the test geometry been thin enough for every candidate
+ratio to collapse onto `2π`. The fairness note is closed: the discrepancy is a property of
+the **formula**, not an artefact of comparing against the wrong shape.
+
+**E3 — what the twist costs, and the asymmetry that is the actual finding.**
+
+- **Electrostatically the half-twist is nearly free** (0.0133%). It does not rescue the
+  `2π` — and it is not a defect either. A Möbius conductor is an ordinary conductor.
+- **Topologically it is not free at all.** The same half-twist is what makes the surface
+  non-orientable, and non-orientability removed the spin structure (P3), removed Green's
+  theorem in ordinary form (G1), and forced the flux of any pullback 2-form to vanish (G2).
+
+**The twist is cheap where the framework needs it to pay — the value of `α` — and expensive
+where the framework needs it to be free: the measure, the integral theorem, the flux.** That
+asymmetry could not be seen from either side alone, and it is what the exhaustion pass
+bought.
+
+**Verdict.** The open thread is closed as a computation, the solver was validated against an
+exact answer first, and G3 gained an independent second derivation on the way. **Nothing
+from the CPF work is now left outside** except what is recorded as explicitly out of scope
+(§§1 and 9's interpretive material, minus the Divergence-Theorem clause, which was assessed
+because it is checkable).
+
+*Method rule 8, earned here.* **Run it to exhaustion and finish; leave nothing outside. A
+dead end and an open path are both results — an unclosed hedge is neither.** The operational
+form: any sentence that concedes a limitation must be either a computed result, an
+explicitly recorded open item, or removed. *"It probably doesn't matter"* is none of the
+three. The scan that found this one is cheap and repeatable, and is the audit's own kill
+criterion turned on itself.
+
+*Note on what the rule caught.* The fairness note was **correct** — the argument it made was
+right, and computing it changed no verdict. That is the point. A rule that only pays out
+when it overturns something is a rule you cannot trust when it stays silent; this one had to
+be run to know which it was.

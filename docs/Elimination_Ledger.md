@@ -2486,3 +2486,120 @@ criterion turned on itself.
 right, and computing it changed no verdict. That is the point. A rule that only pays out
 when it overturns something is a rule you cannot trust when it stays silent; this one had to
 be run to know which it was.
+
+---
+
+### 2026-08-31 — The twist family, and where `Sl = 2` actually lands — **OUR OWN FAMILY WAS INCOMPLETE; ONE FINDING WITHDRAWN THE SAME RUN** · T1 machine / T2 proved
+
+**Prompted by a reading of the geometry that was right, and that the previous run stopped
+short of.** *An annulus with 180° of rotation gives a Möbius band; with 360° you get
+something that is not a cylinder — but from the outside it looks like one.*
+
+Both halves matter. At 360° the surface **is** homeomorphic to a cylinder (orientable, two
+boundary circles) but is **not isotopic** to one in `R³`: its boundary circles are **linked**.
+The difference lives in the embedding, not the surface — and that difference is the
+**self-linking number**, which is the manuscript's own central input, `Sl = 2`, cited to
+White–Călugăreanu–Fuller.
+
+Instrument: `code/constraint_projection/ribbon_twist_family.py`.
+Artifact: `docs/ribbon_twist_family.json`.
+
+**R1 — the family, computed rather than assumed.** Orientability by transporting the
+cross-section frame once around (does it return or flip?); boundary count by traversing the
+edge. `n` odd → frame flips → non-orientable, **one** boundary circle. `n` even → orientable,
+**two**.
+
+**R2 — CWF verified, not quoted.** `Sl` computed independently by the Gauss double integral
+over the boundary curves, against `Tw + Wr`:
+
+```
+ n   Tw=n/2      Wr   Tw+Wr    Gauss Lk       err
+ 0      0.0   0.000   0.000    0.000000   3.19e-22
+ 2      1.0   0.000   1.000   -1.000014   1.38e-05
+ 4      2.0   0.000   2.000   -2.000053   5.29e-05
+ 6      3.0   0.000   3.000   -3.000147   1.47e-04
+```
+
+Verified to `1.5e-04` **in magnitude**. `Wr = 0` for a planar centreline is *exact*, not
+merely small — the integrand `(r₁−r₂)·(dr₁×dr₂)` vanishes identically for a plane curve.
+
+**R3 — our own family was incomplete, and this is a correction to us.**
+`twisted_ribbon_capacitance.py` computed `n = 0, 1, 2` and stopped. **`n = 2` is `Sl = 1`.**
+For a planar centreline `Sl = 2` needs `n = 4` — 720°. **The manuscript's own object was
+never in the family we built.** Extended here.
+
+**R4 — capacitance is BLIND to self-linking, and this is the durable result.**
+
+```
+ n     Sl   orientable    C/eps0     vs n=0
+ 0    0.0         True   6.08266   1.000000
+ 1    0.5        False   6.08185   0.999867
+ 2    1.0         True   6.08195   0.999883
+ 3    1.5        False   6.08211   0.999909
+ 4    2.0         True   6.08234   0.999947
+
+Sl runs 0 -> 2 (the full range of the framework's input); C moves 0.0133%.
+```
+
+**This is "from the outside it looks like one" made exact.** A capacitance sees the intrinsic
+surface and the coarse embedding; it does not see the framing.
+
+**The consequence for the framework's unification claim.** §3 derives `α` from a
+**capacitance**. §4 derives `g` from a **self-linking number**. Both are presented as read off
+one object. But a capacitance is blind to `Sl` to `0.0133%`, so **no capacitance — correct or
+otherwise — can encode `Sl`.** They are not two readings of one structure; they are readings
+of two structures sharing a name. Note the direction: §3 is already dead four other ways.
+What dies *here* is the claim that all constants come from **one** manifold — the two headline
+constants are extracted by methods that provably cannot see each other's input.
+
+**R5 — and then R3 is withdrawn as stated, in the same run.** R1–R4 all sit on a **planar**
+centreline, so `Wr = 0` and every bit of `Sl` had to come from `Tw`. That is an assumption,
+and a helical or coiled centreline is not planar. Writhes computed:
+
+```
+planar circle                    Wr =  0.000000   (exact)
+toroidal coil m=3, b=0.25        Wr = -0.578161
+toroidal coil m=5, b=0.25        Wr = -1.872960
+toroidal coil m=5, b=0.45        Wr = -2.977483
+toroidal coil m=8, b=0.45        Wr = -5.863985
+```
+
+With `Wr` free, CWF lets the split move, and `Sl = 2` is reachable **non-orientably**:
+
+```
+Sl = Tw + Wr = 2      with  Tw = 3/2  (n = 3, NON-orientable)  and  Wr = 1/2
+```
+
+**So `Sl = 2` does not force orientability.** The framework can have both its self-linking
+number and `w₁ ≠ 0`, provided the centreline is non-planar. **R3's second finding is
+withdrawn.**
+
+**But the repair costs a parameter.** `Sl = 2` is then satisfied by a one-parameter family —
+`(Tw, Wr) = (2,0), (3/2,1/2), (1,1), (1/2,3/2), …` — and `Sl` alone picks none of them. Some
+members are orientable, some are not. **`Sl = 2` determines neither the twist nor the
+topology of the ribbon**, let alone a coupling. A repair route and a new free parameter in
+the same move.
+
+**Verdict.** Two corrections to our own work in one entry: the family was incomplete (R3),
+and one of that entry's own conclusions was then withdrawn by lifting its assumption (R5).
+**R4 survives all of it untouched and is the finding that lasts** — whatever the centreline
+does, a capacitance cannot see a framing, so §3 and §4 cannot be reading the same object.
+
+*Where this came from.* The 360°-is-not-a-cylinder reading, and then early work on a
+**projected cardioid annulus with a helical scalar wave** — a non-planar centreline, which
+is precisely the case that lifts `Wr = 0`. Both arrived from outside the audit and both
+moved it: the first found an incompleteness, the second overturned a conclusion drawn from
+that incompleteness inside the same run.
+
+*Method note (rule 8, and its first real test).* The exhaustion rule says leave nothing
+outside. This entry is what that looks like when it bites twice — the previous run's family
+stopped one member short of the framework's own number, and this run's own R3 rested on an
+unstated planarity assumption. **An assumption that is never named cannot be lifted**, so
+R5's form is now the standard: state the geometry the result rests on, then remove it and
+see what survives.
+
+*An in-flight correction.* R2 first printed errors of `2.00`, `4.00`, `6.00` against a prose
+claim of "verified" — the Gauss integral returns a negative `Lk` under this handedness
+convention and was being compared to `+Tw`. Magnitudes were always exact; the comparison was
+not. Fixed to compare `|Lk|` with the sign recorded separately. Same failure as the previous
+two runs: a conclusion asserted next to a number that contradicted it.

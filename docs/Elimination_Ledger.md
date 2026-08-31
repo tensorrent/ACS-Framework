@@ -2603,3 +2603,61 @@ claim of "verified" — the Gauss integral returns a negative `Lk` under this ha
 convention and was being compared to `+Tw`. Magnitudes were always exact; the comparison was
 not. Fixed to compare `|Lk|` with the sign recorded separately. Same failure as the previous
 two runs: a conclusion asserted next to a number that contradicted it.
+
+---
+
+### 2026-08-31 — The evidence-chain discipline made canon · method
+
+**The instruction.** *If a claim is made you must back it up with the complete chain of
+evidence. Generation is a primary instinct — subconscious, like reacting. We respond, not
+react.*
+
+Landed as `.claude/skills/evidence-chain/SKILL.md`, a repo skill that loads whenever a claim
+of passing / working / verified is about to be written.
+
+**The idea it encodes.** Producing fluent, correct-shaped text is reflex. *"The three Lean
+files pass"* is a plausible continuation of a sentence about Lean files — **writing it feels
+exactly like reporting it, and there is no internal signal that separates the two.** That is
+why "be careful" does not fix it: a reaction cannot be caught by introspection, because it
+does not feel like a reaction. It feels like knowing. The defence must be procedural.
+
+**What triggered it.** The PR body asserted *"three Lean files: exit 0"* and *"both papers
+compile clean"*. Neither had been observed in the session that wrote them; both were carried
+forward across a context boundary. Re-run: `LFBound.lean` **exit 0 (9.1 s)**, `AxiomIII.lean`
+**exit 0 (0.9 s)**, both papers **3-pass PASS, 0 undefined refs** — and 10 of 11 artifacts
+byte-identical, the 11th drifting exactly as documented. **Every claim held.** The claims were
+still assumptions when written, and that is the point: the discipline is about provenance, not
+about being wrong.
+
+**The four links.** A claim without its chain is a rumour being laundered: **claim →
+instrument → observation → provenance**. Missing any link leaves exactly three honest options:
+go get the observation, mark it explicitly unverified, or delete the claim. *Softening the
+language is not a fourth option.*
+
+**Live instance, recorded rather than resolved.** `PerZero.lean` is still building against
+Mathlib as this lands. Under the discipline it is marked **not observed this session** in both
+the PR body and here — not "presumably passes". Its two siblings were re-observed; it has not
+been. The 12 mutation tests are likewise flagged as carried forward from `f043dae`, not
+re-run.
+
+**The catalogue.** The skill carries the ten real failures this was built from, because
+recognising the *shape* is what transfers. Their signature: **prose contradicting a number in
+the same output** — `verified to 6.0e+00`; a summary hardcoding `31.9x` where the check
+computed `32.54x`; *"the same 2 pi"* for a measured `7.222`; *"every member hits the target"*
+above a table reading "no solution" fourteen times.
+
+**Rule 7 restated as mechanism, not virtue.** When a summary line and a computation are
+written in the same breath, the summary is generated from the *expectation* of the
+computation, and they drift independently — the number changes when a bug is fixed, the
+sentence does not. Bind the prose to the value so the sentence cannot survive the number
+changing.
+
+**And success recorded as a gradient.** *Success is a progression of deltas in any direction;
+successfulness is a gradient, not a bijection.* A route that improved a prediction 24× and then
+died is not a failure. A verdict confirmed by independent re-derivation is not a null result —
+a claim surviving two derivations is a different object from one surviving a single pass. A
+finding withdrawn inside the run that produced it is the fastest possible correction. Record
+direction and magnitude; do not keep score.
+
+*Rules 1–10 are now in one place and versioned with the repo, rather than distributed across
+seventeen ledger entries where they had to be rediscovered.*

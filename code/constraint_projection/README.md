@@ -5,10 +5,30 @@
 Companion computation to `papers/notes/Constraint_Projection_Framework_Audit.tex`.
 Target: `papers/notes/Constraint_Projection_Framework.tex` (archived as submitted).
 
+> **Two things to know before reading a run as "green".**
+>
+> **1. `--deep` is what produced the committed artifact.** Running
+> `cpf_full_verification.py` without it writes `deep_mode: false` and rounds the contour-integral
+> rows to 6 s.f. — 42 changed lines against `docs/constraint_projection_full_verification.json`.
+> Same values, fewer digits, but it does not reproduce the tracked file. Use `--deep` to
+> regenerate it.
+>
+> **2. These are REPORT GENERATORS, not tests.** None of the thirteen scripts calls `sys.exit`,
+> and nine contain no assertion at all, so **every one exits 0 whether its verdicts are right or
+> wrong.** "The scripts ran" therefore says nothing about whether they ran *correctly* — the
+> condition method rule 3 forbids. What can fail is
+> `code/acs_codebase/tests/test_constraint_projection.py`, which pins the load-bearing numbers
+> these artifacts record and is part of the canonical gate. It is mutation-tested: flipping the
+> scale-invariance flag, the measured `kappa`, or the self-linking spread each turns it red.
+>
+> Relatedly, these instruments are an **audit**, and their verdicts are overwhelmingly negative
+> (C1–C8 mostly `FALSE` / `UNSATISFIABLE`). Reading the suite as "green" would invert what it says.
+
 ```bash
 python3 code/constraint_projection/cpf_audit.py              # first pass, C1-C8, ~2 s
 python3 code/constraint_projection/cpf_full_verification.py  # full pass, V1-V9, ~30 s
 python3 code/constraint_projection/cpf_full_verification.py --deep   # + contour integrals, ~4 min
+                                                            # ^ --deep PRODUCED the committed artifact
 python3 code/constraint_projection/wave_equation_gfactor.py  # where g=2 comes from, ~5 s
 python3 code/constraint_projection/cpf_triple_check.py       # >=2 methods per claim, ~3 min
 python3 code/constraint_projection/cpf_triple_check.py --full  # + T=74k sweep, LF search

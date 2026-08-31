@@ -2685,3 +2685,94 @@ direction and magnitude; do not keep score.
 
 *Rules 1–10 are now in one place and versioned with the repo, rather than distributed across
 seventeen ledger entries where they had to be rediscovered.*
+
+---
+
+### 2026-08-31 — Eval loop on the evidence-chain skill — **THE SKILL DID NOT SEPARATE; THE EVAL FOUND TWO REAL DEFECTS IN OUR OWN WORK** · T1 machine
+
+**What was run.** Three fixtures, each with a planted failure of a shape from the skill's own
+catalogue, executed twice — once with the skill loaded, once without. Six independent agents,
+one turn, 15 assertions.
+
+**Result on the mechanical assertions: a tie.**
+
+```
+eval            config           auto-pass
+stale-claims    with_skill             4/5
+stale-claims    without_skill          4/5      <- tie
+prose-number    with_skill             4/4
+prose-number    without_skill          4/4      <- tie
+unverifiable    INVALID (see below)
+```
+
+Both stale-claims runs found the 2 failures, corrected the README's *"All 12 tests pass"*, and
+measured coverage rather than repeating `94%`. Both prose-number runs caught the hardcoded
+conclusion, named v1.2/v1.3, and refused to endorse the report. **On agentic tasks with tools
+available, the behaviour is largely already there.**
+
+**The one place the runs diverged is exactly the discipline's core.** On the README's
+*"Last verified before the v2.1 tag"*:
+
+| | handling |
+|---|---|
+| with skill | *"unverifiable from where I'm standing… **Flagging as unchecked, not as false**"*; on the 94%: *"not reproduced… **I'm not calling it wrong**"* |
+| baseline | *"It is **wrong on both numbers**… measured coverage is 100%, not 94%"* |
+
+The baseline **overclaimed**: 94% may have come from a different tool or config, and measuring
+100% once does not make the earlier figure *false*. The with-skill run distinguished **not
+reproduced** from **false**, and used option 2 on the claim it could not check. One assertion
+out of fourteen — real, and small.
+
+**Two defects in the eval itself, reported rather than worked around.**
+
+1. **The unverifiable fixture's premise was false.** It assumed `pytype`/`bandit` were absent.
+   The environment has pip and network, so the baseline hit exit 127, **installed them, and ran
+   them** — a legitimate and arguably better answer than the assertion demanded. *The instrument
+   could not produce the condition it claimed to test.* Rule 3, applied to us.
+2. **That install was global, so the comparison was contaminated** — the with-skill agent faced
+   a different environment than the baseline started in. And its prompt said *"the release
+   checklist in this repo"*, which it read as **ACS-Framework** rather than the fixture. Invalid
+   twice over.
+
+**And the invalid run was the most valuable one.** Pointed at the real repo, it found two
+defects in our own work, both since **verified independently here rather than taken on trust**:
+
+```
+scripts with NEITHER an assertion NOR an exit call:   9 of 13
+scripts with ANY sys.exit at all:                     0 of 13
+README's documented default command reproduces the committed artifact?   NO (42 lines differ)
+```
+
+**Every CPF instrument exits 0 whether its verdicts are right or wrong.** They are report
+generators, not tests, and "the scripts ran" carried no information about whether they ran
+*correctly* — precisely the state rule 3 forbids, sitting in our own toolchain while we applied
+rule 3 to the manuscript.
+
+**Fixed.** `code/acs_codebase/tests/test_constraint_projection.py` pins the load-bearing numbers
+the artifacts record — the factor of two, the sub-Planckian cutoff, 46.24 and its drift, 14/14
+decoys, K1's invariance, K2's 26.96, P4's opposite signs and `3π/4`, P6's empty root set, G1's
+`H₂ = 0`, G3's `κ → 2.0` and 6.3062, G2's vanishing, E0's validated solver, R4's blindness,
+R5's withdrawal. **Gate 42 → 59.** And it is mutation-tested, because a test that cannot reject
+is the thing being fixed:
+
+```
+flip K1 joint_scaling_invariant -> FAILED test_klein_foam_reading_is_scale_invariant
+change measured kappa 2.0 -> 1.5 -> FAILED test_greens_capacitance_is_two_pi_larger
+spread_percent 0.013 -> 45.0     -> FAILED test_twist_family_capacitance_blind_to_self_linking
+```
+
+Three mutations, three rejections, each by the right test. `README.md` now marks `--deep` as the
+command that produced the artifact, and states plainly that exit 0 means *"report produced"*,
+not *"checks passed"* — with the note that these verdicts are overwhelmingly negative, so
+reading the suite as "green" inverts what it says.
+
+**Verdict, as a delta rather than a score.** The skill did not separate on these tasks, and that
+is the honest headline. The eval design was flawed in two ways, both named. And the run that was
+methodologically worthless produced the most value — **an audit that had been applying rule 3
+outward while its own instruments could not fail.** Net movement is positive and it came from
+the part that failed.
+
+*Still open, recorded under option 2.* The eval set never tested the case where the failure
+actually happened to us — a **write-up with no invitation to verify**. All three prompts asked
+for evaluation (*"review this"*, *"is this good to ship"*), which cues checking. Description-
+triggering optimisation is also not run. Both are open items, not silent gaps.

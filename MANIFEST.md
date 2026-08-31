@@ -452,3 +452,33 @@ The deductive core of the CPF audit is now machine-checked end to end — **§5 
 **Axiom III clause (3)**, **§7 per-zero contribution**. What remains outside the kernel is
 in every case either measured data or standard textbook results cited by name, never a
 step of our own reasoning.
+
+
+---
+
+## What the α gap is, and whether it can be corrected (2026-08-30)
+
+Code: `code/constraint_projection/alpha_gap_diagnosis.py` ·
+Artifact: `docs/alpha_gap_diagnosis.json` · Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+Follow-on from the scaling test: ruling out a power law ruled out a *species* of
+correction, leaving open what the gap actually is.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The gap is **additive in the log** ($L \to L+270$), not multiplicative | **T1** | why no power law could fit — wrong shape of correction |
+| "72.6×" is an artifact of $a/R=1/2$; the **Planck cutoff gives 26.96** (5.08×) | **T1** | six physical scales tabulated, from 1.54 to 137.04 |
+| The CODATA-matching cutoff is $2.4\times10^{-96}$ Planck lengths | **T1** | not a regulator; voids "UV complete" |
+| The prefactor **cannot be repaired**: $\alpha^{-1} = (4\pi\eta^2/\kappa)L$ needs $\eta \notin \{1,\tfrac12,\tfrac13,\tfrac23,2\}$ for every natural $\kappa$ | **T2** | four normalisations tried |
+| Log-in-scale **is** the shape of RG running — but coefficient off by $3\pi/4$ and **sign opposite** | **T2** | QED $-2/3\pi$ screens; this $+1/2$ anti-screens, backwards for $U(1)$ |
+| The general no-go is **standard, not ours** | **T2** | dimensional transmutation; RG boundary conditions; arXiv:1411.4673 survey |
+
+> **Answer: the gap is not correctable.** All three routes close. The correct move is
+> reporting, not repair — the framework with its own scale-fixing predicts
+> $\alpha^{-1} = 1.886$ and is falsified. Anything that closes the gap adds physics not
+> in the manuscript, and must then be tested as a different theory.
+
+> **Wyler 1970 got $\alpha^{-1} = 137.03608$ (rel err $5.9\times10^{-7}$) and was
+> debunked. This manuscript is 13,471× closer — and carries zero bits.** Closer agreement
+> is not better evidence; more digits only means more digits were fitted. *(An in-flight
+> correction: the first draft of the instrument had this comparison backwards.)*

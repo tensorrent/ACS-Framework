@@ -1691,3 +1691,127 @@ is now machine-checked end to end: the LF bound (§5), Axiom III clause (3), and
 per-zero contribution (§7). What remains outside the kernel is, in every case, either
 measured data or standard textbook results cited by name — never a step of our own
 reasoning.
+
+---
+
+### 2026-08-30 — What the alpha gap actually is, and whether it can be corrected — **NOT CORRECTABLE; three routes closed** · T1 machine / T2 structural
+
+**Why this entry.** The scaling test above ruled out a missing power law, which rules out
+a *species* of correction and therefore narrows the question rather than closing it. The
+open question was: if not a power law, what **is** it? Instrument
+`code/constraint_projection/alpha_gap_diagnosis.py`, artifact
+`docs/alpha_gap_diagnosis.json`.
+
+**G1 — the gap is ADDITIVE IN THE LOG, not multiplicative.** `alpha^-1 = (1/2)(ln(8R/a)+1)
+= L/2` is linear in a logarithm, so the honest variable is `L`:
+
+```
+L from tau = i/2      =   3.7726
+L needed for CODATA   = 274.0720
+ADDITIVE gap in L     = 270.2994   ->  a/R must shrink by 10^117.4
+```
+
+**This is why no power law fit.** A power law is `alpha^-1 ~ L^p`; the actual requirement
+is `L -> L + 270`. The scaling test was testing the wrong shape — and its failure was
+informative precisely because it identified that.
+
+**G2 — "72.6x" was never a property of the theory.** Every defensible physical scale:
+
+| cutoff `a` | `a/R` | `L` | `alpha^-1` | off by |
+|---|---|---|---|---|
+| Planck length | 8.37e-23 | 53.91 | **26.96** | 5.08x |
+| classical electron radius | 1.46e-2 | 7.31 | 3.65 | 37.5x |
+| proton charge radius | 4.35e-3 | 8.52 | 4.26 | 32.2x |
+| `a = R` | 1.0 | 3.08 | 1.54 | 89.0x |
+| `tau = i/2` | 0.5 | 3.77 | 1.89 | 72.6x |
+| CODATA-matching | 2.04e-118 | 274.07 | 137.036 | 1.0x |
+
+The Planck cutoff — the most defensible choice available — gives **26.96**, off by 5.08x,
+not 72.6x. Same finding as the `tau` sweep, now in physical rather than modular language.
+And the CODATA-matching cutoff is **2.4e-96 Planck lengths**: not a cutoff, an unphysical
+number. A "UV completion" 96 decades below the Planck scale is not a regulator.
+
+**G3 — the prefactor cannot be repaired.** Redoing the self-energy match with both
+normalisations free (charge `q = eta e`, capacitance `C = kappa eps0 R/L`):
+
+```
+alpha^-1 = (4 pi eta^2 / kappa) * L      [check: kappa=2pi, eta=1/2 -> 1/2  OK]
+```
+
+At the Planck cutoff, matching CODATA needs `4 pi eta^2/kappa = 2.5418`:
+
+| `kappa` | required `eta^2` | required `eta` | natural? |
+|---|---|---|---|
+| `2 pi` (manuscript) | 1.2709 | 1.1273 | no |
+| `4 pi^2` (thin ring) | 7.9851 | 2.8258 | no |
+| `4 pi` | 2.5418 | 1.5943 | no |
+| `1` | 0.2023 | 0.4497 | no |
+
+Natural charge fractions are `1, 1/2, 1/3, 2/3, 2`. **None.** Route closed.
+
+**G4 — the shape IS RG running, with the wrong coefficient and the wrong sign.** A
+relation linear in `ln(scale)` is exactly the form of a running coupling, so the
+manuscript has the right functional form for the wrong reason. One-loop QED, one Dirac
+fermion of unit charge:
+
+```
+QED:         d(alpha^-1)/d ln(mu)  = -2/(3 pi) = -0.2122
+manuscript:  d(alpha^-1)/d ln(R/a) = +1/2      = +0.5000
+             magnitude ratio 2.3562,  signs OPPOSITE
+```
+
+*(The ratio equals `3 pi/4` exactly, but that is just the arithmetic of the two
+coefficients — recorded so it is not misread as a finding. Same trap as `sqrt(5277)`.)*
+
+**The sign is fatal.** QED **screens**: `alpha^-1` decreases toward short distance,
+because vacuum polarisation shields the bare charge. The manuscript's relation
+*increases* — anti-screening in a `U(1)` theory, which is backwards. Asymptotic freedom
+is non-abelian.
+
+**G5 — the general statement, and its PRIOR ART (searched BEFORE claiming, rule 4).**
+The formula admits two readings and both are closed:
+
+- **(a) self-energy with a fixed cutoff** — CAN produce a number, but only once the cutoff
+  is fixed independently. The framework's own fixing gives `1.886`; G2 shows every other
+  defensible scale gives `1.5` to `27`.
+- **(b) RG running** — CANNOT derive `alpha` at all: running relates `alpha` at two scales
+  and requires a renormalisation condition at one of them. It never produces `alpha` from
+  nothing.
+
+**The general no-go is STANDARD, not ours.** Dimensional transmutation is the established
+name for trading a dimensionless coupling for a scale (Coleman–Weinberg; `Lambda_QCD`);
+RG renormalisation conditions as required boundary data are textbook; and the mainstream
+position is that dimensionless constants must be **measured**, not derived. The whole
+genre has a survey: *"Attempts at a determination of the fine-structure constant from
+first principles: A brief historical overview"* (arXiv:1411.4673), covering Eddington
+(136, then 137) and Wyler (137.03608).
+
+**The sharpest point in that literature, and a correction made in-flight.** The first
+draft of this instrument asserted that Wyler's match was *better* than the manuscript's.
+It is not — checked, and the direction is the opposite:
+
+```
+Wyler 1970:      alpha^-1 = 137.03608       rel err 5.9e-7
+this manuscript: alpha^-1 = 137.035999171   rel err 4.38e-11
+                 the manuscript is 13,471x CLOSER
+```
+
+Wyler's agreement was good enough to attract serious attention in 1971 and was still
+debunked. **This one is four orders of magnitude better and carries zero bits** (decoy
+test, 14 of 14 forms). That is the decoy lesson as history rather than arithmetic:
+**closer agreement is not better evidence** — more digits of agreement only means more
+digits were fitted, when the construction can hit any target.
+
+**ANSWER TO "HOW DO WE CORRECT THE GAP": you do not.** All three routes are closed, and
+the correct move is not repair but reporting: **the framework, taken with its own
+scale-fixing, predicts `alpha^-1 = 1.886` and is falsified.** That IS the corrected
+result. Anything that closes the gap adds physics not in the manuscript, at which point
+it is a different theory and must be tested as one.
+
+**Rule 4 worked as intended, and earlier in the cycle than last time.** The prior-art
+search was run *before* the claim was logged rather than after. It retired the general
+no-go as standard while confirming the specific diagnosis as ours. Second consecutive
+entry where the search changed what we were entitled to say.
+
+Instrument: `code/constraint_projection/alpha_gap_diagnosis.py`.
+Artifact: `docs/alpha_gap_diagnosis.json`.

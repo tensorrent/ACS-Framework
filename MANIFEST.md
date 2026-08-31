@@ -552,3 +552,46 @@ Sources read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_C
 > programme's own prior scoped statement, plus dimensional analysis done symbolically. It
 > produced something only because it was pointed at **our own corpus**, which is the gap
 > the 2026-08-30 coherence audit flagged. First entry to close it.
+
+---
+
+## The Feynman path integral run against CPF and the Klein-Foam reading (2026-08-31)
+
+Code: `code/constraint_projection/feynman_path_integral.py` ·
+Artifact: `docs/feynman_path_integral.json` · Ledger: `docs/Elimination_Ledger.md`
+
+Fair ground, not an imported standard: *"no particles, only histories"* is Feynman's own
+statement of the path integral, and *"finite resolution"* is lattice regularisation.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The ontology is **well-formed** as a lattice path integral | **T2** | no-particles reading, finite resolution, and K1's scaling invariance all transfer exactly |
+| The electrostatic step is **ħ-free**; ħ enters only via $R=\hbar/2m_ec$ | **T2** | symbolic solve with $R$ free: $L = 16\pi\varepsilon_0 R m_ec^2/e^2$ |
+| $\alpha$ is the **loop-counting parameter**, so a tree-level quantity cannot fix it | **T2** | capacitance is the saddle point, $O(\hbar^0)$ |
+| The derivation **collapses to $r_e=\alpha\bar\lambda_C$**, a standard identity | **T2** | $R=(L/4)r_e$ classically; setting $R=\bar\lambda_C/2$ gives $L=2/\alpha$ |
+| $a/R$'s exponent **is** CODATA $\alpha^{-1}-1$ | **T1** | 136.035999171 vs 136.035999177 — **6.0e-9**, the entry's own quoted agreement |
+| Axiom II's $w_1\neq0$ is **exactly** what forbids a spin structure | **T1** | GF(2) chain complex: $\chi=0$, $\dim H^1(K;\mathbb{Z}/2)=2$ |
+| **0 Spin, 4 Pin⁺, 4 Pin⁻** — 3 bits of measure unspecified | **T1** | Wu: $w_2=w_1^2$, $\langle w_2,[K]\rangle=\chi \bmod 2=0$ |
+| The 2026-08-30 running verdict, **re-derived** from vacuum polarisation | **T2** | QED $-0.2122$ vs CPF $+0.5$; ratio $3\pi/4$; signs opposite — **both halves confirmed** |
+| Required cutoff is **inside** the perturbative region; QED competes there | **T1** | Landau pole 162 decades further out; 79.38 vs 137.04 → **1.73×** at one scale |
+| **No UV fixed point**; "UV complete" ⊥ "finite resolution" | **T2** | $\beta=2\alpha^2/3\pi$, root set $\{0\}$, $\beta>0$ everywhere |
+| α is **measured to run** — fixed topology cannot track it | **T3(measured)** | 137.04 → 128.95 at $M_Z$ needs the throat **10⁷× coarser**, 7.03 decades |
+
+> **On home ground the ontology is unharmed.** P0 stands on its own: the reading maps onto
+> the formalism exactly, and a finite-resolution path integral is what lattice QCD is. What
+> the formalism denies is that such a theory can *determine* its own coupling — the coupling
+> is what you put in.
+
+> **The α derivation is an identity with the answer supplied as input.** ħ enters at one
+> point, by choice; the remaining content is $r_e = \alpha\bar\lambda_C$; and $a/R$ is
+> defined by an exponent equal to the measured $\alpha^{-1}$ minus one. The reported 6e-9
+> is a round-trip error, not a residual.
+
+> **P7 is independent of everything else here.** It does not use the factor of 2, the value
+> of $a/R$, the Planck floor, or the beta-function sign — only that α depends on scale,
+> which is measured.
+
+> **A verdict re-derived rather than reused.** P4 recomputed a call this ledger already
+> carried, from a different starting point, on the chance it would break. It did not. A
+> verdict that has survived two independent derivations is not the same object as one that
+> has survived a single pass.

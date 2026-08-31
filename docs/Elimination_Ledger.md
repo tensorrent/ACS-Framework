@@ -2044,3 +2044,188 @@ either match or do not. Reading it as a defendant is a category error against th
 and it also degrades the finding — "two scopes, arithmetic matches the earlier" is checkable
 and reusable; "the manuscript overclaimed" is neither. The instrument, this entry, MANIFEST
 and the PR were rewritten to the factual form. `bdcb530` stays in history as written.
+
+---
+
+### 2026-08-31 — The Feynman path integral run against CPF and the Klein-Foam reading — **THE ONTOLOGY PASSES ON ITS OWN GROUND; THE α DERIVATION IS AN IDENTITY** · T2 proved / T1 machine / T3 measured
+
+**Why this test is fair rather than imported.** The path integral is not an outside
+standard being applied to a foreign object. *"No particles, only histories"* is Feynman's
+own statement of it, and *"finite resolution of the throat"* is lattice regularisation.
+Running the path integral against the Klein-Foam reading is running it on **home ground**.
+
+Instrument: `code/constraint_projection/feynman_path_integral.py`.
+Artifact: `docs/feynman_path_integral.json`. Every number computed in-instrument; the
+2026-08-30 running verdict was **re-derived rather than reused**.
+
+**P0 — what the formalism gives the ontology.** Three things transfer exactly: the
+no-particles reading is the formalism's own; a shortest length is lattice regularisation,
+the most successful non-perturbative definition of QFT we have; and K1's joint-scaling
+invariance is precisely the property a lattice theory has (physics depends on
+`correlation length / spacing`, never the bare spacing). **The ontology is well-formed as
+a lattice path integral.** Nothing below touches that.
+
+**P1 — loop counting: ħ enters at exactly one place, and it is an input.** Solved
+symbolically, `R` left free:
+
+```
+self-energy condition E_self = m_e c^2, solved for L:
+    L = 16 pi eps0 R m_e c^2 / e^2          contains hbar?  FALSE
+substituting the manuscript's R = hbar/(2 m_e c):
+    L = 8 pi eps0 hbar c / e^2              contains hbar?  TRUE
+    L * alpha = 2                    ->  alpha^-1 = L/2
+```
+
+The electrostatic step is **ħ-free** — it is a saddle point, zero loops, `O(ħ⁰)`. In the
+path integral `α` **is** the loop-counting parameter. A tree-level quantity therefore
+carries no information about it, and indeed `α` appears only after `R = ħ/(2m_ec)` is
+imposed. That substitution is the sole carrier of ħ in the derivation.
+
+*(This also re-derives the factor of 2 independently: `L·α = 2` was the audit's first
+finding, obtained by arithmetic. Here it drops out of the symbolic solve.)*
+
+**P2 — what the derivation actually says.** Solving the same relation for `R` instead:
+
+```
+classical self-energy alone:   R = (L/4) * r_e         r_e = e^2/(4 pi eps0 m_e c^2)
+the manuscript separately SETS: R = lambdabar_C / 2
+equating:                       L = 2 * (lambdabar_C / r_e)
+```
+
+And `λ̄_C/r_e` is `α⁻¹` **by the standard identity `r_e = α λ̄_C`** — verified numerically
+here, not assumed:
+
+```
+r_e / lambdabar_C  = 0.00729735257375
+alpha   (CODATA)   = 0.00729735256433      agreement 1.29e-9
+```
+
+**So the derivation collapses to `r_e = α λ̄_C` rewritten.** It determines `L` *from* `α`.
+Getting a number out the other way requires `a/R` supplied independently — and the
+manuscript supplies it:
+
+```
+manuscript:            a/R = 8 exp(-136.035999171)
+stated exponent          = 136.035999171
+CODATA alpha^-1 - 1      = 136.035999177
+difference               = 6.0e-9
+```
+
+**The exponent that fixes `a/R` is the measured `α⁻¹`, minus one, to 6e-9** — which is
+precisely the agreement the entry reports. Input and output are the same number, and the
+6e-9 is the round-trip error, not a prediction's residual.
+
+**P3 — the measure: `w₁ ≠ 0` is exactly what forbids a spin structure.** §4 reads 4π
+spinor periodicity off non-orientability. In the path integral a spinor is not a reading —
+it is a **choice of measure**, and that measure needs a spin structure. Computed from the
+CW complex over GF(2), not quoted:
+
+```
+CW: 1 vertex, 2 edges, 1 face      ->  chi(K) = 0
+over GF(2): rank d1 = 0, rank d2 = 0
+            dim H_1(K; Z/2) = 2    ->  |H^1(K; Z/2)| = 4
+Wu on a closed surface: w2 = w1^2, <w2,[K]> = chi mod 2 = 0
+
+    Spin  (needs w1 = 0)         0 structures   <- Axiom II SETS w1 != 0
+    Pin+  (needs w2 = 0)         4 structures
+    Pin-  (needs w2 + w1^2 = 0)  4 structures
+                                 8 fermionic measures, 3 bits, none specified
+```
+
+**Axiom II's `w₁ ≠ 0` is the precise condition under which no spin structure exists.** The
+property the framework relies on for its spinor claim is the property that removes the
+spin measure. What remains is a **Pin** theory — perfectly well-defined, but requiring a
+choice of Pin⁺/Pin⁻ and one of four structures. Pin⁺ and Pin⁻ are physically different
+theories. Three bits of discrete data are unspecified, so the parameter count fails **in
+the measure**, before any coupling is computed.
+
+*Note what this is not:* it is **not** "fermions are impossible on `M`". They are fine.
+The data is simply real, physical and unstated.
+
+**P4 — our own earlier verdict, re-derived instead of reused.** From the one-loop vacuum
+polarisation, differentiating with respect to the RG scale `μ` (the variable that makes
+the question well-posed):
+
+```
+QED   d(alpha^-1)/d ln mu = -2/(3 pi) = -0.21220659   alpha^-1 falls with energy (screening)
+CPF   d(alpha^-1)/d ln mu = +1/2      = +0.5          alpha^-1 rises with energy (anti-screening)
+magnitude ratio = 2.3561945 = 3 pi/4
+signs           = OPPOSITE
+```
+
+**Both halves of the 2026-08-30 call hold.** The sign claim was convention-sensitive and
+worth re-deriving from a different starting point; differentiating w.r.t. `μ` rather than
+`R/a` is what fixes the convention, and in that variable the signs are genuinely opposite.
+Read as running, the relation is **asymptotically free**, which an abelian `U(1)` gauge
+theory cannot be.
+
+**P5 — the required cutoff is inside the perturbative region, so QED competes there.**
+
+```
+required cutoff as an energy   ln(mu_a / m_e c^2) = 271.6857
+QED Landau pole                ln(Lambda/m_e c^2) = 645.7669
+                               margin = 374.08 in ln = 162.46 decades
+
+QED run to mu_a:   alpha^-1 = 79.382497
+CPF asserts:       alpha^-1 = 137.036
+disagreement                 = 1.726x
+```
+
+The framework is **not** rescued by the cutoff being unreachable — it is reachable in the
+RG sense, 162 decades short of the pole. So this is a like-for-like comparison of two
+predictions **at one common scale**, with no normalisation freedom left in it.
+
+**P6 — no UV fixed point, and the two claims are mutually exclusive by definition.**
+
+```
+beta(alpha) = 2 alpha^2 / (3 pi)
+ALL roots of beta = 0:  [0]        nontrivial roots: []
+sign at alpha = -1/10, -1/137, 1/137, 1/10, 1:  all +1
+```
+
+The root set is the free theory and nothing else. And the structural half is pure
+bookkeeping: **"UV complete" means the continuum limit of the measure exists; "finite
+resolution" means it is never taken.** A path integral with a shortest length is an
+*effective* theory with a cutoff — exactly what lattice QCD is, and the opposite of UV
+complete. The ontology is the half that survives; it is the completeness claim that the
+ontology itself rules out.
+
+**P7 — the independent empirical check: `α` is measured to run.**
+
+```
+alpha^-1 low energy (CODATA) = 137.035999
+alpha^-1 at M_Z     (PDG)    = 128.947
+
+resolution the relation would need at each scale:
+    low energy   ln(8R/a) = 273.071998
+    at M_Z       ln(8R/a) = 256.894
+    required change in a  = 1.06e7x  =  7.03 decades
+```
+
+A single number from fixed topology cannot track a measured scale dependence. To do it,
+the *"finite resolution of the throat"* would have to be **10⁷ times coarser when probed
+at `M_Z`** — which is not a fundamental floor, it is the running re-inserted by hand.
+**This check is independent of every other one here**: it does not use the factor of 2,
+the value of `a/R`, the Planck floor, or the sign of the beta function. It needs only that
+`α` depends on scale, which is measured.
+
+**Verdict.** On its own home ground the ontology is **well-formed and unharmed** (P0), and
+the `α` derivation is an identity with the answer supplied as input (P1, P2). The measure
+carries three unspecified bits on the very property the spinor claim uses (P3). The
+earlier running verdict survives independent re-derivation (P4). Two quantitative
+comparisons at fixed scales disagree by 1.73× (P5) and would need a 10⁷ resolution shift
+(P7). And "UV complete" and "finite resolution" cannot both hold (P6) — a scope point, of
+the same kind K4 recorded, and again the ontology is the half that stands.
+
+*Method note (rules 1 and 4).* Rule 1 did the work in P1–P2: **evaluate the object the
+target actually defines.** The manuscript states `α⁻¹ = ln(8R/a)+1`; solving its own
+self-energy condition symbolically, without substituting `R`, is what exposed that the
+electrostatic step is ħ-free and that the remaining content is `r_e = αλ̄_C`. Nothing in
+the technique is new — one-loop QED running, Pin structures on non-orientable surfaces,
+`r_e = αλ̄_C`, the Landau pole and the measured running at `M_Z` are all standard and are
+the field's, not ours. Only the application is.
+
+*Verdicts re-derived rather than reused.* P4 deliberately recomputed a call this ledger
+already carried, from a different starting point, on the chance it would break. It did not.
+That is worth as much as a correction: a verdict that has survived two independent
+derivations is not the same object as one that has survived a single pass.

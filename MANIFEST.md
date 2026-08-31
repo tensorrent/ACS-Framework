@@ -482,3 +482,34 @@ correction, leaving open what the gap actually is.
 > debunked. This manuscript is 13,471× closer — and carries zero bits.** Closer agreement
 > is not better evidence; more digits only means more digits were fitted. *(An in-flight
 > correction: the first draft of the instrument had this comparison backwards.)*
+
+
+---
+
+## Can a relative boundary condition fix α? (2026-08-30)
+
+Code: `code/constraint_projection/alpha_relational_boundary.py` ·
+Artifact: `docs/alpha_relational_boundary.json` · Ledger: `docs/Elimination_Ledger.md`
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| §8's $\lambda_{\rm UV}\lambda_{\rm IR}=1/R^4$ **is** a relational condition: $a\,L_{\rm IR}=R^2$ | **T2** | substituting gives $\alpha^{-1} = \tfrac12(\ln(8L_{\rm IR}/R)+1)$ — Dirac large-number form |
+| Using it makes α a **parameter-free prediction**: $\alpha^{-1} = 46.24$ | **T1** | off by 2.96×, beating 72.6× ($\tau=i/2$) and 5.08× (Planck) |
+| But it predicts α **drifts** at $2.5\times10^{-13}$/yr | **T1** | $\dot\alpha/\alpha \sim H_0/2\alpha^{-1}$ |
+| **Excluded by ~10⁴** against every independent bound | **T3(measured)** | atomic clocks 12,575×; Oklo 20,958×; quasars 2,515× |
+| The manuscript has **two** relational conditions giving 1.886 and 46.24 | **T1** | they disagree by **24.5×** |
+
+> **The deep point.** A relative boundary condition does not rescue the framework — it
+> makes it **over-determined and inconsistent**, which is strictly worse than
+> under-determined. Under-determination is a missing input you can go find;
+> over-determination with disagreement means the framework's own conditions contradict
+> each other, and there is no free parameter left to absorb the difference.
+
+> **Prior art (rule 4, searched before claiming).** α-constancy as a constraint on
+> varying-α models is a standard, well-developed method, and the Oklo / atomic-clock
+> bounds are the field's own. The Dirac large-number framing is classical. Only the
+> application to this framework is ours.
+
+> **A route that improved things and was killed anyway.** 72.6× → 2.96× and
+> parameter-free is a real gain. It died on a test it could have passed: had the drift
+> come in below 10⁻¹⁷/yr, the relational reading would have survived as a live option.

@@ -1815,3 +1815,92 @@ entry where the search changed what we were entitled to say.
 
 Instrument: `code/constraint_projection/alpha_gap_diagnosis.py`.
 Artifact: `docs/alpha_gap_diagnosis.json`.
+
+---
+
+### 2026-08-30 — Can a RELATIVE boundary condition fix alpha? — **the instinct was right twice and still does not save it** · T1 machine / T2 structural
+
+**The question.** The gap diagnosis ended on: a log-in-scale relation derives `alpha` only
+if the scale ratio is fixed from outside, and RG running cannot supply that because it
+needs a boundary condition. The natural follow-on: what if the condition is not a single
+absolute value but a **relation** between scales? That is a real idea — gauge unification,
+dimensional transmutation and fixed points all work that way, and none fixes a coupling
+absolutely. Instrument `code/constraint_projection/alpha_relational_boundary.py`.
+
+**B1 — the framework already HAS one, and it is a genuine parameter-free prediction.**
+§8 states `lambda_UV * lambda_IR = 1/R^4`, i.e.
+
+```
+a * L_IR = R^2          <- a RELATION between UV cutoff and IR scale
+```
+
+Substituting `a = R^2/L_IR` into the corrected relation collapses the free parameter
+entirely:
+
+```
+alpha^-1 = (1/2)( ln(8 R/a) + 1 ) = (1/2)( ln(8 L_IR / R) + 1 )
+```
+
+`alpha` is now fixed by the **ratio of cosmological to electron scale** — Dirac's
+large-number structure. With `L_IR` taken from observation, nothing is left free:
+
+```
+L_IR / R          = 6.73297e38     <- the Dirac large number
+alpha^-1 PREDICTED = 46.242346
+alpha^-1 observed  = 137.0359992
+off by             = 2.9634x
+```
+
+**This is a real improvement and deserved the test.** 2.96x beats the 72.6x of `tau = i/2`
+and the 5.08x of a Planck cutoff, and unlike both it is **parameter-free**. Reaching
+137.036 would need `L_IR/R = 4.90e117` against a measured `6.73e38` — off by `10^78.9`.
+
+**B2 — the decisive kill: a relational alpha must DRIFT.** If `alpha` is set by `L_IR/R`
+and `L_IR` grows with expansion, `alpha` is not constant. That is measurable:
+
+```
+d(alpha^-1)/dt ~ H_0/2 = 3.45e-11 /yr
+|alpha_dot/alpha|      = 2.52e-13 /yr
+```
+
+| bound on `|alpha_dot/alpha|` [/yr] | value | exceeded by |
+|---|---|---|
+| atomic clocks, Al+/Hg+, Yb+ | 2e-17 | **12,575x** |
+| Oklo natural reactor (2 Gyr) | 1.2e-17 | **20,958x** |
+| quasar absorption systems | 1e-16 | 2,515x |
+
+**Excluded by ~10^4 against every independent bound.** The relational reading does not
+merely mispredict `alpha`'s *value* — it predicts `alpha` **varies**, and that is ruled
+out on its own, independently of the 2.96x normalisation gap.
+
+*Prior art, searched before claiming (rule 4): using alpha-constancy to constrain
+varying-alpha models is a standard, well-developed method, and the Oklo and atomic-clock
+bounds quoted are the field's own. Nothing in the method is ours — only its application
+here. Likewise the Dirac large-number framing is classical, and is where such hypotheses
+normally die.*
+
+**B3 — and the deep point: TWO relational conditions that disagree.**
+
+| condition | source | `a/R` | `alpha^-1` |
+|---|---|---|---|
+| `tau = i a/R = i/2` | §3 | 0.5 | **1.886294** |
+| `a L_IR = R^2`, `L_IR` observed | §8 | 1.485e-39 | **46.24235** |
+
+Neither gives 137.036, and **they disagree with each other by 24.5x**.
+
+**A relative boundary condition does not rescue the framework — it makes it
+OVER-DETERMINED AND INCONSISTENT, which is strictly worse than under-determined.**
+Under-determination is a missing input you can go and find. Over-determination with
+disagreement means the framework's own conditions contradict each other and there is **no
+free parameter left to absorb the difference**. Supplying the boundary condition removes
+the last place the discrepancy could have hidden.
+
+**Verdict.** The instinct was right twice — the condition should be relative, and the
+framework does contain one — and the framework is worse off for it, not better. Logged as
+a route that genuinely improved the prediction (72.6x → 2.96x, and parameter-free) and was
+killed anyway, by a test it could have passed: had the predicted drift come in below
+1e-17/yr, the relational reading would have survived as a live option with only a
+normalisation gap to explain.
+
+Instrument: `code/constraint_projection/alpha_relational_boundary.py`.
+Artifact: `docs/alpha_relational_boundary.json`.

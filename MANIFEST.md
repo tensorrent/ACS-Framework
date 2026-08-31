@@ -529,19 +529,24 @@ Sources read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_C
 | The foam's **own** Planck floor gives $\alpha^{-1}=26.96$ — **best absolute reading tested** | **T1** | 5.08×, vs 72.6× ($\tau=i/2$) and 89× ($a=R$) |
 | The manuscript needs $a=2.4\times10^{-96}\,\ell_P$ — **96 decades below the foam's own floor** | **T1** | kill becomes **internal**, not external |
 | Renaming $a$ cutoff → resolution **does not move the arithmetic** | **T2** | $a/R=2.039\times10^{-118}$ either way |
-| `Klein_Foam_Monad.tex` **already disclaimed** "zero free parameters" and **named $a/R$ as an input** | **T4** (scoping) | quoted verbatim from both files, one month apart |
+| The corpus holds **two scope declarations for $a/R$**: `Klein_Foam_Monad.tex` names it an input, the CPF entry records it as not free | **T1** (corpus fact) | quoted verbatim from both files, one month apart |
 
-> **The finding.** The Klein-Foam note says *"Free-parameter count depends on which
-> quantities are treated as inputs ($R$, $a/R$, charge split); absolute ``zero free
-> parameters'' is not claimed."* The CPF manuscript says *"The framework contains zero free
-> parameters."* This audit's central kill is something **the programme's own earlier note
-> already said, in those words, a month before the manuscript.** The manuscript is not the
-> Klein-Foam ontology developed further — it is that ontology **with its scope removed.**
+> **The finding, stated as a corpus fact.** `Klein_Foam_Monad.tex` says *"Free-parameter
+> count depends on which quantities are treated as inputs ($R$, $a/R$, charge split);
+> absolute ``zero free parameters'' is not claimed."* The CPF entry says *"The framework
+> contains zero free parameters."* Two entries, same quantity, different scope. K3 settles
+> which one the arithmetic matches: $a/R$ carries a fitted value, so the earlier scope is
+> the one the numbers support.
 
-> **A finding FOR the ontology and AGAINST the manuscript.** The reading earns three
-> things: the invariance is real, it gives the best absolute prediction on the board, and
-> it converts an external objection into an internal contradiction. It earns no movement
-> in α. The scoped note is the better document.
+> **What changes is where the resolution lives.** This audit's central finding was already
+> in the corpus, in those words, a month earlier. An external instrument was built to
+> establish something established in-house. That is a fact about **how the audit was run**
+> — not a grade on either entry. Entries record state; they do not indict each other. Both
+> stand, append-only, as written.
+
+> **What the reading earns:** the invariance is real, it gives the best absolute prediction
+> tested, and it makes the α discrepancy internal to the corpus rather than an external
+> appeal. **What it does not earn:** any movement in α.
 
 > **Method note (rule 4).** No new technique — source-checking a claim against the
 > programme's own prior scoped statement, plus dimensional analysis done symbolically. It

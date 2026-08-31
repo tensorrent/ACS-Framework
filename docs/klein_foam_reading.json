@@ -34,7 +34,7 @@
       ],
       "klein_foam_names_a_over_R_as_input": true,
       "cpf_declares_zero_free_parameters": true,
-      "verdict": "the manuscript is the Klein-Foam ontology with its scope removed"
+      "verdict": "two scope declarations for a/R in one corpus; the arithmetic matches the earlier"
     }
   }
 }

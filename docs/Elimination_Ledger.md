@@ -1907,7 +1907,7 @@ Artifact: `docs/alpha_relational_boundary.json`.
 
 ---
 
-### 2026-08-31 — The Kelvin/Klein-Foam reading: "there are no particles, only the finite-resolution throat" — **THE READING IS RIGHT AND THE MANUSCRIPT IS WORSE FOR IT** · T2 structural / T1 machine / T4 (scoping)
+### 2026-08-31 — The Kelvin/Klein-Foam reading: "there are no particles, only the finite-resolution throat" — **THE READING IS STRUCTURALLY RIGHT; THE CORPUS CARRIES TWO SCOPES FOR `a/R`** · T2 structural / T1 machine / T1 (corpus fact)
 
 **The proposal, in the author's words.** `a` in `alpha^-1 = (1/2)(ln(8R/a)+1)` is not a
 particle cutoff. There are no particles. `a` is the *finite resolution of the throat* —
@@ -1978,8 +1978,9 @@ right; it is simply **orthogonal to the falsifiable content**. Same shape as CPF
 relational-measurement material: a reframe that leaves the numbers untouched. A better
 name for `a` is not a different value of `a`.
 
-**K4 — the decisive finding, and it is not one I expected: the manuscript REGRESSED from
-the note.** Quoted from the files, not paraphrased:
+**K4 — the finding I did not expect: the corpus already contains the resolution.** Two
+entries state a scope for `a/R`. The statements differ. Quoted from the files, not
+paraphrased:
 
 > **Klein_Foam_Monad.tex:** *"Absolute uniqueness and ``no free parameters'' claims are not asserted."*
 >
@@ -1993,21 +1994,33 @@ against
 >
 > **CPF manuscript:** *"CPF + GfE | 0 | All constants"*
 
-The Klein-Foam note **names `a/R` explicitly** as one of the inputs whose treatment
-determines the free-parameter count, and **declines to claim zero**. The CPF manuscript
-takes that same `a/R` and declares it not free.
+`Klein_Foam_Monad.tex` **names `a/R` explicitly** as one of the inputs whose treatment
+determines the free-parameter count, and records the count as input-dependent. The CPF
+entry records that same `a/R` as not free.
 
-So this audit's central kill — *"zero free parameters is false; `a/R` is fitted"* — is
-something **this programme's own earlier note already said, in those words, a month
-before the manuscript**. The manuscript is not the Klein-Foam ontology developed further.
-It is the Klein-Foam ontology **with its scope stripped off**.
+**This is a corpus fact, not a verdict on either entry.** Both are entries. Each records a
+state of the work at its date. Neither is graded here, and neither is retracted — the
+ledger is append-only and that applies to the entries being read, not only to the ones
+being written. What the ledger records is which scope the arithmetic supports, and K3
+answers that: `a/R` is carrying a fitted value, so the earlier scope is the one the numbers
+match.
 
-**Verdict — a finding FOR the ontology and AGAINST the manuscript.** Three things the
-reading earns: the invariance is real (K1), it gives the best absolute prediction tested
-(K2), and it converts an external objection into an internal contradiction (K3). One thing
-it does not earn: any movement in `alpha`. And the fourth check is the one that matters —
-the epistemic position in `Klein_Foam_Monad.tex` was **correct**, and was lost in
-transmission to the manuscript. The scoped note is the better document.
+**What it changes is WHERE the resolution lives.** This audit's central finding —
+*"zero free parameters does not hold; `a/R` is fitted"* — was already in the corpus, in
+those words, dated a month earlier. The audit did not have to supply it. It had to find it.
+An external instrument was built to establish something the corpus had already established
+internally, which is a fact about **how this audit was run**, not about either document.
+
+**Verdict.** Four things established, none of them a judgement:
+1. The reading is structurally correct — joint-scaling invariance, verified symbolically (K1).
+2. It gives the best absolute prediction of any reading tested — 26.96, off 5.08× (K2).
+3. The required resolution sits 96 decades below the foam's declared floor, so the `alpha`
+   discrepancy is **internal to the corpus** and needs no external appeal (K3).
+4. The corpus holds two scope declarations for `a/R`; the arithmetic matches the earlier
+   one (K4).
+
+One thing not established: any movement in `alpha`. The renaming is orthogonal to the
+number.
 
 *Method note (rule 4).* Nothing here is a new technique. Reading a claim against the
 programme's own prior scoped statement of it is just source-checking; the joint-scaling
@@ -2016,7 +2029,18 @@ that it was pointed at our own corpus instead of at the literature — the coher
 of 2026-08-30 flagged exactly that gap, and this is the first entry to close it.
 
 *Dead end logged as a win.* The instruction stands: success is documented failure as well.
-This route did not save `alpha` and was never going to — but it correctly identified that
-the ontology and the manuscript are **not the same claim**, and that only one of them was
-overclaiming. That distinction was not visible before the reading and could not have been
-reached by more arithmetic.
+This route did not save `alpha` and was never going to — but it established that the
+ontology and the CPF entry are **not the same claim**, and that the corpus states the
+scope for `a/R` in two places that do not agree. That is a fact about the corpus, and it
+was not visible before the reading; no amount of further arithmetic on the CPF entry alone
+would have surfaced it.
+
+*A framing correction, made after this entry first landed in `bdcb530`.* The first draft of
+this entry read the scope difference as a fault — "regressed", "stripped off", "the better
+document". That imports a judgement the arithmetic does not carry and that this ledger's
+own discipline forbids: **entries record state; they do not indict each other.** A
+manuscript is a ledger entry. It has a date, a scope, and a set of claims that the numbers
+either match or do not. Reading it as a defendant is a category error against the method,
+and it also degrades the finding — "two scopes, arithmetic matches the earlier" is checkable
+and reusable; "the manuscript overclaimed" is neither. The instrument, this entry, MANIFEST
+and the PR were rewritten to the factual form. `bdcb530` stays in history as written.

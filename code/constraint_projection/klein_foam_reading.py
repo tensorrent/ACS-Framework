@@ -12,7 +12,7 @@ the corpus's own documents.
     K1  is alpha^-1 actually resolution-relative?  (FF06h joint-scaling invariance)
     K2  the foam supplies its own resolution -- what does it give?
     K3  what resolution does the manuscript's alpha require, against that floor?
-    K4  the scoping regression: Klein_Foam_Monad.tex vs the CPF manuscript
+    K4  two scope declarations for a/R: Klein_Foam_Monad.tex vs the CPF entry
 
 Run:  python3 code/constraint_projection/klein_foam_reading.py
 Deps: sympy, mpmath
@@ -124,14 +124,14 @@ def k3_below_the_floor():
 
 
 def k4_scoping():
-    head("K4", "The scoping regression: Klein Foam vs the CPF manuscript")
+    head("K4", "Two scope declarations for a/R, dated a month apart")
     kf = ROOT / "papers/notes/Klein_Foam_Monad.tex"
     cpf = ROOT / "papers/notes/Constraint_Projection_Framework.tex"
     kf_txt = kf.read_text() if kf.exists() else ""
     cpf_txt = cpf.read_text() if cpf.exists() else ""
 
-    print("  The Klein-Foam note is EXPLICITLY scoped on exactly the point the")
-    print("  manuscript overclaims.  Quoted from the files, not paraphrased:\n")
+    print("  Both files are entries in the same corpus.  Each states a scope for")
+    print("  a/R.  The two statements differ.  Quoted, not paraphrased:\n")
     kf_quotes = []
     for pat in [r"Absolute uniqueness and ``no free parameters''[^.]*\.",
                 r"as-implemented, not as a uniqueness theorem for \$\\alpha\$[^.]*\.",
@@ -151,21 +151,19 @@ def k4_scoping():
             cpf_quotes.append(q)
             print(f"     CPF:         \"{q}\"")
 
-    print(f"\n  THE FINDING.  The Klein-Foam note NAMES `a/R` as one of the inputs whose")
-    print(f"  treatment determines the free-parameter count, and declines to claim zero.")
-    print(f"  The CPF manuscript takes that same `a/R` and declares it not free.")
-    print(f"\n  So the audit's central kill -- 'zero free parameters is false, a/R is")
-    print(f"  fitted' -- is something this programme's OWN EARLIER NOTE already said,")
-    print(f"  in those words, a month before the manuscript.  The manuscript is not the")
-    print(f"  Klein-Foam ontology developed further; it is the Klein-Foam ontology with")
-    print(f"  its scope stripped off.")
-    print(f"\n  This is a finding FOR the ontology and AGAINST the manuscript.  The")
-    print(f"  epistemic position in Klein_Foam_Monad.tex was correct and was lost in")
-    print(f"  transmission.")
+    print(f"\n  THE FINDING -- a corpus fact, not a verdict on either entry.")
+    print(f"  Klein_Foam_Monad.tex names a/R as an input and records the count as")
+    print(f"  input-dependent.  The CPF entry records a/R as not free.  Two entries,")
+    print(f"  same quantity, different scope.  The arithmetic (K3) matches the earlier")
+    print(f"  one: a/R is carrying a fitted value.")
+    print(f"\n  What this changes is WHERE the resolution lives.  It is already in the")
+    print(f"  corpus, dated a month earlier, in those words.  The audit did not have to")
+    print(f"  supply it -- only to find it.  Nothing here grades the entries; the ledger")
+    print(f"  records which scope the numbers support, and both entries stand.")
     return {"klein_foam_quotes": kf_quotes, "cpf_quotes": cpf_quotes,
             "klein_foam_names_a_over_R_as_input": True,
             "cpf_declares_zero_free_parameters": True,
-            "verdict": "the manuscript is the Klein-Foam ontology with its scope removed"}
+            "verdict": "two scope declarations for a/R in one corpus; the arithmetic matches the earlier"}
 
 
 def main():
@@ -182,9 +180,10 @@ def main():
     print("  external (K3: the required resolution is 96 decades below the foam's own")
     print("  declared floor).")
     print()
-    print("  But the renaming does not move the arithmetic, and the decisive point is")
-    print("  K4: the Klein-Foam note already disclaimed 'zero free parameters' and")
-    print("  named a/R as an input.  The manuscript regressed from that.")
+    print("  But the renaming does not move the arithmetic, and K4 is where the")
+    print("  resolution turns out to already live: Klein_Foam_Monad.tex records a/R")
+    print("  as an input and the count as input-dependent.  The corpus carries two")
+    print("  scope declarations; the arithmetic matches the earlier one.")
     print(RULE)
     out = ROOT / "docs" / "klein_foam_reading.json"
     out.write_text(json.dumps({

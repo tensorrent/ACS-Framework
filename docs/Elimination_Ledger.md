@@ -2849,3 +2849,93 @@ turned up negatives that the earlier rounds had been structurally unable to see.
 
 *Open, recorded rather than dropped.* The rewritten description is untested. The eval-2 fixture
 is still invalid. Neither is fixed here.
+
+---
+
+### 2026-08-31 — Does 4π spinor phase explain the box 50/50, and is it the critical line's Z/2? — **TWO TRUE HALVES, A BRIDGE THAT CARRIES NO LOAD** · T1 machine / T2 structural
+
+**The proposal, stated sharply enough to test:** *the electron is a rotational phase state; one
+full 2π turn leaves it in the opposite phase, so it must turn again to realign — and that same
+two-sidedness is what the critical line is.*
+
+Instruments: `albert_boxes.py`, `spinor_phase_and_critical_line.py`.
+Artifacts: `docs/albert_boxes.json`, `docs/spinor_phase_critical_line.json`.
+
+**S1 — the first half is exactly right, on every axis.** `R(2π) = −I`, `R(4π) = +I`, verified for
+z, x, y and `(1,1,1)`. The rotation *group* closes at 2π; the spinor does not. `SU(2) → SO(3)` is
+a double cover.
+
+**S2 — but the phase cannot be what makes the boxes split.** Take `|soft⟩`, turn it a full 2π,
+re-measure:
+
+```
+|soft>        -> P(white) = 0.500000
+R(2pi)|soft>  -> P(white) = 0.500000       state flipped sign: True
+swept 1369 measurement directions; largest probability difference = 3.33e-16
+```
+
+**The state genuinely flips sign and not one probability moves, in any direction.** A global
+phase is unobservable — `|⟨v|−ψ⟩|² = |⟨v|ψ⟩|²` identically. The 50/50 is `|⟨white|soft⟩|² = 1/2`,
+a **basis overlap**, fixed by the *angle* between measurement axes. Two facts, both from `SU(2)`,
+doing different work:
+
+```
+50/50           <- non-commutation / basis overlap   (ANGLE)
+2-pi sign flip  <- double cover                      (PHASE)
+```
+
+Neither implies the other.
+
+**S3 — and the instinct that phase belongs to this experiment is right, one step over.** Split a
+beam, turn *one arm* by 2π, recombine:
+
+| turn on one arm | recombined P(white) |
+|---|---|
+| 0 | 1.000000 |
+| π | 0.500000 |
+| **2π** | **0.000000** |
+| 3π | 0.500000 |
+| 4π | 1.000000 |
+
+Period 4π, with 2π the destructive minimum — the Rauch/Werner neutron interferometry result
+(1975). **This is the same recombination geometry as A5 in `albert_boxes.py`.** The phase is
+real physics; it shows up in the **recombination**, not the splitting.
+
+**S4 — the two Z/2's are different animals, and checking it turned up an error of ours.**
+
+```
+SPINOR Z/2 = ker(SU(2)->SO(3)) = {+I,-I}
+    order 2: True    CENTRAL: True    fixes: EVERY ray
+    -> acts trivially on every observable
+
+s -> 1 - s        (functional equation)  order2=True  fixed 1/5 samples
+s -> 1 - conj(s)  (FE o Schwarz)         order2=True  fixed 2/5 samples  <- the 2 on the line
+```
+
+The spinor's Z/2 is **central and fixes everything**, so it has no critical line — its entire
+content is what happens on a *loop*. The functional equation's moves almost every point. A double
+cover is an extension of a group; a reflection is an involution on a space. **Both order 2, not
+the same structure**, and neither is evidence for the other.
+
+**An in-flight correction, caught by its own output.** The first draft asserted *"fixed set =
+{Re(s)=1/2} — a LINE"* while the line directly above printed *"fixed points among 4 samples: 0"*.
+**`s ↦ 1−s` fixes only the single point `s = 1/2`** — it is a π rotation about ½, not a reflection
+in the line. The map whose fixed set *is* the critical line is `s ↦ 1−s̄`, the functional equation
+composed with Schwarz reflection. So the two-sidedness is real but needs **both** ingredients; the
+functional equation alone gives a point. Same failure shape as the previous three runs — prose
+written beside a number that contradicted it.
+
+**S5 — what this does to §4.** *"Non-orientability of M gives 4π spinor periodicity"* fails twice
+over: S1 derives 4π from `SU(2)` **alone** — flat space, no manifold — so the topology adds
+nothing; and Axiom II's `w₁(M) ≠ 0` is precisely what forbids a spin structure (P3: 0 Spin, 4
+Pin⁺, 4 Pin⁻). The property invoked to produce spinors is the one that forbids them.
+
+**Verdict.** Three things hold independently: 2π really is the opposite phase; the phase is
+measurable and was measured; the critical line really is two-sided. **The identification between
+them does not.** The synthesis joins true halves with a bridge that carries no load — and the
+bridge is checkable, which is why it could be tested rather than debated.
+
+*Prior art (rule 4).* Nothing here is ours: the double cover, Rauch/Werner, the functional
+equation and Schwarz reflection are all standard. And the two-sidedness reading was already
+retired in this ledger — the *"odd under β↦1−β"* boundary died to Davenport–Heilbronn (1936) and
+Weil positivity within a week of being logged.

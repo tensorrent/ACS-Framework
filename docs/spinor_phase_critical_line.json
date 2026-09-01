@@ -1,0 +1,70 @@
+{
+  "description": "Does 4pi spinor periodicity explain the box 50/50, and is it the critical line's Z/2?",
+  "source": "code/constraint_projection/spinor_phase_and_critical_line.py",
+  "checks": {
+    "S1_periodicity": [
+      {
+        "axis": "z",
+        "R2pi_is_minus_I": true,
+        "R4pi_is_I": true
+      },
+      {
+        "axis": "x",
+        "R2pi_is_minus_I": true,
+        "R4pi_is_I": true
+      },
+      {
+        "axis": "y",
+        "R2pi_is_minus_I": true,
+        "R4pi_is_I": true
+      },
+      {
+        "axis": "(1,1,1)",
+        "R2pi_is_minus_I": true,
+        "R4pi_is_I": true
+      }
+    ],
+    "S2_sign_observable": {
+      "p_before": 0.4999999999999999,
+      "p_after": 0.4999999999999999,
+      "state_flips_sign": true,
+      "max_prob_difference": 3.3306690738754696e-16
+    },
+    "S3_where_real": [
+      {
+        "turn": "0",
+        "p": 1.0
+      },
+      {
+        "turn": "pi",
+        "p": 0.5000000000000001
+      },
+      {
+        "turn": "2 pi",
+        "p": 3.749399456654644e-33
+      },
+      {
+        "turn": "3 pi",
+        "p": 0.4999999999999999
+      },
+      {
+        "turn": "4 pi",
+        "p": 1.0
+      }
+    ],
+    "S4_two_kinds_of_two": {
+      "spinor_central": true,
+      "spinor_fixes_all_rays": true,
+      "functional_is_involution": true,
+      "functional_equation_fixed_set": "the single point s=1/2",
+      "reflection_fixed_set": "Re(s)=1/2, needs FE composed with conjugation",
+      "same_structure": false
+    },
+    "S5_manuscript": {
+      "4pi_needs_non_orientability": false,
+      "axiom_II_forbids_spin_structure": true,
+      "two_sidedness_is_functional_equation": true,
+      "already_retired_as_prior_art": true
+    }
+  }
+}

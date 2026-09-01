@@ -303,3 +303,55 @@ def test_restore_guard_allows_safe_commands(tmp_path):
                 "sed -i '$ d' clean.md"):
         r = _run_hook(cmd, tmp_path)
         assert r.returncode == 0, f"guard wrongly blocked: {cmd}\n{r.stderr}"
+
+
+# ---------------------------------------------------------------------------
+# Joint coherence of the ledger.  The holistic axis (H5).
+#
+# Individual entries can each be valid while the SET contradicts itself -- the
+# failure mode H3 found in the manuscript's two relational conditions, and
+# exactly what a 3,000-line ledger written incrementally is exposed to.
+#
+# This is a floor, not a proof: it checks that the load-bearing numbers are
+# stated consistently wherever they appear.  It cannot check that the
+# ARGUMENTS agree; that needs reading, and is recorded as still open.
+# ---------------------------------------------------------------------------
+
+LOAD_BEARING = {
+    # label: (regex that should match, values that must NOT appear near it)
+    "alpha_inv_codata": (r"137\.03599917[0-9]", ["137.036999", "137.035998"]),
+    "required_a_over_R": (r"2\.039\d*e-?118|2\.03905e-118", ["2.039e-117", "2.039e-119"]),
+    "planck_floor_alpha_inv": (r"26\.95\d*", ["26.85", "27.95"]),
+    "relational_alpha_inv": (r"46\.24\d*", ["46.34", "45.24"]),
+    "green_ratio": (r"6\.306\d*", ["6.406", "6.206"]),
+    "half_twist_percent": (r"0\.0133", ["0.133", "0.00133"]),
+}
+
+
+def test_load_bearing_numbers_are_stated_consistently():
+    """No entry may state a variant of a load-bearing number."""
+    led = DOCS / "Elimination_Ledger.md"
+    if not led.exists():
+        pytest.skip("ledger not present")
+    text = led.read_text()
+    problems = []
+    for label, (good, bad_variants) in LOAD_BEARING.items():
+        if not re.search(good, text):
+            problems.append(f"{label}: canonical value never appears (pattern {good})")
+        for bad in bad_variants:
+            if bad in text:
+                problems.append(f"{label}: variant {bad!r} appears alongside the canonical value")
+    assert not problems, "ledger self-consistency:\n" + "\n".join(problems)
+
+
+def test_every_entry_has_a_tier_marker():
+    """An entry with no tier cannot be placed in the claim ledger."""
+    led = DOCS / "Elimination_Ledger.md"
+    if not led.exists():
+        pytest.skip("ledger not present")
+    untiered = []
+    for line in led.read_text().splitlines():
+        if line.startswith("### 202"):
+            if not re.search(r"\bT[0-4]\b|NOT-FOUND|method\b", line):
+                untiered.append(line.strip()[:95])
+    assert not untiered, "entries without a tier marker:\n" + "\n".join(untiered)

@@ -3469,3 +3469,97 @@ those cases — which is what an evidence chain is for.
 *"RISES with spread"* and quoted the sd = 40 value as the headline, while the table showed the
 peak at sd = 10 and a fall thereafter. The non-monotonicity is the better result and was visible
 in the output being contradicted.
+
+---
+
+### 2026-09-01 — Subjective correctness vs factual accuracy, holistically — **ACCURACY CARRIES 0 BITS WHERE COHERENCE STILL DISCRIMINATES** · T1 machine / T2 structural
+
+**Three predicates, routinely collapsed into one.** Each has a test that does not consult the
+others, which is what makes them independent rather than three words for quality:
+
+```
+COHERENT   does it FOLLOW from the premises?      symbolic, no data read
+ACCURATE   does it MATCH observation?             numeric, no argument read
+HOLISTIC   do the results AGREE with each other?  a property of the SET
+```
+
+Instrument: `code/constraint_projection/coherence_vs_accuracy.py`.
+Artifact: `docs/coherence_vs_accuracy.json`.
+
+**H1 — the two tests, run on the same claim, disagree.**
+
+```
+COHERENCE (symbolic):  premises give  L = 8 pi eps0 hbar c/e^2
+                       claim is       L = 4 pi eps0 hbar c/e^2      ratio 2
+                       does it follow?  False
+ACCURACY (numeric):    137.035999171 vs CODATA 137.035999177   rel diff 4.38e-11
+```
+
+**The accuracy test cannot see the failure, and could not — it never reads the derivation.** The
+coherence test found it and needed no measurement.
+
+**H2 — the corpus classified into four quadrants:**
+
+| claim | coherent | accurate | |
+|---|---|---|---|
+| `M` = Klein bottle from clauses (1)–(2) | ✓ | ✓ | |
+| `S = 2√2` | ✓ | ✓ | |
+| Green's `C = 4π²ε₀R/ln(8R/a)` | ✓ | ✓ | |
+| `g = Sl = 2` | ✓ | ✗ | **coherent + inaccurate** |
+| `α⁻¹ = ln(8R/a)+1` | ✗ | ✓ | **INCOHERENT + accurate** |
+| `a/R = 8e^{−136.035999171}` | ✗ | ✓ | **INCOHERENT + accurate** |
+| Axiom III | ✗ | ✗ | |
+| §7 `k=0 ⟺ RH` | ✗ | ✗ | |
+
+Counts: `{COHERENT+ACCURATE: 3, INCOHERENT+accurate: 2, incoherent+inaccurate: 2,
+coherent+inaccurate: 1}`. **The interesting cell is INCOHERENT+ACCURATE** — two entries land on
+the measured number without a derivation reaching it, and that combination is invisible to anyone
+checking only the output, which is the usual way results get checked.
+
+**H3 — and the holistic axis is a third thing entirely.** §3's `τ = i/2` and §8's `a·L_IR = R²`
+are **each internally coherent** and disagree by **24.5×**. That failure is invisible from inside
+either derivation. It also has no local repair: an under-determined framework has a missing input
+you can find; an **over-determined** one has no free parameter left to absorb the difference.
+
+**H4 — and this inverts the intuitive ordering, measurably.**
+
+```
+decoy test: 14 of 14 unrelated functional forms hit CODATA alpha
+P(accurate | fitted) = 1.00
+information carried by "it matches" = -log2(P) = 0.00 bits
+```
+
+**When a parameter is free enough to be tuned, hitting the target is guaranteed, so observing the
+hit conveys nothing.** Coherence does not degrade that way — it is checked against premises,
+which cannot be tuned after the fact without visibly changing the claim.
+
+> **coherent + inaccurate** — a well-posed theory that is *falsified*. The derivation can be
+> inspected, the failing step located, the theory repaired or discarded on evidence.
+> **incoherent + accurate** — a fit in a derivation's clothes. The number carries 0 bits and
+> there is no argument to inspect, so nothing can be learned from it or repaired in it.
+
+Wyler 1970 sits in the second cell at rel err `5.9e-7` and was debunked. This entry is **13,471×
+closer and sits in the same cell.**
+
+**H5 — the same three predicates turned inward, and one comes back unverified.** Coherence:
+enforced by rule 7 after **eight** bugs of the shape *prose written beside a number that
+contradicted it*, six of them in the last ten entries. Accuracy: 64 gate tests, mutation-checked,
+three Lean proofs re-observed. **Holistic: the entries had never been checked against each other
+at scale** — precisely the exposure H3 identifies, in a 3,000-line ledger written incrementally.
+
+**Partly closed rather than only recorded.** Two tests added, both mutation-checked:
+
+```
+test_load_bearing_numbers_are_stated_consistently   6 canonical values; a planted
+                                                    variant produces 7 detections
+test_every_entry_has_a_tier_marker                  a planted untiered entry fails
+```
+
+**Gate 64 → 66.** This is a **floor, not a proof**: it checks that the load-bearing *numbers* are
+stated consistently wherever they appear. It cannot check that the *arguments* agree — that needs
+reading the corpus as a whole, and remains open.
+
+*The transferable statement.* Subjective correctness and factual accuracy are orthogonal, and
+holistic consistency is a third axis neither implies. A result can be true in its frame,
+inaccurate against measurement, and still more valuable than a fit that matches to eleven digits —
+because only one of the two can be inspected, located, and corrected.

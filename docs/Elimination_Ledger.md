@@ -2939,3 +2939,83 @@ bridge is checkable, which is why it could be tested rather than debated.
 equation and Schwarz reflection are all standard. And the two-sidedness reading was already
 retired in this ledger — the *"odd under β↦1−β"* boundary died to Davenport–Heilbronn (1936) and
 Weil positivity within a week of being logged.
+
+---
+
+### 2026-09-01 — "Not two-faced — single-faced, twisted onto itself" — **THE CORRECTION IS RIGHT, AND IT MAKES THE ZETA BRIDGE PROVABLY UNAVAILABLE** · T1 machine / T2 structural
+
+**A self-correction, tested rather than accepted.** The previous entry tested a *two-faced planar*
+reading of the critical line. The correction: it is **single-faced, twisted onto itself — a
+Möbius ribbon.** Traverse once and you are inverted; twice and you are home.
+
+Instrument: `code/constraint_projection/mobius_vs_critical_line.py`.
+Artifact: `docs/mobius_vs_critical_line.json`.
+
+**M1 — the geometry is right.** Frame transported once around, edge traversed:
+
+```
+half-twists   frame returns?   sides   boundary circles
+          0            True        2                  2
+          1           False        1                  1      <- Mobius
+          2            True        2                  2
+```
+
+One side, one boundary. You must go round **twice** to recover your starting orientation.
+
+**M2 — and its deck map is FREE.** The orientation double cover of a Möbius band is an annulus,
+deck map `τ(φ,s) = (φ+2π, −s)`:
+
+```
+tau^2 = identity?                  True
+fixed points among 20000 samples:  0
+```
+
+Nothing is fixed — not even the core circle `s=0`, because the `φ` shift still moves it. Freeness
+is what makes this a covering rather than a branched cover.
+
+**M3 — and this is the match.** `−I` acts on two spaces and the answers differ:
+
+```
+on the state sphere S^3, fixed points of -I : 0 / 4000      -> FREE
+on RAYS (projective), rays preserved        : 4000 / 4000   -> TRIVIAL
+```
+
+**Both true at once, and together they explain the earlier result.** `−I` moves every *state* but
+preserves every *ray*. Observables see only rays — which is exactly why S2's sweep of 1369
+directions found no probability that could detect the sign — while interference compares two arms
+and so sees the state.
+
+**So Möbius ↔ spinor is a genuine structural match**, and strictly better than the two-faced
+reading: both are quotients by a **free** `Z/2`, which is *why* one circuit inverts and two
+restore. A two-sided object has no reason to require two circuits. A Möbius band does, for the
+same reason a spinor does.
+
+**M4 — the four `Z/2`s, sorted by what they fix.**
+
+| `Z/2` action | fixed set | free? |
+|---|---|---|
+| Möbius deck (annulus → band) | nothing | **True** |
+| spinor `−I` on states `S³` | nothing | **True** |
+| spinor `−I` on rays `CP¹` | everything | False |
+| functional eq. `s ↦ 1−s` | one point `s=1/2` | False |
+| reflection `s ↦ 1−s̄` | the line `Re(s)=1/2` | False |
+
+**M5 — and here is what the correction costs.** A **critical line is a fixed set.** A free action
+**has no fixed set** — that is what free means. So a Möbius/spinor `Z/2` **cannot have a critical
+line at all**: if its action fixed a line it would not be free, the quotient would not be a
+manifold, and it would not be the double cover that made the analogy attractive.
+
+**The two-faced reading was wrong about the spinor but had the right *shape* for a critical line
+(a reflection fixes a line). The Möbius reading is right about the spinor and, for exactly that
+reason, provably cannot reach zeta.** Improving the fit at one end worsened it at the other, and
+not by accident — by the same property.
+
+**Verdict.** The correction is right on the geometry and upgrades the spinor identification from
+loose analogy to structural match. It simultaneously converts the zeta bridge from *unsupported*
+to *excluded*. **A sharper claim bought a stronger negative** — which is the trade this ledger
+exists to record.
+
+*Where this leaves the manuscript.* Unchanged, and for a reason worth stating: §4's route runs
+through `w₁(M) ≠ 0`, which forbids the spin structure (P3), and the Möbius reading does not
+rescue it — a Möbius band is exactly a `w₁ ≠ 0` object, so the better the Möbius fit, the more
+firmly P3 applies.

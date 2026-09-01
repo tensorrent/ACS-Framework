@@ -1,0 +1,80 @@
+{
+  "description": "Does the Mobius (one-sided) correction fix the spinor/critical-line mapping?",
+  "source": "code/constraint_projection/mobius_vs_critical_line.py",
+  "checks": {
+    "M1_one_sided": [
+      {
+        "n": 0,
+        "frame_returns": true,
+        "sides": 2,
+        "boundary": 2
+      },
+      {
+        "n": 1,
+        "frame_returns": false,
+        "sides": 1,
+        "boundary": 1
+      },
+      {
+        "n": 2,
+        "frame_returns": true,
+        "sides": 2,
+        "boundary": 2
+      },
+      {
+        "n": 3,
+        "frame_returns": false,
+        "sides": 1,
+        "boundary": 1
+      }
+    ],
+    "M2_deck_free": {
+      "tau_squared_is_identity": true,
+      "fixed_points": 0,
+      "free": true
+    },
+    "M3_spinor_action": {
+      "fixed_on_sphere": 0,
+      "rays_preserved": 4000,
+      "free_on_states": true,
+      "trivial_on_rays": true
+    },
+    "M4_four_z2s": [
+      {
+        "z2": "Mobius deck (annulus -> band)",
+        "fixed": "nothing",
+        "free": true,
+        "kind": "covering-space action"
+      },
+      {
+        "z2": "spinor -I on states S^3",
+        "fixed": "nothing",
+        "free": true,
+        "kind": "covering-space action"
+      },
+      {
+        "z2": "spinor -I on rays CP^1",
+        "fixed": "everything",
+        "free": false,
+        "kind": "trivial action"
+      },
+      {
+        "z2": "functional eq. s -> 1-s",
+        "fixed": "one point s=1/2",
+        "free": false,
+        "kind": "point reflection"
+      },
+      {
+        "z2": "reflection s -> 1-conj(s)",
+        "fixed": "the line Re(s)=1/2",
+        "free": false,
+        "kind": "reflection in a line"
+      }
+    ],
+    "M5_verdict": {
+      "fixes_spinor_half": true,
+      "free_action_excludes_a_critical_line": true,
+      "verdict": "better on spinors, provably worse on zeta"
+    }
+  }
+}

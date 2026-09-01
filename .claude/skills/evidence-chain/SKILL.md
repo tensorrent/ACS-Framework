@@ -190,6 +190,49 @@ The words carry assumptions, so they are part of the method rather than a style 
 The test: **could a thermometer say it?** A thermometer reports a reading and a scale. It does
 not report that the patient deserved the fever.
 
+## What this method cannot do
+
+**Everything above is a verifier. None of it is a generator.**
+
+Checking a claim is cheap and mechanical. Finding one is search, and nothing here shortens the
+search. That asymmetry is the shape of NP: a certificate is easy to check and hard to produce,
+and the checker gives you no help producing it. So be precise about what the discipline buys —
+it does not make you correct. **It makes you checkable.** Those are different properties, and
+conflating them is its own unproven belief.
+
+Measured on this corpus rather than assumed: 24 entries check an existing claim, 7 find something
+new. The verifier rules (3, 4) are cited 12 times between them. The generative ones — search your
+own corpus first, name the assumption then lift it — are cited **zero** times, and rule 9 produced
+the single largest new finding in the record.
+
+Which points at where the leverage actually is: **the rules that found things lift assumptions;
+the rules that check things only confirm or reject.** If you want to find rather than confirm,
+rule 9 is the one to reach for, and it is the one this record forgets to credit.
+
+## Hindsight makes the record lie
+
+Every entry is written after the answer is known, and from there the error always looks obvious.
+It was not obvious, or it would not have been made. Writing it up in retrospect converts *the
+ordinary cost of search* into what reads as carelessness — and that reading is a hindsight
+artifact, not a finding.
+
+Two consequences worth holding:
+
+- **Do not write an entry as though the error should have been caught.** Record what was
+  believed, what was checked, and what the check returned. The reader can grade it; the entry
+  should not.
+- **The search that produced a claim is invisible in the write-up.** Only the verification
+  survives, so the record systematically undersells how hard finding was and oversells how
+  obvious checking is. Say what was tried and abandoned, not only what held.
+
+## The actual goal is clarity and coherence
+
+Not correctness-as-verdict, which is often not available. **Clarity** — can a reader reconstruct
+what was done from what is written? **Coherence** — do the parts agree with each other and with
+the numbers? Both are achievable, checkable, and useful when the underlying question stays open.
+A record that is clear and coherent remains valuable after its conclusions are superseded, which
+is the normal fate of conclusions.
+
 ## Success is a gradient
 
 Findings are not binary and should not be reported as a scoreboard.

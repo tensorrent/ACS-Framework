@@ -3140,3 +3140,61 @@ before matching, and was re-checked against an unquoted use to confirm it still 
 *The general shape, now twice over.* Both rules 11 and 12 were written after the corresponding
 mistake, both were violated or repeated once more, and both are now mechanical. **A rule that
 lives only in prose is a rule that will be broken by the next fluent sentence.**
+
+---
+
+### 2026-09-01 — The method is a verifier, and the record is written in hindsight · T1 measured
+
+**Three corrections to how this work has described itself.** None changes a result; all three
+change what the results are claimed to be.
+
+**1. Correctness here is an NP-shaped problem, and the discipline only does the easy half.**
+Checking a claim is cheap and mechanical. Finding one is search, and nothing in rules 1–12
+shortens the search. A certificate is easy to verify and hard to produce, and the verifier gives
+no help producing it.
+
+So the discipline does **not** make the work correct. **It makes the work checkable.** Those are
+different properties, and treating the second as the first is itself an unproven belief — the
+exact failure mode the rules exist to catch, operating one level up.
+
+**Measured on this corpus rather than asserted:**
+
+```
+entries that CHECK an existing claim   24
+entries that FIND something new         7
+
+rule citations:  3 -> 7   4 -> 5   1 -> 2   8 -> 2   ...   5 -> 0   9 -> 0   10 -> 0
+```
+
+The verifier rules (3, 4) account for twelve citations. **The generative rules — *search your own
+corpus first* and *name the assumption, then lift it* — are cited zero times**, and rule 9
+produced the single largest new finding in the record: R5's withdrawal of R3, which came from
+noticing that "planar" was never written down anywhere while being baked into the
+parameterisation.
+
+**Where the leverage actually sits:** the rules that found things **lift assumptions**; the rules
+that check things only confirm or reject. Rule 9 is the one to reach for to find rather than
+confirm, and it is the one this ledger forgets to credit.
+
+**2. Hindsight makes this record misleading in a specific, correctable way.** Every entry is
+written after the answer is known, and from there the error always looks obvious. It was not
+obvious, or it would not have been made. Writing it up in retrospect converts *the ordinary cost
+of search* into what reads as carelessness — a hindsight artifact, not a finding.
+
+The search is invisible in the write-up; only the verification survives. So this ledger
+systematically undersells how hard finding was and oversells how obvious checking is. Two
+practices follow: record what was believed, what was checked, and what the check returned — and
+say what was tried and abandoned, not only what held.
+
+**3. The goal is clarity and coherence, not correctness-as-verdict.** Correctness is frequently
+unavailable: the underlying question stays open, the measurement has error bars, the consensus
+moves. **Clarity** — can a reader reconstruct what was done from what is written — and
+**coherence** — do the parts agree with each other and with the numbers — are both achievable and
+checkable now. A record that is clear and coherent stays useful after its conclusions are
+superseded, which is the normal fate of conclusions.
+
+**What this does not change.** No number moves and no verdict moves. The manuscript's claims still
+do not reproduce, the Möbius reading still matches the spinor structure and still cannot reach the
+critical line, and the skill still did not separate in its own benchmark. What changes is the
+status of the whole apparatus: **a checkable record of a search, not a machine for producing
+correctness.**

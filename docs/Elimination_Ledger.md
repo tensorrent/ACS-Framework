@@ -3284,3 +3284,95 @@ producing a spurious `sin(θ)` dependence and a false divergence. Corrected to r
 lowered `R_abcd`, and the verdict is now computed from the value rather than written beside it.
 The check `K == 48M²/r⁶` was added so the result is anchored to a published closed form (rule 2)
 rather than to its own arithmetic.
+
+---
+
+### 2026-09-01 — "Is the free parameter always the observer?" — **SECTION 9 BECOMES FALSIFIABLE, AND FAILS ON THE TWO PARAMETERS IT NEEDS** · T1 machine / T2 structural
+
+**The proposal:** object, angle of incidence, observer — every apparent free parameter is really
+the observer's choice of angle, not a property of the object.
+
+**It has a sharp criterion, which is what makes it testable:**
+
+> A parameter is **observer-type** iff varying it leaves every invariant fixed.
+
+Instrument: `code/constraint_projection/observer_parameters.py`.
+Artifact: `docs/observer_parameters.json`.
+
+**O1 — the criterion discriminates, checked before anything was concluded from it.** A test
+returning "observer" for everything would be vacuous:
+
+```
+control A  global phase on a state (known gauge)    max change in rho = 1.12e-16  -> OBSERVER
+control B  the mass M in Schwarzschild (known physics)   dK/dM = 96 M/r^6        -> OBJECT
+```
+
+**O2 — the Tw/Wr split: OBSERVER, and this is the proposal's strongest case.** Every split
+`(2,0), (3/2,1/2), (1,1), (1/2,3/2), (0,2)` gives `Sl = 2`. And the reason is definitional rather
+than analogical: **writhe *is* the average crossing number over all viewing directions**, so for
+any single projection it depends on where you look from, and twist absorbs the remainder.
+Călugăreanu says the sum is the invariant. Here "angle of incidence" is not a metaphor — it is
+the definition of the quantity.
+
+**O3 — the cutoff `a/R`: OBJECT.**
+
+```
+a/R = 1e-10      -> alpha^-1 =  13.05
+a/R = 8.37e-23   -> alpha^-1 =  26.96
+a/R = 2.039e-118 -> alpha^-1 = 137.04        spread 135.1
+```
+
+α is measured. A parameter whose variation moves a measured number is not the same object seen
+from another angle. **And the Klein-Foam invariance does not rescue it, precisely:** `α⁻¹` is
+invariant under *joint* rescaling `(R,a) → (λR, λa)` — genuinely observer-type, a change of units
+— and **not** invariant under changing the *ratio*, which is what `a/R` is.
+
+**O4 — the Pin⁺/Pin⁻ choice: OBJECT.** `γ² = +1` versus `γ² = −1` are different algebras, and the
+square of an element is basis-independent, so **no frame change connects them.** Three bits of
+discrete data no viewpoint can absorb.
+
+**O5 — the measurement axis: OBSERVER, and the proposal's picture is exact.** Across 0°–90° the
+state `ρ` is untouched while `P(+)` runs 1.00 → 0.00. The 50/50 in Albert's boxes is not a fact
+about the electron; it is the overlap between two angles the observer chose.
+
+**O6 — the horizon splits, and both halves matter.** Same invariant computed in two charts:
+
+```
+Schwarzschild chart:    K = 48 M^2/r^6   divergent components at r=2M: g_rr = r/(r-2M)
+Eddington-Finkelstein:  K = 48 M^2/r^6   divergent components at r=2M: none
+same invariant across charts: True
+```
+
+The horizon's singular *appearance* is observer-type — present in one chart, absent in another.
+`K` and `M` are object-type. *(det g is identical in both charts, so it cannot distinguish them;
+an earlier draft used it and would have shown nothing.)*
+
+**O7 — and this is what the proposal buys: §9 becomes falsifiable.**
+
+```
+OBSERVER-TYPE (3): Tw/Wr split, measurement axis, the horizon
+OBJECT-TYPE   (3): a/R, Pin+/Pin-, M and K
+```
+
+§9 asserts that all numbers are comparisons and every unit is the observer's choice. This audit
+had recorded it as making **no falsifiable claim** and left it unassessed. The proposal supplies
+one: **if every free parameter were observer-type, "zero free parameters" would be recoverable** —
+the parameters would be frame choices, and fixing a frame costs nothing.
+
+The check has an answer. Three of six dissolve under the criterion, and those are real results —
+each is an apparent parameter that turns out to be a viewpoint. **Three do not, and two of those
+are exactly the parameters the manuscript declares fixed.**
+
+**A sharpening that cuts both ways.** *"The free parameter is the observer"* is true of every
+parameter that leaves the invariants fixed — which is a definition, not a discovery. All the
+content is in **which** parameters do, and that is only settleable case by case, which is what
+this entry does.
+
+*What changed and what did not.* No prior verdict moves. What moves is §9's status: from
+*"interpretive, not assessed"* to *"assessed, and the criterion it implies is not satisfied by
+`a/R` or the Pin choice."* That is a strictly better position for the manuscript's own §9 to be
+in — it was previously unfalsifiable, which is not a defensible place for a claim to sit.
+
+*An in-flight correction, the fifth of this shape.* O7 tallied "2 of 4" while the summary said
+"three of five": O6's verdict string began with neither keyword and was silently dropped from both
+buckets. The summary now derives its counts from the tally rather than restating them.

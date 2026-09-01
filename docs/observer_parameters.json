@@ -1,0 +1,124 @@
+{
+  "description": "Is every free parameter observer-type? Criterion + six cases",
+  "source": "code/constraint_projection/observer_parameters.py",
+  "checks": {
+    "O1_criterion": {
+      "gauge_control_max_change": 1.1208063166526385e-16,
+      "physics_control_dK_dM": "96*M/r**6",
+      "discriminates": true
+    },
+    "O2_twist_writhe": {
+      "rows": [
+        {
+          "Tw": 2,
+          "Wr": 0,
+          "Sl": 2
+        },
+        {
+          "Tw": 1.5,
+          "Wr": 0.5,
+          "Sl": 2.0
+        },
+        {
+          "Tw": 1.0,
+          "Wr": 1.0,
+          "Sl": 2.0
+        },
+        {
+          "Tw": 0.5,
+          "Wr": 1.5,
+          "Sl": 2.0
+        },
+        {
+          "Tw": 0.0,
+          "Wr": 2.0,
+          "Sl": 2.0
+        }
+      ],
+      "Sl_invariant": true,
+      "verdict": "OBSERVER"
+    },
+    "O3_cutoff": {
+      "rows": [
+        {
+          "a_over_R": 1e-10,
+          "alpha_inv": 13.052646235810146
+        },
+        {
+          "a_over_R": 1e-40,
+          "alpha_inv": 47.59142263072083
+        },
+        {
+          "a_over_R": 2.039e-118,
+          "alpha_inv": 137.03601151169246
+        },
+        {
+          "a_over_R": 8.37e-23,
+          "alpha_inv": 26.95712239802075
+        },
+        {
+          "a_over_R": 0.5,
+          "alpha_inv": 1.8862943611198906
+        }
+      ],
+      "alpha_inv_spread": 135.14971715057257,
+      "verdict": "OBJECT"
+    },
+    "O4_pin": {
+      "pin_plus_square": 1,
+      "pin_minus_square": -1,
+      "related_by_a_frame_change": false,
+      "verdict": "OBJECT"
+    },
+    "O5_measurement_angle": {
+      "rows": [
+        {
+          "angle_deg": 0,
+          "p_plus": 1.0
+        },
+        {
+          "angle_deg": 30,
+          "p_plus": 0.9330127018922194
+        },
+        {
+          "angle_deg": 45,
+          "p_plus": 0.8535533905932737
+        },
+        {
+          "angle_deg": 60,
+          "p_plus": 0.7500000000000001
+        },
+        {
+          "angle_deg": 90,
+          "p_plus": 0.5000000000000001
+        }
+      ],
+      "state_invariant": true,
+      "verdict": "OBSERVER"
+    },
+    "O6_horizon": {
+      "K_schwarzschild": "48*M**2/r**6",
+      "K_eddington_finkelstein": "48*M**2/r**6",
+      "invariant_across_charts": true,
+      "schwarzschild_divergent_components": [
+        "g[1][1]=r/(-2*M + r)"
+      ],
+      "ef_divergent_components": [],
+      "verdict": "horizon OBSERVER, curvature OBJECT"
+    },
+    "O7_section_nine": {
+      "observer_type": [
+        "O2_twist_writhe",
+        "O5_measurement_angle",
+        "O6_horizon (the horizon)"
+      ],
+      "object_type": [
+        "O3_cutoff",
+        "O4_pin",
+        "O6_horizon (M and K)"
+      ],
+      "section_9_now_falsifiable": true,
+      "verdict": "3/6 observer-type; the two that are not are the load-bearing ones"
+    }
+  }
+}

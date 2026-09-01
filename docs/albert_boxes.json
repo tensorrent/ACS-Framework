@@ -1,0 +1,92 @@
+{
+  "description": "Albert's colour/hardness boxes computed from the Born rule",
+  "source": "code/constraint_projection/albert_boxes.py",
+  "checks": {
+    "A1_commutator": {
+      "commutator_is_zero": false,
+      "equals_2i_sigma_y": true,
+      "self_commutator_zero": true
+    },
+    "A2_cascade": {
+      "stages": [
+        {
+          "stage": 1,
+          "box": "colour",
+          "kept": "white",
+          "p": 0.5
+        },
+        {
+          "stage": 2,
+          "box": "hardness",
+          "kept": "soft",
+          "p": 0.4999999999999999
+        },
+        {
+          "stage": 3,
+          "box": "colour",
+          "kept": null,
+          "black": 0.4999999999999999,
+          "white": 0.4999999999999999
+        }
+      ],
+      "final_white": 0.4999999999999999,
+      "final_black": 0.4999999999999999
+    },
+    "A3_control": {
+      "colour_repeat": 1.0,
+      "hardness_repeat": 0.9999999999999996,
+      "colour_then_hardness": 0.4999999999999999,
+      "hardness_then_colour": 0.4999999999999999
+    },
+    "A4_more_stages": [
+      {
+        "stages": 1,
+        "p_target": 0.4999999999999999,
+        "surviving": 0.4999999999999999
+      },
+      {
+        "stages": 2,
+        "p_target": 1.0,
+        "surviving": 0.2499999999999999
+      },
+      {
+        "stages": 3,
+        "p_target": 0.4999999999999999,
+        "surviving": 0.12499999999999992
+      },
+      {
+        "stages": 4,
+        "p_target": 1.0,
+        "surviving": 0.062499999999999944
+      },
+      {
+        "stages": 5,
+        "p_target": 0.4999999999999999,
+        "surviving": 0.031249999999999965
+      },
+      {
+        "stages": 6,
+        "p_target": 1.0,
+        "surviving": 0.01562499999999998
+      },
+      {
+        "stages": 7,
+        "p_target": 0.4999999999999999,
+        "surviving": 0.007812499999999988
+      },
+      {
+        "stages": 8,
+        "p_target": 1.0,
+        "surviving": 0.003906249999999993
+      }
+    ],
+    "A5_recombine": {
+      "recombined_p_white": 0.9999999999999996,
+      "blocked_p_white": 0.5000000000000001
+    },
+    "A6_hidden_properties": {
+      "hidden_property_prediction": 1.0,
+      "quantum_prediction": 0.5
+    }
+  }
+}

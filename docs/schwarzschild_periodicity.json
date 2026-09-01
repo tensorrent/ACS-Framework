@@ -1,0 +1,70 @@
+{
+  "description": "Schwarzschild through the fixed-point/free-action classification",
+  "source": "code/constraint_projection/schwarzschild_periodicity.py",
+  "checks": {
+    "W1_coordinate_artifact": {
+      "kretschmann": "48*M**2/r**6",
+      "K_at_horizon": "3/(4*M**4)",
+      "finite_at_horizon": true,
+      "matches_48M2_over_r6": true,
+      "diverges_at": "r = 0"
+    },
+    "W2_euclidean_period": {
+      "beta": "8*pi*M",
+      "surface_gravity": "1/(4*M)",
+      "temperature": "1/(8*pi*M)",
+      "T_equals_kappa_over_2pi": true
+    },
+    "W3_fixed_set": {
+      "killing_norm2": "(-2*M + r)/r",
+      "vanishes_at": "r = 2M",
+      "action_is_free": false,
+      "fixed_set": "the horizon",
+      "classification": [
+        {
+          "action": "Mobius deck (annulus -> band)",
+          "group": "Z/2",
+          "fixed": "nothing",
+          "free": true
+        },
+        {
+          "action": "spinor -I on states S^3",
+          "group": "Z/2",
+          "fixed": "nothing",
+          "free": true
+        },
+        {
+          "action": "s -> 1 - conj(s)",
+          "group": "Z/2",
+          "fixed": "the line Re(s)=1/2",
+          "free": false
+        },
+        {
+          "action": "Euclidean time translation",
+          "group": "U(1)",
+          "fixed": "the horizon r=2M",
+          "free": false
+        }
+      ]
+    },
+    "W4_two_mechanisms": {
+      "spinor": {
+        "period": "4 pi",
+        "free": true,
+        "forced_by": "global topology",
+        "locally_observable": false
+      },
+      "schwarzschild": {
+        "period": "8 pi M",
+        "free": false,
+        "forced_by": "smoothness at the fixed point",
+        "locally_observable": true
+      }
+    },
+    "W5_manuscript": {
+      "manuscript_derives_a_metric": false,
+      "gfe_used_for": "fixing the cutoff a as an eigenvalue gap",
+      "schwarzschild_role": "control for the audit's methods, not a test of the entry"
+    }
+  }
+}

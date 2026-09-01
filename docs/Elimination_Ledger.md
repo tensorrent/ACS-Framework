@@ -3198,3 +3198,89 @@ do not reproduce, the Möbius reading still matches the spinor structure and sti
 critical line, and the skill still did not separate in its own benchmark. What changes is the
 status of the whole apparatus: **a checkable record of a search, not a machine for producing
 correctness.**
+
+---
+
+### 2026-09-01 — Schwarzschild through the fixed-point classification — **THE TABLE HOLDS ON A CASE THAT DID NOT BUILD IT** · T1 machine / T2 structural
+
+**Why this is the interesting test.** The previous three runs sorted actions by what they FIX
+(Möbius deck and spinor-on-states free; `s↦1−s̄` fixing a line). Schwarzschild raises a question
+that classification should answer but had no part in producing: **both the spinor and Euclidean
+Schwarzschild force a periodicity — 4π and `β = 8πM` — and it is not obvious they do so for the
+same reason.**
+
+Instrument: `code/constraint_projection/schwarzschild_periodicity.py`.
+Artifact: `docs/schwarzschild_periodicity.json`.
+
+**W1 — the horizon is a chart failure, and a scalar is what shows it.** `g_rr` diverges at
+`r = 2M`, which alone proves nothing — a chart can blow up where the geometry does not. Computed
+from the metric via Christoffels and the Riemann tensor:
+
+```
+K = R_abcd R^abcd = 48 M^2 / r^6
+at r = 2M:  K = 3/(4 M^4)     finite
+as r -> 0:  K -> oo
+matches the standard 48 M^2/r^6:  True
+```
+
+**W2 — the Euclidean period derived, not quoted.** Substituting `r = 2M + ρ²/(8M)`:
+
+```
+g_rr dr^2  ->  (1 + rho^2/(16 M^2)) drho^2
+f(r)       ->  rho^2/(16 M^2)  near rho = 0
+
+ds_E^2 = drho^2 + rho^2 d(tau/4M)^2      -- a plane in polar form
+smoothness at rho = 0  =>  Theta = tau/(4M) has period 2 pi
+
+beta = 8 pi M      kappa = f'(2M)/2 = 1/(4M)      T = 1/(8 pi M)
+consistency  T == kappa/2pi:  True
+```
+
+The period is **forced**, not chosen: any other value leaves a conical deficit — a curvature
+delta-function sitting on the horizon.
+
+**W3 — and the Killing vector locates the fixed set.** `|ξ|² = 1 − 2M/r` vanishes at `r = 2M` and
+nowhere outside it. So the `U(1)` has a fixed set, and it is the horizon — the tip of the
+Euclidean cigar.
+
+| action | group | fixed set | free? |
+|---|---|---|---|
+| Möbius deck (annulus → band) | `Z/2` | nothing | **True** |
+| spinor `−I` on states `S³` | `Z/2` | nothing | **True** |
+| `s ↦ 1−s̄` | `Z/2` | the line `Re(s)=1/2` | False |
+| **Euclidean time translation** | `U(1)` | **the horizon `r=2M`** | **False** |
+
+**W4 — which separates two periodicities that look alike and are not.**
+
+- **Spinor, 4π.** The `Z/2` acts **freely**, so there is no point at which to impose smoothness
+  and nothing local forces anything. The period is a **global topological fact**: `π₁(SO(3)) =
+  Z/2`. Consequence — the sign is invisible on a single system (the earlier sweep of 1369
+  directions moved no probability by more than `3.33e-16`) and appears only in interference.
+- **Schwarzschild, `β = 8πM`.** The `U(1)` has a **fixed point**, and a fixed point of a rotation
+  is exactly where a conical deficit can live. Smoothness *there* forces the period **locally**.
+  Consequence — the period is not a phase convention, it is a **temperature**.
+
+**A free action forces periodicity globally and the result is locally unobservable. A
+fixed-point action forces it locally and the result is a physical scale.** So *"a full rotation
+returns you inverted"* and *"imaginary time is periodic"* are not one phenomenon in two costumes.
+They occupy opposite rows, and the column separating them is the one the previous runs built.
+
+**W5 — and Schwarzschild is a control, not a test of the entry.** The CPF entry derives no metric,
+horizon or temperature; it invokes *Gravity from Entropy* at exactly one load-bearing point, to
+fix `a` as "the eigenvalue gap of the G-field." There is nothing there to test against. What
+Schwarzschild supplies instead is a check on the audit's own methods — W1 is the standard move
+for separating a coordinate artifact from a real one (compute a scalar), which is the same move
+G3 used on the capacitance; and W2 is a period **derived from a requirement**, which is the shape
+the manuscript's `a/R` fixing does not have.
+
+**Verdict.** The classification was built from Möbius, spinor and zeta. **Schwarzschild had no
+part in building it and lands in it without adjustment** — which is the only reason to extend
+trust to a classification at all.
+
+*An in-flight correction, the fourth of this shape.* The first draft printed `K = zoo` at the
+horizon beside prose asserting the curvature is finite there. The contraction raised all four
+indices of `R^a_{bcd}` — whose first index is already contravariant — one raising too many,
+producing a spurious `sin(θ)` dependence and a false divergence. Corrected to raise the fully
+lowered `R_abcd`, and the verdict is now computed from the value rather than written beside it.
+The check `K == 48M²/r⁶` was added so the result is anchored to a published closed form (rule 2)
+rather than to its own arithmetic.

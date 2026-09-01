@@ -140,6 +140,13 @@ Earned in order, each from a specific failure. They are operational, not aspirat
    parameterisation, no one — including you — can see what the result depends on.
 10. **Did you see it? Did you do it? If no, you are assuming.** Apply it to your own
     verification claims first.
+11. **Report correctness, not righteousness.** "Right" *means* righteous — belief held without
+    proof — which is precisely the thing an evidence chain exists to replace. Praising a result
+    as "right" imports the vocabulary of unproven conviction into a record of measurement, and
+    "wrong" adds blame to what is only a mismatch. Nothing is *for* or *against* anything: a
+    claim either reproduces or it does not. Write **matches / does not match**, **reproduces /
+    does not reproduce**, **accurate / inaccurate**, **holds / does not hold**. A document under
+    audit is not an opponent — it is a record of a state at a date, and so is yours.
 
 ## Auditing what you have already written
 
@@ -159,6 +166,23 @@ A hit is not automatically a defect. Two of the most useful outcomes are: *"chec
 scoped, not load-bearing"* and *"computed, and the original argument was right."* **A rule that
 only pays out when it overturns something cannot be trusted when it stays silent** — you have to
 run it to know which case you are in.
+
+## Vocabulary
+
+The words carry assumptions, so they are part of the method rather than a style preference.
+
+| Do not write | Write | Why |
+|---|---|---|
+| "the reading is right" | "the reading is accurate" / "matches" | *right* = righteous = belief without proof |
+| "the claim is wrong" | "the claim does not reproduce" | blame added to a mismatch |
+| "a finding against X" | "a finding about X" | nothing is adversarial; entries record state |
+| "X fails / X is guilty of" | "X does not hold under Y" | verdicts on documents, not measurements |
+| "this deserved a test" | "this was testable" | merit is not a property of hypotheses |
+| "worse off / better" | "moved from A to B" | direction and magnitude, not a score |
+| "good news / bad news" | the number | the reader grades it, not you |
+
+The test: **could a thermometer say it?** A thermometer reports a reading and a scale. It does
+not report that the patient deserved the fever.
 
 ## Success is a gradient
 

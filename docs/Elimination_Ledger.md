@@ -1066,7 +1066,7 @@ a_e from any 'g = 2 exactly' framework = 0
 separation   = 8.92e9 sigma
 ```
 
-`g = 2` is right to three decimal places and wrong at the fourth.
+`g = 2` matches to three decimal places and diverges at the fourth.
 
 **W7 — the QED series, and a mistake caught by inverting it.** The first run of this
 comparison omitted the **mass-dependent** terms (muon and tau vacuum-polarization
@@ -1551,7 +1551,7 @@ confirmation of the same four matrices by `Out(pi_1(K))` word algebra remains in
 
 ### 2026-08-30 — Is the 72.648x alpha gap a scaling rule? — **ARTIFACT, on five independent grounds** · T1 machine / T2 structural
 
-**The hypothesis, and why it deserved a test.** The decoy test above found that taking
+**The hypothesis, and why it was testable.** The decoy test above found that taking
 the zero-free-parameter claim seriously — fixing `a/R = 1/2` from `tau = i a/R = i/2` —
 *predicts* `alpha^-1 = 1.886` against an observed `137.036`, a factor of **72.648**. A
 fair reading: that factor might not be noise. If it were systematic, the framework would
@@ -1818,7 +1818,7 @@ Artifact: `docs/alpha_gap_diagnosis.json`.
 
 ---
 
-### 2026-08-30 — Can a RELATIVE boundary condition fix alpha? — **the instinct was right twice and still does not save it** · T1 machine / T2 structural
+### 2026-08-30 — Can a RELATIVE boundary condition fix alpha? — **the condition is relational and the framework contains one; alpha still does not follow** · T1 machine / T2 structural
 
 **The question.** The gap diagnosis ended on: a log-in-scale relation derives `alpha` only
 if the scale ratio is fixed from outside, and RG running cannot supply that because it
@@ -1851,7 +1851,7 @@ alpha^-1 observed  = 137.0359992
 off by             = 2.9634x
 ```
 
-**This is a real improvement and deserved the test.** 2.96x beats the 72.6x of `tau = i/2`
+**This is a measurable improvement.** 2.96x beats the 72.6x of `tau = i/2`
 and the 5.08x of a Planck cutoff, and unlike both it is **parameter-free**. Reaching
 137.036 would need `L_IR/R = 4.90e117` against a measured `6.73e38` — off by `10^78.9`.
 
@@ -1895,8 +1895,8 @@ disagreement means the framework's own conditions contradict each other and ther
 free parameter left to absorb the difference**. Supplying the boundary condition removes
 the last place the discrepancy could have hidden.
 
-**Verdict.** The instinct was right twice — the condition should be relative, and the
-framework does contain one — and the framework is worse off for it, not better. Logged as
+**Verdict.** Both antecedents hold — the condition is relational, and the framework contains
+one — and supplying it moves the framework from under-determined to over-determined. Logged as
 a route that genuinely improved the prediction (72.6x → 2.96x, and parameter-free) and was
 killed anyway, by a test it could have passed: had the predicted drift come in below
 1e-17/yr, the relational reading would have survived as a live option with only a
@@ -1912,7 +1912,7 @@ Artifact: `docs/alpha_relational_boundary.json`.
 **The proposal, in the author's words.** `a` in `alpha^-1 = (1/2)(ln(8R/a)+1)` is not a
 particle cutoff. There are no particles. `a` is the *finite resolution of the throat* —
 the scale below which the foam has no more structure to resolve. This is not a
-re-parameterisation; it is a different ontology, and it deserved to be read against the
+re-parameterisation; it is a different ontology, and it was read against the
 programme's own prior note rather than against my summary of it.
 
 Read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_Capacitance.tex`.
@@ -2366,7 +2366,7 @@ capacitance, Stokes for twisted forms, the orientation double cover and the Smit
 form are all standard and are the field's, not ours. Only the application is.
 
 *An in-flight correction.* The instrument's first draft printed `V = (λ/4πε₀)·ln(8R/a)`
-while the table directly above it reported a ratio of **2.0**. The final `C` was right and
+while the table directly above it reported a ratio of **2.0**. The final `C` matched and
 the intermediate line was not. The printed chain now derives `C` from the measured `κ`, so
 the conclusion cannot drift from the table again. A second instance: the summary block
 hardcoded `31.9×` where G4 computed `32.54×`; the summary now reads from the result dict.
@@ -2491,7 +2491,7 @@ be run to know which it was.
 
 ### 2026-08-31 — The twist family, and where `Sl = 2` actually lands — **OUR OWN FAMILY WAS INCOMPLETE; ONE FINDING WITHDRAWN THE SAME RUN** · T1 machine / T2 proved
 
-**Prompted by a reading of the geometry that was right, and that the previous run stopped
+**Prompted by a reading of the geometry that is accurate, and that the previous run stopped
 short of.** *An annulus with 180° of rotation gives a Möbius band; with 360° you get
 something that is not a cylinder — but from the outside it looks like one.*
 
@@ -2886,7 +2886,7 @@ doing different work:
 
 Neither implies the other.
 
-**S3 — and the instinct that phase belongs to this experiment is right, one step over.** Split a
+**S3 — phase does belong to this experiment, one step over.** Split a
 beam, turn *one arm* by 2π, recombine:
 
 | turn on one arm | recombined P(white) |
@@ -2951,7 +2951,7 @@ Möbius ribbon.** Traverse once and you are inverted; twice and you are home.
 Instrument: `code/constraint_projection/mobius_vs_critical_line.py`.
 Artifact: `docs/mobius_vs_critical_line.json`.
 
-**M1 — the geometry is right.** Frame transported once around, edge traversed:
+**M1 — the geometry checks out.** Frame transported once around, edge traversed:
 
 ```
 half-twists   frame returns?   sides   boundary circles
@@ -3006,11 +3006,11 @@ line at all**: if its action fixed a line it would not be free, the quotient wou
 manifold, and it would not be the double cover that made the analogy attractive.
 
 **The two-faced reading was wrong about the spinor but had the right *shape* for a critical line
-(a reflection fixes a line). The Möbius reading is right about the spinor and, for exactly that
+(a reflection fixes a line). The Möbius reading matches the spinor structure and, for exactly that
 reason, provably cannot reach zeta.** Improving the fit at one end worsened it at the other, and
 not by accident — by the same property.
 
-**Verdict.** The correction is right on the geometry and upgrades the spinor identification from
+**Verdict.** The correction is accurate on the geometry and upgrades the spinor identification from
 loose analogy to structural match. It simultaneously converts the zeta bridge from *unsupported*
 to *excluded*. **A sharper claim bought a stronger negative** — which is the trade this ledger
 exists to record.
@@ -3019,3 +3019,61 @@ exists to record.
 through `w₁(M) ≠ 0`, which forbids the spin structure (P3), and the Möbius reading does not
 rescue it — a Möbius band is exactly a `w₁ ≠ 0` object, so the better the Möbius fit, the more
 firmly P3 applies.
+
+---
+
+### 2026-09-01 — Method rule 11: correctness, not righteousness — **CORRECTED TWICE FROM MEMORY, SO NOW MACHINE-CHECKED** · T1 machine
+
+**The distinction.** *"Right" means righteous — belief held without proof.* That is precisely
+what an evidence chain exists to replace, so praising a result as "right" imports the vocabulary
+of unproven conviction into a record of measurement. "Wrong" adds blame to what is only a
+mismatch. Nothing is *for* or *against* anything. A claim reproduces or it does not.
+
+**And there is no "against the manuscript."** It is a record of a state at a date — current
+consensus, written down. So is this ledger. Neither is an opponent.
+
+**Measured, not recalled.** Audit of the corpus before the fix:
+
+```
+\bright\b                  25
+\bwrong\b                  31
+against the manuscript      1
+```
+
+Thirteen were verdict-framing rather than technical use — *"the instinct was right twice"*, *"the
+framework is worse off for it"*, *"this deserved a test"*, *"a finding FOR the ontology and
+AGAINST the manuscript"*. Twelve replaced; the thirteenth was already gone from an earlier pass.
+
+**Why this is enforced rather than remembered.** Rule 6 recorded *"entries record state; they do
+not indict each other"* on 2026-08-31. It was then violated in the same session's prose, twice,
+including one message that closed with *"cuts against the manuscript rather than for it."* **A
+rule held only in memory decayed within hours of being written.** So it is now a test:
+
+```
+test_no_adversarial_framing_in_the_record   scans ledger, MANIFEST, skill
+    -> for/against framing, "damning", "guilty", "indicts", "deserved a test",
+       "good/bad news", "worse off for it"
+```
+
+Mutation-checked, because a linter that cannot reject is the thing it is meant to catch:
+appending *"a finding against the manuscript and it is damning"* turns it red. **Gate 59 → 61.**
+
+Ordinary technical use is left alone — *"the wrong polytope"* means the incorrect one and carries
+no verdict. What is flagged is adversarial framing, not the words.
+
+**The operative test, now in the skill:** *could a thermometer say it?* A thermometer reports a
+reading and a scale. It does not report that the patient deserved the fever.
+
+| instead of | write |
+|---|---|
+| "the reading is right" | "the reading is accurate" / "matches" |
+| "the claim is wrong" | "the claim does not reproduce" |
+| "a finding against X" | "a finding about X" |
+| "this deserved a test" | "this was testable" |
+| "worse off / better" | "moved from A to B" |
+
+**An error made while making the fix, recorded because it is the same class.** Restoring the
+mutation with `git checkout docs/Elimination_Ledger.md` reverted the file to HEAD — discarding
+all twelve uncommitted replacements along with the test line. Caught by checking the file rather
+than trusting the command, and re-applied. `git checkout` on a file carrying intentional
+uncommitted edits is a destructive restore, not a targeted undo.

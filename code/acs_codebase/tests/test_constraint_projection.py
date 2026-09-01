@@ -162,3 +162,65 @@ def test_every_cpf_artifact_names_its_source():
         if "source" not in d or not d["source"].endswith(".py"):
             missing.append(name)
     assert not missing, f"artifacts without a source field: {missing}"
+
+
+# ---------------------------------------------------------------------------
+# Vocabulary check.  Method rule 11.
+#
+# "Right" means righteous -- belief held without proof -- which is the thing an
+# evidence chain replaces.  Praising a result as "right" imports the vocabulary
+# of unproven conviction into a record of measurement; "wrong" adds blame to a
+# mismatch.  A document under audit is not an opponent, it is a record of a
+# state at a date.
+#
+# This is enforced rather than remembered because it was corrected twice from
+# memory and recurred both times.  Only ADVERSARIAL framings are flagged --
+# "the wrong polytope" (the incorrect one) is ordinary technical use and is
+# left alone.
+# ---------------------------------------------------------------------------
+import re
+
+ADVERSARIAL = [
+    (r"\b(FOR|for) the \w+ and (AGAINST|against) the\b", "for/against framing"),
+    (r"\bfinding (AGAINST|against)\b", "adversarial finding"),
+    (r"\bdamning\b", "verdict language"),
+    (r"\bguilty\b", "verdict language"),
+    (r"\bindicts?\b(?! each other)", "verdict language"),
+    (r"\bdeserved (a |the )?(test|better)\b", "merit ascribed to a hypothesis"),
+    (r"\b(good|bad) news\b", "grading for the reader"),
+    (r"\bworse off for it\b", "score rather than direction"),
+]
+
+
+def _corpus_files():
+    root = DOCS.parent
+    for rel in ("docs/Elimination_Ledger.md", "MANIFEST.md",
+                ".claude/skills/evidence-chain/SKILL.md"):
+        p = root / rel
+        if p.exists():
+            yield rel, p.read_text()
+
+
+def test_no_adversarial_framing_in_the_record():
+    """Rule 11: entries record state; they do not indict each other."""
+    hits = []
+    for rel, text in _corpus_files():
+        # The skill documents the banned forms in its own vocabulary table;
+        # skip lines that are teaching the rule rather than breaking it.
+        for i, line in enumerate(text.splitlines(), 1):
+            if "Do not write" in line or line.strip().startswith("|"):
+                continue
+            for pat, why in ADVERSARIAL:
+                if re.search(pat, line):
+                    hits.append(f"{rel}:{i} [{why}] {line.strip()[:88]}")
+    assert not hits, "adversarial framing found:\n" + "\n".join(hits)
+
+
+def test_vocabulary_rule_is_documented():
+    """The rule has to be written down where it is applied, or it decays."""
+    skill = (DOCS.parent / ".claude/skills/evidence-chain/SKILL.md")
+    if not skill.exists():
+        pytest.skip("skill not present")
+    t = skill.read_text()
+    assert "Report correctness, not righteousness" in t
+    assert "could a thermometer say it" in t.lower()

@@ -3376,3 +3376,96 @@ in — it was previously unfalsifiable, which is not a defensible place for a cl
 *An in-flight correction, the fifth of this shape.* O7 tallied "2 of 4" while the summary said
 "three of five": O6's verdict string began with neither keyword and was silently dropped from both
 buckets. The summary now derives its counts from the tally rather than restating them.
+
+---
+
+### 2026-09-01 — Local truth vs global correctness: what averaging deletes — **THE MASKING PEAKS AT MODERATE DISAGREEMENT, NOT EXTREME** · T1 machine
+
+**The claim tested:** consensus formed by averaging deletes minority information, and the deleted
+information is exactly what predicts failure. *All local readings are true; global is correct.*
+
+Instrument: `code/constraint_projection/consensus_and_invariants.py`.
+Artifact: `docs/consensus_and_invariants.json`.
+
+**C1 — a worked case already in this corpus.** The latency fixture from the eval runs:
+
+```
+v1.0 120.0 ok | v1.1 118.5 ok | v1.2 131.2 OVER | v1.3 129.9 OVER
+mean = 124.90 ms  -> PASS, margin 0.10 ms
+worst = 131.2 ms  -> exceeds by 6.2 ms       margin understates the worst case 62x
+```
+
+**Both statements are true.** The mean is under threshold; half the releases are over. Only one
+predicts the outage, and the averaging operator is what removed it.
+
+**C2 — and the general shape is sharper than "more spread is worse".** 20,000 populations per
+row, counting how often the mean passes while a member fails:
+
+| spread (sd) | mean passes | a member fails | **masked** |
+|---|---|---|---|
+| 2 | 1.000 | 0.048 | 0.048 |
+| 5 | 0.998 | 0.756 | 0.754 |
+| **10** | 0.922 | 0.949 | **0.870** |
+| 20 | 0.762 | 0.982 | 0.744 |
+| 40 | 0.642 | 0.991 | 0.633 |
+
+**Masking is NOT monotonic. It peaks at moderate spread (87%) and falls at extreme spread.**
+
+- **small** — everyone agrees, nobody is over, nothing to mask
+- **moderate** — the mean still looks comfortable while the tail is already out: **maximum masking**
+- **large** — the outliers drag the mean over too, so the average fails as well (64% pass vs 100%),
+  and the disagreement becomes visible in the summary statistic
+
+**So the dangerous regime is moderate heterogeneity.** Loud disagreement is self-reporting; it is
+**quiet** disagreement — large enough to breach, small enough not to move the mean — that gets
+deleted.
+
+**C3 — iterated cleaning lowers the report, never the risk.**
+
+```
+round  n   mean   reported   true max
+    0  46 101.50     FAIL      148.98
+    1  41  96.28     PASS      148.98
+    5  37  94.75     PASS      148.98
+```
+
+Each round is individually defensible — outlier rejection is standard and well-founded. **The
+composition is what fails:** the readings being dropped are the only ones carrying the tail, so
+the process converges to a number describing a population it has itself constructed.
+
+**C4 — and averaging frames does not recover the invariant.** Every `(Tw, Wr)` split at `Sl = 2`
+is a true reading from some framing. Their mean is `(1.0, 1.0)` — a legitimate member here, but
+not privileged and not where the invariant lives. **`Sl` is what is preserved across framings,
+not the mean of them.** In general the mean lands on no frame at all: the mean of two rotations
+is not a rotation. Invariance is a property of the group action, found by asking what commutes
+with it.
+
+**C5 — two predicates, and the gap between them is where failure lives.**
+
+```
+TRUE     holds in a given frame      -- every frame in C4 reports truly
+CORRECT  holds across frames         -- Sl = 2 is correct; "Tw = 1.5" is true and not correct
+```
+
+Two opposite errors: mistaking **true for correct** (*"my measurement says 118.5 ms, so we are
+fine"*), and mistaking **correct for true** (*"the invariant is 2, so every observer must
+measure 2"*). C1–C3 are the first error at scale — averaging produces a number true of nothing
+(**no release had 124.90 ms**) and treats it as the global fact.
+
+**The corrective is structural, not a value.** For a threshold question **the invariant is the
+extremum, not the mean**, and using the wrong statistic deletes the answer before anyone
+deliberates.
+
+**C6 — the boundary, marked rather than blurred.** Established: averaging cannot answer a
+threshold question; the failure is systematic with a peak at moderate spread; iterated trimming
+lowers the report and not the risk; invariants come from preservation, not averaging. **Not
+established:** that any human institution behaves this way — these are properties of operators on
+distributions, and applying them to governance is a *reading*, which this instrument does not
+test. Also not established: that minority readings are more accurate. C3's minority carried the
+tail **by construction**; a minority reading can equally be an error, and nothing here separates
+those cases — which is what an evidence chain is for.
+
+*An in-flight correction, the sixth of this shape.* The first draft asserted the masked fraction
+*"RISES with spread"* and quoted the sd = 40 value as the headline, while the table showed the
+peak at sd = 10 and a fall thereafter. The non-monotonicity is the better result and was visible
+in the output being contradicted.

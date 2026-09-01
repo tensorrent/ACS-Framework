@@ -1,0 +1,157 @@
+{
+  "description": "Local truth vs global correctness; what averaging deletes",
+  "source": "code/constraint_projection/consensus_and_invariants.py",
+  "checks": {
+    "C1_mean_deletes_failure": {
+      "data": {
+        "v1.0": 120.0,
+        "v1.1": 118.5,
+        "v1.2": 131.2,
+        "v1.3": 129.9
+      },
+      "threshold": 125.0,
+      "mean": 124.9,
+      "members_over": [
+        "v1.2",
+        "v1.3"
+      ],
+      "understatement_factor": 62.00000000000341
+    },
+    "C2_how_often": {
+      "rows": [
+        {
+          "sd": 2,
+          "mean_passes": 1.0,
+          "member_fails": 0.04785,
+          "masked": 0.04785
+        },
+        {
+          "sd": 5,
+          "mean_passes": 0.99825,
+          "member_fails": 0.75625,
+          "masked": 0.7545
+        },
+        {
+          "sd": 10,
+          "mean_passes": 0.9216,
+          "member_fails": 0.94855,
+          "masked": 0.87015
+        },
+        {
+          "sd": 20,
+          "mean_passes": 0.7616,
+          "member_fails": 0.98245,
+          "masked": 0.74405
+        },
+        {
+          "sd": 40,
+          "mean_passes": 0.64175,
+          "member_fails": 0.9914,
+          "masked": 0.63315
+        }
+      ],
+      "threshold": 100.0,
+      "members": 8,
+      "peak_masking_sd": 10,
+      "peak_masking": 0.87015,
+      "monotonic": false
+    },
+    "C3_iterative_cleaning": {
+      "rounds": [
+        {
+          "round": 0,
+          "n": 46,
+          "mean": 101.49808075636672,
+          "reported": "FAIL",
+          "true_max": 148.975424679813
+        },
+        {
+          "round": 1,
+          "n": 41,
+          "mean": 96.28289577875609,
+          "reported": "PASS",
+          "true_max": 148.975424679813
+        },
+        {
+          "round": 2,
+          "n": 40,
+          "mean": 95.49588897125182,
+          "reported": "PASS",
+          "true_max": 148.975424679813
+        },
+        {
+          "round": 3,
+          "n": 39,
+          "mean": 95.18478167956887,
+          "reported": "PASS",
+          "true_max": 148.975424679813
+        },
+        {
+          "round": 4,
+          "n": 38,
+          "mean": 94.96910422129854,
+          "reported": "PASS",
+          "true_max": 148.975424679813
+        },
+        {
+          "round": 5,
+          "n": 37,
+          "mean": 94.75146492289447,
+          "reported": "PASS",
+          "true_max": 148.975424679813
+        }
+      ],
+      "true_max": 148.975424679813,
+      "threshold": 100.0
+    },
+    "C4_invariant_not_average": {
+      "family": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          1.0,
+          1.0
+        ],
+        [
+          0.5,
+          1.5
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "mean_Tw": 1.0,
+      "mean_Wr": 1.0,
+      "Sl_values": [
+        2.0
+      ],
+      "Sl_invariant": true
+    },
+    "C5_true_vs_correct": {
+      "true": "holds in a given frame",
+      "correct": "holds across frames",
+      "error_1": "treating a local truth as global",
+      "error_2": "treating a global invariant as a local prediction",
+      "corrective": "for a threshold question the invariant is the extremum"
+    },
+    "C6_boundary": {
+      "established": [
+        "averaging cannot answer threshold questions",
+        "failure grows with heterogeneity",
+        "iterated trimming lowers the report, not the risk",
+        "invariants come from preservation, not averaging"
+      ],
+      "not_established": [
+        "that institutions behave this way",
+        "that minority readings are more accurate"
+      ]
+    }
+  }
+}

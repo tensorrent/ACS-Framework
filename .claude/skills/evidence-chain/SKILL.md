@@ -140,6 +140,12 @@ Earned in order, each from a specific failure. They are operational, not aspirat
    parameterisation, no one — including you — can see what the result depends on.
 10. **Did you see it? Did you do it? If no, you are assuming.** Apply it to your own
     verification claims first.
+12. **A restore that discards unstaged work is unrecoverable — guard it, don't remember it.**
+    `git checkout <path>` is a whole-file reset to HEAD, not a targeted undo. Content it
+    overwrites was never staged, so it is not in the object store and no reflog entry brings it
+    back. Undo a known edit by re-applying its inverse (`sed -i '$ d'` for an appended line), or
+    `git stash push -- <path>` first so the work stays recoverable. This repo enforces it with a
+    PreToolUse hook (`.claude/hooks/guard-destructive-restore.py`) rather than trusting recall.
 11. **Report correctness, not righteousness.** "Right" *means* righteous — belief held without
     proof — which is precisely the thing an evidence chain exists to replace. Praising a result
     as "right" imports the vocabulary of unproven conviction into a record of measurement, and

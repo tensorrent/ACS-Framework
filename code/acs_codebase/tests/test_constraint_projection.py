@@ -17,6 +17,7 @@ consistent.  They do not re-derive the physics -- the instruments do that,
 and their reasoning is reviewed in the ledger.
 """
 import json
+import sys
 import math
 import pathlib
 
@@ -208,10 +209,15 @@ def test_no_adversarial_framing_in_the_record():
         # The skill documents the banned forms in its own vocabulary table;
         # skip lines that are teaching the rule rather than breaking it.
         for i, line in enumerate(text.splitlines(), 1):
-            if "Do not write" in line or line.strip().startswith("|"):
+            if line.strip().startswith("|"):          # vocabulary tables
                 continue
+            # The rule governs assertions made in our own voice, not citation.
+            # Quoting a banned form in order to document or retire it is the
+            # opposite of using it, so strip quoted spans before matching:
+            # "..." , *"..."* , `...` , and fenced-block content.
+            bare = re.sub(r'\*?"[^"]*"\*?|`[^`]*`|\u201c[^\u201d]*\u201d', "", line)
             for pat, why in ADVERSARIAL:
-                if re.search(pat, line):
+                if re.search(pat, bare):
                     hits.append(f"{rel}:{i} [{why}] {line.strip()[:88]}")
     assert not hits, "adversarial framing found:\n" + "\n".join(hits)
 
@@ -224,3 +230,76 @@ def test_vocabulary_rule_is_documented():
     t = skill.read_text()
     assert "Report correctness, not righteousness" in t
     assert "could a thermometer say it" in t.lower()
+
+
+# ---------------------------------------------------------------------------
+# The destructive-restore guard.  Method rule 12.
+#
+# `git checkout <path>` resets a whole file to HEAD.  Content it overwrites was
+# never staged, so it is not in the object store and no reflog entry restores
+# it.  On 2026-09-01 that discarded twelve intentional uncommitted edits while
+# removing one appended test line -- exit 0, no warning.
+#
+# The guard is a PreToolUse hook.  These tests keep it honest: a hook nobody
+# checks is a hook that silently stops matching.
+# ---------------------------------------------------------------------------
+import json
+import sys
+import subprocess
+
+
+HOOK = None
+
+
+def _hook_path():
+    global HOOK
+    if HOOK is None:
+        HOOK = DOCS.parent / ".claude/hooks/guard-destructive-restore.py"
+    return HOOK
+
+
+def _run_hook(command, cwd):
+    payload = json.dumps({"tool_name": "Bash", "tool_input": {"command": command}})
+    return subprocess.run([sys.executable, str(_hook_path())], input=payload,
+                          capture_output=True, text=True, cwd=cwd)
+
+
+def test_restore_guard_is_installed_and_wired():
+    """The hook must exist AND be registered, or it protects nothing."""
+    assert _hook_path().exists(), "guard hook missing"
+    settings = DOCS.parent / ".claude/settings.json"
+    assert settings.exists(), ".claude/settings.json missing -- hook not wired"
+    cfg = json.loads(settings.read_text())
+    wired = json.dumps(cfg.get("hooks", {}).get("PreToolUse", []))
+    assert "guard-destructive-restore" in wired, "hook present but not registered"
+
+
+def test_restore_guard_blocks_the_real_mistake(tmp_path):
+    """A dirty path passed to `git checkout` must be refused."""
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    f = tmp_path / "notes.md"
+    f.write_text("committed\n")
+    subprocess.run(["git", "add", "-A"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "-c", "user.email=t@t", "-c", "user.name=t",
+                    "commit", "-qm", "init"], cwd=tmp_path, check=True)
+    f.write_text("committed\nUNCOMMITTED WORK\n")          # the edits at risk
+    r = _run_hook("git checkout notes.md", tmp_path)
+    assert r.returncode == 2, f"guard did not block; exit={r.returncode}"
+    assert "unrecoverable" in r.stderr, "block message must say why"
+    assert "notes.md" in r.stderr, "block message must name the file at risk"
+
+
+def test_restore_guard_allows_safe_commands(tmp_path):
+    """A guard that blocks everything would just be turned off."""
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    (tmp_path / "clean.md").write_text("x\n")
+    subprocess.run(["git", "add", "-A"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "-c", "user.email=t@t", "-c", "user.name=t",
+                    "commit", "-qm", "init"], cwd=tmp_path, check=True)
+    for cmd in ("git checkout clean.md",        # clean file: restore is a no-op
+                "git checkout -b feature",      # branch creation
+                "git checkout main",            # branch switch
+                "git status --short",
+                "sed -i '$ d' clean.md"):
+        r = _run_hook(cmd, tmp_path)
+        assert r.returncode == 0, f"guard wrongly blocked: {cmd}\n{r.stderr}"

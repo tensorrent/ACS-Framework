@@ -3077,3 +3077,66 @@ mutation with `git checkout docs/Elimination_Ledger.md` reverted the file to HEA
 all twelve uncommitted replacements along with the test line. Caught by checking the file rather
 than trusting the command, and re-applied. `git checkout` on a file carrying intentional
 uncommitted edits is a destructive restore, not a targeted undo.
+
+---
+
+### 2026-09-01 — Method rule 12: a destructive restore, guarded rather than remembered · T1 machine
+
+**The failure, from the previous entry.** Removing one appended test line with
+
+```
+git checkout docs/Elimination_Ledger.md
+```
+
+reset the whole file to HEAD and discarded **twelve intentional uncommitted edits** along with
+it. Exit code 0, nothing on stderr. It surfaced only because the file was read afterwards.
+
+**Why it is unrecoverable, not merely inconvenient.** `git checkout <path>` is a whole-file reset,
+not a targeted undo. The overwritten content was never staged, so it is not in the object store
+and **no reflog entry restores it** — the reflog tracks ref movement, and no ref ever pointed at
+that work. This is a different class from a bad commit or a lost branch, both of which are
+recoverable.
+
+**Guarded, because the previous entry established that memory does not hold.** Rule 6 decayed
+within hours of being written; a procedure note would decay the same way. So this is a
+`PreToolUse` hook, `.claude/hooks/guard-destructive-restore.py`, wired in `.claude/settings.json`.
+
+It blocks `git checkout`/`git restore` on a path with uncommitted changes and names the
+alternatives:
+
+```
+BLOCKED: `git checkout/restore` on a path with uncommitted changes.
+  would discard uncommitted edits in: docs/Elimination_Ledger.md
+  Safe alternatives:
+    * undo one appended line ..... sed -i '$ d' <file>
+    * undo a known edit .......... re-apply the inverse edit
+    * keep the work, then reset .. git stash push -- <file>
+```
+
+**Verified on five cases, including the negatives** — a guard that blocks everything gets turned
+off, so it must permit the safe forms:
+
+| command | file state | result |
+|---|---|---|
+| `git checkout <path>` | **dirty** | **exit 2 — blocked** |
+| `git checkout <path>` | clean | exit 0 (restore is a no-op) |
+| `git checkout -b feature` | — | exit 0 (branch creation) |
+| `git checkout main` | — | exit 0 (branch switch) |
+| `git restore -- <path>` | **dirty** | **exit 2 — blocked** |
+
+**And the guard itself is in the gate**, because a hook nobody checks silently stops matching:
+`test_restore_guard_is_installed_and_wired` asserts the hook exists **and** is registered in
+settings (present-but-unwired protects nothing); `test_restore_guard_blocks_the_real_mistake`
+builds a throwaway repo, commits, edits, and requires exit 2 with the file named;
+`test_restore_guard_allows_safe_commands` requires exit 0 on all five safe forms. **Gate 61 → 64.**
+
+**A false positive the vocabulary linter produced on itself, and the principle it forced.** The
+rule-11 entry *quotes* the banned phrases in order to retire them, and the linter flagged those
+quotations. The exemption is not an exception — it is the rule stated correctly: **rule 11
+governs assertions made in our own voice, not citation.** Quoting a form in order to document it
+is the opposite of using it. The linter now strips quoted spans (`"..."`, `*"..."*`, backticks)
+before matching, and was re-checked against an unquoted use to confirm it still rejects.
+
+*The general shape, now twice over.* Both rules 11 and 12 were written after the corresponding
+mistake, both were violated or repeated once more, and both are now mechanical. **A rule that
+lives only in prose is a rule that will be broken by the next fluent sentence.**

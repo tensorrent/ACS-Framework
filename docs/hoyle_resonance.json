@@ -1,0 +1,50 @@
+{
+  "description": "The Hoyle resonance as a control on the coherence/accuracy framework",
+  "source": "code/constraint_projection/hoyle_resonance.py",
+  "checks": {
+    "N1_energetics": {
+      "Q_2alpha_MeV": 0.09183948734448354,
+      "threshold_3alpha_MeV": 7.2747476075865,
+      "hoyle_excitation_MeV": 7.6542,
+      "resonance_above_threshold_MeV": 0.3794523924135005,
+      "published_Q_2alpha_keV": 91.84,
+      "published_threshold_MeV": 7.2747,
+      "published_E_res_keV": 379.5,
+      "max_deviation_from_published_keV": 0.047607586499687216
+    },
+    "N2_narrowness": {
+      "kT_MeV": 0.0129259995,
+      "window_MeV": 0.8,
+      "prior_range_MeV": 20.0,
+      "predicted_lo": 7.2747476075865,
+      "predicted_hi": 8.0747476075865,
+      "actual": 7.6542,
+      "inside": true
+    },
+    "N3_bits": {
+      "hoyle_p": 0.04,
+      "hoyle_bits": 4.643856189774724,
+      "fit_p": 1.0,
+      "fit_bits": 0.0
+    },
+    "N4_falsifiability": {
+      "hoyle_falsifiable": true,
+      "hoyle_failure_modes": [
+        "no state in window",
+        "wrong spin-parity",
+        "no alpha decay branch"
+      ],
+      "cpf_falsifiable": false,
+      "reason": "a/R is defined from the measured alpha it purports to predict"
+    },
+    "N5_scope": {
+      "licensed": "backwards reasoning can be informative if it narrows the space",
+      "not_licensed": [
+        "anthropic reasoning is generally predictive",
+        "Hoyle's reasoning was anthropic in the modern sense",
+        "a confirmed prediction validates its whole framework"
+      ],
+      "historiography_note": "Kragh 2010 disputes the anthropic telling; not adjudicated here"
+    }
+  }
+}

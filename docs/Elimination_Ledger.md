@@ -3563,3 +3563,82 @@ reading the corpus as a whole, and remains open.
 holistic consistency is a third axis neither implies. A result can be true in its frame,
 inaccurate against measurement, and still more valuable than a fit that matches to eleven digits —
 because only one of the two can be inspected, located, and corrected.
+
+---
+
+### 2026-09-01 — The Hoyle resonance as a control on coherence vs accuracy — **SAME ARGUMENT FORM, 4.6 BITS vs 0** · T1 machine / T3 measured
+
+**Why this is a control and not an analogy.** H4 established that *"it matches the measured
+value"* can carry zero information when a parameter was free enough to be tuned. The Hoyle state
+is the sharpest available counter-case, because **Hoyle used the same argument form**: reason
+backwards from a known outcome to a required value. Carbon exists → triple-alpha must be resonant
+→ a `0⁺` state must sit near 7.7 MeV. Structurally identical to *α is 137.036 → therefore
+`a/R = 8e^{−136.036}`*. One carries information; one does not.
+
+Instrument: `code/constraint_projection/hoyle_resonance.py`.
+Artifact: `docs/hoyle_resonance.json`.
+
+**N1 — the energetics, computed from AME2020 masses and anchored to published values** (rule 2 —
+do not check our arithmetic against our own arithmetic):
+
+| quantity | computed | published | diff |
+|---|---|---|---|
+| `Q(Be-8 → 2α)` | 91.8395 keV | 91.8400 keV | 0.0005 |
+| 3α threshold | 7.2747 MeV | 7.2747 MeV | 0.0000 |
+| resonance energy | 379.4524 keV | 379.5 keV | 0.048 |
+
+**Be-8 is unbound by ~92 keV** — it exists only as a fleeting resonance, decaying in ~10⁻¹⁶ s. So
+carbon forms only if a third alpha arrives while Be-8 is still there **and** lands on a state that
+is nearly energy-matched. The Hoyle state sits **379 keV** above the 3α threshold.
+
+**N2 — how narrow the prediction was.** At helium-burning temperatures (`T ~ 1.5×10⁸ K`,
+`kT ~ 13 keV`), a resonance is useful only within roughly 0–0.8 MeV of threshold: below it the
+entrance channel is closed, above it the Boltzmann factor kills the rate. Against a prior range of
+~0–20 MeV for a `0⁺` excitation in C-12, that is a **0.8 MeV window in a 20 MeV space**, i.e.
+absolute excitation **7.27–8.07 MeV**. Measured: **7.6542 MeV** — inside.
+
+**N3 — and that is the whole difference.**
+
+```
+HOYLE 1953    window/prior = 0.8/20 = 0.040   ->  -log2(0.040) = 4.64 bits   CONFIRMED
+CPF a/R       14 of 14 decoy forms hit        ->  -log2(1.00)  = 0.00 bits
+```
+
+Confirmed by Dunbar/Wenzel/Whaling (1953), then Cook/Fowler/Lauritsen/Lauritsen (1957) for the
+`0⁺` assignment and the alpha-decay branch.
+
+**N4 — the discriminator, answerable in both directions.** Hoyle's inference **could have failed
+three separate ways**: no `0⁺` state in the window; a state there with wrong spin-parity (the
+entrance channel is three spin-0 alphas, so only `0⁺` couples); or a state that does not
+alpha-decay back. Each was a distinct way to lose, and Cook et al. specifically tested the
+assignments that could have killed it.
+
+`a/R` **cannot fail, structurally rather than through carelessness**: it is *defined* as
+`8 exp(−136.035999171)`, and that exponent is CODATA `α⁻¹ − 1`. No measurement could contradict
+it, because the measurement is its input.
+
+> **A prediction that cannot fail is not a weak prediction. It is not a prediction — it is a
+> restatement of its own input in another notation.**
+
+**N5 — and the scope, because the Hoyle case is routinely over-read.**
+
+*Licensed:* reasoning backwards from an observed outcome is legitimate and can be highly
+informative. **The argument form is not what disqualifies the CPF construction** — Hoyle used the
+same form. What matters is whether the inference narrows the space and exposes itself to a
+measurement that could come out otherwise.
+
+*Not licensed:* that anthropic reasoning is generally predictive — this is **one** success, and
+its force comes from the narrowness in N2, not from the anthropic framing. That Hoyle's own
+reasoning was anthropic in the modern sense — **Kragh (2010, "An Anthropic Myth") argues the
+anthropic telling is largely retrospective**, and this entry does not adjudicate that
+historiography; the bits come from the window either way. And that a confirmed prediction
+validates the framework it came from — Hoyle's success bears on the triple-alpha mechanism, not
+on unrelated claims by the same author.
+
+**The transferable statement:** the value of a prediction is **the fraction of the space it
+excludes** — not the elegance of its derivation, and not the number of digits it matches.
+
+*In-flight correction.* The first draft used a rounded He-4 mass (4.002602 u) and produced
+`Q(Be-8) = 94 keV` against a published 91.84 and a threshold of 7.2712 against 7.2747. Replaced
+with AME2020 values and an explicit published-value comparison, so the arithmetic is checked
+against someone else's numbers rather than its own.

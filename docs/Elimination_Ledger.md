@@ -3642,3 +3642,98 @@ excludes** — not the elegance of its derivation, and not the number of digits 
 `Q(Be-8) = 94 keV` against a published 91.84 and a threshold of 7.2712 against 7.2747. Replaced
 with AME2020 values and an explicit published-value comparison, so the arithmetic is checked
 against someone else's numbers rather than its own.
+
+---
+
+### 2026-09-01 — Schwartz 2023 and Kelvin 1867: two pieces of prior art the corpus never searched · T1 machine / T2 structural
+
+**Six specialists were dispatched in parallel and all six died on a session rate limit before producing anything.** No deliverables, no partial findings; they reset at 5:30pm UTC. Recorded so the gap is visible rather than silently absorbed. What follows was done directly.
+
+Instrument: `code/constraint_projection/kelvin_and_schwartz.py`.
+Artifact: `docs/kelvin_and_schwartz.json`.
+
+**S1 — the Schwartz bound, and whether it binds.** Schwartz settled the Halpern–Weaver conjecture
+([arXiv:2308.12641](https://arxiv.org/abs/2308.12641), *Annals of Mathematics* 2025): a flat
+Möbius band admitting a smooth **isometric** embedding in `R³` has aspect ratio > `√3 = 1.732051`,
+and this is sharp.
+
+**"Isometric" is load-bearing.** It means *paper* — bending without stretching. Our ribbons are
+ruled surfaces made by rotating a segment, whose metric factor varies with `s`, so **the bound
+does not strictly apply to them.** Checked anyway:
+
+| `w/R` used | aspect `2πR/w` | > √3 | where |
+|---|---|---|---|
+| 0.0500 | 125.66 | ✓ | `twisted_ribbon_capacitance`, `ribbon_twist_family` |
+| 0.3000 | 20.94 | ✓ | `ribbon_twist_family` R2 |
+| 0.0125 | 502.65 | ✓ | `a_eff = w/4` |
+
+Every ribbon sits ≥ **12×** clear. And not by luck: the bound constrains **short, wide** bands,
+while the capacitance log `ln(8R/a)` forced us into `w ≪ R` throughout. The physics we were
+computing kept us in the regime where the geometric constraint is slack.
+
+**S2 — and our actual constraint is a different one.**
+
+```
+w/R    min |rho|   min pair distance   degenerate?
+0.05     0.97500             0.18353        False
+1.50     0.25000             0.08498        False
+2.00     0.00000             0.08498         True
+3.00     0.00077             0.08498         True
+```
+
+**The pairwise distance never reaches zero** — it flattens near 0.085 — so distant-patch collision
+is not what limits the family. What breaks is `ρ = R + s cos(nφ/2)` passing through **zero** once
+`|s|` reaches `R`, at `w/R = 2`, where the surface folds through its own axis. A **coordinate
+degeneracy**, not a self-intersection. Limiting aspect `π = 3.1416` against Schwartz's `1.7321`:
+numerically adjacent, **not the same statement about the same object**.
+
+**S3 — and the methodological content is the part that matters, better prior art than anything we
+had cited.** From Schwartz's own account: in **2020** he attacked the conjecture assuming the
+cut-open band is a **parallelogram**, and the calculation would not give `√3`. In **2023** he cut a
+paper band open and **looked** — it is a **trapezoid** — reran the same calculation, and the
+minimum fell out immediately.
+
+**Three years separated by one unexamined assumption about a shape he could have cut out at any
+point.** That is rule 10 in the literature (*did you see it? did you do it?*) and rule 9 (*name the
+assumption, then lift it*) — "parallelogram" was never written down as an assumption, exactly as
+"planar" was baked into R1–R4 before R5 lifted it. **Rules 9 and 10 are not ours.**
+
+**K1 — Kelvin 1867 is the ontology's own precursor, uncited here until now.** Kelvin proposed atoms
+**are** knotted vortex tubes, motivated by Helmholtz's 1858 theorems: in an ideal inviscid fluid,
+vortex-line **topology is conserved for all time**. It offered discrete species, absolute
+stability, spectra, and no free parameters — and Tait built the first knot tables (1877–85) for it.
+**Prior art for the ontology rather than for any single claim**, and rules 4 and 5 both missed it.
+
+**K2 — Kelvin–Helmholtz, and the trap is that both theorems hold at once.** For a vortex sheet with
+jump `ΔU`, inviscid, no surface tension:
+
+```
+sigma = k dU / 2      growth for EVERY k, faster as the wavelength shrinks
+```
+
+No stabilising term, so growth is **unbounded as `λ → 0`**. Helmholtz gives topological
+conservation and Kelvin–Helmholtz gives dynamical disintegration **in the same equations**: the
+knot's topology is preserved while its geometry is torn apart. A regulator — viscosity, surface
+tension, finite core — is therefore mandatory, **and every one of them breaks the exact
+conservation that motivated the programme** (reconnection at finite viscosity changes knot type).
+
+Same shape as the finite-resolution result already in this corpus: **the cutoff that makes the
+object well-defined removes the exactness that made it attractive.**
+
+**K3 — three of the four reasons the programme was abandoned transfer.**
+
+| reason | transfers? |
+|---|---|
+| the aether went (Michelson–Morley, SR) | **no** — contingent and specific to Kelvin |
+| never produced quantitative spectra | **yes** — coherent and inaccurate, a live standard |
+| stability required an unmaintainable idealisation | **yes** — K2 |
+| knot→atom assignment was fitted, never derived | **yes**, and sharpest |
+
+**The one that does not transfer is the one usually given as the reason.** The programme's real
+difficulty was that **topological richness bought accommodation rather than prediction** — which
+is precisely the `a/R` situation the decoy test measured at 0 bits.
+
+*In-flight correction, the seventh of this shape.* S2's first draft asserted the surface
+"degenerates near w/R ~ 2" from a pairwise-distance table that showed the minimum flattening at
+0.085 and never reaching zero. The prose described a degeneration the measurement did not show.
+Replaced with a direct `ρ → 0` measurement, which puts the degeneracy at exactly `w/R = 2.0`.

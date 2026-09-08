@@ -3828,3 +3828,71 @@ field orientation stabilises every direction" while its own table printed **0.00
 the aligned case is fully stabilising, and the corrected reading is the stronger result. V5's
 first draft said "CME flanks cross it" while every row printed `oscillatory`. Both now derive
 their text from the computed rows.
+
+---
+
+### 2026-09-01 — Finite-thickness Kelvin–Helmholtz — **K2 CORRECTED A SECOND TIME, BY AN INDEPENDENT ROUTE** · T1 machine / T2 structural
+
+**Prompted by a clarification that the subject is Kelvin–Helmholtz instabilities** — which is what
+was computed, so the reading held. But stating it plainly exposed a second gap in K2 that the
+magnetic correction did not cover.
+
+Instrument: `code/constraint_projection/finite_thickness_kh.py`.
+Artifact: `docs/finite_thickness_kh.json`.
+
+**K2's chain was:** vortex sheet → unbounded growth → a regulator is mandatory → every regulator
+(viscosity, surface tension, finite core) breaks the exact topological conservation that motivated
+Kelvin. The magnetized run corrected **link 3**. This run corrects **link 1**.
+
+**A vortex sheet is a singular idealisation with no length scale**, so nothing sets a shortest
+unstable wavelength and `σ = kΔU/2` diverges. A physical layer has a thickness. Solving the
+Rayleigh equation directly for `U(y) = tanh(y/δ)` as a generalized eigenproblem:
+
+```
+k*delta    growth sigma (U0/delta)   unstable?
+ 0.1000                   0.080478        True
+ 0.4446                   0.189608        True
+ 0.8000                   0.107736        True
+ 0.9500                   0.031435        True
+ 1.0000                   0.000653       False
+ 2.0000                   0.000000       False
+ 5.0000                   0.000000       False
+```
+
+**F2 — validated against published values before being used** (rules 2 and 3):
+
+| quantity | computed | Michalke 1964 | diff |
+|---|---|---|---|
+| most-unstable `kδ` | 0.4446 | 0.4446 | 0.0000 |
+| max growth `U₀/δ` | 0.1896 | 0.1897 | **0.0001** |
+| neutral cutoff `kδ` | 0.9500 | 1.0000 | 0.0500 |
+
+*(The floor is stated rather than chosen to flatter: 1% of peak. `kδ = 1` is the exactly-neutral
+mode, and a discretised solve leaves a residual of 6.5e-4 there, which a 1e-6 floor would
+misreport as unstable.)*
+
+**F3 — growth is bounded with a hard cutoff at `kδ = 1`.** A perturbation finer than the layer
+cannot see the shear that drives it. **And the Rayleigh equation solved here is INVISCID** — no
+dissipation was used anywhere.
+
+**F4 — so K2 fails at two of three links, by independent routes, neither needing dissipation.**
+
+- **link 1** — the unbounded growth was an artefact of the `δ → 0` limit. *(this run)*
+- **link 3** — magnetic tension is a dissipationless restoring force. *(magnetized run)*
+
+**K2's conclusion does not survive as stated.** It asserted a mechanism derived from a singular
+limit and applied it to physical structures.
+
+**What survives, and it is the part that was always load-bearing:**
+- Finite thickness bounds the growth **rate**; it does not stabilise. Peak growth `~0.19 U₀/δ` and
+  **the billows still form** — which is what the solar observations show.
+- So a vortex knot still deforms; what it does not do is shred at infinite rate. **"Topologically
+  protected" was never the question — whether the structure PERSISTS long enough to be a particle
+  was.**
+- **K3 is untouched.** The vortex-atom programme stalled on producing spectra and on a fitted
+  knot→atom assignment, not on stability.
+
+*Recorded plainly: K2 has now been corrected from two directions in two consecutive entries, and
+the surviving statement is weaker and narrower than the one first written. That is the third
+finding of ours withdrawn or narrowed by a later entry (after R3→R5 and K4's framing), and the
+second corrected by the entry immediately following it.*

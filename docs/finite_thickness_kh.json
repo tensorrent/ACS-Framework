@@ -1,0 +1,101 @@
+{
+  "description": "Finite-thickness KH: the short-wavelength cutoff without a regulator",
+  "source": "code/constraint_projection/finite_thickness_kh.py",
+  "checks": {
+    "F1_rows": [
+      {
+        "k_delta": 0.1,
+        "sigma": 0.08047810859452575,
+        "unstable": true
+      },
+      {
+        "k_delta": 0.2,
+        "sigma": 0.13801628354592174,
+        "unstable": true
+      },
+      {
+        "k_delta": 0.4446,
+        "sigma": 0.18960771864591466,
+        "unstable": true
+      },
+      {
+        "k_delta": 0.6,
+        "sigma": 0.17296884837717047,
+        "unstable": true
+      },
+      {
+        "k_delta": 0.8,
+        "sigma": 0.10773552097563027,
+        "unstable": true
+      },
+      {
+        "k_delta": 0.95,
+        "sigma": 0.031434969271325774,
+        "unstable": true
+      },
+      {
+        "k_delta": 1.0,
+        "sigma": 0.0006528940915926802,
+        "unstable": false
+      },
+      {
+        "k_delta": 1.2,
+        "sigma": 0.0,
+        "unstable": false
+      },
+      {
+        "k_delta": 2.0,
+        "sigma": 0.0,
+        "unstable": false
+      },
+      {
+        "k_delta": 5.0,
+        "sigma": 0.0,
+        "unstable": false
+      }
+    ],
+    "F2_validation": {
+      "checks": [
+        {
+          "name": "most-unstable k*delta",
+          "computed": 0.4446,
+          "published": 0.4446
+        },
+        {
+          "name": "max growth (U0/delta)",
+          "computed": 0.18960771864591466,
+          "published": 0.1897
+        },
+        {
+          "name": "neutral cutoff k*delta",
+          "computed": 0.95,
+          "published": 1.0
+        }
+      ],
+      "within_tolerance": true
+    },
+    "F3_cutoff": {
+      "cutoff_k_delta": 1.0,
+      "peak_sigma": 0.18960771864591466,
+      "peak_k_delta": 0.4446,
+      "growth_bounded": true,
+      "inviscid": true
+    },
+    "F4_correction": {
+      "k2_chain": [
+        "sheet",
+        "unbounded growth",
+        "regulator mandatory",
+        "regulator breaks conservation"
+      ],
+      "corrected_by_magnetized_run": "link 3 -- magnetic tension needs no dissipation",
+      "corrected_here": "link 1 -- unbounded growth is an artefact of delta -> 0",
+      "survives": [
+        "finite thickness bounds growth but does not stabilise",
+        "billows still form; peak sigma ~ 0.19 U0/delta",
+        "K3's assessment untouched"
+      ],
+      "k2_conclusion_survives_as_stated": false
+    }
+  }
+}

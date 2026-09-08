@@ -3737,3 +3737,94 @@ is precisely the `a/R` situation the decoy test measured at 0 bits.
 "degenerates near w/R ~ 2" from a pairwise-distance table that showed the minimum flattening at
 0.085 and never reaching zero. The prose described a degeneration the measurement did not show.
 Replaced with a direct `ρ → 0` measurement, which puts the degeneracy at exactly `w/R = 2.0`.
+
+---
+
+### 2026-09-01 — Magnetized Kelvin–Helmholtz: the `(k·B)²` term — **CORRECTS K2'S MECHANISM; K3'S ASSESSMENT UNTOUCHED** · T1 machine / T2 structural
+
+**Prompted by the solar observation** that KH structures appear between plasma flow and magnetic
+field, and that the behaviour is **oscillatory** with flow and field on orthogonal axes. Both
+halves of that turn out to be load-bearing.
+
+Instrument: `code/constraint_projection/magnetized_kh.py`. Artifact: `docs/magnetized_kh.json`.
+
+**The previous entry (K2) computed the UNMAGNETIZED sheet** — `σ = kΔU/2`, growth at every
+wavelength, no stabilising term — and concluded that a regulator is mandatory and every regulator
+breaks the exact topological conservation motivating Kelvin's programme. **That conclusion was
+drawn from the hydrodynamic case and extended to a magnetized one without re-deriving.**
+
+**V1 — solved symbolically, not quoted.**
+
+```
+c^2 = v_A^2 - dU^2/4        unstable iff  dU > 2 v_A
+```
+
+**Below threshold `c` is REAL and the perturbation oscillates rather than growing** — which is the
+behaviour the observations show. Magnetic tension creates a threshold where the hydrodynamic case
+(`v_A → 0`) has none.
+
+**V2 — and the threshold is `k`-independent.** Driving `(k·ΔU)²` and restoring `(k·B)²` carry the
+same power of `k`, so it cancels from the criterion. **Below threshold you are below it at every
+wavelength, with no regulator.** That is the structural break from the hydrodynamic case, where
+the short-wavelength end is always violently unstable.
+
+**V3 — the orthogonality, and it is the sharp part.** The restoring term is `(k·B)²`, **not
+`|B|²`**. Bending a field line costs energy only if the perturbation runs along it:
+
+```
+angle(k,B)    k.B/kB    effective v_A     unstable?
+      0 deg   1.0000    6.8976e+05        False
+     60 deg   0.5000    3.4488e+05        False
+     89 deg   0.0175    1.2038e+04        True
+     90 deg   0.0000    4.2235e-11        True
+```
+
+**At 90° the effective Alfvén speed is zero and the threshold collapses to the hydrodynamic
+`ΔU > 0`. A perpendicular field stabilises nothing, however strong.**
+
+**V4 — so orientation is a control parameter independent of strength.**
+
+| field angle β | unstable fraction of `k` directions |
+|---|---|
+| **0°** | **0.0000** |
+| 15° | 0.0374 |
+| 45° | 0.0999 |
+| 75° | 0.1318 |
+| **90°** | **0.1387** |
+
+**Aligned field stabilises EVERY direction below threshold**, and the reason is exact: with `B`
+along the flow, drive and restore are both `∝|cos α|`, so `α` cancels and the criterion collapses
+to the bare `ΔU > 2v_A`. Tilting opens an unstable wedge monotonically. **The surviving wedge is
+what selects the orientation of the observed billows.**
+
+**V5 — and this is a null, reported as one.** Of six solar regimes sampled, **none** crosses the
+threshold; the quiet corona sits at ratio 0.014. Since KH billows **are** observed on the Sun, the
+observed cases must sit outside this table — higher local shear, weaker local field, or across a
+density contrast this **symmetric equal-density model omits** (the asymmetric criterion is weaker
+than `ΔU > 2v_A`). The table constrains the quiet regimes; **it does not explain the billows, and
+reading it as though it did would be taking a null for a positive.**
+
+**V6 — and this CORRECTS K2's mechanism.**
+
+- **Magnetic tension is a restoring force requiring no dissipation.** It stabilises below
+  `ΔU = 2v_A` while the dynamics stay ideal.
+- **Ideal MHD conserves field-line topology exactly** (Alfvén's theorem, flux freezing) — the same
+  conservation Helmholtz gives for vortex lines.
+- **So a magnetized structure can be both topologically conserved AND dynamically stable, with no
+  regulator and no broken exactness.**
+
+K2's trap is real for a **neutral** fluid and has an escape in a **conducting** one. Kelvin did
+not have that escape — MHD postdates him — so the correction belongs to the physics, not to his
+reasoning.
+
+**What survives of K2, sharper rather than weaker:** stability is **directional**, so "topologically
+protected" still does not follow; the threshold is a **dynamical** condition that must be
+maintained, not one guaranteed by topology; and it is a **stability result, not a spectrum** — it
+says a structure can persist, not which structures exist or what their masses are. **K3's
+assessment is untouched**, and K3 is where the vortex-atom programme actually stalled.
+
+*Two in-flight corrections, the eighth and ninth of this shape.* V4's first draft asserted "no
+field orientation stabilises every direction" while its own table printed **0.0000** at β = 0 —
+the aligned case is fully stabilising, and the corrected reading is the stronger result. V5's
+first draft said "CME flanks cross it" while every row printed `oscillatory`. Both now derive
+their text from the computed rows.

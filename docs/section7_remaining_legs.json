@@ -1,0 +1,397 @@
+{
+  "V0_instruments": {
+    "v0a_rvm": {
+      "rows": [
+        {
+          "T": 100.0,
+          "N_counted": 29,
+          "rvm_main": 29.00234358732535,
+          "diff": -0.002343587325349006,
+          "rel": 8.081335604651744e-05
+        },
+        {
+          "T": 1000.0,
+          "N_counted": 649,
+          "rvm_main": 648.6162353129674,
+          "diff": 0.38376468703256705,
+          "rel": 0.0005913169291719061
+        },
+        {
+          "T": 10000.0,
+          "N_counted": 10142,
+          "rvm_main": 10142.965347526813,
+          "diff": -0.9653475268132752,
+          "rel": 9.518315192400662e-05
+        },
+        {
+          "T": 74000.0,
+          "N_counted": 98625,
+          "rvm_main": 98624.70580114107,
+          "diff": 0.29419885893003084,
+          "rel": 2.9830049067683735e-06
+        }
+      ],
+      "worst_rel": 0.0005913169291719061
+    },
+    "v0b_li_lambda1": {
+      "rows": [
+        {
+          "N": 1000,
+          "partial": 0.02237613085352933,
+          "closed_form": 0.02309570896612101,
+          "residual": -0.0007195781125916775,
+          "tail_predicted": -0.000719866824438362,
+          "residual_over_tail": 0.9995989371410334
+        },
+        {
+          "N": 10000,
+          "partial": 0.022961009776394023,
+          "closed_form": 0.02309570896612101,
+          "residual": -0.00013469918972698613,
+          "tail_predicted": -0.00013470247663589677,
+          "residual_over_tail": 0.9999755987492381
+        },
+        {
+          "N": 99999,
+          "partial": 0.02307364516784988,
+          "closed_form": 0.02309570896612101,
+          "residual": -2.2063798271129004e-05,
+          "tail_predicted": -2.2063876941639902e-05,
+          "residual_over_tail": 0.9999964344203376
+        }
+      ],
+      "closed_form": 0.02309570896612101
+    },
+    "v0c_contour_poly": {
+      "rows": [
+        {
+          "eps": 0.1,
+          "N_contour": 3.006548407804207,
+          "N_true": 3,
+          "match": false
+        },
+        {
+          "eps": 0.2,
+          "N_contour": 2.9799644572871355,
+          "N_true": 3,
+          "match": false
+        },
+        {
+          "eps": 0.4,
+          "N_contour": 5.047015659328806,
+          "N_true": 5,
+          "match": false
+        }
+      ],
+      "jump_when_eps_crosses": 2
+    },
+    "v0d_dh": {
+      "xi": 0.28407904384041227,
+      "functional_equation_max_dev": 1.7467845233753904e-18,
+      "dirichlet_vs_hurwitz": 2.5655012516972005e-15,
+      "analytic_vs_numeric_derivative": 3.711710359340719e-18,
+      "offline_zero": [
+        0.8085171824566374,
+        85.6993484853776
+      ],
+      "published_offline_zero": [
+        0.808517,
+        85.699348
+      ],
+      "distance_to_published": 5.185381678441813e-07,
+      "mirror_zero": [
+        0.1914828175433626,
+        85.6993484853776
+      ],
+      "offset_from_line": 0.3085171824566374
+    }
+  },
+  "L1_omega_k": {
+    "l1a_scale": {
+      "rows": [
+        {
+          "L": 1,
+          "direct_sum": 0.001388888888888887,
+          "closed_form": 0.001388888888888889,
+          "rel": 1.4258342770356869e-15
+        },
+        {
+          "L": 3,
+          "direct_sum": 0.11249999999999984,
+          "closed_form": 0.1125,
+          "rel": 1.4257258568184383e-15
+        },
+        {
+          "L": 10,
+          "direct_sum": 13.88888888888887,
+          "closed_form": 13.88888888888889,
+          "rel": 1.4263763781219296e-15
+        }
+      ],
+      "ratio": 10000.0,
+      "predicted": 10000.0,
+      "rel": 0.0
+    },
+    "l1b_dimensions": {
+      "required": {
+        "k (FRW curvature)": "L^-2",
+        "a0 (scale factor today)": "L (or dimensionless with a length in H0)",
+        "H0 (Hubble rate)": "T^-1",
+        "c": "L T^-1"
+      },
+      "supplied": {
+        "zeta(s)": "dimensionless",
+        "s, eps, t, T": "dimensionless (complex plane)",
+        "beta, gamma": "dimensionless (zero coordinates)"
+      },
+      "n_required_dimensionful": 4,
+      "n_supplied_dimensionful": 0
+    },
+    "l1c_single_number": {
+      "claimed_sum": {
+        "0.05": -1999.9999999999998,
+        "0.1": -999.9999999999999,
+        "0.2": -499.99999999999994,
+        "0.3": -333.333333333333,
+        "0.45": -222.2222222222223
+      },
+      "claimed_spread": 1777.7777777777774,
+      "exact_rows": [
+        {
+          "T": 1000.0,
+          "N": 649,
+          "k_exact": 4.077787264359552,
+          "log_T_over_2pie": 4.0698782125727915
+        },
+        {
+          "T": 10000.0,
+          "N": 10142,
+          "k_exact": 6.3724065385415365,
+          "log_T_over_2pie": 6.372463305566837
+        },
+        {
+          "T": 74000.0,
+          "N": 98625,
+          "k_exact": 8.374042580007927,
+          "log_T_over_2pie": 8.373943305776962
+        }
+      ]
+    },
+    "l1d_identification": {
+      "omega_k": 0.0007,
+      "sigma": 0.0019,
+      "k_claimed": -2000000.0,
+      "z_claimed": 1052631579.3157895,
+      "k_exact": 8.374042580007927,
+      "z_exact": 4407.022410530488
+    },
+    "l1e_bridge": {
+      "min_abs_claimed": 222.2222222222223,
+      "min_k_exact": 4.077787264359552,
+      "k_ever_zero": false
+    },
+    "l1f_empirical": {
+      "z_observed": 0.3684210526315789,
+      "ci95": [
+        -0.0030239999999999998,
+        0.004424
+      ]
+    }
+  },
+  "L2_rh_leg": {
+    "l2a_symbolic": {
+      "exact_difference": "-8*varepsilon/((2*beta - 2*varepsilon + 2*I*(gamma - t) - 1)*(2*beta + 2*varepsilon + 2*I*(gamma - t) - 1))",
+      "matches_minus_2eps_over_A2_minus_eps2": true,
+      "exact_at_t_equals_gamma": "8*varepsilon/(4*varepsilon**2 - (2*beta - 1)**2)",
+      "manuscript_summand": "2*varepsilon/(-varepsilon**2 + (1/2 - beta)**2)",
+      "manuscript_over_exact": "-1"
+    },
+    "l2b_zeta_contour": {
+      "rows": [
+        {
+          "eps": 0.1,
+          "Re_I": 61.78123722478656,
+          "Im_H": 1.0506158468542046,
+          "N_contour": 9.999999999975316,
+          "N_true": 10,
+          "two_pi_N": 62.83185307179586
+        },
+        {
+          "eps": 0.3,
+          "Re_I": 60.30247707660099,
+          "Im_H": 2.529375995194876,
+          "N_contour": 10.0,
+          "N_true": 10,
+          "two_pi_N": 62.83185307179586
+        }
+      ],
+      "max_err": 2.468425464030588e-11
+    },
+    "l2c_dh_contour": {
+      "rows": [
+        {
+          "eps": 0.2,
+          "Re_I": 5.5551370261088255,
+          "N_contour": 1.0,
+          "N_rounded": 1
+        },
+        {
+          "eps": 0.45,
+          "Re_I": 17.6623475836741,
+          "N_contour": 3.0,
+          "N_rounded": 3
+        }
+      ],
+      "jump": 2,
+      "offset": 0.3085171824566374,
+      "seconds": 222.08615398406982
+    },
+    "l2d_normalisation": {
+      "rows": [
+        {
+          "eps": 0.05,
+          "sigma": 0.55,
+          "carlson_exponent": 0.99,
+          "T": {
+            "1e+06": 24.065613345281395,
+            "1e+12": 41.920545987402484,
+            "1e+24": 63.599972238046306
+          }
+        },
+        {
+          "eps": 0.1,
+          "sigma": 0.6,
+          "carlson_exponent": 0.96,
+          "T": {
+            "1e+06": 15.899993059511575,
+            "1e+12": 18.29898201965313,
+            "1e+24": 12.11872487631501
+          }
+        },
+        {
+          "eps": 0.25,
+          "sigma": 0.75,
+          "carlson_exponent": 0.75,
+          "T": {
+            "1e+06": 0.873769608025416,
+            "1e+12": 0.05526204223185709,
+            "1e+24": 0.0001105240844637142
+          }
+        }
+      ],
+      "bound_at_1e24": 63.599972238046306
+    },
+    "l2e_criteria": {
+      "weyl_ratio": 1.0000118551353097,
+      "table": [
+        {
+          "criterion": "Hilbert-Polya",
+          "content": "zeros are eigenvalues of a self-adjoint operator",
+          "verdict": "no operator, no Hilbert space, no eigenvalue equation appears"
+        },
+        {
+          "criterion": "Berry-Keating (H = xp)",
+          "content": "semiclassical density reproduces log(T/2pi e)",
+          "verdict": "MATCHES - but this is the smooth term only, which is RH-independent"
+        },
+        {
+          "criterion": "Connes / Weil positivity",
+          "content": "explicit-formula quadratic form >= 0 <=> RH",
+          "verdict": "no quadratic form, no positivity, no test function"
+        },
+        {
+          "criterion": "Li's criterion",
+          "content": "lambda_n >= 0 for all n >= 1 <=> RH",
+          "verdict": "no such sequence is formed"
+        },
+        {
+          "criterion": "Nyman-Beurling",
+          "content": "approximation in L^2(0,1) <=> RH",
+          "verdict": "no function space appears"
+        },
+        {
+          "criterion": "zero-density / Backlund contour",
+          "content": "N(1/2+eps,T) = 0 for all eps <=> RH",
+          "verdict": "MATCHES the integral once the 1/T is dropped - see L3"
+        }
+      ],
+      "n_matching": 2
+    }
+  },
+  "L3_repair": {
+    "repaired_statement": "RH <=> N(1/2+eps,T)=0 for all eps>0, T>0; the integral, un-normalised, equals 2 pi N_eps(T) + boundary",
+    "prior_art": [
+      {
+        "source": "Backlund (1914, 1918)",
+        "content": "contour/argument-principle evaluation of N(T) and of zeros in a strip; the standard rigorous count"
+      },
+      {
+        "source": "Bohr & Landau (1914)",
+        "content": "N(sigma,T) = o(T) for every fixed sigma > 1/2 - the theorem that makes the 1/T normalisation blind"
+      },
+      {
+        "source": "Littlewood (1924)",
+        "content": "2 pi SUM_{beta>1/2}(beta - 1/2) = INT_0^T log|zeta(1/2+it)| dt + O(log T)  (Littlewood's lemma); RH <=> the left side vanishes"
+      },
+      {
+        "source": "Carlson (1920)",
+        "content": "N(sigma,T) << T^{4 sigma(1-sigma)} log T"
+      },
+      {
+        "source": "Selberg (1946), Ingham (1940)",
+        "content": "sharper density theorems built on the same contour identity"
+      },
+      {
+        "source": "Davenport & Heilbronn (1936)",
+        "content": "functional-equation symmetry alone does not place zeros - used as the test object in V0d/L2c"
+      }
+    ],
+    "novel": false
+  },
+  "L4_ledger_correction": {
+    "l4a_odd": {
+      "pair": [
+        0.8085171824566374,
+        0.1914828175433626
+      ],
+      "values": {
+        "beta - 1/2": 0.0,
+        "(beta - 1/2)^3": 0.0,
+        "sinh(beta - 1/2)": 0.0
+      },
+      "max_abs": 0.0
+    },
+    "l4b_even": {
+      "dh_sum_sq": 0.19036570374196418,
+      "zeta_sum_sq": 0.0,
+      "k_online": -999.9999999999998,
+      "k_offline": 333.3333333333336,
+      "k_mirror": 333.33333333333326,
+      "online_offline_separation": 1333.3333333333335,
+      "side_separation": 3.410605131648481e-13
+    }
+  },
+  "summary": [
+    "instruments: RvM count matches the zero list to 5.9e-04 relative; Li's lambda_1 lands on the published closed form to within 2.2e-05, which is 1.000 x its own predicted truncation tail",
+    "DH off-line zero reproduces the published value to 5.2e-07; offset from the line 0.308517",
+    "L1  Omega_k needs 4 dimensionful inputs; Section 7 supplies 0. The claimed sum varies by 1777.8 across the eps grid, so it is not one number; the exact integral is one number per T but diverges.",
+    "L1  k is never 0 under either reading (min |k| = 222.22 claimed, 4.0778 exact), so ANY bridge with B(0)=0 makes Section 7 predict Omega_k != 0 - the negation of its own conclusion. Direct identification misses the measured value by 4.41e+03 sigma (exact) and 1.05e+09 sigma (claimed).",
+    "L2  the claimed sum is the exact partial-fraction difference with i(t-gamma) deleted and the sign flipped: manuscript/exact-at-t=gamma = -1",
+    "L2  the un-normalised integral IS an argument-principle count and DOES see off-line zeros (DH count moves by 2 across eps = 0.3085); the blindness is the 1/T, which kills the difference unconditionally (Carlson bound 6.4e+01 at T = 1e24).",
+    "L2  of 6 standard criteria, 2 match - both RH-independent as used. The Berry-Keating smooth term matches at ratio 1.000012.",
+    "L3  repaired, it is Backlund's contour count and the zero-density criterion N(1/2+eps,T)=0: correct, classical, not novel.",
+    "L4  this repo's recorded 'must be ODD' constraint forces F = 0 identically (max |F| on a maximally off-line pair = 0.0e+00); and '(1/2-beta)^2 => blind' is refuted by SUM (beta-1/2)^2, which separates DH from zeta by 0.190366."
+  ],
+  "provenance": {
+    "script": "code/constraint_projection/section7_remaining_legs.py",
+    "zeros": "code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt",
+    "n_zeros": 100000,
+    "mpmath": "1.3.0",
+    "numpy": "2.4.6",
+    "sympy": "1.14.0",
+    "python": "3.11.15",
+    "quick": false,
+    "omega_k_source": "Planck 2018 VI, A&A 641 A6 (2020), TT,TE,EE+lowE+lensing+BAO: 0.0007 +- 0.0019 (external measurement, quoted not re-derived)",
+    "seconds": 277.8
+  }
+}

@@ -3896,3 +3896,72 @@ limit and applied it to physical structures.
 the surviving statement is weaker and narrower than the one first written. That is the third
 finding of ours withdrawn or narrowed by a later entry (after R3→R5 and K4's framing), and the
 second corrected by the entry immediately following it.*
+
+---
+
+### 2026-09-11 — §7's two unassessed legs, and a third specialist correction to our own record · T1 machine / T2 structural
+
+Produced by a dispatched analytic-number-theory specialist, terminated by the rate limit after
+writing its instrument. The instrument was committed **flagged unverified** (`409267c`); it has
+since been run to completion here — **277.8 s, artifact produced** — and is now a result.
+
+Instrument: `code/constraint_projection/section7_remaining_legs.py`.
+Artifact: `docs/section7_remaining_legs.json`.
+
+**Instruments validated before use** (rules 2–3): Riemann–von Mangoldt count matches the zero list
+to **5.9e-4** relative; Li's `λ₁` lands on the published closed form to **2.2e-5**, which is
+**1.000×** its own predicted truncation tail; the Davenport–Heilbronn off-line zero reproduces the
+published value to **5.2e-7**, offset 0.308517 from the line.
+
+**L1 — the `Ω_k` leg, never previously assessed.** `Ω_k` needs **4 dimensionful inputs**; §7
+supplies **0**. The claimed sum varies by **1777.8** across the ε grid, so it is not one number at
+all; the exact integral is one number per `T` but diverges.
+
+And the sharper half: **`k` is never 0 under either reading** (min `|k|` = 222.22 claimed, 4.0778
+exact). So **any** bridge with `B(0) = 0` makes §7 predict `Ω_k ≠ 0` — **the negation of its own
+conclusion.** Direct identification misses the measured value by **4.41e3 σ** (exact) and
+**1.05e9 σ** (claimed).
+
+**L2 — the RH leg.** The claimed sum is the exact partial-fraction difference **with `i(t−γ)`
+deleted and the sign flipped** (manuscript / exact-at-`t=γ` = **−1**). The un-normalised integral
+**is** an argument-principle count and **does** see off-line zeros (the DH count moves by 2 across
+ε = 0.3085) — **the blindness is the `1/T`**, which kills the difference unconditionally (Carlson
+bound 6.4e1 at `T = 1e24`). Of 6 standard criteria, 2 match and **both are RH-independent as
+used**; the Berry–Keating smooth term matches at ratio 1.000012.
+
+**L3 — repaired, it is Bäcklund's contour count and the zero-density criterion
+`N(½+ε, T) = 0`.** Correct, classical, **not novel.**
+
+**L4 — and a correction to this repository's own record, verified here independently rather than
+taken on trust.** This corpus recorded a constraint that *"a functional detecting off-line zeros
+must be ODD under β↦1−β"*, retired it on prior art (Davenport–Heilbronn, Weil positivity), and
+left it at that. The specialist reports the constraint is **vacuous**. Checked directly:
+
+```
+oddness verified on all trials
+max |sum of an ODD F over a SYMMETRIC zero set| = 2.331e-15
+SUM (beta-1/2)^2  on-line zeros        : 0.000000
+SUM (beta-1/2)^2  DH-style off-line    : 3.806890     separation 3.806890
+```
+
+**Zeta's zeros are symmetric under β↦1−β, so an odd functional sums to zero over them
+identically — it detects nothing.** Our constraint did not merely duplicate known work; **it
+forced the functional to vanish.** And the companion claim that a `(½−β)²` form is "blind" is
+refuted: an **even** form separates DH from zeta by 0.190366 (0.19 in the instrument's
+normalisation, 3.81 in the direct check above).
+
+*Precision retained:* such a form can tell **whether** a zero is on the line, not **which side** it
+is on — and since the zeros are symmetric, no functional of the zero multiset can ever do the
+second. The first is the only thing any detector could do.
+
+**Verdict.** §7's remaining two legs both fail, and the `Ω_k` leg fails by predicting the negation
+of its own conclusion. **Clause 2 does not hold, and §7's underlying kill does not depend on it** —
+L2d supplies an unconditional mechanism instead.
+
+*Third specialist correction to our own record*, after the amenability run's two (`1ab2545`). All
+three corrected **mechanism while leaving direction intact**, which is the pattern worth noting:
+the verdicts were reached by routes that did not hold.
+
+*Note on trust.* This entry's L4 was re-derived here before being recorded, precisely because a
+claimed correction arriving from an unverified instrument is what this corpus does not accept on
+assertion. The instrument was right.

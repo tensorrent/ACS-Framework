@@ -8,7 +8,8 @@ landed kill credits the survivors by elimination — no proof required. Don't pr
 the gold is there; remove everything that isn't.
 
 - Seed convention: `20260423`
-- Tiers: **T1** machine-verified / **T2** proven-or-by-inspection / **T3** numerical / **T4** falsified
+- Tiers: **T0** machine-CHECKED (kernel-verified by a proof assistant, axiom dependencies disclosed; added 2026-08-30, strictly stronger than T1) / **T1** machine-verified (a script ran and asserted) / **T2** proved (complete mathematical proof, human-verified) / **T3** numerical (measured, consistent across runs) / **T4** falsified. `· method` is a declared **non-claim** tag, not a tier: it marks an entry that adopts a discipline rather than asserting a proposition.
+- **"Tiers never promote" means the PATH marker, not a strength ordering.** T1 and T2 record *which route was available* (L28–32: recompute under an instrument swap → T1; argue from the quantity's construction when no pipeline is reachable → T2), so a claim that later becomes recomputable moves T2 → T1 by design. What never happens is a claim being re-tiered on the same evidence, or a weaker route wearing a stronger route's clothes. Stated 2026-09-11 by the joint-coherence audit, which found the phrase used twice and defined nowhere; previously the ledger used both readings (L88→L370 raises a tier, L1300–1303 refuses to).
 - Status tags: `QUEUED` / `IN-PROGRESS` / `KILLED` / `SURVIVED` / `SPLIT` / `BLOCKED`
 
 > **Provenance note (2026-08-07).** Several kill-test scripts below are cited at
@@ -85,6 +86,8 @@ flagged tension. Cost: medium.
 ## KILLS LOGGED
 
 ### 2026-06-06 — Target 1: framework constants invariant-or-refraction — **T2 STRUCTURAL**
+
+> **TIER RAISED DOWNSTREAM — see L370–378.** The four verdicts in this entry were recorded `T2 STRUCTURAL` here and restated as `T1 UPGRADE` in the OOS01 block, in the corpus's own word (*"My session T2 verdicts upgrade to T1"*). Under the **path-marker** reading of the tiers (L28–32: numerical → T1, structural → T2) that is not a promotion but a change of route, and the upgrade was designed in from the start (L97, L128, L147–150, L328). Under a strength ordering it would be one. The legend at the top of this file now states which reading is in force. Marked by the joint-coherence audit, 2026-09-11.
 
 **Method note.** The ACS derivation code for these four constants is not reachable in
 this environment (`computatioanal_work_ACS` — *sic*, directory name recorded as-is — contains the TENT classifier notes, not
@@ -389,6 +392,8 @@ KILLED: γ (now T1), Q6, Q5-classes, **Q2 BRA speed (T1)**, **Q4 identity-as-sta
 SURVIVED/INVARIANT: h̃/h (now T1), Q3 floor (scoped), Q4 monotonicity-analogy, Q7 (decoupling).
 REFRACTION (T1): g₄'s 4/3, γ's 0.274, λ_φ's 0.1283. BLOCKED: Q3 (d,q) law, Q5 full HP operator.
 
+> **DATED SNAPSHOT (post-OOS01), superseded on two lines below.** "SURVIVED/INVARIANT: … Q4 monotonicity-analogy" is narrowed at L397 and L411–415 — the analogy survives only as Casini–Huerta's theorem, so no reading of `ΔI ≡ c` is both novel and true. "BLOCKED: Q3 (d,q) law" is resolved at L417 as **FALSIFIED (T4)**. The snapshot is kept as written; the pointer is added. Marked by the joint-coherence audit, 2026-09-11.
+
 ### 2026-06-06 — Target Q4 (monotonicity reading) — **RESOLVED; target now fully closed** · T1 numerical / T2 theorem
 
 Code: `/tmp/q4_monotonicity.py` (validated BdG instrument, M=400). *(script not committed to this repository; run on an external session machine — see the provenance note at the top of this file)*
@@ -532,7 +537,7 @@ picture.
 
 ---
 
-### 2026-07-26 — Möbius-screw: *Sl = 2* as the geometric origin of *g = 2* — **KILLED** · T2 structural / T1 numerical
+### 2026-07-26 — Möbius-screw: *Sl = 2* as the geometric origin of *g = 2* — **KILLED** · T4 falsified · T2 structural / T1 numerical
 
 **Target.** `papers/notes/Mobius_Screw_Electron.tex` §3.3 identifies the torus-framing
 self-linking number of the (2,1) centerline, `Sl = p·q = 2`, with the tree-level Dirac
@@ -836,6 +841,8 @@ asserted.
 adeles by translation). Both standard readings — `A_Q/Q` and the idele class group
 `A_Q^x/Q^x` — are **abelian, hence amenable** (Markov–Kakutani), and `A_Q/Q` is
 compact, carrying a translation-invariant Haar *probability* measure. The axiom
+
+> **SUPERSEDED IN MECHANISM — see the 2026-09-11 amenability entry at the end of this file.** "Malformed" is not accurate. `A_Q/Q^×` is Connes' adele class space (Connes, *Selecta Math. (N.S.)* **5** (1999) 29–106): defined, but not a group. Separately, "every abelian group is amenable" settles `A_Q/Q` and `A_Q^×/Q^×` but does **not** settle `A_Q/Q^×`, which is not a group to be abelian. Axiom I remains **T4**; the route to it is corrected. Marked by the joint-coherence audit, 2026-09-11.
 asserts no finitely additive translation-invariant probability measure exists; that
 is false under every reading, and non-amenability is load-bearing for the "non-amenable
 information reservoir" framing. Axiom II maps onto `R^{3,1}` but `delta^(3)` fixes
@@ -997,6 +1004,8 @@ and needing `m ~ 9.6e-24 eV`.
   abelian group is amenable; `A_Q/Q` is compact abelian with a Haar probability
   measure; the idele class group is abelian; `A_Q/Q^x` as literally written is
   undefined. **Axiom I false under every reading.**
+
+> **SUPERSEDED IN MECHANISM — see the 2026-09-11 amenability entry at the end of this file.** `A_Q/Q^×` is **not** undefined: it is Connes' adele class space (Connes, *Selecta Math. (N.S.)* **5** (1999) 29–106). It is defined but is not a group, which is why amenability does not apply to it directly. The verdict on Axiom I is unchanged — T4 under every reading — and only the reason is corrected. Marked by the joint-coherence audit, 2026-09-11.
 - **V9** — the prior kills were **re-executed, not cited**:
   `framing_transformer.py` returns `Tw + Wr = -2.000000`, `sigma = -1` three ways, and
   the control row `Sl = 0 -> sigma = -1` (same class as `Sl = 2`);
@@ -1391,6 +1400,8 @@ classical material: DH is the standard demonstration that the involution is not 
 and Weil positivity is the standard construction that beats it. **RETIRED as a novel
 result (T4 on the novelty claim).** The underlying observation stands as a correct reading
 of the CPF manuscript's §7 — it is simply not a contribution.
+
+> **SUPERSEDED — see the 2026-09-11 §7 entry beginning at L3919.** The two sentences above are false as written. The constraint is not "true": zeta's zeros are symmetric under `β↦1−β`, so an odd functional sums to zero over them identically and detects nothing — it does not merely duplicate known work, it forces the functional to vanish (independently re-derived: max |sum of odd F over a symmetric zero set| = 2.331e-15). The companion claim that a `(½−β)²` form is "blind" is refuted — an **even** form separates Davenport–Heilbronn from zeta by 0.190366. The retirement on prior art three lines above stands as a fact about novelty; the affirmation of the content does not. Marked by the joint-coherence audit, 2026-09-11.
 
 **Note.** The Anthropic Riemann-zeta result logged above works in exactly this framework
 — *"a quadratic form induced by Weil, and positive- (respectively negative-)definite
@@ -2528,6 +2539,8 @@ merely small — the integrand `(r₁−r₂)·(dr₁×dr₂)` vanishes identica
 For a planar centreline `Sl = 2` needs `n = 4` — 720°. **The manuscript's own object was
 never in the family we built.** Extended here.
 
+> **PART OF THIS FINDING IS WITHDRAWN — see R5 below (L2586–2588).** R5 withdraws what it calls *"R3's second finding"*: the implicit proposition that `Sl = 2` forces orientability, carried by the sentence above plus R4's table row `4 · 2.0 · True`. R3 as printed labels only one finding, so R5's pointer named an unlabelled target; the target is labelled here. The first finding — that our family was incomplete — stands. Marked by the joint-coherence audit, 2026-09-11.
+
 **R4 — capacitance is BLIND to self-linking, and this is the durable result.**
 
 ```
@@ -2607,6 +2620,8 @@ two runs: a conclusion asserted next to a number that contradicted it.
 ---
 
 ### 2026-08-31 — The evidence-chain discipline made canon · method
+
+> **On the `· method` marker.** It is a declared non-claim tag, not a sixth tier — see the legend at the top of this file. The two later method entries (L3040, L3098) carry `T1 machine` because what was machine-checked there is the *enforcement* (a linter; a PreToolUse guard), which is a claim with an instrument behind it. Adopting a discipline is not. The distinction is now stated rather than inferred. Marked by the joint-coherence audit, 2026-09-11.
 
 **The instruction.** *If a claim is made you must back it up with the complete chain of
 evidence. Generation is a primary instinct — subconscious, like reacting. We respond, not
@@ -3717,6 +3732,8 @@ knot's topology is preserved while its geometry is torn apart. A regulator — v
 tension, finite core — is therefore mandatory, **and every one of them breaks the exact
 conservation that motivated the programme** (reconnection at finite viscosity changes knot type).
 
+
+> **SUPERSEDED IN MECHANISM, not in direction — see V6 at L3824–3844 and the finite-thickness result at L3866–3897 below.** The sentence above says a regulator is *mandatory*. Both later corrections narrow that: magnetic tension restores without any dissipation, and finite thickness bounds the growth rate inviscidly. The conclusion the sentence draws — that every regulator breaks the exact conservation motivating the programme — survives; the claim that dissipation is the only route to it does not. Marked by the joint-coherence audit, 2026-09-11.
 Same shape as the finite-resolution result already in this corpus: **the cutoff that makes the
 object well-defined removes the exactness that made it attractive.**
 
@@ -3965,3 +3982,133 @@ the verdicts were reached by routes that did not hold.
 *Note on trust.* This entry's L4 was re-derived here before being recorded, precisely because a
 claimed correction arriving from an unverified instrument is what this corpus does not accept on
 assertion. The instrument was right.
+
+---
+
+### 2026-09-11 — The ledger audited against itself: nine defects, all of them pointers · T1 machine / T2 structural
+
+**Instruments.** `code/constraint_projection/crossref_check.py` (exit 0),
+`code/constraint_projection/gate_coverage.py` (exit 0). Specialist report:
+`docs/ledger_joint_coherence_audit.md`, 557 lines, four checks, every finding quoted with both
+ends. Line numbers in that report are as of commit `9a09c4e`, **before** the repairs recorded
+here; the repairs shifted the file, which is itself one of the findings.
+
+**Why.** Every previous check in this corpus tested a claim against an instrument. None tested
+the *record* against itself. The question was whether 57 entries written over three months are
+jointly coherent — whether what was withdrawn is marked withdrawn at both ends.
+
+**The result, and it is one result, not nine.** Nine defects were found and **not one of them is
+a wrong number.** Every claim, every verdict, every tier direction survives. What fails is
+**pointers**: an entry corrected downstream with nothing at the original end saying so. The
+corpus's arithmetic is sound and its bookkeeping leaks.
+
+**C1 — the largest gap: the amenability correction never reached the ledger.** Commit `1ab2545`
+and `docs/axiom_i_amenability.json` correct *"`A_Q/Q^×` is malformed"* to *defined but not a
+group* — it is **Connes' adele class space** (Connes, *Selecta Math. (N.S.)* **5** (1999) 29–106).
+`grep -c "Connes\|adele class"` over the ledger returned **0**. Meanwhile three live texts still
+carried the superseded mechanism: ledger L840–841, L1004–1005, and `MANIFEST.md` L222. A
+correction that lives only in a JSON artifact and a commit message is not in the record. Fixed:
+supersession markers at both ledger sites, `MANIFEST.md` L222 rewritten. **Axiom I remains T4
+under every reading** — only the route is corrected, and the direction was never in dispute.
+
+**C2 — the retired `β↦1−β` constraint still reads as true.** L1398 and L1401–1402 assert *"The
+statement is **true** but not ours … The underlying observation stands as a correct reading"*.
+The 2026-09-11 §7 entry (L3919) found it **vacuous**: an odd functional over a symmetric zero set
+sums to zero identically (independently re-derived here: `2.331e-15`), and the companion "blind"
+claim is refuted by an even form separating DH from zeta by `0.190366`. Marked.
+
+**C3 — "a regulator is therefore mandatory" (L3731) was corrected twice and marked zero times.**
+V6 (L3824) shows magnetic tension restores *without dissipation*; the finite-thickness result
+(L3881, Michalke 1964 to `0.0001`) bounds growth *inviscidly*. The sentence's conclusion survives;
+its claim that dissipation is the only route does not. Marked.
+
+**C4 — the ledger's own tier legend never absorbed T0.** Three of its entries carry T0 (L1300 and
+two others) and the legend at L11 listed T1–T4 only (it is now L11–L12), so a reader working from the legend had no
+definition for a tier the document uses. The two legends also disagreed on T2 — ledger
+"proven-or-by-inspection" against `MANIFEST.md` "complete mathematical proof, human-verified" —
+and "by inspection" is exactly the weaker sense the T0 entry was created to escape. Legend
+rewritten to match.
+
+**C5 — "tiers never promote" was stated twice and defined nowhere, and the corpus used both
+readings.** The phrase appears at `MANIFEST.md` L10 and ledger L1478. Two incompatible semantics
+coexist: a **strength ordering** (T0 > T1 > T2 …) and a **path marker** (L28–32: recompute under
+an instrument swap → T1, argue structurally when no pipeline is reachable → T2). Under the first,
+L88→L370 is a violation — the framework constants were recorded `T2 STRUCTURAL` and restated as
+`T1 UPGRADE`, in our own word (*"My session T2 verdicts upgrade to T1"*). Under the second it is a
+change of route, and it was **designed in** (L97, L128, L147–150, L328). The T0 entry meanwhile
+refuses the identical move in the opposite direction (L1300–1303: *"No existing claim changes
+tier… not a promotion"*). **Two entries applying opposite conventions to the same kind of event,
+neither citing the other.** Resolved by stating the path-marker reading in the legend, which is
+the one the kill-criterion at L28–32 actually encodes; the strength ordering survives as the
+reason T0 exists at all. Both entries marked.
+
+**C6–C9 — the smaller four.** A dated scorecard (L390–393) superseded on two of its lines within
+30 lines, no pointer → pointer added. `· method` at L2622 sitting in the tier slot while the two
+other method-adoption entries (L3040, L3098) carry `T1 machine` → `· method` declared a
+**non-claim tag** in the legend, and the distinction stated: those two are T1 because their
+*enforcement* was machine-checked (a linter, a guard), which is a claim with an instrument; adopting
+a discipline is not. A heading (L540) omitting the **T4** its own body states → heading corrected.
+R5 withdrawing *"R3's second finding"* where R3 labels only one finding → the target labelled at R3.
+
+**C10 — the repair reproduced the defect, immediately.** Every `L<n>` written into a repair marker
+went stale the moment a marker above it shifted the file. `crossref_check.py` caught **nine**
+broken references on first run, four of them in markers written minutes earlier — one pointing at a
+blank line, one pointing at *itself*. Line numbers are this document's addressing scheme and it had
+no checker. It has one now: X1 resolves every reference (19 of them) and rejects a pointer that
+lands on a blank line or on another pointer; X2 holds 14 anchored references against the text they
+are supposed to name, so a future edit that moves a target fails loudly instead of drifting.
+
+**And then X1 was not enough.** This entry's own references — L840, L1005, L1398, L1401, L2622 —
+were written from greps taken *before* the repairs and were every one of them stale. **X1 passed
+all six**, because each resolved to a real, non-blank, non-pointer line. It was pointing at the
+wrong text, not at nothing. Resolving is not the same as being right, and only the anchored check
+(X2) can tell the difference — so all ten were promoted to anchors, taking X2 from 14 to **24**.
+The generic check catches a *dangling* pointer; only a named target catches a *wrong* one. That
+distinction is the whole lesson of this entry, and it took being caught by it twice in one hour.
+
+*Narrowing stated:* the reference regex requires 2–4 digits, because single-digit `L1`–`L9` in this
+corpus are **leg labels** ("**L2 — the RH leg**") and Lebesgue norms, not line numbers. A reference
+to a line below 10 would be missed; the file's first nine lines are header, so there are none.
+
+**C11 — and the gate that was supposed to prevent this covers 76% of the file.**
+`test_every_entry_has_a_tier_marker` scans `### 202*` only: **48 of 63 headings**. Of the 15 it
+never reads, 5 carry a tier anyway, 9 are document structure, and 1 is a continuation sub-heading.
+Of its three accept-branches, `T[0-4]` carries 47 entries, `method` carries exactly one, and
+**`NOT-FOUND` has never fired** — an unexercised branch in a test whose whole function is to be
+exercised. The gate tests heading hygiene; it does not test that claims are tiered, because it
+never reads a body. C9 (a heading omitting its own body's T4) is precisely what that blind spot
+lets through, and a new gate test now catches that shape.
+
+**A correction to this entry's own instrument, made mid-run.** `gate_coverage.py` first reported
+L413 as *"claim-shaped and untiered — a real escapee"*. It is not: L417's entry heading carries
+**FALSIFIED (T4)** and L413 is its continuation sub-heading. The regex was right that the line
+carries no tier of its own; the prose calling it an escapee was written from the regex output
+**without reading the adjacent line** — the tenth instance in this corpus of prose composed beside a
+computation rather than from the object it describes, and the first one caught by a specialist
+rather than by us. Continuation sub-headings are now a named category, and the instrument
+**verifies the inherited tier at runtime** rather than granting it — it exits non-zero if the
+heading above carries none.
+
+**What was checked and came back clean**, with the searches shown in the specialist report: the
+`alpha` numbers across six entries (the arithmetic closes — `137.036 / 1.88629 = 72.648`,
+`137.036 / 26.96 = 5.083`); the Q3 SURVIVED-scoped → FALSIFIED chain; the Q4 chain; the g-factor
+across four entries; and the apparent `H₂ = 0` clash between *"adds nothing"* and *"both clauses
+are the obstruction"*, which the Green's entry resolves itself two lines later.
+
+**Not reached, and stated rather than left implied:** the ledger was checked against itself and
+against `MANIFEST.md`, **not against the code** — no verification that entries match the `docs/*.json`
+artifacts beyond the two opened for the amenability gap; no exhaustive pairwise sweep of all 57
+entries (the contradiction search targeted shared-object areas); `papers/` was not audited.
+
+**The three new gate tests were mutation-tested before being trusted** (rule 3). Mutant 1:
+rename an anchored heading so the anchor misses → `test_ledger_cross_references…` **KILLED**.
+Mutant 2: drop L413's continuation exemption so it becomes an unclassified escapee →
+`test_tier_gate_coverage…` **KILLED**. Mutant 3: revert L540's heading to omit T4 while its body
+still states `FALSIFIED (T4)` → `test_heading_tier_matches…` **KILLED**. Three of three; files
+restored; gate **66 → 69**, all green.
+
+**Verdict.** The record is arithmetically sound and was **bibliographically leaky**. Nine leaks
+closed, two instruments and two gate tests added so the tenth fails loudly. The finding that
+matters is not any single defect — it is that **a corpus disciplined about evidence was undisciplined
+about pointers**, and that nobody noticed until the record was read as a joint object instead of
+entry by entry.

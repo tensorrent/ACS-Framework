@@ -355,3 +355,78 @@ def test_every_entry_has_a_tier_marker():
             if not re.search(r"\bT[0-4]\b|NOT-FOUND|method\b", line):
                 untiered.append(line.strip()[:95])
     assert not untiered, "entries without a tier marker:\n" + "\n".join(untiered)
+
+
+# ---------------------------------------------------------------------------
+# Added 2026-09-11 by the joint-coherence audit. The audit's nine defects were
+# all pointers, and the gate above could not see any of them: it reads heading
+# lines only, and only those starting "### 202".
+# ---------------------------------------------------------------------------
+
+_INSTR = pathlib.Path(__file__).resolve().parents[3] / "code" / "constraint_projection"
+
+
+def _run_instrument(name):
+    import subprocess
+    import sys
+    path = _INSTR / name
+    if not path.exists():
+        pytest.skip(f"{name} not present")
+    return subprocess.run([sys.executable, str(path)], capture_output=True, text=True)
+
+
+def test_ledger_cross_references_resolve_and_anchors_hold():
+    """A pointer that resolves is not the same as a pointer that is right.
+
+    crossref_check.py runs both checks: X1 rejects a reference that dangles,
+    lands on a blank line, or points at another pointer; X2 holds every anchored
+    reference against the text it names. X1 alone passed six wrong references on
+    the day this was written, which is why X2 exists.
+    """
+    r = _run_instrument("crossref_check.py")
+    assert r.returncode == 0, (
+        "ledger cross-references are broken:\n" + r.stdout[-3000:] + r.stderr[-1000:]
+    )
+    assert "PASS -- every reference resolves and every anchor holds" in r.stdout
+
+
+def test_tier_gate_coverage_is_measured_not_assumed():
+    """The tier gate's guarantee is narrower than its name; measure it."""
+    r = _run_instrument("gate_coverage.py")
+    assert r.returncode == 0, (
+        "gate_coverage.py failed:\n" + r.stdout[-3000:] + r.stderr[-1000:]
+    )
+    # Every heading outside the gate's scan must fall into a named category --
+    # tiered anyway, structural, or a continuation whose inherited tier the
+    # instrument verified at runtime. An unclassified escapee fails here.
+    assert "claim-shaped AND untiered -- real escapees   : 0" in r.stdout, (
+        "a claim-shaped, untiered heading sits outside the tier gate:\n" + r.stdout
+    )
+
+
+def test_heading_tier_matches_the_verdict_in_the_body():
+    """A heading may not under-report a falsification its own body states.
+
+    The old gate passed L540 for three months: heading `T2 structural / T1
+    numerical`, body `**Verdict.** ... is **FALSIFIED (T4)**`. The gate never
+    reads bodies, so a heading can omit the strongest tier its entry earned.
+    """
+    led = DOCS / "Elimination_Ledger.md"
+    if not led.exists():
+        pytest.skip("ledger not present")
+    lines = led.read_text().splitlines()
+    starts = [i for i, l in enumerate(lines) if l.startswith("### 202")]
+    problems = []
+    for n, start in enumerate(starts):
+        end = starts[n + 1] if n + 1 < len(starts) else len(lines)
+        heading = lines[start]
+        body = "\n".join(lines[start + 1:end])
+        # Only the T4 direction is checked: a body that states a falsification
+        # verdict is the one case where omitting the tier understates the result.
+        if re.search(r"\*\*Verdict\.\*\*[^\n]{0,400}?FALSIFIED \(T4\)", body, re.S):
+            if "T4" not in heading:
+                problems.append(f"L{start + 1}: {heading.strip()[:90]}")
+    assert not problems, (
+        "entry bodies state FALSIFIED (T4) while their headings omit T4:\n"
+        + "\n".join(problems)
+    )

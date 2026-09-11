@@ -1,0 +1,40 @@
+{
+  "description": "The Klein-Foam reading of `a` as throat resolution",
+  "source": "code/constraint_projection/klein_foam_reading.py",
+  "checks": {
+    "K1_invariance": {
+      "expression": "log(8*R/a)/2 + 1/2",
+      "joint_scaling_invariant": true,
+      "depends_only_on": "R/a",
+      "verdict": "reading is structurally correct -- alpha^-1 IS resolution-relative"
+    },
+    "K2_foam_resolution": {
+      "foam_floor": "Planck / voxel (sec:scales)",
+      "a_over_R": "8.37092e-23",
+      "alpha_inv": "26.957067",
+      "off_by": "5.0835",
+      "verdict": "best absolute reading; still 5.08x off"
+    },
+    "K3_below_the_floor": {
+      "required_a_m": "3.93699e-131",
+      "required_a_in_planck_lengths": "2.43587e-96",
+      "decades_below_foam_floor": "95.613",
+      "renaming_changes_arithmetic": false,
+      "verdict": "96 decades below the foam's own floor -- an INTERNAL contradiction"
+    },
+    "K4_scoping": {
+      "klein_foam_quotes": [
+        "Absolute uniqueness and ``no free parameters'' claims are not asserted.",
+        "as-implemented, not as a uniqueness theorem for $\\alpha$~\\cite{Mobius2026}.",
+        "Free-parameter count depends on which quantities are treated as inputs ($R$, $a/R$, charge split); absolute ``zero free parameters'' is not claimed."
+      ],
+      "cpf_quotes": [
+        "The framework contains zero free parameters and is both UV and IR complete.",
+        "CPF + GfE & 0 & All constants"
+      ],
+      "klein_foam_names_a_over_R_as_input": true,
+      "cpf_declares_zero_free_parameters": true,
+      "verdict": "two scope declarations for a/R in one corpus; the arithmetic matches the earlier"
+    }
+  }
+}

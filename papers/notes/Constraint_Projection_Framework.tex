@@ -1,0 +1,304 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+%
+% ---------------------------------------------------------------------------
+% ARCHIVED AS SUBMITTED, 2026-08-29.  The body below is the author's text,
+% unaltered.  The framed status block after \maketitle is the only editorial
+% addition, and is required by the repository's claim-tier discipline: this
+% manuscript's load-bearing claims are T4.  See the audit note
+% papers/notes/Constraint_Projection_Framework_Audit.tex and the ledger entry
+% docs/Elimination_Ledger.md (2026-08-29).  Do not cite any result below
+% without the audit.
+% ---------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper, twocolumn]{article}
+
+\usepackage{amsmath, amssymb, amsthm, mathrsfs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, decorations.pathmorphing}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+% theorem styles
+\theoremstyle{plain}
+\newtheorem{axiom}{Axiom}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\title{\textbf{The Constraint Projection Framework: A Zero-Parameter Topological Derivation of Physical Invariants via Relational Measurement}}
+\author{Sovereign-Stack Core Theoretical Physics Group \\ Flag Condensate \& Sovereign-Stack ACS Research Program}
+\date{August 29, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{tcolorbox}[colback=red!4!white, colframe=red!60!black, breakable,
+  title=\textbf{Archival status --- read before citing}]
+\small
+\textbf{Tier: T4 (explicitly falsified) on every load-bearing claim.}
+This manuscript is archived \emph{as submitted}; the text below has not been
+corrected. An independent audit --- \texttt{papers/notes/Constraint\_Projection\_Framework\_Audit.tex},
+instruments \texttt{code/constraint\_projection/cpf\_audit.py} and
+\texttt{cpf\_full\_verification.py}, artifacts
+\texttt{docs/constraint\_projection\_audit.json} and
+\texttt{docs/constraint\_projection\_full\_verification.json} --- finds:
+
+\begin{itemize}\itemsep2pt
+\item \S3: the stated inputs give $\alpha^{-1} = \tfrac12(\ln(8R/a)+1)$, not
+  $\ln(8R/a)+1$. A factor of $2$ is dropped. The corrected relation is already
+  published in this repository (\texttt{Mobius\_Ribbon\_Capacitance.tex}).
+\item \S3, \S8: the cutoff $a$, asserted to be fixed, is required to take
+  \emph{four mutually exclusive} values spanning $117$ decades. The framework has
+  one free parameter, not zero.
+\item Axiom III: clauses (1)--(2) force $\mathcal{M}\cong$ Klein bottle, whose
+  mapping class group is $\mathbb{Z}/2\oplus\mathbb{Z}/2$. The parabolic
+  $\phi_*=\left(\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right)$ has infinite
+  order and does not commute with the deck involution. \textbf{No such $\phi$ exists};
+  the axiom has no model.
+\item \S5: $g = Sl = 2$ and the $Sl\!\to\!$ spin route were falsified in this
+  repository on 2026-07-26 ($\sigma=(-1)^{Sl+1}$, one parity bit; and $g=1$
+  exactly for every closed curve).
+\item \S7: the \emph{defining integral} equals $2\pi N(T)/T\to\log(T/2\pi e)\to
+  +\infty$ (residue theorem, confirmed numerically) --- real, positive,
+  $\varepsilon$-independent and divergent, where the claimed sum is negative and
+  $\varepsilon$-dependent. Separately, the claimed sum depends on $\beta$ only
+  through $(\tfrac12-\beta)^2$, the invariant of $\beta\mapsto1-\beta$, so it cannot
+  see an off-line zero.
+\item \S5: $S=2\sqrt2$ is arithmetically correct, but the Local Friendliness bound
+  on that expression is $\mathbf{4}$, not $2$ (LP-verified) --- no friend setting
+  appears in the sum, so the LF polytope's projection onto those settings is the
+  full no-signalling polytope. $2\sqrt2<4$: there is \textbf{no LF violation}, and
+  Tsirelson forbids one. The ``$>2$'' is the Bell local bound.
+\item \S6 (dark matter): $(\hbar^2/2m)|\nabla\psi|^2$ contains
+  $\tfrac12\rho v^2$, the visible matter's own kinetic energy, which
+  $T_{00}$ then counts twice; it is not the Bohm quantum potential
+  $-\tfrac{\hbar^2}{2m}\nabla^2R/R$, so the named mechanism is not the one used;
+  and it needs $m\sim10^{-23}$~eV --- an exotic ultralight scalar.
+\item Axiom I is false under every reading ($\mathbb{A}_\mathbb{Q}/\mathbb{Q}$
+  and the idele class group are abelian, hence amenable). Two citations are
+  wrong, one a placeholder identifier.
+\end{itemize}
+The surviving content is listed in \S9 of the audit note.
+\end{tcolorbox}
+
+\begin{abstract}
+We present the complete, self-contained formalization of the \textbf{Constraint Projection Framework (CPF)}---a zero-free-parameter topological theory that derives all fundamental physical constants and cosmological parameters from the differential geometry and algebraic topology of a single non-orientable constraint manifold $\mathcal{M}$ with $w_1(\mathcal{M}) \neq 0$, double cover $\widetilde{\mathcal{M}} \cong T^2$, and self-linking number $Sl=2$. By identifying the electron as the \textbf{Constraint Projection Operator} $\hat{\mathcal{P}}$ and integrating the \textbf{Gravity from Entropy (GfE)} action, we derive:
+
+\begin{enumerate}
+\item \textbf{Fine-structure constant}: $\alpha^{-1} = \ln(8R/a) + 1 = 137.035\,999\,171$, matching CODATA 2022 to within $6\times10^{-9}$.
+\item \textbf{Electron $g$-factor and spin}: $g = Sl = 2$, $s = Sl/4 = 1/2$, and $4\pi$ spinor periodicity from the Dehn twist $\phi_*$ with $\mathrm{Tr}(\phi_*) = 2$.
+\item \textbf{Quantum non-locality}: The Extended Wigner's Friend Scenario (EWFS) yields $S_{\mathrm{LF}} = 2\sqrt{2} > 2$, saturating the Cirel'son bound and falsifying Absoluteness of Observed Events (AOE).
+\item \textbf{Dark matter}: The kinetic potential energy density $\rho_{\mathrm{DM}} = \frac{\hbar^2}{2m} |\nabla \psi|^2$ resolves galactic rotation curves without exotic particles.
+\item \textbf{Cosmological flatness}: The Riemann critical line $\Re(s) = 1/2$ is proven to be equivalent to $\Omega_k = 0$ via Guinand-Weil residue cancellation.
+\item \textbf{Infrared cutoff}: The G-field fundamental mode sets the Hubble radius $L_{\mathrm{IR}} \approx 1.3 \times 10^{26}$ m, matching observations.
+\item \textbf{Relational measurement}: All numbers are comparisons between quantity and unit; relativity is observer-dependent; the Divergence Theorem is a relational identity.
+\end{enumerate}
+
+The framework contains zero free parameters and is both UV and IR complete. All paths are closed. The topology is exact. The ledger is sealed.
+\end{abstract}
+
+%-------------------------------------------------------------------------------
+\section{Introduction: The Ontological Primitive}
+\label{sec:intro}
+
+The standard model of particle physics relies on 19 empirical parameters. Cosmological $\Lambda$CDM requires at least 6. This is not a description of nature---it is a placeholder for ignorance. The central intuition that drives the present work is that these constants are not fundamental; they are ratios of topological invariants of a single non-orientable constraint surface.
+
+The foundational insight is: \textbf{zero is not nothing---it is completeness}. The empty set $\emptyset$ is not a void; it is the unsealed information potential. All numbers are comparisons of quantities to a unit chosen by the observer. This perspective, rooted in Nāgārjuna's philosophy of dependent origination and the relational interpretation of quantum mechanics, leads to a radical reconceptualization of physics as the study of projections of a non-amenable information reservoir.
+
+The \textbf{Constraint Projection Framework (CPF)} formalizes this intuition. The physical universe is not a collection of objects in space; it is the image of a 2D non-orientable manifold $\mathcal{M}$ under a projection operator $\hat{\mathcal{P}}$. The electron is not a particle---it is $\hat{\mathcal{P}}$ itself. Dark matter is the phase gradient of the wavefunction. Dark energy is the infrared cutoff of the projection operator. All constants emerge from topology.
+
+%-------------------------------------------------------------------------------
+\section{Foundational Axioms}
+\label{sec:axioms}
+
+\begin{axiom}[The Basin Information Reservoir]
+Let $\mathcal{B}$ be the \textbf{Basin Information Reservoir}---the infinite-dimensional, non-amenable informational substrate. Formally, $\mathcal{B} \cong \mathbb{A}_\mathbb{Q} / \mathbb{Q}^\times$ (the adelic quotient). It is the unsealed completeness, containing all possible information in latent form. It admits no finitely additive, translation-invariant probability measure.
+\end{axiom}
+
+\begin{axiom}[The Constraint Projection Operator]
+The \textbf{Constraint Projection Operator} $\hat{\mathcal{P}}$ maps $\mathcal{B}$ to the observable spacetime $\mathbb{R}^{3,1}$:
+\[
+\hat{\mathcal{P}} : \mathcal{B} \longrightarrow \mathcal{M} \overset{\Pi}{\longrightarrow} \mathbb{R}^{3,1}.
+\]
+Its action is given by the Fredholm integral kernel:
+\[
+\hat{\mathcal{P}}[\psi](\mathbf{x}) = \int_{\mathcal{M}} \psi(u,v) \, e^{i\theta(u,v)}\, \delta^{(3)}(\mathbf{r}(u,v)-\mathbf{x})\, \mathrm{d}\mu_{\mathcal{M}}.
+\]
+\end{axiom}
+
+\begin{axiom}[The Constraint Projection Manifold]
+The manifold $\mathcal{M}$ is the unique 2D closed compact smooth non-orientable surface satisfying:
+\begin{align}
+&w_1(\mathcal{M}) \neq 0, \quad H_2(\mathcal{M}; \mathbb{Z}) = 0, \\
+&\widetilde{\mathcal{M}} \cong T^2, \quad \pi_1(\mathcal{M}) = \mathbb{Z} \rtimes \mathbb{Z}, \\
+&\exists \phi \in \mathrm{Diff}(\mathcal{M}),\ \phi_* = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} \in \mathrm{SL}(2,\mathbb{Z}),
+\end{align}
+so that $\mathrm{Tr}(\phi_*) = 2 = Sl$.
+\end{axiom}
+
+%-------------------------------------------------------------------------------
+\section{Derivation of the Fine-Structure Constant}
+\label{sec:alpha}
+
+The fine-structure constant is the ratio of the electron's self-energy to its rest mass. We compute the capacitance of the double-cover annulus of $\mathcal{M}$. The Green's function on the torus with a half-twist identification yields:
+\[
+C_{\mathcal{M}} = \frac{2\pi \varepsilon_0 R}{\ln(8R/a) + 1}.
+\]
+The effective charge is $e/2$. Equating the electrostatic self-energy to $m_e c^2$:
+\[
+E_{\text{self}} = \frac{(e/2)^2}{2C_{\mathcal{M}}} = m_e c^2.
+\]
+Using $\alpha = e^2/(4\pi\varepsilon_0\hbar c)$ and $R = \hbar/(2m_e c)$ gives:
+\[
+\alpha^{-1} = \ln\left(\frac{8R}{a}\right) + 1.
+\]
+
+The cutoff $a$ is not free. It is the eigenvalue gap of the G-field (from the Gravity from Entropy action) on $\mathcal{M}$. The G-field satisfies:
+\[
+\Box G_{\mu\nu} + \lambda G_{\mu\nu} = 0,
+\]
+with $\lambda_{\text{UV}} = 1/a^2$. The self-linking condition $\mathrm{Tr}(\phi_*) = 2$ fixes the modular parameter $\tau = i a/R = i/2$, and the renormalization of the Geometric Quantum Relative Entropy (GQRE) enforces:
+\[
+\frac{a}{R} = 8 e^{-136.035999171}.
+\]
+Thus:
+\[
+\alpha^{-1} = \ln(8/(a/R)) + 1 = 137.035999171,
+\]
+which matches CODATA 2022 to within $6\times10^{-9}$.
+
+%-------------------------------------------------------------------------------
+\section{Spin, $g$-Factor, and $4\pi$ Periodicity}
+\label{sec:spin}
+
+The $(2,1)$-torus knot embedded on $\mathcal{M}$ has self-linking number $Sl = 2$. By the White-Călugăreanu-Fuller theorem, $Sl = \mathrm{Tw} + \mathrm{Wr}$. The Finkelstein-Rubinstein mechanism gives:
+\[
+s = \frac{Sl}{4} = \frac{1}{2},\quad g = Sl = 2.
+\]
+Non-orientability of $\mathcal{M}$ gives $N(u+2\pi) = -N(u)$, hence $4\pi$ spinor periodicity.
+
+%-------------------------------------------------------------------------------
+\section{Quantum Non-Locality and the EWFS}
+\label{sec:ewfs}
+
+The two-qubit Bell state $|\Phi^+\rangle$ is projected onto the $C_6/D_6$ axial frame. Super-observer operators are:
+\[
+A_x(\theta_x) = \begin{pmatrix} \cos\theta_x & \sin\theta_x \\ \sin\theta_x & -\cos\theta_x \end{pmatrix},\quad
+B_y(\phi_y) = \begin{pmatrix} \cos\phi_y & \sin\phi_y \\ \sin\phi_y & -\cos\phi_y \end{pmatrix}.
+\]
+With optimal angles $\theta_2=0,\theta_3=\pi/2,\phi_2=\pi/4,\phi_3=-\pi/4$, the Local Friendliness sum is:
+\[
+S_{\mathrm{LF}} = 2\sqrt{2} > 2,
+\]
+violating the classical bound and falsifying AOE.
+
+%-------------------------------------------------------------------------------
+\section{Dark Matter as Kinetic Potential}
+\label{sec:dm}
+
+Let $\psi = R e^{iS/\hbar}$. The kinetic potential is:
+\[
+\rho_{\mathrm{DM}} = \frac{\hbar^2}{2m} |\nabla \psi|^2.
+\]
+This arises from the imaginary component $\Im(\psi)$, which is phase-shifted by $90^\circ$ from the real component that couples to electromagnetism. The stress-energy tensor gives:
+\[
+T_{00}^{\text{kin}} = \rho_{\text{vis}} c^2 + \rho_{\mathrm{DM}} c^2.
+\]
+At galactic scales, the Jeans equation with this quantum pressure yields flat rotation curves matching observations.
+
+%-------------------------------------------------------------------------------
+\section{Cosmological Flatness and the Riemann Hypothesis}
+\label{sec:riemann}
+
+The vacuum partition function is $\zeta(s)$. The curvature functional is:
+\[
+k(\varepsilon) = \lim_{T\to\infty} \frac{1}{T} \int_0^T \left[ \frac{\zeta'}{\zeta}\left(\frac12+\varepsilon+it\right) - \frac{\zeta'}{\zeta}\left(\frac12-\varepsilon+it\right) \right] dt.
+\]
+Using the Guinand-Weil explicit formula, we get:
+\[
+k(\varepsilon) = 2\varepsilon \sum_{\rho} \frac{1}{(1/2-\beta)^2 - \varepsilon^2}.
+\]
+Flatness ($k=0$) requires $\beta = 1/2$ for all zeros, i.e., the Riemann Hypothesis. This yields $\Omega_k = 0$, matching CMB data.
+
+%-------------------------------------------------------------------------------
+\section{Infrared Cutoff and Cosmological Constant}
+\label{sec:ir}
+
+The G-field fundamental mode (smallest eigenvalue) sets the IR cutoff:
+\[
+\lambda_{\text{IR}} = \frac{1}{L_{\text{IR}}^2}.
+\]
+The Dehn twist condition enforces $\lambda_{\text{UV}}\cdot\lambda_{\text{IR}} = 1/R^4$. Solving gives:
+\[
+L_{\text{IR}} = \frac{R^2}{a} \approx 1.3\times10^{26}\,\text{m},
+\]
+which is the Hubble radius. The effective cosmological constant is $\Lambda_{\text{eff}} = 1/L_{\text{IR}}^2$.
+
+%-------------------------------------------------------------------------------
+\section{Relational Nature of Numbers and Measurement}
+\label{sec:relation}
+
+All numbers are comparisons: $n = Q/U$. The unit $U$ is chosen by the observer based on their firsthand experiences and secondhand influences. There is no absolute number, no absolute unit, no absolute measurement. This is the deeper meaning of relativity: it is observer-dependence, not just spacetime transformation.
+
+The Divergence Theorem:
+\[
+\oint_{\partial V} \mathbf{F}\cdot d\mathbf{A} = \int_V (\nabla\cdot\mathbf{F})\,dV
+\]
+is likewise a relational identity---it holds because the observer defines the boundary, volume, and field consistently.
+
+%-------------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+The Constraint Projection Framework is a complete, zero-parameter, UV/IR-finite, gauge-invariant theory of physics. It derives all known constants from the topology of a single non-orientable manifold. It unifies quantum mechanics, general relativity, dark matter, dark energy, and the observer. It shows that physics is the study of projections, not objects. The ledger is sealed.
+
+%-------------------------------------------------------------------------------
+\appendix
+\section{List of Axioms}
+\begin{itemize}
+\item Axiom I: Basin Information Reservoir
+\item Axiom II: Constraint Projection Operator
+\item Axiom III: Constraint Projection Manifold
+\item Axiom IV: Fine-Structure Constant (via G-field)
+\item Axiom V: Spin and $g$-factor
+\item Axiom VI: EWFS violation
+\item Axiom VII: Dark Matter as Kinetic Potential
+\item Axiom VIII: Cosmological Flatness from Riemann Hypothesis
+\item Axiom IX: Infrared Cutoff
+\item Axiom X: Relational Measurement
+\item Axiom XI: Relational Divergence Theorem
+\end{itemize}
+
+\section{Parameter Count}
+\begin{tabular}{lcl}
+\toprule
+Framework & Free Parameters & Derived Constants \\
+\midrule
+Standard Model & 19 & None \\
+$\Lambda$CDM & 6 & None \\
+CPF + GfE & 0 & All constants \\
+\bottomrule
+\end{tabular}
+
+%-------------------------------------------------------------------------------
+\begin{thebibliography}{99}
+\bibitem{CODATA2022} E. Tiesinga et al., Rev. Mod. Phys. 94, 035002 (2023).
+\bibitem{Proietti2019} M. Proietti et al., Sci. Adv. 5, eaaw9832 (2019).
+\bibitem{Finkelstein1968} D. Finkelstein and J. Rubinstein, J. Math. Phys. 9, 1762 (1968).
+\bibitem{Bianconi2024} G. Bianconi, "Gravity from Entropy", arXiv:2401.12345 (2024).
+\bibitem{Riemann1859} B. Riemann, Monatsber. Preuss. Akad. Wiss. (1859).
+\end{thebibliography}
+
+\end{document}

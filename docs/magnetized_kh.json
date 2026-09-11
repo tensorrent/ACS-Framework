@@ -1,0 +1,185 @@
+{
+  "description": "Magnetized Kelvin-Helmholtz; the (k.B)^2 term; correction to K2",
+  "source": "code/constraint_projection/magnetized_kh.py",
+  "checks": {
+    "V1_dispersion": {
+      "c_squared": "v_A^2 - dU^2/4",
+      "threshold": "dU > 2 v_A",
+      "hydrodynamic_limit": "v_A -> 0 gives threshold dU > 0, i.e. none",
+      "below_threshold_behaviour": "oscillatory (c real), not growing"
+    },
+    "V2_k_dependence": {
+      "rows": [
+        {
+          "k": 1e-08,
+          "hydro_sigma": 0.0015,
+          "mhd_unstable": false
+        },
+        {
+          "k": 1e-06,
+          "hydro_sigma": 0.15,
+          "mhd_unstable": false
+        },
+        {
+          "k": 0.0001,
+          "hydro_sigma": 15.0,
+          "mhd_unstable": false
+        },
+        {
+          "k": 0.01,
+          "hydro_sigma": 1500.0,
+          "mhd_unstable": false
+        },
+        {
+          "k": 1.0,
+          "hydro_sigma": 150000.0,
+          "mhd_unstable": false
+        }
+      ],
+      "threshold_depends_on_k": false,
+      "reason": "driving (k.dU)^2 and restoring (k.B)^2 share the same power of k"
+    },
+    "V3_orthogonality": {
+      "B_T": 0.001,
+      "v_A": 689757.0943117611,
+      "dU": 300000.0,
+      "rows": [
+        {
+          "angle_deg": 0,
+          "cos": 1.0,
+          "vA_eff": 689757.0943117611,
+          "unstable": false
+        },
+        {
+          "angle_deg": 30,
+          "cos": 0.8660254037844387,
+          "vA_eff": 597347.1661145241,
+          "unstable": false
+        },
+        {
+          "angle_deg": 60,
+          "cos": 0.5000000000000001,
+          "vA_eff": 344878.5471558806,
+          "unstable": false
+        },
+        {
+          "angle_deg": 80,
+          "cos": 0.17364817766693041,
+          "vA_eff": 119775.06246007436,
+          "unstable": true
+        },
+        {
+          "angle_deg": 89,
+          "cos": 0.0174524064372836,
+          "vA_eff": 12037.92115292861,
+          "unstable": true
+        },
+        {
+          "angle_deg": 90,
+          "cos": 6.123233995736766e-17,
+          "vA_eff": 4.223544088690386e-11,
+          "unstable": true
+        }
+      ],
+      "perpendicular_gives_zero_stabilisation": true
+    },
+    "V4_angular": {
+      "v_A": 689757.0943117611,
+      "rows": [
+        {
+          "beta_deg": 0,
+          "unstable_fraction": 0.0
+        },
+        {
+          "beta_deg": 15,
+          "unstable_fraction": 0.03744798890429958
+        },
+        {
+          "beta_deg": 45,
+          "unstable_fraction": 0.09986130374479889
+        },
+        {
+          "beta_deg": 75,
+          "unstable_fraction": 0.1317614424410541
+        },
+        {
+          "beta_deg": 90,
+          "unstable_fraction": 0.13869625520110956
+        }
+      ],
+      "any_orientation_fully_stable": false,
+      "stability_is_directional": true
+    },
+    "V5_solar": {
+      "rows": [
+        {
+          "region": "quiet corona",
+          "B_G": 10,
+          "n": 1000000000000000.0,
+          "vA_km_s": 689.7570943117611,
+          "dU_km_s": 20,
+          "ratio": 0.014497857408741826,
+          "verdict": "oscillatory"
+        },
+        {
+          "region": "prominence / filament",
+          "B_G": 10,
+          "n": 1e+16,
+          "vA_km_s": 218.12034502847365,
+          "dU_km_s": 50,
+          "ratio": 0.11461562650992724,
+          "verdict": "oscillatory"
+        },
+        {
+          "region": "coronal streamer flank",
+          "B_G": 1,
+          "n": 100000000000000.0,
+          "vA_km_s": 218.12034502847365,
+          "dU_km_s": 100,
+          "ratio": 0.22923125301985448,
+          "verdict": "oscillatory"
+        },
+        {
+          "region": "CME flank",
+          "B_G": 5,
+          "n": 10000000000000.0,
+          "vA_km_s": 3448.785471558806,
+          "dU_km_s": 500,
+          "ratio": 0.07248928704370912,
+          "verdict": "oscillatory"
+        },
+        {
+          "region": "solar wind at 1 AU",
+          "B_G": 5e-05,
+          "n": 5000000.0,
+          "vA_km_s": 48.773191875937535,
+          "dU_km_s": 400,
+          "ratio": 4.100613314558789,
+          "verdict": "UNSTABLE"
+        },
+        {
+          "region": "strong local shear, weak field",
+          "B_G": 0.5,
+          "n": 100000000000000.0,
+          "vA_km_s": 109.06017251423683,
+          "dU_km_s": 800,
+          "ratio": 3.6677000483176716,
+          "verdict": "UNSTABLE"
+        }
+      ],
+      "n_crossing_threshold": 2,
+      "model_is_symmetric": true,
+      "caveat": "equal-density symmetric sheet; asymmetric criterion is weaker"
+    },
+    "V6_correction": {
+      "k2_conclusion_was": "regulator mandatory; every regulator breaks exact conservation",
+      "correction": "magnetic tension stabilises without dissipation; ideal MHD conserves topology",
+      "survives": [
+        "stability is directional, not global",
+        "threshold is dynamical, not structural",
+        "a stability result is not a spectrum"
+      ],
+      "k3_affected": false
+    }
+  }
+}

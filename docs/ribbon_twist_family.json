@@ -1,0 +1,171 @@
+{
+  "description": "The n-half-twist ribbon family; Sl by Gauss integral; capacitance blind to Sl",
+  "source": "code/constraint_projection/ribbon_twist_family.py",
+  "checks": {
+    "R1_family": [
+      {
+        "n": 0,
+        "degrees": 0,
+        "orientable": true,
+        "boundary_circles": 2
+      },
+      {
+        "n": 1,
+        "degrees": 180,
+        "orientable": false,
+        "boundary_circles": 1
+      },
+      {
+        "n": 2,
+        "degrees": 360,
+        "orientable": true,
+        "boundary_circles": 2
+      },
+      {
+        "n": 3,
+        "degrees": 540,
+        "orientable": false,
+        "boundary_circles": 1
+      },
+      {
+        "n": 4,
+        "degrees": 720,
+        "orientable": true,
+        "boundary_circles": 2
+      },
+      {
+        "n": 5,
+        "degrees": 900,
+        "orientable": false,
+        "boundary_circles": 1
+      },
+      {
+        "n": 6,
+        "degrees": 1080,
+        "orientable": true,
+        "boundary_circles": 2
+      }
+    ],
+    "R2_linking": {
+      "rows": [
+        {
+          "n": 0,
+          "Tw": 0.0,
+          "Wr": -0.0,
+          "cwf": -3.185351208046315e-22,
+          "gauss_lk": 0.0,
+          "err": 3.185351208046315e-22
+        },
+        {
+          "n": 1,
+          "Tw": 0.5,
+          "Wr": -0.0,
+          "cwf": 0.5,
+          "gauss_lk_core_boundary": -1.0000110198333674,
+          "single_boundary": true
+        },
+        {
+          "n": 2,
+          "Tw": 1.0,
+          "Wr": -0.0,
+          "cwf": 1.0,
+          "gauss_lk": -1.0000137638001518,
+          "err": 1.376380015183365e-05
+        },
+        {
+          "n": 3,
+          "Tw": 1.5,
+          "Wr": -0.0,
+          "cwf": 1.5,
+          "gauss_lk_core_boundary": -3.000057429439868,
+          "single_boundary": true
+        },
+        {
+          "n": 4,
+          "Tw": 2.0,
+          "Wr": -0.0,
+          "cwf": 2.0,
+          "gauss_lk": -2.0000529326131886,
+          "err": 5.293261318861653e-05
+        },
+        {
+          "n": 5,
+          "Tw": 2.5,
+          "Wr": -0.0,
+          "cwf": 2.5,
+          "gauss_lk_core_boundary": -5.000176951241263,
+          "single_boundary": true
+        },
+        {
+          "n": 6,
+          "Tw": 3.0,
+          "Wr": -0.0,
+          "cwf": 3.0,
+          "gauss_lk": -3.000147008171782,
+          "err": 0.00014700817178203707
+        }
+      ],
+      "cwf_max_error": 0.00014700817178203707
+    },
+    "R3_where_Sl2_lands": {
+      "Sl_equals_n_over_2": true,
+      "Sl2_requires_n": 4,
+      "Sl2_degrees": 720,
+      "Sl2_orientable": true,
+      "previous_family_max_n": 2,
+      "previous_family_max_Sl": 1.0,
+      "verdict": "Sl=2 is n=4, orientable; the previous run stopped at Sl=1"
+    },
+    "R4_capacitance_blind": {
+      "C_over_eps0": {
+        "0": 6.082661181811487,
+        "1": 6.08185010639971,
+        "2": 6.081947941299298,
+        "3": 6.082110583947083,
+        "4": 6.082337604441486
+      },
+      "spread_percent": 0.013334219801724886,
+      "Sl_range": 2.0,
+      "verdict": "capacitance is blind to Sl; Sec 3 and Sec 4 read different structures"
+    },
+    "R5_writhe_reopens": {
+      "rows": [
+        {
+          "centerline": "planar circle",
+          "planar": true,
+          "writhe": 0.0
+        },
+        {
+          "centerline": "toroidal coil m=3, b=0.25",
+          "planar": false,
+          "writhe": -0.5781612454360054
+        },
+        {
+          "centerline": "toroidal coil m=5, b=0.25",
+          "planar": false,
+          "writhe": -1.8729596938628428
+        },
+        {
+          "centerline": "toroidal coil m=5, b=0.45",
+          "planar": false,
+          "writhe": -2.9774832350084215
+        },
+        {
+          "centerline": "toroidal coil m=8, b=0.45",
+          "planar": false,
+          "writhe": -5.863985288693858
+        }
+      ],
+      "planar_writhe_exact_zero": true,
+      "R3_conclusion_holds_only_if_planar": true,
+      "Sl2_reachable_non_orientably": true,
+      "example_split": {
+        "Tw": 1.5,
+        "Wr": 0.5,
+        "n": 3,
+        "orientable": false
+      },
+      "verdict": "R3 CORRECTED: Sl=2 forces orientability only when Wr=0"
+    }
+  }
+}

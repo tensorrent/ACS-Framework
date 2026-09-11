@@ -1,0 +1,155 @@
+{
+  "description": "Origin of g = 2 (Levy-Leblond) and the measured anomaly",
+  "source": "code/constraint_projection/wave_equation_gfactor.py",
+  "successor_to": "docs/Elimination_Ledger.md 2026-07-26 (Sl = 2 <-> g = 2)",
+  "bears_on": "papers/notes/Constraint_Projection_Framework.tex Sec 4",
+  "measured_inputs": {
+    "g_over_2": "1.00115965218059",
+    "u": "1.3e-13",
+    "source": "Fan, Myers, Sukra & Gabrielse, PRL 130, 071801 (2023)",
+    "alpha_inv_Rb": "137.035999206",
+    "alpha_inv_Cs": "137.035999046"
+  },
+  "checks": {
+    "W1_sigma_algebra": {
+      "identity": "sigma_i sigma_j = delta_ij + i eps_ijk sigma_k",
+      "pairs_verified": 9,
+      "holds": true
+    },
+    "W2_pauli_identity": {
+      "identity": "(sigma.pi)^2 = pi^2 - q hbar (sigma.B)",
+      "verified_symbolically": true,
+      "commutator": "[pi_i, pi_j] = i q hbar eps_ijk B_k"
+    },
+    "W3_levy_leblond": {
+      "free_equations": [
+        "E phi + (sigma.p) chi = 0",
+        "(sigma.p) phi + 2 m chi = 0"
+      ],
+      "reduces_to": "E phi = p^2 phi / 2m (free Schrodinger)",
+      "spin_term": "-(q hbar / 2m)(sigma.B)",
+      "g": 2,
+      "relativity_used": false
+    },
+    "W4_periodicity": {
+      "rotations": {
+        "0": "[[1, 0], [0, 1]]",
+        "pi": "[[-I, 0], [0, I]]",
+        "2 pi": "[[-1, 0], [0, -1]]",
+        "4 pi": "[[1, 0], [0, 1]]"
+      },
+      "pi1_SO3": "Z/2",
+      "manifold_required": false
+    },
+    "W5_dirac": {
+      "dirac_tree_g": 2,
+      "levy_leblond_g": 2,
+      "conclusion": "g = 2 diagnoses neither relativity nor topology"
+    },
+    "W6_data": {
+      "g_over_2": "1.00115965218059",
+      "g": "2.00231930436118",
+      "a_e": "0.00115965218059",
+      "u_a_e": "1.3e-13",
+      "sigma_from_zero": "8.92e+9",
+      "source": "Fan et al., PRL 130, 071801 (2023)"
+    },
+    "W7_qed_series": {
+      "terms": [
+        {
+          "order": 1,
+          "A1": "0.5",
+          "term_A1": "0.0011614097",
+          "A2": null,
+          "term_A2": null
+        },
+        {
+          "order": 2,
+          "A1": "-0.328478965579193",
+          "term_A1": "-1.7723051e-6",
+          "A2": "5.21576647e-7",
+          "term_A2": "2.8141617e-12"
+        },
+        {
+          "order": 3,
+          "A1": "1.181241456587",
+          "term_A1": "1.4804204e-8",
+          "A2": "-7.439760359e-6",
+          "term_A2": "-9.3240655e-14"
+        },
+        {
+          "order": 4,
+          "A1": "-1.912245764926446",
+          "term_A1": "-5.5667989e-11",
+          "A2": "0.0009236263103",
+          "term_A2": "2.6887977e-14"
+        },
+        {
+          "order": 5,
+          "A1": "6.737",
+          "term_A1": "4.5555816e-13",
+          "A2": null,
+          "term_A2": null
+        }
+      ],
+      "mass_dependent_total": "2.74781e-12",
+      "hadronic": "1.693e-12",
+      "electroweak": "2.97e-14",
+      "inverted_alpha_inv": "137.03599916622",
+      "literature_alpha_inv": "137.035999166",
+      "agreement_in_sigma": "0.0147"
+    },
+    "W8_independent_alpha": {
+      "comparisons": [
+        {
+          "source": "Rb recoil, Morel et al. 2020",
+          "alpha_inv": "137.035999206",
+          "a_e_pred": "0.0011596521802539",
+          "u_pred": "9.4e-14",
+          "residual": "3.36e-13",
+          "sigma": "2.09"
+        },
+        {
+          "source": "Cs recoil, Parker et al. 2018",
+          "alpha_inv": "137.035999046",
+          "a_e_pred": "0.0011596521816058",
+          "u_pred": "2.3e-13",
+          "residual": "-1.02e-12",
+          "sigma": "-3.86"
+        }
+      ],
+      "rb_vs_cs_sigma": "5.49",
+      "caveat": "crude uncertainty propagation; sigmas indicative"
+    },
+    "W9_parameter_count": {
+      "table": [
+        {
+          "framework": "Levy-Leblond (Galilean)",
+          "inputs": "su(2) + linearization",
+          "g": "2 exactly",
+          "matches": "3 decimals"
+        },
+        {
+          "framework": "Dirac (tree level)",
+          "inputs": "su(2) + Lorentz",
+          "g": "2 exactly",
+          "matches": "3 decimals"
+        },
+        {
+          "framework": "QED",
+          "inputs": "alpha (measured) + loop expansion",
+          "g": "2(1 + a_e)",
+          "matches": "12 digits"
+        },
+        {
+          "framework": "CPF manuscript",
+          "inputs": "Klein bottle + Sl = 2",
+          "g": "2 exactly",
+          "matches": "3 decimals"
+        }
+      ],
+      "cpf_route_to_anomaly": null,
+      "reason": "Sl is an integer; no expansion parameter exists in the framework"
+    }
+  }
+}

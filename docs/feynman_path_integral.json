@@ -1,0 +1,77 @@
+{
+  "description": "The Feynman path integral run against CPF and the Klein-Foam reading",
+  "source": "code/constraint_projection/feynman_path_integral.py",
+  "checks": {
+    "P0_what_it_gives": {
+      "ontology_is_well_formed_as_lattice_path_integral": true,
+      "verdict": "the reading maps onto the formalism exactly"
+    },
+    "P1_loop_counting": {
+      "L_classical": "16*pi*R*c**2*epsilon_0*m_e/e**2",
+      "classical_contains_hbar": false,
+      "L_after_R_substitution": "8*pi*c*epsilon_0*hbar/e**2",
+      "L_times_alpha": "2",
+      "hbar_enters_only_via": "R = hbar/(2 m_e c)",
+      "verdict": "tree-level; alpha is carried in by the R choice, not derived"
+    },
+    "P2_circularity": {
+      "R_from_classical_self_energy": "(L/4) * r_e",
+      "L_equals": "2 * lambdabar_C / r_e = 2/alpha",
+      "r_e_over_lambdabar_C": "0.00729735257375",
+      "identity_holds_to": "1.29e-9",
+      "stated_exponent": "136.035999171",
+      "codata_alpha_inv_minus_1": "136.035999177",
+      "difference": "6.0e-9",
+      "verdict": "collapses to r_e = alpha*lambdabar_C; a/R carries CODATA alpha as input"
+    },
+    "P3_measure": {
+      "chi": 0,
+      "dim_H1_Z2": 2,
+      "order_H1_Z2": 4,
+      "w2_evaluated": 0,
+      "spin_structures": 0,
+      "pin_plus_exists": true,
+      "pin_minus_exists": true,
+      "pin_structures_each": 4,
+      "total_fermionic_measures": 8,
+      "bits_unspecified": "3.0",
+      "verdict": "Axiom II's w1 != 0 forbids Spin; 8 Pin measures unspecified"
+    },
+    "P4_running": {
+      "qed_d_alphainv_dlnmu": "-0.21220659",
+      "cpf_d_alphainv_dlnmu": "0.5",
+      "magnitude_ratio": "2.3561945",
+      "equals_3pi_over_4": "2.3561945",
+      "signs": "opposite",
+      "earlier_verdict_rederived": true,
+      "verdict": "our 2026-08-30 call CONFIRMED by independent derivation"
+    },
+    "P5_landau": {
+      "a_over_R": "2.039e-118",
+      "ln_mu_a_over_me": "271.6857",
+      "ln_landau_pole": "645.7669",
+      "cutoff_below_landau_pole": true,
+      "qed_alpha_inv_at_cutoff": "79.382497",
+      "cpf_alpha_inv": "137.036",
+      "disagreement": "1.72627",
+      "verdict": "cutoff is inside the perturbative region; the two disagree 1.7x there"
+    },
+    "P6_uv_completeness": {
+      "beta": "2*alpha**2/(3*pi)",
+      "fixed_points": [
+        "0"
+      ],
+      "nontrivial_fixed_points": [],
+      "nontrivial_uv_fixed_point": false,
+      "uv_complete_and_finite_resolution_compatible": false,
+      "verdict": "no UV fixed point; and finite resolution EXCLUDES UV completeness"
+    },
+    "P7_measured_running": {
+      "alpha_inv_low": "137.035999",
+      "alpha_inv_MZ": "128.947",
+      "required_resolution_change": "1.06173e+7",
+      "decades": "7.026",
+      "verdict": "a fixed-topology single number cannot track a measured running"
+    }
+  }
+}

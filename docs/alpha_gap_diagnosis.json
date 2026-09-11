@@ -1,0 +1,115 @@
+{
+  "description": "What the alpha gap is, and whether it can be corrected",
+  "source": "code/constraint_projection/alpha_gap_diagnosis.py",
+  "checks": {
+    "G1_natural_variable": {
+      "L_from_tau": "3.772588722",
+      "L_needed": "274.0719984",
+      "additive_gap": "270.2994096",
+      "decades": "117.39",
+      "verdict": "additive in log, not multiplicative"
+    },
+    "G2_physical_cutoffs": {
+      "rows": [
+        {
+          "cutoff": "Planck length",
+          "a_over_R": "8.3709e-23",
+          "L": "53.9141",
+          "alpha_inv": "26.9571",
+          "off_by": "5.083"
+        },
+        {
+          "cutoff": "classical electron radius",
+          "a_over_R": "0.014595",
+          "L": "7.30654",
+          "alpha_inv": "3.65327",
+          "off_by": "37.51"
+        },
+        {
+          "cutoff": "proton charge radius",
+          "a_over_R": "0.0043505",
+          "L": "8.5169",
+          "alpha_inv": "4.25845",
+          "off_by": "32.18"
+        },
+        {
+          "cutoff": "R itself (a = R)",
+          "a_over_R": "1.0",
+          "L": "3.07944",
+          "alpha_inv": "1.53972",
+          "off_by": "89.0"
+        },
+        {
+          "cutoff": "tau = i/2  (a = R/2)",
+          "a_over_R": "0.5",
+          "L": "3.77259",
+          "alpha_inv": "1.88629",
+          "off_by": "72.65"
+        },
+        {
+          "cutoff": "CODATA-matching",
+          "a_over_R": "2.0391e-118",
+          "L": "274.072",
+          "alpha_inv": "137.036",
+          "off_by": "1.0"
+        }
+      ],
+      "planck_alpha_inv": "26.9571",
+      "planck_off_by": "5.083",
+      "codata_cutoff_in_planck_lengths": "2.436e-96",
+      "verdict": "the gap is whatever scale you pick"
+    },
+    "G3_prefactor": {
+      "required_4pi_eta2_over_kappa": "2.54175",
+      "rows": [
+        {
+          "kappa": "2 pi (manuscript)",
+          "eta2": "1.27087",
+          "eta": "1.12733",
+          "natural": false
+        },
+        {
+          "kappa": "4 pi^2 (thin ring)",
+          "eta2": "7.98513",
+          "eta": "2.8258",
+          "natural": false
+        },
+        {
+          "kappa": "4 pi",
+          "eta2": "2.54175",
+          "eta": "1.59429",
+          "natural": false
+        },
+        {
+          "kappa": "1",
+          "eta2": "0.202266",
+          "eta": "0.44974",
+          "natural": false
+        }
+      ],
+      "verdict": "no natural (kappa, eta) closes it"
+    },
+    "G4_rg_shape": {
+      "qed_coefficient": "-0.21220659",
+      "manuscript_coefficient": "0.5",
+      "magnitude_ratio": "2.356194",
+      "signs": "opposite",
+      "verdict": "right functional form, wrong coefficient, wrong sign"
+    },
+    "G5_no_go": {
+      "reading_a": "self-energy with fixed cutoff -> framework's own fixing gives 1.886",
+      "reading_b": "RG running -> cannot derive alpha, needs a boundary condition",
+      "general_no_go_is_novel": false,
+      "prior_art": [
+        "dimensional transmutation (Coleman-Weinberg)",
+        "RG renormalisation condition as boundary data (textbook)",
+        "arXiv:1411.4673 survey of first-principles alpha attempts",
+        "Wyler 1970: alpha^-1 = 137.03608, closer than this manuscript, debunked"
+      ],
+      "wyler_rel_err": "5.9e-7",
+      "manuscript_rel_err": "4.38e-11",
+      "manuscript_closer_than_wyler_by": "13471.0",
+      "verdict": "diagnosis is ours; the general no-go is standard"
+    }
+  }
+}

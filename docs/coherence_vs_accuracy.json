@@ -1,0 +1,97 @@
+{
+  "description": "Coherence vs accuracy vs holistic consistency, with the corpus classified",
+  "source": "code/constraint_projection/coherence_vs_accuracy.py",
+  "checks": {
+    "H1_axes": {
+      "claim_follows_from_premises": false,
+      "ratio_actual_over_claimed": "2",
+      "accuracy_relative_difference": 4.378427456112814e-11
+    },
+    "H2_classify": {
+      "rows": [
+        {
+          "claim": "M = Klein bottle from clauses (1)-(2)",
+          "coherent": true,
+          "accurate": true,
+          "note": "follows uniquely; and it is the surface it says"
+        },
+        {
+          "claim": "S = 2 sqrt 2 for the Bell state",
+          "coherent": true,
+          "accurate": true,
+          "note": "arithmetic checks; matches QM"
+        },
+        {
+          "claim": "alpha^-1 = ln(8R/a)+1",
+          "coherent": false,
+          "accurate": true,
+          "note": "premises give 2/alpha; the NUMBER still lands on CODATA"
+        },
+        {
+          "claim": "a/R = 8 exp(-136.035999171)",
+          "coherent": false,
+          "accurate": true,
+          "note": "no derivation; the exponent IS CODATA alpha^-1 minus one"
+        },
+        {
+          "claim": "Axiom III: phi_* = [[1,2],[0,1]]",
+          "coherent": false,
+          "accurate": false,
+          "note": "MCG(K) has order 4; phi_* has infinite order -- no model"
+        },
+        {
+          "claim": "g = Sl = 2",
+          "coherent": true,
+          "accurate": false,
+          "note": "follows from the stated geometry; a_e puts it 8.92e9 sigma out"
+        },
+        {
+          "claim": "Sec 7: k = 0 <=> RH",
+          "coherent": false,
+          "accurate": false,
+          "note": "the defining integral is +oo, not the claimed sum"
+        },
+        {
+          "claim": "Green's C = 4 pi^2 eps0 R/ln(8R/a)",
+          "coherent": true,
+          "accurate": true,
+          "note": "derived from the Green's function; BEM confirms to 0.46%"
+        }
+      ],
+      "quadrants": {
+        "COHERENT+ACCURATE": 3,
+        "INCOHERENT+accurate": 2,
+        "incoherent+inaccurate": 2,
+        "coherent+inaccurate": 1
+      }
+    },
+    "H3_jointly_incoherent": {
+      "conditions": [
+        {
+          "name": "tau = i a/R = i/2  (Sec 3)",
+          "a_over_R": 0.5,
+          "alpha_inv": 1.886294
+        },
+        {
+          "name": "a L_IR = R^2, L_IR observed  (Sec 8)",
+          "a_over_R": 1.485e-39,
+          "alpha_inv": 46.24235
+        }
+      ],
+      "disagreement_factor": 24.51492185205488
+    },
+    "H4_ordering": {
+      "decoy_forms": 14,
+      "decoy_hits": 14,
+      "p_accurate_given_fitted": 1.0,
+      "bits_from_accuracy": 0.0,
+      "ordering": "coherent+inaccurate > incoherent+accurate"
+    },
+    "H5_this_audit": {
+      "coherent": "enforced by rule 7; 8 bugs of that shape found",
+      "accurate": "64 gate tests, mutation-checked, proofs re-observed",
+      "holistic": "UNVERIFIED -- entries not cross-checked at scale",
+      "open_item": "no instrument tests joint coherence of the ledger"
+    }
+  }
+}

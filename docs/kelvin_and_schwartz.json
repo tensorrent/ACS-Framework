@@ -1,0 +1,183 @@
+{
+  "description": "Schwartz 2023 Moebius bound and Kelvin 1867 vortex atoms as external checks",
+  "source": "code/constraint_projection/kelvin_and_schwartz.py",
+  "checks": {
+    "S1_schwartz_bound": {
+      "sqrt3": 1.7320508075688772,
+      "rows": [
+        {
+          "w_over_R": 0.05,
+          "aspect": 125.66370614359172,
+          "exceeds_sqrt3": true,
+          "where": "twisted_ribbon_capacitance, ribbon_twist_family"
+        },
+        {
+          "w_over_R": 0.3,
+          "aspect": 20.943951023931955,
+          "exceeds_sqrt3": true,
+          "where": "ribbon_twist_family R2 linking"
+        },
+        {
+          "w_over_R": 0.0125,
+          "aspect": 502.6548245743669,
+          "exceeds_sqrt3": true,
+          "where": "a_eff = w/4, the field-equivalent radius"
+        }
+      ],
+      "min_aspect_used": 20.943951023931955,
+      "bound_applies_to_our_surfaces": false,
+      "reason": "our ribbons are ruled, not isometric embeddings of a flat strip"
+    },
+    "S2_self_intersection": {
+      "rows": [
+        {
+          "w_over_R": 0.05,
+          "min_abs_rho": 0.975,
+          "signed_min_rho": 0.975,
+          "min_pair_distance": 0.1835315485191644,
+          "degenerate": false
+        },
+        {
+          "w_over_R": 0.5,
+          "min_abs_rho": 0.75,
+          "signed_min_rho": 0.75,
+          "min_pair_distance": 0.1431654553594666,
+          "degenerate": false
+        },
+        {
+          "w_over_R": 1.0,
+          "min_abs_rho": 0.5,
+          "signed_min_rho": 0.5,
+          "min_pair_distance": 0.10533312211727024,
+          "degenerate": false
+        },
+        {
+          "w_over_R": 1.5,
+          "min_abs_rho": 0.25,
+          "signed_min_rho": 0.25,
+          "min_pair_distance": 0.08498032456214538,
+          "degenerate": false
+        },
+        {
+          "w_over_R": 1.9,
+          "min_abs_rho": 0.050000000000000044,
+          "signed_min_rho": 0.050000000000000044,
+          "min_pair_distance": 0.0863149205629577,
+          "degenerate": false
+        },
+        {
+          "w_over_R": 2.0,
+          "min_abs_rho": 0.0,
+          "signed_min_rho": 0.0,
+          "min_pair_distance": 0.08498032456214538,
+          "degenerate": true
+        },
+        {
+          "w_over_R": 2.2,
+          "min_abs_rho": 0.0010425087924104126,
+          "signed_min_rho": -0.10000000000000009,
+          "min_pair_distance": 0.08448412209109273,
+          "degenerate": true
+        },
+        {
+          "w_over_R": 3.0,
+          "min_abs_rho": 0.0007741503568994279,
+          "signed_min_rho": -0.5,
+          "min_pair_distance": 0.08498032456214538,
+          "degenerate": true
+        }
+      ],
+      "our_constraint": "w/R < 2 (rho -> 0 at s = -R)",
+      "first_degenerate_w_over_R": 2.0,
+      "pairwise_distance_ever_zero": false,
+      "our_limiting_aspect": 3.141592653589793,
+      "schwartz_bound": 1.7320508075688772,
+      "same_statement": false
+    },
+    "S3_schwartz_method": {
+      "year_stuck": 2020,
+      "year_solved": 2023,
+      "wrong_assumption": "cut-open band is a parallelogram",
+      "actual": "trapezoid",
+      "resolution": "cut one open and looked",
+      "prior_art_for": [
+        "rule 9 (name the assumption)",
+        "rule 10 (did you see it)"
+      ]
+    },
+    "K1_vortex_atoms": {
+      "proposer": "Kelvin (W. Thomson), 1867",
+      "basis": "Helmholtz 1858 vortex theorems: topology conserved in ideal fluid",
+      "offered": [
+        "discrete species",
+        "absolute stability",
+        "spectra",
+        "no free parameters"
+      ],
+      "surviving_output": "knot theory (Tait tables, 1877-1885)"
+    },
+    "K2_kelvin_helmholtz": {
+      "growth_rate": "sigma = k dU / 2, unbounded as k -> infinity",
+      "rows": [
+        {
+          "wavelength": 1.0,
+          "k": 6.283185307179586,
+          "sigma": 3.141592653589793,
+          "efold": 0.3183098861837907
+        },
+        {
+          "wavelength": 0.1,
+          "k": 62.83185307179586,
+          "sigma": 31.41592653589793,
+          "efold": 0.03183098861837907
+        },
+        {
+          "wavelength": 0.01,
+          "k": 628.3185307179587,
+          "sigma": 314.1592653589793,
+          "efold": 0.0031830988618379067
+        },
+        {
+          "wavelength": 0.001,
+          "k": 6283.185307179586,
+          "sigma": 3141.592653589793,
+          "efold": 0.0003183098861837907
+        },
+        {
+          "wavelength": 1e-06,
+          "k": 6283185.307179587,
+          "sigma": 3141592.6535897935,
+          "efold": 3.1830988618379064e-07
+        }
+      ],
+      "stabilising_term": null,
+      "regulator_required": [
+        "viscosity",
+        "surface tension",
+        "finite core"
+      ],
+      "cost": "any regulator breaks exact topological conservation"
+    },
+    "K3_what_killed_it": {
+      "reasons": [
+        {
+          "reason": "aether removed by Michelson-Morley/SR",
+          "transfers": false
+        },
+        {
+          "reason": "never produced quantitative spectra",
+          "transfers": true
+        },
+        {
+          "reason": "stability needed an unmaintainable idealisation",
+          "transfers": true
+        },
+        {
+          "reason": "knot-to-atom assignment was fitted, not derived",
+          "transfers": true
+        }
+      ],
+      "sharpest": "topological richness bought accommodation, not prediction"
+    }
+  }
+}

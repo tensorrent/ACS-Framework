@@ -33,6 +33,8 @@ subset used by the root monograph.
 | — | `Flag_Condensate_Palpha_{Overlap,Refined,Throat_Overlap}.tex` | Pα overlap trilogy |
 | — | `Density_Engine_Many_Worlds.tex` | Density Engine interpretive note |
 | — | `Critical_Line_As_Fibered_Object.tex` | The critical line as a two-sided seam (Fork C synthesis) |
+| — | `Constraint_Projection_Framework.tex` | Submitted CPF manuscript, archived **as submitted** — every load-bearing claim T4; read the audit first |
+| — | `Constraint_Projection_Framework_Audit.tex` | Audit of the above: dropped factor of 2, four incompatible cutoffs, unsatisfiable Axiom III, two restated kills |
 
 ## `methodology/` — empirical tools
 

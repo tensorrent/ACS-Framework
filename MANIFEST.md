@@ -7,10 +7,17 @@ Condensate, framing transformer) were appended later and carry their own dates.
 Seed `20260423`. All code referenced was executed at the time its section was
 written.
 
-## Four-tier verification hierarchy (tiers never promote)
+## Verification hierarchy (tiers never promote)
+
+> **T0 added 2026-08-30.** T1 has always meant *a script ran and asserted* — which is
+> weaker than "machine-verified" sounds: a sympy assertion is sympy agreeing with itself.
+> A kernel-checked proof is categorically different and gets its own, strictly stronger
+> tier. **No existing claim changed tier**; T0 is earned by new evidence, not promotion.
+> Exactly one proposition holds it so far — see `code/constraint_projection/lean/`.
 
 | Tier | Standard |
 |------|----------|
+| **T0** | Machine-**checked** — kernel-verified by a proof assistant, axiom dependencies disclosed (added 2026-08-30) |
 | **T1** | Machine-verified — automated test passes, reproducible by running the code |
 | **T2** | Proved in paper — complete mathematical proof, human-verified |
 | **T3** | Numerically verified — consistent across runs, not yet theorem-level |
@@ -180,3 +187,488 @@ Verify: `python3 code/framed_unknot/framing_transformer.py` and `python3 code/fr
 > odd meridian winding $q=1$ (the $\varphi/2$ half-angle), which is a
 > $\mathbb{Z}/2$ statement and cannot by itself yield a magnitude.
 
+
+
+---
+
+## Constraint Projection Framework — submitted manuscript & audit (2026-08-29)
+
+Manuscript (archived as submitted): `papers/notes/Constraint_Projection_Framework.tex`
+Audit: `papers/notes/Constraint_Projection_Framework_Audit.tex` ·
+Code: `code/constraint_projection/` · Artifacts:
+`docs/constraint_projection_audit.json`, `docs/constraint_projection_full_verification.json`
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-29 (kill + second-pass correction)
+Verify: `python3 code/constraint_projection/cpf_audit.py` (first pass, C1–C8)
+and `python3 code/constraint_projection/cpf_full_verification.py` (full, V1–V9;
+`--deep` recomputes the §7 contour integrals, ~4 min)
+
+> **The manuscript is archived, not endorsed.** Every load-bearing claim is **T4**.
+> It is kept because negatives are first-class outputs here, and because two of its
+> claims are restatements of kills already in the ledger — which is itself a finding.
+> Do not cite any result from it without the audit.
+
+| Claim (manuscript) | Tier | Evidence |
+|-------|------|----------|
+| $\alpha^{-1} = \ln(8R/a)+1 = 137.035999171$ | **T4** | `cpf_audit.py` C1 — the stated inputs give $L\alpha=2$, i.e. $\alpha^{-1}=\tfrac12(\ln(8R/a)+1)$; a factor of 2 is dropped. Correction already published in `Mobius_Ribbon_Capacitance.tex` eq. `(alpha_ann)` |
+| The cutoff $a$ is not free / zero free parameters | **T4** | `cpf_audit.py` C2 — four mutually exclusive requirements on $a/R$ spanning **117.4 decades** ($5.0\times10^{-1}$, $6.66\times10^{-59}$, $2.04\times10^{-118}$, $1.49\times10^{-39}$). One free parameter, fitted per section |
+| Axiom III: $\exists\,\phi\in\mathrm{Diff}(\mathcal{M})$, $\phi_*=\left(\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right)$ | **T4** | `cpf_audit.py` C3 — clauses (1)–(2) force $\mathcal{M}=$ Klein bottle; $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ is finite, $\phi_*$ is parabolic of infinite order, and $\phi_*D\phi_*^{-1}\neq D$. **The axiom has no model** |
+| $\mathcal{M}\cong$ Klein bottle from clauses (1)–(2) | **T2/T1** | `cpf_full_verification.py` V1 — Euler-characteristic census ($\chi(N_k)=2-k$, cover genus $h=k-1$, so $h=1$ only at $k=2$) + Smith normal form on the CW complex ($H_2=0$, $H_1=\mathbb{Z}\oplus\mathbb{Z}/2$). Correct and unique; the one piece of topology in the paper that does what it claims. ($H_2=0$ is implied by $w_1\neq0$, so that clause adds nothing) |
+| $g=Sl=2$, $s=Sl/4=1/2$ | **T4** | `cpf_audit.py` C4 — restates the kills of 2026-07-26: $\sigma=(-1)^{Sl+1}$ (one parity bit) and $g=1$ exactly for every closed curve |
+| $k(\varepsilon)=0 \Leftrightarrow$ RH $\Leftrightarrow \Omega_k=0$ | **T4** | `cpf_full_verification.py` V5 — the **defining integral** equals $2\pi N(T)/T \to \log(T/2\pi e) \to +\infty$ (residue theorem; ratio $\to 1$ numerically), real, positive and $\varepsilon$-independent, where the claimed sum is negative and $\varepsilon$-dependent. Separately the claimed sum is invariant under $\beta\mapsto1-\beta$, hence blind |
+| $S_{\mathrm{LF}} = 2\sqrt2$ under the stated operators | **T3** | `cpf_audit.py` C6 — **arithmetically confirmed** to machine precision, Tsirelson-saturating |
+| That sum is a Local Friendliness inequality / falsifies AOE | **T4** | `cpf_full_verification.py` V6 — the **LF bound on that expression is 4** (LP over all four $(a_1,b_1)$ branches; equals the no-signalling bound, since no $x{=}1$ term appears). $2\sqrt2 < 4$: **no LF violation**, and Tsirelson forbids one. The "$>2$" is the Bell local bound |
+| $\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}\lvert\nabla\psi\rvert^2$ solves rotation curves without exotic particles | **T4** | `cpf_audit.py` C7 + `cpf_full_verification.py` V7 — the split contains $\tfrac12\rho v^2$ (double counted in $T_{00}$); it is **not** the Bohm quantum potential $-\tfrac{\hbar^2}{2m}\nabla^2R/R$, so the named mechanism is not the one used; and it needs $m\sim9.6\times10^{-24}$ eV, an ultralight scalar |
+| $L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$ m; UV complete | **T4** | `cpf_audit.py` C2 — 19 decades off on the manuscript's own $a$, 79 on the corrected one; the corrected $a$ is $10^{-96}\,\ell_P$ |
+| Axiom I: $\mathcal{B}$ non-amenable | **T4** | `cpf_audit.py` C8 + `axiom_i_amenability.py` — $\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$ is Connes' adele class space (Selecta Math. **5** (1999) 29–106): **defined, but not a group**, so amenability does not apply to it directly. The two standard group readings $\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ and $\mathbb{A}_\mathbb{Q}^\times/\mathbb{Q}^\times$ are abelian, hence amenable, and $\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ is compact with a Haar probability measure. Verdict unchanged; mechanism corrected 2026-09-11 (the earlier wording "is malformed" did not reproduce) |
+
+> ~~**New structural boundary established (the one genuinely new output).**~~
+> **RETIRED 2026-08-30 — NOT NOVEL.** The statement (a functional detecting off-line
+> zeros must be **odd** under $\beta\mapsto1-\beta$; anything factoring through
+> $(\tfrac12-\beta)^2$ is blind) is **true but classical**. Davenport–Heilbronn (1936)
+> is the standard witness that functional-equation symmetry alone cannot locate zeros;
+> Weil's positivity criterion is the standard construction that beats it, with off-line
+> zeros appearing as negative eigenvalues. Found in one query on the first use of the
+> prior-art step. The reading of the manuscript's §7 stands; the *contribution* does not.
+
+> **Second pass, 2026-08-29 — two of our own verdicts corrected, both understated.**
+> The first pass settled three checks by structural argument rather than computation.
+> Running them moved two verdicts, both *against* the manuscript: the LF bound is **4**
+> (so §5 exhibits no LF violation at all, and Tsirelson forbids one), and §7's
+> **defining integral** — never evaluated in the first pass — equals
+> $2\pi N(T)/T\to\log(T/2\pi e)\to+\infty$, which is the Riemann–von Mangoldt smooth
+> counting term, not the claimed sum. Method rule kept: **evaluate the object the
+> target actually defines, not the object it claims that object equals.**
+> V9 re-executes `code/framed_unknot/` rather than citing it: $Tw+Wr=-2.000000$,
+> $\sigma=-1$ three ways, $g=1.000000$; both artifacts byte-identical.
+
+> **Scope:** the audit assesses §§2–8 against the manuscript's own stated inputs.
+> The interpretive material of §§1 and 9 (relational measurement) makes no
+> falsifiable claim and is not assessed. Nothing here bears on authorship or priority.
+
+
+---
+
+## Where $g=2$ comes from — Lévy-Leblond run, and the measured anomaly (2026-08-30)
+
+Code: `code/constraint_projection/wave_equation_gfactor.py` ·
+Artifact: `docs/wave_equation_gfactor.json` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `python3 code/constraint_projection/wave_equation_gfactor.py` (~5 s)
+
+Successor to the 2026-07-26 `Sl = 2 ↔ g = 2` kill, which closed on Lévy-Leblond
+(Comm. Math. Phys. **6** (1967) 286) as its decisive external citation. That citation
+had never been *run* here. It is now.
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| $\sigma_i\sigma_j=\delta_{ij}+i\epsilon_{ijk}\sigma_k$ | **T1** | W1, all 9 ordered pairs |
+| $(\sigma\!\cdot\!\pi)^2=\pi^2-q\hbar(\sigma\!\cdot\!B)$ | **T1** | W2, symbolic with non-commuting $\pi_i$ |
+| Lévy-Leblond linearization reduces to free Schrödinger | **T2(known)** | W3 |
+| $g=2$ from $su(2)$ + linearization, **no relativity, no topology** | **T1/T2(known)** | W3 — no $c$, no Lorentz, no metric in the chain |
+| $4\pi$ periodicity from $\pi_1(SO(3))=\mathbb{Z}/2$, **no manifold** | **T1/T2(known)** | W4 — $e^{-i(2\pi)\sigma_z/2}=-I$ |
+| Tree Dirac gives the same $g=2$ | **T2(known)** | W5 — so $g=2$ diagnoses neither relativity nor topology |
+| $a_e = 1.15965218059(13)\times10^{-3}$ | **T3(measured)** | Fan et al., PRL **130**, 071801 (2023) |
+| Any "$g=2$ exactly" framework sits $8.92\times10^{9}\sigma$ from the data | **T1** | W6 |
+| QED series validated by inversion against a published $\alpha^{-1}$ | **T1** | W7 — recovers 137.03599916622 vs Fan et al. 137.035999166(15), agreeing to 0.015× their uncertainty |
+| QED vs independent $\alpha$: Rb 2.1σ, Cs −3.9σ; Rb vs Cs 5.5σ | **T3** | W8 — dominant discrepancy is *experimental*. Crude error propagation; sigmas indicative |
+| **CPF completeness claim falsified experimentally** | **T4** | W9 — $Sl$ is an integer and the framework has no expansion parameter, so no route to $1.16\times10^{-3}$ at any order |
+
+> **Scope.** W1–W5 are textbook; the contribution is that they are machine-checked rather
+> than cited, and that they need no surface, framing, or self-linking number. The new
+> result is W9: an *experimental* kill of the manuscript's completeness claim, independent
+> of the 2026-07-26 kill of its geometric-origin claim. Lévy-Leblond and tree Dirac stop
+> at $g=2$ too — that is no mark against them, since neither claims to be finished.
+
+> **Method note.** The first run of W7/W8 omitted the mass-dependent QED terms
+> ($2.75\times10^{-12}$, ~20× the experimental uncertainty) and compared against CODATA's
+> $\alpha$, which is partly determined *by* $a_e$ — circular. Both were caught by
+> **inverting the series for $\alpha^{-1}$ against a published anchor**, not by
+> re-reading the algebra. Rule added to the ledger: *anchor every series to a number
+> someone else published.*
+
+
+---
+
+## Triple-check — every load-bearing CPF claim by ≥2 independent methods (2026-08-30)
+
+Code: `code/constraint_projection/cpf_triple_check.py` ·
+Artifact: `docs/constraint_projection_triple_check.json` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `python3 code/constraint_projection/cpf_triple_check.py`
+(`--full` adds the T = 74,000 sweep and the LF quantum search, ~15 min)
+
+Two passes in two days each corrected a verdict that had been *reasoned about rather
+than run*. This pass attacks every claim from methods sharing no machinery, validates
+the instruments before trusting them, and scales past toy sizes.
+
+| Claim | Methods | Tier | Result |
+|-------|---------|------|--------|
+| Axiom III clause (3) unsatisfiable | deck-centraliser (390,625 matrices) **+** `Out(π₁(K))` by word algebra | **T1/T2** | both give order 4, `{diag(±1,±1)}`; `φ_*` in neither |
+| LF instrument is sound | 3 validations: local ⊆ LF, PR box ∉ LF, **quantum ∉ LF** (slack `3√3−4` at the maximally entangled state) | **T1** | all pass — the construction reproduces Bong et al. |
+| LF bound on the manuscript's sum = 4 | LP over 4 branches **+** exact rational certificate (no solver) | **T1/T2** | 4 exactly; `2 < 2√2 < 4`, so Tsirelson forbids any LF violation |
+| §7 integral → `2πN(T)/T → log(T/2πe)` | mpmath quadrature **+** exact closed form over 100k Odlyzko zeros | **T1** | ratio `0.999994` at T = 74,000 — **900× the original scale** |
+| §7 gap between the two methods | truncation-window sweep | **T1** | converges upward and stabilises: it was quadrature error, not disagreement |
+| §7 component decomposition | zero sum / pole / ψ separately | **T1** | only `2πN(T)/T` survives division by T; verified piece by piece |
+| `g = 2` | Lévy-Leblond 4×4 (`det M = (2Em−p²)²`, rank 2 on shell) **+** `σ·π` squaring **+** Dirac reduction | **T1/T2(known)** | three routes, all bottoming out in `{σᵢ,σⱼ} = 2δᵢⱼ` |
+| `α⁻¹ = ½(ln(8R/a)+1)` | symbolic solve **+** repo's published `eq. (alpha_ann)` **+** repo's BIE instrument re-run | **T1/T2** | agree to `1.2e-9` relative on `a/R = 2.039050e-118` |
+
+> **No verdict moved on this pass** — after two consecutive passes that each corrected
+> something, a third built specifically to break the results did not. But three of these
+> claims had rested on a **single** method, and X2 on a construction built from a
+> definition rather than from the source paper — the most fragile thing in the audit.
+> It now carries three validations and an exact certificate.
+
+> **Method rule added (third).** *An instrument is not trusted until it has been shown
+> capable of failing.* Validate that it excludes what it must exclude before believing
+> what it includes. Companions: *evaluate the object the target actually defines*
+> (2026-08-29) and *anchor every series to a number someone else published* (2026-08-30).
+
+> **Reproducibility note.** `ribbon_capacitance.py` was re-run this session and its
+> tracked artifact regenerated **byte-identically** (sole diff: a trailing newline),
+> independently confirming the repo's byte-reproducibility claim.
+
+
+---
+
+## Formal verification — first T0 result (2026-08-30)
+
+Code: `code/constraint_projection/lean/LFBound.lean` · `.../lean/README.md`
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `lean code/constraint_projection/lean/LFBound.lean` (~0.8 s, exit 0, **no Mathlib**)
+
+Method adopted from Anthropic's Riemann-zeta pipeline (2026-08-10), which ends in a Lean
+formalization passing a standard checker.
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| LF bound on the CPF §5 sum is exactly 4 | **T0** | `lf_bound_is_four` — attained by an explicit LF branch **and** an upper bound |
+| `S ≤ 4` on any normalised non-negative behaviour | **T0** | `S_le_four` (needs neither LF nor no-signalling) |
+| the witness is a genuine LF branch | **T0** | `star_is_LF` — **depends on no axioms** |
+| the witness attains `S = 4` | **T0** | `star_S_eq_four` — **depends on no axioms** |
+| the proof can fail | **T1** | 3 mutations, all REJECTED by Lean |
+
+> **Axioms disclosed:** only `propext` and `Quot.sound`; **no `Classical.choice`**, so the
+> development is constructive. No `sorry`, no `native_decide`.
+
+> **Not formalised:** Tsirelson (`2√2`) and the Bell bound (2) remain external/numerical.
+> The Lean file makes no quantum-mechanical claim.
+
+> **Closed 2026-08-30:** that prior-art search was run. The claim is **not novel** —
+> Davenport–Heilbronn and Weil positivity both predate it. Retired; see the ledger.
+> The prior-art step is now standing practice: no result is logged as novel until a
+> literature search has been run and recorded.
+
+
+---
+
+## Coherence audit — the CPF work used none of this repo's own methods (2026-08-30)
+
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+| Measurement | Tier | Evidence |
+|-------------|------|----------|
+| 4 CPF instruments, ~1,900 lines, **0 uses** of any repo-native method device | **T1** | grep for refraction / invariant / shuffle / surrogate / decoy / vantage / effective-rank |
+| The manuscript's $\alpha^{-1}$ is a **REFRACTION** by this ledger's own criterion | **T2** | moves to $O(1)$ under model swap (annulus→conformal→BIE); the additive constant $+1\to-7/4$ shifts it by exactly $11/8$ |
+| Decoy test on the $\alpha$ match — **RUN 2026-08-30** | **T1** | `alpha_decoy_test.py`: **14 of 14** decoy log-forms reproduce CODATA once each is given its own free cutoff. The test does **not** separate, where the T_min precedent did. Bits carried: **0** |
+| Shuffle knife / surrogates **do not apply** to the CPF audit | **T2** | the audit is deductive (exact integers, finite group theory, rational certificates, a kernel-checked proof); there is no distribution to permute |
+
+> **Standing correction to practice.** An audit in this corpus should state up front which
+> of the program's own devices it applies and which it does not and why. Four instruments
+> went by without that. The verdicts were correct; the audit was simply built as though
+> the corpus had no methods of its own.
+
+### This program's own methodological inventions (none externally sourced)
+
+`shuffle knife` — marginal-matched surrogate; FORM/FUNCTION split, self-calibrating
+because the surrogate inherits the object's own distribution ·
+`tomographic invariance` — refraction vs invariant under instrument swap, with numerical
+(a) and structural (b) paths and an explicit rule never to let (b) wear (a)'s clothes ·
+`vantage-point census` — effective rank of witnesses ·
+`decoy discipline` · `strip-mine targeting` — rank by expected-space-collapsed per unit
+cost, weighted toward the program's *own* load-bearing claims ·
+`append-only elimination ledger` · `tiers never promote`.
+
+
+---
+
+## Decoy test and the second T0 (2026-08-30)
+
+Code: `code/constraint_projection/alpha_decoy_test.py` ·
+`code/constraint_projection/lean/AxiomIII.lean`
+Artifacts: `docs/alpha_decoy_test.json` · Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| The manuscript's $\alpha$ form is **not privileged** | **T1** | 14 of 14 decoy log-forms hit CODATA to $<10^{-25}$; the test does not separate |
+| The match carries **0 bits** | **T2** | 1 parameter fitted to 1 datum, residual DOF 0; the model reproduces every target in its range ($\alpha^{-1}=42$ at $a/R=1.25\times10^{-17}$) |
+| The quoted $6\times10^{-9}$ tracks **working precision**, not physics | **T1** | residual falls with `mp.dps`; improvable without limit |
+| Parameter-free reading predicts $\alpha^{-1} = 1.886$ | **T1** | from $\tau = ia/R = i/2$; wrong by a factor of **72.6** |
+| That 72.6× gap is an **artifact, not a scaling rule** | **T1/T2** | `alpha_scaling_test.py` — ratio runs 61→138 across the $\tau$ sweep; exponents for $\alpha$/$L_{\rm IR}$/$g$ are 1.0 / 20.7 / 0.00027; only $p=0$ reconciles the three instruments; 1 observable vs 2 parameters |
+| $\alpha^{-1}$ is a **REFRACTION** by the kill-criterion | **T2** | ~8× across annulus/conformal/BIE; $d(\alpha^{-1})/d(\text{const}) = 1/2$ exactly |
+| **Axiom III clause (3) unsatisfiable** | **T0** | `axiom_III_clause3_unsatisfiable` — centraliser is diagonal, $\varphi_*$ is not, its unimodular part is exactly four, $\varphi_*$ has infinite order |
+| Both Lean proofs can fail | **T1** | 3 + 4 mutations, all REJECTED |
+
+> **Axioms.** `LFBound.lean` uses only `propext` and `Quot.sound` (constructive).
+> `AxiomIII.lean` additionally uses **`Classical.choice`** — not constructive. Disclosed
+> because the first file's constructivity was reported, so the second's loss of it must be.
+
+> **Scope of the Axiom III proof.** The *algebraic* obstruction is machine-checked. That a
+> diffeomorphism of $K$ induces a matrix commuting with $D$, and that
+> $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ (Lickorish 1963), are **assumed and
+> cited**, not formalised — the manuscript's error is algebraic, and that is what is proved.
+
+
+---
+
+## Third T0 — the per-zero 2π contribution (2026-08-30)
+
+Code: `code/constraint_projection/lean/withMathlib/PerZero.lean` ·
+Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+Verify: `cd code/constraint_projection/lean/withMathlib && lake exe cache get && lake env lean PerZero.lean`
+
+| Claim | Tier | Evidence |
+|-------|------|----------|
+| Imaginary parts of the two lines cancel **exactly** | **T0** | `imag_cancels` — $\alpha$ enters only as $\alpha^2$; no hypothesis needed |
+| Real parts combine to $2[\arctan(\tfrac{T-\gamma}{\varepsilon}) + \arctan(\tfrac{\gamma}{\varepsilon})]$ | **T0** | `real_doubles` — $\arctan$ is odd |
+| That is **strictly below** $2\pi$ at every finite $\varepsilon$ | **T0** | `contribution_lt_two_pi` |
+| …and **tends to** $2\pi$ as $\varepsilon\to0^+$ for $0<\gamma<T$ | **T0** | `contribution_tendsto` |
+| The proof can fail | **T1** | 5 mutations, all REJECTED — including `imagPart` made odd in $\alpha$ |
+
+> **Wording corrected by the formalisation.** We had written the contribution "$\to 2\pi$"
+> in a way that invited reading it as attained. It is not: $\arctan < \pi/2$ strictly, so
+> $2\pi$ is a supremum approached, never reached. Both facts are now separate theorems.
+> The numerics were never affected; the prose was looser than the mathematics.
+
+> **Axioms:** `propext`, `Classical.choice`, `Quot.sound` — non-constructive, as Mathlib's
+> real analysis is.
+
+> **Cost.** First proof here needing Mathlib (~5 GB cache) rather than a bare `lean`
+> binary. Kept in `withMathlib/` with its own `lakefile.toml` so the dependency boundary
+> is visible in the tree.
+
+### Formal-verification status
+
+The deductive core of the CPF audit is now machine-checked end to end — **§5 LF bound**,
+**Axiom III clause (3)**, **§7 per-zero contribution**. What remains outside the kernel is
+in every case either measured data or standard textbook results cited by name, never a
+step of our own reasoning.
+
+
+---
+
+## What the α gap is, and whether it can be corrected (2026-08-30)
+
+Code: `code/constraint_projection/alpha_gap_diagnosis.py` ·
+Artifact: `docs/alpha_gap_diagnosis.json` · Ledger: `docs/Elimination_Ledger.md`, 2026-08-30
+
+Follow-on from the scaling test: ruling out a power law ruled out a *species* of
+correction, leaving open what the gap actually is.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The gap is **additive in the log** ($L \to L+270$), not multiplicative | **T1** | why no power law could fit — wrong shape of correction |
+| "72.6×" is an artifact of $a/R=1/2$; the **Planck cutoff gives 26.96** (5.08×) | **T1** | six physical scales tabulated, from 1.54 to 137.04 |
+| The CODATA-matching cutoff is $2.4\times10^{-96}$ Planck lengths | **T1** | not a regulator; voids "UV complete" |
+| The prefactor **cannot be repaired**: $\alpha^{-1} = (4\pi\eta^2/\kappa)L$ needs $\eta \notin \{1,\tfrac12,\tfrac13,\tfrac23,2\}$ for every natural $\kappa$ | **T2** | four normalisations tried |
+| Log-in-scale **is** the shape of RG running — but coefficient off by $3\pi/4$ and **sign opposite** | **T2** | QED $-2/3\pi$ screens; this $+1/2$ anti-screens, backwards for $U(1)$ |
+| The general no-go is **standard, not ours** | **T2** | dimensional transmutation; RG boundary conditions; arXiv:1411.4673 survey |
+
+> **Answer: the gap is not correctable.** All three routes close. The correct move is
+> reporting, not repair — the framework with its own scale-fixing predicts
+> $\alpha^{-1} = 1.886$ and is falsified. Anything that closes the gap adds physics not
+> in the manuscript, and must then be tested as a different theory.
+
+> **Wyler 1970 got $\alpha^{-1} = 137.03608$ (rel err $5.9\times10^{-7}$) and was
+> debunked. This manuscript is 13,471× closer — and carries zero bits.** Closer agreement
+> is not better evidence; more digits only means more digits were fitted. *(An in-flight
+> correction: the first draft of the instrument had this comparison backwards.)*
+
+
+---
+
+## Can a relative boundary condition fix α? (2026-08-30)
+
+Code: `code/constraint_projection/alpha_relational_boundary.py` ·
+Artifact: `docs/alpha_relational_boundary.json` · Ledger: `docs/Elimination_Ledger.md`
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| §8's $\lambda_{\rm UV}\lambda_{\rm IR}=1/R^4$ **is** a relational condition: $a\,L_{\rm IR}=R^2$ | **T2** | substituting gives $\alpha^{-1} = \tfrac12(\ln(8L_{\rm IR}/R)+1)$ — Dirac large-number form |
+| Using it makes α a **parameter-free prediction**: $\alpha^{-1} = 46.24$ | **T1** | off by 2.96×, beating 72.6× ($\tau=i/2$) and 5.08× (Planck) |
+| But it predicts α **drifts** at $2.5\times10^{-13}$/yr | **T1** | $\dot\alpha/\alpha \sim H_0/2\alpha^{-1}$ |
+| **Excluded by ~10⁴** against every independent bound | **T3(measured)** | atomic clocks 12,575×; Oklo 20,958×; quasars 2,515× |
+| The manuscript has **two** relational conditions giving 1.886 and 46.24 | **T1** | they disagree by **24.5×** |
+
+> **The deep point.** A relative boundary condition does not rescue the framework — it
+> makes it **over-determined and inconsistent**, which is strictly worse than
+> under-determined. Under-determination is a missing input you can go find;
+> over-determination with disagreement means the framework's own conditions contradict
+> each other, and there is no free parameter left to absorb the difference.
+
+> **Prior art (rule 4, searched before claiming).** α-constancy as a constraint on
+> varying-α models is a standard, well-developed method, and the Oklo / atomic-clock
+> bounds are the field's own. The Dirac large-number framing is classical. Only the
+> application to this framework is ours.
+
+> **A route that improved things and was killed anyway.** 72.6× → 2.96× and
+> parameter-free is a real gain. It died on a test it could have passed: had the drift
+> come in below 10⁻¹⁷/yr, the relational reading would have survived as a live option.
+
+---
+
+## The Kelvin/Klein-Foam reading: "no particles, only the finite-resolution throat" (2026-08-31)
+
+Code: `code/constraint_projection/klein_foam_reading.py` ·
+Artifact: `docs/klein_foam_reading.json` · Ledger: `docs/Elimination_Ledger.md` ·
+Sources read: `papers/notes/Klein_Foam_Monad.tex`, `papers/notes/Mobius_Ribbon_Capacitance.tex`
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The reading is **structurally correct**: $\alpha^{-1}$ is joint-scaling invariant | **T2** | sympy: $\alpha^{-1}(\lambda R,\lambda a)-\alpha^{-1}(R,a)=0$ exactly; depends only on $R/a$ |
+| Same invariant this repo isolated in **FF06h** (width/$\delta$, never a bare length) | **T2** | reached independently, from the other direction |
+| The foam's **own** Planck floor gives $\alpha^{-1}=26.96$ — **best absolute reading tested** | **T1** | 5.08×, vs 72.6× ($\tau=i/2$) and 89× ($a=R$) |
+| The manuscript needs $a=2.4\times10^{-96}\,\ell_P$ — **96 decades below the foam's own floor** | **T1** | kill becomes **internal**, not external |
+| Renaming $a$ cutoff → resolution **does not move the arithmetic** | **T2** | $a/R=2.039\times10^{-118}$ either way |
+| The corpus holds **two scope declarations for $a/R$**: `Klein_Foam_Monad.tex` names it an input, the CPF entry records it as not free | **T1** (corpus fact) | quoted verbatim from both files, one month apart |
+
+> **The finding, stated as a corpus fact.** `Klein_Foam_Monad.tex` says *"Free-parameter
+> count depends on which quantities are treated as inputs ($R$, $a/R$, charge split);
+> absolute ``zero free parameters'' is not claimed."* The CPF entry says *"The framework
+> contains zero free parameters."* Two entries, same quantity, different scope. K3 settles
+> which one the arithmetic matches: $a/R$ carries a fitted value, so the earlier scope is
+> the one the numbers support.
+
+> **What changes is where the resolution lives.** This audit's central finding was already
+> in the corpus, in those words, a month earlier. An external instrument was built to
+> establish something established in-house. That is a fact about **how the audit was run**
+> — not a grade on either entry. Entries record state; they do not indict each other. Both
+> stand, append-only, as written.
+
+> **What the reading earns:** the invariance is real, it gives the best absolute prediction
+> tested, and it makes the α discrepancy internal to the corpus rather than an external
+> appeal. **What it does not earn:** any movement in α.
+
+> **Method note (rule 4).** No new technique — source-checking a claim against the
+> programme's own prior scoped statement, plus dimensional analysis done symbolically. It
+> produced something only because it was pointed at **our own corpus**, which is the gap
+> the 2026-08-30 coherence audit flagged. First entry to close it.
+
+---
+
+## The Feynman path integral run against CPF and the Klein-Foam reading (2026-08-31)
+
+Code: `code/constraint_projection/feynman_path_integral.py` ·
+Artifact: `docs/feynman_path_integral.json` · Ledger: `docs/Elimination_Ledger.md`
+
+Fair ground, not an imported standard: *"no particles, only histories"* is Feynman's own
+statement of the path integral, and *"finite resolution"* is lattice regularisation.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| The ontology is **well-formed** as a lattice path integral | **T2** | no-particles reading, finite resolution, and K1's scaling invariance all transfer exactly |
+| The electrostatic step is **ħ-free**; ħ enters only via $R=\hbar/2m_ec$ | **T2** | symbolic solve with $R$ free: $L = 16\pi\varepsilon_0 R m_ec^2/e^2$ |
+| $\alpha$ is the **loop-counting parameter**, so a tree-level quantity cannot fix it | **T2** | capacitance is the saddle point, $O(\hbar^0)$ |
+| The derivation **collapses to $r_e=\alpha\bar\lambda_C$**, a standard identity | **T2** | $R=(L/4)r_e$ classically; setting $R=\bar\lambda_C/2$ gives $L=2/\alpha$ |
+| $a/R$'s exponent **is** CODATA $\alpha^{-1}-1$ | **T1** | 136.035999171 vs 136.035999177 — **6.0e-9**, the entry's own quoted agreement |
+| Axiom II's $w_1\neq0$ is **exactly** what forbids a spin structure | **T1** | GF(2) chain complex: $\chi=0$, $\dim H^1(K;\mathbb{Z}/2)=2$ |
+| **0 Spin, 4 Pin⁺, 4 Pin⁻** — 3 bits of measure unspecified | **T1** | Wu: $w_2=w_1^2$, $\langle w_2,[K]\rangle=\chi \bmod 2=0$ |
+| The 2026-08-30 running verdict, **re-derived** from vacuum polarisation | **T2** | QED $-0.2122$ vs CPF $+0.5$; ratio $3\pi/4$; signs opposite — **both halves confirmed** |
+| Required cutoff is **inside** the perturbative region; QED competes there | **T1** | Landau pole 162 decades further out; 79.38 vs 137.04 → **1.73×** at one scale |
+| **No UV fixed point**; "UV complete" ⊥ "finite resolution" | **T2** | $\beta=2\alpha^2/3\pi$, root set $\{0\}$, $\beta>0$ everywhere |
+| α is **measured to run** — fixed topology cannot track it | **T3(measured)** | 137.04 → 128.95 at $M_Z$ needs the throat **10⁷× coarser**, 7.03 decades |
+
+> **On home ground the ontology is unharmed.** P0 stands on its own: the reading maps onto
+> the formalism exactly, and a finite-resolution path integral is what lattice QCD is. What
+> the formalism denies is that such a theory can *determine* its own coupling — the coupling
+> is what you put in.
+
+> **The α derivation is an identity with the answer supplied as input.** ħ enters at one
+> point, by choice; the remaining content is $r_e = \alpha\bar\lambda_C$; and $a/R$ is
+> defined by an exponent equal to the measured $\alpha^{-1}$ minus one. The reported 6e-9
+> is a round-trip error, not a residual.
+
+> **P7 is independent of everything else here.** It does not use the factor of 2, the value
+> of $a/R$, the Planck floor, or the beta-function sign — only that α depends on scale,
+> which is measured.
+
+> **A verdict re-derived rather than reused.** P4 recomputed a call this ledger already
+> carried, from a different starting point, on the chance it would break. It did not. A
+> verdict that has survived two independent derivations is not the same object as one that
+> has survived a single pass.
+
+---
+
+## Green's theorem run against CPF (2026-08-31)
+
+Code: `code/constraint_projection/greens_theorem.py` ·
+Artifact: `docs/greens_theorem.json` · Ledger: `docs/Elimination_Ledger.md`
+
+Internal three times over: $\mathcal{M}$ is a 2-manifold so Green's is its native integral
+theorem; §9 makes the Divergence Theorem foundational; and §3's α derivation **is** a
+Green's-function calculation.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| $H_2(K;\mathbb{Z})=0$, $H_1(K;\mathbb{Z})=\mathbb{Z}\oplus\mathbb{Z}/2$ | **T1** | integer CW chain complex, Smith normal form |
+| **Axiom II states the obstruction itself** — $w_1\neq0$ *and* $H_2=0$ | **T2** | no fundamental class, no orientation ⟹ no Green's theorem in ordinary form |
+| §9 makes the Divergence Theorem foundational; **Axiom II removes it three pages earlier** | **T2** | same clause ($w_1\neq0$) that killed the spin structure in P3 |
+| Stokes survives for **twisted** forms — at the cost of a different electromagnetism | **T2** | $\ast F$ needs orientation; charge becomes a density; $\int F\wedge F$ unavailable |
+| **Any ordinary 2-form pulled back from $\mathcal{M}$ integrates to ZERO** on its orientation cover | **T2** | $\tau^*\omega=\omega$ and $\tau$ orientation-reversing ⟹ $\int\omega=-\int\omega$ |
+| Verified by Monte Carlo, not a grid (so quadrature can't impose the symmetry) | **T1** | 5 trials, 400k pts: $\int f/\int\vert f\vert \le 4.7\times10^{-3}$; descent residual 2.3e-14 |
+| So §3's *"capacitance of the double-cover annulus"* is **identically zero**, not merely small | **T2** | a non-zero answer needs twisted charge, fixing the "$e/2$" by twisting not assertion |
+| The Green's integral gives $C=4\pi^2\varepsilon_0R/\ln(8R/a)$ — **the 8 emerges** | **T1** | $\kappa\to2.0$ across $a/R$ from 1e-3 to 1e-20 |
+| The manuscript's $C$ is **$2\pi$ too small, in the prefactor** | **T1** | ratio 6.3062 at its own $L$; $2\pi=6.2832$; the "+1" is subleading |
+| Propagated: $L\alpha = 4\pi$, not 2 → cutoff $10^{-118}\to10^{-747}$ | **T1** | **629 decades worse**; Planck-floor reading degrades 5.08× → 32.5× |
+
+> **This was worth running because it could have helped.** A $2\pi$ prefactor error is the
+> single commonest way a derivation of α is wrong, and a $2\pi$ recovered in the right
+> direction would have closed a real part of the gap. It goes the wrong way.
+
+> **The same axiom clause keeps doing the damage.** $w_1(\mathcal{M})\neq0$ is what the
+> framework relies on for its spinor claim (§4) and its non-orientability (Axiom II). It is
+> also what removes the spin structure (P3) and now the integral theorem (G1). The property
+> being leaned on and the property doing the killing are the same property.
+
+> **An in-flight correction, twice.** The instrument first printed a $V$ line contradicting
+> the ratio table directly above it, and its summary hardcoded 31.9× where G4 computed
+> 32.54×. Both were the same failure — prose written *alongside* a number instead of *from*
+> it. The chain now derives $C$ from the measured $\kappa$ and the summary reads from the
+> result dict.
+
+---
+
+## Exhaustion pass: the open thread closed, and rule 8 (2026-08-31)
+
+Code: `code/constraint_projection/twisted_ribbon_capacitance.py` ·
+Artifact: `docs/twisted_ribbon_capacitance.json` · Ledger: `docs/Elimination_Ledger.md`
+
+> **Rule 8.** *Run it to exhaustion and finish; leave nothing outside. A dead end and an
+> open path are both results — an unclosed hedge is neither.* Operationally: any sentence
+> conceding a limitation must be a computed result, an explicitly recorded open item, or
+> removed. *"It probably doesn't matter"* is none of the three.
+
+| Finding | Tier | Evidence |
+|---------|------|----------|
+| Audit of the corpus's own hedge language found **2 candidates, 1 genuinely open** | **T1** | scanned for "fairness note", "caveat", "not assessed", "to leading order", "approximate" |
+| The `wave_equation_gfactor` caveat is **correctly scoped, not load-bearing** | **T2** | it qualifies Rb-vs-Cs per-source σ; the 8.92e9σ is $a_e/u(a_e)$, no propagation |
+| G3's **fairness note was argued, not computed** — the open thread | — | three reasons given, all arguments |
+| BEM solver validated **before** use: sphere to **3.11e-4** of exact $4\pi\varepsilon_0 a$ | **T1** | rule 3; two radii, same relative error |
+| The plain torus also **re-derives G3 independently** | **T1** | solved-σ BEM vs Green's-function integral: 0.3–1.0% |
+| The half-twist moves the capacitance by **0.0133%** — not $2\pi$ | **T1** | washer 6.08266, Möbius 6.08185, full-twist 6.08195 |
+| Solved on the **manuscript's own non-orientable shape**, ratio is still 7.222× | **T1** | vs G3's predicted $2\pi(L+1)/L = 7.256$ at this $L$ — **0.46%** |
+| So the BEM confirms G3's **$L$-dependence**, not just one value | **T1** | test geometry chosen deliberately fat ($w/R=0.05$) so $L$ sits far from $2\pi$ |
+
+> **The asymmetry is the finding.** The half-twist is **electrostatically nearly free**
+> (0.0133%) — it does not rescue the $2\pi$, and a Möbius conductor is an ordinary
+> conductor. But it is **topologically expensive**: the same twist makes the surface
+> non-orientable, which removed the spin structure (P3), Green's theorem in ordinary form
+> (G1), and the flux of any pullback 2-form (G2). **Cheap where the framework needs it to
+> pay; expensive where it needs it to be free.** Neither side alone shows this.
+
+> **The rule had to run to know.** The fairness note turned out to be *correct* — computing
+> it changed no verdict. That is the point: a rule that only pays out when it overturns
+> something cannot be trusted when it stays silent.
+
+> **Nothing from the CPF work is now left outside**, except what is recorded as explicitly
+> out of scope: §§1 and 9's interpretive material, minus the Divergence-Theorem clause,
+> which *was* assessed because it is checkable.

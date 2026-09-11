@@ -1,0 +1,713 @@
+% Co-governed and enforced under the Sovereign Integrity Protocol License (SIP License v1.1):
+% https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=0.85in}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  citecolor=green!50!black,
+  urlcolor=red!70!black
+}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Sl}{\mathit{Sl}}
+
+\title{\textbf{Audit of the Constraint Projection Framework}\\[0.35em]
+\large Four Incompatible Cutoffs, an Unsatisfiable Axiom, and a
+Curvature Functional Blind to the Functional Equation}
+\author{Flag Condensate Collaboration \\ Sovereign-Stack ACS Research Program}
+\date{August 29, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Constraint Projection Framework (CPF) manuscript, archived as submitted at
+\texttt{papers/notes/Constraint\_Projection\_Framework.tex}, claims a
+zero-free-parameter topological derivation of $\alpha$, $g$, $s$, the dark-matter
+density, cosmological flatness and the Hubble radius from a single non-orientable
+surface. This note evaluates every load-bearing step. \textbf{Result: one displayed
+number survives its own computation}, and it is CHSH. The rest fails on four
+independent grounds: an algebraic error that a note already in this repository had
+corrected (\S\ref{sec:alpha}); a scale parameter asserted to be fixed but required to
+take four mutually exclusive values spanning $117$ decades (\S\ref{sec:cutoff}); an
+axiom with no model, because the surface its own clauses force has a finite mapping
+class group (\S\ref{sec:axiom3}); and two claims falsified in this repository's
+Elimination Ledger on 2026-07-26 and restated here without reference
+(\S\ref{sec:spin}). Sections~\ref{sec:riemann}--\ref{sec:citations} treat the
+curvature functional, the Wigner's-friend sum, the dark-matter identification, and
+Axioms~I--II. \S\ref{sec:survives} states what survives and what it would take to
+repair each leg.
+
+\textbf{Revised 2026-08-29 (second pass).} A full verification run
+(\texttt{cpf\_full\_verification.py}) recomputed every step that the first pass had
+settled by structural argument. Two verdicts moved, both \emph{against} the
+manuscript, and both are corrected in place below with the earlier reading stated:
+\S\ref{sec:ewfs} --- the Local Friendliness bound on the manuscript's sum is
+\textbf{4}, not $2$, so $S=2\sqrt2$ violates no LF inequality at all; and
+\S\ref{sec:riemann} --- the \emph{defining integral} of \S7, which the first pass
+never evaluated, equals $2\pi N(T)/T \to \log(T/2\pi e) \to +\infty$.
+Instruments: \texttt{code/constraint\_projection/cpf\_audit.py} (first pass),
+\texttt{code/constraint\_projection/cpf\_full\_verification.py} (full);
+artifacts \texttt{docs/constraint\_projection\_audit.json},
+\texttt{docs/constraint\_projection\_full\_verification.json}.
+\end{abstract}
+
+%-------------------------------------------------------------------------------
+\section{Scope and claim discipline}
+
+\textbf{In scope:} the algebra, topology and arithmetic of the manuscript's
+\S\S2--8, evaluated against its own stated inputs; consistency with results already
+logged in this repository; the two citations that could be checked.
+
+\textbf{Out of scope:} the interpretive material of \S9 (relational measurement),
+which makes no falsifiable claim and is not assessed here; the philosophical framing
+of \S1; questions of priority or authorship.
+
+\textbf{Standard applied.} Every check below is written so that the manuscript could
+have passed it. No verdict is assumed by the instrument. Where a claim is
+\emph{correct}, this note says so (\S\ref{sec:ewfs} is the case).
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.30\textwidth}cp{0.42\textwidth}}
+\toprule
+Claim & Tier & Mechanism of failure \\
+\midrule
+$\alpha^{-1}=\ln(8R/a)+1$ & \textbf{T4} & factor of $2$ dropped from the
+  manuscript's own self-energy match \\
+zero free parameters & \textbf{T4} & $a/R$ fitted per section; four incompatible
+  values, $117$ decades apart \\
+Axiom III ($\phi_*$ parabolic) & \textbf{T4} & $\mathcal{M}$ is forced to be the
+  Klein bottle; $\mathrm{MCG}(K)=\mathbb{Z}/2\oplus\mathbb{Z}/2$ is finite \\
+$g=\Sl=2$, $s=\Sl/4$ & \textbf{T4} & already killed 2026-07-26; $\Sl$ carries one
+  parity bit, and $g=1$ for every closed curve \\
+$k=0\Leftrightarrow$ RH $\Leftrightarrow\Omega_k=0$ & \textbf{T4} & the defining
+  integral equals $2\pi N(T)/T\to\log(T/2\pi e)\to+\infty$, not the claimed sum; and
+  the claimed sum is invariant under $\beta\mapsto1-\beta$ \\
+$L_{\mathrm{IR}}=R^2/a\approx1.3\times10^{26}$~m & \textbf{T4} & $19$--$79$ decades
+  off, depending on which $a$ is used \\
+$\rho_{\mathrm{DM}}=\frac{\hbar^2}{2m}|\nabla\psi|^2$ & \textbf{T4} & contains
+  $\tfrac12\rho v^2$; needs $m\sim10^{-23}$~eV \\
+Axiom I (non-amenable $\mathcal{B}$) & \textbf{T4} & every abelian group is amenable \\
+$S_{\mathrm{LF}}=2\sqrt2$ & \textbf{T3} & \emph{arithmetically correct} \\
+that sum violates LF / falsifies AOE & \textbf{T4} & the LF bound on it is $\mathbf{4}$
+  (LP-verified); $2\sqrt2<4$, so there is no LF violation, and Tsirelson forbids one \\
+\bottomrule
+\end{tabular}
+\caption{Claim ledger for the CPF manuscript. Tiers never promote.}
+\end{table}
+
+%-------------------------------------------------------------------------------
+\section{\S3: the fine-structure constant --- a dropped factor of two}
+\label{sec:alpha}
+
+The manuscript's \S3 supplies three inputs and one conclusion:
+\begin{align}
+C_{\mathcal{M}} &= \frac{2\pi\varepsilon_0 R}{L}, \qquad L \equiv \ln(8R/a)+1,
+  \label{eq:C}\\
+E_{\mathrm{self}} &= \frac{(e/2)^2}{2C_{\mathcal{M}}} = m_e c^2, \label{eq:match}\\
+R &= \frac{\hbar}{2m_e c}, \label{eq:R}
+\end{align}
+concluding $\alpha^{-1} = L$.
+
+\begin{proposition}[The conclusion does not follow]
+\label{prop:factor2}
+Equations \eqref{eq:C}--\eqref{eq:R} imply $L\,\alpha = 2$, i.e.
+\[
+\boxed{\;\alpha^{-1} = \tfrac12\bigl(\ln(8R/a)+1\bigr).\;}
+\]
+\end{proposition}
+
+\begin{proof}
+Substituting \eqref{eq:C} into \eqref{eq:match},
+$E_{\mathrm{self}} = \frac{e^2}{4}\cdot\frac{L}{4\pi\varepsilon_0 R}
+= \frac{e^2 L}{16\pi\varepsilon_0 R}$. Setting this to $m_e c^2$ and using
+\eqref{eq:R} to write $1/R = 2m_ec/\hbar$ gives
+$\frac{e^2 L}{8\pi\varepsilon_0\hbar} = c$, i.e.
+$L\cdot\frac{e^2}{4\pi\varepsilon_0\hbar c}\cdot\frac12 = 1$, so $L\alpha = 2$.
+Verified symbolically in \texttt{cpf\_audit.py}, check~C1.
+\end{proof}
+
+\begin{remark}[This correction is already in the repository]
+Proposition~\ref{prop:factor2} is not new here. It is equation
+\texttt{(alpha\_ann)} of \texttt{papers/notes/Mobius\_Ribbon\_Capacitance.tex}
+(2026-07-22), which states $\alpha^{-1}_{\mathrm{ann}}=\tfrac12(\ln(8R/a)+1)$ and
+records that matching CODATA then forces $a/R = 8\exp(1-2\alpha^{-1})\approx
+2\times10^{-118}$. The CPF manuscript reproduces the parent note's \emph{uncorrected}
+form and its $137.036$, without citing either the correction or the conformal/BIE
+revisions that showed $\alpha^{-1}=\mathcal{O}(1)$ at moderate aspect ratio.
+\end{remark}
+
+\begin{remark}[Provenance of the logarithm]
+$\ln(8R/a)$ is the Kelvin--Maxwell thin-ring formula's log term. In the standard
+ring \emph{inductance} $L=\mu_0R[\ln(8R/a)-7/4]$ the additive constant is $-7/4$
+(or $-2$ for the external-inductance convention). The manuscript's $+1$ is
+neither derived nor attributed. Since $\alpha^{-1}$ depends on that constant
+additively, the choice is a second free knob.
+\end{remark}
+
+\begin{remark}[Circularity]
+Even granting $\alpha^{-1}=L$, the step
+\[
+\frac{a}{R} = 8e^{-136.035999171}
+\quad\Longrightarrow\quad
+\alpha^{-1} = \ln\!\bigl(8/(a/R)\bigr)+1 = 137.035999171
+\]
+is an identity, not a derivation: $\ln(8/(8e^{-x}))+1 = x+1$ for any $x$. The
+target value is inserted in the premise and recovered in the conclusion. The
+asserted mechanism --- ``the eigenvalue gap of the G-field'' with ``GQRE
+renormalization'' --- is stated without a computation, and the Gravity-from-Entropy
+$G$-field is \emph{algebraically constrained} rather than obeying an independent
+wave equation, so the discrete spectrum the argument needs does not follow from the
+GfE action without further input.
+\end{remark}
+
+%-------------------------------------------------------------------------------
+\section{The cutoff $a$: four mutually exclusive values}
+\label{sec:cutoff}
+
+The manuscript's central claim is that it has \emph{zero free parameters}, resting on
+the assertion (\S3) that ``the cutoff $a$ is not free.'' The manuscript places four
+separate requirements on $a$. They do not agree.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{0.30\textwidth}rrr}
+\toprule
+Constraint (manuscript source) & $a/R$ & $\alpha^{-1}$ (corrected) &
+  $L_{\mathrm{IR}}=R^2/a$ [m] \\
+\midrule
+$\tau = ia/R = i/2$ \hfill (\S3) & $5.0\times10^{-1}$ & $1.886$ & $3.9\times10^{-13}$ \\
+$a/R = 8e^{-136.036}$ \hfill (\S3) & $6.66\times10^{-59}$ & $68.518$ & $2.9\times10^{45}$ \\
+CODATA match on Prop.~\ref{prop:factor2} & $2.04\times10^{-118}$ & $137.035999177$ & $9.5\times10^{104}$ \\
+$L_{\mathrm{IR}}=1.3\times10^{26}$~m \hfill (\S8) & $1.49\times10^{-39}$ & $46.242$ & $1.3\times10^{26}$ \\
+\bottomrule
+\end{tabular}
+\caption{The four requirements the manuscript places on its single scale
+parameter, evaluated at $R=\hbar/(2m_ec)=1.9308\times10^{-13}$~m. They span
+$117.4$ decades. \texttt{cpf\_audit.py}, check~C2.}
+\end{table}
+
+Three points follow.
+
+\textbf{(i) The manuscript contradicts itself within one section.} \S3 asserts
+$\tau = ia/R = i/2$, hence $a/R = 1/2$, and then five lines later asserts
+$a/R = 8e^{-136.036} \approx 6.7\times10^{-59}$. These differ by $58$ decades. On
+$a/R = 1/2$ the manuscript's own formula gives $\alpha^{-1} = \ln 16 + 1 = 3.77$.
+
+\textbf{(ii) The $\alpha$ leg and the $L_{\mathrm{IR}}$ leg are incompatible.}
+Taking the manuscript's stated $a$, $L_{\mathrm{IR}} = R^2/a = 2.9\times10^{45}$~m,
+$19$ decades above the Hubble radius. Taking the $a$ that the \emph{corrected}
+$\alpha$ relation requires, $L_{\mathrm{IR}} = 9.5\times10^{104}$~m --- $79$ decades
+off. Conversely, forcing $L_{\mathrm{IR}} = 1.3\times10^{26}$~m gives
+$\alpha^{-1} = 46.24$. The two ``derivations'' cannot both be run.
+
+\textbf{(iii) ``UV complete'' does not survive either.} The $a$ demanded by the
+corrected $\alpha$ relation is $3.9\times10^{-131}$~m, i.e.\ $10^{-96}$ Planck
+lengths. A UV cutoff $96$ decades below $\ell_P$ is not a completion.
+
+\begin{proposition}
+The Constraint Projection Framework has exactly one free parameter, $a/R$, fitted
+independently in \S3 and \S8. The parameter-count table of Appendix~B is therefore
+incorrect as stated, and the comparison it draws with the Standard Model's $19$ is
+not like-for-like: the framework produces no lepton or quark mass, no mixing angle,
+and no coupling other than $\alpha$.
+\end{proposition}
+
+%-------------------------------------------------------------------------------
+\section{Axiom III has no model}
+\label{sec:axiom3}
+
+\begin{lemma}[The surface is forced]
+A closed compact smooth non-orientable surface with $w_1\neq0$ whose orientation
+double cover is $T^2$ is the Klein bottle $K = T^2/\langle\tau\rangle$,
+$\tau(x,y) = (x+\tfrac12,\,-y)$. Its $\pi_1 = \mathbb{Z}\rtimes\mathbb{Z}$ and
+$H_2(K;\mathbb{Z}) = 0$, so clauses (1)--(2) of Axiom III are satisfied and
+determine $\mathcal{M}$ uniquely.
+\end{lemma}
+
+\begin{proposition}[Clause (3) is unsatisfiable]
+\label{prop:axiom3}
+There is no $\phi\in\mathrm{Diff}(K)$ with
+$\phi_* = \left(\begin{smallmatrix}1&2\\0&1\end{smallmatrix}\right)$.
+\end{proposition}
+
+\begin{proof}
+Every diffeomorphism of $K$ lifts to $T^2$ and must normalise the deck group
+$\{1,\tau\}$. That group is $\mathbb{Z}/2$, so normalising means commuting. On
+$H_1(T^2)=\mathbb{Z}^2$ the linear part of $\tau$ is $D=\mathrm{diag}(1,-1)$, so the
+image of $\mathrm{MCG}(K)$ in $\mathrm{GL}(2,\mathbb{Z})$ lies in the centraliser of
+$D$. Solving $[M,D]=0$ forces $M$ diagonal; the integer diagonal matrices of
+determinant $\pm1$ number four,
+\[
+\{\mathrm{diag}(1,1),\ \mathrm{diag}(-1,-1),\ \mathrm{diag}(1,-1),\
+\mathrm{diag}(-1,1)\}\ \cong\ \mathbb{Z}/2\oplus\mathbb{Z}/2,
+\]
+in agreement with Lickorish's computation $\mathrm{MCG}(K)\cong
+\mathbb{Z}/2\oplus\mathbb{Z}/2$. This group is \emph{finite}. But
+$\phi_*^{\,n} = \left(\begin{smallmatrix}1&2n\\0&1\end{smallmatrix}\right)$, so
+$\phi_*$ is parabolic of infinite order, and a finite group contains no element of
+infinite order. Independently,
+$\phi_* D\phi_*^{-1} = \left(\begin{smallmatrix}1&-4\\0&-1\end{smallmatrix}\right)
+\neq D$, so $\phi_*$ does not descend to $K$ at all. Verified as exact integer
+arithmetic in \texttt{cpf\_audit.py}, check~C3.
+\end{proof}
+
+\begin{remark}[The weaker reading fails too]
+One might retreat to ``some mapping class of $\mathcal{M}$ has
+$\mathrm{Tr}(\phi_*)=2$.'' Within the centraliser the available traces are
+$\{+2,-2,0,0\}$, and $+2$ is attained \emph{only by the identity} --- which is not a
+Dehn twist, effects no half-twist, and supplies no self-linking number. The
+identification $\mathrm{Tr}(\phi_*) = 2 = \Sl$ has no carrier under either reading.
+\end{remark}
+
+Proposition~\ref{prop:axiom3} is the structural kill. Everything the manuscript
+derives from $\mathrm{Tr}(\phi_*)=2$ --- $\tau=i/2$ in \S3, $g$ and $s$ in \S4, and
+the ``Dehn twist condition'' $\lambda_{\mathrm{UV}}\lambda_{\mathrm{IR}}=1/R^4$ in
+\S8 --- rests on an axiom that no surface satisfies.
+
+\begin{remark}[A second, independent obstruction in \S3]
+\S3 computes an electrostatic capacitance for $\mathcal{M}$. The Klein bottle admits
+no embedding in $\mathbb{R}^3$ --- only immersions with self-intersection --- so
+there is no conductor to charge. It is also closed, so it has no boundary and no
+``double-cover annulus.'' The formula actually used is the thin-ring one, which
+describes a different object.
+\end{remark}
+
+%-------------------------------------------------------------------------------
+\section{\S4: spin and $g$ restate two logged kills}
+\label{sec:spin}
+
+The manuscript asserts $g = \Sl = 2$ and $s = \Sl/4 = 1/2$. Both were tested and
+falsified in this repository on 2026-07-26; see \texttt{docs/Elimination\_Ledger.md}.
+
+\textbf{(a) $g=\Sl$ was killed by the parity law.} For torus curves
+$\sigma = (-1)^{p+q} = (-1)^{\Sl+1}$, measured over a control family of framed
+circles. The $\Sl=0$ round circle is spinorial in exactly the same sense as the
+$|\Sl|=2$ screw. The spin-relevant content of $\Sl$ is \emph{one parity bit}, and
+$2$ and $0$ are the same bit; the value $2$ does no work. The mechanism of the
+original error --- matching the integer $2$ across two formalisms in which it arises
+for unrelated reasons ($pq$ on one side, $|\pi_1(\mathrm{SO}(3))|$ on the other) ---
+is reproduced verbatim in the CPF manuscript, now with a third unrelated $2$
+(the trace of a parabolic) matched to the same integer.
+
+\textbf{(b) The magnitude route is closed by a no-go.} The successor test computed
+$\mu$ against $\langle L\rangle$ directly: both are proportional to the same vector
+area $A=\tfrac12\oint\mathbf{r}\times d\bm{\ell}$, so $\mu/\langle L\rangle = q/2m$
+and $g = 1$ \emph{exactly, for every closed curve} --- whatever the winding,
+framing, twist or throat. No amount of topology moves $g$ without decoupling where
+the charge sits from where the mass sits, which the manuscript does not do.
+
+\textbf{(b$'$) And the data kills the completeness claim outright.} Added 2026-08-30
+(\texttt{code/constraint\_projection/wave\_equation\_gfactor.py}). The measured
+anomaly is $a_e = 1.15965218059(13)\times10^{-3}$ (Fan \emph{et al.}, PRL \textbf{130},
+071801 (2023)), so any framework whose output is ``$g=2$ exactly'' sits
+$8.92\times10^{9}\sigma$ from the data. Lévy-Leblond and tree Dirac stop at $2$ as well,
+and that is no mark against them: neither claims to be finished, and QED continues the
+series using an independently measured $\alpha$. The manuscript claims zero free
+parameters, UV/IR completeness and ``all constants'' --- but $\Sl$ is an \emph{integer}
+and the framework contains no expansion parameter anywhere, so it has no route to
+$1.16\times10^{-3}$ at any order. The stop is terminal, and it is terminal on the
+manuscript's own headline observable.
+
+\textbf{(b$''$) Worse, the geometry was never needed.} Machine-checked in the same
+instrument: $g=2$ follows from the $su(2)$ algebra plus linearization of the
+\emph{Schrödinger} equation (Lévy-Leblond 1967) --- no $c$, no Lorentz transformation,
+no metric, and no surface. The entire factor of $2$ lives in the single identity
+$(\sigma\cdot\pi)^2 = \pi^2 - q\hbar\,(\sigma\cdot B)$. Likewise $4\pi$ periodicity is
+$\pi_1(SO(3))=\mathbb{Z}/2$ acting in the spinor representation
+($e^{-i(2\pi)\sigma_z/2} = -I$), which needs a group, not a non-orientable manifold. So
+\S4's two headline outputs are both supplied for free by structure the manuscript
+already assumes, by a route that does not pass through Axiom III.
+
+\textbf{(c) Two further errors.} The repository's own computation of the $(2,1)$
+centerline gives $\mathrm{Tw}+\mathrm{Wr} = -2.000000$; on $s=\Sl/4$ that is
+$s=-1/2$. And a $(p,q)$ torus knot with $q=1$ is the \emph{unknot}; the parent note
+already carries this correction. The factor $4$ in $s=\Sl/4$ is not derived
+anywhere: Finkelstein--Rubinstein yields a $\mathbb{Z}/2$ statistics sector, not a
+magnitude --- which is precisely the gap the ledger recorded when it killed (a).
+
+%-------------------------------------------------------------------------------
+\section{\S7: the curvature functional cannot see an off-line zero}
+\label{sec:riemann}
+
+\S7 defines
+\[
+k(\varepsilon) = \lim_{T\to\infty}\frac1T\int_0^T\!\Bigl[
+\tfrac{\zeta'}{\zeta}\bigl(\tfrac12{+}\varepsilon{+}it\bigr)
+-\tfrac{\zeta'}{\zeta}\bigl(\tfrac12{-}\varepsilon{+}it\bigr)\Bigr]dt,
+\tag{$\ast$}
+\]
+asserts via Guinand--Weil that this equals
+$2\varepsilon\sum_\rho\bigl[(\tfrac12-\beta)^2-\varepsilon^2\bigr]^{-1}$, and
+concludes that $k=0$ forces $\beta=\tfrac12$, hence RH, hence $\Omega_k=0$.
+
+\begin{remark}[Correction to the first pass]
+The first pass tested only the \emph{claimed sum}. It did not evaluate $(\ast)$.
+Doing so is decisive on its own, and is presented first below.
+\end{remark}
+
+\begin{proposition}[$(\ast)$ diverges, and is not the claimed sum]
+\label{prop:integral}
+For $0<\varepsilon<\tfrac12$,
+\[
+\frac1T\int_0^T\!\bigl[\cdots\bigr]dt \;=\; \frac{2\pi N(T)}{T} + O\!\Bigl(\frac{\log T}{T}\Bigr)
+\;\longrightarrow\; \log\frac{T}{2\pi e}\;\longrightarrow\;+\infty ,
+\]
+where $N(T)$ counts zeros with $0<\gamma<T$. The limit is \emph{real}, \emph{positive},
+\emph{independent of $\varepsilon$}, and \emph{divergent}.
+\end{proposition}
+
+\begin{proof}
+Take the rectangle with corners $\tfrac12\pm\varepsilon$ and
+$\tfrac12\pm\varepsilon+iT$. The pole of $\zeta$ at $s=1$ lies outside it for
+$\varepsilon<\tfrac12$; the poles of $\zeta'/\zeta$ inside are the zeros with
+$0<\gamma<T$, each of residue equal to its multiplicity. Writing $I(T)$ for the
+integral in $(\ast)$, the two vertical sides contribute $i\,I(T)$, so
+$i\,I(T)+\int_{\mathrm{bot}}+\int_{\mathrm{top}} = 2\pi i\,N(T)$, giving
+$I(T)=2\pi N(T)+i(\int_{\mathrm{bot}}+\int_{\mathrm{top}})$. The bottom integral is a
+fixed $O(1)$ real number and the top is $O(\log T)$. Divide by $T$ and apply
+Riemann--von Mangoldt, $N(T)=\tfrac{T}{2\pi}\log\tfrac{T}{2\pi e}+O(\log T)$.
+\end{proof}
+
+Verified numerically (\texttt{cpf\_full\_verification.py}, V5, \texttt{--deep}):
+
+\begin{center}\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$T$ & $\varepsilon$ & $N(T)$ & $\Re[\tfrac1T I]$ & $2\pi N(T)/T$ & ratio &
+  claimed $-2N/\varepsilon$ \\
+\midrule
+20 & 0.10 & 1  & 0.323180 & 0.314159 & 1.0287 & $-20$ \\
+20 & 0.25 & 1  & 0.336315 & 0.314159 & 1.0705 & $-8$ \\
+40 & 0.10 & 6  & 0.946835 & 0.942478 & 1.0046 & $-120$ \\
+40 & 0.25 & 6  & 0.953112 & 0.942478 & 1.0113 & $-48$ \\
+60 & 0.10 & 13 & 1.359827 & 1.361357 & 0.9989 & $-260$ \\
+60 & 0.25 & 13 & 1.357772 & 1.361357 & 0.9974 & $-104$ \\
+80 & 0.10 & 21 & 1.645536 & 1.649336 & 0.9977 & $-420$ \\
+80 & 0.25 & 21 & 1.640179 & 1.649336 & 0.9944 & $-168$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The ratio converges to $1$; $\Re[\tfrac1T I]$ agrees across $\varepsilon$ to under
+$1\%$, and $\Im[\tfrac1T I]\to0$ as the boundary terms die. At $T=80$,
+$\varepsilon=0.1$ the computed value is $+1.6455$ and the claimed one is $-420$:
+they differ in sign and by a factor of $255$.
+
+\begin{remark}
+The quantity $(\ast)$ actually computes is $\log(T/2\pi e)$ --- the Riemann--von
+Mangoldt \emph{smooth counting term}, which this repository already reproduces
+independently (\texttt{src/paper\_b/berry\_keating\_counting.py}, T2(known)). So
+$(\ast)$ is a correct and standard object; it is simply not the object \S7 says it
+is, and it converges to nothing.
+\end{remark}
+
+Three further failures afflict the claimed sum even taken on its own terms:
+
+\textbf{(i) Blindness.} $\beta$ enters only through $(\tfrac12-\beta)^2$, which is
+exactly the invariant of the functional equation's involution $\beta\mapsto1-\beta$.
+The zero set of $\zeta$ is symmetric under that involution, so every off-line zero
+arrives with a mirror partner contributing identically. \emph{$k(\varepsilon)$ takes
+the same value on a critical-line configuration and on its reflection}, and cannot
+distinguish RH from its negation. The instrument confirms this numerically: at
+$\varepsilon=0.1$ over $50$ zeros, $\beta=0.5\pm0.2$ both give $k=+333.33$.
+
+\textbf{(ii) Inverted sign.} On the critical line each summand equals
+$-1/\varepsilon^2$ --- not zero. For $N$ on-line zeros
+$k(\varepsilon) = -2N/\varepsilon$, which diverges as $N\to\infty$ and vanishes for
+no finite $\varepsilon$. RH makes $k$ maximally divergent. The stated criterion is
+not merely unproved; it points the wrong way.
+
+\textbf{(iii) Empirical direction.} Even a repaired functional would not make
+$\Omega_k = 0\Leftrightarrow$ RH testable. $\Omega_k$ is measured as
+$0.0007\pm0.0019$; no measurement establishes an exact zero. A biconditional here
+makes a theorem of arithmetic contingent on CMB data, and would let a future
+curvature detection refute RH.
+
+\begin{remark}
+This repository nowhere claims the Riemann Hypothesis proved, and constructs no
+Hilbert--P\'olya operator; every \texttt{hp\_knife} script says so in its own
+output. \S7 claims an \emph{equivalence}, which is a proof claim in both directions.
+The nearest defensible statement in the corpus is Paper~B's: RH $\Rightarrow$
+stationarity is proved by AM--GM, and the converse is \emph{conditional} on an
+unproved minimum-gap bound verified only to $N=200$.
+\end{remark}
+
+%-------------------------------------------------------------------------------
+\section{\S5: the arithmetic is right; the identification is not}
+\label{sec:ewfs}
+
+This is the one section whose displayed number survives its own computation.
+With $A(\theta)=\cos\theta\,\sigma_z+\sin\theta\,\sigma_x$ on $|\Phi^+\rangle$ and
+the stated angles, the instrument returns
+$E(A_2,B_2)=E(A_2,B_3)=E(A_3,B_2)=+1/\sqrt2$, $E(A_3,B_3)=-1/\sqrt2$, and
+\[
+S = 2\sqrt2 = 2.8284271247\ldots,
+\]
+saturating the Tsirelson bound to machine precision. \textbf{Confirmed, T3.}
+
+The identification does not survive --- and it fails harder than the first pass of
+this audit recorded.
+
+\begin{remark}[Correction to the first pass]
+\label{rem:lf-correction}
+The first pass concluded ``it is CHSH; its local bound is $2$.'' That is true but
+understates the failure, because it compares against the wrong polytope. The
+quantity that matters is the bound the \emph{Local Friendliness} polytope places on
+this expression, and that bound is $4$.
+\end{remark}
+
+\begin{proposition}[The LF bound on the manuscript's sum is $4$]
+\label{prop:lf4}
+Let $S = E(A_2B_2)+E(A_2B_3)+E(A_3B_2)-E(A_3B_3)$. Then
+\[
+\max_{\mathrm{LF}} S = 4 = \max_{\mathrm{NS}} S,
+\qquad\text{while}\qquad \max_{\mathrm{local}} S = 2 .
+\]
+\end{proposition}
+
+\begin{proof}
+Local Friendliness (Bong \emph{et al.}) states that
+$p(ab|xy)=\sum_\lambda q(\lambda)\,p_\lambda(ab|xy)$ with every $p_\lambda$
+no-signalling and $p_\lambda(a|x{=}1)$, $p_\lambda(b|y{=}1)$ deterministic, where
+$x=1$ is ``open the lab and read the friend's already-recorded outcome.'' Maximising
+a linear functional over a convex hull equals maximising over the generators, so
+$\max_{\mathrm{LF}}S$ is the largest of four linear programs, one per
+$(a_1,b_1)\in\{\pm1\}^2$. All four return $4.000000000$
+(\texttt{cpf\_full\_verification.py}, V6).
+
+Structurally: $S$ contains no term with $x=1$ or $y=1$. Given \emph{any}
+no-signalling behaviour $q$ on $\{2,3\}\times\{2,3\}$, set $a_1=b_1=+1$ and define
+the mixed rows by the product form $\delta(a,+1)\,q_B(b|y)$ and
+$q_A(a|x)\,\delta(b,+1)$. Every no-signalling constraint is met, so $q$ extends.
+Hence the LF polytope's projection onto the $\{2,3\}$ block is the \emph{full}
+no-signalling polytope, whose maximum for a CHSH-form functional is $4$.
+\end{proof}
+
+\begin{corollary}
+$S = 2\sqrt2 \approx 2.828 < 4$. The manuscript's value \textbf{violates no Local
+Friendliness inequality}, and by Tsirelson no quantum state or measurement could
+make this expression do so. The ``$>2$'' in \S5 is the Bell local bound.
+\end{corollary}
+
+Consequently:
+
+\begin{itemize}[leftmargin=1.2em]
+\item \S5 demonstrates ordinary Bell nonlocality, experimentally established since
+  1982. It says nothing about Absoluteness of Observed Events, because the
+  expression it evaluates is insensitive to AOE by construction --- the LF
+  assumption constrains only the rows containing setting $1$, and those rows do not
+  appear. The LF facets of Bong \emph{et al.} involve the $x=1$ row for exactly this
+  reason.
+\item Even a genuine LF violation would not ``falsify AOE.'' The LF theorem
+  falsifies the \emph{conjunction} of Absoluteness of Observed Events, Locality and
+  No-Superdeterminism; no single conjunct is singled out, and the source the
+  manuscript cites says so.
+\item The $C_6/D_6$ axial frame, the projection of $|\Phi^+\rangle$ onto it, and the
+  super-observer structure are inert: none appears anywhere in the algebra that
+  produces $2\sqrt2$.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{\S6: the dark-matter term double counts, and needs an exotic scalar}
+\label{sec:dm}
+
+With $\psi = Re^{iS/\hbar}$, $\nabla\psi = (R' + iRS'/\hbar)e^{iS/\hbar}$ and
+\[
+\frac{\hbar^2}{2m}|\nabla\psi|^2
+= \underbrace{\frac{\hbar^2 R'^2}{2m}}_{\text{amplitude gradient}}
++ \underbrace{\frac{R^2S'^2}{2m}}_{=\ \frac12\rho v^2},
+\qquad \rho = R^2,\ v = S'/m,
+\]
+an exact split (\texttt{cpf\_audit.py}, check~C7).
+
+\textbf{(i) Double counting.} The second term is the ordinary kinetic energy density
+of the visible matter itself. The manuscript's
+$T_{00} = \rho_{\mathrm{vis}}c^2 + \rho_{\mathrm{DM}}c^2$ then counts it a second
+time, as dark.
+
+\textbf{(i$'$) It is not the quantum potential.} The Madelung/Bohm ``quantum
+pressure'' --- the term that actually shapes a rotation curve in every wave-dark-matter
+model --- is
+\[
+Q = -\frac{\hbar^2}{2m}\frac{\nabla^2 R}{R},
+\]
+an energy \emph{per particle} that may be negative. The manuscript's
+$\tfrac{\hbar^2}{2m}|\nabla\psi|^2$ is a positive-definite energy \emph{density}
+built from $R'^2$, not from $R''/R$. They are different objects, so \S6 does not use
+the mechanism it names. (Added on the second pass; the first pass did not check
+this.)
+
+\textbf{(ii) The $\Re/\Im$ story is wrong.} $|\nabla\psi|^2$ is not a function of
+$\Im\psi$ alone, and the $\Re/\Im$ split is not gauge invariant --- a global $U(1)$
+phase rotates one into the other. Electromagnetic coupling enters through the
+covariant derivative, not through ``the real component.''
+
+\textbf{(iii) The scale.} Quantum pressure shapes a rotation curve only when the de
+Broglie wavelength is galactic. At $v=200$~km/s and $L=1$~kpc the required mass is
+$1.7\times10^{-59}$~kg $=9.6\times10^{-24}$~eV$/c^2$ --- the fuzzy-dark-matter
+window, i.e.\ an ultralight scalar, which is exactly the ``exotic particle'' the
+manuscript claims to avoid. For the electron mass, $\lambda_{\mathrm{dB}} =
+5.8\times10^{-10}$~m, some $29$ decades too short-ranged to matter at kpc scales.
+So the claim fails either way: at any Standard Model mass the effect is absent; at
+the mass that works, the particle is exotic.
+
+No Jeans-equation solution, rotation curve, or galaxy dataset appears in \S6;
+``matching observations'' is asserted, not shown.
+
+%-------------------------------------------------------------------------------
+\section{Axioms I--II and the bibliography}
+\label{sec:citations}
+
+\textbf{Axiom I is false under every reading.} $\mathbb{A}_\mathbb{Q}/\mathbb{Q}^\times$
+is malformed: $\mathbb{Q}^\times$ is the multiplicative group and does not act on the
+additive adeles by translation. The two standard objects are
+$\mathbb{A}_\mathbb{Q}/\mathbb{Q}$ (compact, additive) and the idele class group
+$\mathbb{A}_\mathbb{Q}^\times/\mathbb{Q}^\times$. Both are \emph{abelian}, hence
+amenable --- every abelian group is amenable, by Markov--Kakutani. The first is
+moreover compact, so it carries a translation-invariant Haar \emph{probability}
+measure, which is countably additive and therefore finitely additive. The axiom
+asserts that no such measure exists. Non-amenability is load-bearing for the
+manuscript's ``non-amenable information reservoir'' framing, and it is unavailable
+here.
+
+\textbf{Axiom II is ill-posed.} The kernel maps onto $\mathbb{R}^{3,1}$, but
+$\delta^{(3)}(\mathbf{r}(u,v)-\mathbf{x})$ fixes only three coordinates; nothing in
+the kernel produces the time direction. A two-parameter integral against a
+three-dimensional delta is also generically distributional rather than a function,
+so ``Fredholm'' is not established.
+
+\textbf{Bibliography.}
+\begin{itemize}[leftmargin=1.2em]
+\item \texttt{[Bianconi2024]} \verb|arXiv:2401.12345| is a placeholder identifier.
+  The paper is G.~Bianconi, ``Gravity from entropy,''
+  \verb|arXiv:2408.14391|, Phys.\ Rev.\ D \textbf{111}, 066001 (2025).
+\item \texttt{[CODATA2022]} ``E.~Tiesinga et al., Rev.\ Mod.\ Phys.\ \textbf{94},
+  035002 (2023)'' matches no CODATA article of record. CODATA 2018 is Tiesinga,
+  Mohr, Newell \& Taylor, Rev.\ Mod.\ Phys.\ \textbf{93}, 025010 (2021); CODATA 2022
+  is Mohr, Newell, Taylor \& Tiesinga, Rev.\ Mod.\ Phys.\ \textbf{97}, 025002 (2025),
+  with $\alpha^{-1} = 137.035999177(21)$.
+\item \texttt{[Proietti2019]} and \texttt{[Finkelstein1968]} check out as cited.
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{What survives, and what repair would take}
+\label{sec:survives}
+
+\textbf{Survives.}
+\begin{enumerate}[leftmargin=1.4em]
+\item $S = 2\sqrt2$ under the stated operators and state (\textbf{T3}, confirmed).
+  It is CHSH at Tsirelson saturation --- a correct computation of a known quantity.
+\item The identification $\mathcal{M} = $ Klein bottle from clauses (1)--(2) of
+  Axiom III is correct and, as the manuscript says, unique --- confirmed by an
+  Euler-characteristic census ($\chi(N_k)=2-k$, cover genus $h=k-1$, so $h=1$ only at
+  $k=2$) and by computing $H_*(K;\mathbb{Z})$ from the CW complex via Smith normal
+  form. It is the one piece of topology in the paper that does what it claims.
+  Clause~(3) is what fails. (Minor: $H_2=0$ holds for \emph{every} closed
+  non-orientable surface, so that clause is implied by $w_1\neq0$ and adds nothing.)
+\item The observation that $\ln(8R/a)$ is the right functional form for a thin-ring
+  self-energy is inherited correctly from the parent note; only the prefactor,
+  the additive constant, and the cutoff are wrong.
+\end{enumerate}
+
+\textbf{What repair would take, leg by leg.}
+\begin{itemize}[leftmargin=1.4em]
+\item \emph{$\alpha$}: adopt Proposition~\ref{prop:factor2}, then \emph{derive}
+  $a/R$ from something that is not $\alpha$ --- and accept whatever number comes
+  out. The repository's conformal and BIE revisions give $\mathcal{O}(1)$ at
+  moderate aspect, so the honest current state is that this route does not reach
+  $137$.
+\item \emph{Axiom III}: either drop clause~(3), or replace $\mathcal{M}$ with a
+  surface whose mapping class group actually contains an infinite-order parabolic
+  (genus $\geq1$ orientable, or a non-orientable surface of higher genus) --- but
+  then the $T^2$ double cover, and with it the whole modular-parameter argument,
+  is gone.
+\item \emph{$g$}: the ledger's standing successor question applies unchanged ---
+  \textbf{decouple where the charge sits from where the mass sits}. That is the only
+  known route past $g=1$, and no framing, twist or trace matching will substitute
+  for it.
+\item \emph{\S7}: two separate repairs are needed. (a) Redo the Guinand--Weil step:
+  the defining integral is $2\pi N(T)/T$, so any claim about it must survive
+  Proposition~\ref{prop:integral}. (b) A functional that detects off-line zeros must
+  be \emph{odd} under $\beta\mapsto1-\beta$, not even; any construction whose
+  $\beta$-dependence factors through $(\tfrac12-\beta)^2$ is blind for the same
+  reason. (b) is a structural constraint on the whole approach, not a fixable sign.
+\item \emph{\S5}: an LF test must contain the $x=1$ / $y=1$ rows --- by
+  Proposition~\ref{prop:lf4} an expression without them cannot violate LF at any
+  quantum value. Take an actual LF facet from Bong \emph{et al.} and evaluate it.
+  The result would then be about observers, and would falsify a conjunction, which
+  must be stated as such.
+\item \emph{\S6}: if the ultralight-scalar mass is accepted, the model becomes
+  fuzzy dark matter, which is a real and testable proposal --- but it is then a
+  proposal \emph{with} an exotic particle, and inherits that literature's
+  constraints.
+\end{itemize}
+
+\textbf{On the framing.} The manuscript's closing line, ``the ledger is sealed,''
+inverts this program's discipline. The Elimination Ledger is append-only precisely
+so that it is never sealed; its entries are kills aimed at the program's own
+load-bearing claims, kept because they bound the space. Two of the claims this
+manuscript advances as derivations are entries in that ledger. A framework that
+declares zero free parameters while fitting one parameter four ways, and declares
+completeness while restating falsified results, is describing the failure mode this
+corpus names as primary: \emph{overclaiming}.
+
+%-------------------------------------------------------------------------------
+\section*{Verification}
+
+Instruments: \texttt{code/constraint\_projection/cpf\_audit.py} (first pass, checks
+C1--C8) and \texttt{code/constraint\_projection/cpf\_full\_verification.py} (full
+pass, V1--V9; \texttt{--deep} recomputes the \S7 contour integrals, ${\sim}4$ min).
+Deps \texttt{numpy}, \texttt{scipy}, \texttt{sympy}, \texttt{mpmath}. Artifacts:
+\texttt{docs/constraint\_projection\_audit.json},
+\texttt{docs/constraint\_projection\_full\_verification.json}. Ledger entries:
+\texttt{docs/Elimination\_Ledger.md}, 2026-08-29 (kill and second-pass correction).
+V9 re-executes \texttt{code/framed\_unknot/} rather than citing it; both artifacts
+regenerated byte-identically. Constants: CODATA 2022,
+$\alpha^{-1} = 137.035999177(21)$. Prior repository results relied on:
+\texttt{papers/notes/Mobius\_Ribbon\_Capacitance.tex} (the corrected annulus
+relation), \texttt{papers/notes/Framing\_Transformer\_Spin\_Parity.tex} and
+\texttt{code/framed\_unknot/} (the parity law and the $g=1$ no-go).
+
+\begin{thebibliography}{9}
+\bibitem{CODATA2022} P.~J. Mohr, D.~B. Newell, B.~N. Taylor and E.~Tiesinga,
+  ``CODATA recommended values of the fundamental physical constants: 2022,''
+  Rev.\ Mod.\ Phys.\ \textbf{97}, 025002 (2025); \verb|arXiv:2409.03787|.
+\bibitem{Bianconi2024} G.~Bianconi, ``Gravity from entropy,''
+  Phys.\ Rev.\ D \textbf{111}, 066001 (2025); \verb|arXiv:2408.14391|.
+\bibitem{Bong2020} K.-W. Bong \emph{et al.}, ``A strong no-go theorem on the
+  Wigner's friend paradox,'' Nature Physics \textbf{16}, 1199 (2020).
+\bibitem{Proietti2019} M.~Proietti \emph{et al.}, ``Experimental test of local
+  observer independence,'' Sci.\ Adv.\ \textbf{5}, eaaw9832 (2019).
+\bibitem{Lickorish1963} W.~B.~R. Lickorish, ``Homeomorphisms of non-orientable
+  two-manifolds,'' Proc.\ Camb.\ Phil.\ Soc.\ \textbf{59}, 307 (1963).
+\bibitem{Needham2017} T.~Needham, ``Kaehler structures on spaces of framed
+  curves,'' \verb|arXiv:1708.09124| (2017).
+\bibitem{LevyLeblond1967} J.-M. L\'evy-Leblond, ``Nonrelativistic particles and
+  wave equations,'' Comm.\ Math.\ Phys.\ \textbf{6}, 286 (1967).
+\bibitem{Hu2000} W.~Hu, R.~Barkana and A.~Gruzinov, ``Fuzzy cold dark matter:
+  the wave properties of ultralight particles,'' Phys.\ Rev.\ Lett.\ \textbf{85},
+  1158 (2000).
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,57 @@
+{
+  "description": "Can a relative boundary condition fix alpha?",
+  "source": "code/constraint_projection/alpha_relational_boundary.py",
+  "checks": {
+    "B1_relational_condition": {
+      "condition": "a * L_IR = R^2 (Sec 8)",
+      "derived_relation": "alpha^-1 = (1/2)(ln(8 L_IR/R) + 1)",
+      "L_IR_over_R": "6.73297e+38",
+      "predicted": "46.242346",
+      "observed": "137.0359992",
+      "off_by": "2.9634",
+      "needed_ratio": "4.90424e+117",
+      "decades_off": "78.862"
+    },
+    "B2_drift_test": {
+      "predicted_drift_per_year": "2.51501e-13",
+      "d_alpha_inv_dt_per_year": "3.44647e-11",
+      "bounds": [
+        {
+          "bound": "atomic clocks, Al+/Hg+, Yb+",
+          "value": "2.0e-17",
+          "exceeded_by": "12575.0"
+        },
+        {
+          "bound": "Oklo natural reactor (2 Gyr)",
+          "value": "1.2e-17",
+          "exceeded_by": "20958.0"
+        },
+        {
+          "bound": "quasar absorption systems",
+          "value": "1.0e-16",
+          "exceeded_by": "2515.0"
+        }
+      ],
+      "verdict": "EXCLUDED by ~1e4 against every independent bound",
+      "method_is_novel": false
+    },
+    "B3_condition_count": {
+      "conditions": [
+        {
+          "condition": "tau = i a/R = i/2",
+          "source": "Sec 3",
+          "a_over_R": "0.5",
+          "alpha_inv": "1.886294"
+        },
+        {
+          "condition": "a L_IR = R^2, L_IR observed",
+          "source": "Sec 8",
+          "a_over_R": "1.48523e-39",
+          "alpha_inv": "46.24235"
+        }
+      ],
+      "disagreement_factor": "24.515",
+      "verdict": "over-determined and inconsistent -- worse than under-determined"
+    }
+  }
+}

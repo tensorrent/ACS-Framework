@@ -1,0 +1,212 @@
+{
+  "description": "Is the 72.648x alpha discrepancy a scaling rule or an artifact?",
+  "source": "code/constraint_projection/alpha_scaling_test.py",
+  "checks": {
+    "S1_convention": {
+      "rows": [
+        {
+          "tau": "i/4",
+          "a_over_R": "0.25",
+          "L": "4.4657359",
+          "pred": "2.232868",
+          "ratio": "61.372191",
+          "exponent": "3.287979"
+        },
+        {
+          "tau": "i/3",
+          "a_over_R": "0.333333",
+          "L": "4.1780538",
+          "pred": "2.0890269",
+          "ratio": "65.598006",
+          "exponent": "3.441102"
+        },
+        {
+          "tau": "i/2",
+          "a_over_R": "0.5",
+          "L": "3.7725887",
+          "pred": "1.8862944",
+          "ratio": "72.648258",
+          "exponent": "3.705668"
+        },
+        {
+          "tau": "i",
+          "a_over_R": "1.0",
+          "L": "3.0794415",
+          "pred": "1.5397208",
+          "ratio": "89.000552",
+          "exponent": "4.374529"
+        },
+        {
+          "tau": "2i",
+          "a_over_R": "2.0",
+          "L": "2.3862944",
+          "pred": "1.1931472",
+          "ratio": "114.85255",
+          "exponent": "5.657132"
+        },
+        {
+          "tau": "3i",
+          "a_over_R": "3.0",
+          "L": "1.9808293",
+          "pred": "0.99041463",
+          "ratio": "138.36225",
+          "exponent": "7.198437"
+        }
+      ],
+      "ratio_spread": "2.2545",
+      "verdict": "moves with convention -> artifact"
+    },
+    "S2_closed_form": {
+      "target": "72.6482578762",
+      "rows": [
+        {
+          "form": "e^(30/7)",
+          "value": "72.65442421",
+          "rel_err": "8.49e-5",
+          "within_1e-3": true
+        },
+        {
+          "form": "sqrt(5277)",
+          "value": "72.64296249",
+          "rel_err": "7.29e-5",
+          "within_1e-3": true
+        },
+        {
+          "form": "pi^2 e^2",
+          "value": "72.92706059",
+          "rel_err": "0.00384",
+          "within_1e-3": false
+        },
+        {
+          "form": "23 pi",
+          "value": "72.25663103",
+          "rel_err": "0.00539",
+          "within_1e-3": false
+        },
+        {
+          "form": "72",
+          "value": "72.0",
+          "rel_err": "0.00892",
+          "within_1e-3": false
+        },
+        {
+          "form": "8 pi e",
+          "value": "68.31787378",
+          "rel_err": "0.0596",
+          "within_1e-3": false
+        },
+        {
+          "form": "4 pi e",
+          "value": "34.15893689",
+          "rel_err": "0.53",
+          "within_1e-3": false
+        },
+        {
+          "form": "2 pi e^2",
+          "value": "46.42680871",
+          "rel_err": "0.361",
+          "within_1e-3": false
+        },
+        {
+          "form": "e^4/2",
+          "value": "27.29907502",
+          "rel_err": "0.624",
+          "within_1e-3": false
+        },
+        {
+          "form": "pi^4 * 0.746",
+          "value": "72.66718191",
+          "rel_err": "0.00026",
+          "within_1e-3": true
+        },
+        {
+          "form": "137.036/1.886",
+          "value": "72.65959659",
+          "rel_err": "0.000156",
+          "within_1e-3": true
+        }
+      ],
+      "hits": 4,
+      "verdict": "neighbourhood is dense -> no evidence"
+    },
+    "S3_cross_observable": {
+      "rows": [
+        {
+          "observable": "alpha^-1",
+          "predicted": "1.88629",
+          "observed": "137.036",
+          "ratio": "72.6483",
+          "exponent_k": "1.0"
+        },
+        {
+          "observable": "L_IR [m]",
+          "predicted": "3.86159e-13",
+          "observed": "1.3e+26",
+          "ratio": "3.36649e+38",
+          "exponent_k": "20.7"
+        },
+        {
+          "observable": "g-factor",
+          "predicted": "2.0",
+          "observed": "2.00232",
+          "ratio": "1.00116",
+          "exponent_k": "0.00027043"
+        }
+      ],
+      "verdict": "exponents disagree by 5 orders -> not a rule"
+    },
+    "S4_instruments": {
+      "models": [
+        {
+          "name": "annulus",
+          "alpha_inv": "3.037587"
+        },
+        {
+          "name": "conformal",
+          "alpha_inv": "1.692054"
+        },
+        {
+          "name": "BIE (Moebius)",
+          "alpha_inv": "0.372688"
+        }
+      ],
+      "required_exponent": 0,
+      "verdict": "only p = 0 works -> discards the geometry, not a correction"
+    },
+    "S5_degrees_of_freedom": {
+      "observables": 1,
+      "parameters": 2,
+      "residual_dof": -1,
+      "rows": [
+        {
+          "p": "1.0",
+          "K": "36.32412894",
+          "check": "137.035999177"
+        },
+        {
+          "p": "2.0",
+          "K": "9.628435966",
+          "check": "137.035999177"
+        },
+        {
+          "p": "3.705668",
+          "K": "1.000000618",
+          "check": "137.035999177"
+        },
+        {
+          "p": "4.0",
+          "K": "0.6765140526",
+          "check": "137.035999177"
+        },
+        {
+          "p": "-1.0",
+          "K": "516.980465",
+          "check": "137.035999177"
+        }
+      ],
+      "natural_exponent": "3.7056685",
+      "verdict": "underdetermined -> untestable from within"
+    }
+  },
+  "verdict": "ARTIFACT on five independent grounds"
+}

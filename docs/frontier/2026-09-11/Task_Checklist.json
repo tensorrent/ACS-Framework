@@ -1,0 +1,1462 @@
+{
+  "release": "Parallel frontier and Navier-Stokes continuation",
+  "prior_branch_count": 105,
+  "prior_unresolved_status_count": 36,
+  "frontier_tasks": 50,
+  "all_initial_tasks_addressed": true,
+  "global_exhaustion_claimed": false,
+  "status_counts": {
+    "needs_definition": 11,
+    "open_computation": 5,
+    "needs_data": 6,
+    "closed_scoped_certificate": 1,
+    "open_theorem": 9,
+    "needs_runtime": 1,
+    "conditional_certificate": 3,
+    "needs_source": 4,
+    "closed_scoped_result": 7,
+    "closed_scoped_obstruction": 2,
+    "evidence_review_only": 1
+  },
+  "meaning": "Every task received a scoped investigation; parent_path_status and continuation_condition state what remains. A checked result is not a solved parent research program.",
+  "tasks": [
+    {
+      "task_id": "T-I01",
+      "branch_id": "I01",
+      "question": "BCH displacement to information",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "Noisy order comparison gives a valid information observable under explicit statistical hypotheses.",
+      "scope": "Observable and channel specified in prior verification",
+      "required_next_step": "An asserted temporal TE identity must specify its own history and transition law.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "Reference-measure dependence, zero-lag mutual-information mismatch and invalid second-variation Cartan substitution are explicit. A correct normalized KL score expansion is supplied.",
+      "continuation_condition": "Specify the complete ACS transition law, source/target observations, lag and conditioning, fixed reference measure and valid smooth perturbation hypotheses. The torus split is not asserted to satisfy every informal ACS condition.",
+      "verification_routes": [
+        "Exact density/normalization and Fourier/algebraic derivations",
+        "Independent finite conditional-likelihood/entropy calculation, symbolic integral and matrix witness"
+      ],
+      "shared_assumptions_and_scope": "Specify the complete ACS transition law, source/target observations, lag and conditioning, fixed reference measure and valid smooth perturbation hypotheses. The torus split is not asserted to satisfy every informal ACS condition.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-I05",
+      "branch_id": "I05",
+      "question": "A concrete convergent coupled model",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "A stated nonlinear two-dimensional system converges globally with explicit rates.",
+      "scope": "Specified drift, not derived from ACS labels",
+      "required_next_step": "Derive comparable inequalities from the intended dynamics.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "The PDR delta-I halting rule can halt at a nonconvergent four-cycle: both TEs are 1 bit, delta-I is zero, and successive squared distance is 1. A conditional q-contraction residual bound is supplied.",
+      "continuation_condition": "Derive a complete-space contraction or coercive Lyapunov condition from the actual ACS update map and name the limit and norm.",
+      "verification_routes": [
+        "Exact conditional mutual information by entropy and likelihood ratio",
+        "Explicit state orbit, plus independently spectral and row-norm checked contraction instrument"
+      ],
+      "shared_assumptions_and_scope": "Derive a complete-space contraction or coercive Lyapunov condition from the actual ACS update map and name the limit and norm.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S04",
+      "branch_id": "S04",
+      "question": "Complete coupled scalar and Yukawa RG selection",
+      "owner": "rg",
+      "status": "open_computation",
+      "previous_status": "definition_required",
+      "previous_result": "The supplied field labels and restricted beta ansatz do not specify a unique physical RG trajectory or vacuum.",
+      "scope": "One-loop gauge coefficients are separately computable",
+      "required_next_step": "Provide interactions, extra symmetries, Yukawa matrices, renormalization and matching conditions.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_computation",
+      "result": "Full one-loop model retained; complete two-loop gauge sector, positive invariant region and a pure degree-five Yukawa slice added.",
+      "continuation_condition": "Full two-loop general Yukawa/scalar/mass contractions; boundary values, selected vacuum and matching.",
+      "verification_routes": [
+        "Exact symbolic representation sums",
+        "Explicit generator Casimirs and Cartan component weights, real-scalar convention",
+        "All22 real Yukawa-coordinate Gram matrix at n2",
+        "Independent primary literature matrix comparison",
+        "Continuum contact-Hessian and norm proof with exact rational constants",
+        "Full11093-monomial basis identity",
+        "Independent scalar/fermion/vector mass reconstruction vs assembled beta",
+        "Scalar-Gram spectrum identity with Clifford matrices"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S07",
+      "branch_id": "S07",
+      "question": "Gauge one-loop running",
+      "owner": "rg",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "For m families, b4=(4m-35)/3, bL=(4m-21)/3, bR=(4m-1)/3.",
+      "scope": "Specified field content and canonical one-loop convention",
+      "required_next_step": "Thresholds and higher interactions are separate inputs.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "Tree gauge matching and scalar branching derived for neutral-Delta breaking.",
+      "continuation_condition": "Vacuum, heavy masses, finite decoupling terms and light effective-theory content.",
+      "verification_routes": [
+        "Exact retained one-loop identities and source-specific higher-loop obligation",
+        "Independent full mass/Hessian reconstruction where applicable; no new higher-loop phase check"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-F04",
+      "branch_id": "F04",
+      "question": "Koide and flavor-angle interpretation",
+      "owner": "physical",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "Geometric identities survive; retired angle and number-to-coupling claims remain retired.",
+      "scope": "No independent flavor dynamics in a geometric fit",
+      "required_next_step": "Supply a predictive mass-matrix mechanism and scale prescription.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "Positive-mass Koide surface has a continuous fixed-scale family. Exact d log Q/dt and sharp anomalous-dimension range bound are derived; named monotone beta forms cannot preserve nondegenerate Q when B is nonzero.",
+      "continuation_condition": "Predictive mass texture, scale and matching prescription remain required; prior S20 exclusion unchanged.",
+      "verification_routes": [
+        "Symbolic positive-mass family and pair-product identity",
+        "Centered finite differences and sharp-bound saturation"
+      ],
+      "shared_assumptions_and_scope": "Positive masses; specified gamma_i=d log m_i/dt. Monotone-flow theorem assumes gamma_i=A+B*m_i^p, p>0; not generic ACS running.",
+      "evidence": [
+        "workstreams/physical/attempts/flavor_boundaries_20260911T221814542187Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-F05",
+      "branch_id": "F05",
+      "question": "Seesaw suppression and physical constraints",
+      "owner": "physical",
+      "status": "needs_definition",
+      "previous_status": "definition_required",
+      "previous_result": "The quoted suppression estimate is conditional on a mass and mixing model; gauge scale alone does not fix the mixing.",
+      "scope": "Archived experimental bounds are not treated as current likelihoods",
+      "required_next_step": "Provide the mass matrix, decay channels, abundance and current-data comparison.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "For an exact zero-active-block Takagi mass matrix, t=||B||F^2 >= sum_light m/(Mmax+sum_light m). A fixed physical spectrum (m,M,M) supports a continuum t in [m/(M+m),1].",
+      "continuation_condition": "Full textures, observed mixing constraints, decay channels, abundance history and current likelihood.",
+      "verification_routes": [
+        "Exact block-zero identity, singular-value and nuclear-norm inequalities",
+        "Full diagonalization and independent polynomial spectral projector; separate low-energy complex-orthogonal boost family"
+      ],
+      "shared_assumptions_and_scope": "Full unitary Takagi decomposition, square active/light block, no direct active Majorana term. Bound concerns total mixing; exact and leading effective constructions distinguished.",
+      "evidence": [
+        "workstreams/physical/attempts/flavor_boundaries_20260911T221814542187Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-G04",
+      "branch_id": "G04",
+      "question": "Barbero-Immirzi counting roots",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "Each specified positive counting prescription has one rigorously bracketed positive root, with different values across prescriptions.",
+      "scope": "Three explicit state-counting sums",
+      "required_next_step": "Select the physical counting prescription independently.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "At Z=1 the expected log degeneracy minus area cost is negative spin entropy, not zero. The U(1) zero-magnetic-projection constraint admits integer-spin punctures. Existing specified counting roots remain valid in their original scope.",
+      "continuation_condition": "Derive the physical counting prescription and its temporal information process. Integer-spin exclusion requires an additional rule beyond sum m_i=0.",
+      "verification_routes": [
+        "General Gibbs normalization/entropy identity and separate exact two-level evaluation",
+        "Magnetic-label enumeration and independent Laurent-character constant coefficient"
+      ],
+      "shared_assumptions_and_scope": "Derive the physical counting prescription and its temporal information process. Integer-spin exclusion requires an additional rule beyond sum m_i=0.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-G05",
+      "branch_id": "G05",
+      "question": "Spacetime, masses and gravity from internal grading",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "definition_required",
+      "previous_result": "Internal signature, charge decomposition and equilibria do not identify a spacetime action or spectrum.",
+      "scope": "No complete physical action or continuum construction supplied",
+      "required_next_step": "Specify the map, action, states, constraints and observable matching.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "Identical internal grading is compatible with inequivalent differential principal symbols and arbitrary mass parameters. An invertible specified solder map transfers internal inertia to the metric, conditionally.",
+      "continuation_condition": "Supply spacetime/soldering, full action, normalization, constraints, states and continuum limit; internal grading alone does not select them.",
+      "verification_routes": [
+        "Exact principal-symbol determinant/inertia",
+        "Real characteristic cone and massive dispersion relation"
+      ],
+      "shared_assumptions_and_scope": "Supply spacetime/soldering, full action, normalization, constraints, states and continuum limit; internal grading alone does not select them.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N02",
+      "branch_id": "N02",
+      "question": "Extended isotope input provenance",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "finite_evidence",
+      "previous_result": "Evaluated masses and half-lives expose substantial Q, lifetime and alpha-branching corrections.",
+      "scope": "NUBASE2020; correlated evaluated source; not independent experiments",
+      "required_next_step": "Obtain branch-resolved energies, intensities and angular momenta for channel predictions.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "Partial width and preformation require the branch fraction relative to all decays; every frozen node and potential now has an exact admissible branch-fraction threshold. Newly attempted LNHB route produced no usable table.",
+      "continuation_condition": "Obtain evaluated channel energies, intensities, angular momenta and correlated errors from a new usable source.",
+      "verification_routes": [
+        "Algebraic conversion Gamma_i=b_i*hbar ln2/T and Decimal reconstruction",
+        "Independent channel-feasibility linear programs and frozen-input threshold enumeration"
+      ],
+      "shared_assumptions_and_scope": "No new intensities or angular momenta. Branch fraction conditional on alpha must be multiplied by alpha branching to all decays.",
+      "evidence": [
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N03",
+      "branch_id": "N03",
+      "question": "Geometric overlap adds predictive value",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "finite_evidence",
+      "previous_result": "Under the frozen retrospective 14/15 split, neither tested geometric offset improves the A,Z baseline.",
+      "scope": "The extension was already examined by the authors; no prospective validation claim",
+      "required_next_step": "Freeze a branch-aware model before obtaining independent evaluation data.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "Smooth local confined potentials preserve all Dirichlet eigenvalues and node labels while overlap with a fixed trial changes; overlap with any fixed L2 trial tends to zero along the constructed family. Free isotope preformation intercepts also exactly absorb a geometric feature.",
+      "continuation_condition": "Independent eigenfunction/norming or microscopic input; frozen constrained preformation law and prospective branch-aware validation.",
+      "verification_routes": [
+        "Exact differential intertwining, inverse map, norm/overlap integral",
+        "Independent quadrature including a fixed Gaussian and two-mesh symmetric eigensolvers; design-matrix null vector"
+      ],
+      "shared_assumptions_and_scope": "Confined local potentials, not all outgoing scattering poles. The existing retrospective holdout outcome is retained.",
+      "evidence": [
+        "workstreams/physical/attempts/isospectral_overlap_20260911T222439100804Z/result.json",
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N04",
+      "branch_id": "N04",
+      "question": "Nuclear radius and energy sensitivity",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "conditional_result",
+      "previous_result": "Analytic sensitivity quantifies the effect of Q and radius choices on log half-life.",
+      "scope": "Model-derived targets and approximate mass errors",
+      "required_next_step": "Supply radius/potential uncertainty and correlated branch-resolved nuclear data.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "Exact correlated log-preformation sensitivity, sharp independently attainable interval bounds, and implicit fixed-Q depth sensitivity are specified. The local isospectral family shows energy data alone do not determine wavefunction overlap.",
+      "continuation_condition": "Independent potential/radius uncertainty law and branch-resolved covariance.",
+      "verification_routes": [
+        "Algebraic monotonic interval mapping and implicit-function theorem",
+        "Frozen-grid secants and independent QR/normal-equation slopes; exact isospectral verification"
+      ],
+      "shared_assumptions_and_scope": "Grid is model sensitivity, not empirical uncertainty. Interval endpoint sharpness requires jointly attainable combinations; covariance retained.",
+      "evidence": [
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/attempts/isospectral_overlap_20260911T222439100804Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N06",
+      "branch_id": "N06",
+      "question": "Complex resonance instrument",
+      "owner": "physical",
+      "status": "closed_scoped_certificate",
+      "previous_status": "finite_evidence",
+      "previous_result": "A controlled barrier pole agrees by transfer matrix, complex ODE and exterior complex scaling.",
+      "scope": "Declared barrier, mesh and exterior angle",
+      "required_next_step": "Apply the instrument only with a specified physical potential and channel.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_certificate",
+      "result": "The inherited rectangular outgoing barrier has exactly one resonance in an Arb-certified disk of radius 1e-30 around 6.4410375858632668291750820163897948-0.0022082370285796342710682308196514037i.",
+      "continuation_condition": "Separate validated pole enclosures for a specified physical nuclear potential and channel.",
+      "verification_routes": [
+        "Exact transfer determinant, interval Taylor derivative bounds and Rouche root count",
+        "Independent adaptive complex ODE shooting from displaced starting point",
+        "Independent hyperbolic transfer formula, explicitly differentiated determinant and all-orders Cauchy remainder certificate; shared Arb arithmetic"
+      ],
+      "shared_assumptions_and_scope": "One declared dimensionless half-line rectangular potential. The interval proof supplies certification; numerical shooting is corroboration.",
+      "evidence": [
+        "workstreams/physical/attempts/outgoing_certificate_20260911T221821795453Z/result.json",
+        "workstreams/physical/report.md",
+        "workstreams/foundations/review.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N07",
+      "branch_id": "N07",
+      "question": "Outgoing nuclear potential poles",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "conditional_result",
+      "previous_result": "Two l=0 Woods-Saxon/Coulomb pole widths are resolved, with independent flux-variation confirmation and tail/tolerance checks.",
+      "scope": "Fitted depth, zero-node state, preformation one; not a microscopic prediction",
+      "required_next_step": "Specify Pauli-allowed states, preformation and branch-resolved channels.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "Independent-channel preformation feasibility is equivalent to capacity inequalities. Frozen zero-node Po branches require within-alpha fractions at most 0.79010% and 0.41202%, respectively. A raw residual alone cannot certify a narrow width.",
+      "continuation_condition": "Physical Pauli/state prescription, independently constrained potential, preformation, branch fractions and channel angular momenta.",
+      "verification_routes": [
+        "Exact width/preformation algebra and constructive interval sufficiency",
+        "Independent channel linear programs; analytic residual scaling counterfamily and certified outgoing benchmark"
+      ],
+      "shared_assumptions_and_scope": "The threshold applies to the matching channel at its stated Q and angular momentum; no actual branch intensity is supplied. Old nuclear poles are not newly interval-certified.",
+      "evidence": [
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/attempts/outgoing_certificate_20260911T221821795453Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-P03",
+      "branch_id": "P03",
+      "question": "Finite prime rank and spectral data",
+      "owner": "arithmetic",
+      "status": "open_theorem",
+      "previous_status": "finite_evidence",
+      "previous_result": "The old twenty-million-prime result is retained; shorter prefixes can have missing columns or additional nullity.",
+      "scope": "Recorded finite prefixes and thresholds",
+      "required_next_step": "An asymptotic law needs tail control and an explicit limit statement.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Finite evidence extended by exact rank certificates; universal eventual rank law not established.",
+      "continuation_condition": "Establish the actual-prime discrepancy uniformly along the selected joint sequence, and specify embeddings for a nonzero limit. An all-prefix rank theorem or tail bound would require a separate arithmetic proof.",
+      "verification_routes": [
+        "Exact coordinate-permutation decomposition; direct action on disjoint input blocks",
+        "Independent centered-variance identity and norm inequalities; full matrix versus block singular values",
+        "Fresh Eratosthenes sieve with vectorized triple counts versus independent direct-loop counts at each shortest prefix",
+        "Exact denominator-cleared integer block ranks and separately assembled floating-point full spectra"
+      ],
+      "shared_assumptions_and_scope": "Declared column-stochastic compatible transport, positive count denominators, common baseline. The theorem does not prove prime discrepancy estimates. Precisely recorded finite primes and six moduli; no all-prefix extrapolation.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-P04",
+      "branch_id": "P04",
+      "question": "Prime compression, tails and universal spectral law",
+      "owner": "arithmetic",
+      "status": "open_theorem",
+      "previous_status": "open_theorem",
+      "previous_result": "Finite fits and surrogate separations do not exhaust or prove asymptotic laws.",
+      "scope": "Empirical observations retained; no unproved universal extrapolation",
+      "required_next_step": "Prove the proposed scaling with error bounds, or state a new falsifiable finite hypothesis.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Concrete fixed-modulus conditional law derived; structural surrogate counterfamily excludes deriving universal compression from the listed matrix assumptions.",
+      "continuation_condition": "A prime-specific input beyond structural compatibility, small discrepancy and rank saturation is needed to force subquadratic compression. Prove an unconditional consecutive-prime expansion or provide explicit uniform-in-modulus remainders.",
+      "verification_routes": [
+        "Sylvester-Hadamard compression identity proves exact singular spectrum and tensor-swap eigenvalue law",
+        "Rational integer counts plus explicit Euler circuit exactly reconstruct every triple; independent direct SVD/P^2 checks",
+        "Exact conditional-frequency quotient and cancellation of the r=3 c1 coefficient",
+        "Factorization L=VS, SV=-(I-J/k)/2, independently checked by direct exact characteristic polynomials"
+      ],
+      "shared_assumptions_and_scope": "Surrogate residue words, not actual primes. Rational subsequence ensures exact integer realizability. External conjecture explicitly unproved; fixed modulus; endpoint convention differences negligible only with stated fixed-modulus limit.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-R04",
+      "branch_id": "R04",
+      "question": "RH boundedness normalization",
+      "owner": "arithmetic",
+      "status": "open_theorem",
+      "previous_status": "conditional_result",
+      "previous_result": "Dividing the classical error by sqrt(x) gives O(log^2 x); an additional 1+u^2 normalization gives a valid conditional reformulation.",
+      "scope": "Classical RH equivalence, not a new proof of its needed bound",
+      "required_next_step": "Prove the bound without assuming RH to advance the RH branch.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Corrected classical RH-related bound remains unproved; explicit ordinate-information obstruction clarifies why R10 cannot prove it.",
+      "continuation_condition": "Prove the real-part identification or the corrected RH-equivalent bound independently of ordinate data.",
+      "verification_routes": [
+        "Direct multiplicity-preserving comparison of the two ordinate multisets",
+        "Independent exact expansion of the full shifted-zero canonical factors"
+      ],
+      "shared_assumptions_and_scope": "Abstract symmetry-compatible multisets; no assertion that either modified multiset is the zero set of zeta.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-R06",
+      "branch_id": "R06",
+      "question": "Hilbert-Polya operator and ensemble exclusions",
+      "owner": "arithmetic",
+      "status": "open_theorem",
+      "previous_status": "open_theorem",
+      "previous_result": "Finite self-adjointness and ensemble comparisons do not construct the operator or universally exclude every real-symmetric realization.",
+      "scope": "Generic ensemble assumptions cannot be omitted",
+      "required_next_step": "Provide a natural operator, domain, trace formula and spectral identification.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Constructed diagonal domain and regularized trace are explicit; natural operator and full spectral identification remain unproved.",
+      "continuation_condition": "A natural operator and its full zeta-zero spectral identification remain missing. Prove the real-part identification or the corrected RH-equivalent bound independently of ordinate data.",
+      "verification_routes": [
+        "Hilbert-Schmidt factorization and direct diagonal summability of the subtracted resolvent",
+        "Canonical product/logarithmic derivative and independent integer-spectrum sine/cotangent identities",
+        "Direct multiplicity-preserving comparison of the two ordinate multisets",
+        "Independent exact expansion of the full shifted-zero canonical factors"
+      ],
+      "shared_assumptions_and_scope": "Declared diagonal ordinate spectrum with explicit self-adjoint domain. Shared external Bellotti-Wong counting theorem. Fresh decimal values are high precision, not new Arb enclosures. Abstract symmetry-compatible multisets; no assertion that either modified multiset is the zero set of zeta.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-C05",
+      "branch_id": "C05",
+      "question": "Independent Lean kernel verification",
+      "owner": "foundations",
+      "status": "needs_runtime",
+      "previous_status": "runtime_blocked",
+      "previous_result": "Two official runtimes failed before checking any proof; mathematical checks cannot be relabeled kernel verification.",
+      "scope": "The corpus contains separate prior success claims, preserved as provenance",
+      "required_next_step": "Run the unchanged pinned files in a working supported Lean/Mathlib environment.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_runtime",
+      "result": "Three Lean source files and nine locked package revisions are pinned; the static census finds 24 theorem declarations and no sorry/admit tokens. Zero new kernel passes; topological lifting input remains explicitly external.",
+      "continuation_condition": "Check the unchanged files in the working supported pinned environment, print theorem axioms and reject a separate false-statement mutation. Static scans are not kernel verification.",
+      "verification_routes": [
+        "Static comment-stripped source/dependency census and content hashes",
+        "Preserved separate startup-failure receipts for two supported runtime versions"
+      ],
+      "shared_assumptions_and_scope": "Check the unchanged files in the working supported pinned environment, print theorem axioms and reject a separate false-statement mutation. Static scans are not kernel verification.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/source_instruments/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M02",
+      "branch_id": "M02",
+      "question": "Framing, g-factor and capacitance prediction",
+      "owner": "physical",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "Framing parity survives; retired g=2 identification and freely tuned capacitance matches remain retired or conditional.",
+      "scope": "No independent charge/mass distribution or QED dynamics fixed",
+      "required_next_step": "Specify the physical distributions and dynamics before claiming a parameter-free spectrum.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "One fixed framed (2,1) curve admits different g through positive charge/mass profiles. Common rigid rotation implies sharp support bounds and g=2 requires a/R>=3-2sqrt2. Electrostatic capacity varies within fixed topology; the annulus formula is exactly invertible to arbitrary targets.",
+      "continuation_condition": "Specify distributions, velocities/field stresses, conductor geometry and microscopic dynamics before claiming parameter-free magnetic or spectral predictions.",
+      "verification_routes": [
+        "Exact moment integrals, positive-measure support bounds and concentration sequence",
+        "Independent vector quadrature; Dirichlet and unit-charge variational capacity principles; independent sphere field-energy normalization"
+      ],
+      "shared_assumptions_and_scope": "Rigid classical common rotation and positive one-sign charge/mass densities. Fixed-topology conductor counterfamily is not identified with the manuscript ribbon; no QED or quantum spectrum.",
+      "evidence": [
+        "workstreams/physical/attempts/moment_capacitance_20260911T221821792360Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M03",
+      "branch_id": "M03",
+      "question": "Ideal magnetic shear stabilization",
+      "owner": "navier_stokes",
+      "status": "open_theorem",
+      "previous_status": "conditional_result",
+      "previous_result": "Magnetic tension stabilizes appropriate directions without dissipation; density contrast has no universal weaker-threshold rule.",
+      "scope": "Planar incompressible ideal-MHD interface",
+      "required_next_step": "Nonlinear persistence and observed plasma parameters require a separate model.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Nonlinear ideal-MHD relative energy around smooth shear and uniform aligned magnetic field obeys Hprime=-integral Uprime(vx*vy-hx*hy), hence H<=exp(Mt)H0 while smooth",
+      "continuation_condition": "Higher-norm continuation, nonlinear vortex persistence, unequal-density interfaces and observed plasma parameters remain separate open tasks",
+      "verification_routes": [
+        "nonlinear integration-by-parts cancellation",
+        "FFT full nonlinear MHD RHS on independent solenoidal fields"
+      ],
+      "shared_assumptions_and_scope": "Periodic constant-density incompressible ideal MHD, smooth shear and uniform aligned background field; estimate valid on the smooth lifespan.",
+      "evidence": [
+        "workstreams/navier_stokes/report.md",
+        "workstreams/navier_stokes/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M04",
+      "branch_id": "M04",
+      "question": "Smooth-layer Kelvin-Helmholtz growth",
+      "owner": "shear",
+      "status": "conditional_certificate",
+      "previous_status": "conditional_result",
+      "previous_result": "Finite shear thickness gives a rigorous finite energy-growth bound; independent shooting reproduces the tested unstable eigenmodes.",
+      "scope": "Tanh linear shear layer; no full spectral uniqueness proof supplied",
+      "required_next_step": "A complete spectrum or nonlinear vortex-knot persistence requires further analysis.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "conditional_certificate",
+      "result": "The declared tanh linear spectrum now has a validated unique maximum with independent continuum checks.",
+      "continuation_condition": "A second complete operator proof/kernel certificate is distinct from numerical validation. Nonlinear evolution, other profiles and physical plasma parameters need additional analysis.",
+      "verification_routes": [
+        "Validated spatial-Taylor determinant/derivative enclosures",
+        "Independent compactified Frobenius/Cauchy construction",
+        "Exact rational coverage/sign audit and adversarial review"
+      ],
+      "shared_assumptions_and_scope": "Specified weighted whole-line tanh Rayleigh problem; inherited simple-eigenvalue and analytic endpoint hypotheses. See final shear report for accepted versus rejected checks.",
+      "evidence": [
+        "workstreams/shear/report.md",
+        "workstreams/shear/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-D03",
+      "branch_id": "D03",
+      "question": "Variance as noncommutativity and geometric ontology",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "definition_required",
+      "previous_result": "Commuting schemes can have nonzero output variance; ontology alone does not supply sheaf data or physical prediction.",
+      "scope": "Base, restrictions, gluing, dynamics and observations not interchangeable",
+      "required_next_step": "Define the geometric structures and an independently testable prediction.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "Correction: the source does specify the O(4) state carrier, rewrite maps and Phi. Its variance/noncommutativity identity fails directly on that carrier in both directions. An observable order defect, faithfulness condition and optional discrete-word sheaf completion are supplied.",
+      "continuation_condition": "Choose source/target typing for order defects, a faithful observable and probability law; if using sheaf language specify topology, restrictions and gluing. The optional completion is not identified with an unstated physical ontology.",
+      "verification_routes": [
+        "Exact rational O(4) products, commutator and orthogonality",
+        "Independent scheme probability/orbit evaluation; arbitrary-cover gluing proof plus exhaustive finite cover check"
+      ],
+      "shared_assumptions_and_scope": "Choose source/target typing for order defects, a faithful observable and probability law; if using sheaf language specify topology, restrictions and gluing. The optional completion is not identified with an unstated physical ontology.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-K01",
+      "branch_id": "K01",
+      "question": "Transparent constraints and deterministic arithmetic",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "A checkable contract needs specified arithmetic and content identity; exact and binary64 sums can differ.",
+      "scope": "Research branch records are scoped evidence, not automatic SAT clauses",
+      "required_next_step": "Audit the actual AISO/CDCL implementation against its declared contract.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "A minimal exact Boolean provenance instrument preserves hashes, scope, evidence grade, proof dependencies and retirement. All 294 three-variable resolution instances pass; the 11-event trace passes an independent truth-assignment and ancestry oracle, and eight adversarial mutations are rejected.",
+      "continuation_condition": "The actual ACS CDCL means Constraint-Driven Consensus Layer, not the SAT term. Supply production constraint semantics, grades, learning/retraction rules and an authorized pinned implementation for audit.",
+      "verification_routes": [
+        "Local resolution rule and propagated root-support proof invariant",
+        "Independent exhaustive truth assignments and recursively reconstructed ancestor liveness for every prefix"
+      ],
+      "shared_assumptions_and_scope": "The actual ACS CDCL means Constraint-Driven Consensus Layer, not the SAT term. Supply production constraint semantics, grades, learning/retraction rules and an authorized pinned implementation for audit.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/transparent_constraints/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-K02",
+      "branch_id": "K02",
+      "question": "Private speed, AI deployment and skill-trigger claims",
+      "owner": "foundations",
+      "status": "needs_source",
+      "previous_status": "evidence_unavailable",
+      "previous_result": "The archive does not contain the private kernels, deployment or external optimization environment needed to repeat these claims.",
+      "scope": "No negative mathematical verdict from missing access",
+      "required_next_step": "Supply the implementation, reference workload, environment and exact comparison protocol.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_source",
+      "result": "The public script benchmark exists and is explicitly scoped. Private AISO speed/deployment artifacts remain unavailable; no speed ratio or negative verdict is inferred.",
+      "continuation_condition": "Supply private implementation, baseline, workload, environment and exact comparison protocol.",
+      "verification_routes": [
+        "Two complete local text/code censuses (rg and pathlib, 329 files each)",
+        "Independent private-source availability note and public benchmark scope docstring"
+      ],
+      "shared_assumptions_and_scope": "Supply private implementation, baseline, workload, environment and exact comparison protocol.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/source_instruments/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-K03",
+      "branch_id": "K03",
+      "question": "External Yang-Mills comparison",
+      "owner": "foundations",
+      "status": "needs_source",
+      "previous_status": "evidence_unavailable",
+      "previous_result": "A textual scoring protocol cannot verify an unavailable mass-gap proof.",
+      "scope": "External proof and executable construction absent",
+      "required_next_step": "Provide the complete proof and explicit claims to verify.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_source",
+      "result": "The actual unchanged available checker gives MATCH=1.0 to both affirmative and explicitly negated fixtures for all eight predictions, misses a complete final-window fixture, and never uses its parsed sealed_spec argument. These are checker findings only.",
+      "continuation_condition": "Supply the full external proof, theorem statement, hypotheses and dependencies. Keyword scores cannot establish its truth, and these checker findings cannot refute it.",
+      "verification_routes": [
+        "Execute actual byte-identical checker on paired and tail fixtures",
+        "Independent score reconstruction plus AST/control-flow inspection"
+      ],
+      "shared_assumptions_and_scope": "Supply the full external proof, theorem statement, hypotheses and dependencies. Keyword scores cannot establish its truth, and these checker findings cannot refute it.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/source_instruments/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-K04",
+      "branch_id": "K04",
+      "question": "Holistic consistency and append-only evidence",
+      "owner": "projection",
+      "status": "closed_scoped_result",
+      "previous_status": "conditional_result",
+      "previous_result": "The current branch map records dependencies, supersessions, method sharing and unresolved boundaries without deleting history.",
+      "scope": "This finite census is not a proof that no further claim or interpretation exists",
+      "required_next_step": "Append newly identified branches and preserve the prior conclusion that they refine.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "All 50 task investigations mapped; previous catalog fields and 256-event byte prefix retained; new findings, failures, corrections and replay receipts appended.",
+      "continuation_condition": "Continue the explicitly open computations/theorems and supplied-input gates without erasing history.",
+      "verification_routes": [
+        "Cross-workstream reconciliation and adversarial mathematical reviews",
+        "Independent hashes, event-chain validation, unique-ID and checklist-coverage checks"
+      ],
+      "shared_assumptions_and_scope": "A finite source and branch census is not a proof that no additional interpretation or research direction exists.",
+      "evidence": [
+        "ACS_Frontier_Checklist.md",
+        "Task_Checklist.json",
+        "Branch_Events.jsonl",
+        "verify_release.py",
+        "Replay_Events.jsonl"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-I07",
+      "branch_id": "I07",
+      "question": "Full-history information instrument",
+      "owner": "foundations",
+      "status": "needs_definition",
+      "previous_status": "conditional_result",
+      "previous_result": "Current-state Gaussian TE and full-history TE are separately derived; history rates agree with an independent spectral integral.",
+      "scope": "Stable two-dimensional OU drift, independent additive noises, positive self-decay rates, stated conditioning.",
+      "required_next_step": "Derive the intended ACS transition law and conditioning before identifying it with a bracket observable.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_definition",
+      "result": "A fully specified delayed-copy process has current-state TE 0 and full-history TE 1 bit. The earlier OU history-rate ordering is model/conditioning-specific.",
+      "continuation_condition": "Supply both source/target history sigma-algebras, lag, transition law and observation noise before identifying the ACS observable.",
+      "verification_routes": [
+        "Exact finite probability/entropy and likelihood enumeration",
+        "Conditional-independence argument for current source and exact recovery from source history"
+      ],
+      "shared_assumptions_and_scope": "Supply both source/target history sigma-algebras, lag, transition law and observation noise before identifying the ACS observable.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/information_geometry/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S11",
+      "branch_id": "S11",
+      "question": "Coupled 68-real-field norm sector",
+      "owner": "rg",
+      "status": "closed_scoped_result",
+      "previous_status": "conditional_result",
+      "previous_result": "The O(8) x O(60) scalar-only sector has exact three-coupling running, a boundedness criterion and a unique Gaussian real fixed point.",
+      "scope": "Enhanced O(8) x O(60) symmetry, scalar loops, canonical fields.",
+      "required_next_step": "Gauge and Yukawa interactions generally break this enhanced symmetry.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "Positive region permits every nonnegative angular quartic remainder; no radial-symmetry-preservation assumption is needed.",
+      "continuation_condition": "Generic enhanced symmetry is not restored; maximal stable region and physical selection remain separate.",
+      "verification_routes": [
+        "Continuum contact-Hessian and norm proof with exact rational constants",
+        "Full11093-monomial basis identity",
+        "Independent scalar/fermion/vector mass reconstruction vs assembled beta",
+        "Scalar-Gram spectrum identity with Clifford matrices"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N08",
+      "branch_id": "N08",
+      "question": "Higher radial nuclear pole branches",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "conditional_result",
+      "previous_result": "Sixteen isotope/node configurations, each at two tolerances, include compatible preformation factors at nodes 10, 11 and 12.",
+      "scope": "Named Woods-Saxon/Coulomb model; each depth fitted to Q; total alpha target provisional.",
+      "required_next_step": "Supply the physical Pauli prescription, potential and branch data; eleven nodes is a cited conditional cluster choice.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "All 16 frozen node configurations now have branch-fraction compatibility thresholds. Complete confined spectra and unchanged node counts still admit inequivalent overlaps in the exact local-potential family.",
+      "continuation_condition": "Supply the physical Pauli/node prescription and branch-specific energy/intensity/angular momentum.",
+      "verification_routes": [
+        "Frozen node ratios converted algebraically at retained tighter tolerance",
+        "Exact isospectral transformation and two-mesh spectral checks"
+      ],
+      "shared_assumptions_and_scope": "No new radial-state choice is made. The isospectral family concerns confined states and does not equate their outgoing widths.",
+      "evidence": [
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/attempts/isospectral_overlap_20260911T222439100804Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-N09",
+      "branch_id": "N09",
+      "question": "Potential sensitivity at eleven nodes",
+      "owner": "physical",
+      "status": "needs_data",
+      "previous_status": "finite_evidence",
+      "previous_result": "All 18 declared radius/diffuseness configurations are mapped; required preformation crosses one within the grid for both isotopes.",
+      "scope": "Deliberately chosen grid, not empirical confidence limits.",
+      "required_next_step": "Constrain potential and uncertainty independently of the decay width.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_data",
+      "result": "Compatible frozen potentials have P ratios 11.8884067 (212Po) and 7.60487869 (214Po) at the same Q and compensated observed width. Two-point multiplicative minimax factors are 3.44795688 and 2.75769445 using only these decay observations.",
+      "continuation_condition": "Independently constrain potential and errors, rather than select them using the same decay width.",
+      "verification_routes": [
+        "Identical width products and two-point triangle inequality in log P",
+        "Decimal half-life conversion; QR versus normal-equation finite-grid sensitivity"
+      ],
+      "shared_assumptions_and_scope": "Finite declared potential family, fitted depths, provisional single channel. The alternatives are not all certified physically realistic. No empirical confidence interval is inferred.",
+      "evidence": [
+        "workstreams/physical/attempts/nuclear_identifiability_20260911T222046322306Z/result.json",
+        "workstreams/physical/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-P08",
+      "branch_id": "P08",
+      "question": "Conditional fixed-modulus arithmetic limit",
+      "owner": "arithmetic",
+      "status": "open_theorem",
+      "previous_status": "conditional_result",
+      "previous_result": "Uniform triple relative error delta gives rho(P)<=2 delta/(1-delta); equidistribution would force an unscaled zero limit.",
+      "scope": "Prime triple equidistribution remains conjectural; modulus fixed.",
+      "required_next_step": "Prove arithmetic errors and specify joint limits and normalization.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Dimension-uniform discrepancy theorem and explicit renormalized error criterion proved; arithmetic discrepancy premise remains open.",
+      "continuation_condition": "Establish the actual-prime discrepancy uniformly along the selected joint sequence, and specify embeddings for a nonzero limit. A prime-specific input beyond structural compatibility, small discrepancy and rank saturation is needed to force subquadratic compression. Prove an unconditional consecutive-prime expansion or provide explicit uniform-in-modulus remainders.",
+      "verification_routes": [
+        "Exact coordinate-permutation decomposition; direct action on disjoint input blocks",
+        "Independent centered-variance identity and norm inequalities; full matrix versus block singular values",
+        "Sylvester-Hadamard compression identity proves exact singular spectrum and tensor-swap eigenvalue law",
+        "Rational integer counts plus explicit Euler circuit exactly reconstruct every triple; independent direct SVD/P^2 checks",
+        "Exact conditional-frequency quotient and cancellation of the r=3 c1 coefficient",
+        "Factorization L=VS, SV=-(I-J/k)/2, independently checked by direct exact characteristic polynomials"
+      ],
+      "shared_assumptions_and_scope": "Declared column-stochastic compatible transport, positive count denominators, common baseline. The theorem does not prove prime discrepancy estimates. Surrogate residue words, not actual primes. Rational subsequence ensures exact integer realizability. External conjecture explicitly unproved; fixed modulus; endpoint convention differences negligible only with stated fixed-modulus limit.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-R08",
+      "branch_id": "R08",
+      "question": "Uniform paired-resolvent tails",
+      "owner": "arithmetic",
+      "status": "closed_scoped_result",
+      "previous_status": "conditional_result",
+      "previous_result": "Pairing produces an absolutely convergent observable with an explicit tail bound when the stated counting bound holds.",
+      "scope": "Declared paired spectrum, pole-free compact set and quantified counting hypothesis.",
+      "required_next_step": "Supply numerical constants or a spectral identification; the unpaired trace is not repaired.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "Paired observable realized as trace of an explicitly subtracted trace-class operator.",
+      "continuation_condition": "A natural operator and its full zeta-zero spectral identification remain missing.",
+      "verification_routes": [
+        "Hilbert-Schmidt factorization and direct diagonal summability of the subtracted resolvent",
+        "Canonical product/logarithmic derivative and independent integer-spectrum sine/cotangent identities"
+      ],
+      "shared_assumptions_and_scope": "Declared diagonal ordinate spectrum with explicit self-adjoint domain. Shared external Bellotti-Wong counting theorem. Fresh decimal values are high precision, not new Arb enclosures.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-R09",
+      "branch_id": "R09",
+      "question": "Common-space finite-section criterion",
+      "owner": "arithmetic",
+      "status": "closed_scoped_result",
+      "previous_status": "exact_result",
+      "previous_result": "Hilbert-Schmidt coefficient tails suffice for a compact operator limit; escaping projections show strong convergence alone does not control trace.",
+      "scope": "Common Hilbert space and coherent square-summable entries.",
+      "required_next_step": "Prove the intended operator satisfies these or another sufficient convergence conditions.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "Sharp-in-order joint Schatten rate criteria and trace-norm counterfamilies extend common-space convergence analysis.",
+      "continuation_condition": "Establish the actual-prime discrepancy uniformly along the selected joint sequence, and specify embeddings for a nonzero limit. A prime-specific input beyond structural compatibility, small discrepancy and rank saturation is needed to force subquadratic compression. A natural operator and its full zeta-zero spectral identification remain missing.",
+      "verification_routes": [
+        "Exact coordinate-permutation decomposition; direct action on disjoint input blocks",
+        "Independent centered-variance identity and norm inequalities; full matrix versus block singular values",
+        "Sylvester-Hadamard compression identity proves exact singular spectrum and tensor-swap eigenvalue law",
+        "Rational integer counts plus explicit Euler circuit exactly reconstruct every triple; independent direct SVD/P^2 checks",
+        "Hilbert-Schmidt factorization and direct diagonal summability of the subtracted resolvent",
+        "Canonical product/logarithmic derivative and independent integer-spectrum sine/cotangent identities"
+      ],
+      "shared_assumptions_and_scope": "Declared column-stochastic compatible transport, positive count denominators, common baseline. The theorem does not prove prime discrepancy estimates. Surrogate residue words, not actual primes. Rational subsequence ensures exact integer realizability. Declared diagonal ordinate spectrum with explicit self-adjoint domain. Shared external Bellotti-Wong counting theorem. Fresh decimal values are high precision, not new Arb enclosures.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-K05",
+      "branch_id": "K05",
+      "question": "Accessible implementation and runtime boundary",
+      "owner": "foundations",
+      "status": "needs_source",
+      "previous_status": "evidence_unavailable",
+      "previous_result": "The intended repository remains inaccessible and both unchanged Lean runtimes fail before checking proofs.",
+      "scope": "Read-only access receipts; failure does not show source nonexistence or proof falsity.",
+      "required_next_step": "Accessible pinned source and a working supported proof environment are required.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_source",
+      "result": "Pinned source census and earlier access/runtime receipts are preserved. No unchanged account404 or runtime-startup retry was made. Portable reference/audit materials now exist.",
+      "continuation_condition": "Authorized accessible production revision and a working supported proof runtime.",
+      "verification_routes": [
+        "Independent rg/pathlib inventory with all selected source identities",
+        "Source availability statements and preserved earlier account/runtime receipts"
+      ],
+      "shared_assumptions_and_scope": "Authorized accessible production revision and a working supported proof runtime.",
+      "evidence": [
+        "workstreams/foundations/attempts/20260911T221928192942Z/source_instruments/result.json",
+        "workstreams/foundations/support/source_manifest.json",
+        "workstreams/foundations/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S17",
+      "branch_id": "S17",
+      "question": "Gauge running for a declared family content",
+      "owner": "rg",
+      "status": "closed_scoped_result",
+      "previous_status": "conditional_result",
+      "previous_result": "b=(35/3-4nf/3,7-4nf/3,1/3-4nf/3); nf=3 gives gR a perturbative UV pole.",
+      "scope": "Complete complex Phi and Delta and nf chiral (4,2,1)+(bar4,1,2) families active; no extra particles or thresholds",
+      "required_next_step": "Different thresholds/content/UV completion require another running system.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "Gauge beta completed through two loops for arbitrary family count; normalized tree matching recorded.",
+      "continuation_condition": "Threshold-specific running requires selected masses and effective-theory content.",
+      "verification_routes": [
+        "Exact symbolic representation sums",
+        "Explicit generator Casimirs and Cartan component weights, real-scalar convention",
+        "All22 real Yukawa-coordinate Gram matrix at n2",
+        "Independent primary literature matrix comparison"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M07",
+      "branch_id": "M07",
+      "question": "Weighted whole-line tanh spectrum and unstable multiplicity",
+      "owner": "shear",
+      "status": "open_theorem",
+      "previous_status": "exact_result",
+      "previous_result": "The real continuous interval is [-1,1], with one simple nonreal pair for 0<k<1; k=1 has a one-dimensional embedded neutral kernel at c=0.",
+      "scope": "State zeta=q/sqrt(2sech^2 y) in L2(R); whole-line inviscid linear tanh profile; k>0",
+      "required_next_step": "A second full operator proof, proof-assistant check and nonlinear dynamics remain distinct.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "The inherited weighted whole-line simple-unstable-pair theorem is retained; Frobenius determinant calculations provide a second construction, not a new complete operator proof.",
+      "continuation_condition": "A second complete operator proof/kernel certificate is distinct from numerical validation. Nonlinear evolution, other profiles and physical plasma parameters need additional analysis.",
+      "verification_routes": [
+        "Validated spatial-Taylor determinant/derivative enclosures",
+        "Independent compactified Frobenius/Cauchy construction",
+        "Exact rational coverage/sign audit and adversarial review"
+      ],
+      "shared_assumptions_and_scope": "Specified weighted whole-line tanh Rayleigh problem; inherited simple-eigenvalue and analytic endpoint hypotheses. See final shear report for accepted versus rejected checks.",
+      "evidence": [
+        "workstreams/shear/report.md",
+        "workstreams/shear/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M08",
+      "branch_id": "M08",
+      "question": "Tanh growth stationary maximum",
+      "owner": "shear",
+      "status": "conditional_certificate",
+      "previous_status": "finite_check",
+      "previous_result": "Shooting and compactified spectral optimization agree near k=0.444918, growth=0.18970210; no global uniqueness certificate.",
+      "scope": "Finite tolerances/degrees and explicit search intervals; same tanh model",
+      "required_next_step": "Validated derivative and root bounds over the continuum are needed for a unique global maximizing location.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "conditional_certificate",
+      "result": "Unique maximizing k is enclosed in (0.444918042172,0.444918042175), conditional on the inherited spectral/sign and endpoint theorems.",
+      "continuation_condition": "A second complete operator proof/kernel certificate is distinct from numerical validation. Nonlinear evolution, other profiles and physical plasma parameters need additional analysis.",
+      "verification_routes": [
+        "Validated spatial-Taylor determinant/derivative enclosures",
+        "Independent compactified Frobenius/Cauchy construction",
+        "Exact rational coverage/sign audit and adversarial review"
+      ],
+      "shared_assumptions_and_scope": "Specified weighted whole-line tanh Rayleigh problem; inherited simple-eigenvalue and analytic endpoint hypotheses. See final shear report for accepted versus rejected checks.",
+      "evidence": [
+        "workstreams/shear/report.md",
+        "workstreams/shear/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S18",
+      "branch_id": "S18",
+      "question": "General minimal-model Yukawa matrix running",
+      "owner": "rg",
+      "status": "open_computation",
+      "previous_status": "exact_result",
+      "previous_result": "All 68 Weyl-tensor identities establish the arbitrary-family Y,Z,F beta functions.",
+      "scope": "Canonical maximal unbroken minimal PS action; F symmetric; MS at one loop",
+      "required_next_step": "Higher loops, extra fields and threshold matching are separate models.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_computation",
+      "result": "Prior full one-loop matrices retained; pure two-loop slice Y=yI_n,Z=F=g=lambda=0 gives betaY2=(1-24n)y^5I_n, checked against SM top-only -12.",
+      "continuation_condition": "General noncommuting Yukawa words and mixed gauge/quartic contributions; the quartic-free slice is not invariant.",
+      "verification_routes": [
+        "Seven-term trace-multiplicity organization yields (2,0,-1,0,0,-12n,-12n)",
+        "Full16n Weyl matrices n1,2,3 with all tensor residuals zero",
+        "Independent primary SM top-only beta2=-12y^5 regression"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S19",
+      "branch_id": "S19",
+      "question": "All Yukawa corrections to seventeen quartics and four masses",
+      "owner": "rg",
+      "status": "open_computation",
+      "previous_status": "exact_result",
+      "previous_result": "15 box trace features, 51 quartic-wave columns and 13 mass-wave columns pass complete field-polynomial identities. Full one-loop evaluator assembled.",
+      "scope": "Same 68 real coordinates and maximal minimal Yukawa action",
+      "required_next_step": "Trajectory and vacuum selection need boundary values, renormalization-scale and matching prescriptions.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_computation",
+      "result": "Prior seventeen quartic/four mass one-loop corrections independently reconstructed in the positivity proof; bounded higher-loop continuation begun.",
+      "continuation_condition": "Full two-loop quartic and mass tensors, projection, vacuum and physical matching.",
+      "verification_routes": [
+        "Seven-term trace-multiplicity organization yields (2,0,-1,0,0,-12n,-12n)",
+        "Full16n Weyl matrices n1,2,3 with all tensor residuals zero",
+        "Independent primary SM top-only beta2=-12y^5 regression"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S20",
+      "branch_id": "S20",
+      "question": "Constant aligned Yukawa ratio 2/3",
+      "owner": "rg",
+      "status": "closed_scoped_obstruction",
+      "previous_status": "exact_obstruction",
+      "previous_result": "For nonzero Y and Z=rY, a constant aligned ratio is one-loop invariant only for r=0 or |r|=1; r=2/3 is excluded.",
+      "scope": "Specified canonical field basis and full minimal one-loop Yukawa action",
+      "required_next_step": "An additional mechanism must supply cancelling terms; a boundary ratio or running field redefinition is a different statement.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_obstruction",
+      "result": "Nonzero cubic alignment defect excludes constant 2/3 as a protected leading relation in formal perturbation theory.",
+      "continuation_condition": "Different leading relation, extra mechanism or finite-coupling cancellation requires a separately specified calculation.",
+      "verification_routes": [
+        "Exact retained one-loop identities and source-specific higher-loop obligation",
+        "Independent full mass/Hessian reconstruction where applicable; no new higher-loop phase check"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S21",
+      "branch_id": "S21",
+      "question": "Full dimensionless one-loop fixed-point classification",
+      "owner": "rg",
+      "status": "open_computation",
+      "previous_status": "exact_obstruction",
+      "previous_result": "With three chiral families the only simultaneous real gauge, Yukawa and scalar quartic fixed point is Gaussian.",
+      "scope": "Real gauge couplings; F symmetric; maximal minimal model without gravity, thresholds or extra fields",
+      "required_next_step": "No conclusion is established for two-loop interacting fixed points or a UV completion.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_computation",
+      "result": "At all three-family 2g/1Y zeros gR=0; only Gaussian in max(g^2/(16pi^2))<23/335; ten ansatz gauge/Yukawa candidate faces retained.",
+      "continuation_condition": "Scalar-compatible candidate zeros, stability, full two-loop nullclines and omitted-loop sensitivity.",
+      "verification_routes": [
+        "Seven-term trace-multiplicity organization yields (2,0,-1,0,0,-12n,-12n)",
+        "Full16n Weyl matrices n1,2,3 with all tensor residuals zero",
+        "Independent primary SM top-only beta2=-12y^5 regression",
+        "Separate adversarial review of contact/norm proof and exact Fraction fixed-point arithmetic"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json",
+        "workstreams/navier_stokes/review.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S22",
+      "branch_id": "S22",
+      "question": "Extending quartic positivity preservation to fermions",
+      "owner": "rg",
+      "status": "closed_scoped_result",
+      "previous_status": "exact_obstruction",
+      "previous_result": "At V4=0, g=0, Y=1, Z=F=0 and Phi=diag(1,0), 32pi^2 beta(V4)=-16. The Yukawa-free positivity theorem cannot be extended generically.",
+      "scope": "Forward one-loop flow; an explicit scalar background; no claim of inevitable instability for every initial potential",
+      "required_next_step": "A positive invariant region with Yukawa-dependent restrictions would require a new proof.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "The full one-loop region V4(u)>=Q(u^Tu)^2/2 is forward invariant; exact contact margin is 102Q^2r^4.",
+      "continuation_condition": "Maximal positivity region, higher-loop persistence and physical vacuum selection.",
+      "verification_routes": [
+        "Continuum contact-Hessian and norm proof with exact rational constants",
+        "Full11093-monomial basis identity",
+        "Independent scalar/fermion/vector mass reconstruction vs assembled beta",
+        "Scalar-Gram spectrum identity with Clifford matrices",
+        "Separate adversarial review of contact/norm proof and exact Fraction fixed-point arithmetic"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json",
+        "workstreams/navier_stokes/review.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-S23",
+      "branch_id": "S23",
+      "question": "Yukawa effects on scalar symmetry subspaces",
+      "owner": "rg",
+      "status": "open_computation",
+      "previous_status": "exact_result",
+      "previous_result": "Current-zero and canonical CP-even subspaces are not generally closed. The holomorphic Delta quartic phase remains constant at one loop.",
+      "scope": "Specified canonical CP coordinates; phase statement where complex Delta coupling is nonzero",
+      "required_next_step": "Basis-independent physical CP violation and higher-loop phase running are separate questions.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_computation",
+      "result": "Current/CP obstructions and one-loop Delta phase theorem retained; exact higher-loop phase test specified.",
+      "continuation_condition": "Compute full two-loop quartic sources and Im[(lambda11-i lambda12)(beta11+i beta12)] with generic flavor spurions.",
+      "verification_routes": [
+        "Exact retained one-loop identities and source-specific higher-loop obligation",
+        "Independent full mass/Hessian reconstruction where applicable; no new higher-loop phase check"
+      ],
+      "shared_assumptions_and_scope": "Each finding retains its own loop order; the positive region is full one-loop, the fixed-point bound is 2g/1Y, and the degree-five slice is pointwise.",
+      "evidence": [
+        "workstreams/rg/report.md",
+        "workstreams/rg/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-M10",
+      "branch_id": "M10",
+      "question": "Certified global tanh growth height",
+      "owner": "shear",
+      "status": "conditional_certificate",
+      "previous_status": "certified_enclosure",
+      "previous_result": "0.1897 < max_{0<k<1} k eta(k) < 0.1900, using 557 accepted rational intervals and analytic endpoint exclusions.",
+      "scope": "Whole-line inviscid linear tanh model; prior simple-eigenvalue classification; Arb and this implementation trusted",
+      "required_next_step": "A unique maximizing location and a second independent rigorous continuum certificate remain open.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "conditional_certificate",
+      "result": "Global height and unique peak have hardened interval enclosures; final independent Frobenius cover and archive-sign audit are preserved.",
+      "continuation_condition": "A second complete operator proof/kernel certificate is distinct from numerical validation. Nonlinear evolution, other profiles and physical plasma parameters need additional analysis.",
+      "verification_routes": [
+        "Validated spatial-Taylor determinant/derivative enclosures",
+        "Independent compactified Frobenius/Cauchy construction",
+        "Exact rational coverage/sign audit and adversarial review"
+      ],
+      "shared_assumptions_and_scope": "Specified weighted whole-line tanh Rayleigh problem; inherited simple-eigenvalue and analytic endpoint hypotheses. See final shear report for accepted versus rejected checks.",
+      "evidence": [
+        "workstreams/shear/report.md",
+        "workstreams/shear/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-R10",
+      "branch_id": "R10",
+      "question": "Explicit zeta-ordinate paired-resolvent tail",
+      "owner": "arithmetic",
+      "status": "closed_scoped_result",
+      "previous_status": "exact_result",
+      "previous_result": "Bellotti-Wong counting constants give an explicit uniform tail bound without assuming RH; certified numerical values supplied.",
+      "scope": "External Bellotti-Wong Theorem 1.1; all positive imaginary ordinates with multiplicity; |z|<=K<T",
+      "required_next_step": "A natural operator or real-part identification is still needed for the Hilbert-Polya/RH branch.",
+      "verification_requirement": "At least two distinct derivations, algorithms, or ontological checks; shared assumptions stated.",
+      "completion_rule": "A proved scoped result, a verified obstruction, or an exact evidence/input/theorem boundary; not universal exhaustion by assertion.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_result",
+      "result": "Retained explicit inverse-square tail now controls trace-class subtraction, derivatives and canonical products; shared external counting premise retained.",
+      "continuation_condition": "A natural operator and its full zeta-zero spectral identification remain missing. Prove the real-part identification or the corrected RH-equivalent bound independently of ordinate data.",
+      "verification_routes": [
+        "Hilbert-Schmidt factorization and direct diagonal summability of the subtracted resolvent",
+        "Canonical product/logarithmic derivative and independent integer-spectrum sine/cotangent identities",
+        "Direct multiplicity-preserving comparison of the two ordinate multisets",
+        "Independent exact expansion of the full shifted-zero canonical factors"
+      ],
+      "shared_assumptions_and_scope": "Declared diagonal ordinate spectrum with explicit self-adjoint domain. Shared external Bellotti-Wong counting theorem. Fresh decimal values are high precision, not new Arb enclosures. Abstract symmetry-compatible multisets; no assertion that either modified multiset is the zero set of zeta.",
+      "evidence": [
+        "workstreams/arithmetic/report.md",
+        "workstreams/arithmetic/findings.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-NS01",
+      "branch_id": "NS01",
+      "question": "Identify Croft reference",
+      "owner": "navier_stokes",
+      "status": "needs_source",
+      "required_next_step": "Resolve exact citation or preserve uncertainty; do not silently substitute a person/paper.",
+      "verification_requirement": "Primary-source audit and independent mathematical or computational corroboration.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "needs_source",
+      "result": "Croft Adams is a documented candidate; no matching citation occurs in the supplied corpus and user intent is not established.",
+      "continuation_condition": "Provide the author, title, link or passage intended by Croft; cross-reference remains an alternative transcription.",
+      "verification_routes": [
+        "Corpus search",
+        "Authored candidate-source and current bibliographic search"
+      ],
+      "shared_assumptions_and_scope": "Candidate text is assessed conditionally; no identity substitution.",
+      "evidence": [
+        "workstreams/navier_stokes/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-NS02",
+      "branch_id": "NS02",
+      "question": "Latest primary Navier-Stokes advances",
+      "owner": "navier_stokes",
+      "status": "evidence_review_only",
+      "required_next_step": "Check versions, dates, equation, forcing, viscosity, regularity and solution class.",
+      "verification_requirement": "Primary-source audit and independent mathematical or computational corroboration.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "evidence_review_only",
+      "result": "Current primary-source frontier mapped, including September forced-breakdown claim, March singular-data unforced nonuniqueness, and distinct weak/Euler/fractional results.",
+      "continuation_condition": "Independent full analytical and proof-kernel review of newly released claims; retain precise equations and hypotheses.",
+      "verification_routes": [
+        "Primary manuscript/version comparison",
+        "Official Clay contract plus pinned formalization statement/configuration audit"
+      ],
+      "shared_assumptions_and_scope": "Literature/selected-source audit; no complete external proof or kernel replay.",
+      "evidence": [
+        "workstreams/navier_stokes/report.md",
+        "workstreams/projection/report.md",
+        "workstreams/projection/sources/formalization_source_index.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-NS03",
+      "branch_id": "NS03",
+      "question": "ACS-to-PDE continuation criterion",
+      "owner": "navier_stokes",
+      "status": "open_theorem",
+      "required_next_step": "Derive exact energy/enstrophy/projection bridge and identify missing uniform estimates.",
+      "verification_requirement": "Primary-source audit and independent mathematical or computational corroboration.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Exact solenoidal examples separate energy/dissipation from pointwise enstrophy and H1 from Linfinity; initial enstrophy growth and scaling barriers independently checked.",
+      "continuation_condition": "Define an ACS functional and prove a cutoff-uniform bridge to a sufficient strain or critical-velocity continuation bound.",
+      "verification_routes": [
+        "Exact energy/curl/scaling and Gaussian/trigonometric derivations",
+        "Independent FFT full PDE RHS and Gauss-Hermite quadrature"
+      ],
+      "shared_assumptions_and_scope": "Examples refute specified implications; no singular solution is constructed.",
+      "evidence": [
+        "workstreams/navier_stokes/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-NS04",
+      "branch_id": "NS04",
+      "question": "Finite projection and bracket identities",
+      "owner": "projection",
+      "status": "closed_scoped_obstruction",
+      "required_next_step": "Check Jacobi/closure after spectral projection by independent exact methods.",
+      "verification_requirement": "Primary-source audit and independent mathematical or computational corroboration.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "closed_scoped_obstruction",
+      "result": "For every positive integer sharp Fourier cutoff N, retained real Poisson fields have Jacobi defect N^2 sin(Nx+y)/2, while the full bracket satisfies Jacobi.",
+      "continuation_condition": "Specify the actual ACS projection/carrier, prove closure or bound the discarded-mode defect, and establish continuum estimates.",
+      "verification_routes": [
+        "Exact sparse Fourier convolution",
+        "Independent physical-space symbolic differentiation and general projection-defect identity"
+      ],
+      "shared_assumptions_and_scope": "Sharp square Fourier projection of Hamiltonian fields; does not invalidate all Galerkin methods or restricted ACS algebras.",
+      "evidence": [
+        "workstreams/projection/report.md"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    },
+    {
+      "task_id": "T-NS05",
+      "branch_id": "NS05",
+      "question": "Unforced 3D smooth finite-energy problem",
+      "owner": "navier_stokes",
+      "status": "open_theorem",
+      "required_next_step": "Separate full problem from forced weak, Euler, hypodissipative and finite-model results.",
+      "verification_requirement": "Primary-source audit and independent mathematical or computational corroboration.",
+      "release": "Parallel frontier and Navier-Stokes continuation",
+      "investigation_status": "completed_scoped_review",
+      "parent_path_status": "open_theorem",
+      "result": "Forced C/D, unforced A/B, singular-data weak nonuniqueness, Euler and fractional dissipation are kept distinct; no unforced smooth-data resolution established here.",
+      "continuation_condition": "Prove or independently verify the claimed theorem with its exact equation, data, domain, force, energy and regularity class.",
+      "verification_routes": [
+        "Official Clay alternatives and manuscript hypotheses",
+        "Independent contract inspection and explicit smooth-field counterexamples to overbroad inference"
+      ],
+      "shared_assumptions_and_scope": "No fresh full formalization kernel run; selected metadata is self-assessed.",
+      "evidence": [
+        "workstreams/navier_stokes/report.md",
+        "workstreams/projection/report.md",
+        "workstreams/projection/sources/formalization_source_index.json"
+      ],
+      "verification_boundary": "Exact proofs, conditional premises, finite numerical checks, source audits and unavailable evidence are distinguished in the linked report."
+    }
+  ]
+}

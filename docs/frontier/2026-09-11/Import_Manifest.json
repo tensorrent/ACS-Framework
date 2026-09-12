@@ -1,0 +1,103 @@
+{
+  "research_cutoff": "2026-09-11",
+  "imported_on": "2026-09-12",
+  "repository": "tensorrent/ACS-Framework",
+  "archive_root": "acs-parallel-frontier-20260911",
+  "files": {
+    "ACS_Frontier_Report.pdf": {
+      "source": "user-supplied attachment",
+      "bytes": 364981,
+      "sha256": "0ccf3189beb8fdfd9c7e6e97419def7f4eaf52621e593babeaaa753c55665781"
+    },
+    "ACS_Frontier_Checklist.md": {
+      "source": "user-supplied attachment",
+      "bytes": 18169,
+      "sha256": "1e6dfcaa2e8b2fe980e45836a92374b573da28044738886213c586b589fee4bc"
+    },
+    "ACS_Frontier_Evidence.zip": {
+      "source": "user-supplied attachment",
+      "bytes": 44561221,
+      "sha256": "aa30efed92490592a8fde49970d9573107d1bd0909f076b920190113443e7485"
+    },
+    "ACS_Frontier_Report.md": {
+      "source": "acs-parallel-frontier-20260911/ACS_Frontier_Report.md",
+      "bytes": 30173,
+      "sha256": "2b940a12d12bfc13803cd30b4dda8c7ec61a4d3d0ca13fd1bf3632191f738a08"
+    },
+    "Task_Checklist.json": {
+      "source": "acs-parallel-frontier-20260911/Task_Checklist.json",
+      "bytes": 110289,
+      "sha256": "7e2c80488ca631195afb546f89c054faf61ed01946a1c350d7fb229df07dcc00"
+    },
+    "Branch_Catalog.json": {
+      "source": "acs-parallel-frontier-20260911/Branch_Catalog.json",
+      "bytes": 215801,
+      "sha256": "828e9d567a7ffb158a7c235b0ca775f8867e449b148683bc195328f790361da5"
+    },
+    "Branch_Events.jsonl": {
+      "source": "acs-parallel-frontier-20260911/Branch_Events.jsonl",
+      "bytes": 308991,
+      "sha256": "779fa63a0c73ba31a47282931299e0b759bfdf53f9710767c88fb56c3bea19ce"
+    },
+    "Final_Replay_Receipt.json": {
+      "source": "acs-parallel-frontier-20260911/Final_Replay_Receipt.json",
+      "bytes": 64713,
+      "sha256": "e0c2ac98fe3db3563bc2fc5832f5c226551819f6a103f2d1f336f97d26741ffe"
+    },
+    "Release_Verification.json": {
+      "source": "acs-parallel-frontier-20260911/Release_Verification.json",
+      "bytes": 750,
+      "sha256": "9c6957fd6a507534a83f4258c80a1e15bc02adac7f41a865fca80f5c5b5549b1"
+    },
+    "workstreams/arithmetic/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/arithmetic/report.md",
+      "bytes": 19228,
+      "sha256": "8d19a0002866ebc9837703f82009f85ebe82924c35924b90cc4fe9839a243f29"
+    },
+    "workstreams/arithmetic/review.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/arithmetic/review.md",
+      "bytes": 11000,
+      "sha256": "77ff36a77c7bc4888fee884917cfd7d4364542c46955a0ac30432e481acda8e6"
+    },
+    "workstreams/foundations/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/foundations/report.md",
+      "bytes": 17285,
+      "sha256": "80e0d5037daa60c8f70a77a7b989ebd7953f287b34998915e880bc7f8303940f"
+    },
+    "workstreams/foundations/review.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/foundations/review.md",
+      "bytes": 10675,
+      "sha256": "1c439742a284803a687e78b696cd65f63d756a43ee321e72cf8e232c4fa92e32"
+    },
+    "workstreams/navier_stokes/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/navier_stokes/report.md",
+      "bytes": 19567,
+      "sha256": "8cd948a263e557e67e16050611e1f2fa7b8a5464ce1126bda206573907844f04"
+    },
+    "workstreams/navier_stokes/review.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/navier_stokes/review.md",
+      "bytes": 6742,
+      "sha256": "76220f4fa9524732e342a26630c9617238546255b6ab8fae99b142171e877f40"
+    },
+    "workstreams/physical/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/physical/report.md",
+      "bytes": 23446,
+      "sha256": "9293de24f78e501f99b2a99f267ac578082b53d64f6da24ad0e181c90a38eb70"
+    },
+    "workstreams/projection/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/projection/report.md",
+      "bytes": 7993,
+      "sha256": "391edd09171adf61fb53a03a06bf5673eded723ad5de1ea6ad17f0f3aeb30c2c"
+    },
+    "workstreams/rg/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/rg/report.md",
+      "bytes": 23576,
+      "sha256": "d93c4c9526f497194ba9249a3f885e1d90aafb028bcc23aac6d86eb930dc3a80"
+    },
+    "workstreams/shear/report.md": {
+      "source": "acs-parallel-frontier-20260911/workstreams/shear/report.md",
+      "bytes": 16741,
+      "sha256": "8d37fee490e633c6b759d959f72bdcd82980dfb28ecefcb528419252246b8261"
+    }
+  }
+}

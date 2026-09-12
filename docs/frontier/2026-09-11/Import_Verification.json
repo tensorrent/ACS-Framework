@@ -1,0 +1,44 @@
+{
+  "manifest_entries_checked": 3178,
+  "hash_failures": [],
+  "duplicate_paths": [],
+  "separate_attachments_match_archive": {
+    "ACS_Frontier_Checklist.md": true,
+    "ACS_Frontier_Report.pdf": false
+  },
+  "ledger_events_verified": 315,
+  "ledger_chain_head": "785f7490365e96d7f7214ff3fded2faec766d4cc9d7ba57c0e8f8ffbb9645665",
+  "checklist_tasks": 50,
+  "missing_task_evidence": [],
+  "research_checks_reexecuted": false,
+  "original_files": {
+    "ACS_Frontier_Report.pdf": {
+      "bytes": 364981,
+      "sha256": "0ccf3189beb8fdfd9c7e6e97419def7f4eaf52621e593babeaaa753c55665781"
+    },
+    "ACS_Frontier_Checklist.md": {
+      "bytes": 18169,
+      "sha256": "1e6dfcaa2e8b2fe980e45836a92374b573da28044738886213c586b589fee4bc"
+    },
+    "ACS_Frontier_Evidence.zip": {
+      "bytes": 44561221,
+      "sha256": "aa30efed92490592a8fde49970d9573107d1bd0909f076b920190113443e7485"
+    }
+  },
+  "pdf_comparison": {
+    "same_bytes": false,
+    "same_pdftotext_layout_output": true,
+    "same_rendered_pages": true,
+    "pages_compared": 9,
+    "renderer": "pdftoppm -scale-to 1000 -png"
+  },
+  "verified_at_utc": "2026-09-12T14:16:35.970574+00:00",
+  "verification_scope": "Import integrity and archive structure; mathematical and computational claims were not reverified.",
+  "prior_archive_sha256_verified": true,
+  "prior_ledger_prefix_events_verified": 256,
+  "prior_catalog_entries_preserved": 105,
+  "unique_catalog_branches": 110,
+  "checklist_ids_unique": true,
+  "checklist_status_counts_match": true,
+  "unsafe_archive_paths": []
+}

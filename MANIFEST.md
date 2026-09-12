@@ -11,6 +11,10 @@ The [11 September 2026 Frontier continuation](docs/frontier/2026-09-11/README.md
 is an imported research snapshot. Its research programs were not rerun during
 import; the execution statement above applies to the earlier assembled sections.
 
+The [ongoing Frontier delta index](docs/frontier/README.md) records subsequent
+execution and derivation evidence separately. Its 12 September package includes
+actual kernel checks and new scoped proofs, with remaining gates preserved.
+
 ## Four-tier verification hierarchy (tiers never promote)
 
 | Tier | Standard |

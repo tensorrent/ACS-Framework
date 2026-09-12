@@ -6,6 +6,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 
 **Frontier continuation (11 September 2026):** [Report, checklist, and evidence package](docs/frontier/2026-09-11/README.md) — 50 scoped investigations with current dispositions, evidence, and remaining gates; includes the original PDF and ZIP, machine-readable task and branch records, and seven workstream reports. Import integrity is checked; the research programs were not rerun during the import.
 
+**Ongoing research:** [Frontier delta index](docs/frontier/README.md) — the [12 September pass](docs/frontier/2026-09-12-delta/README.md) adds fresh replays, kernel-checked proofs, a real-probability extension, and boundary-scaling results with explicit next gates.
+
 ---
 
 ## Repository Structure

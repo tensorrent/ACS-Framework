@@ -1,0 +1,60 @@
+{
+  "recorded_utc": "2026-09-12T15:38:14.120944+00:00",
+  "record_type": "retrospective setup observations; linked raw receipts where available",
+  "attempts": [
+    {
+      "issue": "Initial cache-get arguments used file paths relative to the wrong project directory.",
+      "resolution": "Used qualified Mathlib module names from the locked project.",
+      "classification": "setup; no theorem checked"
+    },
+    {
+      "issue": "The initial real-number import was absent from the selected cache modules.",
+      "resolution": "Fetched the canonical Mathlib.Basic.Real.Basic module and updated the new proof import.",
+      "classification": "setup"
+    },
+    {
+      "issue": "Resolving the virtual-environment Python symlink bypassed its installed dependencies.",
+      "resolution": "Executed the literal virtual-environment interpreter path; both Python audits then passed without source changes.",
+      "evidence": [
+        "attempts/20260912T151655Z_wrong_interpreter/",
+        "python_delta_receipt.json"
+      ]
+    },
+    {
+      "issue": "The initial LFReal witness definition required noncomputable.",
+      "resolution": "Added the annotation; retained the failed source and receipt.",
+      "evidence": [
+        "attempts/LFReal_initial_noncomputable/",
+        "lean_real_probability.json"
+      ]
+    },
+    {
+      "issue": "The initial boundary proof did not unfold the scaled function sufficiently.",
+      "resolution": "Made the function in the Tendsto goal explicit; the corrected statement passes.",
+      "evidence": [
+        "attempts/PerZeroBoundary_initial_simplification/",
+        "lean_boundary_limit.json"
+      ]
+    },
+    {
+      "issue": "The first full harness invocation found AxiomIII.lean missing in its temporary Mathlib project.",
+      "resolution": "Copied the unchanged file, then used a fresh output directory for the successful complete run.",
+      "classification": "source-presence preflight; no kernel commands executed in this attempt",
+      "evidence": [
+        "Lean_Audit_v434.json"
+      ]
+    },
+    {
+      "issue": "The first package-integrity run found a documentation link that traversed one directory too far.",
+      "resolution": "Corrected the relative links to the reproduction code; mathematical receipts were unchanged.",
+      "classification": "documentation integrity"
+    }
+  ],
+  "runtime_acquisition": {
+    "release": "https://github.com/leanprover/lean4/releases/tag/v4.34.0-rc2",
+    "asset": "lean-4.34.0-rc2-darwin_aarch64.tar.zst",
+    "bytes": 561804668,
+    "sha256": "ca79a92a15c56d0270d9cdba936a07933efd14a7de635b55b09801979ce73909",
+    "verification": "Downloaded asset digest matched the official GitHub release asset metadata."
+  }
+}

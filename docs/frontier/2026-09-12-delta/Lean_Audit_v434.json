@@ -1,0 +1,332 @@
+{
+  "runtime": "Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+  "core_only": false,
+  "all_passed": true,
+  "verified_modules": [
+    "LFBound",
+    "AxiomIII",
+    "PerZero",
+    "LFReal",
+    "PerZeroBoundary"
+  ],
+  "rejected_mutations": 11,
+  "package_revisions": {
+    "mathlib": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+    "plausible": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "LeanSearchClient": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "importGraph": "d8823026ac7ef130c253089d95685f9877b95323",
+    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "aesop": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "Qq": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "batteries": "7e23602c91bc04586b2b06de2708a041853e4681",
+    "Cli": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+  },
+  "source_hashes": {
+    "LFBound": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f",
+    "AxiomIII": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+    "PerZero": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a",
+    "LFReal": "152c938e2ae405394e490c1f277ecd315155282fda1b66a0201c4a98ece35bd7",
+    "PerZeroBoundary": "0d64e02526b2de58c412258e8c5d161f66b095c63e2fa039b37016e2b0c6aa1d"
+  },
+  "events": [
+    {
+      "name": "LFBound",
+      "started_utc": "2026-09-12T15:29:50.063205+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/LFBound.olean",
+        "LFBound.lean"
+      ],
+      "elapsed_seconds": 1.685586,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f"
+    },
+    {
+      "name": "AxiomIII",
+      "started_utc": "2026-09-12T15:29:51.749253+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/AxiomIII.olean",
+        "AxiomIII.lean"
+      ],
+      "elapsed_seconds": 1.978356,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "AxiomIII.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e"
+    },
+    {
+      "name": "PerZero",
+      "started_utc": "2026-09-12T15:29:53.727950+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZero.olean",
+        "PerZero.lean"
+      ],
+      "elapsed_seconds": 3.782008,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a"
+    },
+    {
+      "name": "LFReal",
+      "started_utc": "2026-09-12T15:29:57.510275+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/LFReal.olean",
+        "LFReal.lean"
+      ],
+      "elapsed_seconds": 3.762802,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "152c938e2ae405394e490c1f277ecd315155282fda1b66a0201c4a98ece35bd7"
+    },
+    {
+      "name": "PerZeroBoundary",
+      "started_utc": "2026-09-12T15:30:01.273410+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZeroBoundary.olean",
+        "PerZeroBoundary.lean"
+      ],
+      "elapsed_seconds": 4.228686,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "0d64e02526b2de58c412258e8c5d161f66b095c63e2fa039b37016e2b0c6aa1d"
+    },
+    {
+      "name": "axiom_dependencies",
+      "started_utc": "2026-09-12T15:30:05.503006+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/AuditAxioms.lean"
+      ],
+      "elapsed_seconds": 4.130086,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "'LFBound.corr2_le_two' depends on axioms: [propext, Quot.sound]\n'LFBound.neg_two_le_corr2' depends on axioms: [propext, Quot.sound]\n'LFBound.S_le_four' depends on axioms: [propext, Quot.sound]\n'LFBound.star_nonneg' depends on axioms: [propext]\n'LFBound.star_normalised' depends on axioms: [propext]\n'LFBound.star_nosignalling' depends on axioms: [propext]\n'LFBound.star_aoe' depends on axioms: [propext]\n'LFBound.star_is_LF' depends on axioms: [propext]\n'LFBound.star_S_eq_four' depends on axioms: [propext]\n'LFBound.lf_bound_is_four' depends on axioms: [propext, Quot.sound]\n'AxiomIII.commutes_iff_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_not_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_conj_D' depends on axioms: [propext]\n'AxiomIII.centraliser_unimodular' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.trace_two_only_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_infinite_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.axiom_III_clause3_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.imag_cancels' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.real_doubles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_lt_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.per_zero_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.corr_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.S_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_normalised' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_nosignalling' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_aoe' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_is_LF' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_attains_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.lf_real_bound_is_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.scaled_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.scaled_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.moving_boundary_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.boundary_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.boundary_not_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "input_sha256": "d9175291b7794bec7adc3003436179de70023392e7d087b75e65f1bf92491fbe"
+    },
+    {
+      "name": "wrong_attainment",
+      "started_utc": "2026-09-12T15:30:09.633822+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_attainment.lean"
+      ],
+      "elapsed_seconds": 2.161927,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_attainment.lean:186:43: error: Tactic `decide` proved that the proposition\n  S2 star = 9\nis false\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_attainment.lean:199:29: error: Application type mismatch: The argument\n  star_S_eq_four\nhas type\n  S2 star = 9\nbut is expected to have type\n  S2 star = 8\nin the application\n  \u27e8star_is_LF, star_S_eq_four\u27e9\n",
+      "stderr": "",
+      "input_sha256": "6a6d401709e830d6376ce2584fa70bad0b27f2b1f24bd33d19e9968b682e50c7"
+    },
+    {
+      "name": "wrong_upper_bound",
+      "started_utc": "2026-09-12T15:30:11.796319+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_upper_bound.lean"
+      ],
+      "elapsed_seconds": 2.167574,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_upper_bound.lean:140:2: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  h \u2265 -2\n  g \u2264 2\n  f \u2264 2\n  e \u2264 2\n  e + f + g - h \u2265 8\nwhere\n e := corr2 B Setting.s2 Setting.s2\n f := corr2 B Setting.s2 Setting.s3\n g := corr2 B Setting.s3 Setting.s2\n h := corr2 B Setting.s3 Setting.s3\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_upper_bound.lean:201:2: error: Type mismatch\n  S_le_four B hn hs\nhas type\n  S2 B \u2264 7\nbut is expected to have type\n  S2 B \u2264 8\n",
+      "stderr": "",
+      "input_sha256": "5a140d45554480e6d62f019d58c8806b88c31aa0dfd21ca3e2e3a6a5eb0c5182"
+    },
+    {
+      "name": "diagonal_phi",
+      "started_utc": "2026-09-12T15:30:13.964457+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean"
+      ],
+      "elapsed_seconds": 2.246924,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:95:45: error: unsolved goals\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:100:79: error: unsolved goals\ncase left\n\u22a2 False\n\ncase right\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/diagonal_phi.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "4776d62c54c62efff4988c1ec99ba546bf59cba16c106f333d4c5606df2eafc5"
+    },
+    {
+      "name": "wrong_power",
+      "started_utc": "2026-09-12T15:30:16.212001+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_power.lean"
+      ],
+      "elapsed_seconds": 2.197332,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_power.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_power.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_power.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_power.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "3fdd0eb9b347f92472b1b0e72aa03474dec4d33441eff20bd31dc8fee40f784d"
+    },
+    {
+      "name": "wrong_limit",
+      "started_utc": "2026-09-12T15:30:18.410025+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_limit.lean"
+      ],
+      "elapsed_seconds": 4.269871,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_limit.lean:125:2: error: Type mismatch\n  key\nhas type\n  Tendsto (fun eps => 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0))\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_limit.lean:145:3: error: Application type mismatch: The argument\n  contribution_tendsto gamma T hg hgT\nhas type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nin the application\n  \u27e8contribution_lt_two_pi gamma T, contribution_tendsto gamma T hg hgT\u27e9\n",
+      "stderr": "",
+      "input_sha256": "4a390cc7368cd0933fd62fef7a0fe9e1feb4693107d9337de87046da2b104bae"
+    },
+    {
+      "name": "wrong_pi_bound",
+      "started_utc": "2026-09-12T15:30:22.680519+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_pi_bound.lean"
+      ],
+      "elapsed_seconds": 4.380296,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_pi_bound.lean:107:2: error: linarith failed to find a contradiction\ngamma T eps : \u211d\nh1 : arctan ((T - gamma) / eps) < \u03c0 / 2\nh2 : arctan (gamma / eps) < \u03c0 / 2\na\u271d : \u03c0 \u2264 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_pi_bound.lean:144:47: error: Application type mismatch: The argument\n  contribution_lt_two_pi gamma T\nhas type\n  \u2200 (eps : \u211d), contribution gamma T eps < \u03c0\nbut is expected to have type\n  \u2200 (eps : \u211d), contribution gamma T eps < 2 * \u03c0\nin the application\n  And.intro (contribution_lt_two_pi gamma T)\n",
+      "stderr": "",
+      "input_sha256": "4c804d346bb23a00b781e4a68900f646cdcfd9899ff9ce5ca7a8d132ffa04b07"
+    },
+    {
+      "name": "wrong_contribution_coefficient",
+      "started_utc": "2026-09-12T15:30:27.061349+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_contribution_coefficient.lean"
+      ],
+      "elapsed_seconds": 4.370062,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_contribution_coefficient.lean:95:81: error: unsolved goals\ngamma T eps : \u211d\n\u22a2 arctan (T * eps\u207b\u00b9 - gamma * eps\u207b\u00b9) * 2 + arctan (gamma * eps\u207b\u00b9) * 2 =\n    arctan (T * eps\u207b\u00b9 - gamma * eps\u207b\u00b9) * 3 + arctan (gamma * eps\u207b\u00b9) * 3\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_contribution_coefficient.lean:107:2: error: linarith failed to find a contradiction\ngamma T eps : \u211d\nh1 : arctan ((T - gamma) / eps) < \u03c0 / 2\nh2 : arctan (gamma / eps) < \u03c0 / 2\na\u271d : 2 * \u03c0 \u2264 3 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_contribution_coefficient.lean:125:2: error: Type mismatch\n  key\nhas type\n  Tendsto (fun eps => 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\n",
+      "stderr": "",
+      "input_sha256": "dd3d29f610b5ac84400017b1efb12514586840965ca107ced8a5c81eca018b35"
+    },
+    {
+      "name": "wrong_real_bound",
+      "started_utc": "2026-09-12T15:30:31.431900+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_bound.lean"
+      ],
+      "elapsed_seconds": 4.061463,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_bound.lean:53:2: error: linarith failed to find a contradiction\nB : Behaviour\nhn : NonNeg B\nhs : Normalised B\na : corr B LFBound.Setting.s2 LFBound.Setting.s2 \u2264 1\nb : corr B LFBound.Setting.s2 LFBound.Setting.s3 \u2264 1\nc : corr B LFBound.Setting.s3 LFBound.Setting.s2 \u2264 1\nd : -1 \u2264 corr B LFBound.Setting.s3 LFBound.Setting.s3\na\u271d :\n  3 <\n    corr B LFBound.Setting.s2 LFBound.Setting.s2 + corr B LFBound.Setting.s2 LFBound.Setting.s3 +\n        corr B LFBound.Setting.s3 LFBound.Setting.s2 -\n      corr B LFBound.Setting.s3 LFBound.Setting.s3\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_bound.lean:91:4: error: Type mismatch\n  S_le_four B h.left h.right.left\nhas type\n  S B \u2264 3\nbut is expected to have type\n  S B \u2264 4\n",
+      "stderr": "",
+      "input_sha256": "66c0de92463d3affe77e9268352a2e957e436a654f22c0155cc3c5564c205e24"
+    },
+    {
+      "name": "wrong_real_attainment",
+      "started_utc": "2026-09-12T15:30:35.493872+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_attainment.lean"
+      ],
+      "elapsed_seconds": 4.078538,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_attainment.lean:82:42: error: unsolved goals\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_real_attainment.lean:89:29: error: Application type mismatch: The argument\n  star_attains_four\nhas type\n  S star = 5\nbut is expected to have type\n  S star = 4\nin the application\n  \u27e8star_is_LF, star_attains_four\u27e9\n",
+      "stderr": "",
+      "input_sha256": "5aa8a2420d097bf5d796276d777819625750f33eec23c8e9c88453871b696c9f"
+    },
+    {
+      "name": "wrong_boundary_limit",
+      "started_utc": "2026-09-12T15:30:39.572923+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_boundary_limit.lean"
+      ],
+      "elapsed_seconds": 4.334234,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_boundary_limit.lean:39:2: error: Type mismatch: After simplification, term\n  h\n has type\n  Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0 / 2))\nbut is expected to have type\n  Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_boundary_limit.lean:47:2: error: linarith failed to find a contradiction\nh : Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nheq : 2 * \u03c0 = 2 * \u03c0\nhp : 0 < \u03c0\n\u22a2 False\nfailed\n",
+      "stderr": "",
+      "input_sha256": "a4da684a1f42c9ae24031f870d57a5a2fb90d92d8865392b17fae09937621e54"
+    },
+    {
+      "name": "wrong_scaled_path",
+      "started_utc": "2026-09-12T15:30:43.907811+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_scaled_path.lean"
+      ],
+      "elapsed_seconds": 4.374585,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_scaled_path.lean:11:65: error: unsolved goals\nc eps : \u211d\nhe : eps \u2260 0\n\u22a2 arctan (eps\u207b\u00b9 - c * eps) + arctan (c * eps) = arctan (eps\u207b\u00b9 - c) + arctan c\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v434-attempt2/mutations/wrong_scaled_path.lean:32:2: error: Type mismatch\n  Eq.symm (scaled_identity c eps (ne_of_gt heps))\nhas type\n  scaled c eps = PerZero.contribution (c * eps * eps) 1 eps\nbut is expected to have type\n  scaled c eps = PerZero.contribution (c * eps) 1 eps\n",
+      "stderr": "",
+      "input_sha256": "317c1430e682e844a7408caa1df697d0fe719aae4cd380fbb39b9929be1d2d48"
+    }
+  ]
+}

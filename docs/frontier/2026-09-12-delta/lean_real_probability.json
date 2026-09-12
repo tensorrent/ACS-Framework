@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-12T15:19:08.549849+00:00",
+  "file": "LFReal.lean",
+  "sha256": "152c938e2ae405394e490c1f277ecd315155282fda1b66a0201c4a98ece35bd7",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/LFReal.olean",
+    "LFReal.lean"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

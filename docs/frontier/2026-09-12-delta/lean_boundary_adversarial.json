@@ -1,0 +1,27 @@
+{
+  "utc": "2026-09-12T15:25:04.272255+00:00",
+  "axiom_returncode": 0,
+  "axiom_output": "'PerZeroBoundary.scaled_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.scaled_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.moving_boundary_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.boundary_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroBoundary.boundary_not_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "mutations": [
+    {
+      "mutation": "wrong_boundary_limit",
+      "old": "(\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0 / 2)) := by",
+      "new": "(\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0)) := by",
+      "sha256": "a4da684a1f42c9ae24031f870d57a5a2fb90d92d8865392b17fae09937621e54",
+      "returncode": 1,
+      "stdout": "mutations/wrong_boundary_limit.lean:39:2: error: Type mismatch: After simplification, term\n  h\n has type\n  Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0 / 2))\nbut is expected to have type\n  Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nmutations/wrong_boundary_limit.lean:47:2: error: linarith failed to find a contradiction\nh : Tendsto (fun eps => PerZero.contribution eps 1 eps) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nheq : 2 * \u03c0 = 2 * \u03c0\nhp : 0 < \u03c0\n\u22a2 False\nfailed\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    },
+    {
+      "mutation": "wrong_scaled_path",
+      "old": "PerZero.contribution (c * eps) 1 eps = scaled c eps := by",
+      "new": "PerZero.contribution (c * eps * eps) 1 eps = scaled c eps := by",
+      "sha256": "317c1430e682e844a7408caa1df697d0fe719aae4cd380fbb39b9929be1d2d48",
+      "returncode": 1,
+      "stdout": "mutations/wrong_scaled_path.lean:11:65: error: unsolved goals\nc eps : \u211d\nhe : eps \u2260 0\n\u22a2 arctan (eps\u207b\u00b9 - c * eps) + arctan (c * eps) = arctan (eps\u207b\u00b9 - c) + arctan c\nmutations/wrong_scaled_path.lean:32:2: error: Type mismatch\n  Eq.symm (scaled_identity c eps (ne_of_gt heps))\nhas type\n  scaled c eps = PerZero.contribution (c * eps * eps) 1 eps\nbut is expected to have type\n  scaled c eps = PerZero.contribution (c * eps) 1 eps\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    }
+  ]
+}

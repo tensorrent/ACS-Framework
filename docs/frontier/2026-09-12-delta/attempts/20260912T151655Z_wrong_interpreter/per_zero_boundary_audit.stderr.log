@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/per_zero_boundary_audit.py", line 8, in <module>
+    import mpmath as mp
+ModuleNotFoundError: No module named 'mpmath'

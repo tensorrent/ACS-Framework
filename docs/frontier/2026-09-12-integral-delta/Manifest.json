@@ -1,0 +1,77 @@
+{
+  "scope": "Integral checkpoint and new reproduction files. The previous manifest pins unchanged dependency proofs and lock. Mutable repository index, this manifest and generated verification receipt are excluded.",
+  "files": {
+    "code/frontier_verification/INTEGRAL_README.md": {
+      "bytes": 1981,
+      "sha256": "9ee49d0433f89d431d96e16c78f2874df01f5c1a5cffa80525496e18cfc6e386"
+    },
+    "code/frontier_verification/audit_integral_lean.py": {
+      "bytes": 7095,
+      "sha256": "044c73b6826c7c3ae64c57e60d7909d24a25aa86591e64b84ee8eb27dda15779"
+    },
+    "code/frontier_verification/integral_crosscheck.py": {
+      "bytes": 4300,
+      "sha256": "c9a8000fb14903308398aab5c80aacd65dc1673e82d90e1022bf217f3d101a16"
+    },
+    "code/frontier_verification/proofs/Integral_Source_Manifest.json": {
+      "bytes": 1154,
+      "sha256": "e6f89c8c1d60ca8d1fed670e9b18f769a77a77344df0101730b1e03c62d5a6ba"
+    },
+    "code/frontier_verification/proofs/PerZeroError.lean": {
+      "bytes": 4241,
+      "sha256": "37932454843519c2b84e36671c8efd4e5dd57382d714c5fa73a13414d01c63ee"
+    },
+    "code/frontier_verification/proofs/PerZeroIntegral.lean": {
+      "bytes": 2531,
+      "sha256": "03e8bb3f30f031568ef0e9fed9a5aaaa3f1bfd04910b05ee5523730fb7fcd49a"
+    },
+    "code/frontier_verification/proofs/PerZeroSums.lean": {
+      "bytes": 4693,
+      "sha256": "982bc63a2b3faa7c721328821c18870d1650d6dc55c7f8239c3981aa0b96e5cf"
+    },
+    "code/frontier_verification/verify_integral_delta.py": {
+      "bytes": 6192,
+      "sha256": "711623824af218449536fe3e93086ded3550ce3cdf87a5243090a13657437dde"
+    },
+    "docs/frontier/2026-09-12-integral-delta/.gitattributes": {
+      "bytes": 13,
+      "sha256": "962ec22ee5370cdeca3a5deeb3d54c11b70876dec7ec6911d24486e1372848a0"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Branch_Events.jsonl": {
+      "bytes": 314522,
+      "sha256": "02a4df81d4c53db0905b290b9ce7fc48e62cab41febda9fedc7ff816cba1a9b6"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Cross_Method_Checks.json": {
+      "bytes": 18145,
+      "sha256": "f515eef2e6c1e2e562e4ee9764acb365c8243cc66763004f6bab63bab20b5da8"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Cross_Method_Receipt.json": {
+      "bytes": 604,
+      "sha256": "d18ecb74dd775827946e7a61265b19a2e782f129dce264798b93e3c05efa24ac"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Development_Attempts.json": {
+      "bytes": 2568,
+      "sha256": "c7dd99155991b4765b9fdf01b873c1d2c5ae28ccb6cdd8f0b6db2424decbffac"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Development_Attempts.zip": {
+      "bytes": 20705,
+      "sha256": "152245d45751f8d91b46aae1c66e4ffa37978a44aece7a392fdd715f2b70bf8c"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Formal_Audit.json": {
+      "bytes": 25235,
+      "sha256": "c3bfc74c68ec4665f708e1b250596f02343d5c376a6418f1069f30ff37e66c78"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Formal_Audit_Artifacts.zip": {
+      "bytes": 17325,
+      "sha256": "581df86ce1911d509206db59d169b4f78e406e39e232f29d120de24932d64728"
+    },
+    "docs/frontier/2026-09-12-integral-delta/README.md": {
+      "bytes": 5258,
+      "sha256": "5d83d57200b7e3a8f319e28053e1d269a8220bf6f6a20dca0fad7aa5100b1fcd"
+    },
+    "docs/frontier/2026-09-12-integral-delta/Research_Queue.json": {
+      "bytes": 168438,
+      "sha256": "8e6a15439720ebd12b297384a3c1e18e376fd641b9ecf9880d7bcdc0c8e221b7"
+    }
+  }
+}

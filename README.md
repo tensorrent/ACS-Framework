@@ -8,6 +8,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 
 **Ongoing research:** [Frontier delta index](docs/frontier/README.md) — the [12 September pass](docs/frontier/2026-09-12-delta/README.md) adds fresh replays, kernel-checked proofs, a real-probability extension, and boundary-scaling results with explicit next gates.
 
+The [subsequent integral delta](docs/frontier/2026-09-12-integral-delta/README.md) formalizes the complex paired integral, quantitative error bounds, and the absolute-error criterion for changing finite configurations.
+
 ---
 
 ## Repository Structure

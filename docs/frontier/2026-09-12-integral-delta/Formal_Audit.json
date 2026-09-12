@@ -1,0 +1,244 @@
+{
+  "runtime": "Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+  "core_only": false,
+  "all_passed": true,
+  "verified_modules": [
+    "PerZero",
+    "PerZeroIntegral",
+    "PerZeroError",
+    "PerZeroSums"
+  ],
+  "rejected_mutations": 7,
+  "package_revisions": {
+    "mathlib": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+    "plausible": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "LeanSearchClient": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "importGraph": "d8823026ac7ef130c253089d95685f9877b95323",
+    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "aesop": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "Qq": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "batteries": "7e23602c91bc04586b2b06de2708a041853e4681",
+    "Cli": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+  },
+  "source_hashes": {
+    "PerZero": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a",
+    "PerZeroIntegral": "03e8bb3f30f031568ef0e9fed9a5aaaa3f1bfd04910b05ee5523730fb7fcd49a",
+    "PerZeroError": "37932454843519c2b84e36671c8efd4e5dd57382d714c5fa73a13414d01c63ee",
+    "PerZeroSums": "982bc63a2b3faa7c721328821c18870d1650d6dc55c7f8239c3981aa0b96e5cf"
+  },
+  "audit_source_sha256": "044c73b6826c7c3ae64c57e60d7909d24a25aa86591e64b84ee8eb27dda15779",
+  "events": [
+    {
+      "name": "PerZero",
+      "started_utc": "2026-09-12T15:52:38.146909+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZero.olean",
+        "PerZero.lean"
+      ],
+      "elapsed_seconds": 3.750507,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a"
+    },
+    {
+      "name": "PerZeroIntegral",
+      "started_utc": "2026-09-12T15:52:41.897850+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZeroIntegral.olean",
+        "PerZeroIntegral.lean"
+      ],
+      "elapsed_seconds": 5.093089,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "03e8bb3f30f031568ef0e9fed9a5aaaa3f1bfd04910b05ee5523730fb7fcd49a"
+    },
+    {
+      "name": "PerZeroError",
+      "started_utc": "2026-09-12T15:52:46.991254+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZeroError.olean",
+        "PerZeroError.lean"
+      ],
+      "elapsed_seconds": 4.729718,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "PerZeroError.lean:41:49: warning: This simp argument is unused:\n  zero_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [intervalIntegral.integral_const, sub_zero, smul_eq_mul, mul_one, integral_pow, Nat.reduceAdd,\n    zero_pow (by decide : 3 \u2260 0), integral_one_div_one_add_sq, arctan_zero] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "37932454843519c2b84e36671c8efd4e5dd57382d714c5fa73a13414d01c63ee"
+    },
+    {
+      "name": "PerZeroSums",
+      "started_utc": "2026-09-12T15:52:51.721257+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/PerZeroSums.olean",
+        "PerZeroSums.lean"
+      ],
+      "elapsed_seconds": 4.789111,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "982bc63a2b3faa7c721328821c18870d1650d6dc55c7f8239c3981aa0b96e5cf"
+    },
+    {
+      "name": "axiom_dependencies",
+      "started_utc": "2026-09-12T15:52:56.511791+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/AuditAxioms.lean"
+      ],
+      "elapsed_seconds": 4.641281,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "'PerZero.imag_cancels' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.real_doubles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_lt_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.per_zero_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroIntegral.real_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroIntegral.translated_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroIntegral.paired_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroIntegral.complex_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.kernel_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.arctan_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.arctan_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.arctan_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.deficit_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.deficit_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.deficit_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroError.deficit_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.half_le_arctan' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.sum_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.sum_lower_when_small' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.total_tendsto_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.endpoint_sum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.endpoint_ratio_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZeroSums.deficit_sum_tendsto_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "input_sha256": "1fcc1638c1dbc8c09ca9a0b05bf9e6494ce3c6aa17f69ef6d2144d8427468488"
+    },
+    {
+      "name": "wrong_integral_coefficient",
+      "started_utc": "2026-09-12T15:53:01.153628+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/wrong_integral_coefficient.lean"
+      ],
+      "elapsed_seconds": 4.718754,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/wrong_integral_coefficient.lean:11:42: error: unsolved goals\ngamma T eps : \u211d\nhe : eps \u2260 0\n\u22a2 3 * (arctan ((T - gamma) / eps) + arctan (gamma / eps)) = (arctan ((T - gamma) / eps) + arctan (gamma / eps)) * 2\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/wrong_integral_coefficient.lean:22:2: error: Type mismatch: After simplification, term\n  real_integral gamma T eps he\n has type\n  \u222b (u : \u211d) in -gamma..T - gamma, 3 * eps / (eps ^ 2 + u ^ 2) = PerZero.contribution gamma T eps\nbut is expected to have type\n  \u222b (x : \u211d) in -gamma..T - gamma, 2 * eps / (eps ^ 2 + x ^ 2) = PerZero.contribution gamma T eps\n",
+      "stderr": "",
+      "input_sha256": "fbf5a1fe9e4ef7c1b7566f094eedc3925590e518e341f54d318504fdb3a762b2"
+    },
+    {
+      "name": "resolvent_addition",
+      "started_utc": "2026-09-12T15:53:05.872882+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/resolvent_addition.lean"
+      ],
+      "elapsed_seconds": 4.7999,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/resolvent_addition.lean:27:49: error: unsolved goals\neps u : \u211d\nhe : eps \u2260 0\nhp : 0 < eps ^ 2 + u ^ 2\nhpos : \u2191eps + Complex.I * \u2191u \u2260 0\nhneg : -\u2191eps + Complex.I * \u2191u \u2260 0\nhc : \u2191eps ^ 2 + \u2191u ^ 2 \u2260 0\n\u22a2 \u2191eps ^ 2 * Complex.I * \u2191u * 2 + Complex.I * \u2191u ^ 3 * 2 = -(\u2191eps * \u2191u ^ 2 * 2) - \u2191eps ^ 3 * 2\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/resolvent_addition.lean:57:6: error: Type mismatch: After simplification, term\n  paired_identity eps (t - gamma) he\n has type\n  1 / (\u2191eps + Complex.I * (\u2191t - \u2191gamma)) + 1 / (-\u2191eps + Complex.I * (\u2191t - \u2191gamma)) =\n    \u2191(2 * eps / (eps ^ 2 + (t - gamma) ^ 2))\nbut is expected to have type\n  1 / (\u2191eps + Complex.I * (\u2191t - \u2191gamma)) - 1 / (-\u2191eps + Complex.I * (\u2191t - \u2191gamma)) =\n    \u2191(2 * eps / (eps ^ 2 + (t - gamma) ^ 2))\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/resolvent_addition.lean:58:20: error: Ambiguous term\n  integral_ofReal\nPossible interpretations:\n  _root_.integral_ofReal : \u222b (x : ?m.164), \u2191(?m.169 x) \u2202?m.166 = \u2191(\u222b (x : ?m.164), ?m.169 x \u2202?m.166)\n  \n  intervalIntegral.integral_ofReal : \u222b (x : \u211d) in ?m.164..?m.165, \u2191(?m.167 x) \u2202?m.166 =\n    \u2191(\u222b (x : \u211d) in ?m.164..?m.165, ?m.167 x \u2202?m.166)\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/resolvent_addition.lean:58:13: error: unsolved goals\ngamma T eps : \u211d\nhe : eps \u2260 0\n\u22a2 \u222b (t : \u211d) in 0..T, \u2191(2 * eps / (eps ^ 2 + (t - gamma) ^ 2)) = \u2191(PerZero.contribution gamma T eps)\n",
+      "stderr": "",
+      "input_sha256": "52c5c145af098e218d84977ed81e5f1a705f1da726ecb5765ad45b1f290fab5a"
+    },
+    {
+      "name": "arctan_half_upper",
+      "started_utc": "2026-09-12T15:53:10.673324+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/arctan_half_upper.lean"
+      ],
+      "elapsed_seconds": 4.967589,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/arctan_half_upper.lean:16:2: error: Type mismatch: After simplification, term\n  h\n has type\n  arctan x \u2264 x\nbut is expected to have type\n  arctan x \u2264 x / 2\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/arctan_half_upper.lean:29:25: error: Application type mismatch: The argument\n  arctan_upper x hx\nhas type\n  arctan x \u2264 x / 2\nbut is expected to have type\n  arctan x \u2264 x\nin the application\n  sub_nonneg.mpr (arctan_upper x hx)\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/arctan_half_upper.lean:41:49: warning: This simp argument is unused:\n  zero_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [intervalIntegral.integral_const, sub_zero, smul_eq_mul, mul_one, integral_pow, Nat.reduceAdd,\n    zero_pow (by decide : 3 \u2260 0), integral_one_div_one_add_sq, arctan_zero] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/arctan_half_upper.lean:76:18: error: linarith failed to find a contradiction\ncase right\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : eps / gamma / (1 + (eps / gamma) ^ 2) \u2264 arctan (eps / gamma)\nh2 : eps / (T - gamma) / (1 + (eps / (T - gamma)) ^ 2) \u2264 arctan (eps / (T - gamma))\nh3 : arctan (eps / gamma) \u2264 eps / gamma / 2\nh4 : arctan (eps / (T - gamma)) \u2264 eps / (T - gamma) / 2\na\u271d : 2 * (eps / gamma + eps / (T - gamma)) < 2 * (arctan (eps / gamma) + arctan (eps / (T - gamma)))\n\u22a2 False\nfailed\n",
+      "stderr": "",
+      "input_sha256": "51faa5d9e677af790f167aac4fca6a2a3efbd0a4064c1755dd97d80d5ca0fcc5"
+    },
+    {
+      "name": "too_small_cubic_remainder",
+      "started_utc": "2026-09-12T15:53:15.641470+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/too_small_cubic_remainder.lean"
+      ],
+      "elapsed_seconds": 4.900789,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/too_small_cubic_remainder.lean:44:2: error: linarith failed to find a contradiction\ncase right\nx : \u211d\nhx : 0 \u2264 x\nhconst : IntervalIntegrable (fun x => 1) volume 0 x\nhpow : IntervalIntegrable (fun t => t ^ 2) volume 0 x\nh : x \u2264 arctan x + x ^ 3 / 3\na\u271d : x ^ 3 / 4 < x - arctan x\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/too_small_cubic_remainder.lean:41:49: warning: This simp argument is unused:\n  zero_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [intervalIntegral.integral_const, sub_zero, smul_eq_mul, mul_one, integral_pow, Nat.reduceAdd,\n    zero_pow (by decide : 3 \u2260 0), integral_one_div_one_add_sq, arctan_zero] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "99d124f6bf3dffe2af92c5377bd40f6e6ad58068f0be04c555d1d5abac399074"
+    },
+    {
+      "name": "missing_deficit_factor",
+      "started_utc": "2026-09-12T15:53:20.542800+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean"
+      ],
+      "elapsed_seconds": 4.864581,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:41:49: warning: This simp argument is unused:\n  zero_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [intervalIntegral.integral_const, sub_zero, smul_eq_mul, mul_one, integral_pow, Nat.reduceAdd,\n    zero_pow (by decide : 3 \u2260 0), integral_one_div_one_add_sq, arctan_zero] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:57:2: error: linarith failed to find a contradiction\ncase h1\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : arctan (eps / gamma) = \u03c0 / 2 - arctan (gamma / eps)\nh2 : arctan (eps / (T - gamma)) = \u03c0 / 2 - arctan ((T - gamma) / eps)\na\u271d : 2 * \u03c0 - 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps)) < arctan (eps / gamma) + arctan (eps / (T - gamma))\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:76:18: error: linarith failed to find a contradiction\ncase left\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : eps / gamma / (1 + (eps / gamma) ^ 2) \u2264 arctan (eps / gamma)\nh2 : eps / (T - gamma) / (1 + (eps / (T - gamma)) ^ 2) \u2264 arctan (eps / (T - gamma))\nh3 : arctan (eps / gamma) \u2264 eps / gamma\nh4 : arctan (eps / (T - gamma)) \u2264 eps / (T - gamma)\na\u271d :\n  arctan (eps / gamma) + arctan (eps / (T - gamma)) <\n    2 * (eps / gamma / (1 + (eps / gamma) ^ 2) + eps / (T - gamma) / (1 + (eps / (T - gamma)) ^ 2))\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:76:18: error: linarith failed to find a contradiction\ncase right\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : eps / gamma / (1 + (eps / gamma) ^ 2) \u2264 arctan (eps / gamma)\nh2 : eps / (T - gamma) / (1 + (eps / (T - gamma)) ^ 2) \u2264 arctan (eps / (T - gamma))\nh3 : arctan (eps / gamma) \u2264 eps / gamma\nh4 : arctan (eps / (T - gamma)) \u2264 eps / (T - gamma)\na\u271d : 2 * (eps / gamma + eps / (T - gamma)) < arctan (eps / gamma) + arctan (eps / (T - gamma))\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:86:18: error: linarith failed to find a contradiction\ncase left\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : 0 \u2264 eps / gamma - arctan (eps / gamma) \u2227 eps / gamma - arctan (eps / gamma) \u2264 (eps / gamma) ^ 3 / 3\nh2 :\n  0 \u2264 eps / (T - gamma) - arctan (eps / (T - gamma)) \u2227\n    eps / (T - gamma) - arctan (eps / (T - gamma)) \u2264 (eps / (T - gamma)) ^ 3 / 3\na\u271d : 2 * (eps / gamma + eps / (T - gamma)) - (arctan (eps / gamma) + arctan (eps / (T - gamma))) < 0\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/missing_deficit_factor.lean:86:18: error: linarith failed to find a contradiction\ncase right\ngamma T eps : \u211d\nhg : 0 < gamma\nht : gamma < T\nhe : 0 < eps\nh1 : 0 \u2264 eps / gamma - arctan (eps / gamma) \u2227 eps / gamma - arctan (eps / gamma) \u2264 (eps / gamma) ^ 3 / 3\nh2 :\n  0 \u2264 eps / (T - gamma) - arctan (eps / (T - gamma)) \u2227\n    eps / (T - gamma) - arctan (eps / (T - gamma)) \u2264 (eps / (T - gamma)) ^ 3 / 3\na\u271d :\n  2 / 3 * ((eps / gamma) ^ 3 + (eps / (T - gamma)) ^ 3) <\n    2 * (eps / gamma + eps / (T - gamma)) - (arctan (eps / gamma) + arctan (eps / (T - gamma)))\n\u22a2 False\nfailed\n",
+      "stderr": "",
+      "input_sha256": "7f6d164879e2400d6952df481d88579543cb4db9b5822071a0b2b2f6d5259b22"
+    },
+    {
+      "name": "invalid_small_error_threshold",
+      "started_utc": "2026-09-12T15:53:25.408328+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/invalid_small_error_threshold.lean"
+      ],
+      "elapsed_seconds": 4.89631,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/invalid_small_error_threshold.lean:32:63: error: linarith failed to find a contradiction\n\u03b9 : Type u_1\ns : Finset \u03b9\nx : \u03b9 \u2192 \u211d\nhx : \u2200 k \u2208 s, 0 \u2264 x k\nhs : 2 * \u2211 k \u2208 s, arctan (x k) < 4 * \u03c0\nk : \u03b9\nhk : k \u2208 s\nhsingle : arctan (x k) \u2264 \u2211 j \u2208 s, arctan (x j)\na\u271d : \u03c0 / 4 \u2264 arctan (x k)\n\u22a2 False\nfailed\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/invalid_small_error_threshold.lean:46:50: error: Application type mismatch: The argument\n  hj\nhas type\n  2 * \u2211 k \u2208 s j, arctan (x j k) < \u03c0 / 2\nbut is expected to have type\n  2 * \u2211 k \u2208 s j, arctan (x j k) < 4 * \u03c0\nin the application\n  sum_lower_when_small (s j) (x j) (hx j) hj\n",
+      "stderr": "",
+      "input_sha256": "d0387633993c946875b07f4338b22ced31cbe7d8886bc0514dacd84c86482dd7"
+    },
+    {
+      "name": "incorrect_endpoint_weight",
+      "started_utc": "2026-09-12T15:53:30.305230+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/incorrect_endpoint_weight.lean"
+      ],
+      "elapsed_seconds": 4.828707,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/incorrect_endpoint_weight.lean:70:62: error: unsolved goals\n\u03b9 : Type u_1\ns : Finset \u03b9\ngamma : \u03b9 \u2192 \u211d\nT eps : \u211d\n\u22a2 \u2211 x \u2208 s, (eps * (gamma x)\u207b\u00b9 + eps * (T - gamma x)\u207b\u00b9) = \u2211 x \u2208 s, (2 * eps * (gamma x)\u207b\u00b9 + 2 * eps * (T - gamma x)\u207b\u00b9)\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-integral-audit/mutations/incorrect_endpoint_weight.lean:93:2: error: Type mismatch\n  h\nhas type\n  Tendsto (fun j => \u2211 k \u2208 s j, PerZeroError.deficit (gamma j k) (T j) (eps j)) l (\ud835\udcdd 0) \u2194\n    Tendsto (fun j => 2 * eps j * \u2211 k \u2208 s j, (1 / gamma j k + 1 / (T j - gamma j k))) l (\ud835\udcdd 0)\nbut is expected to have type\n  Tendsto (fun j => \u2211 k \u2208 s j, PerZeroError.deficit (gamma j k) (T j) (eps j)) l (\ud835\udcdd 0) \u2194\n    Tendsto (fun j => eps j * \u2211 k \u2208 s j, (1 / gamma j k + 1 / (T j - gamma j k))) l (\ud835\udcdd 0)\n",
+      "stderr": "",
+      "input_sha256": "bdd144bfeab8da9e6a4e7f69abc53089706879f4572078128cfbee31d806d3dc"
+    }
+  ]
+}

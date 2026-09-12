@@ -1,0 +1,67 @@
+{
+  "attempts": [
+    {
+      "directory": "20260912T154404530698Z_PerZeroIntegral",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:44:04.530698+00:00",
+      "source_sha256": "d86c18344ff67bb54f917a1579e0414e32390e0d353b65d62cce80ced8d606e0"
+    },
+    {
+      "directory": "20260912T154544717455Z_PerZeroIntegral",
+      "returncode": 0,
+      "started_utc": "2026-09-12T15:45:44.717455+00:00",
+      "source_sha256": "ae2761107e376747a0ab7f43f5ef9e0f3949f971195e3ea31eee68f4c19015b9"
+    },
+    {
+      "directory": "20260912T154618811905Z_PerZeroError",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:46:18.811905+00:00",
+      "source_sha256": "b6207c2837c38d473457320b616f6b45d75c6dae8dcfd42f7134d1dfb22bd39d"
+    },
+    {
+      "directory": "20260912T154644448188Z_PerZeroError",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:46:44.448188+00:00",
+      "source_sha256": "76e1d2ad410c8019aeb828d6c8dc67bd89780c05514ac27fd62ccc8e20b17daa"
+    },
+    {
+      "directory": "20260912T154828029688Z_PerZeroError",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:48:28.029688+00:00",
+      "source_sha256": "18bc4f6b1c0b30d23ddd1169d020074b0d5bbd52826ad8c15d0e8490a5d86600"
+    },
+    {
+      "directory": "20260912T154911033534Z_PerZeroError",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:49:11.033534+00:00",
+      "source_sha256": "de58d09c51b3da4bd3ca0258cbf67046687953c1b760a940cdcb9adecadf83da"
+    },
+    {
+      "directory": "20260912T154936112595Z_PerZeroError",
+      "returncode": 1,
+      "started_utc": "2026-09-12T15:49:36.112595+00:00",
+      "source_sha256": "5a07447b54f9c7400a5626f9bea98bdf4af977127086961db0d64d383e4b0ac7"
+    },
+    {
+      "directory": "20260912T155003537695Z_PerZeroError",
+      "returncode": 0,
+      "started_utc": "2026-09-12T15:50:03.537695+00:00",
+      "source_sha256": "37932454843519c2b84e36671c8efd4e5dd57382d714c5fa73a13414d01c63ee"
+    },
+    {
+      "directory": "20260912T155015343637Z_PerZeroSums",
+      "returncode": 0,
+      "started_utc": "2026-09-12T15:50:15.343637+00:00",
+      "source_sha256": "3cda678a5a712114618feff4b2e60b2c86f2ec867e3f359efaa4b84a9d9452d7"
+    },
+    {
+      "directory": "20260912T155106156113Z_PerZeroSums",
+      "returncode": 0,
+      "started_utc": "2026-09-12T15:51:06.156113+00:00",
+      "source_sha256": "b07f7610113d534fcd2e11f1483d4b7c148626dba31176a184dc84f6b84642b6"
+    }
+  ],
+  "failed": 6,
+  "passed": 4,
+  "meaning": "Complete iterative compiler attempts before the separate final mutation/axiom audit."
+}

@@ -1,0 +1,81 @@
+{
+  "scope": "Topology correction and new reproduction files. The prior manifests retain earlier proofs and locks; mutable indexes, this manifest and the generated verification receipt are excluded.",
+  "files": {
+    "code/frontier_verification/TOPOLOGY_README.md": {
+      "bytes": 1561,
+      "sha256": "49983bdfd1366279d781f1931991b0cbe5656a8411a313d29356c2b47a6d7a06"
+    },
+    "code/frontier_verification/audit_topology_lean.py": {
+      "bytes": 6949,
+      "sha256": "1b5abd343e417aadd1bfa1a2131b5241abcbf44cfd2c21f51fbbd032f75dc1d2"
+    },
+    "code/frontier_verification/klein_lift_crosscheck.py": {
+      "bytes": 4151,
+      "sha256": "f2281d5db73279c303dab59c34cc313c48cd32b4bfaaa6585212913bd26f6eab"
+    },
+    "code/frontier_verification/proofs/ERRATA.md": {
+      "bytes": 853,
+      "sha256": "d379924b5a9ba611f4663b3c9f71e99b3fe5f94b8bb59814abc5afd821153d89"
+    },
+    "code/frontier_verification/proofs/KleinLiftAudit.lean": {
+      "bytes": 4400,
+      "sha256": "d4a0b65578991f39aa9ff784cfc8b63e68ae5519616f6648b4e76610af10f328"
+    },
+    "code/frontier_verification/proofs/Topology_Source_Manifest.json": {
+      "bytes": 854,
+      "sha256": "370402ee51c54eef2d3382ddf977d1c2ef95899c2e42cc74c2cd6fae2fbad83e"
+    },
+    "code/frontier_verification/verify_topology_delta.py": {
+      "bytes": 6481,
+      "sha256": "1ce9301d71c9dfa4c180989ed26c5cc5cfa3e632daa311bafb41e60049475dd6"
+    },
+    "docs/frontier/2026-09-12-topology-delta/.gitattributes": {
+      "bytes": 13,
+      "sha256": "962ec22ee5370cdeca3a5deeb3d54c11b70876dec7ec6911d24486e1372848a0"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Branch_Events.jsonl": {
+      "bytes": 317748,
+      "sha256": "dc65f4b2ec15f3c653f517640ad0689d070fcae3df35349ef4461e9c504269f4"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Cross_Method_Checks.json": {
+      "bytes": 1939,
+      "sha256": "a50adcdd6d790f154b06e772c75a8b7429126feddbfadd9cc432c4f00f5a32c9"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Cross_Method_Receipt.json": {
+      "bytes": 606,
+      "sha256": "00a5d7953fd8def0ed24aeb3b8ca9e013ac70a0617601575ebea6db431dfc81f"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Development_Attempts.json": {
+      "bytes": 1353,
+      "sha256": "ba2c10221fefe3d20df78e3d3c7d94056df902d34431ede39c1381fbc0f6440c"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Development_Attempts.zip": {
+      "bytes": 13355,
+      "sha256": "93807c8aa0e763337aca3fe4cd70ae511aa86ff83808bc61c19d36792ac3b3cc"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Formal_Audit.json": {
+      "bytes": 16519,
+      "sha256": "c6ab4aeaf30ea36138cc9765ccef75b546e20d01d1bf596b4a6c82610bc8f4b9"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Formal_Audit_Artifacts.zip": {
+      "bytes": 16958,
+      "sha256": "b3b953572fc59fbfa5b956c405b24a88de07d2c71484cfe1501df1c34e6234e0"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Primary_Sources.json": {
+      "bytes": 1464,
+      "sha256": "3a9284dd5c27a1442dce276c7187fd84c7b74880bdc8bedba47c6872b8b5e5a2"
+    },
+    "docs/frontier/2026-09-12-topology-delta/README.md": {
+      "bytes": 6485,
+      "sha256": "b8e29a9a45e4bfbeed563464c6a11bcfe2b0bc7ae3d2c5fda4ebab5a0cffffa8"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Research_Queue.json": {
+      "bytes": 171268,
+      "sha256": "81e11a305d2bd764dab5c6deda334ec2c6c82d63281e88bbd14301fba3f9c4fd"
+    },
+    "docs/frontier/2026-09-12-topology-delta/Scope_Corrections.json": {
+      "bytes": 2436,
+      "sha256": "e6ac2e90ea12f9fe7f753c0b53b42a450bfff08111c1ca08e8fe00f7898cf49b"
+    }
+  }
+}

@@ -10,6 +10,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 
 The [subsequent integral delta](docs/frontier/2026-09-12-integral-delta/README.md) formalizes the complex paired integral, quantitative error bounds, and the absolute-error criterion for changing finite configurations.
 
+**Audit correction:** [Klein-cover homology and mapping classes](docs/frontier/2026-09-12-topology-delta/README.md) distinguishes a verified matrix obstruction from an incorrect inference in its archived commentary: identity cover homology does not imply a trivial mapping class.
+
 ---
 
 ## Repository Structure

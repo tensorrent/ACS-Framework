@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "arithmetic": "exact integer and symbolic rational",
+  "affine_symbolic_parity_cases": [
+    {
+      "first_parity": 0,
+      "second_parity": 0,
+      "product_identity": true,
+      "half_translation_conjugacy": true,
+      "inner_b_even_vertical_shift": true
+    },
+    {
+      "first_parity": 0,
+      "second_parity": 1,
+      "product_identity": true,
+      "half_translation_conjugacy": true,
+      "inner_b_even_vertical_shift": true
+    },
+    {
+      "first_parity": 1,
+      "second_parity": 0,
+      "product_identity": true,
+      "half_translation_conjugacy": true,
+      "inner_b_even_vertical_shift": true
+    },
+    {
+      "first_parity": 1,
+      "second_parity": 1,
+      "product_identity": true,
+      "half_translation_conjugacy": true,
+      "inner_b_even_vertical_shift": true
+    }
+  ],
+  "normal_form_pairs": 2401,
+  "cover_elements_checked": 49,
+  "witness": {
+    "torus_lift": "F(x,y)=(x,y+1/2)",
+    "deck": "tau(x,y)=(x+1/2,-y)",
+    "cover_homology_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "trace": 2,
+    "normal_form_action": "(m,n) -> (m + n mod 2, n)",
+    "twist_b": [
+      1,
+      1
+    ],
+    "inner_b": "(2*m,1)",
+    "square": "inner conjugation by a; F^2 is the vertical deck translation"
+  },
+  "negative_identity_realization": "R(x,y)=(-x,-y), with R a R^-1=a^-1 and R b R^-1=b^-1",
+  "parabolic_obstruction_retained": true,
+  "canonical_orientation_preserving_matrix_candidates": [
+    [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "-1"
+      ]
+    ],
+    [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  ],
+  "correction": "Identity cover homology does not imply an inner automorphism or trivial Klein mapping class.",
+  "scope": "The algebraic model and affine identities are explicit; full surface topology is not formalized here."
+}

@@ -1,0 +1,67 @@
+{
+  "original_sources_preserved": true,
+  "sources": [
+    {
+      "path": "code/frontier_verification/proofs/AxiomIII.lean",
+      "sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e"
+    },
+    {
+      "archive": "docs/frontier/2026-09-11/ACS_Frontier_Evidence.zip",
+      "member": "acs-parallel-frontier-20260911/workstreams/foundations/support/source/papers/notes/Constraint_Projection_Framework_Audit.tex",
+      "sha256": "923fa92ff43c23201af49026d547e2855654fdacfb3df52bd016b2b69c707ecc"
+    }
+  ],
+  "corrections": [
+    {
+      "source": "code/frontier_verification/proofs/AxiomIII.lean",
+      "line": 116,
+      "prior_claim": "The four-element integer centralizer is identified as the image of MCG(K).",
+      "correction": "Arbitrary lift matrices may differ by the deck action. The canonical orientation-preserving lift has image {I,-I}, with a nontrivial kernel; it is not a faithful four-element matrix representation."
+    },
+    {
+      "source": "code/frontier_verification/proofs/AxiomIII.lean",
+      "line": 132,
+      "prior_claim": "Trace two is carried by the trivial mapping class and not a Dehn twist.",
+      "correction": "The matrix must be I, but the half-translation is a nontrivial Dehn-twist class with this matrix and trace two. The matrix theorem itself remains correct."
+    },
+    {
+      "source": "Constraint_Projection_Framework_Audit.tex in the retained evidence archive",
+      "line": 279,
+      "prior_claim": "The weaker trace-two reading has no nontrivial carrier.",
+      "correction": "The weaker trace condition has a nontrivial carrier. It does not establish self-linking or physical parameter identifications."
+    }
+  ],
+  "retained_result": "The specified parabolic shear still fails to commute with the deck action and cannot be induced by a descending lift.",
+  "metadata_corrections": [
+    {
+      "branch": "C06",
+      "field": "related_branches",
+      "before": [
+        "C02",
+        "C05"
+      ],
+      "after": [
+        "C03",
+        "C05"
+      ],
+      "reason": "C03 is the Local Friendliness branch."
+    },
+    {
+      "branch": "R11",
+      "field": "related_branches",
+      "before": [
+        "C04",
+        "C05",
+        "R08",
+        "R10"
+      ],
+      "after": [
+        "C02",
+        "C05",
+        "R08",
+        "R10"
+      ],
+      "reason": "C02 is the contour/strip branch; C04 is the Klein shear branch."
+    }
+  ]
+}

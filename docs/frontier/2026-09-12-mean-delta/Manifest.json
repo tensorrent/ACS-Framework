@@ -1,0 +1,73 @@
+{
+  "purpose": "Frozen mean-error checkpoint evidence and instruments. Earlier sources and checkpoints are verified recursively. Manifest and its generated Verification.json are excluded to avoid self-reference; root indexes remain mutable.",
+  "files": {
+    "code/frontier_verification/MEAN_README.md": {
+      "bytes": 1900,
+      "sha256": "b0c578f6336a37635e7dd58df3603bc36ee7731fd9202da62c69ae4c438a14ed"
+    },
+    "code/frontier_verification/audit_mean_lean.py": {
+      "bytes": 7682,
+      "sha256": "7d21b969418c210729d06b6fdf1c17a14d09417ed0f8b95d858cdd7b61a8a14a"
+    },
+    "code/frontier_verification/mean_crosscheck.py": {
+      "bytes": 5487,
+      "sha256": "ace5c7b7203d37673d1ad7bee19a6a99fe547a4efe7392df8eb9d196df638aa9"
+    },
+    "code/frontier_verification/proofs/Mean_Source_Manifest.json": {
+      "bytes": 1476,
+      "sha256": "1e167d5fa332848186ef980546d6bc8872184224635705b908650a2891a0dcd0"
+    },
+    "code/frontier_verification/proofs/PerZeroCounterfamily.lean": {
+      "bytes": 6278,
+      "sha256": "9b64a11724e5279f32edc24128fcfe89cd708099231483d10485e9961d2d70a7"
+    },
+    "code/frontier_verification/proofs/PerZeroMean.lean": {
+      "bytes": 8615,
+      "sha256": "a00b59a36ebb4ffe11dbd01167774d329594f7ad39ca0e19a01a587a50ebd0c9"
+    },
+    "code/frontier_verification/verify_mean_delta.py": {
+      "bytes": 7494,
+      "sha256": "4184074220119c1c4572396ca7d3225d7604742fbbf0a6f6e4ba0f691665da7a"
+    },
+    "docs/frontier/2026-09-12-mean-delta/.gitattributes": {
+      "bytes": 13,
+      "sha256": "962ec22ee5370cdeca3a5deeb3d54c11b70876dec7ec6911d24486e1372848a0"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Branch_Events.jsonl": {
+      "bytes": 320382,
+      "sha256": "8b61a797078f2861e03769e1ff2537e84cdaf7b4ebb42eacebe5befdcf520c7d"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Cross_Method_Checks.json": {
+      "bytes": 105926,
+      "sha256": "9253f2a8b08782d74d09b2f5142a4f956119dd74c977150470b7d67987174376"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Cross_Method_Receipt.json": {
+      "bytes": 704,
+      "sha256": "949af684252212e75129b6bb602cc0d343493748a75dc8785f14ae7f447aff6e"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Development_Attempts.json": {
+      "bytes": 2352,
+      "sha256": "b9f947ff7c3e74d3987bb2ff49895efe6fdb2593bf5e18fdb50477e4840d1967"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Development_Attempts.zip": {
+      "bytes": 36356,
+      "sha256": "e9cce4a1a7b734c34ef465d63e31e6e515edd2d7c674278fbe0f77cb8dc0fa9a"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Formal_Audit.json": {
+      "bytes": 42480,
+      "sha256": "7e6204c0ecb67f4807c52ef4253701f4b35581806d1bd4b7fcd64dd53ff9abfb"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Formal_Audit_Artifacts.zip": {
+      "bytes": 28353,
+      "sha256": "f6ba7031b3514b705c5beedd023420854835ba484292c617123a04bdb4fc9d5e"
+    },
+    "docs/frontier/2026-09-12-mean-delta/README.md": {
+      "bytes": 5939,
+      "sha256": "0bca2a98f8115c7d89934ca1159c4e2525c56ccd8257d3c41376a9b1cfb93280"
+    },
+    "docs/frontier/2026-09-12-mean-delta/Research_Queue.json": {
+      "bytes": 172432,
+      "sha256": "11f58fef39c85c891aaa0ec4cd8dde90267db229ea3d08bfae599237292de2c8"
+    }
+  }
+}

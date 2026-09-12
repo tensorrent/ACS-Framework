@@ -1,0 +1,60 @@
+{
+  "attempts": [
+    {
+      "directory": "lean/20260912T161929849746Z_PerZeroMean",
+      "returncode": 1,
+      "source_sha256": "e5b35e8ae8e3f2afd62b9b2f6ec441eae3ecfb63b8e32a428442cface1f38f2a",
+      "source_file": "PerZeroMean.lean"
+    },
+    {
+      "directory": "lean/20260912T162039237536Z_PerZeroMean",
+      "returncode": 0,
+      "source_sha256": "7f0387e60f52e2bd928976825fc086b44572c652d13aea6a7cc22d71f4badcbd",
+      "source_file": "PerZeroMean.lean"
+    },
+    {
+      "directory": "lean/20260912T162222245089Z_PerZeroCounterfamily",
+      "returncode": 1,
+      "source_sha256": "2a370279561620c3cc6cd9632744e1e552f417f42a226800b6b147c17297bd78",
+      "source_file": "PerZeroCounterfamily.lean"
+    },
+    {
+      "directory": "lean/20260912T162314447362Z_PerZeroMean",
+      "returncode": 0,
+      "source_sha256": "a00b59a36ebb4ffe11dbd01167774d329594f7ad39ca0e19a01a587a50ebd0c9",
+      "source_file": "PerZeroMean.lean"
+    },
+    {
+      "directory": "lean/20260912T162638863530Z_PerZeroCounterfamily",
+      "returncode": 1,
+      "source_sha256": "c16eaafc2f7cc8d18f0df1ecfb6c9c9c193d02ff03b2c534dfff21ac9431c17d",
+      "source_file": "PerZeroCounterfamily.lean"
+    },
+    {
+      "directory": "lean/20260912T162705254348Z_PerZeroCounterfamily",
+      "returncode": 1,
+      "source_sha256": "988bc43400c2315736cb6d3dd4ef4708ab2f4067a25282faa9cbf07178b38884",
+      "source_file": "PerZeroCounterfamily.lean"
+    },
+    {
+      "directory": "lean/20260912T162736256462Z_PerZeroCounterfamily",
+      "returncode": 0,
+      "source_sha256": "25b7ff458849e18b2c074331fff1422509b50b62ad06b0028b0e582a3ec7f1fa",
+      "source_file": "PerZeroCounterfamily.lean"
+    },
+    {
+      "directory": "lean/20260912T162812946061Z_PerZeroCounterfamily",
+      "returncode": 0,
+      "source_sha256": "9b64a11724e5279f32edc24128fcfe89cd708099231483d10485e9961d2d70a7",
+      "source_file": "PerZeroCounterfamily.lean"
+    },
+    {
+      "directory": "mean-crosscheck",
+      "returncode": 0,
+      "source_sha256": "ace5c7b7203d37673d1ad7bee19a6a99fe547a4efe7392df8eb9d196df638aa9",
+      "source_file": "source.py"
+    }
+  ],
+  "failed": 4,
+  "meaning": "Iterative Lean sources and full diagnostics, including failed attempts, plus the successful symbolic/rational/numerical cross-check. Final kernel and mutation audit is separate."
+}

@@ -12,6 +12,8 @@ The [subsequent integral delta](docs/frontier/2026-09-12-integral-delta/README.m
 
 **Audit correction:** [Klein-cover homology and mapping classes](docs/frontier/2026-09-12-topology-delta/README.md) distinguishes a verified matrix obstruction from an incorrect inference in its archived commentary: identity cover homology does not imply a trivial mapping class.
 
+**Mean-error continuation:** [Boundary-layer criterion and counterfamily](docs/frontier/2026-09-12-mean-delta/README.md) adds kernel-checked mean asymptotics, a nonzero total-error limit, and an explicit failure of checking only one cutoff.
+
 ---
 
 ## Repository Structure

@@ -4,6 +4,8 @@
 
 *A map of every paper in the folder. Sourced from the extracted texts (FF06a/b/c via embedded page-text; N3 native; FF06b'/e/f from the build). Numbers are as written in the documents.*
 
+> **Later continuation:** the [11 September 2026 Frontier snapshot](frontier/2026-09-11/README.md) records subsequent scoped results, corrections, and remaining gates. Read its [task checklist](frontier/2026-09-11/ACS_Frontier_Checklist.md) alongside the historical claims and status labels preserved in this map. The import itself does not reverify those claims.
+
 ---
 
 ## 1. The corpus at a glance

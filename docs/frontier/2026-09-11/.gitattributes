@@ -1,0 +1,3 @@
+# Preserve original attachments and display them as binary artifacts in diffs.
+*.pdf binary
+*.zip binary

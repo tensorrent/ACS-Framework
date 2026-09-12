@@ -4,6 +4,8 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 
 **Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — glossary and index of key terms · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
 
+**Frontier continuation (11 September 2026):** [Report, checklist, and evidence package](docs/frontier/2026-09-11/README.md) — 50 scoped investigations with current dispositions, evidence, and remaining gates; includes the original PDF and ZIP, machine-readable task and branch records, and seven workstream reports. Import integrity is checked; the research programs were not rerun during the import.
+
 ---
 
 ## Repository Structure
@@ -70,6 +72,7 @@ This repository contains the canonical manuscripts, mathematical notes, verifica
 │   └── benchmark_efficiency.py       # Efficiency benchmark runner
 │
 ├── docs/                             # Framework documentation & run artifacts
+│   ├── frontier/2026-09-11/           # Frontier continuation, task records & original evidence
 │   ├── ACS_Technical_Whitepaper.md   # Consolidated mathematical/physical whitepaper
 │   ├── ACS_Master_Index.md           # Page/line index (historical snapshot, May 2026)
 │   ├── ACS_Corpus_Map.md             # Logical map of the theoretical claims

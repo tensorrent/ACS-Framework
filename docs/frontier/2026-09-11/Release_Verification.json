@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "manifest_files": 3178,
+  "prior_archive_unchanged": true,
+  "prior_ledger_events_unchanged": 256,
+  "branches": 110,
+  "events": 315,
+  "chain_head": "785f7490365e96d7f7214ff3fded2faec766d4cc9d7ba57c0e8f8ffbb9645665",
+  "checklist_tasks": 50,
+  "task_status_counts": {
+    "needs_definition": 11,
+    "open_computation": 5,
+    "needs_data": 6,
+    "closed_scoped_certificate": 1,
+    "open_theorem": 9,
+    "needs_runtime": 1,
+    "conditional_certificate": 3,
+    "needs_source": 4,
+    "closed_scoped_result": 7,
+    "closed_scoped_obstruction": 2,
+    "evidence_review_only": 1
+  },
+  "fresh_replay_commands": 18,
+  "distinct_accepted_check_programs": 23,
+  "global_exhaustion_claimed": false,
+  "new_kernel_passes": 0
+}

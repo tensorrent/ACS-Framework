@@ -1,0 +1,105 @@
+{
+  "purpose": "Frozen source/data evidence. Mutable implementation files are preserved and verified in Source_Snapshot.zip. Earlier proof checkpoints are checked recursively. Root indexes and generated Verification.json remain outside this self-reference-free manifest.",
+  "files": {
+    "code/frontier_verification/SOURCE_README.md": {
+      "bytes": 2354,
+      "sha256": "004f4d4ba3a49499a2b629169087fa012a9afe076ee395b6f55ae63bed8e7675"
+    },
+    "code/frontier_verification/dataset_precision_audit.py": {
+      "bytes": 8464,
+      "sha256": "d8e47fedc1c1764e7703d34f0b4c523cdb456b2758ea3cc5cf262c5691025c09"
+    },
+    "code/frontier_verification/normalization_crosscheck.py": {
+      "bytes": 1480,
+      "sha256": "93647f73035ab506120d9bdf82691a986d7069a82f312ef2c011033111898975"
+    },
+    "code/frontier_verification/source_requirements.txt": {
+      "bytes": 89,
+      "sha256": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+    },
+    "code/frontier_verification/verify_source_delta.py": {
+      "bytes": 9964,
+      "sha256": "77e22245baaa913b5dd0914bad2d7c86493229850c47711594500cb4ac105f1b"
+    },
+    "docs/frontier/2026-09-12-source-delta/.gitattributes": {
+      "bytes": 13,
+      "sha256": "962ec22ee5370cdeca3a5deeb3d54c11b70876dec7ec6911d24486e1372848a0"
+    },
+    "docs/frontier/2026-09-12-source-delta/Baseline_Inventory.json": {
+      "bytes": 140268,
+      "sha256": "7059dd05a3dd2b6f1bc6e9bc83fc0d35c57cf3517a99e8c3b63ce8c0fdad6a3b"
+    },
+    "docs/frontier/2026-09-12-source-delta/Baseline_Tracked_Paths.txt": {
+      "bytes": 26242,
+      "sha256": "ad0dabf841d5913abbc4015f66ffa5f0e85d069f10e17f34092225fa871b3f49"
+    },
+    "docs/frontier/2026-09-12-source-delta/Branch_Events.jsonl": {
+      "bytes": 325665,
+      "sha256": "66422c552196ffea46b7083f0b49f5c44bd6beced5e9f0f14ff8650adbc6b6cc"
+    },
+    "docs/frontier/2026-09-12-source-delta/Corrected_Sources.json": {
+      "bytes": 1338,
+      "sha256": "7622f8e111871bf2b16e2fa5151353dcdc1220580e352dd1159ec2d75317eece"
+    },
+    "docs/frontier/2026-09-12-source-delta/Data_Inventory.json": {
+      "bytes": 3821,
+      "sha256": "e66b14b2712244571c1b62234a9109d6b2bc11496c83fadefda699fa4abc9ae8"
+    },
+    "docs/frontier/2026-09-12-source-delta/Dataset_Audit.json": {
+      "bytes": 14231,
+      "sha256": "4d93b4f957c2a5950138763366b79a80927a4f67c4d33cf46c03c73969b00994"
+    },
+    "docs/frontier/2026-09-12-source-delta/Execution_Artifacts.zip": {
+      "bytes": 25062,
+      "sha256": "4b26f260a43a2b147094358997a28d8d7d4601c474ac7636c250891f2a3f5f7c"
+    },
+    "docs/frontier/2026-09-12-source-delta/Normalization_Crosscheck.json": {
+      "bytes": 1789,
+      "sha256": "8215fd5c7302846654534a6281e9d071deed25d03f86cc4e5fa5885788e101a1"
+    },
+    "docs/frontier/2026-09-12-source-delta/Overflow_Reproduction.json": {
+      "bytes": 452,
+      "sha256": "8be33fef0353fe332b0df2ddc42524ef17c75ee0c0810f1d86ea44fbf6287c20"
+    },
+    "docs/frontier/2026-09-12-source-delta/Primary_Receipt.json": {
+      "bytes": 3029,
+      "sha256": "18d340edecb88ad0a60349e096cd36e13284f7dca21342fe533959a8704ae7e8"
+    },
+    "docs/frontier/2026-09-12-source-delta/Primary_Sources.json": {
+      "bytes": 990,
+      "sha256": "bdf602dbb0972ec330e4986cc1e3173d7c9232602c02faade285a91b488c0cdd"
+    },
+    "docs/frontier/2026-09-12-source-delta/Primary_Tables.zip": {
+      "bytes": 15157452,
+      "sha256": "bb3a6c897a582d5a8e3585abeb06b04b3370977f7d4600a160f182f421826349"
+    },
+    "docs/frontier/2026-09-12-source-delta/README.md": {
+      "bytes": 7685,
+      "sha256": "5978dabc8fe3557858eda5c418bd2da7e8208b0be7836bc4c2f45a907de50e12"
+    },
+    "docs/frontier/2026-09-12-source-delta/Research_Queue.json": {
+      "bytes": 177381,
+      "sha256": "06a2f2a0afe25a608371a43c41f6af568950710386d22ac8f129ad3e95220fa3"
+    },
+    "docs/frontier/2026-09-12-source-delta/Runtime.json": {
+      "bytes": 663,
+      "sha256": "ef7d74908876d04af26a53d3ed3ef783e47aece197aa6d7b7261f9b3e9e06656"
+    },
+    "docs/frontier/2026-09-12-source-delta/Source_Identity.json": {
+      "bytes": 1753,
+      "sha256": "32604cfdf26221fd113ea14b5751f92484d9655cfd4fe2d9a6ff1c6e4dd0e14e"
+    },
+    "docs/frontier/2026-09-12-source-delta/Source_Map.json": {
+      "bytes": 9396,
+      "sha256": "8231b6b325080ea4459ceb6279ecae9d6d118b348e9fdc823052117ec7dc36c8"
+    },
+    "docs/frontier/2026-09-12-source-delta/Source_Snapshot.zip": {
+      "bytes": 2820917,
+      "sha256": "9fa62cb45d8ef3f69ee9aeba55aef164318b4a56b550334443b0a23a705647d5"
+    },
+    "docs/frontier/2026-09-12-source-delta/Test_Receipts.json": {
+      "bytes": 5239,
+      "sha256": "f6a70ba6d1ee1aa62e70d86a119b789fb56cf71385771b0615b1fe9360264c6d"
+    }
+  }
+}

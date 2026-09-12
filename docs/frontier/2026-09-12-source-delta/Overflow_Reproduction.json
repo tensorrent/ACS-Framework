@@ -1,0 +1,21 @@
+{
+  "baseline_commit": "f75fa752d5b973ca3d4f6ca7e4641c75570e7d26",
+  "values": {
+    "20": "0.2556189617509549",
+    "700": "-0.00861106119798942",
+    "710": "nan",
+    "1000": "nan"
+  },
+  "finite": {
+    "20": true,
+    "700": true,
+    "710": false,
+    "1000": false
+  },
+  "warnings": [
+    "overflow encountered in exp",
+    "invalid value encountered in power",
+    "overflow encountered in exp",
+    "invalid value encountered in power"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "baseline-tests": {
+    "started_utc": "2026-09-12T16:43:41.010803+00:00",
+    "elapsed_seconds": 167.417963,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/acs_codebase",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "04c073f3fa5ff807885bda6f1bcf259600850faf02a04246f577cd66f7b336ac",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "success"
+  },
+  "corrected-tests": {
+    "started_utc": "2026-09-12T16:51:05.358450+00:00",
+    "elapsed_seconds": 60.840625,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/acs_codebase",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "04da449af7d5cf15435a022fdee9aa49fab037f01235b5a1b04a33f1d57cd4e5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "success"
+  },
+  "baseline-regression-sensitivity": {
+    "started_utc": "2026-09-12T16:53:17.072643+00:00",
+    "elapsed_seconds": 57.990957,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-audit/baseline-with-regressions",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_paper_b.py",
+      "-k",
+      "avoids_intermediate_exponential_overflow",
+      "-v"
+    ],
+    "returncode": 1,
+    "stdout_sha256": "4b66c22f111e756abb6508044dbce110e9cc2cf8534f091f9951c83c1197c7b8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "two overflow regressions fail on old code"
+  },
+  "dataset-run": {
+    "started_utc": "2026-09-12T16:47:42.946590+00:00",
+    "elapsed_seconds": 39.511187,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dataset_precision_audit.py",
+      "--primary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-audit/primary",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-audit/dataset-results"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "69548008c19c35aaf490c99de83c8e197ba912030ce57e948a9cc6b1a533f4a1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "success"
+  },
+  "dataset-run-pinned": {
+    "started_utc": "2026-09-12T17:03:29.286624+00:00",
+    "elapsed_seconds": 31.225764,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dataset_precision_audit.py",
+      "--primary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-audit/primary",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-audit/dataset-results-pinned"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "625438988f6db2f160664e3590ed59318ad8298ddc1e93f262774133137171f4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "success"
+  },
+  "normalization-run": {
+    "started_utc": "2026-09-12T16:55:16.070534+00:00",
+    "elapsed_seconds": 21.618677,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/normalization_crosscheck.py"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "8215fd5c7302846654534a6281e9d071deed25d03f86cc4e5fa5885788e101a1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected_outcome": "success"
+  }
+}

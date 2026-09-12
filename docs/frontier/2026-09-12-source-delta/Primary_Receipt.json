@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/",
+      "resolved_url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/",
+      "status": 200,
+      "headers": {
+        "Date": "Sat, 12 Sep 2026 16:40:47 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Fri, 09 Aug 2024 22:30:12 GMT",
+        "ETag": "\"4ae-61f47afc4edd4\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "1198",
+        "Vary": "Accept-Encoding",
+        "Connection": "close",
+        "Content-Type": "text/html"
+      },
+      "started_utc": "2026-09-12T16:40:46.409108+00:00",
+      "bytes": 1198,
+      "sha256": "7d0399f76bfba3dacd7f4e41db25026346ee828e1c0de33046584ceaa97f6a5c",
+      "path": "index.html"
+    },
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1",
+      "resolved_url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros1",
+      "status": 200,
+      "headers": {
+        "Date": "Sat, 12 Sep 2026 16:40:47 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Wed, 18 Mar 1998 11:30:55 GMT",
+        "ETag": "\"1b7740-329a6a5e9b9c0\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "1800000",
+        "Connection": "close"
+      },
+      "started_utc": "2026-09-12T16:40:47.569072+00:00",
+      "bytes": 1800000,
+      "sha256": "3436c916a7878261ac183fd7b9448c9a4736b8bbccf1356874a6ce1788541632",
+      "path": "zeros1"
+    },
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros2",
+      "resolved_url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros2",
+      "status": 200,
+      "headers": {
+        "Date": "Sat, 12 Sep 2026 16:40:48 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Wed, 18 Mar 1998 11:55:54 GMT",
+        "ETag": "\"19dfb-329a6ff42a680\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "105979",
+        "Connection": "close"
+      },
+      "started_utc": "2026-09-12T16:40:48.260122+00:00",
+      "bytes": 105979,
+      "sha256": "0439d90a4c025d1ab3ed25f2241f27afeb6d01e651d95672267783b859ee170f",
+      "path": "zeros2"
+    },
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros6.gz",
+      "resolved_url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros6.gz",
+      "status": 200,
+      "headers": {
+        "Date": "Sat, 12 Sep 2026 16:40:48 GMT",
+        "Server": "Apache",
+        "Last-Modified": "Sat, 09 Dec 2006 12:34:36 GMT",
+        "ETag": "\"db43f4-4242b27c10f00\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "14369780",
+        "Connection": "close",
+        "Content-Type": "application/x-gzip"
+      },
+      "started_utc": "2026-09-12T16:40:48.672891+00:00",
+      "bytes": 14369780,
+      "sha256": "6acacb4707c429bf368f32823a8eef0e0737b6318d3e144c78975a4986d155da",
+      "path": "zeros6.gz"
+    }
+  ],
+  "decompressed": {
+    "path": "zeros6",
+    "bytes": 36018936,
+    "sha256": "2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6"
+  }
+}

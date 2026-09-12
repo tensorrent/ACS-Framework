@@ -1,0 +1,25 @@
+{
+  "files": {
+    "code/acs_codebase/README.md": {
+      "before_sha256": "0650b936a6a6fde7ce6448715bafa96f5171281d9d08d8d1c7ee921f872dc8d0",
+      "after_sha256": "db119e5f7dabdc6070b4df4212cb2d07362d6f3d9cb25623b2ce937be313ca5f"
+    },
+    "code/acs_codebase/docs/ledger.md": {
+      "before_sha256": "8d069c4bc18bd4f7cb64d9811bab9982e8a574c586394d3010cdf6ea3cd20406",
+      "after_sha256": "a03955c227e397cd013d525766b9944c21cebfe772ae028994868bb2d7b802ea"
+    },
+    "code/acs_codebase/src/paper_b/renormalized_stability.py": {
+      "before_sha256": "e1bb7d0da008cc35f5739aaf52fc3509270c97959021e5e19dd5f1f303864bb8",
+      "after_sha256": "b47267c02cfc29c3edae881b5cc299250a3658c76ccd2a44db82b863ae10719f"
+    },
+    "code/acs_codebase/tests/test_paper_b.py": {
+      "before_sha256": "b3d0404db0c13e41f5dacf3c3371a05c208b5d244ed6e0b4c4b050fb5cf61f31",
+      "after_sha256": "26589a2a1a48d6762f861a3db3462dbd56b9406ed1f96454a2c8cb8c0c4534e2"
+    },
+    "docs/README_verification_suite.md": {
+      "before_sha256": "46cff8aee678077d3a3da54d01aa7b042fcbc946271baf131fa836c42beb7ec7",
+      "after_sha256": "7fc32519b63a14686a4c9546b6ea62bd5841b35a71e25c6a735edbbef4b055c3"
+    }
+  },
+  "scope": "Five mutable implementation, test, and documentation files; archived copies preserve this checkpoint independently of later changes."
+}

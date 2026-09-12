@@ -1,23 +1,24 @@
 > **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
 
-# ACS Verification Suite
+# ACS Historical Exploratory Script Catalog
 ## ACS Papers A/B/C (Wallace, 2026)
 
-All scripts live in `code/acs_codebase/extras/` and are run from that directory.
-That directory holds the full standalone script pool; the tables below index the
-subset tied to Papers A/B/C. Run `ls code/acs_codebase/extras/*.py | wc -l` for the
-current total.
+The tables below preserve historical descriptions of exploratory scripts under `code/acs_codebase/extras/`. They are not a current verification ledger: that directory's own README marks the scripts unverified or superseded. For example, the generic BCH-truncation claim listed below is obstructed in Frontier branch A02. Consult the [current Frontier queue](frontier/README.md) for scoped results and remaining gates.
+
+The canonical tested modules are in `code/acs_codebase/src/`. The [September source audit](frontier/2026-09-12-source-delta/README.md) distinguishes those tests from exploratory scripts and preserves this index's earlier wording.
 
 All scripts require Python 3.8+ with NumPy and SciPy.
 SymPy is required for the exact-arithmetic scripts.
 No proprietary software needed.
 
-### How to run everything:
+### Run the canonical suite:
 ```bash
-pip install numpy scipy sympy
-cd code/acs_codebase/extras
-for f in *.py; do python3 "$f"; done
+cd code/acs_codebase
+python -m pip install -r requirements.txt
+python -m pytest tests/ -v
 ```
+
+Exploratory scripts require individual source, input, output-path, and claim reviews before replay. The historical labels and counts below are not newly validated by a passing canonical suite.
 
 ---
 

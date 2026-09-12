@@ -1,0 +1,95 @@
+{
+  "files": [
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/zeros_chi_5_order4.txt",
+      "sha256": "d4e261f7963a5247bfabfe6423d93a2fbb193c27a9546ba6dcca35076955f049",
+      "rows": 54,
+      "first": "6.1835781960",
+      "last": "99.0796617408",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/zeros_chi_5_order4_ext.txt",
+      "sha256": "cf79d9ea84cda027fe4716d8632dd6084b369a21498d223d81e6bbd484c49944",
+      "rows": 146,
+      "first": "6.1835781955",
+      "last": "218.97972056",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/zeros_chi_7_order6.txt",
+      "sha256": "90188e17db927dfb38e37dcc72f4d52873c9c7a395bebc81c608719e5022663e",
+      "rows": 59,
+      "first": "5.1981162643",
+      "last": "99.3600000000",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/zeros_chi_7_order6_ext.txt",
+      "sha256": "00b2362ceecea054d9e89ed6c814be0af14c1fdc36b1da9349de422aa164938b",
+      "rows": 154,
+      "first": "5.1981161995",
+      "last": "218.66370442",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/zeros_chi_-104.txt",
+      "sha256": "3ff035efc4f810ef4b79c5f24aee326629a03cdb1d40359c1a62dc466aad5450",
+      "rows": 67,
+      "first": "1.6204958296",
+      "last": "69.0100000000",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/zeros_chi_5_order4.txt",
+      "sha256": "5547d4607099e4f3d86e5b1520299613e83adae724ba22e299d7c31d673c2d97",
+      "rows": 54,
+      "first": "6.1835782623",
+      "last": "99.0600000000",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/zeros_chi_-35.txt",
+      "sha256": "fc751b738629fa4466ea2b5fd007f69b4c85cdc144984c1f9f22188c51542e58",
+      "rows": 65,
+      "first": "1.6232141209",
+      "last": "79.4900000000",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/zeros_chi_-91.txt",
+      "sha256": "dbcce8cf4eb9982b91a5fa939c36770293d7550148b3ad7402e7ccfec7370069",
+      "rows": 55,
+      "first": "0.9184623623",
+      "last": "59.4900000000",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "inventoried_only_no_root_or_completeness_certificate"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt",
+      "sha256": "4371e1936c68491d94ffd4d9ae7a4f981fe1328e3d73745a884d0cbbbc0415f8",
+      "rows": 100000,
+      "first": "14.134725142",
+      "last": "74920.827498994",
+      "strictly_increasing": true,
+      "all_positive_finite": true,
+      "audit_status": "primary_identity_and_precision_audited"
+    }
+  ],
+  "scope": "Nine tracked ordinate files. L-function content has not been promoted from local generator output to certified complete zero lists."
+}

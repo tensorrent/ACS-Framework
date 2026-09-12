@@ -27,7 +27,7 @@ python -m src.paper_b.renormalized_stability
 python -m src.paper_c.killing_orthogonality
 ```
 
-Expected runtime: under 60 seconds on a standard laptop.
+Runtime depends on the host. The September 2026 audit replayed the original 42 tests successfully in about 149 seconds; the suite now also includes four large-u regression cases.
 
 ---
 
@@ -41,9 +41,9 @@ Expected runtime: under 60 seconds on a standard laptop.
 | `paper_a/betac_tan_beta.py` | β_c forces tan β = ±1 at tree level | Paper A §5 |
 | `paper_a/yukawa_no_go.py` | M_u = M_d when κ₁ = κ₂ (no-go theorem) | Paper A §5 |
 | `paper_a/tm1_pmns.py` | TM1 ansatz fails phenomenology | Paper A §6 |
-| `paper_b/explicit_formula_resolvent.py` | χ(ω) = Σ 1/(ω-γ_k) verified | Paper B §6 |
+| `paper_b/explicit_formula_resolvent.py` | Finite diagonal resolvent identity on supplied rounded ordinates | Paper B §6 |
 | `paper_b/wronskian_leibniz.py` | Wronskian fails Leibniz on scalar functions | Paper B §6 |
-| `paper_b/renormalized_stability.py` | von Koch boundedness in log coordinates | Paper B §6 |
+| `paper_b/renormalized_stability.py` | Fixed finite normalized sum and grid diagnostic; no RH-wide bound | Paper B §6 |
 | `paper_b/berry_keating_counting.py` | BK leading semiclassical counting matches RvM | Paper B §6 |
 | `paper_c/theorem_c.py` | ad_T_BL has minimal polynomial t(t-4/3)(t+4/3) | Paper C §3 |
 | `paper_c/killing_orthogonality.py` | tr([X,Y]·X) = 0 (theorem + 1000-trial scaling) | Paper C §5.3 |
@@ -76,10 +76,10 @@ acs_codebase/
 │   ├── paper_a/                 # Phenomenology and parameter pruning
 │   ├── paper_b/                 # Spectral reinterpretation
 │   └── paper_c/                 # Algebraic closure framework
-├── tests/                       # pytest verification suite (flat; 42 assertions)
+├── tests/                       # pytest verification suite (46 collected cases)
 │   ├── conftest.py
 │   ├── test_paper_a.py          # 14 assertions
-│   ├── test_paper_b.py          # 10 assertions
+│   ├── test_paper_b.py          # 14 collected cases
 │   └── test_paper_c.py          # 18 assertions
 ├── docs/
 │   ├── ledger.md                # Full status of every claim
@@ -93,7 +93,7 @@ acs_codebase/
 ## Verification ledger
 
 See `docs/ledger.md` for the complete status of every claim:
-- Rigorous (proved symbolically and/or numerically)
+- Historical “Rigorous” labels mix symbolic arguments and numerical observations; consult each claim's evidence and the Frontier queue for its scope.
 - Conjectural (flagged in papers as open)
 - Disproved (negative results that delimit model space)
 
@@ -128,3 +128,9 @@ Computations may be freely reproduced and extended; please cite when published.
 4. **§7 of Paper A (h̃/h = 2/3 interpretation).** Whether this is matrix-level proportionality or invariant-level ratio determines whether `paper_a/yukawa_no_go.py` is an unconditional theorem or a strong indication. The codebase tests both interpretations; see the script docstring.
 
 These limitations are documented honestly because they constrain the strength of specific claims in the papers.
+
+## Source and precision audit (12 September 2026)
+
+The canonical Paper B modules use 50 ordinates rounded to six decimals. The knife suite separately loads the 100,000-value Odlyzko file; it is not an input to these canonical tests. The repository file matches the primary table after restoring its final newline, and the primary table states an absolute uncertainty of 3e-9. Endpoints closer than the input uncertainty require refinement: a certified counterexample changes the rounded count from three to two. See the [source/data checkpoint](../../docs/frontier/2026-09-12-source-delta/README.md).
+
+The finite normalized sum is bounded for any finite set of real ordinates. That observation cannot establish the full arithmetic error's RH-dependent bound: in logarithmic coordinates the classical estimate is O(u²), with the explicit constant supplied by [Schoenfeld, Theorem 10, (6.2)](https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/S0025-5718-1976-0457374-X.pdf). The implementation now cancels the real exponential before evaluation to avoid artificial NaNs at u=710 and above.

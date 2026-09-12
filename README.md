@@ -14,6 +14,8 @@ The [subsequent integral delta](docs/frontier/2026-09-12-integral-delta/README.m
 
 **Mean-error continuation:** [Boundary-layer criterion and counterfamily](docs/frontier/2026-09-12-mean-delta/README.md) adds kernel-checked mean asymptotics, a nonzero total-error limit, and an explicit failure of checking only one cutoff.
 
+**Source and data audit:** [Primary tables, precision, and implementation correction](docs/frontier/2026-09-12-source-delta/README.md) verifies the ordinate-file provenance, records a certified rounded-count error, and fixes avoidable overflow in the canonical finite normalized sum.
+
 ---
 
 ## Repository Structure

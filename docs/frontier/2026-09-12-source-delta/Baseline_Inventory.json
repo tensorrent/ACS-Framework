@@ -1,0 +1,4411 @@
+{
+  "commit": "f75fa752d5b973ca3d4f6ca7e4641c75570e7d26",
+  "files": [
+    {
+      "path": ".claude/skills/acs-framework/SKILL.md",
+      "bytes": 18214,
+      "sha256": "7125569f3120d1cb6d0e9d84a246895dcdd0da0f4a674a66e6317ac52cf5c11f"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/code-map.md",
+      "bytes": 31525,
+      "sha256": "bcde2a26a256fdf2f0d972d85996876db5832380acded69c51b56c55f4479f9c"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/core-trilogy.md",
+      "bytes": 46532,
+      "sha256": "fe783f50d27c90294cb84d0f166b6e3d1987e01913d4eb57c5392a015299109e"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/figures-and-visuals.md",
+      "bytes": 16709,
+      "sha256": "7c58914c400ef973719ed5c5f9e78ec66a62d0c5a9a5397c01f8d886727b3ef5"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/glossary.md",
+      "bytes": 40422,
+      "sha256": "455f26b26f4501a62d6f6ee3796d65b26241ab4c18806e0f6fb955ccbee51ce2"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/governance-and-claims.md",
+      "bytes": 48141,
+      "sha256": "2cb2e8fad375ed0e60ab862cce20c7f8e0b5545ecb33fb56d2ac2094cfee452d"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/history.md",
+      "bytes": 24509,
+      "sha256": "9a1a3e0c2c1281932340de00f9cd592761b6a6cee6f814b5279111aee041bd84"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/methodology-ff06.md",
+      "bytes": 41459,
+      "sha256": "7da41987092b60af9327d7a0b529fe272b758d9a6205c26c67c5be1c09ecb50c"
+    },
+    {
+      "path": ".claude/skills/acs-framework/references/notes-and-models.md",
+      "bytes": 43401,
+      "sha256": "1f61912a4a2f6e483efc173672e9d28b9efbdf626b5216d98fa2367d732163a1"
+    },
+    {
+      "path": "GLOSSARY.md",
+      "bytes": 298024,
+      "sha256": "c8316d0e931e10ea75b23c665f2558e80d46367ff7c651611071b25164e0a377"
+    },
+    {
+      "path": "MANIFEST.md",
+      "bytes": 16963,
+      "sha256": "ab71966704b501570d96f6bb84c9d9f18cd4c4f57260858853740f524b4f67f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15239,
+      "sha256": "c3f3a40d03a58501214aeb449da3d9cd5696d8eaef29660826a62cb2c24f15e9"
+    },
+    {
+      "path": "code/acs_codebase/README.md",
+      "bytes": 6582,
+      "sha256": "0650b936a6a6fde7ce6448715bafa96f5171281d9d08d8d1c7ee921f872dc8d0"
+    },
+    {
+      "path": "code/acs_codebase/docs/citations.md",
+      "bytes": 7633,
+      "sha256": "a516a37fcfbc42d84fbe009f388f58d644a4472b66ee160a23e05fdf7a215ad4"
+    },
+    {
+      "path": "code/acs_codebase/docs/ledger.md",
+      "bytes": 9426,
+      "sha256": "8d069c4bc18bd4f7cb64d9811bab9982e8a574c586394d3010cdf6ea3cd20406"
+    },
+    {
+      "path": "code/acs_codebase/docs/numerical_pitfalls.md",
+      "bytes": 7282,
+      "sha256": "568667a3e436a2b8c4eed1a7c24055a7c52572e0361a6cd2b0540cefd6e50837"
+    },
+    {
+      "path": "code/acs_codebase/extras/ACS_all_76_scripts.py",
+      "bytes": 1068486,
+      "sha256": "36cf2f2515c96a43ec522d5772323e9bc107481745da63c4dbcbb72a06b0e78a",
+      "top_level_functions": [
+        "bracket",
+        "bracket",
+        "A",
+        "bracket",
+        "ckm_from_r",
+        "bracket",
+        "killing",
+        "bracket",
+        "check",
+        "section",
+        "run_automaton",
+        "E4",
+        "flatten",
+        "in_subspace",
+        "torsion_hamiltonian",
+        "F_N",
+        "F_star",
+        "dF",
+        "wronsk",
+        "E3",
+        "partition_function",
+        "Z_minus_1",
+        "Z_mp",
+        "Z_minus_1_mp",
+        "Z_SO3",
+        "bracket",
+        "embed_su3",
+        "koide_err",
+        "Z_full",
+        "Z_half_int",
+        "Z_integer",
+        "Z_DL",
+        "Z_norm",
+        "E",
+        "bracket",
+        "flatten",
+        "closure_defect",
+        "skew_hermitian_defect",
+        "enforce_traceless",
+        "chirality_map",
+        "E",
+        "bracket",
+        "flatten",
+        "sym",
+        "anti",
+        "closure_defect",
+        "skew_hermitian_defect",
+        "chirality_map",
+        "orthonormalize",
+        "closure_step",
+        "bracket",
+        "nearest_neighbour_matrix",
+        "E",
+        "bracket",
+        "casimir",
+        "dimension",
+        "weights",
+        "dynkin_to_cartesian",
+        "autocorrelation",
+        "cartan_project",
+        "sample_entropy",
+        "su3_in_su4",
+        "F_N_values",
+        "variance_over_segment",
+        "sieve",
+        "compute_FN",
+        "compute_FN_off",
+        "bracket",
+        "sm_rge",
+        "fritzsch_matrix",
+        "Z_SU2",
+        "Z_projected",
+        "Z_halfint_only",
+        "Z_reduced",
+        "Z_SU2",
+        "gellmann_4x4",
+        "commutator",
+        "bracket_np",
+        "E_np",
+        "A_np",
+        "S_np",
+        "bracket",
+        "bracket",
+        "bracket",
+        "chirality_map",
+        "compute_DI",
+        "DI_potential",
+        "z_single",
+        "z_gauss",
+        "entropy_saddle",
+        "area_saddle",
+        "exact_log2_fraction",
+        "entropy_exact",
+        "transfer_entropy_exact",
+        "run_automaton",
+        "f_quad",
+        "g_abs",
+        "g_sym",
+        "g_zero",
+        "f_abs",
+        "bracket",
+        "chirality_map",
+        "extract_theta0",
+        "rge_system",
+        "bracket",
+        "lie_deriv_density",
+        "lie_bracket",
+        "bracket",
+        "koide_angle_eq",
+        "bracket",
+        "bracket",
+        "bracket",
+        "koide_masses",
+        "koide_diag_matrix",
+        "build_acs_mass_matrix",
+        "ckm_residual",
+        "bracket",
+        "check_span",
+        "bracket",
+        "bracket",
+        "bracket",
+        "compute_ckm_bidoublet",
+        "bracket",
+        "yukawas",
+        "beta_quartics",
+        "full_beta_system",
+        "bracket",
+        "build_yukawa_acs",
+        "compute_ckm",
+        "lindblad_evolve",
+        "ptr_B",
+        "ptr_A",
+        "S",
+        "MI",
+        "koide",
+        "alpha_s",
+        "run_mass",
+        "run_to_scale",
+        "run_mass_2loop",
+        "ollivier_ricci",
+        "build_graph",
+        "ricci_flow_2d",
+        "compute_ricci_2d",
+        "ricci_flow_conformal",
+        "compute_T12",
+        "E",
+        "bracket",
+        "flatten",
+        "closure_defect",
+        "compactness_defect",
+        "orthonormalize",
+        "enforce_traceless",
+        "combined_step",
+        "random_traceless_gens",
+        "classify",
+        "E",
+        "bracket",
+        "killing_form",
+        "flatten",
+        "closure_defect",
+        "distance_to_sl3",
+        "closure_gradient_step",
+        "bracket",
+        "phi",
+        "koide_Q",
+        "fit_koide_A",
+        "kron3",
+        "bracket",
+        "lindblad_evolve",
+        "E",
+        "comm",
+        "flatten",
+        "in_subspace",
+        "E",
+        "comm",
+        "cross_corr",
+        "cross_corr_analytic",
+        "fit_koide",
+        "bracket",
+        "F_N_variance",
+        "E",
+        "bracket",
+        "koide_residual",
+        "bracket",
+        "Z_gauss_projected",
+        "bracket",
+        "bracket",
+        "killing",
+        "E",
+        "A",
+        "S",
+        "E",
+        "Antisym",
+        "Sym",
+        "K",
+        "torsion_coupling",
+        "build_hamiltonian_exact",
+        "spectral_index",
+        "chirality_expectations",
+        "bracket",
+        "chirality_map"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, simplify, pi, Matrix",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, simplify, Matrix, trace, diag",
+        "import numpy as np",
+        "from numpy.linalg import norm, svd",
+        "import numpy as np",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, symbols, solve, simplify, Symbol",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh, eig",
+        "from itertools import product as iprod",
+        "from numpy.linalg import svd",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "from scipy.special import zeta as riemann_zeta",
+        "import sys",
+        "import time",
+        "import numpy as np",
+        "from fractions import Fraction",
+        "from collections import Counter",
+        "from sympy import Matrix, Rational, zeros, eye, simplify, sqrt, I, Symbol, cos, sin, log, pprint",
+        "from sympy import diff",
+        "import itertools",
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "import mpmath",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "import scipy.optimize as opt",
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "from mpmath import mp, mpf, exp, pi, sqrt, fsum",
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank",
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh, svd",
+        "from scipy.optimize import minimize",
+        "import sympy as sp",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig",
+        "from scipy.linalg import expm",
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from mpl_toolkits.mplot3d import Axes3D",
+        "from mpl_toolkits.mplot3d.art3d import Poly3DCollection",
+        "import os",
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, eigvalsh",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "from scipy.linalg import expm",
+        "import numpy as np",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from mpmath import mp, zetazero, cos, log, sqrt, mpf, fsum, pi",
+        "import numpy as np",
+        "import time",
+        "import mpmath",
+        "from mpmath import mpf, mp, zetazero, log, cos, sin, sqrt, fsum",
+        "from mpmath import power as mppow",
+        "import numpy as np",
+        "from scipy.integrate import solve_ivp",
+        "from numpy.linalg import norm, eig",
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "import mpmath",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import matplotlib.patches as mpatches",
+        "import numpy as np",
+        "from matplotlib.patches import FancyArrowPatch",
+        "import os",
+        "from sympy import Matrix, I, Rational, zeros, eye, simplify, expand, symbols, sqrt, pprint, BlockMatrix, Symbol, Trace",
+        "import itertools",
+        "from sympy import Matrix as SympyMatrix",
+        "from sympy import Matrix, I, sqrt, Rational, zeros, eye, simplify, pprint, Symbol, symbols, GramSchmidt",
+        "from itertools import product",
+        "from sympy import solve, Eq",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, trace, diag, zeros, eye, simplify, Symbol, pi",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "import numpy as np",
+        "from mpmath import mp, mpf, exp, pi, sqrt, log, fsum",
+        "from scipy.optimize import brentq",
+        "from fractions import Fraction",
+        "from collections import Counter",
+        "from math import gcd",
+        "import sys",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig",
+        "from scipy.optimize import minimize",
+        "import numpy as np",
+        "from scipy.integrate import solve_ivp",
+        "from scipy.optimize import minimize",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank",
+        "from sympy import symbols, Function, Derivative, simplify, expand, Matrix, Symbol, Rational, sqrt, exp, log, integrate, factor, collect, Poly, pprint, oo, diff",
+        "import numpy as np",
+        "from mpmath import mp, zetazero, zeta, log, pi, sqrt, mpf, fsum",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.optimize import brentq",
+        "import numpy as np",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.patches import Wedge, FancyArrowPatch",
+        "import os",
+        "from matplotlib.patches import Circle",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, svd",
+        "from scipy.optimize import minimize",
+        "import sympy as sp",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from scipy.stats import chi2",
+        "import numpy as np",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, eig",
+        "from scipy.optimize import minimize",
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, det",
+        "from scipy.optimize import minimize",
+        "import numpy as np",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, symbols, solve, simplify, Symbol, pi, Matrix, trace, Derivative, Function, exp, cos, sin, log, oo, zoo, nan",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from scipy.optimize import fsolve, brentq",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from scipy.optimize import fsolve",
+        "from itertools import product as iprod",
+        "import numpy as np",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, svd, det",
+        "from scipy.optimize import minimize",
+        "import sympy as sp",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm",
+        "import os, matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import numpy as np",
+        "import numpy as np",
+        "from numpy.linalg import norm, det, inv, eigvalsh",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from scipy.linalg import expm",
+        "import os",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import eigvalsh, norm",
+        "from scipy.special import zeta as sp_zeta",
+        "import sympy as sp",
+        "from sympy import symbols, cos, sin, log, sqrt, Rational, pi, oo, diff, simplify, Matrix, Function, Symbol, exp, integrate, Abs, re, im, conjugate, I, trigsimp",
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank",
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, matrix_rank",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.optimize import minimize",
+        "from itertools import product as iproduct",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm",
+        "from sympy import Matrix, Rational, zeros, simplify",
+        "from sympy import Matrix, I, Rational, zeros, eye, simplify, sqrt, pprint, GramSchmidt",
+        "from mpmath import mp, zetazero, mpf",
+        "import numpy as np",
+        "import time",
+        "import numpy as np",
+        "from scipy.optimize import minimize",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from sympy import *",
+        "from mpmath import mp, zetazero, cos, sin, log, sqrt, mpf, fsum",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh",
+        "from scipy.optimize import minimize",
+        "import numpy as np",
+        "from mpmath import mp, mpf, exp, pi, sqrt, zetazero, fsum",
+        "from scipy.optimize import brentq",
+        "from numpy.linalg import norm",
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh",
+        "import sympy as sp",
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from itertools import combinations",
+        "import sympy as sp",
+        "from sympy import sqrt, Rational, pi, Matrix, trace, eye, diag, Symbol",
+        "from sympy import symbols, simplify, factor, expand",
+        "import numpy as np",
+        "import numpy as np",
+        "from fractions import Fraction",
+        "from itertools import product",
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "from scipy.optimize import minimize",
+        "from sympy import trigsimp",
+        "from scipy.linalg import expm",
+        "import mpmath",
+        "import mpmath",
+        "from math import factorial"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/README.md",
+      "bytes": 1965,
+      "sha256": "afa735ae9a8d36465323e68d5406bf7316891cb42292d4efc3173bef7d1712e4"
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_ads_cft_er_epr.py",
+      "bytes": 19360,
+      "sha256": "d74a47b071c2c26d02295057cbeedf54166433b970ab739029391485e8992b5a",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Matrix, Rational, sqrt, zeros, simplify, eye",
+        "from sympy import log as symlog, exp as symexp, Symbol"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_complete_sm.py",
+      "bytes": 17681,
+      "sha256": "624b0aa8c380d9587684b082aff7af3aa57b2dcd3062f1552f0ab7ab580151b4",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, simplify, pi, Matrix"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_fermions.py",
+      "bytes": 21036,
+      "sha256": "a803de29a344a57ae6a3b38f4773cc425e6b7d6337947b14ea79a1c51e1892ae",
+      "top_level_functions": [
+        "bracket",
+        "A"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, simplify, Matrix, trace, diag"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_final_wall.py",
+      "bytes": 3802,
+      "sha256": "cd12f883740db6f140cc2bd96fb753f991e2ab7be2813ebba9bae1624d2a33c7",
+      "top_level_functions": [
+        "bracket",
+        "ckm_from_r"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, svd"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_higgs_wall.py",
+      "bytes": 3550,
+      "sha256": "ddccf4e7a7c91723105c8f116bdc76c3124be0c25b86440262cf20c193d2398c",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, symbols, solve, simplify, Symbol"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_quantisation.py",
+      "bytes": 21601,
+      "sha256": "3bb1339e44d32f39be5a9d9e023487f7f5282d92f724db20c2ffea27562eba40",
+      "top_level_functions": [
+        "bracket",
+        "killing"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh, eig",
+        "from itertools import product as iprod",
+        "from numpy.linalg import svd"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_vacuum.py",
+      "bytes": 15407,
+      "sha256": "6290ef93e158976420d08f7c9f1aaf5819809836ce44648fef72b0093dfd318b",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "from scipy.special import zeta as riemann_zeta"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_verify_all.py",
+      "bytes": 26314,
+      "sha256": "5d9f72e9c6ef8057e2a7966e28bae48f0b121acb4f41dec3e1ef2c95f7ff5ef1",
+      "top_level_functions": [
+        "check",
+        "section",
+        "run_automaton",
+        "E4",
+        "flatten",
+        "in_subspace",
+        "torsion_hamiltonian",
+        "F_N",
+        "F_star",
+        "dF",
+        "wronsk",
+        "E3"
+      ],
+      "imports": [
+        "import sys",
+        "import time",
+        "import numpy as np",
+        "from fractions import Fraction",
+        "from collections import Counter",
+        "from sympy import Matrix, Rational, zeros, eye, simplify, sqrt, I, Symbol, cos, sin, log, pprint",
+        "from sympy import diff",
+        "import itertools"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_vs_er_epr_corrected.py",
+      "bytes": 9602,
+      "sha256": "7c16dd7f41a94dbdf9ba35fb9ca6afbb3adb46555ae1a5bfc9b74ac26cdd0723",
+      "top_level_functions": [
+        "bracket",
+        "K_inner",
+        "sl4_basis"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import norm as matnorm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/acs_vs_er_epr_test.py",
+      "bytes": 21560,
+      "sha256": "89bb9847109e8bda7bb848683f005590fb4573c4c82ac01d13f8c77d75b00780",
+      "top_level_functions": [
+        "killing_inner",
+        "killing_norm",
+        "bracket",
+        "project_to_direction",
+        "make_sl4_basis",
+        "reconstruction_error",
+        "block_compose",
+        "reconstruction_error_general"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, sqrt, zeros, eye, symbols, simplify",
+        "from scipy.linalg import norm as matnorm, expm",
+        "from scipy.linalg import expm as la_expm",
+        "from scipy.stats import linregress"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/and_gate_test.py",
+      "bytes": 15882,
+      "sha256": "5c7ef442f6e3e30bdd4523d1ac6c987565bb06eaeff08d5acaf60b848ab4a9af",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Function, Matrix, diff, simplify, sqrt, Rational",
+        "from sympy import IndexedBase, Idx, Symbol, expand, zeros, eye, solve",
+        "from sympy import cos, sin, pi, Eq, Derivative",
+        "import sympy as sp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/barbero_immirzi_correct.py",
+      "bytes": 10349,
+      "sha256": "bace0d2e0e01bf833c29f7c9dde778c33fe2ce7cba669b5abc6f0e3af651f92a",
+      "top_level_functions": [
+        "partition_function",
+        "Z_minus_1",
+        "Z_mp",
+        "Z_minus_1_mp",
+        "Z_SO3"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "import mpmath"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/bl_vev_projection.py",
+      "bytes": 20416,
+      "sha256": "529004441137e1f72207de0359675bed9efc295d2f71861a88dbd9ad59dda274",
+      "top_level_functions": [
+        "bracket",
+        "embed_su3",
+        "koide_err"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "import scipy.optimize as opt"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/chern_simons_projection.py",
+      "bytes": 10157,
+      "sha256": "3bdb66e86347958c6631dee9c29fc871a19b85428e32133acd21b37a725bda01",
+      "top_level_functions": [
+        "Z_full",
+        "Z_half_int",
+        "Z_integer",
+        "Z_DL",
+        "Z_norm"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "from mpmath import mp, mpf, exp, pi, sqrt, fsum"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/chirality_test.py",
+      "bytes": 9863,
+      "sha256": "9c5fb587f51b15bfc303a111bf3eb6a0bffee94e861dbcc2817780a9b54649ba",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "flatten",
+        "closure_defect",
+        "skew_hermitian_defect",
+        "enforce_traceless",
+        "chirality_map"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/chirality_uniqueness.py",
+      "bytes": 13323,
+      "sha256": "03662f4f991c3665116f590eb6146497781c8ed851222ccc1184ee67ed21cf60",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "flatten",
+        "sym",
+        "anti",
+        "closure_defect",
+        "skew_hermitian_defect",
+        "chirality_map",
+        "orthonormalize",
+        "closure_step"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/ckm_derivation.py",
+      "bytes": 20827,
+      "sha256": "aceb1077628b32caaa38dd1d865126c9c8c7a31726075b10aee7b55191c7406e",
+      "top_level_functions": [
+        "bracket",
+        "nearest_neighbour_matrix"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh, svd",
+        "from scipy.optimize import minimize",
+        "import sympy as sp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/colour_charges.py",
+      "bytes": 13741,
+      "sha256": "b0cc46937176efc3a4f3e28e97997d2278d4fbe4aa5fe7788039d198edc11bea",
+      "top_level_functions": [
+        "E",
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig",
+        "from scipy.linalg import expm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/colour_geometry.py",
+      "bytes": 16034,
+      "sha256": "f634cfac0897b2ad895a72bef4ba7f951520025b88c32920ee33547b094eee80",
+      "top_level_functions": [
+        "casimir",
+        "dimension",
+        "weights",
+        "dynkin_to_cartesian"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from mpl_toolkits.mplot3d import Axes3D",
+        "from mpl_toolkits.mplot3d.art3d import Poly3DCollection",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/composition_law_test.py",
+      "bytes": 22931,
+      "sha256": "7e21576d7d6c14fa5b250dcd7dedb998cc123cadfc42a873d4ab3cb0aed8ebd1",
+      "top_level_functions": [
+        "make_sl4_rational",
+        "bracket",
+        "rand_sl4",
+        "flat"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, sqrt, symbols, expand, simplify, zeros"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/core_rope_test.py",
+      "bytes": 15594,
+      "sha256": "4545f19906be3e49b795431183c3efde413f7a3a65e7c75f7199102b9ca57660",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, zeros, eye, symbols",
+        "from sympy import Symbol, factor, expand"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/devolution.py",
+      "bytes": 19034,
+      "sha256": "7a6df7d90e88dc5d0d11ee672409a44658962a75160a00876b352e408d8377df",
+      "top_level_functions": [
+        "autocorrelation",
+        "cartan_project",
+        "sample_entropy"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, eigvalsh",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os",
+        "from scipy.linalg import expm",
+        "from scipy.linalg import expm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/emergence_quantum_suite.py",
+      "bytes": 17185,
+      "sha256": "f2512adb382abe5b019b03bbec0ef8117972d1a0f481ec26980f9cf11550ebd4",
+      "top_level_functions": [
+        "A1_sloppy_spectrum",
+        "_pmf1",
+        "A2_clt_fisher_collapse",
+        "B_qubit_wheel",
+        "C_entanglement_spectrum",
+        "D_caste_bifurcation_voxel_state",
+        "E_world_count_substrate_sum",
+        "F_resolution_floor_bifurcation"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "import scipy.sparse as sp, scipy.sparse.linalg as spla"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/eml_vs_acs_test.py",
+      "bytes": 14759,
+      "sha256": "2f0820d582a100ff015c737c9d8e969d59d0cb609574216c188963abf391cf28",
+      "top_level_functions": [
+        "make_sl4"
+      ],
+      "imports": [
+        "import sympy as sp",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/er_epr_audit.py",
+      "bytes": 18181,
+      "sha256": "7e37a0d8c70170aa0b0b9febc5b20e6dbc4c84669ee34c315f60f58c00f8dc0c",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, sqrt, symbols, simplify, zeros, eye",
+        "from sympy import Symbol, I as sym_I, exp, cos, sin, pi"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/er_epr_reverse.py",
+      "bytes": 16962,
+      "sha256": "0aad12bf5216a217fdfc14f1e1e39e029b8cbe4e79f39ebf7c025549410e648e",
+      "top_level_functions": [
+        "commutator"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Matrix, Rational, sqrt, zeros, simplify",
+        "from sympy import I, cos, sin, exp, Symbol"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/fermion_reps.py",
+      "bytes": 3767,
+      "sha256": "da276cbc9a90b62957622d563cd66f8cdae493043dbc19ec0df0c8c2c7ff245d",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/fermion_reps_full.py",
+      "bytes": 14476,
+      "sha256": "da4935d17da5e9a9f37f29476632a99cafa029f9a1e94a68ab940a787ce792dc",
+      "top_level_functions": [
+        "su3_in_su4"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/fn_n200.py",
+      "bytes": 3271,
+      "sha256": "0c95499aa4f6e8bdb7b5844a7361b23cc70f7168dfd9b36d9592a5e12a58134d",
+      "top_level_functions": [
+        "F_N_values",
+        "variance_over_segment"
+      ],
+      "imports": [
+        "from mpmath import mp, zetazero, cos, log, sqrt, mpf, fsum, pi",
+        "import numpy as np",
+        "import time"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/fn_stationarity_fast.py",
+      "bytes": 6932,
+      "sha256": "8e38341c919cd87a0f5b179cda26d7af45199a4f351a64bcc149ddfff3661f4e",
+      "top_level_functions": [
+        "sieve",
+        "compute_FN",
+        "compute_FN_off"
+      ],
+      "imports": [
+        "import mpmath",
+        "from mpmath import mpf, mp, zetazero, log, cos, sin, sqrt, fsum",
+        "from mpmath import power as mppow"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/four_computations.py",
+      "bytes": 11256,
+      "sha256": "4bf7f60165baa285f43c695293d6a02d0e79836c74cd216acca0446279d55f6e",
+      "top_level_functions": [
+        "bracket",
+        "sm_rge",
+        "fritzsch_matrix"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.integrate import solve_ivp",
+        "from numpy.linalg import norm, eig"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/frenet_gauss_quat.py",
+      "bytes": 20884,
+      "sha256": "38ca33d13943371ce56106eb72968acba830c8bc58be3bea8db6af74426f9cb8",
+      "top_level_functions": [
+        "cross_sym"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, symbols, sqrt, Rational, diff, simplify, eye, zeros",
+        "from sympy import Function, cos, sin, pi, I, Symbol, expand, factor",
+        "from sympy import exp, Derivative, trigsimp, solve",
+        "from sympy import Matrix"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/gamma_discrepancy.py",
+      "bytes": 15052,
+      "sha256": "f647e83a7f9412a83059381644259025169504f67d33512738ed8c7ac641424b",
+      "top_level_functions": [
+        "Z_SU2",
+        "Z_projected",
+        "Z_halfint_only",
+        "Z_reduced"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import brentq",
+        "import mpmath"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/generate_figures.py",
+      "bytes": 13006,
+      "sha256": "5ecd75842a2be1e3cd9e35be8f09d647baac827489f0cc567c555e035f053756",
+      "top_level_functions": [
+        "Z_SU2"
+      ],
+      "imports": [
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import matplotlib.patches as mpatches",
+        "import numpy as np",
+        "from matplotlib.patches import FancyArrowPatch",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/gl4_asymmetry_map.py",
+      "bytes": 13675,
+      "sha256": "8004308bf4586dbd52e62ea148ebf53bd3906bb5b9b55a8a4ba3a93398af18f8",
+      "top_level_functions": [],
+      "imports": [
+        "from sympy import Matrix, I, Rational, zeros, eye, simplify, expand, symbols, sqrt, pprint, BlockMatrix, Symbol, Trace",
+        "import itertools",
+        "from sympy import Matrix as SympyMatrix"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/gl4_exact.py",
+      "bytes": 15593,
+      "sha256": "bb23d9a7607810303aa326bdcdea103577e9cbd4375e5a20d0f68980939c955d",
+      "top_level_functions": [
+        "gellmann_4x4",
+        "commutator"
+      ],
+      "imports": [
+        "from sympy import Matrix, I, sqrt, Rational, zeros, eye, simplify, pprint, Symbol, symbols, GramSchmidt",
+        "from itertools import product",
+        "from sympy import solve, Eq"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/gw_torsion.py",
+      "bytes": 16298,
+      "sha256": "268e2f29706400df06a51d63620ed64fcad8165b871e31bf76fdeab280d3c76e",
+      "top_level_functions": [
+        "bracket_np",
+        "E_np",
+        "A_np",
+        "S_np"
+      ],
+      "imports": [
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, trace, diag, zeros, eye, simplify, Symbol, pi",
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/higgs_derivation.py",
+      "bytes": 12576,
+      "sha256": "695b0cda7430a402d3a67679978686e09e6b60ad1c6fbf291257fd561900235f",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/higgs_mass_ratio.py",
+      "bytes": 16023,
+      "sha256": "d7cdf5e658c8686500eb99ed6b6e749c9a699b3132efc0ad4130f7c1058363a3",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/higgs_potential.py",
+      "bytes": 16065,
+      "sha256": "6fdfd08df0ab47a5c0de44247d6a6fb74f773da0d794b0aa966d627a81091015",
+      "top_level_functions": [
+        "bracket",
+        "chirality_map",
+        "compute_DI",
+        "DI_potential"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/horizon_puncture_saddle.py",
+      "bytes": 13533,
+      "sha256": "d760aa086c54a29de4e9a1aca83295b6b7269d21bd3a9a2a83416a8e5c606d81",
+      "top_level_functions": [
+        "z_single",
+        "z_gauss",
+        "entropy_saddle",
+        "area_saddle"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from mpmath import mp, mpf, exp, pi, sqrt, log, fsum",
+        "from scipy.optimize import brentq"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/integer_acs.py",
+      "bytes": 10777,
+      "sha256": "acdc226027f0e6bb6116a9cfab43dc4672c6943d1627f6de40c51d1f396f8c58",
+      "top_level_functions": [
+        "exact_log2_fraction",
+        "entropy_exact",
+        "transfer_entropy_exact",
+        "run_automaton",
+        "f_quad",
+        "g_abs",
+        "g_sym",
+        "g_zero",
+        "f_abs"
+      ],
+      "imports": [
+        "from fractions import Fraction",
+        "from collections import Counter",
+        "from math import gcd",
+        "import sys",
+        "import mpmath",
+        "import mpmath"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/koide_clebsch_gordan.py",
+      "bytes": 13464,
+      "sha256": "e612c8095adc1f883296b4012017535512ff2d5189903f8dafd009fabc1186f8",
+      "top_level_functions": [
+        "bracket",
+        "chirality_map"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/koide_rg_flow.py",
+      "bytes": 17754,
+      "sha256": "8e4e662d1dcbef5908b81f9d712aea4b18c1b7d82dbd7acb2113d62dfb44527e",
+      "top_level_functions": [
+        "extract_theta0",
+        "rge_system"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.integrate import solve_ivp",
+        "from scipy.optimize import minimize",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/layered_resolution.py",
+      "bytes": 4147,
+      "sha256": "2a889847177a8d2f2fde6a3f6623e409e9accff0c32a248691a400a4c94bb5d8",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/lemma29_verify.py",
+      "bytes": 9405,
+      "sha256": "55c5b66be11136d80e62ddadb9d018e047518bb25b902b5391fb2311a816480e",
+      "top_level_functions": [
+        "lie_deriv_density",
+        "lie_bracket"
+      ],
+      "imports": [
+        "from sympy import symbols, Function, Derivative, simplify, expand, Matrix, Symbol, Rational, sqrt, exp, log, integrate, factor, collect, Poly, pprint, oo, diff",
+        "from sympy import trigsimp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/mersenne_bridge.py",
+      "bytes": 19538,
+      "sha256": "263e6cdbfac3ff5856ec2498aee901c5e7d774d9a5b1c30f76e48901175ec6b3",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from mpmath import mp, zetazero, zeta, log, pi, sqrt, mpf, fsum",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/neutrino_exact.py",
+      "bytes": 16291,
+      "sha256": "03eb9eeafe1b5b0dfc3e965900e368a14607abd0b6294b56c39ff542b06a78bd",
+      "top_level_functions": [
+        "bracket",
+        "koide_angle_eq"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.optimize import brentq"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/neutrino_honest.py",
+      "bytes": 4914,
+      "sha256": "fe1f7ad9e49379a2b218e23d8f20b940262e3b240093aff1dce9665c8940501c",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/neutrino_seesaw.py",
+      "bytes": 13030,
+      "sha256": "8ad18c7a07e965b70d0584069966700036fef05e63d7c4b0eafe9abc7edfd9c3",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/neutrino_seesaw_v2.py",
+      "bytes": 8679,
+      "sha256": "72bb4a70505f3c309807f7171a2e6d9c069fbfb26c40fa9582438ac163a9e634",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/newton_colour_music.py",
+      "bytes": 15250,
+      "sha256": "48218d4e5c9a26f526bb6f9aedd764c3359593158757ec5e8d20d86c7f6c47d7",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.patches import Wedge, FancyArrowPatch",
+        "import os",
+        "from matplotlib.patches import Circle"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/paper_b_plasma.py",
+      "bytes": 19127,
+      "sha256": "63b0a9dfd075dc2cb0d564309a33f828d75789fbd26ffff03cbabca7d4763c4a",
+      "top_level_functions": [
+        "phi_k",
+        "phi_k_prime",
+        "wronskian"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.stats import linregress",
+        "from scipy.signal import periodogram",
+        "from sympy import symbols, sqrt, pi, I as sym_I, simplify, diff, cos, sin, exp",
+        "from scipy.signal import find_peaks"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/paper_b_resolvent.py",
+      "bytes": 17926,
+      "sha256": "e38160dab476a9d371a6bbaff5de253c38dc0a7d864c0cca8d1de7f89dfc9ec6",
+      "top_level_functions": [
+        "chi",
+        "trace_resolvent",
+        "W",
+        "W_num",
+        "delta_renorm"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import eigh",
+        "from scipy.stats import linregress",
+        "from sympy import Function, symbols, diff, simplify",
+        "from scipy.stats import linregress"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/pati_salam_ckm.py",
+      "bytes": 17362,
+      "sha256": "08f550a5a3fdf2d88be71bc0ac81a0dbcd2ea5feaa8ac03f6e48ec4c496ad90d",
+      "top_level_functions": [
+        "bracket",
+        "koide_masses",
+        "koide_diag_matrix",
+        "build_acs_mass_matrix",
+        "ckm_residual"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, svd",
+        "from scipy.optimize import minimize",
+        "import sympy as sp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase10_multiangle.py",
+      "bytes": 22784,
+      "sha256": "9a62468cdb4919cd8ecdba0dd7533ddc771035cb11e3065ded1e81d3a5c186e0",
+      "top_level_functions": [
+        "bracket",
+        "check_span"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase10_rigorous.py",
+      "bytes": 26628,
+      "sha256": "fd48968b2b6f9a6cc0b66c7815bb0f7e02327dcd254917d4256497524207b00b",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from scipy.stats import chi2"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase11_tests.py",
+      "bytes": 13386,
+      "sha256": "84edd99462e46b5600d1f7eb730a060438e107c51c9b756358fcb418ec0d23f1",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase12_task1_pmns.py",
+      "bytes": 14741,
+      "sha256": "4f8ab5e1058c77cf3c719149ebf95b91ec036ddede9821755e87c8d168caa3a1",
+      "top_level_functions": [
+        "make_sl4_basis",
+        "pmns_from_matrices",
+        "ansatz_angles"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Matrix, sqrt, Rational, eye, zeros, simplify",
+        "from sympy import Symbol, atan2, asin, cos, sin, pi, N, nsimplify",
+        "from scipy.optimize import minimize, fsolve",
+        "import itertools",
+        "from scipy.linalg import svd"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase13_bra_tests.py",
+      "bytes": 25008,
+      "sha256": "7503a331e8a3de7d207cd84d3120ea1af02ae56e37437ccb17c39b3b37ad68ea",
+      "top_level_functions": [
+        "quat_mul",
+        "quat_exp",
+        "fcc_distance",
+        "stability_test"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import numpy as np",
+        "from sympy import Matrix, symbols, Rational, sqrt, simplify, cos, sin, pi",
+        "from sympy import exp, I, Symbol, zeros, eye, expand, factor, trigsimp",
+        "from scipy.linalg import expm, norm",
+        "from sympy import isprime, primerange",
+        "from collections import Counter",
+        "from scipy.stats import kstest"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase3_remaining.py",
+      "bytes": 14467,
+      "sha256": "502e84c888e6f14125413b6c87025618a7a7f4457925597f6343519bf09bea6d",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase48_close_math.py",
+      "bytes": 17996,
+      "sha256": "287ab8cccba73f4a022eae87e4fbf3ee75b0faf5943b7e9dcb7cd40ce33d3cff",
+      "top_level_functions": [
+        "sl_n_basis",
+        "random_traceless",
+        "bracket",
+        "scaling_test",
+        "scaling_test_Y",
+        "summarize",
+        "to_coords",
+        "from_coords",
+        "orthogonal_complement_probe"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, zeros, eye, symbols, simplify, sqrt",
+        "from sympy import nsimplify, trace as symtrace",
+        "from scipy.linalg import null_space",
+        "from sympy import MatrixSymbol, symbols"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase50_vacuum.py",
+      "bytes": 3978,
+      "sha256": "6b11a290e38be834f9369af4824999db398c3e1ca5ec712c69c30adf47daa0eb",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from decimal import Decimal, getcontext"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase51_tanbeta.py",
+      "bytes": 13558,
+      "sha256": "99f5b7b86996c6ed3ddbf7c8e3e21314e91ae00496a7b182e9c4a18a9499004d",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, sqrt, Rational, simplify, diff, solve, expand",
+        "from sympy import Symbol, cos, sin, atan2, pi, log as symlog",
+        "from sympy import Matrix, zeros, eye, I as sym_I, re, im"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase52_yukawa.py",
+      "bytes": 12938,
+      "sha256": "435190b8864551ef76a67df6c81ef53056561640d5f97ff0b365a27fcfbdb4bd",
+      "top_level_functions": [
+        "ckm_wolfenstein"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import minimize, least_squares",
+        "from scipy.linalg import svd"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase55_holonomy_corrected.py",
+      "bytes": 8060,
+      "sha256": "8a345c5d0a72ddc19b5ad47778fcea55f7737669e6c7524a7d3251052a0b102e",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase5_1_ckm.py",
+      "bytes": 15585,
+      "sha256": "d1ab0fa5c80dbd5f7e633624de967a6a2f8e2029bbadc037c58bbcdd3b00e1e6",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, eig",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase5_ckm.py",
+      "bytes": 14141,
+      "sha256": "79884b94fea943298edd2a580d38dd465b9609015bb86ebf44fd32884cb7d9c4",
+      "top_level_functions": [
+        "bracket",
+        "compute_ckm_bidoublet"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, det",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase6_dynamics.py",
+      "bytes": 18962,
+      "sha256": "04ebb30bb52b6589bfa9432f1b55c5df80b295331af979692d2353d52141a6ee",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import sympy as sp",
+        "from sympy import Rational, sqrt, symbols, solve, simplify, Symbol, pi, Matrix, trace, Derivative, Function, exp, cos, sin, log, oo, zoo, nan",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase7_qfp_yukawa.py",
+      "bytes": 12638,
+      "sha256": "1e6b31b9db5460611ac6f21c35507139b25d94c530a358fa593489c11abc8549",
+      "top_level_functions": [
+        "yukawas",
+        "beta_quartics"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import fsolve, brentq",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase8_full_qfp.py",
+      "bytes": 18090,
+      "sha256": "8ccf48ad3cb16647653d382487bf809a5f4ac2c89f68b569a652a74fa1a5b67d",
+      "top_level_functions": [
+        "full_beta_system"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import fsolve",
+        "from itertools import product as iprod"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/phase9_final.py",
+      "bytes": 10802,
+      "sha256": "5f7c6483323527810720865c2617366072c2b880c286725b90cf2b7a0b9114d7",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/ps_yukawa_full.py",
+      "bytes": 19458,
+      "sha256": "f6921bc2f7621da39f676ce59b9da52661489fe29cefc82fcc217bf61dcbb918",
+      "top_level_functions": [
+        "bracket",
+        "build_yukawa_acs",
+        "compute_ckm"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, svd, det",
+        "from scipy.optimize import minimize",
+        "import sympy as sp",
+        "from math import factorial"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/quantum_acs_2qubit.py",
+      "bytes": 6138,
+      "sha256": "433de6392bbd6b0b31d3fea701408dd373970a931e56f12a122d2d0d61c43ba6",
+      "top_level_functions": [
+        "lindblad_evolve",
+        "ptr_B",
+        "ptr_A",
+        "S",
+        "MI"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm",
+        "import os, matplotlib",
+        "import matplotlib.pyplot as plt"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/quark_koide_gut.py",
+      "bytes": 12708,
+      "sha256": "b4d186ebfa4e9ae017eb584db4b3a182e0da166bae00f43b5cb90e8d7e94c04b",
+      "top_level_functions": [
+        "koide",
+        "alpha_s",
+        "run_mass",
+        "run_to_scale",
+        "run_mass_2loop"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/ricci_flow.py",
+      "bytes": 19371,
+      "sha256": "4976da5c407b188941c6473e1269316dc049272a5187a032242f590f6e73e196",
+      "top_level_functions": [
+        "ollivier_ricci",
+        "build_graph",
+        "ricci_flow_2d",
+        "compute_ricci_2d",
+        "ricci_flow_conformal"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, det, inv, eigvalsh",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from scipy.linalg import expm",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/riemann_curvature_palatini.py",
+      "bytes": 12187,
+      "sha256": "ab10fd322247a81d431961bfb2a4c889645d01f73e0d3a217355ab814ca25a55",
+      "top_level_functions": [
+        "_simp",
+        "_iszero",
+        "christoffel",
+        "riemann",
+        "ricci",
+        "ricci_scalar",
+        "lower_first",
+        "covariant_derivative_metric",
+        "kretschmann",
+        "main"
+      ],
+      "imports": [
+        "import sympy as sp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/riemann_scaled_final.py",
+      "bytes": 2019,
+      "sha256": "5991ecf7b554cfddec05dfc2e0b465b0fc9232c6fb0093abcb54c38a9a2e61a6",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/riemann_tensor.py",
+      "bytes": 22100,
+      "sha256": "be69fecd868a3b7a0c7d364207bf1cccff17698483ae4adbea40524f16ce7639",
+      "top_level_functions": [
+        "compute_T12"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import eigvalsh, norm",
+        "from scipy.special import zeta as sp_zeta",
+        "import sympy as sp",
+        "from sympy import symbols, cos, sin, log, sqrt, Rational, pi, oo, diff, simplify, Matrix, Function, Symbol, exp, integrate, Abs, re, im, conjugate, I, trigsimp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/russell_spiral.py",
+      "bytes": 16383,
+      "sha256": "16668c4141ee64b4fbb23afed6b7b7631682365d6ea7fe852a17087c444dd663",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/selection_full.py",
+      "bytes": 10186,
+      "sha256": "614c2372305188f32c3bc7b741fe564c5631e36b83e1eaf2455cf0a09df6fccf",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "flatten",
+        "closure_defect",
+        "compactness_defect",
+        "orthonormalize",
+        "enforce_traceless",
+        "combined_step",
+        "random_traceless_gens",
+        "classify"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, matrix_rank"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/selection_principle.py",
+      "bytes": 10007,
+      "sha256": "15938b79184c388286c46c0cd96b95c18a732649526da08b6eae8253507c7d28",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "killing_form",
+        "flatten",
+        "closure_defect",
+        "distance_to_sl3",
+        "closure_gradient_step"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, svd, matrix_rank"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/seven_tests.py",
+      "bytes": 27191,
+      "sha256": "8cfeb097ec68fe1df5a16a047c23079b43b91b1aa56a563599afe5480305893e",
+      "top_level_functions": [
+        "bracket",
+        "phi",
+        "koide_Q",
+        "fit_koide_A"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.optimize import minimize",
+        "from itertools import product as iproduct"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/spin_network_lindblad.py",
+      "bytes": 12800,
+      "sha256": "cc8ef4be9baa3c85ee0457646cb0731d93e88de5a813e9370835b256ce982b69",
+      "top_level_functions": [
+        "kron3",
+        "bracket",
+        "lindblad_evolve"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from scipy.linalg import expm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/su3_decomposition.py",
+      "bytes": 6839,
+      "sha256": "698ed67e2eddc1a76095424662aa4a54ffa8eb8c8ae92ce32e3eaed108dba499",
+      "top_level_functions": [
+        "E",
+        "comm",
+        "flatten",
+        "in_subspace"
+      ],
+      "imports": [
+        "from sympy import Matrix, Rational, zeros, simplify"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/su3_torsion_intersection.py",
+      "bytes": 11875,
+      "sha256": "bb8c019ade4d8f6516742d0358655e2f371f9f54dcfa7afb6a5d5f26680b1648",
+      "top_level_functions": [
+        "E",
+        "comm"
+      ],
+      "imports": [
+        "from sympy import Matrix, I, Rational, zeros, eye, simplify, sqrt, pprint, GramSchmidt"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/t4_converse.py",
+      "bytes": 6513,
+      "sha256": "0221105a432a78e1d2b22b318109044966328c0ebd4568c25dcf0a159786cd17",
+      "top_level_functions": [
+        "cross_corr",
+        "cross_corr_analytic"
+      ],
+      "imports": [
+        "from mpmath import mp, zetazero, mpf",
+        "import numpy as np",
+        "import time"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task1_tm1_redo.py",
+      "bytes": 17909,
+      "sha256": "8f816d116855688ff4bd6c312d150c82f6806cd9a90f92140895486bba63a1a2",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, symbols, sqrt, Rational, simplify, cos, sin",
+        "from sympy import I as sym_I, exp, zeros, eye, solve, expand, conjugate",
+        "from sympy import atan2, asin, pi, N, nsimplify"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task2_lagrangian.py",
+      "bytes": 12539,
+      "sha256": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Matrix, Rational, sqrt, simplify, I as sym_I",
+        "from sympy import exp, cos, sin, pi, zeros, eye, expand, factor, trace",
+        "from sympy import IndexedBase, Idx, Function, Symbol, Derivative"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task_A_parameters.py",
+      "bytes": 12602,
+      "sha256": "4952747c729ec3439617a70a90f43861f369009f1ccc60668fb2d6850d2e518d",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, zeros, symbols, sqrt, solve, simplify",
+        "from sympy import Symbol, Eq, expand, factor, collect, log as symlog"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task_B_theta13.py",
+      "bytes": 12630,
+      "sha256": "c900ba069401d5a6eb06dc270da8772229cb1bfdb8ba8cea6a43047a3b003834",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, sqrt, sin, cos, asin, atan, pi, Rational",
+        "from sympy import simplify, solve, expand, Eq, nsimplify, N",
+        "from scipy.optimize import fsolve"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task_C_rigorous.py",
+      "bytes": 9849,
+      "sha256": "68835f67e90a864b3db4973dea3ce0f5f98bf354af53892f89f2eab4328dfe8a",
+      "top_level_functions": [
+        "make_basis",
+        "bracket",
+        "trace_inner",
+        "mobius",
+        "free_lie_dim"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Matrix, Rational, zeros, eye, symbols, factor, simplify",
+        "from sympy import det, nsimplify, Symbol, expand, collect, I, pretty",
+        "from itertools import product",
+        "from sympy import divisors, factorint",
+        "from math import gcd"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/task_D_lagrangian.py",
+      "bytes": 13918,
+      "sha256": "3ef5945ec563542c10db7e80a52a8a314d9f4bf8ea567fbbd6a5dbd85810a0c0",
+      "top_level_functions": [],
+      "imports": [
+        "import numpy as np",
+        "from sympy import symbols, Function, Matrix, sqrt, Rational, eye, simplify, diff",
+        "from sympy import Symbol, Eq, expand, tensorcontraction, Indexed, IndexedBase"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/test_conjecture_condensate_collapse.py",
+      "bytes": 8242,
+      "sha256": "f22eef9a7d3dd5bf55a2cba95b24d9f825dc61c27164fc7b7016400784750eeb",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "vec"
+      ],
+      "imports": [
+        "from sympy import Matrix, Rational, zeros"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/test_conjecture_em_torsion_annihilator.py",
+      "bytes": 8972,
+      "sha256": "f6322b7a839f1218757b5a84704f83f67ad4e351656edfa80911d67fe29c29f2",
+      "top_level_functions": [
+        "E",
+        "bracket",
+        "vec",
+        "total_coupling"
+      ],
+      "imports": [
+        "from sympy import Matrix, Rational, zeros, eye"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/test_conjecture_hypercone_projection.py",
+      "bytes": 6847,
+      "sha256": "9513e3efa97f15eccb307b996a0bfa592243a8878f0daced0dd13e07e3ef4b5c",
+      "top_level_functions": [
+        "E"
+      ],
+      "imports": [
+        "from sympy import Matrix, Rational, symbols, sqrt, simplify, zeros, factor, I as sI",
+        "import numpy as np",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/theta0_cabibbo.py",
+      "bytes": 12877,
+      "sha256": "f44dcd49db9f194bf51362c005704b3443c554dfeb6ee4a68157578de0f246a0",
+      "top_level_functions": [
+        "fit_koide"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/theta0_derivation_suite.py",
+      "bytes": 13029,
+      "sha256": "4f7fc9af7bd5eafe43cefcd104ac3364ea276c39254294254053463036929d6d",
+      "top_level_functions": [
+        "koide_Q",
+        "koide_phase",
+        "koide_c",
+        "positivity_dmax",
+        "step1_target",
+        "step2_mechanism_negative",
+        "step3_positivity_deflation",
+        "step5_corrected_geometry",
+        "final_standing"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import itertools"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/three_fruit.py",
+      "bytes": 18819,
+      "sha256": "e9c65f43a9c25935ee9fdf794b5c0efaa0a23f07654e947449e0297fc90396ec",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/three_gaps.py",
+      "bytes": 16008,
+      "sha256": "f55c4bd90b985d70bbdcd9489b373b0bcfb6527a54d2f16ef18ff8291431ed86",
+      "top_level_functions": [
+        "F_N_variance",
+        "E"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import *",
+        "from mpmath import mp, zetazero, cos, sin, log, sqrt, mpf, fsum"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/three_generations.py",
+      "bytes": 19363,
+      "sha256": "a85939db4bd073996e69222c01a7fe35db64771eb0a5c74304da859993eb3932",
+      "top_level_functions": [
+        "bracket",
+        "koide_residual"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/three_problems.py",
+      "bytes": 15754,
+      "sha256": "d8ec29abdaeee7502c32fdb896baf68931c202abc5d2a0dd6e84a71b993e51fa",
+      "top_level_functions": [
+        "bracket",
+        "Z_gauss_projected"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from mpmath import mp, mpf, exp, pi, sqrt, zetazero, fsum",
+        "from scipy.optimize import brentq",
+        "from numpy.linalg import norm"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/torsion_causal.py",
+      "bytes": 18489,
+      "sha256": "8fc04f4588db83623d09b7526715db8b882f967c47c21e309cae832f7ceaf94c",
+      "top_level_functions": [
+        "bracket"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eig, eigvalsh",
+        "import sympy as sp"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/torsion_condensation_holonomy.py",
+      "bytes": 5716,
+      "sha256": "8044df1d1b7ac2cd6c4dd4ee14be7517ee446b50d22ef099f28562140685936e",
+      "top_level_functions": [
+        "bracket",
+        "E"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from fractions import Fraction"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/torsion_hierarchy.py",
+      "bytes": 14854,
+      "sha256": "094ef35298dd02fc43728d7815c6ebb67309c1bd096308a0dfff4a3d664e9b51",
+      "top_level_functions": [
+        "bracket",
+        "killing",
+        "E",
+        "A",
+        "S"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm, eigvalsh",
+        "from itertools import combinations"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/torsion_higgs_vacuum.py",
+      "bytes": 14999,
+      "sha256": "f11fa20c9b5a8923e0ba77e661dd03c571fff95b3ac00ed5e12c316b700cb158",
+      "top_level_functions": [
+        "E",
+        "Antisym",
+        "Sym",
+        "K",
+        "torsion_coupling"
+      ],
+      "imports": [
+        "import sympy as sp",
+        "from sympy import sqrt, Rational, pi, Matrix, trace, eye, diag, Symbol",
+        "from sympy import symbols, simplify, factor, expand",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/torsion_lattice.py",
+      "bytes": 7324,
+      "sha256": "5238b41d12c50fc83d6bbd5739dcd4609be37f6cd19e3fdcc3745bd8e5aedbf6",
+      "top_level_functions": [
+        "build_hamiltonian_exact",
+        "spectral_index",
+        "chirality_expectations"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from fractions import Fraction",
+        "from itertools import product"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/extras/vacuum_theta0.py",
+      "bytes": 16215,
+      "sha256": "5bf683ecf153e79cdd7e5b936af702281f909dc8e630ccb971fb24210370b157",
+      "top_level_functions": [
+        "bracket",
+        "chirality_map"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from numpy.linalg import norm",
+        "from scipy.optimize import minimize"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/requirements.txt",
+      "bytes": 48,
+      "sha256": "7faeed52ed0892fe3f1820e96e069adc3c853093ccc488b7763b92f5405a8d35"
+    },
+    {
+      "path": "code/acs_codebase/src/__init__.py",
+      "bytes": 216,
+      "sha256": "cca8b74fb563b1e7e1359a36eb9135a3eea07ad17d46f07b16f817e5130c4d66",
+      "top_level_functions": [],
+      "imports": []
+    },
+    {
+      "path": "code/acs_codebase/src/common/__init__.py",
+      "bytes": 591,
+      "sha256": "28206d41f13dfe7e173e5453156e9f992e2036e4dd51ab62fa44246872eadcd7",
+      "top_level_functions": [],
+      "imports": [
+        "from .lie_algebra import sl_n_basis, bracket, killing_inner, random_traceless, to_basis_coords, FLOAT_TOL, MACHINE_EPS",
+        "from .seed import default_rng, CANONICAL_SEED"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/common/lie_algebra.py",
+      "bytes": 2946,
+      "sha256": "e2da1fb755ff7a134189cc92bf473a9c801bf8603c1f3bda97295f471e5d5d79",
+      "top_level_functions": [
+        "sl_n_basis",
+        "bracket",
+        "killing_inner",
+        "random_traceless",
+        "to_basis_coords"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from .seed import default_rng"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/common/seed.py",
+      "bytes": 694,
+      "sha256": "47ef5595a3f859eeb0a258e6e479e82009799f15b0302c47de349e605ad579c6",
+      "top_level_functions": [
+        "default_rng"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/__init__.py",
+      "bytes": 225,
+      "sha256": "8c00336db9d08baae6865cba8ad9f690d9869890f36d6b251c0901117dde3e4a",
+      "top_level_functions": [],
+      "imports": []
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/betac_tan_beta.py",
+      "bytes": 2371,
+      "sha256": "720579a4c793ea965520a3b782dba80ebf334438e3006e6fa33e7b63e5c681b2",
+      "top_level_functions": [
+        "tree_level_extremization",
+        "main"
+      ],
+      "imports": [
+        "from sympy import symbols, sin, cos, diff, simplify, solve, Rational, sqrt"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/branch_a_parameters.py",
+      "bytes": 4558,
+      "sha256": "1c6bf9966e56eed3df7e368a69b569922de36d1d17c2016e2c62cbaa483bc245",
+      "top_level_functions": [
+        "parameter_ledger",
+        "stability_ranges",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/branch_a_vacuum.py",
+      "bytes": 6300,
+      "sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f",
+      "top_level_functions": [
+        "vacuum_analysis",
+        "custodial_breaking",
+        "lambda_eff_consistency",
+        "main"
+      ],
+      "imports": [
+        "from decimal import Decimal, getcontext",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/theta13_obstruction.py",
+      "bytes": 3469,
+      "sha256": "a2da96f3a7db5ef5e1487fb9bf8ba0df4c352a9a61919716c26d3f08c05ab29a",
+      "top_level_functions": [
+        "naive_prediction",
+        "discrepancy_analysis",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/tm1_pmns.py",
+      "bytes": 3907,
+      "sha256": "04623f7adb70b76e528081321e1fb39a10d01d63eb0394638b7352888a6a88dd",
+      "top_level_functions": [
+        "tm1_predictions",
+        "tm2_predictions",
+        "pull_analysis",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_a/yukawa_no_go.py",
+      "bytes": 4732,
+      "sha256": "77b2cabc645e19613b205ea9b1ac5ebb5235385472cc791985a7c9d0d8167233",
+      "top_level_functions": [
+        "yukawa_no_go_test",
+        "algebraic_identity_proof",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import svd",
+        "from sympy import symbols, simplify, expand"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_b/__init__.py",
+      "bytes": 331,
+      "sha256": "5ecacf35bf5faab77782548c4c736cf1859cd544d9459db67498e7056f6f49ac",
+      "top_level_functions": [],
+      "imports": [
+        "from .explicit_formula_resolvent import RIEMANN_ZEROS"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_b/berry_keating_counting.py",
+      "bytes": 2832,
+      "sha256": "108620a012750febc651cfa3ad1affa7568f329e5401feeb97b9876e32c2e2db",
+      "top_level_functions": [
+        "riemann_von_mangoldt_count",
+        "berry_keating_count",
+        "comparison_table",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from .explicit_formula_resolvent import RIEMANN_ZEROS"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_b/explicit_formula_resolvent.py",
+      "bytes": 4553,
+      "sha256": "5f91823e15a9434624cc63b85d94361688721d1682ba20d0a1842a0d7de3e3e5",
+      "top_level_functions": [
+        "chi",
+        "trace_resolvent",
+        "verify_resolvent_identity",
+        "pole_structure_check",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_b/renormalized_stability.py",
+      "bytes": 5588,
+      "sha256": "e1bb7d0da008cc35f5739aaf52fc3509270c97959021e5e19dd5f1f303864bb8",
+      "top_level_functions": [
+        "delta_norm",
+        "boundedness_check",
+        "divergence_test_off_critical",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.stats import linregress",
+        "from .explicit_formula_resolvent import RIEMANN_ZEROS"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_b/wronskian_leibniz.py",
+      "bytes": 3914,
+      "sha256": "abe24f4cf56c318c26053f66c153415660bfd2b425897628e5875b21452c698b",
+      "top_level_functions": [
+        "symbolic_leibniz_check",
+        "numerical_leibniz_check",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from sympy import Function, Symbol, diff, simplify"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/__init__.py",
+      "bytes": 239,
+      "sha256": "9b728d3ce01bac5eed3695d092310514eff47f8f78c1d5a71b73ab6ba865ef15",
+      "top_level_functions": [],
+      "imports": []
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/er_epr_algebraic.py",
+      "bytes": 4215,
+      "sha256": "f7f6c273b21c5265753fe191055a1f50b7420a494a982b36576708695ce2208c",
+      "top_level_functions": [
+        "bell_state_local_commutativity",
+        "bracket_killing_orthogonality",
+        "projection_returns_zero",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import sys",
+        "import os",
+        "from src.common import bracket, FLOAT_TOL"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/killing_orthogonality.py",
+      "bytes": 4630,
+      "sha256": "343c3d77a7bcc3930c87448cd6057cad96cb292cefa96b773d9930dcb1d78be9",
+      "top_level_functions": [
+        "symbolic_verification",
+        "numerical_scaling_test",
+        "chirality_hopping_example",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import sys",
+        "import os",
+        "from sympy import Matrix, symbols, simplify, eye",
+        "from src.common import sl_n_basis, bracket, random_traceless, default_rng, MACHINE_EPS"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/orthogonal_complement_probe.py",
+      "bytes": 5954,
+      "sha256": "243e20f4b1fb0e1b00aa9947a0b3d412e45f5b5bd6b1b8591125ef1fc125a672",
+      "top_level_functions": [
+        "orthogonal_complement_probe",
+        "jacobian_kernel_dimension",
+        "verify_probe_at_H1_A01",
+        "verify_probe_at_generic",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import null_space",
+        "import sys",
+        "import os",
+        "from src.common import sl_n_basis, bracket, to_basis_coords, FLOAT_TOL",
+        "from src.common import default_rng, random_traceless"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/spectral_taxonomy.py",
+      "bytes": 7779,
+      "sha256": "c51d1371578adc965565fa3602a7a01b729c05e6ef94753304b863934bad7cb6",
+      "top_level_functions": [
+        "classify_spectrum",
+        "classify_ad_T_BL",
+        "verify_su2_elliptic_2pi",
+        "verify_sl4_hyperbolic",
+        "verify_core_rope_hyperbolic",
+        "verify_frenet_serret_elliptic",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import expm",
+        "import sys",
+        "import os",
+        "from src.common import sl_n_basis, bracket, to_basis_coords, FLOAT_TOL",
+        "from .theorem_c import build_T_BL, build_ad_matrix"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/src/paper_c/theorem_c.py",
+      "bytes": 2717,
+      "sha256": "1490f518b97b080ec91ab87af03ffd6935f53102af01d29abd45a6dd81c8b12d",
+      "top_level_functions": [
+        "build_T_BL",
+        "build_ad_matrix",
+        "verify_theorem_c",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import sys",
+        "import os",
+        "from src.common import sl_n_basis, bracket, to_basis_coords, FLOAT_TOL"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/tests/conftest.py",
+      "bytes": 364,
+      "sha256": "f8cb8e256b51210bbaed7b17892e6328fd1e729a909663b72d2fa0d3af790a66",
+      "top_level_functions": [],
+      "imports": [
+        "import sys",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/tests/test_paper_a.py",
+      "bytes": 4710,
+      "sha256": "308823196398104ea96978ffdf4623e126ac106458230eb9facece6a3b750188",
+      "top_level_functions": [
+        "test_branch_a_parameter_count",
+        "test_alpha1_stability_bound",
+        "test_vacuum_admits_stable_minimum",
+        "test_vacuum_recovers_target_VEVs",
+        "test_custodial_breaking_safe",
+        "test_lambda_eff_close_to_SM",
+        "test_betac_extremization_yields_pi_4",
+        "test_yukawa_no_go_matrix_proportional",
+        "test_yukawa_no_go_independent_invariant",
+        "test_yukawa_algebraic_identity",
+        "test_theta13_pull_significant",
+        "test_theta13_rescue_incompatible_with_proton_decay",
+        "test_tm1_fails_phenomenology",
+        "test_tm2_fails_phenomenology"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import pytest",
+        "from src.paper_a.branch_a_parameters import parameter_ledger, stability_ranges",
+        "from src.paper_a.branch_a_vacuum import vacuum_analysis, custodial_breaking, lambda_eff_consistency",
+        "from src.paper_a.betac_tan_beta import tree_level_extremization",
+        "from src.paper_a.yukawa_no_go import yukawa_no_go_test, algebraic_identity_proof",
+        "from src.paper_a.theta13_obstruction import discrepancy_analysis",
+        "from src.paper_a.tm1_pmns import pull_analysis",
+        "from sympy import pi, Rational"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/tests/test_paper_b.py",
+      "bytes": 3155,
+      "sha256": "b3d0404db0c13e41f5dacf3c3371a05c208b5d244ed6e0b4c4b050fb5cf61f31",
+      "top_level_functions": [
+        "test_resolvent_identity_at_omega_50",
+        "test_chi_diverges_near_zeros",
+        "test_leibniz_failure_symbolic",
+        "test_leibniz_failure_numerical",
+        "test_leibniz_difference_nonzero",
+        "test_delta_norm_bounded_under_RH",
+        "test_off_critical_zero_diverges_faster",
+        "test_BK_matches_within_two_zeros_through_T_143",
+        "test_BK_leading_form",
+        "test_riemann_count_at_known_value"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import pytest",
+        "from src.paper_b.explicit_formula_resolvent import chi, trace_resolvent, verify_resolvent_identity, pole_structure_check, RIEMANN_ZEROS",
+        "from src.paper_b.wronskian_leibniz import symbolic_leibniz_check, numerical_leibniz_check",
+        "from src.paper_b.renormalized_stability import delta_norm, boundedness_check, divergence_test_off_critical",
+        "from src.paper_b.berry_keating_counting import riemann_von_mangoldt_count, berry_keating_count, comparison_table"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/tests/test_paper_c.py",
+      "bytes": 5416,
+      "sha256": "ac71e5f9438f78f91a55851f88065935b1ffc8cef6a2465eb743389a9ee66064",
+      "top_level_functions": [
+        "test_theorem_c_residual_machine_zero",
+        "test_theorem_c_eigenvalues_correct",
+        "test_killing_orthogonality_symbolic",
+        "test_killing_orthogonality_sl3_scaling",
+        "test_killing_orthogonality_sl4_scaling",
+        "test_chirality_hopping_exact",
+        "test_probe_dimension_matches_theory",
+        "test_generators_lie_in_B_perp",
+        "test_generic_jacobian_rank",
+        "test_degenerate_kernel_at_H1_A01",
+        "test_ad_T_BL_is_hyperbolic",
+        "test_su2_quaternion_elliptic_2pi",
+        "test_sl4_hyperbolic_no_2pi_loop",
+        "test_core_rope_R_cubed_equals_R",
+        "test_frenet_serret_elliptic",
+        "test_bell_state_local_ops_commute",
+        "test_bracket_killing_orthogonal_to_inputs",
+        "test_direct_projection_returns_zero"
+      ],
+      "imports": [
+        "import numpy as np",
+        "import pytest",
+        "from src.paper_c.theorem_c import verify_theorem_c",
+        "from src.paper_c.killing_orthogonality import symbolic_verification, numerical_scaling_test, chirality_hopping_example",
+        "from src.paper_c.orthogonal_complement_probe import verify_probe_at_H1_A01, verify_probe_at_generic",
+        "from src.paper_c.spectral_taxonomy import classify_ad_T_BL, verify_su2_elliptic_2pi, verify_sl4_hyperbolic, verify_core_rope_hyperbolic, verify_frenet_serret_elliptic",
+        "from src.paper_c.er_epr_algebraic import bell_state_local_commutativity, bracket_killing_orthogonality, projection_returns_zero"
+      ]
+    },
+    {
+      "path": "code/acs_codebase/verify_all.sh",
+      "bytes": 2331,
+      "sha256": "e575cb1ada03fea586c44cc71ffaf5f87e625d4b3452e11e8cd4b8f1dace3b44"
+    },
+    {
+      "path": "code/acs_memo.py",
+      "bytes": 5811,
+      "sha256": "e34b9de1504cac64cbf03242f0d8dd2f5335a055c16bd14d03e4e5039872d563",
+      "top_level_functions": [
+        "memo_enabled",
+        "memo_root",
+        "reset_stats",
+        "clear_memory",
+        "clear_namespace",
+        "key_hash",
+        "_mem_key",
+        "_path",
+        "get_json",
+        "put_json",
+        "get_npz_solve",
+        "put_npz_solve",
+        "cached_json",
+        "fmt_float"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import os",
+        "import threading",
+        "from pathlib import Path",
+        "from typing import Any, Callable, TypeVar",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/benchmark_efficiency.py",
+      "bytes": 35463,
+      "sha256": "938441b087b8dc8d4f0d8fb5ebdffdb8b71c3054e4059d31cc66ba4807a91a0d",
+      "top_level_functions": [
+        "_relpath",
+        "_parse_time_l",
+        "run_script_timed",
+        "time_callable",
+        "channel_microbenchmarks",
+        "_channel_microbenchmarks_uncached",
+        "scaling_benchmarks",
+        "_scaling_benchmarks_uncached",
+        "build_script_specs",
+        "compute_relative_ratios",
+        "cache_speedup_benchmarks",
+        "load_previous_results",
+        "write_efficiency_report",
+        "run_all",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "import os",
+        "import re",
+        "import statistics",
+        "import subprocess",
+        "import sys",
+        "import time",
+        "from dataclasses import dataclass",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from typing import Any, Callable",
+        "from palpha_overlap import ISOTOPES, N_GRID, R0_DEFAULT_FM, run_analysis",
+        "from palpha_overlap_gamow import A_WS_DEFAULT_FM, N_EIGEN_GRID, evaluate_gamow_isotope",
+        "from palpha_overlap_refined import evaluate_eigenmode_isotope",
+        "from palpha_overlap_throat import KAPPA_TAIL_DEFAULT, ModelSpec, evaluate_isotope_model, run_analysis as run_throat_analysis",
+        "from isotope_catalog import ISOTOPES, combined_isotopes",
+        "from palpha_overlap import R0_DEFAULT_FM, run_analysis",
+        "from palpha_overlap_extended import run_throat_ws_for_isotopes",
+        "from palpha_overlap_gamow import A_WS_DEFAULT_FM, evaluate_gamow_isotope",
+        "from palpha_overlap_refined import evaluate_eigenmode_isotope",
+        "from palpha_overlap_throat import A_WS_DEFAULT_FM as A_WS",
+        "from ribbon_capacitance import R_SPIN, bie_mobius_C",
+        "import acs_memo",
+        "from palpha_overlap import ISOTOPES, N_GRID, R0_DEFAULT_FM",
+        "from palpha_overlap_gamow import A_WS_DEFAULT_FM, N_EIGEN_GRID, evaluate_gamow_isotope",
+        "from palpha_overlap_refined import evaluate_eigenmode_isotope",
+        "from ribbon_capacitance import R_SPIN, bie_mobius_C"
+      ]
+    },
+    {
+      "path": "code/capacitance_ribbon/ribbon_capacitance.py",
+      "bytes": 27072,
+      "sha256": "0ebd9983eb5e573a785dee29689996ddf21bb4093626223dfd3f74c1e57d6008",
+      "top_level_functions": [
+        "alpha_from_C",
+        "C_from_alpha_inv",
+        "annulus_C",
+        "annulus_alpha_inv",
+        "annulus_a_over_R_for_alpha",
+        "conformal_annulus_C",
+        "conformal_modulus_report",
+        "_centerline",
+        "_torus_mobius_normal",
+        "_rect_self_integral",
+        "_ribbon_panels",
+        "bie_mobius_C",
+        "_bie_mobius_C_uncached",
+        "scan_aspect_ratios",
+        "_conformal_match_codata",
+        "_comparison_table",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "import sys",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from scipy import constants as const",
+        "from acs_memo import cached_json, fmt_float"
+      ]
+    },
+    {
+      "path": "code/framed_unknot/README.md",
+      "bytes": 5753,
+      "sha256": "2cf6ba734efb397b7fbace2c354cd1959c5e4b999721974421c295ea92e1c2c9"
+    },
+    {
+      "path": "code/framed_unknot/framing_transformer.py",
+      "bytes": 16563,
+      "sha256": "2af47de31c02d100b00457315b91eb21e4c840f3480cb35ca126968568083d70",
+      "top_level_functions": [
+        "mobius_screw",
+        "torus_framing",
+        "twisted_circle",
+        "unit",
+        "twist_uniform",
+        "writhe",
+        "linking_number",
+        "adapted_frames",
+        "matrix_to_quaternion",
+        "continuous_lift",
+        "analyse_mobius_screw",
+        "quaternion_holonomy_closed_form",
+        "_Rz",
+        "_Ry",
+        "analyse_control",
+        "main"
+      ],
+      "imports": [
+        "import json",
+        "import pathlib",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/framed_unknot/moment_ratio.py",
+      "bytes": 5019,
+      "sha256": "0b7639d34a3a9751393d06a6d9a80fa761668d009885148371b61c61081ba08a",
+      "top_level_functions": [
+        "vector_area",
+        "analyse",
+        "circle",
+        "main"
+      ],
+      "imports": [
+        "import json",
+        "import pathlib",
+        "import numpy as np",
+        "from framing_transformer import mobius_screw"
+      ]
+    },
+    {
+      "path": "code/framed_unknot/one_object.py",
+      "bytes": 10443,
+      "sha256": "b4558f563574a2627468cda08557dad555416fda3dd80bf1f531b5c0f811b825",
+      "top_level_functions": [
+        "qmul",
+        "qconj",
+        "qrot",
+        "lift",
+        "check_xy_twisted",
+        "check_one_object",
+        "check_laplace",
+        "check_closure",
+        "main"
+      ],
+      "imports": [
+        "import json",
+        "import pathlib",
+        "import numpy as np",
+        "from framing_transformer import mobius_screw, torus_framing, _Rz, _Ry"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclo_figure.py",
+      "bytes": 9780,
+      "sha256": "5c7cdf59cf2b56f2837fc98662f09880b848126099cbea58a54b7a04dc8ab2ca",
+      "top_level_functions": [
+        "sieve",
+        "classify_cyclo",
+        "classify_Q5",
+        "style"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_synthesis.md",
+      "bytes": 8466,
+      "sha256": "9dc700be8cf492ca3f52cd15f33000914d12d6c33fdcb2cd1ede143c167eea5c"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_test.py",
+      "bytes": 9261,
+      "sha256": "c3b1c2a9f91c5868bc13c31d6c6c5660dfee6df5b7187ab95d10ad7cf8cb3734",
+      "top_level_functions": [
+        "sieve",
+        "split_type"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "from scipy.signal import find_peaks",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_v2.py",
+      "bytes": 3290,
+      "sha256": "badc0f5ad6ccffd5321d004decbbf4817c740c4adb24a2c58c72a26061918855",
+      "top_level_functions": [
+        "L_chi",
+        "absL_sq",
+        "find_zero_near"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_zeros.py",
+      "bytes": 6303,
+      "sha256": "c3bd481ed54b9d0b9a3411fc17292164b9ea2059f6c43dedb221c7909094bec8",
+      "top_level_functions": [
+        "L_chi",
+        "Lambda_chi",
+        "Lambda_at_t"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta, gamma as mp_gamma, pi as mp_pi"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/zeros_chi_5_order4.txt",
+      "bytes": 754,
+      "sha256": "d4e261f7963a5247bfabfe6423d93a2fbb193c27a9546ba6dcca35076955f049"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_5/zeros_chi_5_order4_ext.txt",
+      "bytes": 1885,
+      "sha256": "cf79d9ea84cda027fe4716d8632dd6084b369a21498d223d81e6bbd484c49944"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/cyclotomic_7.py",
+      "bytes": 4784,
+      "sha256": "ba69a24bb4a33cab11cf7ac8dc9100a43692e203a18953ebea93251199d94389",
+      "top_level_functions": [
+        "gauss_sum",
+        "L_chi",
+        "Lambda_chi",
+        "Z",
+        "bisect"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta, gamma as mp_gamma, pi as mp_pi, exp as mp_exp"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/cyclotomic_7_fig.py",
+      "bytes": 9365,
+      "sha256": "cbf5397f957ad1a5576e4774a4a1e3bcd44330448ba2080afa445bd9144bacbc",
+      "top_level_functions": [
+        "chi_7_order6",
+        "sieve",
+        "style"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec",
+        "from matplotlib.patches import Circle"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/cyclotomic_7_synthesis.md",
+      "bytes": 8472,
+      "sha256": "0a9f3c07c19a20614481feb76da4c799c250a6c1da2aa7b7ef6c71d6fa8eed0d"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/cyclotomic_7_test.py",
+      "bytes": 4094,
+      "sha256": "83789b7be5493cc1049072186e6b2bb8ec47e3693c362e0b4fb593d7bf550d04",
+      "top_level_functions": [
+        "chi_7_order6",
+        "sieve"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/zeros_chi_7_order6.txt",
+      "bytes": 823,
+      "sha256": "90188e17db927dfb38e37dcc72f4d52873c9c7a395bebc81c608719e5022663e"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_7/zeros_chi_7_order6_ext.txt",
+      "bytes": 1984,
+      "sha256": "00b2362ceecea054d9e89ed6c814be0af14c1fdc36b1da9349de422aa164938b"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/cyclotomic_5_v2.py",
+      "bytes": 3299,
+      "sha256": "b3e2c914489be87fbe10b17c335841ccd99de6571e9d07dacb64d2161a31106a",
+      "top_level_functions": [
+        "gauss_sum",
+        "L_chi",
+        "Lambda_chi_complex",
+        "Z",
+        "bisect"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta, gamma as mp_gamma, pi as mp_pi, exp as mp_exp"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/cyclotomic_fig.py",
+      "bytes": 10583,
+      "sha256": "d689dccf948fb822435e127f82886f83528924652ebe7fabda1e8e7dfcdda1ab",
+      "top_level_functions": [
+        "chi_5_order4",
+        "sieve",
+        "style"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec",
+        "from scipy.signal import find_peaks"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/cyclotomic_test.py",
+      "bytes": 4612,
+      "sha256": "f283f1149795c47c87530f426ce74837002d0fe0706c6d14cb6d0d67cff9907f",
+      "top_level_functions": [
+        "chi_5_order4",
+        "sieve"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from scipy.signal import find_peaks"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/do_m104.py",
+      "bytes": 3079,
+      "sha256": "3281ec949eb9c61e2c80659f74ea9c0d2aac9569bac94d1b351b4bd888811bce",
+      "top_level_functions": [
+        "legendre",
+        "chi_m104_prime",
+        "sieve",
+        "L_chi",
+        "Lambda_chi",
+        "bisect"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta, gamma as mp_gamma, pi as mp_pi",
+        "from math import gcd"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/final_synthesis.md",
+      "bytes": 10028,
+      "sha256": "e9109602ab4ab36f3f7537e1fe971b25ace51ef5526614f6f1980d34f58ebf12"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/zeros_chi_-104.txt",
+      "bytes": 931,
+      "sha256": "3ff035efc4f810ef4b79c5f24aee326629a03cdb1d40359c1a62dc466aad5450"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/zeros_chi_5_order4.txt",
+      "bytes": 754,
+      "sha256": "5547d4607099e4f3d86e5b1520299613e83adae724ba22e299d7c31d673c2d97"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/disentangled_fig.py",
+      "bytes": 10315,
+      "sha256": "a8611f12c9de706fa9be72d6ba51cb395c19792ede2f3481a61fdb5212c74304",
+      "top_level_functions": [
+        "style"
+      ],
+      "imports": [
+        "import math, os",
+        "import numpy as np",
+        "import matplotlib.pyplot as plt",
+        "from matplotlib.gridspec import GridSpec"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/disentangled_synthesis.md",
+      "bytes": 10535,
+      "sha256": "5b671370a6947cf9f656c6b3243b4fddecb83e48086d800ae3b2df2c4f280b7e"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/do_h2_disentangle.py",
+      "bytes": 4830,
+      "sha256": "15adfbe6e86ebaecd5219e6dbd6406528de7f214781758d7af5b0bc2e322344e",
+      "top_level_functions": [
+        "legendre",
+        "sieve",
+        "compute_field_zeros",
+        "chi_m35_prime",
+        "chi_m91_prime"
+      ],
+      "imports": [
+        "import math, os, time",
+        "import numpy as np",
+        "from mpmath import mp, mpf, mpc, zeta as mp_zeta, gamma as mp_gamma, pi as mp_pi",
+        "from math import gcd"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/zeros_chi_-35.txt",
+      "bytes": 905,
+      "sha256": "fc751b738629fa4466ea2b5fd007f69b4c85cdc144984c1f9f22188c51542e58"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/disentangled/zeros_chi_-91.txt",
+      "bytes": 764,
+      "sha256": "dbcce8cf4eb9982b91a5fa939c36770293d7550148b3ad7402e7ccfec7370069"
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/generate_more_lzeros.py",
+      "bytes": 2860,
+      "sha256": "0a5f3ec048edc31485c3fb270529d1efcd20a03bcdd8ede008a143c79a2858f9",
+      "top_level_functions": [
+        "make_chi",
+        "L_on_line",
+        "find_zeros"
+      ],
+      "imports": [
+        "import sys",
+        "from math import gcd",
+        "import mpmath as mp",
+        "import os"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt",
+      "bytes": 1799999,
+      "sha256": "4371e1936c68491d94ffd4d9ae7a4f981fe1328e3d73745a884d0cbbbc0415f8"
+    },
+    {
+      "path": "code/hp_knife_suite/hp_c9_orthogonality.py",
+      "bytes": 3546,
+      "sha256": "b257f19d22d1632ef365b8de28544653d7a73122d7df2c511473acdcb73dfebf",
+      "top_level_functions": [
+        "_d",
+        "chi_quad",
+        "build_chi",
+        "vphase",
+        "show"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_form_function_relativity.py",
+      "bytes": 8188,
+      "sha256": "fb15fa1cd37cba763cdbd0d6c1eaa492aabddd563af8dafba58c87859451bf6d",
+      "top_level_functions": [
+        "_d",
+        "Nsmooth",
+        "refold",
+        "W_repulsion",
+        "W_shape",
+        "W_lag1",
+        "W_rigidity",
+        "W_arith",
+        "evaluate",
+        "draw_poisson",
+        "draw_gue_marginal",
+        "draw_gue_full"
+      ],
+      "imports": [
+        "import os as _os",
+        "import sys",
+        "import numpy as np",
+        "import time"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_harmonic_ladder.py",
+      "bytes": 6557,
+      "sha256": "3c3e6909329d4e6aab20dfc38ebef77eeef08d4f8aaf34f43dcf7bcc37c23fbf",
+      "top_level_functions": [
+        "_d",
+        "F",
+        "_is_ppfreq",
+        "peak",
+        "surrogate",
+        "Fs",
+        "peak_on"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_knife.py",
+      "bytes": 2698,
+      "sha256": "334002541b32bb05419410f96c6a592d3ed5523c60f5e5b5573d16ba9ba88216",
+      "top_level_functions": [
+        "_d",
+        "is_prime_power",
+        "vonmangoldt",
+        "witness"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_ladder_character_twist.py",
+      "bytes": 9803,
+      "sha256": "f50831067d33c5ef771c8fea9591b8fe0c78f9c23354f9b58c861b2ead0888a2",
+      "top_level_functions": [
+        "_d",
+        "build_chi",
+        "chi_quad",
+        "Wc",
+        "Fr",
+        "commutator_norm"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_ladder_tower.py",
+      "bytes": 4983,
+      "sha256": "4f2d6303db4d71a509108684f8e51fba51485d1b4b3d4a3b57a1c6a87d7efd14",
+      "top_level_functions": [
+        "_d",
+        "_is_ppfreq",
+        "peak"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_never_synced.py",
+      "bytes": 3859,
+      "sha256": "97bf6a0712193c7d0a2cb29cfc6cec193d9ec2545f074670064f7c13e08546d9",
+      "top_level_functions": [
+        "_d",
+        "Nsmooth",
+        "refold",
+        "vonmangoldt",
+        "witness",
+        "report",
+        "cv"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_operator_constraint.py",
+      "bytes": 4652,
+      "sha256": "994242b70d7e174569fa4f661e30dcfcc826c4408d3eaa4b31f04b4198d571f7",
+      "top_level_functions": [
+        "_d",
+        "Nsmooth"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_phase_test.py",
+      "bytes": 3382,
+      "sha256": "b1d99387f53ddba520b6abfd79c1067412cfc16d84190ab77519a07dc21c05f4",
+      "top_level_functions": [
+        "_d",
+        "build_chi",
+        "W",
+        "noise_floor"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_signed_lfunction.py",
+      "bytes": 3499,
+      "sha256": "a38d606eeae7fc43297d62bed3d1c779bc6143723f5f90411539ea98fd4d0c31",
+      "top_level_functions": [
+        "_d",
+        "F",
+        "lam_w",
+        "chi_quad"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np, os"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_twist_hardened.py",
+      "bytes": 5474,
+      "sha256": "f016aef0be6af2e45a4a3a69a6011eb2a193b344ea2edf7d68c739dea0e3435f",
+      "top_level_functions": [
+        "_d",
+        "build_chi",
+        "Wc",
+        "load_best"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np",
+        "from math import gcd"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_vantage_points.py",
+      "bytes": 11823,
+      "sha256": "f3589cb7f106ad59f93909cde8c41a354aef452f3fa762b1e0c1c8ff01340c35",
+      "top_level_functions": [
+        "_d",
+        "Nsmooth",
+        "refold",
+        "W_repulsion",
+        "W_shape",
+        "W_lag1",
+        "W_rigidity",
+        "W_arith",
+        "W_arith2",
+        "W_phasepow",
+        "W_difftone",
+        "W_sumtone",
+        "W_lag2",
+        "evaluate",
+        "draw_gue_marginal",
+        "eff_rank"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_wall_resolution_class.py",
+      "bytes": 8461,
+      "sha256": "d6ebe1e393504a78bf7eeb3dbbe7426de000fb99b2c19465c32066d3f399e917",
+      "top_level_functions": [
+        "_d",
+        "unfolded_spacings",
+        "beta_fit",
+        "witness_ratio"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np",
+        "from sympy import Matrix, I, symbols, simplify, zeros as szeros"
+      ]
+    },
+    {
+      "path": "code/hp_knife_suite/hp_xp_test.py",
+      "bytes": 3557,
+      "sha256": "472eff5dd78f13c01458e72cffd6623209cd2368d880c2d7562c776a3a229641",
+      "top_level_functions": [
+        "_d",
+        "vonmangoldt",
+        "witness",
+        "knife",
+        "Nsm",
+        "sieve",
+        "Nfl"
+      ],
+      "imports": [
+        "import os as _os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/issue7/cross_model_kill_pass.py",
+      "bytes": 7255,
+      "sha256": "1d922bfb738c94af6a901e5b132f917e9e72110f0e9d55cd5e46c82df54a99fb",
+      "top_level_functions": [
+        "xxz_hamiltonian",
+        "estimate_velocity",
+        "evaluate_point",
+        "run_model_sweep",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "import numpy as np",
+        "from section9_toy_kill_test import corrcoef_safe, fit_clustering_length, ground_state_correlations, heisenberg_evolve_operator, local_op, tfim_hamiltonian"
+      ]
+    },
+    {
+      "path": "code/issue7/exhaustive_issue7.py",
+      "bytes": 7750,
+      "sha256": "e20e2e636ad76b605ba4224f36c623e66cee7e27b3a987ef8d18b6ddb35fc1f9",
+      "top_level_functions": [
+        "estimate_velocity_with_threshold",
+        "one_section9_point",
+        "run_section9_exhaustive",
+        "run_4over3_exhaustive",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "from pathlib import Path",
+        "import numpy as np",
+        "from mechanism_4over3_test import alpha_density, beta_acs, implied_dimension_from_beta",
+        "from section9_toy_kill_test import corrcoef_safe, ground_state_correlations, heisenberg_evolve_operator, fit_clustering_length, local_op, tfim_hamiltonian"
+      ]
+    },
+    {
+      "path": "code/issue7/long_range_kill_pass.py",
+      "bytes": 4724,
+      "sha256": "439d47a8797834a57b2cc361c44e8f0cc30c3c20b420c22a8c5665928ddce856",
+      "top_level_functions": [
+        "long_range_ising_hamiltonian",
+        "run_long_range_sweep",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "from pathlib import Path",
+        "import numpy as np",
+        "from cross_model_kill_pass import evaluate_point",
+        "from section9_toy_kill_test import corrcoef_safe, local_op"
+      ]
+    },
+    {
+      "path": "code/issue7/mechanism_4over3_test.py",
+      "bytes": 2773,
+      "sha256": "57002220790bae4b40f0223b5609e076d597cd22cee69505d58e6fff0a82b47b",
+      "top_level_functions": [
+        "alpha_density",
+        "beta_acs",
+        "implied_dimension_from_beta",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/issue7/section9_exact_kill_test.py",
+      "bytes": 7527,
+      "sha256": "347c898883f13b8af7200eec93407f38e57413ea5e9732188150477b5a05cbe2",
+      "top_level_functions": [
+        "spins_from_bits",
+        "energy",
+        "all_configs",
+        "Boltzmann_weights",
+        "exact_gap",
+        "connected_correlators",
+        "cluster_weight",
+        "majority_update",
+        "evolve",
+        "outside_cone_affect",
+        "cov_sign",
+        "run_sweep",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "from fractions import Fraction",
+        "from itertools import product",
+        "from pathlib import Path",
+        "import json"
+      ]
+    },
+    {
+      "path": "code/issue7/section9_toy_kill_test.py",
+      "bytes": 6590,
+      "sha256": "c48009dfa4db24f2602ac9bf031c7ddfdf69ee88554cf1c240ce6d41bcfe7688",
+      "top_level_functions": [
+        "kron_n",
+        "local_op",
+        "tfim_hamiltonian",
+        "heisenberg_evolve_operator",
+        "ground_state_correlations",
+        "fit_clustering_length",
+        "estimate_velocity",
+        "run_one",
+        "corrcoef_safe",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "from dataclasses import dataclass",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/issue7/verify_issue7_pipeline.py",
+      "bytes": 9596,
+      "sha256": "627ec7a29902bd3e843db06344ccccd33cffeaae423ac0619a2ecc21183445fe",
+      "top_level_functions": [
+        "sha256_file",
+        "run_one",
+        "load_json",
+        "check_exhaustive_consistency",
+        "check_cross_model_consistency",
+        "check_long_range_consistency",
+        "check_section9_exact_consistency",
+        "check_doc_hash_mentions",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import hashlib",
+        "import json",
+        "import re",
+        "import subprocess",
+        "import sys",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "from typing import Any"
+      ]
+    },
+    {
+      "path": "code/notes_verification/PRIME_GAP_TOPOLOGY.md",
+      "bytes": 14742,
+      "sha256": "94a8adc563e6875aa01e877ab3402e26eb9fdc70cbe38c1e5494d76736a72bf2"
+    },
+    {
+      "path": "code/notes_verification/PRIME_GAP_TRANSITION_OPERATOR.md",
+      "bytes": 12960,
+      "sha256": "fdaa61e4129027ae2012cba72f9234fa7a91a3c9e303cb2cda03297917b44237"
+    },
+    {
+      "path": "code/notes_verification/test_lattice_imprint.py",
+      "bytes": 6695,
+      "sha256": "80492c3fcd722befa1a916cabb86fcaf476f5a47c876c7dbe2ed7bd8cb4b693f",
+      "top_level_functions": [
+        "lattice_distance",
+        "run_test",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "code/notes_verification/test_scaled_invariance.py",
+      "bytes": 10399,
+      "sha256": "ea3bbe01215fb613fddc61807d59bac11621c244112f009c5ccf762881fcf542",
+      "top_level_functions": [
+        "count_closed",
+        "count_open",
+        "_floor_frac",
+        "_ceil_frac",
+        "test_unit_relativity",
+        "test_joint_scaling_invariance",
+        "test_interval_only_scaling",
+        "test_dimensionless_invariant",
+        "main"
+      ],
+      "imports": [
+        "from fractions import Fraction",
+        "import random"
+      ]
+    },
+    {
+      "path": "code/notes_verification/test_signature_selection.py",
+      "bytes": 7851,
+      "sha256": "98d5773c350609418b8a80d75ee6c50dc3acb121d9f322a4d5ac92b9360289d6",
+      "top_level_functions": [
+        "build_sl4_basis",
+        "compute_ad",
+        "P_adjoint",
+        "S_f",
+        "spectral_f",
+        "random_orthogonal",
+        "test_functional_universality",
+        "test_grassmannian_minimum",
+        "test_frame_invariance",
+        "test_generator_dependence",
+        "main"
+      ],
+      "imports": [
+        "import numpy as np",
+        "from scipy.linalg import expm"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/isotope_catalog.py",
+      "bytes": 5751,
+      "sha256": "aa0ee6475ef534eb50a573e49d0f8255d8d3cfbf2e87715bec688f32c4ce6bd7",
+      "top_level_functions": [
+        "reduced_mass_MeV",
+        "R_from_A",
+        "b_from_Q",
+        "W_numeric_Ad",
+        "t12_gamow_s",
+        "log10_P_extracted",
+        "row_from_extended",
+        "extended_isotopes",
+        "combined_isotopes",
+        "catalog_metadata"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "from dataclasses import dataclass",
+        "from typing import Any",
+        "import numpy as np",
+        "from scipy.integrate import quad",
+        "from palpha_overlap import ISOTOPES, IsotopeRow, R0_DEFAULT_FM"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/palpha_overlap.py",
+      "bytes": 12865,
+      "sha256": "f3b520d0a12bc3eac01a23d8cb0cb9c8663c785529f1f9f6342caa19b509769e",
+      "top_level_functions": [
+        "a_alpha_fm",
+        "u_in",
+        "u_alpha",
+        "overlap_P",
+        "pearson_r",
+        "best_fit_global_S",
+        "evaluate_isotope",
+        "run_analysis",
+        "format_markdown_table",
+        "write_json",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from scipy.integrate import simpson",
+        "from scipy.special import spherical_jn",
+        "from datetime import datetime, timezone"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/palpha_overlap_extended.py",
+      "bytes": 5680,
+      "sha256": "35bfc124865473b085ef77b7c23d5dc1fbc9de0bae156951b3f7271dae8adae7",
+      "top_level_functions": [
+        "run_throat_ws_for_isotopes",
+        "run_extended_analysis",
+        "write_json",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "import sys",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from isotope_catalog import catalog_metadata, combined_isotopes, extended_isotopes",
+        "from palpha_overlap import ISOTOPES",
+        "from palpha_overlap_refined import channel_A_from_model_rows",
+        "from palpha_overlap_throat import A_WS_DEFAULT_FM, KAPPA_TAIL_DEFAULT, ModelSpec, N_GRID, R0_DEFAULT_FM, evaluate_isotope_model, summarize_model_rows"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/palpha_overlap_gamow.py",
+      "bytes": 9826,
+      "sha256": "1c37bcd057401aeb9005d08106c097361e16eec6bc40a59a8b90965bcd587894",
+      "top_level_functions": [
+        "parse_nuclear_ids",
+        "reduced_mass_MeV",
+        "hbar2_over_2mu",
+        "V_woods_saxon",
+        "V_coulomb",
+        "exterior_wkb_log_deriv",
+        "eigen_energy_and_mode_on_b",
+        "_gamow_solve_key",
+        "find_V0_for_Q_gamow",
+        "overlap_P_gamow_eigenmode",
+        "evaluate_gamow_isotope"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import math",
+        "import re",
+        "import sys",
+        "from dataclasses import dataclass",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from scipy.integrate import simpson",
+        "from scipy.linalg import eigh_tridiagonal",
+        "from scipy.optimize import brentq",
+        "from palpha_overlap import IsotopeRow, N_GRID, R0_DEFAULT_FM, u_in",
+        "from palpha_overlap_throat import throat_weight_ads",
+        "from acs_memo import fmt_float, get_npz_solve, put_npz_solve"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/palpha_overlap_refined.py",
+      "bytes": 31843,
+      "sha256": "af9761f66e7ae6f454de87c37ae1a51a8766eaff37c4ad969dcad1746d7db8e4",
+      "top_level_functions": [
+        "parse_nuclear_ids",
+        "reduced_mass_MeV",
+        "hbar2_over_2mu",
+        "V_woods_saxon",
+        "V_coulomb",
+        "eigen_ground_energy_and_mode",
+        "_dirichlet_solve_key",
+        "find_V0_for_Q",
+        "overlap_P_eigenmode",
+        "evaluate_eigenmode_isotope",
+        "extract_S_i",
+        "fit_linear_logS",
+        "loo_parametric_logS",
+        "channel_A_from_model_rows",
+        "acceptance_row",
+        "run_refined_analysis",
+        "format_refined_markdown",
+        "write_json",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "import re",
+        "import sys",
+        "from dataclasses import dataclass",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from scipy.integrate import simpson",
+        "from scipy.linalg import eigh_tridiagonal",
+        "from scipy.optimize import brentq",
+        "from palpha_overlap import ISOTOPES, IsotopeRow, R0_DEFAULT_FM, a_alpha_fm, best_fit_global_S, u_in",
+        "from palpha_overlap_throat import A_WS_DEFAULT_FM, KAPPA_TAIL_DEFAULT, N_GRID, run_analysis as run_throat_analysis, summarize_model_rows, throat_weight_ads",
+        "from palpha_overlap_gamow import evaluate_gamow_isotope",
+        "from acs_memo import fmt_float, get_npz_solve, put_npz_solve"
+      ]
+    },
+    {
+      "path": "code/palpha_overlap/palpha_overlap_throat.py",
+      "bytes": 19234,
+      "sha256": "9a7629d36b0ae4411f2e728503117b9c02f5fcdd3462879d8f57d62f647f3c76",
+      "top_level_functions": [
+        "throat_weight_ads",
+        "flat_weight",
+        "u_alpha_woods_saxon",
+        "u_alpha_ws_coulomb_tail",
+        "select_alpha",
+        "select_weight",
+        "overlap_P_weighted",
+        "evaluate_isotope_model",
+        "summarize_model_rows",
+        "run_analysis",
+        "format_markdown_table",
+        "write_json",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import json",
+        "import math",
+        "from dataclasses import dataclass",
+        "from datetime import datetime, timezone",
+        "from pathlib import Path",
+        "from typing import Any, Callable, Literal",
+        "import numpy as np",
+        "from scipy.integrate import simpson",
+        "from scipy.special import spherical_jn",
+        "from palpha_overlap import ISOTOPES, IsotopeRow, R0_DEFAULT_FM, a_alpha_fm, best_fit_global_S, pearson_r, u_alpha as u_alpha_gaussian, u_in"
+      ]
+    },
+    {
+      "path": "docs/ACS_Antigravity_Feed_Package/README_FEED_PACKAGE.md",
+      "bytes": 1485,
+      "sha256": "35e882eace3404be73300c31785f0e90478e00962b2effcb465cb8d4cff4cda0"
+    },
+    {
+      "path": "docs/ACS_Antigravity_Feed_Package/key_parameters_ledger.json",
+      "bytes": 6913,
+      "sha256": "09ad652f792d54b0bbd2baaf9ae80cd7088bb0291c14478cf9ac6df2efe57415"
+    },
+    {
+      "path": "docs/ACS_Antigravity_Feed_Package/prompt_templates.md",
+      "bytes": 3553,
+      "sha256": "5c9249579082f2e4a8be58742b7dc4563eb459f43946de5a1f6752ca5f3260c2"
+    },
+    {
+      "path": "docs/ACS_Antigravity_Feed_Package/run_acs_verification.py",
+      "bytes": 4754,
+      "sha256": "fadb199c04b984a6a7814560d00ef872f25c0f6ae254d333af31f6c3e0d12088",
+      "top_level_functions": [
+        "run_command",
+        "main"
+      ],
+      "imports": [
+        "import os",
+        "import sys",
+        "import subprocess",
+        "import json",
+        "import time"
+      ]
+    },
+    {
+      "path": "docs/ACS_Antigravity_Feed_Package/verification_report.json",
+      "bytes": 28398,
+      "sha256": "574c53fd9e1aa93faae3e204a2469304837e8ff88491c3bc6b2e38a6360dd0f1"
+    },
+    {
+      "path": "docs/ACS_Corpus_Map.md",
+      "bytes": 14510,
+      "sha256": "1d5370f4c8e014573fcd68cc03ee5c6229c2122b908a2774f7f5de75476a448a"
+    },
+    {
+      "path": "docs/ACS_FRAMEWORK_SKILL.md",
+      "bytes": 21942,
+      "sha256": "12ce9ece749bd579ce69f0f128381cb4b8156bdaf8d5eb32fc318ac0d17f8385"
+    },
+    {
+      "path": "docs/ACS_Master_Index.md",
+      "bytes": 7974,
+      "sha256": "6a8c3ebbec02ae85f99e9dd4637c7101f11f56367ea8ab82b1f53c9291d7fe13"
+    },
+    {
+      "path": "docs/ACS_Technical_Whitepaper.md",
+      "bytes": 7705,
+      "sha256": "2e60b7ae58bfb147e8218a737ca5651b24919e7b561c3675f97760af422bd845"
+    },
+    {
+      "path": "docs/BUGFIX_LOG.md",
+      "bytes": 5304,
+      "sha256": "8f17da0b77838cdc0d52f8cbcf89450fd3c9c5b14f2e5c68bab2e27b6fc6cd16"
+    },
+    {
+      "path": "docs/Cross_Repo_Glossary_Extract.md",
+      "bytes": 45424,
+      "sha256": "89e4aa68287215a5c0fd927d92dd6060ddf20495cb12a21c42365bec1d130ff2"
+    },
+    {
+      "path": "docs/EFFICIENCY_BENCHMARK_REPORT.md",
+      "bytes": 3680,
+      "sha256": "7a4536976eec59ab6c1627e76689ba90988a6b679f0a346b63b08d2be6316458"
+    },
+    {
+      "path": "docs/Editorial_Audit_2026-08-07.md",
+      "bytes": 81412,
+      "sha256": "470b337981019eef00e8b7a657d7ccf5125531ff226b1b72b1206a4157314f68"
+    },
+    {
+      "path": "docs/Elimination_Ledger.md",
+      "bytes": 44410,
+      "sha256": "fe653fd88e4ca3f3d407900ee1b5140719774a0e16db5511c670880661918fd2"
+    },
+    {
+      "path": "docs/PARALLEL_YM_SEALED_20260704.md",
+      "bytes": 3281,
+      "sha256": "6661f80153cdaf5afa1098d37c202836108fc44ba8bd6d2e84a7a7c3bf0ac13e"
+    },
+    {
+      "path": "docs/PaperA_changelog.md",
+      "bytes": 7490,
+      "sha256": "4479badd04b246d7e01ba83874abfe0929d1653ab71c63a7e99a59f9b1547aa4"
+    },
+    {
+      "path": "docs/PaperB_changelog_extended.md",
+      "bytes": 7361,
+      "sha256": "001280e7ad65ae8f1b86bb66cb3c3cf7e90209c2c85bfb587d1d53dd248c14a1"
+    },
+    {
+      "path": "docs/PaperC_changelog.md",
+      "bytes": 5097,
+      "sha256": "51d9ce2e36ca327627be5cf0d05e5ebab612c2b8442172cc9e220ed400983951"
+    },
+    {
+      "path": "docs/README_verification_suite.md",
+      "bytes": 5292,
+      "sha256": "46cff8aee678077d3a3da54d01aa7b042fcbc946271baf131fa836c42beb7ec7"
+    },
+    {
+      "path": "docs/Torsion_Topological_Condensation_Analysis.md",
+      "bytes": 4285,
+      "sha256": "b93883352a19e1cb9e63ffe0eb1c0eaefe540f0f5c62c013a850b54156f94066"
+    },
+    {
+      "path": "docs/capacitance_ribbon_results.json",
+      "bytes": 12192,
+      "sha256": "75a4e59def94d0ca8c36d90474cd068d47035e87fa240969b5e7fa752487e110"
+    },
+    {
+      "path": "docs/efficiency_benchmark_results.json",
+      "bytes": 12253,
+      "sha256": "444ae41aba472dc234da538f407eb2ff8d6d310f52c3d22a0381c4786ec20ddd"
+    },
+    {
+      "path": "docs/framed_unknot_moment_ratio.json",
+      "bytes": 1220,
+      "sha256": "3cbb2b54a03b8db77c0a83b84b06c2ca4c179bb0f153d2f701480676ac2780ce"
+    },
+    {
+      "path": "docs/framed_unknot_one_object.json",
+      "bytes": 1561,
+      "sha256": "f280a1f3bd9d504deaecd481af9b7bf8ea8077b4e76ef3513f8dfb39ba979cce"
+    },
+    {
+      "path": "docs/framed_unknot_results.json",
+      "bytes": 1433,
+      "sha256": "112d02c348a9e5fcc444f810193c7be3075fc0f19154f0dd3abaa724f7d2ae42"
+    },
+    {
+      "path": "docs/issue7_cross_model_results.json",
+      "bytes": 4109,
+      "sha256": "763f5a47d93ed7ec382ffb1445c4427c747311de4c813c16d6258cd60763caba"
+    },
+    {
+      "path": "docs/issue7_exhaustive_results.json",
+      "bytes": 4511,
+      "sha256": "2ad53a2c84ea9b51fd36c9c4a956451d9910e51fbfb694738873f7902f3c03cb"
+    },
+    {
+      "path": "docs/issue7_linux_replication/README.md",
+      "bytes": 1968,
+      "sha256": "b0241a2e9e918f507197c0d05995e3564191f43fc6b15e7738eefc8909ba5291"
+    },
+    {
+      "path": "docs/issue7_linux_replication/issue7_cross_model_results.json",
+      "bytes": 4103,
+      "sha256": "a8d76a023d95347d54816b4f982c7bf2d9be64e3b7e8aad949878c2313f373bb"
+    },
+    {
+      "path": "docs/issue7_linux_replication/issue7_long_range_results.json",
+      "bytes": 4569,
+      "sha256": "f2976f94615d30dce97796f3800deabe3d4890ec4eb00ac1651b89ee835fec01"
+    },
+    {
+      "path": "docs/issue7_logs/cross_model_stdout.txt",
+      "bytes": 215,
+      "sha256": "b69406e5f4f980ec9127a355208bb03e28077a9ff77dee36209b3d80c8f515d0"
+    },
+    {
+      "path": "docs/issue7_logs/exhaustive_stdout.txt",
+      "bytes": 250,
+      "sha256": "ec79dc64dedc9aa392dfc0fc5c0d5f4714717028b4e9f65ac470073072e119ac"
+    },
+    {
+      "path": "docs/issue7_logs/long_range_stdout.txt",
+      "bytes": 219,
+      "sha256": "51924950d9b4c577948f11df2cdeb7390a7124f11c3d9b04480230476298a6c3"
+    },
+    {
+      "path": "docs/issue7_logs/mechanism_4over3_stdout.txt",
+      "bytes": 707,
+      "sha256": "be1ff08ab3fbb8b8aebaff1ed5e504ff63ac20de661a31fb0d450e36c6ca3146"
+    },
+    {
+      "path": "docs/issue7_logs/section9_exact_stdout.txt",
+      "bytes": 756,
+      "sha256": "08469f911d19dd9bb7934067b1e5503b7e872eb7bd2aeecab1aedcb9673661fc"
+    },
+    {
+      "path": "docs/issue7_logs/section9_stdout.txt",
+      "bytes": 653,
+      "sha256": "5e3d49a49ef53fde92fd29855912852c5a90a5a857c2d0010770a1642434f4f9"
+    },
+    {
+      "path": "docs/issue7_long_range_results.json",
+      "bytes": 4568,
+      "sha256": "e0fcab86e6963ee3f5298bc6a9124438bfeeaef5ea457a469703e889e74fbb48"
+    },
+    {
+      "path": "docs/issue7_paper_section9_and_4over3.md",
+      "bytes": 11588,
+      "sha256": "6d2216631ee15d62b1ca0e56237bc802dad647012eb321715632d1717b77b456"
+    },
+    {
+      "path": "docs/issue7_section9_exact_results.json",
+      "bytes": 2332,
+      "sha256": "3242ffb90440868dbff15db66b35d10e44233325aa7dd35ea2e4ab9031bbc650"
+    },
+    {
+      "path": "docs/issue7_takeup_section9_and_4over3.md",
+      "bytes": 7486,
+      "sha256": "bd64320d8d78d27349f884ac4d3fa5bccc0e5ef46d01d167b26b9ed8285f55e0"
+    },
+    {
+      "path": "docs/issue7_verification_report.json",
+      "bytes": 3964,
+      "sha256": "2fc1613238a31627d87020fbe00dc4cd9f77f77bd3818256d620930bd3d0fb49"
+    },
+    {
+      "path": "docs/palpha_audit_log.md",
+      "bytes": 2729,
+      "sha256": "91672f0e169e6b500dae5ba85ddec2e53323f4d906c0bde2198b19dcb8819380"
+    },
+    {
+      "path": "docs/palpha_overlap/palpha_overlap_extended_results.json",
+      "bytes": 50218,
+      "sha256": "be231164d9b0683072a18429cb884ed02f4d4b870f83a86fdd42fd5fbab89886"
+    },
+    {
+      "path": "docs/palpha_overlap/palpha_overlap_refined_results.json",
+      "bytes": 65655,
+      "sha256": "3bcf2d4292e773debb1d1e0d413eaeb6d33aa0e5210f6fd820134b21808c5e91"
+    },
+    {
+      "path": "docs/palpha_overlap/palpha_overlap_results.json",
+      "bytes": 11072,
+      "sha256": "d3e10bd23f7286a5ff6c44f157916131b344983b04e3b72d4e01c59f01fbbd8d"
+    },
+    {
+      "path": "docs/palpha_overlap/palpha_overlap_throat_results.json",
+      "bytes": 82229,
+      "sha256": "a8fcdaad4ed8a5cdfdd02eeb311b59d8402d784123b01ed5eb0033c9543fddae"
+    },
+    {
+      "path": "docs/ym_comparison_methodology_paper.tex",
+      "bytes": 6422,
+      "sha256": "89781c3c3066cac3299d76073bde7ae9056fdad121cb8162170badddd1b4eefd"
+    },
+    {
+      "path": "harness/training/README.md",
+      "bytes": 4354,
+      "sha256": "25cefb880a8563efeeb13d5dc992418a949ecc9447300a27757eab7d7e69f6c4"
+    },
+    {
+      "path": "harness/training/run_phase1_phase_d_telemetry_sweep.sh",
+      "bytes": 2255,
+      "sha256": "48b7d4568f27ac707777806c035e36e985ddbafb6ff686224b2eaf909351f6f4"
+    },
+    {
+      "path": "harness/training/run_phase1_tune_batch.sh",
+      "bytes": 4488,
+      "sha256": "07987f4602985687c74a9940dc6f55aed0ada630cb025ecbfe3a3e735377f086"
+    },
+    {
+      "path": "harness/training/scrape_telemetry_metrics.py",
+      "bytes": 14667,
+      "sha256": "6eaab64a6ccf29f6fa1b39384225d329d95be727e8b5b541375cc6d51578be52",
+      "top_level_functions": [
+        "find_reports",
+        "safe_metric",
+        "safe_config_optional_float",
+        "fmt_num",
+        "fmt_aux_or_ratio",
+        "fmt_ratio_plain",
+        "fmt_scale_cell",
+        "extract",
+        "interpret_band",
+        "_group_weight_key",
+        "_pstdev_safe",
+        "_mean_finite",
+        "_sorted_weight_keys",
+        "aggregate",
+        "warn_mixed_scale_same_weight",
+        "mean_ratio_by_weight",
+        "valid_ratio_count_by_weight",
+        "suggest_best_weight",
+        "print_ratio_trend",
+        "detect_row_frac",
+        "detect_flat_scaling",
+        "_weight_sort_key",
+        "_ratio_desc_key",
+        "_scale_sort_key",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import json",
+        "import math",
+        "import statistics",
+        "import sys",
+        "from collections import defaultdict",
+        "from pathlib import Path",
+        "from typing import Any"
+      ]
+    },
+    {
+      "path": "harness/training/train_unified_phase1.py",
+      "bytes": 62450,
+      "sha256": "81b9ed6631f731394de5f171da8200047bf81d7906a04a15123b00004a06c348",
+      "top_level_functions": [
+        "read_jsonl",
+        "tokenize",
+        "load_merkle_memory_rows",
+        "build_vocab",
+        "vectorize_questions",
+        "softmax",
+        "mmlu_labels",
+        "infer_op_label",
+        "gsm_labels",
+        "accuracy",
+        "normalize_number",
+        "execute_op",
+        "gsm_answer_accuracy",
+        "gsm_numeric_targets",
+        "gsm_pred_clip_bounds",
+        "gsm_target_transform",
+        "pred_numeric_to_rounded_ints",
+        "_softplus_np",
+        "_sigmoid_np",
+        "gsm_numeric_pred_c_train",
+        "gsm_numeric_pred_log",
+        "gsm_answer_accuracy_numeric",
+        "_default_save_dir",
+        "main"
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import json",
+        "import os",
+        "import re",
+        "from pathlib import Path",
+        "from typing import Any",
+        "import numpy as np",
+        "from datetime import datetime, timezone"
+      ]
+    },
+    {
+      "path": "papers/ACS_Deterministic_AI_Stack_PDR.md",
+      "bytes": 42757,
+      "sha256": "c085567e44db62b3ffaa6496492c4bb4ef6f65f78566d3e2dcfd78049478a7d7"
+    },
+    {
+      "path": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+      "bytes": 66265,
+      "sha256": "111daeb90062f8cb5adaa4a526b768d116834a3db0feebad59d58d3d3f619c42"
+    },
+    {
+      "path": "papers/Form_Function_and_Asymmetry.tex",
+      "bytes": 130538,
+      "sha256": "c2be918abd8883ed1a713fd096df00c7667719b4888004e1b9ce0ca5913d89a3"
+    },
+    {
+      "path": "papers/LICENSE-PAPERS.md",
+      "bytes": 650,
+      "sha256": "db8403d90568fd00a8d8da41b6ce6121ed209254c9ed957f745052a6f5671316"
+    },
+    {
+      "path": "papers/README.md",
+      "bytes": 4651,
+      "sha256": "0fe98f4397a96a964c38950a3299a8319f60f277bcf9e4c46b6f5a150b49e37e"
+    },
+    {
+      "path": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+      "bytes": 50634,
+      "sha256": "7d1695721974a3b45251f66c7177b982d7a7adaeb24b3fd77ce9595d60463ccc"
+    },
+    {
+      "path": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+      "bytes": 159552,
+      "sha256": "398b376729e7f495eaeecedf7e1950aaa8e3c83c3930e556449bc4a63abaad06"
+    },
+    {
+      "path": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+      "bytes": 92282,
+      "sha256": "b3cb1153195c0fc4a5abc63aa899a7316ab53b765edec4470613a26765d66137"
+    },
+    {
+      "path": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+      "bytes": 44677,
+      "sha256": "697a103f7e3499326ddcff542228b7ab6f1c19486748dbfee99319205a5ba3fa"
+    },
+    {
+      "path": "papers/discrete_geometry_formalism.tex",
+      "bytes": 6518,
+      "sha256": "8e9033b8f05caf1ccf9a4709352a4073479438c7a01d96342a6e887fb6357168"
+    },
+    {
+      "path": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+      "bytes": 18563,
+      "sha256": "7c8839e825e647e78891540dc6caa1880437a51c40baae835600c53a9c7247bc"
+    },
+    {
+      "path": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+      "bytes": 27632,
+      "sha256": "b5fd889c9d2286bdfa89debf70e541523c73530010dc41f02ac0f0c62946def1"
+    },
+    {
+      "path": "papers/later_FF06_series/The_Geometry_Engine.tex",
+      "bytes": 16753,
+      "sha256": "3e1f13c9635cf0c9874d4592693a8ff5220e4b85cbcbf00203d799260a45774d"
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+      "bytes": 17517,
+      "sha256": "4a792d183e09414d714395a87f667d8b1b2e9d322476062b980ebccb26d17d39"
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+      "bytes": 28212,
+      "sha256": "c59c268cad09d7d67515279882caac794d9d2a36c74a10bccd054bb6c9950a0d"
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+      "bytes": 40786,
+      "sha256": "f016668c897227561ff994ba52745f8c530475fc995e95de6aec886131ccde1c"
+    },
+    {
+      "path": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+      "bytes": 11480,
+      "sha256": "9b6d9b700a9c96bb0e0d511292f23265aed21e40a96fa1aed3a940e97528bb0a"
+    },
+    {
+      "path": "papers/later_FF06_series/When_a_Number_Lies.tex",
+      "bytes": 13858,
+      "sha256": "064258196093ad1dab9f102259c6dab701037a1820f2a6f8f40c9cc7a6fe727f"
+    },
+    {
+      "path": "papers/later_FF06_series/dominance_engine_disp.py",
+      "bytes": 3751,
+      "sha256": "bc87d31391c5922a8a23077620dad2f0d454fc2c9d880a2077355c0d1386e1fa",
+      "top_level_functions": [
+        "reduce_vixels"
+      ],
+      "imports": [
+        "from shape_engine import Shape"
+      ]
+    },
+    {
+      "path": "papers/later_FF06_series/predictive_test_disp.py",
+      "bytes": 4278,
+      "sha256": "ae8aef2ea43d575ae79f294180c2136d7e88271b4876c6c6b89a103301cc69af",
+      "top_level_functions": [
+        "main"
+      ],
+      "imports": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "papers/later_FF06_series/shape_engine_disp.py",
+      "bytes": 4614,
+      "sha256": "a99576ff91ad615057591bd4887d3681bc61d82f17c312eda8466f25988f73e3",
+      "top_level_functions": [
+        "add_exit"
+      ],
+      "imports": [
+        "from sympy import factorint, prime, primepi, isprime",
+        "import math",
+        "from functools import reduce"
+      ]
+    },
+    {
+      "path": "papers/later_FF06_series/verify_ledger_disp.py",
+      "bytes": 5590,
+      "sha256": "89ec52326875369f81c7cf41a2c5b6039bf580d7997ed07d4bfb1c8327067934",
+      "top_level_functions": [
+        "chk",
+        "factorial_shape",
+        "d_",
+        "sig",
+        "phi_",
+        "mu_",
+        "binom_shape",
+        "verify_seam"
+      ],
+      "imports": [
+        "import sys",
+        "from shape_engine import Shape",
+        "import math, random",
+        "from fractions import Fraction",
+        "from sympy import primerange, divisor_count, totient, divisor_sigma, mobius, gcd as sgcd, lcm as slcm, primefactors, prod",
+        "from math import comb, factorial as fact",
+        "from sympy.functions.combinatorial.numbers import partition",
+        "import numpy as np",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "papers/methodology/Form_Function_Relativity.tex",
+      "bytes": 20205,
+      "sha256": "bd841110abec41660f47d51a18bf7a453280b373e2fb15e9a81beefb85db84ca"
+    },
+    {
+      "path": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+      "bytes": 14438,
+      "sha256": "f59ac6dbcc1eb6f56f438bcb326eab93baa70dccb35efe2f9ab2e36594ea4b7c"
+    },
+    {
+      "path": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+      "bytes": 14411,
+      "sha256": "36ea3edb2525e199af9e745f615c6af088ab05d62430870baea2e9fd963b240c"
+    },
+    {
+      "path": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.md",
+      "bytes": 11588,
+      "sha256": "6d2216631ee15d62b1ca0e56237bc802dad647012eb321715632d1717b77b456"
+    },
+    {
+      "path": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+      "bytes": 11394,
+      "sha256": "84294a742d661f5ce59dfb239bf4f34222c58a01d832c4058b89f5063338ac9a"
+    },
+    {
+      "path": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+      "bytes": 16421,
+      "sha256": "f3470ed542ed357a72e25257c600669f9bbfbb8a4ce48c8a9748b42fc1dca322"
+    },
+    {
+      "path": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+      "bytes": 32877,
+      "sha256": "ee4dd3bc06b549333f47c65d82fe51a032e65f96830a5c30659282d024743612"
+    },
+    {
+      "path": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+      "bytes": 18590,
+      "sha256": "fb025b960eb8bd7f6f0313d785c4f3cd5d3885fdbe99d3a368e279bfb641cd4e"
+    },
+    {
+      "path": "papers/notes/Density_Engine_Many_Worlds.tex",
+      "bytes": 19871,
+      "sha256": "a7a87054cd585dc8424588b5c40dfdee885a9432c2ab7d4371e83609a68cf224"
+    },
+    {
+      "path": "papers/notes/Density_Engine_Many_Worlds_readable.md",
+      "bytes": 10762,
+      "sha256": "7a22bfca9c1357df70ed515c73ad68bee8be24762490b32cd99f3a0c1d2882d9"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Nuclear_Decay.md",
+      "bytes": 13204,
+      "sha256": "96eadc5e5a440e60c14bcd78eb0f86ec727ea1a55dd8d480cf593cb59831bda5"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+      "bytes": 17425,
+      "sha256": "c39f21aac11ea473dc22b89f4b22e5317303c57c6984eb7f9261e51f4b0de0eb"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Overlap.md",
+      "bytes": 6060,
+      "sha256": "daedddb4d365224430d798939637a4db51201d2e574dce5c58db9244a8b2aae2"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+      "bytes": 9256,
+      "sha256": "c296af6a78bc1302641713748704db177e5a2aa106d303ffb70f827da238e4b6"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Refined.md",
+      "bytes": 6992,
+      "sha256": "f6418c939fbeb77fc0ba2580a75d883bfca21d2e83122650e62b5012ebb8bc23"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+      "bytes": 18540,
+      "sha256": "096cb688ae1e5bba46031b804bfdfa89fdf55ef4adbd762982d98c44e41c0b41"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.md",
+      "bytes": 7209,
+      "sha256": "8eb308dc41be973468544549007d65eb174274913a9cf559aebe782119355001"
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+      "bytes": 11666,
+      "sha256": "6fb3e7c7d10b6a133dcf08ad6b48a7de4c62bd136fc874cce6d9fb007be45b67"
+    },
+    {
+      "path": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+      "bytes": 30004,
+      "sha256": "74aacda6bbbf7e60440d8b20c7a15acfa23e34d12fa0eab45c3d248e8f62150a"
+    },
+    {
+      "path": "papers/notes/Klein_Foam_Monad.md",
+      "bytes": 1507,
+      "sha256": "a984872da5cf76f71eb5bcb57aa11fd76b82334aa729106ebb90a3bc11fa7191"
+    },
+    {
+      "path": "papers/notes/Klein_Foam_Monad.tex",
+      "bytes": 15039,
+      "sha256": "89edb252fb55b68d78e499b51d8e29ddb2adee7fde6aeebdef78fa1f43cfff90"
+    },
+    {
+      "path": "papers/notes/Mobius_Ribbon_Capacitance.md",
+      "bytes": 2447,
+      "sha256": "072308c7d30a05ab8e2db077257b4e9668e6af9c03d192e29dfa951d30aa3e16"
+    },
+    {
+      "path": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+      "bytes": 8655,
+      "sha256": "c603157898a0fba0dcf564f7f71fec95fb3d91388f30dd97bc46389ff9fb7ef7"
+    },
+    {
+      "path": "papers/notes/Mobius_Screw_Electron.md",
+      "bytes": 3483,
+      "sha256": "56c587b12e8c11da04e47f89746a82baf53aae4f9a57e4a29a47b5997bbec27c"
+    },
+    {
+      "path": "papers/notes/Mobius_Screw_Electron.tex",
+      "bytes": 14537,
+      "sha256": "2fe7c47d395a6983ae21ab0d762297514f03a57dfc7b61ac2e4adb6bc26b0bac"
+    },
+    {
+      "path": "papers/notes/Prime_Gap_Transition_Operator.tex",
+      "bytes": 28023,
+      "sha256": "6630298f66f046cfb2b899fc0dd3cfd0614eed1f0159872e62d0a8210bd03371"
+    },
+    {
+      "path": "papers/notes/Pythagorean_Lattice_Limits.tex",
+      "bytes": 16470,
+      "sha256": "eb4032528d011301f72d40a9a4e54c01f7799a0232e68eef13fc8f76f3b8f838"
+    },
+    {
+      "path": "scripts/generate_paper_figures.py",
+      "bytes": 40053,
+      "sha256": "43d218596b358c20addac5bd14b576c9917f97784c99f65d0f3fcb04f4c0217e",
+      "top_level_functions": [
+        "save",
+        "note",
+        "T_BL",
+        "torsion_couplings",
+        "fig_colour_weights",
+        "closure_defect",
+        "sl3_defect_and_samples",
+        "fig_closure_family",
+        "fig_barbero_immirzi",
+        "fig_torsion_tiers",
+        "su3_weights",
+        "casimir",
+        "fig_rep_gallery",
+        "fig_nuclear_geometry",
+        "fig_ricci_flow",
+        "fig_sign_reversal",
+        "fig_chirality",
+        "load_zeros",
+        "fig_variance_scaling",
+        "fig_flow_field",
+        "fig_wronskian_heatmap",
+        "_box",
+        "fig_layers_cycle",
+        "fig_hero_nesting",
+        "main"
+      ],
+      "imports": [
+        "import os",
+        "import sys",
+        "from fractions import Fraction",
+        "import numpy as np",
+        "import matplotlib",
+        "import matplotlib.pyplot as plt",
+        "from src.common.lie_algebra import sl_n_basis, bracket",
+        "from src.common.seed import CANONICAL_SEED, default_rng",
+        "import shutil",
+        "import re",
+        "import subprocess",
+        "from matplotlib.patches import FancyBboxPatch"
+      ]
+    },
+    {
+      "path": "scripts/prime_carrier_reproduce.py",
+      "bytes": 6794,
+      "sha256": "cc0a9476706ac993461f79613d2b71f3fac538a6446e7469eafd24df01fb7d10",
+      "top_level_functions": [
+        "find_zeros",
+        "prime_peak_power",
+        "positions_from_spacings",
+        "phase_random",
+        "vonmangoldt",
+        "hr",
+        "reseed"
+      ],
+      "imports": [
+        "import os",
+        "import numpy as np"
+      ]
+    },
+    {
+      "path": "scripts/ym_comparison_checker.py",
+      "bytes": 11881,
+      "sha256": "7cb1ceab4b2c0a15b5b2d4ea4837c9301cb35c52d8645063aec9e725c75c9906",
+      "top_level_functions": [
+        "install_pypdf",
+        "extract_text_from_pdf",
+        "extract_text_from_directory",
+        "analyze_matches",
+        "generate_report",
+        "main"
+      ],
+      "imports": [
+        "import os",
+        "import sys",
+        "import re",
+        "import argparse",
+        "from typing import Dict, List, Any, Tuple",
+        "import pypdf",
+        "import pypdf",
+        "import subprocess"
+      ]
+    },
+    {
+      "path": "visualizations/README.md",
+      "bytes": 2824,
+      "sha256": "2a0645d0da5958348ca04ca252c6575160473d068c216c8e9a2eed6e3bd41b2e"
+    }
+  ]
+}

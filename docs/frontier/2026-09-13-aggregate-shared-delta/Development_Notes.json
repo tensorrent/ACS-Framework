@@ -1,0 +1,30 @@
+{
+  "recorded_utc": "2026-09-13T21:31:48.572266+00:00",
+  "recorded_commands": 7,
+  "successful_commands": 7,
+  "failed_commands": 0,
+  "recording_scope": "Seven scientific execution receipts; packaging and the fresh recursive verifier are reported separately in Verification.json. No failed scientific execution in this pass. Earlier failed attempts remain intact in preceding checkpoints.",
+  "freeze_boundary": "The two shared-bound runs and two local-feedback runs completed before their independent audits. The producer sources have not been edited after these recorded runs. Held-out arithmetic enters only the independent local validation and adversarial true-coefficient control.",
+  "new_derivation": "Signed common-root derivatives are combined before absolute bounding; the unknown-zero tail retains the nonnegative sum of row budgets. The moment budget is recomputed over enlarged root intervals, and full residual support is retained.",
+  "ablation": "Global rows, localized separate rows, and shared signed derivatives use the same frozen duals. Degree-only and discriminant-aware local profiles are reported separately, with one pass distinguished from repeated local/spectral feedback.",
+  "independence": "Trigonometric and complex-exponential interval routes use different precision and subdivision but share FLINT. Exact integer objective and elimination replay, an independently enumerated local catalogue, and 85-digit mpmath displaced sums provide additional checks. Samples do not replace full interval coverage.",
+  "zero_radius_encoding": "Zero-radius and zero-multiplier cases have empty derivative leaves and zero placeholders for additional error; these do not assert a nonzero derivative is zero at radius zero.",
+  "premise_controls": "Independent errors assigned to the same root in different rows violate the common-input premise and can exceed the shared bound. These are intentionally inconsistent observations, not actual alternative fields.",
+  "unresolved": "The shared-only radius grid leaves non-singleton domains at its next points. At full support, 559 A and 567/566 B domains remain unresolved under the two local profiles. Fixed-point survivors are not global field realizability certificates.",
+  "history_policy": "Preserve all 117 branches and the 388-event byte prefix; append five events. Earlier dated checkpoints and pinned code remain unchanged. The ongoing goal remains active.",
+  "packaging_verification_failure": {
+    "first_invocation": {
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "eb948efd5eb7a6e3dca83c943bd9b165231d6e902327b8c078d7c06b7ec866fa",
+      "command": "../acs-research/.venv/bin/python code/frontier_verification/verify_aggregate_shared_delta.py > ../acs-research/aggregate-shared-audit/Verification.json 2> ../acs-research/aggregate-shared-audit/verification-stderr.txt",
+      "failure": "The final README link check required the new output Verification.json, but this invocation redirected the report into scratch before any repository report file existed.",
+      "completed_before_failure": "Recursive history, new producers, all three independent audits, manifests, input hashes, receipts, source records, branch preservation and ledger replay reached the final local-link check successfully."
+    },
+    "correction": "Create a marked in-progress report at the expected output path, then rerun the unchanged verifier and replace it with the successful report.",
+    "instruments_changed": false,
+    "scientific_recorded_commands": 7,
+    "scientific_failed_commands": 0,
+    "retained_packaging_verification_failures": 1
+  }
+}

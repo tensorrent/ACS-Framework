@@ -1,0 +1,66 @@
+{
+  "recorded_utc": "2026-09-13T19:52:44.971299+00:00",
+  "sources": [
+    {
+      "name": "Milne_ANT.pdf",
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 1296815,
+      "sha256": "24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847",
+      "locator": "Theorems 3.34-3.35; 4.3 and 4.9, printed pages 70 and 72; Corollary 7.59",
+      "use": "Degree sum, ramification support, Minkowski bound and no nontrivial finite-unramified extension of Q, cyclic tame inertia."
+    },
+    {
+      "name": "Conrad_Different.pdf",
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/different.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 744682,
+      "sha256": "afc82d34f4e1cfc51a6701f4e724b0726ef0fb922cb227be5217fa22950be17c",
+      "locator": "Theorems 4.8 and 4.13, printed pages 10 and 12; Example 4.10, printed page 11",
+      "use": "Discriminant norm, tame different exponent and cyclotomic prime-power field discriminant for the degree/signature control."
+    },
+    {
+      "name": "Conrad_Tame_Composita.pdf",
+      "url": "https://math.stanford.edu/~conrad/676Page/handouts/tamecomp.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 113648,
+      "sha256": "c9804a005181cae2b797f366bb13ae33883b272bb4875caea7a44261c0d9c219",
+      "locator": "Theorem 2.1 and section 3, PDF pages 1-2",
+      "use": "Composita and the unramified base-change fact used for normal closures."
+    },
+    {
+      "name": "Conrad_Inertia_Surjectivity.pdf",
+      "url": "https://math.stanford.edu/~conrad/676Page/handouts/inertiasurj.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 54705,
+      "sha256": "5aa228ddd41861c0cf8a7d1296ca333d4dd0a219002656d35edb4d419c4cee2a",
+      "locator": "Entire one-page handout",
+      "use": "Inertia surjects onto the inertia of a Galois subextension."
+    },
+    {
+      "name": "Wang_2018.pdf",
+      "url": "https://asset.library.wisc.edu/1711.dl/6NIAB7DW5X5WN8J/R/file-284b7.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 463671,
+      "sha256": "bf8bd50b7e8d679522045735b5edd30f691b5b446fab9c7c8300c95b9f7269f3",
+      "locator": "Section 3.1.1, printed page 31, PDF page 40",
+      "use": "Tame discriminant exponent as permutation index n minus inertia orbits."
+    },
+    {
+      "name": "Prasad_Yeung_2007.pdf",
+      "url": "https://archive.mpim-bonn.mpg.de/id/eprint/741/1/preprint_2007_70.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 214982,
+      "sha256": "3e7508e7c52ffb28ca86d4b1295b12dfa32e8adeddc174d3c1907bcdf522be12",
+      "locator": "Printed page 11, Case (a), PDF page 11",
+      "use": "Independent published corroboration of the unique totally complex quartic of discriminant 125; underlying table enumeration is not rerun."
+    }
+  ],
+  "scope": "Public primary source hashes and exact locators. Third-party PDFs and page images remain only in local scratch."
+}

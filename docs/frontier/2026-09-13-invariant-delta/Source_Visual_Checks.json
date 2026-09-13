@@ -1,0 +1,26 @@
+{
+  "scope": "Local rendered pages inspected after web screenshot support was unavailable; images remain in scratch.",
+  "pages": [
+    {
+      "source": "Milne_ANT.pdf",
+      "one_based_pdf_page": 72,
+      "renderer": "pdftoppm -scale-to 1600 -png -singlefile",
+      "page_png_sha256": "316ef7f314b9c9fa2875fd161cdd72d39ed2b5c4e88343dbf2c1d6a1d646db2a",
+      "visually_inspected": true
+    },
+    {
+      "source": "Wang_2018.pdf",
+      "one_based_pdf_page": 40,
+      "renderer": "pdftoppm -scale-to 1600 -png -singlefile",
+      "page_png_sha256": "e268c79a36e0236764d9224b55a89b65053dccca227a7f93df8c89ecae4b3c02",
+      "visually_inspected": true
+    },
+    {
+      "source": "Prasad_Yeung_2007.pdf",
+      "one_based_pdf_page": 11,
+      "renderer": "pdftoppm -scale-to 1600 -png -singlefile",
+      "page_png_sha256": "e880710e7b700ac6c94c64f8678e43c1195e5e6a9247c50d9ccfd94fbed86661",
+      "visually_inspected": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "retained_failed_verification_attempt",
+  "tool_session_id": 27798,
+  "returncode": 1,
+  "source_sha256": "54e315c1cb83192567d253842d0c0bde5e18ab23005f8c11459c1be75bfedfc7",
+  "command": "python code/frontier_verification/verify_invariant_delta.py > docs/frontier/2026-09-13-invariant-delta/Verification.json",
+  "failure": "AssertionError at initial verifier line 33: assert data == producer.run()",
+  "cause": "The producer returns tuples that JSON serializes as lists. The direct Python object comparison failed despite identical serialized mathematical data.",
+  "correction": "Compare canonical JSON for both the producer and auditor replay. This changes no mathematical instrument or retained prediction.",
+  "receipt_scope": "Reconstructed from the actual terminal tool result, not a run_recorded receipt. No elapsed time is asserted."
+}

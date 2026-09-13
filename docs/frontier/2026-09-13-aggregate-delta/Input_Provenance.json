@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "source_sha256": "8430a449eec39a5e5c9e9eed56dbe6a5cef28a2524ff8ccebc5d5c584dea2cd0",
+  "archive_sha256": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+  "mapping": [
+    {
+      "input_file": "S1_160.json",
+      "input_sha256": "d1d61747a55e7bc06b6cc3a58e6af3d4b49041862435278d96a062b54c6ce222",
+      "source_entry": "Pair_Spectrum160.json",
+      "source_entry_sha256": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+      "held_out_field": "A"
+    },
+    {
+      "input_file": "S2_160.json",
+      "input_sha256": "1c2e36e68b3ca1bff798ff8e3f75abd0c19201d0e7ff5ede1990f223922e7953",
+      "source_entry": "Pair_Spectrum160.json",
+      "source_entry_sha256": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+      "held_out_field": "B"
+    },
+    {
+      "input_file": "S1_224.json",
+      "input_sha256": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+      "source_entry": "Pair_Spectrum224.json",
+      "source_entry_sha256": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e",
+      "held_out_field": "A"
+    },
+    {
+      "input_file": "S2_224.json",
+      "input_sha256": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77",
+      "source_entry": "Pair_Spectrum224.json",
+      "source_entry_sha256": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e",
+      "held_out_field": "B"
+    }
+  ],
+  "scope": "Provenance and field identities are retained outside decoder inputs. The decoder receives only common degree/discriminant/signature and a complete aggregate finite spectrum. This is an audited data boundary, not a blinded study."
+}

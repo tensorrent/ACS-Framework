@@ -1,0 +1,105 @@
+{
+  "files": {
+    "code/frontier_verification/LFUNCTION_README.md": {
+      "bytes": 7242,
+      "sha256": "993ecfe03c43451e985be341219fa9ebbe53b0fc706379e60db6f5b7bdf328b4"
+    },
+    "code/frontier_verification/lfunction_certificate_replay.py": {
+      "bytes": 5136,
+      "sha256": "7c6e87637e2c6f7b4578e2f5f85362cd762e65b0463e399befcf173f67e13473"
+    },
+    "code/frontier_verification/lfunction_data_audit.py": {
+      "bytes": 8615,
+      "sha256": "d2d134f4e848671da32e608b4c6692d9019a0d9189d2497210f6caa39bdc21fd"
+    },
+    "code/frontier_verification/lfunction_functional_backend.py": {
+      "bytes": 3402,
+      "sha256": "fa136169e83cb544216c4f72ab912e7dce7c053a7a0bf887f9048aa36f7be1a1"
+    },
+    "code/frontier_verification/lfunction_observable_delta.py": {
+      "bytes": 3744,
+      "sha256": "29ee4fff2315e0cd23562eb4ac3771bccb01132161b6898376f409e5c1072013"
+    },
+    "code/frontier_verification/lfunction_table_export.py": {
+      "bytes": 2965,
+      "sha256": "081a53b855bdd1c9d7fcfd81b6f5b27d531d321c9eaa09097c4eae2d1f80b7a4"
+    },
+    "code/frontier_verification/lfunction_zero_certificate.py": {
+      "bytes": 8603,
+      "sha256": "02e90ef9b0fa4b58ef466dab821dd07b0be40847204654cc1bab6fd9f0e997cd"
+    },
+    "code/frontier_verification/source_requirements.txt": {
+      "bytes": 89,
+      "sha256": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+    },
+    "code/frontier_verification/verify_lfunction_delta.py": {
+      "bytes": 13787,
+      "sha256": "0479ac7c149a4f067b244eac912b72d2452db03012e0620ba9db4192c3e95b88"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Branch_Events.jsonl": {
+      "bytes": 331025,
+      "sha256": "c8d2976bf88dd7ad83cef85d11f1ee238a8770361cd4e62dfb64d798655ff4ba"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Certificate_Summary.json": {
+      "bytes": 4565,
+      "sha256": "c78229da52e3993c10ba8a570cd7474b8278f0f34f46b8ca3f889e8ac6566386"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Certificates.zip": {
+      "bytes": 25182733,
+      "sha256": "2fb3ba0ccd8a1dcbdeef46105060a431b901a6ae65bca465afc1e5c679b12a5f"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Data_Audit.json": {
+      "bytes": 363847,
+      "sha256": "0c696b1dd9584c21cf97c4214ba7563ba1b9fa5538ae6948c93d0c4861ac3a36"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Entrypoint_Reproduction.json": {
+      "bytes": 527,
+      "sha256": "0349ef1b7f01c0a2618dcf660c3974b55e4f4ebab9dd29312cd2691756efe25c"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Execution_Artifacts.zip": {
+      "bytes": 18326047,
+      "sha256": "0e3ed41434bda9e6502f04f5751d06aed0a69d884c3ff3ecf44208c486b1c257"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Execution_Receipts.json": {
+      "bytes": 46772,
+      "sha256": "2c9237ca111c84aa28b255054deba4797d433e51ec18843bd455387fa86ddefa"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Observable_Delta.json": {
+      "bytes": 7373,
+      "sha256": "d815a2b3ba6d7c3118f66b0caa7a3ea2d5d18af44c73de10da528f54a75f2712"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Primary_Sources.json": {
+      "bytes": 865,
+      "sha256": "ef28a6d03f7a1f0f1843c4dc5b21b79cb99c8e24058f26b43d93b89325da43df"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/README.md": {
+      "bytes": 8755,
+      "sha256": "38ad9e0c1562e4d2a4ba1fb2a86d6132254de7363b5b38be19f4b542e02f7fb6"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Replays.zip": {
+      "bytes": 56277067,
+      "sha256": "a8e4793341e0ff5fa2fb9482aea84d2163954c22f04966139e4fab717769da15"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Research_Queue.json": {
+      "bytes": 182638,
+      "sha256": "53ea56e3940b1b5d007f1ee2baa4e9b7a8d83bbb622667ad52b3774a740cf4ff"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Runtime.json": {
+      "bytes": 227,
+      "sha256": "c1d52609513ff7fded75840c1aebada84e34f5fb8eaed9f25dfe20873e5a44af"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Scope_Corrections.json": {
+      "bytes": 1424,
+      "sha256": "eeb92ddb03566862834038343b67647a89f9a374739fd14e821c39f20602ebec"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Source_Changes.json": {
+      "bytes": 5739,
+      "sha256": "4c80013e7edf773c2229dafc7bd5b6f44494ba1f9dfc12f70283df5979f127f7"
+    },
+    "docs/frontier/2026-09-13-lfunction-delta/Source_Snapshot.zip": {
+      "bytes": 121103,
+      "sha256": "be232ce4b052706ef99123f06521c640e372485597a861cc2ad560ce8fe99c7f"
+    }
+  },
+  "scope": "Immutable checkpoint and instruments; mutable implementation versions are archived."
+}

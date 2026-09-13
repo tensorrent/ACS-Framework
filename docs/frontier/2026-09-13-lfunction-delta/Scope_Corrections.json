@@ -1,0 +1,24 @@
+{
+  "corrections": [
+    {
+      "claim": "Displayed decimal precision accurately locates every supplied L-zero.",
+      "result": "352 of 654 displayed rounding cells exclude their intended root. The complete certified list and interval evaluations locate the error; nonzero residual at a decimal center alone is not the criterion."
+    },
+    {
+      "claim": "The original extended mod-7 scan provides every zero below height 220.",
+      "result": "Three missing ordinates at indices 103, 128, 147. Exactly 157 zeros are certified in the full rectangle."
+    },
+    {
+      "claim": "A fixed absolute completed-function tolerance proves root-location accuracy.",
+      "result": "At t=99.36, |Lambda| is about 1.20e-34 but |L| is about 0.1149. Strict positional brackets replace the stopping rule."
+    },
+    {
+      "claim": "Positive spectra of a complex character and its conjugate have equal real witness contributions.",
+      "result": "Their first positive zeros differ. Conjugation reverses height. The historical full-Dedekind ratio based on doubling one positive list is withdrawn."
+    },
+    {
+      "claim": "The printed hardened-twist narrative is automatically supported by the current dataset.",
+      "result": "Replace hardcoded numerical commentary with measured output and state that the heuristic floor is not a calibrated test. The character parity check is independent of zero data."
+    }
+  ]
+}

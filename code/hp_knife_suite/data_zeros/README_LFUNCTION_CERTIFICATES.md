@@ -1,0 +1,9 @@
+# Certified finite L-function data
+
+The eight original L-function tables were replaced on 13 September 2026. Two separate conjugate-character extended tables were added. The Riemann table is unchanged. [LFUNCTION_CERTIFICATES.json](LFUNCTION_CERTIFICATES.json) records character IDs, height cutoffs, exact rational root intervals, file hashes and a 5e-21 absolute bound for the rounded decimal ordinates.
+
+The [Frontier L-function checkpoint](../../../docs/frontier/2026-09-13-lfunction-delta/README.md) retains the original data, all seven finite contour certificates, higher-precision replays, precision failures and before/after consumer results. [Reproduction instructions](../../frontier_verification/LFUNCTION_README.md) distinguish mathematical replay from integrity checking and deterministic export.
+
+Characters use these conventions: χ5(2)=i, χ7(3)=exp(2*pi*i/6), and the quadratic characters are Kronecker symbols for discriminants -35, -91 and -104. The conjugate files use the conjugate values; their positive spectra differ from the original characters. Complex extended cutoffs are 220, short cutoffs are 100, and the quadratic cutoffs are respectively 80, 60 and 70.
+
+Historical generators in the data subdirectories used absolute completed-function tolerances or unverified scans. They remain as historical source, with originals also archived in the preceding checkpoint; their output precision and completeness must not be assumed. Use the corrected `generate_more_lzeros.py` entry point with an explicit output directory, or replay and export the retained certificates. Loading the text into float64 introduces rounding beyond the decimal-file error bound. Finite phase thresholds are heuristic comparisons; they are not calibrated statistical tests or proofs of an infinite spectral identification.

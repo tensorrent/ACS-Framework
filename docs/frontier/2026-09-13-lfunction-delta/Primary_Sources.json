@@ -1,0 +1,20 @@
+{
+  "retrieved_utc": "2026-09-13T14:23:03.428134+00:00",
+  "sources": [
+    {
+      "url": "https://dlmf.nist.gov/25.15",
+      "title": "NIST DLMF 25.15: Dirichlet L-functions",
+      "supports": "Entire continuation for nonprincipal characters, Hurwitz representation, primitive functional equation and trivial-zero locations."
+    },
+    {
+      "url": "https://flintlib.org/doc/acb_dirichlet.html",
+      "title": "FLINT acb_dirichlet documentation",
+      "supports": "Interval Dirichlet L evaluation and normalized Hardy Z conventions. Online documentation is 3.7 development; the installed runtime is 3.6.0."
+    },
+    {
+      "url": "https://python-flint.readthedocs.io/en/latest/dirichlet.html",
+      "title": "python-flint 0.9.0 Dirichlet character API",
+      "supports": "Conrey character identification and callable L/Hardy Z interface."
+    }
+  ]
+}

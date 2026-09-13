@@ -1,5 +1,7 @@
 # Class Number Trend Refined + First Cyclotomic Test
 
+> **Correction, 13 September 2026:** The original numerical tables and claims below are historical. Supplied L-ordinates have been replaced by finite certified lists. Positive spectra for χ and χ̄ differ, so the doubled-character approximation does not establish the reported full Dedekind witness or its 5–6× ratio. Those numerical conclusions are withdrawn pending a same-cutoff recomputation using all distinct factors. See the [L-function audit](../../../../docs/frontier/2026-09-13-lfunction-delta/README.md).
+
 **Author**: Bradley Wallace + Claude
 **Date**: May 2026
 **Status**: 
@@ -66,7 +68,7 @@ In the (F_cos, F_sin) plane, the four character classes cluster at four well-sep
 
 #### Full Dedekind structure of ℚ(ζ_5)
 
-Combining F_ζ + 2·F_{L(χ)} + F_{L(χ²)} as an approximation (the factor 2 accounts for χ and χ̄ = χ³ contributing equal real parts):
+The historical calculation used F_ζ + 2·F_{L(χ)} + F_{L(χ²)}. Its stated justification—that the two positive spectra contribute equal real parts—is incorrect. The following values record that unvalidated approximation; they are not a certified full Dedekind calculation:
 
 | Splitting type | p mod 5 | Mean \|F_K\| |
 |---|---|---|
@@ -78,7 +80,7 @@ Individual fully-split primes show strong peaks following Λ(p)/√p decay:
 - p=11: F_cyclo = −0.91 (smallest fully-split p)
 - p=31: −0.80, p=61: −0.76, p=41: −0.57, p=71: −0.33
 
-**Ratio fully-split / non-fully-split ≈ 5-6×**. The cyclotomic splitting structure (which primes split completely vs partially vs are inert) is recovered cleanly by the framework.
+**Historical approximate ratio ≈ 5-6×, withdrawn as a full Dedekind result.** Recompute with separate χ and χ̄ spectra and the remaining factors before assessing the splitting statistic.
 
 ---
 

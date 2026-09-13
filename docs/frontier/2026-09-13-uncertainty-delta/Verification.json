@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T17:28:02.778602+00:00",
+  "scope": "Retained source identities and transcript consistency; interval producers, integer replay and mpmath extrema are not rerun.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 18,
+  "retained_cases": 360,
+  "integer_exclusions_replayed_in_recorded_audit": 119400,
+  "critical_points_bracketed_in_recorded_audit": 57691,
+  "mpmath_extrema_cases": 12,
+  "receipts": 4,
+  "research_branches": 116,
+  "ledger_events": 363,
+  "preserved_event_prefix": 360,
+  "ledger_head_sha256": "14037c5e77e8a92c40b8a54d39c6c92b74cf95baae85807de2972241f253b383",
+  "local_links": 36
+}

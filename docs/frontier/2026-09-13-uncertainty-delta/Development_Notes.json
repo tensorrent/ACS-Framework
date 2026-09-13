@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-09-13T17:26:50.165918+00:00",
+  "recorded_commands": 4,
+  "successful_recorded_commands": 4,
+  "unsuccessful_recorded_commands": 0,
+  "source_policy": "Previously dated checkpoints and all previously pinned instruments are unchanged. New instruments and their execution receipts are retained.",
+  "initial_integrity_check": "The first retained-evidence verifier invocation wrote its result to scratch, so the final link check found the as-yet absent checkpoint Verification.json. The failure is retained in Verification_Bootstrap_Failure.json. Redirecting the unchanged verifier to the checkpoint output path resolves this packaging-order issue; no numerical result or certificate changed.",
+  "precision_model": "Nominal extra displacement delta around certified intervals. Machine intervals round outward; range methods use their actual endpoints, derivative allowances use nominal delta with derivatives evaluated on outer boxes. Membership is fixed.",
+  "scalar_range_scope": "Endpoint and critical-value sums enclose the marginal finite Gaussian range. They do not retain common-ordinate correlations between rows.",
+  "higher_uncertainty_scope": "At delta 5e-3 the retained stationary rows identify 73 targets and leave 18 candidate domains unresolved. This exclusion fixed point is not a feasibility certificate.",
+  "no_new_completeness_claim": "Existing finite root-count certificates and analytic tails are reused. No global RH/GRH, field identification, optimal precision threshold or research exhaustion is asserted."
+}

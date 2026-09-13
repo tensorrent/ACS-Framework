@@ -1,0 +1,117 @@
+{
+  "ordinate-exact-audit": {
+    "started_utc": "2026-09-13T17:21:55.231127+00:00",
+    "elapsed_seconds": 68.228806,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_audit.py",
+      "--directory",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-coupled-delta",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Ordinate_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_audit.py": "47baab750508951d44695109bfc111829b055c1ce0f965d73cd8dfe08b86b8f0"
+    },
+    "stdout_sha256": "dd0b95e8c4b3446a095bc175c5ac57e4e078a0d77ec8221abaa116afea6136bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ranges-grid160": {
+    "started_utc": "2026-09-13T17:13:26.624814+00:00",
+    "elapsed_seconds": 487.601223,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py",
+      "--input",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Measurements.json",
+      "--precision",
+      "160",
+      "--deltas",
+      "5e-6",
+      "5e-5",
+      "5e-4",
+      "5e-3",
+      "--methods",
+      "global",
+      "derivative",
+      "direct",
+      "stationary",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Ranges_160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py": "9afc4f91029b299e4605447340558ef9b1d3108ffde50a576c7484ebbacaa0e3"
+    },
+    "stdout_sha256": "72e8c6930dfbe893c17cf4e507b41759bdc96cc290984e5b5e2c99e43bafc95c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ranges-grid224": {
+    "started_utc": "2026-09-13T17:13:27.770239+00:00",
+    "elapsed_seconds": 495.214517,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py",
+      "--input",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Measurements.json",
+      "--precision",
+      "224",
+      "--deltas",
+      "5e-6",
+      "5e-5",
+      "5e-4",
+      "5e-3",
+      "--methods",
+      "global",
+      "derivative",
+      "direct",
+      "stationary",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Ranges_224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py": "9afc4f91029b299e4605447340558ef9b1d3108ffde50a576c7484ebbacaa0e3"
+    },
+    "stdout_sha256": "1bf9f316193d3645fdd85a38ccce898b21e0166695ab9e1115f0a52f9b94f6cd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ranges-probe160": {
+    "started_utc": "2026-09-13T17:07:32.599340+00:00",
+    "elapsed_seconds": 93.257465,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py",
+      "--input",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Measurements.json",
+      "--precision",
+      "160",
+      "--deltas",
+      "5e-4",
+      "--methods",
+      "global",
+      "derivative",
+      "direct",
+      "stationary",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/uncertainty-audit/Ranges_Probe160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_ordinate_ranges.py": "9afc4f91029b299e4605447340558ef9b1d3108ffde50a576c7484ebbacaa0e3"
+    },
+    "stdout_sha256": "f71aea91625a1fc4e54ff65df12f2121e8630c753c4889390b059b1f9d32ee72",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

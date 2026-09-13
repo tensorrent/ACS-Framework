@@ -1,0 +1,127 @@
+{
+  "recorded_utc": "2026-09-13T20:27:54.398034+00:00",
+  "baseline_commit": "2b3b361ec73853eea35d057d09480dbd4f7ad51b",
+  "files": {
+    "docs/frontier/2026-09-13-biquadratic-delta/Biquadratic_Summary.json": {
+      "bytes": 3778,
+      "sha256": "a86fef3229c1bf3b9e05bd2c39112330d4a2ca3972e3757d249d14256899a06e"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Branch_Events.jsonl": {
+      "bytes": 371098,
+      "sha256": "1b592d3ce309cca632ad352cc3e800037da7610295b92cbd08f8589ce1a80839"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Development_Notes.json": {
+      "bytes": 2098,
+      "sha256": "c4752141cbf32ac96b338783701ab5218186f0d4113093cd01ab5dba3b81e5c3"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Execution_Artifacts.zip": {
+      "bytes": 12266,
+      "sha256": "cedc568799de92125229c0695e82be9ab5a7613ffd0ae2ec770d9f9d25aff153"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Execution_Receipts.json": {
+      "bytes": 12086,
+      "sha256": "68ca3663e29f394e48dbfa27fb561d3124e4f182af877e503be761018d5805f0"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Adversary.json": {
+      "bytes": 3344,
+      "sha256": "2def29eeea5db29b1064e425758c08f869b92ae5a9544ca24da482026180982f"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": {
+      "bytes": 335682,
+      "sha256": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic_Audit.json": {
+      "bytes": 53673,
+      "sha256": "790d9acfd3daea858546030794c83b8bc77b78c3c72f0d8883d787cf27f00180"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Candidate_Class.json": {
+      "bytes": 7976,
+      "sha256": "959e92d1078b1fa12c1f31fa6d4b5f16d660c79a124e84730aee6c9e293b2ddb"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Decoding.json": {
+      "bytes": 33038,
+      "sha256": "c518da2319770e106a1af57b34622dbb000d35fb52d98f0a319405bf9ce44039"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Fresh_Replay.json": {
+      "bytes": 3556,
+      "sha256": "8757516e564b1fe7c1c3f15b08c622f1962e2acb6416ec5ed2e84bde4ff08b43"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Spectra.zip": {
+      "bytes": 8025972,
+      "sha256": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": {
+      "bytes": 1453,
+      "sha256": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/README.md": {
+      "bytes": 3765,
+      "sha256": "daee16d7a723097946154c83fc49b02b7ce8a194647ce2062a9ec5adc1b17a51"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Research_Queue.json": {
+      "bytes": 212326,
+      "sha256": "aba49a395d40c2d5c47bb74d9fb6b567a812815df6b2714bc9eb7b547bfd0b37"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Runtime.json": {
+      "bytes": 1095,
+      "sha256": "5d62c82afecf325009fe12a773901d19b5aa2b223ed23c1b6493bf70f8116ee4"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Source_Acquisition.json": {
+      "bytes": 750,
+      "sha256": "54207dd212bf24cd4c1fa0a98ee7eb5be32983d05905915aad62228bba541393"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Source_Inventory.json": {
+      "bytes": 2237,
+      "sha256": "89b4e6b747b50292202d831bf7fda8972df73978c7f85de6c8254e2757961e76"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Source_Snapshot.zip": {
+      "bytes": 53449,
+      "sha256": "59c299a66d43a9c1a1dcf91d7d80ee8d4ead22b0777db36834c815e30ad6e47e"
+    },
+    "docs/frontier/2026-09-13-biquadratic-delta/Source_Visual_Checks.json": {
+      "bytes": 553,
+      "sha256": "49987a4bba0c0619cdf6b94bc2cb8ad44cc82a46306361e0b7fed13541116868"
+    },
+    "code/frontier_verification/dedekind_biquadratic_pair.py": {
+      "bytes": 6460,
+      "sha256": "4bcf6641d87ea00ac05a0e7bb1468799d91c83d2dfd6d357209c8f9892230e86"
+    },
+    "code/frontier_verification/dedekind_biquadratic_arithmetic_audit.py": {
+      "bytes": 6570,
+      "sha256": "9ab66a310e15775145727d11f96b52b8ae76c4cd049d1e1728408c899f4d9d0b"
+    },
+    "code/frontier_verification/dedekind_biquadratic_class.py": {
+      "bytes": 4417,
+      "sha256": "1b387ff0668153239cb99c90e3c703f00660234d50a1bc62a8ab625e7077260d"
+    },
+    "code/frontier_verification/dedekind_biquadratic_spectrum.py": {
+      "bytes": 7811,
+      "sha256": "44beb3d30c8afa4cee9cebe8a9b0ba7eefcd983e1ac74593cd54e7429f2d273c"
+    },
+    "code/frontier_verification/dedekind_biquadratic_spectral_audit.py": {
+      "bytes": 4856,
+      "sha256": "13f6e2e9646089fb70272bdb7570356b40b6c92695c0ecb66c1462f1c9de5b8d"
+    },
+    "code/frontier_verification/dedekind_biquadratic_decoding.py": {
+      "bytes": 6512,
+      "sha256": "d6babd7e7779066db14ea118a5692bf8bb2b4e58ce325664b65648570cccf8b7"
+    },
+    "code/frontier_verification/dedekind_biquadratic_replay.py": {
+      "bytes": 6301,
+      "sha256": "21b884453bc330683e94b8fbfd64ec077633cf8f1da1e51c07607c7b7ef8e05d"
+    },
+    "code/frontier_verification/dedekind_biquadratic_adversary.py": {
+      "bytes": 5684,
+      "sha256": "ad1c549cc191d5dbfca4f1d5b3b6d7f4b0d9bb7555b413e6a8b4ff2317ce09c3"
+    },
+    "code/frontier_verification/verify_biquadratic_delta.py": {
+      "bytes": 9589,
+      "sha256": "00d08ebd235963eca3ea195962d63a8f3971183749fed21af8b4362183f07ca4"
+    },
+    "code/frontier_verification/BIQUADRATIC_README.md": {
+      "bytes": 10759,
+      "sha256": "708a7ded97e1e02aa243f95b85df4024d4d298d5f737648382c0ba73070e64bf"
+    }
+  },
+  "scope": "Manifest and Verification excluded from self-reference; previous checkpoint is checked recursively."
+}

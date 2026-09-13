@@ -1,0 +1,18 @@
+{
+  "pages": [
+    {
+      "source": "Baker_ANT.pdf",
+      "one_based_pdf_page": 58,
+      "renderer": "pdftoppm -scale-to 1600 -png -singlefile",
+      "visually_inspected": true,
+      "page_png_sha256": "fef586fd8c4220f72631d3cbf4ad88124ed7d7d9b2772a804d0aadeac602ff72"
+    },
+    {
+      "source": "Milne_CFT.pdf",
+      "one_based_pdf_page": 174,
+      "renderer": "pdftoppm -scale-to 1600 -png -singlefile",
+      "visually_inspected": true,
+      "page_png_sha256": "bb7e5b2d4c277944da6c406f1f97a51b6e23493b77de49e8e85b3c9c39efa987"
+    }
+  ]
+}

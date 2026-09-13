@@ -1,0 +1,2638 @@
+{
+  "status": "passed",
+  "source_sha256": "9ab66a310e15775145727d11f96b52b8ae76c4cd049d1e1728408c899f4d9d0b",
+  "input_sha256": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+  "maximal_order_cosets_replayed": 190,
+  "local_polynomial_factorizations": 144,
+  "field_audits": [
+    {
+      "field": "A",
+      "maximal_cosets_replayed": 95,
+      "local_factorizations": [
+        {
+          "prime": 2,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              2,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "1 - T**2"
+        },
+        {
+          "prime": 3,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              2,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "1 - T**2"
+        },
+        {
+          "prime": 5,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 7,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 11,
+          "primitive_beta_multiplier": 2,
+          "order_index": 140,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 13,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 17,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 19,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 23,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 29,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 31,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 37,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 41,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 43,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 47,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 53,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 59,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 61,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 67,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 71,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 73,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 79,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 83,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 89,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 97,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 101,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 103,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 107,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 109,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 113,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 127,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 131,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 137,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 139,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 149,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 151,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 157,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 163,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 167,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 173,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 179,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 181,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 191,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 193,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 197,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 199,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 211,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 223,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 227,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 229,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 233,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 239,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 241,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 251,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 257,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 263,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 269,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 271,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 277,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 281,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 283,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 293,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 307,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 311,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 313,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 317,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 331,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 337,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 347,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 349,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 353,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 359,
+          "primitive_beta_multiplier": 1,
+          "order_index": 11,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        }
+      ],
+      "independent_trace_determinant": 576,
+      "coprime_discriminant_basis_route": [
+        8,
+        -3
+      ]
+    },
+    {
+      "field": "B",
+      "maximal_cosets_replayed": 95,
+      "local_factorizations": [
+        {
+          "prime": 2,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              2,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "1 - T**2"
+        },
+        {
+          "prime": 3,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**2 - 2*T + 1"
+        },
+        {
+          "prime": 5,
+          "primitive_beta_multiplier": 2,
+          "order_index": 116,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 7,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 11,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 13,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 17,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 19,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 23,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 29,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 31,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 37,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 41,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 43,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 47,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 53,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 59,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 61,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 67,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 71,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 73,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 79,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 83,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 89,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 97,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 101,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 103,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 107,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 109,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 113,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 127,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 131,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 137,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 139,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 149,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 151,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 157,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 163,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 167,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 173,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 179,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 181,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 191,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 193,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 197,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 199,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 211,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 223,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 227,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 229,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 233,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 239,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 241,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 251,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 257,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 263,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 269,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 271,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 277,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 281,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 283,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 293,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 307,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 311,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 313,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 317,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 331,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 337,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 4*T**3 + 6*T**2 - 4*T + 1"
+        },
+        {
+          "prime": 347,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 349,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 353,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        },
+        {
+          "prime": 359,
+          "primitive_beta_multiplier": 1,
+          "order_index": 5,
+          "model": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "inverse_euler_polynomial": "T**4 - 2*T**2 + 1"
+        }
+      ],
+      "independent_trace_determinant": 576,
+      "coprime_discriminant_basis_route": [
+        -8,
+        -3
+      ]
+    }
+  ],
+  "order_index_controls": [
+    {
+      "field": "A",
+      "polynomial_index_prime": 11,
+      "field_unramified": true,
+      "naive_polynomial_model": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "correct_model": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "field": "B",
+      "polynomial_index_prime": 5,
+      "field_unramified": true,
+      "naive_polynomial_model": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "correct_model": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "mod7_square_controls": [
+    {
+      "field": "A",
+      "sqrt_a_mod7": [
+        3,
+        4
+      ],
+      "sqrt_minus3_mod7": [
+        2,
+        5
+      ]
+    },
+    {
+      "field": "B",
+      "sqrt_a_mod7": [],
+      "sqrt_minus3_mod7": [
+        2,
+        5
+      ]
+    }
+  ],
+  "nonisomorphism": "Different sets of quadratic subfields in Galois V4 extensions, independently witnessed by different splitting at seven.",
+  "scope": "Exact Newton identities and radical-basis arithmetic verify maximal orders independently of the producer characteristic-polynomial calculation. Polynomial local factors are used only away from the selected power-basis index."
+}

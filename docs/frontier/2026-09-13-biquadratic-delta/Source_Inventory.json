@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "2b3b361ec73853eea35d057d09480dbd4f7ad51b",
+  "instruments": {
+    "code/frontier_verification/dedekind_biquadratic_pair.py": "4bcf6641d87ea00ac05a0e7bb1468799d91c83d2dfd6d357209c8f9892230e86",
+    "code/frontier_verification/dedekind_biquadratic_arithmetic_audit.py": "9ab66a310e15775145727d11f96b52b8ae76c4cd049d1e1728408c899f4d9d0b",
+    "code/frontier_verification/dedekind_biquadratic_class.py": "1b387ff0668153239cb99c90e3c703f00660234d50a1bc62a8ab625e7077260d",
+    "code/frontier_verification/dedekind_biquadratic_spectrum.py": "44beb3d30c8afa4cee9cebe8a9b0ba7eefcd983e1ac74593cd54e7429f2d273c",
+    "code/frontier_verification/dedekind_biquadratic_spectral_audit.py": "13f6e2e9646089fb70272bdb7570356b40b6c92695c0ecb66c1462f1c9de5b8d",
+    "code/frontier_verification/dedekind_biquadratic_decoding.py": "d6babd7e7779066db14ea118a5692bf8bb2b4e58ce325664b65648570cccf8b7",
+    "code/frontier_verification/dedekind_biquadratic_replay.py": "21b884453bc330683e94b8fbfd64ec077633cf8f1da1e51c07607c7b7ef8e05d",
+    "code/frontier_verification/dedekind_biquadratic_adversary.py": "ad1c549cc191d5dbfca4f1d5b3b6d7f4b0d9bb7555b413e6a8b4ff2317ce09c3",
+    "code/frontier_verification/verify_biquadratic_delta.py": "00d08ebd235963eca3ea195962d63a8f3971183749fed21af8b4362183f07ca4",
+    "code/frontier_verification/BIQUADRATIC_README.md": "708a7ded97e1e02aa243f95b85df4024d4d298d5f737648382c0ba73070e64bf"
+  },
+  "dependencies": {
+    "code/frontier_verification/lfunction_zero_certificate.py": "02e90ef9b0fa4b58ef466dab821dd07b0be40847204654cc1bab6fd9f0e997cd",
+    "code/frontier_verification/dirichlet_strip_certificate.py": "16c60807a3ef2295e79a10109fa91e964f8b306546878ef32837e99e311f74e2",
+    "code/frontier_verification/dirichlet_folded_count.py": "101c374ac55aec441a96bf4f78a1f3cf2f82029b352f691ee8745fe16c90ad9b",
+    "code/frontier_verification/verify_invariant_delta.py": "fd2bbe54f52f492999e2782bcd8283e167b9d086fca612329e25690348652337",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New instruments and preserved initial replay source. Older dated checkpoints and their pinned instruments are unchanged."
+}

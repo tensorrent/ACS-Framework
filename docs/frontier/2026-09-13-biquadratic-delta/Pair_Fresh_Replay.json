@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "source_sha256": "21b884453bc330683e94b8fbfd64ec077633cf8f1da1e51c07607c7b7ef8e05d",
+  "inputs_sha256": {
+    "Pair_Spectrum160.json": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+    "Pair_Spectrum224.json": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e",
+    "Pair_Spectral_Audit.json": "ed1041274dcbe0a7c88aafd6d4567fd6a8635e28506781a41abb6017c3d7d87d"
+  },
+  "bits": 256,
+  "stored_segments_replayed": 63405,
+  "fresh_certified_leaves": 77735,
+  "endpoint_sign_replays": 156,
+  "direct_paths": [
+    {
+      "D": -3,
+      "stored_segments": 10542,
+      "fresh_leaves": 14576,
+      "subdivisions": 4034,
+      "exact_evaluation_stream_sha256": "8bf4ae80efe8a0032c48224f9cf9500597da0dce4d5f3af5d42e6a74e6eb98f6",
+      "winding": {
+        "mid": [
+          115792089237316195423570985008687907853269984665640564039457584007913129634159,
+          -254
+        ],
+        "rad": [
+          160389533,
+          -265
+        ]
+      },
+      "contour_count": 4,
+      "positive_count": 4
+    },
+    {
+      "D": 8,
+      "stored_segments": 15355,
+      "fresh_leaves": 18348,
+      "subdivisions": 2993,
+      "exact_evaluation_stream_sha256": "ffbf84eb9f763c33e964df6e2b4655c40875a394bf4fd846c2da038116da2f3c",
+      "winding": {
+        "mid": [
+          115792089237316195423570985008687907853269984665640564039457584007913129631593,
+          -253
+        ],
+        "rad": [
+          220130739,
+          -266
+        ]
+      },
+      "contour_count": 8,
+      "positive_count": 7
+    },
+    {
+      "D": -8,
+      "stored_segments": 10330,
+      "fresh_leaves": 12739,
+      "subdivisions": 2409,
+      "exact_evaluation_stream_sha256": "556afbb0c117591b94b86889dae90d2ae3f1a43c969257420adce59821a19fa6",
+      "winding": {
+        "mid": [
+          50659039041325835497812305941300959685805618291217746767262693003461994214833,
+          -252
+        ],
+        "rad": [
+          300867107,
+          -267
+        ]
+      },
+      "contour_count": 7,
+      "positive_count": 7
+    },
+    {
+      "D": 24,
+      "stored_segments": 15508,
+      "fresh_leaves": 18233,
+      "subdivisions": 2725,
+      "exact_evaluation_stream_sha256": "ea88d1908f85d286e604d14d0babb20d3b95b1fa4eaec4e7e97903fc467b4334",
+      "winding": {
+        "mid": [
+          79607061350654884353705052193472936649123114457627887777127089005440276620325,
+          -252
+        ],
+        "rad": [
+          354452381,
+          -266
+        ]
+      },
+      "contour_count": 11,
+      "positive_count": 10
+    },
+    {
+      "D": -24,
+      "stored_segments": 11670,
+      "fresh_leaves": 13839,
+      "subdivisions": 2169,
+      "exact_evaluation_stream_sha256": "3c64377fddc5d13507bd0d0315515814ab5bbbdaed1db9a43609637855c8bc5e",
+      "winding": {
+        "mid": [
+          39803530675327442176852526096736468324561557228813943888563544502720138311009,
+          -251
+        ],
+        "rad": [
+          519232123,
+          -267
+        ]
+      },
+      "contour_count": 11,
+      "positive_count": 11
+    }
+  ],
+  "scope": "Recompute every stored direct-contour path at 256 bits, adaptively subdividing as needed, and verify full ordered boundary coverage, zero exclusion, ratio branch and winding. Interval widths are not monotone in precision. Original direct image printouts are lossy diagnostics and are not parsed as interval certificates. Exact dyadic encodings of each accepted fresh leaf are hashed in traversal order. Execution and the hash depend on the pinned FLINT runtime."
+}

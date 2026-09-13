@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "sources": [
+    {
+      "name": "Baker_ANT.pdf",
+      "url": "https://www.math.toronto.edu/~ila/ANTBook.pdf",
+      "bytes": 811351,
+      "sha256": "8d4fae9e35fcd55b225f0a34d28db8652a4baf90c3612cf948e6c0479e628a13",
+      "curl_returncode": 0
+    },
+    {
+      "name": "Milne_CFT.pdf",
+      "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "bytes": 2072714,
+      "sha256": "50d79af78250a9f1117ad9d337e0b231704a533fc707966ed1bfa52e13d498f5",
+      "curl_returncode": 0
+    },
+    {
+      "name": "DLMF_25_15.html",
+      "url": "https://dlmf.nist.gov/25.15",
+      "bytes": 99788,
+      "sha256": "934cc08c96a514a45da715b988d5b3f6c6ff4630dd933d93cf425af9d8c17399",
+      "curl_returncode": 0
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "source_sha256": "11c89ff70134436c6ced04d4523a3324448b80d2d7a44066f1f3a166eccf9498",
+  "inputs_sha256": {
+    "Nested_Feedback.json": "6d1cafdb80b386c8c23bb558b0e7f5c08806699a7d6544fcfd2e31d726c125b7",
+    "Nested_Audit.json": "cd3bf459b28374e0e320eac3caa997fde3bdc4a6e969b509993aacf458cc76d2",
+    "Nested_Closure.json": "32efe8f9c44bd2a8119b501e29097f51564bde1376a6765994cb088d06c9adfe",
+    "Audit_Closure.json": "aecefbdd2b162939e2f24f08158f9569c00b7e58b6f60f3dd7cec1bc9a87d3c2",
+    "Lean_Check.json": "8bb1e111db1fb050a7a9773f77d289ad8885527e1270b5a470830cf3b9aedb8e",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 10,
+  "controls": [
+    {
+      "name": "transfer_to_larger_uncertainty",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "3c85a9088c113b9e51cdc26bfa5263bfe9fb537005a6b7f12be90ca5d1bd7f1c",
+      "mutated_component_sha256": "8b5fc9f4d8c923fa36027e69a911fe9acb09b0a770ca599f6e9b1d7249d449b8",
+      "predicate": "The destination radius must not exceed the radius whose domains were proved."
+    },
+    {
+      "name": "round_away_outward_radius_increase",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1c50cda30c75e1ae51425d251f510565408b35543d33d6a39bf23b1965a694a3",
+      "mutated_component_sha256": "51bebec612f21e839b0c628b36887a340f3022aada12acdf744c211fe283955a",
+      "predicate": "Exact rational order rejects an outward increase of 1e-21 even when both radii have the same binary64 value."
+    },
+    {
+      "name": "negative_noise_radius",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "3c85a9088c113b9e51cdc26bfa5263bfe9fb537005a6b7f12be90ca5d1bd7f1c",
+      "mutated_component_sha256": "178c6f3091125f74cf4a42a2986d246532f57be366d1944d6ed1baf0a1cef739",
+      "predicate": "The physical uncertainty contract requires a nonnegative radius."
+    },
+    {
+      "name": "drop_root_population_member",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "cd44e117b9f11e8a25550e0c149064b80be1753199a26957c054ec7772e0373e",
+      "mutated_component_sha256": "5fd1ee73357e98ff998456fa82acd70e61b3540452958a44f0e65cb7586dde2e",
+      "predicate": "Every inherited root index must be represented in the containment proof."
+    },
+    {
+      "name": "swap_root_correspondence",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "cd44e117b9f11e8a25550e0c149064b80be1753199a26957c054ec7772e0373e",
+      "mutated_component_sha256": "e18227acc84b645813e5a69da51de04653c398c6df61bc47ef6cb63ba7d3a41d",
+      "predicate": "Intervals must correspond to the same original root index."
+    },
+    {
+      "name": "change_original_spectral_center",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1a680b522b87587e484dfa375b32099301b6427639ac0885b7e5d131725868f8",
+      "mutated_component_sha256": "eb384401351166c62d23260d739248115425c3e22106ca0fa481158b4e28b01f",
+      "predicate": "Containment endpoints are reconstructed from the fixed source intervals, not just from recorded margins."
+    },
+    {
+      "name": "extend_inner_endpoint_beyond_seed",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "cd44e117b9f11e8a25550e0c149064b80be1753199a26957c054ec7772e0373e",
+      "mutated_component_sha256": "616669d4aaf2f6191455fed2c3e3d74d97d0dbeea89173397c4d61debc4612b7",
+      "predicate": "Both sides of every inner interval must stay within the original wider interval."
+    },
+    {
+      "name": "borrow_other_observation_domains",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1404fbc84b0a4ba4dd555ad03d27b85dff65b656796069b736ba51e63deccb22",
+      "mutated_component_sha256": "9468bcea83233eb3ab24d32989863fdb4d3ff3f4ea49db3afd98f3f035ad2ebd",
+      "predicate": "The inherited domains must belong to the same observation and local profile."
+    },
+    {
+      "name": "borrow_smaller_radius_singletons",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1404fbc84b0a4ba4dd555ad03d27b85dff65b656796069b736ba51e63deccb22",
+      "mutated_component_sha256": "7efd9873da364d35d0b59f4f53302441cd1a2f82605c296bb5a1e0c7b0686f9d",
+      "predicate": "A narrower-radius success cannot seed this wider-radius calculation."
+    },
+    {
+      "name": "replace_seed_by_future_domains",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "f2c0438694947e018f4a3b423cd8a6790d7a9d311da10d736b03c84d46795eaa",
+      "mutated_component_sha256": "f06422b12c65a17ebca716fe1cffd46238f12fb93036b19b51d041eb7b4dcd5d",
+      "predicate": "Initial coefficient domains must exactly match the previously validated seed, before this pass makes deductions."
+    }
+  ],
+  "reverse_transfer_counterexample": {
+    "root_index": 0,
+    "source_lo": "313298342799104097977820169291355364772993634239089035146203/158456325028528675187087900672000000000000000000000000000000",
+    "source_hi": "313298342799104097977820169291672277423050691589463210947547/158456325028528675187087900672000000000000000000000000000000",
+    "smaller_radius": "2/25",
+    "larger_radius": "1/10",
+    "point": "329143975301956965496528959358872277423050691589463210947547/158456325028528675187087900672000000000000000000000000000000",
+    "inside_larger_interval": true,
+    "outside_smaller_interval": true,
+    "strict_upper_violation": "1/50",
+    "predicate_valid_on_smaller_interval": "x <= source_hi + smaller_radius",
+    "scope": "A universal predicate on the smaller box fails at this permitted point of the larger box. This disproves unrestricted reverse certificate transfer; it is not an alternate-field or spectral-realizability witness."
+  },
+  "rounded_radius_counterexample": {
+    "inner_radius": "100000000000000000001/1000000000000000000000",
+    "seed_radius": "1/10",
+    "same_binary64_value": 0.1,
+    "exact_outward_increase": "1/1000000000000000000000",
+    "outside_point": "329143975301956965496687415683900806098237779490135210947547/158456325028528675187087900672000000000000000000000000000000",
+    "seed_upper_endpoint": "329143975301956965496528959358872277423050691589463210947547/158456325028528675187087900672000000000000000000000000000000",
+    "scope": "This is the same exact-order mutation counted above, presented as an explicit endpoint witness; it is not an additional independent experiment."
+  },
+  "kernel_checked_theorem_names": [
+    "interval_member",
+    "box_member",
+    "certificate_transfer",
+    "reverse_inclusion_fails"
+  ],
+  "scope": "Ten actual mutations test the new premise-transfer contract. Exact endpoint witnesses expose reverse-direction and binary64-order errors. The four Lean theorems concern box geometry and predicate transport, not the full arithmetic or numerical proof."
+}

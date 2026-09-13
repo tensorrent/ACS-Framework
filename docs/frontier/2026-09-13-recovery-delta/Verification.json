@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T16:25:06.698309+00:00",
+  "scope": "Retained identities and recombination of reported enclosures; no fresh quadrature or root certification.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 29,
+  "positive_roots": 7602,
+  "preserved_prefix_roots": 528,
+  "recovery_cases_160": 455,
+  "recovery_cases_224": 91,
+  "direct_final_coefficients": 89,
+  "local_final_coefficients": 91,
+  "independent_final_targets": 91,
+  "mutation_cases": 3185,
+  "mutation_exclusions": 1647,
+  "unresolved_local_factors": 48,
+  "receipts": 23,
+  "research_branches": 116,
+  "ledger_events": 355,
+  "preserved_event_prefix": 350,
+  "ledger_head_sha256": "21612a6d99e505fb249a0918904ef7db73ee7c40bfa21ce206a901968250d971",
+  "local_links": 32
+}

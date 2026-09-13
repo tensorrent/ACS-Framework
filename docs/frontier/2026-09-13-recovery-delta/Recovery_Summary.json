@@ -1,0 +1,1274 @@
+{
+  "recorded_utc": "2026-09-13T16:24:33.079680+00:00",
+  "counts": {
+    "zeta": 1517,
+    "chi1": 2028,
+    "chi2": 2028,
+    "chi3": 2029
+  },
+  "total_positive_roots": 7602,
+  "prefix_220": [
+    {
+      "factor": "zeta",
+      "count": 90,
+      "all_intervals_overlap": true,
+      "all_20_digit_rows_equal": true
+    },
+    {
+      "factor": "chi1",
+      "count": 146,
+      "all_intervals_overlap": true,
+      "all_20_digit_rows_equal": true
+    },
+    {
+      "factor": "chi2",
+      "count": 146,
+      "all_intervals_overlap": true,
+      "all_20_digit_rows_equal": true
+    },
+    {
+      "factor": "chi3",
+      "count": 146,
+      "all_intervals_overlap": true,
+      "all_20_digit_rows_equal": true
+    }
+  ],
+  "target_count": 91,
+  "prime_power_limit": 361,
+  "generic_prime_powers_through_4096": 604,
+  "height_comparison": [
+    {
+      "height": 220,
+      "direct_unique": 46,
+      "local_unique": 56
+    },
+    {
+      "height": 600,
+      "direct_unique": 69,
+      "local_unique": 75
+    },
+    {
+      "height": 1000,
+      "direct_unique": 79,
+      "local_unique": 84
+    },
+    {
+      "height": 1500,
+      "direct_unique": 86,
+      "local_unique": 90
+    },
+    {
+      "height": 2000,
+      "direct_unique": 89,
+      "local_unique": 91
+    }
+  ],
+  "final_targets": [
+    {
+      "n": 2,
+      "prime": 2,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 10000,
+      "estimate": "[+/- 2.00e-29]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "prime": 3,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 16000,
+      "estimate": "[+/- 1.95e-29]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "prime": 2,
+      "power": 2,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 16000,
+      "estimate": "[+/- 3.21e-29]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "prime": 5,
+      "power": 1,
+      "direct_candidates": [
+        1
+      ],
+      "denominator": 16000,
+      "estimate": "[1.000000000000000000000000000 +/- 4.32e-29]",
+      "local_candidates": [
+        1
+      ]
+    },
+    {
+      "n": 7,
+      "prime": 7,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 32000,
+      "estimate": "[+/- 2.60e-29]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 8,
+      "prime": 2,
+      "power": 3,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 32000,
+      "estimate": "[+/- 3.00e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 9,
+      "prime": 3,
+      "power": 2,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 32000,
+      "estimate": "[+/- 5.22e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 11,
+      "prime": 11,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 24000,
+      "estimate": "[4.000000000000000000000000000 +/- 1.01e-28]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 13,
+      "prime": 13,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 24000,
+      "estimate": "[+/- 3.00e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 16,
+      "prime": 2,
+      "power": 4,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 64000,
+      "estimate": "[4.000000000000000000000 +/- 1.03e-22]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 17,
+      "prime": 17,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 64000,
+      "estimate": "[+/- 2.66e-23]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 19,
+      "prime": 19,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 32000,
+      "estimate": "[+/- 2.62e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 23,
+      "prime": 23,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 48000,
+      "estimate": "[+/- 6.89e-29]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 25,
+      "prime": 5,
+      "power": 2,
+      "direct_candidates": [
+        1
+      ],
+      "denominator": 48000,
+      "estimate": "[1.000000000000000000000000000 +/- 4.63e-28]",
+      "local_candidates": [
+        1
+      ]
+    },
+    {
+      "n": 27,
+      "prime": 3,
+      "power": 3,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 48000,
+      "estimate": "[+/- 2.44e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 29,
+      "prime": 29,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 48000,
+      "estimate": "[2.6095e-23 +/- 4.09e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 31,
+      "prime": 31,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 96000,
+      "estimate": "[4.0000000000000 +/- 3.55e-14]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 32,
+      "prime": 2,
+      "power": 5,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[6.28e-10 +/- 5.78e-13]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 37,
+      "prime": 37,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 32000,
+      "estimate": "[+/- 3.66e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 41,
+      "prime": 41,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 64000,
+      "estimate": "[4.0000000000000000000000 +/- 4.72e-23]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 43,
+      "prime": 43,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 64000,
+      "estimate": "[6.985449e-16 +/- 8.91e-23]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 47,
+      "prime": 47,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[+/- 4.75e-14]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 49,
+      "prime": 7,
+      "power": 2,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[+/- 9.77e-14]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 53,
+      "prime": 53,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 48000,
+      "estimate": "[+/- 1.67e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 59,
+      "prime": 59,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[1.0e-11 +/- 4.08e-13]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 61,
+      "prime": 61,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 96000,
+      "estimate": "[4.0000000000000 +/- 5.74e-14]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 64,
+      "prime": 2,
+      "power": 6,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 64000,
+      "estimate": "[2.342133e-15 +/- 7.94e-22]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 67,
+      "prime": 67,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 64000,
+      "estimate": "[+/- 8.45e-23]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 71,
+      "prime": 71,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000000 +/- 1.86e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 73,
+      "prime": 73,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 1.98e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 79,
+      "prime": 79,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 4.06e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 81,
+      "prime": 3,
+      "power": 4,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000000 +/- 8.22e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 83,
+      "prime": 83,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 7.53e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 89,
+      "prime": 89,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 48000,
+      "estimate": "[+/- 2.21e-28]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 97,
+      "prime": 97,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[+/- 8.15e-14]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 101,
+      "prime": 101,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000000 +/- 2.44e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 103,
+      "prime": 103,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[1.824e-5 +/- 2.54e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 107,
+      "prime": 107,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 2.55e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 109,
+      "prime": 109,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 2.58e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 113,
+      "prime": 113,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[+/- 9.17e-14]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 121,
+      "prime": 11,
+      "power": 2,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 96000,
+      "estimate": "[4.000000000006 +/- 4.27e-13]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 125,
+      "prime": 5,
+      "power": 3,
+      "direct_candidates": [
+        1
+      ],
+      "denominator": 192000,
+      "estimate": "[1.00 +/- 2.35e-4]",
+      "local_candidates": [
+        1
+      ]
+    },
+    {
+      "n": 127,
+      "prime": 127,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 8.12e-5]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 128,
+      "prime": 2,
+      "power": 7,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0885]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 131,
+      "prime": 131,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000000 +/- 2.98e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 137,
+      "prime": 137,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 8.42e-5]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 139,
+      "prime": 139,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 8.52e-5]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 149,
+      "prime": 149,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 8.74e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 151,
+      "prime": 151,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 192000,
+      "estimate": "[4.000 +/- 9.10e-5]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 157,
+      "prime": 157,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 96000,
+      "estimate": "[+/- 1.20e-13]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 163,
+      "prime": 163,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 3.55e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 167,
+      "prime": 167,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 9.86e-5]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 169,
+      "prime": 13,
+      "power": 2,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.99e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 173,
+      "prime": 173,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 3.72e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 179,
+      "prime": 179,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[0.011 +/- 4.65e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 181,
+      "prime": 181,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 192000,
+      "estimate": "[4.000 +/- 1.06e-4]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 191,
+      "prime": 191,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 192000,
+      "estimate": "[4.000 +/- 1.10e-4]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 193,
+      "prime": 193,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[0.022 +/- 1.59e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 197,
+      "prime": 197,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.13e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 199,
+      "prime": 199,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.14e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 211,
+      "prime": 211,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 64000,
+      "estimate": "[4.000000000000000000000 +/- 1.66e-22]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 223,
+      "prime": 223,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 4.56e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 227,
+      "prime": 227,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0200]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 229,
+      "prime": 229,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0202]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 233,
+      "prime": 233,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.29e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 239,
+      "prime": 239,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0677]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 241,
+      "prime": 241,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4.0 +/- 0.0210]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 243,
+      "prime": 3,
+      "power": 5,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.359]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 251,
+      "prime": 251,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000195 +/- 8.06e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 256,
+      "prime": 2,
+      "power": 8,
+      "direct_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4e+0 +/- 0.177]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 257,
+      "prime": 257,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[0.2 +/- 0.0329]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 263,
+      "prime": 263,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[+/- 5.26e-9]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 269,
+      "prime": 269,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[0.1 +/- 0.0421]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 271,
+      "prime": 271,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4.0 +/- 0.0231]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 277,
+      "prime": 277,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 3.55e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 281,
+      "prime": 281,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4.0 +/- 0.0238]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 283,
+      "prime": 283,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[0.2 +/- 0.0636]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 289,
+      "prime": 17,
+      "power": 2,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 3.08e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 293,
+      "prime": 293,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.56e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 307,
+      "prime": 307,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[0.001 +/- 4.41e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 311,
+      "prime": 311,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4.0 +/- 0.0259]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 313,
+      "prime": 313,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[0.3 +/- 0.0371]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 317,
+      "prime": 317,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.66e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 331,
+      "prime": 331,
+      "power": 1,
+      "direct_candidates": [
+        4
+      ],
+      "denominator": 128000,
+      "estimate": "[4.00000000 +/- 6.30e-9]",
+      "local_candidates": [
+        4
+      ]
+    },
+    {
+      "n": 337,
+      "prime": 337,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 128000,
+      "estimate": "[0.0001317 +/- 1.15e-8]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 343,
+      "prime": 7,
+      "power": 3,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 5.31e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 347,
+      "prime": 347,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0283]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 349,
+      "prime": 349,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[+/- 0.0285]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 353,
+      "prime": 353,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 192000,
+      "estimate": "[+/- 1.82e-4]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 359,
+      "prime": 359,
+      "power": 1,
+      "direct_candidates": [
+        0
+      ],
+      "denominator": 256000,
+      "estimate": "[0.3 +/- 0.0522]",
+      "local_candidates": [
+        0
+      ]
+    },
+    {
+      "n": 361,
+      "prime": 19,
+      "power": 2,
+      "direct_candidates": [
+        3,
+        4
+      ],
+      "denominator": 256000,
+      "estimate": "[4.0 +/- 0.0585]",
+      "local_candidates": [
+        4
+      ]
+    }
+  ],
+  "unresolved_local_factors": 48,
+  "next_distinguishing_square_range": [
+    529,
+    128881
+  ],
+  "mutation_exclusion_counts": {
+    "omit_pole": 411,
+    "omit_gamma": 228,
+    "omit_discriminant": 0,
+    "omit_negative_zeros": 332,
+    "reverse_zero_sign": 381,
+    "omit_zero_tail": 127,
+    "omit_leakage": 168
+  },
+  "cases_160": 455,
+  "cases_224": 91,
+  "independent_final_targets": 91,
+  "scope": "Finite resolution and conditional coefficient recovery; field invariants are supplied and local factors can remain ambiguous."
+}

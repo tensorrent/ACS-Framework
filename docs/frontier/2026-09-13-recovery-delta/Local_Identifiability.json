@@ -1,0 +1,1625 @@
+{
+  "status": "passed",
+  "source_sha256": "c41dc177cca02980e46e9b1360dd542da0137f922c6a95bd907706df92e514bc",
+  "recovery_sha256": "e072355df3ecbc5ab7bcd31082f8c188f85b35a3bb88d909f3edf8065100d80c",
+  "profiles": [
+    {
+      "ramified": false,
+      "model_count": 5,
+      "distinct_full_coefficient_sequences": 5,
+      "groups": [
+        {
+          "period_12": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "models": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            2,
+            4,
+            2,
+            4,
+            2,
+            4,
+            2,
+            4,
+            2,
+            4,
+            2,
+            4
+          ],
+          "models": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            1,
+            1,
+            4,
+            1,
+            1,
+            4,
+            1,
+            1,
+            4,
+            1,
+            1,
+            4
+          ],
+          "models": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            0,
+            4,
+            0,
+            4,
+            0,
+            4,
+            0,
+            4,
+            0,
+            4,
+            0,
+            4
+          ],
+          "models": [
+            [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4
+          ],
+          "models": [
+            [
+              [
+                1,
+                4
+              ]
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "ramified": true,
+      "model_count": 6,
+      "distinct_full_coefficient_sequences": 5,
+      "groups": [
+        {
+          "period_12": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "models": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "models": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            1,
+            3,
+            1,
+            3,
+            1,
+            3,
+            1,
+            3,
+            1,
+            3,
+            1,
+            3
+          ],
+          "models": [
+            [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            0,
+            2,
+            0,
+            2,
+            0,
+            2,
+            0,
+            2,
+            0,
+            2,
+            0,
+            2
+          ],
+          "models": [
+            [
+              [
+                2,
+                2
+              ]
+            ]
+          ]
+        },
+        {
+          "period_12": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "models": [
+            [
+              [
+                4,
+                1
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved_local_factors": [
+    {
+      "prime": 23,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 529,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 29,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 841,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 37,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 1369,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 43,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 1849,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 47,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 2209,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 53,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 2809,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 59,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 3481,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 67,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 4489,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 73,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 5329,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 79,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 6241,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 83,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 6889,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 89,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 7921,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 97,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 9409,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 103,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 10609,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 107,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 11449,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 109,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 11881,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 113,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 12769,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 127,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 16129,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 137,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 18769,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 139,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 19321,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 149,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 22201,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 157,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 24649,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 163,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 26569,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 167,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 27889,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 173,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 29929,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 179,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 32041,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 193,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 37249,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 197,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 38809,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 199,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 39601,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 223,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 49729,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 227,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 51529,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 229,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 52441,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 233,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 54289,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 239,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 57121,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 257,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 66049,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 263,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 69169,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 269,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 72361,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 277,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 76729,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 283,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 80089,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 293,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 85849,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 307,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 94249,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 313,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 97969,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 317,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 100489,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 337,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 113569,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 347,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 120409,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 349,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 121801,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 353,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 124609,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    },
+    {
+      "prime": 359,
+      "retained_models": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "first_distinguishing_exponent": 2,
+      "next_prime_power": 128881,
+      "possible_coefficients": [
+        0,
+        4
+      ]
+    }
+  ],
+  "unresolved_count": 48,
+  "range_of_next_powers": [
+    529,
+    128881
+  ],
+  "inversion": [
+    "n1=c1",
+    "n2=(c2-c1)/2",
+    "n3=(c3-c1)/3",
+    "n4=(c4-c2)/4"
+  ],
+  "scope": "For degree four, four power coefficients determine residue-degree multiplicities. They do not generally determine the individual ramification indices. Periodicity follows because every residue degree divides 12; finite checks support that exact argument."
+}

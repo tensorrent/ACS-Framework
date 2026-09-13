@@ -1,0 +1,32 @@
+{
+  "retrieved_utc": "2026-09-13T15:32:27.601457+00:00",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "title": "Belabas and Friedman, Computing the residue of the Dedekind zeta function",
+      "location": "Section 2, equations (1)-(2), page 3",
+      "supports": "Weil-Poitou explicit identity and test-function admissibility, including potentially complex zero parameters. The separate residue-estimation theorem assumes GRH; it is not used here."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "title": "Grenie and Molteni, Zeros of Dedekind zeta functions under GRH",
+      "location": "Section 2, equations (2.1)-(2.7), page 4",
+      "supports": "Unconditional coefficient bound, functional equation and logarithmic-derivative/Hadamard identities. Its later GRH estimates inside the critical strip are not used."
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.5#E5",
+      "title": "NIST DLMF gamma duplication",
+      "supports": "Completed-factor normalization and equivalent gamma derivatives."
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.7#E6",
+      "title": "NIST DLMF digamma series",
+      "supports": "Positive series difference used to derive the alternate-integral tail bound."
+    },
+    {
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.integral",
+      "title": "python-flint interval integration API",
+      "supports": "Analytic callback contract and interval quadrature semantics."
+    }
+  ]
+}

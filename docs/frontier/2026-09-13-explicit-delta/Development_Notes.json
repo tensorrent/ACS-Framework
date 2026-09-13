@@ -1,0 +1,26 @@
+{
+  "retained_recorded_attempts": {
+    "cross-method": "Rejected because the alternate digamma route initially omitted the -4 log(2 pi) g(0) gamma normalization. Primary producer unchanged.",
+    "cross-method-corrected": "Gamma fixed; prime-value comparison failed because the independently computed value was rounded to 57 digits before checking a tightly printed interval.",
+    "cross-method-diagnostic": "Same comparison failure retained with exact expected/actual diagnostic. Final check uses 60 digits and higher interval parsing precision; no producer interval was widened.",
+    "cross-method-full-precision": "Dispatch error: the interpreter binary was accidentally supplied as the script. It failed before running mathematics.",
+    "cross-method-final": "All 30 independent configurations and nine alternate gamma integrals passed; preliminary nine-mutation result retained before conservative altered-weight tail allowances were added.",
+    "cross-method-tail-aware": "Final ten-mutation run with explicit tail allowances for altered zero weights passed."
+  },
+  "development_probes": {
+    "gaussian_probe.py": "Initial interactive probe produced a non-finite prime sum when generic real exponentiation squared a straddling interval.",
+    "gaussian_probe_debug.py": "Localized the failure at n=11 when log(n)-u straddled zero.",
+    "gaussian_probe_multiply.py": "Using multiplication for the square gave a finite prime sum and residual interval containing zero. The algebra audit records the runtime behavior as a reproducible control."
+  },
+  "probe_receipt_scope": "The three development probe descriptions summarize observed interactive tool output; they are not represented as recorded-run receipts.",
+  "development_files_sha256": {
+    "Cross_Method_pre_tail_allowance.json": "4d50a2b2c1b61304a70edb70556bc0e1f130a6c1dd377bc54329c0611d89eae4",
+    "dedekind_explicit_crosscheck_diagnostic.py": "62de70716af0d89f2a88a127be61876516f380c719e90adc696ec5f8488c8d2e",
+    "dedekind_explicit_crosscheck_gamma_fixed.py": "62b0226b194e4a3918d03c8beee1bcb5259596a54c09d9afdcb1f8d0ee9fad5e",
+    "dedekind_explicit_crosscheck_initial.py": "7a1b624e04c16f38717c81b96ea68b7b783dc5923f70c97d6afa2448a2ba16ab",
+    "dedekind_explicit_crosscheck_pre_tail_allowance.py": "a916298e9b569749d544987cd1faebc7c64ea8e8f9b28b69dc3f63c4ca91bd51",
+    "gaussian_probe.py": "8ec8430b47c03da564ca91825bf913143f47d58321b9e37c53bf385365b5af72",
+    "gaussian_probe_debug.py": "a8ede13eed066ba9ab1dd7803a22eaddd5627655f3450a2a5d1ab35a319bfc96",
+    "gaussian_probe_multiply.py": "dd9e63a9fce11c8fde4f2d1a2083874ae65a5d3771e1be80ac51405c2c11f066"
+  }
+}

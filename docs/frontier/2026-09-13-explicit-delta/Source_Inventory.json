@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "ff1559fdd7656f7c814970ddceb42d96888f0b2e",
+  "instruments": {
+    "code/frontier_verification/dedekind_explicit_formula.py": "c65dda9b5e293592ef345fe44db5b1b970ffb50ac11fac3864d3db813cfa6cb6",
+    "code/frontier_verification/dedekind_explicit_crosscheck.py": "8b1647b8b616190026b18290832a0de0b2b31359007d45064afe6d74f464e563",
+    "code/frontier_verification/dedekind_explicit_algebra.py": "5fa6b5141795abf1831b5d63dad780903b9c75cf5bef9d6cdb3a2803d5268e44",
+    "code/frontier_verification/verify_explicit_delta.py": "3f8134d2696d38c2e9a458b84d1154527abc7518e42002567a39046a3ba90344",
+    "code/frontier_verification/EXPLICIT_README.md": "4d55e056c4421c32ec60d89863c753186a6e562c8f308e5651591c98504c4b6d"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_inputs.py": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "code/frontier_verification/verify_dedekind_delta.py": "5e7a9ca0790de9805c9fb690a0b108ff4c92875be8e01c73506292ad55251ad6",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New explicit-formula instruments; all prior dated evidence, pinned instruments and application data remain unchanged."
+}

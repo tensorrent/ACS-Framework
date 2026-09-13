@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T23:14:53.971349+00:00",
+  "scope": "Fresh adaptive sampled proposals and real interval certificates, independent complex/rational/integer audits, supplemental exact closure and semantic controls. All preceding checkpoints verified recursively. This is a scoped recovery delta; surviving domains do not establish global feasibility or ambiguity, and a stalled sampled update does not prove optimality.",
+  "manifest_files": 22,
+  "preceding_checkpoint_integrity": "passed",
+  "target_count": 17,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "radii": [
+    "0",
+    "1/200",
+    "1/50",
+    "1/10"
+  ],
+  "degree_discriminant_final_unique_targets": [
+    [
+      17,
+      17
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      15,
+      11
+    ]
+  ],
+  "local_profiles": 2,
+  "adaptive_cases": 16,
+  "new_multiplier_cases": 288,
+  "stored_midpoints_checked": 80976,
+  "fresh_quadratic_interval_leaves": 161952,
+  "exact_domain_objectives": 288,
+  "independent_displaced_controls": 356,
+  "adaptive_local_removals": 87,
+  "adaptive_dual_removals": 109,
+  "supplemental_local_removals": 0,
+  "supplemental_dual_removals": 2,
+  "actual_component_mutations_rejected": 10,
+  "exact_general_domain_support_checks": 604,
+  "stale_budget_counterexample_multiplier_scale": 9,
+  "recorded_commands": 4,
+  "failed_commands": 0,
+  "research_branches": 117,
+  "ledger_events": 408,
+  "preserved_event_prefix": 403,
+  "ledger_head_sha256": "9b7dd1766620e87067a7478d3db2e7ff30b1ffe7d5338e44edf164356d5a5d47",
+  "local_links": 44
+}

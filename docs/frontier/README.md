@@ -14,6 +14,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [13 September 2026 coefficient-recovery delta](2026-09-13-recovery-delta/README.md): 7602 certified finite roots, noncircular recovery of 91 prime-power coefficients, cross-method checks and remaining local ambiguities.
 - [13 September 2026 coupled-recovery delta](2026-09-13-coupled-delta/README.md): coupled inequalities and validated dual bounds reduce the required cutoff, while explicit integer witnesses distinguish a bound limitation from a solver failure.
 - [13 September 2026 ordinate uncertainty delta](2026-09-13-uncertainty-delta/README.md): per-root derivative and turning-point bounds strengthen recovery under lost ordinate precision, while retaining earlier measurements preserves information.
-- [Current research queue](2026-09-13-uncertainty-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [13 September 2026 shared-error delta](2026-09-13-shared-delta/README.md): certified common ordinate displacements allow error cancellation across measurements and identify eight additional coefficients at the larger uncertainty radius.
+- [Current research queue](2026-09-13-shared-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

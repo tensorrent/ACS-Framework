@@ -1,8 +1,10 @@
 # Cyclotomic Q(ζ_5) — First Non-Quadratic Field Test
 
+> **Correction, 13 September 2026:** This is a historical exploratory report. The original doubled positive-character list, separate per-factor normalization and inferred exact amplitudes are not valid premises for the stated universality conclusions. A [fresh all-factor audit](../../../../docs/frontier/2026-09-13-dedekind-delta/README.md) certifies the missing factors, uses matched cutoffs and weights, and quantifies normalization, window and sampling effects. Its declared finite results supersede the interpretation below; the missing historical quadratic file and NPZ prevent a literal replay of the original numbers.
+
 **Author**: Bradley Wallace + Claude
 **Date**: May 2026
-**Status**: Framework universality extended from quadratic to abelian extensions of degree 4. The 4-tier splitting structure is recovered cleanly.
+**Status**: Historical numerical observations; universality and exact-amplitude conclusions are not established by this test.
 
 ---
 
@@ -44,7 +46,7 @@ For complex characters χ, the completed L-function Λ(s, χ) is NOT real on the
 
 Solution: search for minima of |L(1/2 + it, χ)|² instead. Since |L|² = L · L̄ is real and non-negative, vanishing exactly at zeros of L, the standard local-minima-with-threshold method works.
 
-**Result**: 54 zeros found for L(s, χ¹), exactly matching the predicted count (54.0 by Riemann-von Mangoldt). Verification at each zero: |L|² < 10⁻¹⁵ (machine precision). The zeros of L(s, χ³) = L(s, χ̄¹) have imaginary parts that are reflections of L(s, χ¹) zeros; under the cosine Fourier transform they contribute identically.
+**Result**: 54 zeros found for L(s, χ¹), exactly matching the predicted count (54.0 by Riemann-von Mangoldt). Verification at each zero: |L|² < 10⁻¹⁵ (machine precision). Conjugation reflects the full signed spectrum. The two positive-height lists differ, so doubling a single positive list is incorrect even for the cosine transform.
 
 ### Structural validation
 
@@ -101,7 +103,7 @@ For Q(ζ_5), (Z/5Z)* is cyclic of order 4. The order of p in this group determin
 - ord = 2 → 2 prime ideals (norm p²)
 - ord = 4 → 1 prime ideal (norm p⁴)
 
-This is **Chebotarev's theorem** (1922) applied to the abelian extension Q(ζ_5)/Q.
+The local splitting rule follows from cyclotomic factorization and residue degree. Chebotarev's theorem concerns the density of Frobenius classes; the finite statistic here does not prove that density statement.
 
 ### What the framework provides
 

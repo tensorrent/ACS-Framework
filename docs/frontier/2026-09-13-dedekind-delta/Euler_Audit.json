@@ -1,0 +1,2564 @@
+{
+  "status": "passed",
+  "source_sha256": "15acb9ba3c3e5815875924bfae73690d24a640fa154a53355a2825bb3ca2fe61",
+  "input_identity": {
+    "extra_certificate_sha256": "e9266056744df6b1c2c4b2fb17da65b28c8a213be6a6422b498408a8d8ae6b2d",
+    "extra_input_sha256": "0d68e07973176ba48ecab0f1316046415889792104077fce5e5799b1c45a7b16",
+    "prior_archive_sha256": "2fb3ba0ccd8a1dcbdeef46105060a431b901a6ae65bca465afc1e5c679b12a5f",
+    "chi1_certificate_sha256": "067f155421d7f624440af176c57b128c6928bdb9569d2955d62ba4a5f45c4db8",
+    "chi3_certificate_sha256": "ce39e90681f0f3a040ae4fd942e7749dd8888817270ac8115de38e0a26aaa7ef",
+    "loader_sha256": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "counts_at_220": {
+      "zeta": 90,
+      "chi1": 146,
+      "chi2": 146,
+      "chi3": 146
+    }
+  },
+  "unramified_residue_classes": [
+    {
+      "residue": 1,
+      "residue_degree_f": 1,
+      "prime_ideal_count_g": 4,
+      "character_values": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "permutation_matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "Euler_denominator": "X**4 - 4*X**3 + 6*X**2 - 4*X + 1",
+      "X_log_derivative": "-4*X/(X - 1)",
+      "first_16_coefficients_divided_by_log_p": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "leading_coefficient_is_g_times_f": 4
+    },
+    {
+      "residue": 2,
+      "residue_degree_f": 4,
+      "prime_ideal_count_g": 1,
+      "character_values": [
+        "1",
+        "I",
+        "-1",
+        "-I"
+      ],
+      "permutation_matrix": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "Euler_denominator": "1 - X**4",
+      "X_log_derivative": "-4*X**4/(X**4 - 1)",
+      "first_16_coefficients_divided_by_log_p": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4
+      ],
+      "leading_coefficient_is_g_times_f": 4
+    },
+    {
+      "residue": 3,
+      "residue_degree_f": 4,
+      "prime_ideal_count_g": 1,
+      "character_values": [
+        "1",
+        "-I",
+        "-1",
+        "I"
+      ],
+      "permutation_matrix": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "Euler_denominator": "1 - X**4",
+      "X_log_derivative": "-4*X**4/(X**4 - 1)",
+      "first_16_coefficients_divided_by_log_p": [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4
+      ],
+      "leading_coefficient_is_g_times_f": 4
+    },
+    {
+      "residue": 4,
+      "residue_degree_f": 2,
+      "prime_ideal_count_g": 2,
+      "character_values": [
+        "1",
+        "-1",
+        "1",
+        "-1"
+      ],
+      "permutation_matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "Euler_denominator": "X**4 - 2*X**2 + 1",
+      "X_log_derivative": "-4*X**2/(X**2 - 1)",
+      "first_16_coefficients_divided_by_log_p": [
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        4
+      ],
+      "leading_coefficient_is_g_times_f": 4
+    }
+  ],
+  "ramified": {
+    "prime": 5,
+    "Euler_denominator": "1 - X",
+    "ramification_index": 4,
+    "residue_degree": 1,
+    "prime_ideal_count": 1,
+    "first_16_coefficients_divided_by_log_5": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "modular_polynomial_factorizations": [
+    {
+      "prime": 2,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 3,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 5,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "prime": 7,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 11,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 13,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 17,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 19,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 23,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 29,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 31,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 37,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 41,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 43,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 47,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 53,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 59,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 61,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 67,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 71,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 73,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 79,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 83,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 89,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 97,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 101,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 103,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 107,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 109,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 113,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 127,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 131,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 137,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 139,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 149,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 151,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 157,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 163,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 167,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 173,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 179,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 181,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 191,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 193,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 197,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 199,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 211,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 223,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 227,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 229,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 233,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 239,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 241,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 251,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 257,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 263,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 269,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 271,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 277,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 281,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 283,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 293,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 307,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 311,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 313,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 317,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 331,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 337,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 347,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 349,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 353,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 359,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 367,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 373,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 379,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 383,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 389,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 397,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 401,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 409,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 419,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 421,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 431,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 433,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 439,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 443,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 449,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 457,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 461,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 463,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 467,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 479,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 487,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 491,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 499,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 503,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 509,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 521,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 523,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 541,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 547,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 557,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 563,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 569,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 571,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 577,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 587,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 593,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 599,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 601,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 607,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 613,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 617,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 619,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 631,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 641,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 643,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 647,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 653,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 659,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 661,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 673,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 677,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 683,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 691,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 701,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 709,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 719,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 727,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 733,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 739,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 743,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 751,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 757,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 761,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 769,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 773,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 787,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 797,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 809,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 811,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 821,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 823,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 827,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 829,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 839,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 853,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 857,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 859,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 863,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 877,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 881,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 883,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 887,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 907,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 911,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 919,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 929,
+      "factor_degrees_and_multiplicities": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 937,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 941,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 947,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 953,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 967,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 971,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 977,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 983,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 991,
+      "factor_degrees_and_multiplicities": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "prime": 997,
+      "factor_degrees_and_multiplicities": [
+        [
+          4,
+          1
+        ]
+      ]
+    }
+  ],
+  "normalization_counterexamples": [
+    {
+      "height": 60,
+      "counts": {
+        "zeta": 13,
+        "chi1": 27,
+        "chi2": 27,
+        "chi3": 28
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/13",
+        "chi1": "1/27",
+        "chi2": "1/27",
+        "chi3": "1/28"
+      },
+      "common_union_weight": "1/95",
+      "weighted_first_prime_coefficients": {
+        "1": "1835/9828",
+        "2": "14/351 + I/756",
+        "3": "14/351 - I/756",
+        "4": "15/364"
+      },
+      "all_three_non_split_cancellations_broken": true
+    },
+    {
+      "height": 80,
+      "counts": {
+        "zeta": 21,
+        "chi1": 40,
+        "chi2": 40,
+        "chi3": 40
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/21",
+        "chi1": "1/40",
+        "chi2": "1/40",
+        "chi3": "1/40"
+      },
+      "common_union_weight": "1/141",
+      "weighted_first_prime_coefficients": {
+        "1": "103/840",
+        "2": "19/840",
+        "3": "19/840",
+        "4": "19/840"
+      },
+      "all_three_non_split_cancellations_broken": true
+    },
+    {
+      "height": 100,
+      "counts": {
+        "zeta": 29,
+        "chi1": 54,
+        "chi2": 54,
+        "chi3": 53
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/29",
+        "chi1": "1/54",
+        "chi2": "1/54",
+        "chi3": "1/53"
+      },
+      "common_union_weight": "1/190",
+      "weighted_first_prime_coefficients": {
+        "1": "3751/41499",
+        "2": "25/1566 - I/2862",
+        "3": "25/1566 + I/2862",
+        "4": "24/1537"
+      },
+      "all_three_non_split_cancellations_broken": true
+    },
+    {
+      "height": 140,
+      "counts": {
+        "zeta": 48,
+        "chi1": 83,
+        "chi2": 83,
+        "chi3": 83
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/48",
+        "chi1": "1/83",
+        "chi2": "1/83",
+        "chi3": "1/83"
+      },
+      "common_union_weight": "1/297",
+      "weighted_first_prime_coefficients": {
+        "1": "227/3984",
+        "2": "35/3984",
+        "3": "35/3984",
+        "4": "35/3984"
+      },
+      "all_three_non_split_cancellations_broken": true
+    },
+    {
+      "height": 180,
+      "counts": {
+        "zeta": 69,
+        "chi1": 114,
+        "chi2": 113,
+        "chi3": 113
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/69",
+        "chi1": "1/114",
+        "chi2": "1/113",
+        "chi3": "1/113"
+      },
+      "common_union_weight": "1/409",
+      "weighted_first_prime_coefficients": {
+        "1": "12137/296286",
+        "2": "44/7797 - I/12882",
+        "3": "44/7797 + I/12882",
+        "4": "5/874"
+      },
+      "all_three_non_split_cancellations_broken": true
+    },
+    {
+      "height": 220,
+      "counts": {
+        "zeta": 90,
+        "chi1": 146,
+        "chi2": 146,
+        "chi3": 146
+      },
+      "per_factor_mean_weights": {
+        "zeta": "1/90",
+        "chi1": "1/146",
+        "chi2": "1/146",
+        "chi3": "1/146"
+      },
+      "common_union_weight": "1/528",
+      "weighted_first_prime_coefficients": {
+        "1": "104/3285",
+        "2": "14/3285",
+        "3": "14/3285",
+        "4": "14/3285"
+      },
+      "all_three_non_split_cancellations_broken": true
+    }
+  ],
+  "scope": "Exact local Euler coefficients and finite spectral weights. This does not identify a finite unsmoothed Fourier value with an Euler coefficient."
+}

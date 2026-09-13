@@ -1,6 +1,6 @@
 # Class Number Trend Refined + First Cyclotomic Test
 
-> **Correction, 13 September 2026:** The original numerical tables and claims below are historical. Supplied L-ordinates have been replaced by finite certified lists. Positive spectra for χ and χ̄ differ, so the doubled-character approximation does not establish the reported full Dedekind witness or its 5–6× ratio. Those numerical conclusions are withdrawn pending a same-cutoff recomputation using all distinct factors. See the [L-function audit](../../../../docs/frontier/2026-09-13-lfunction-delta/README.md).
+> **Correction, 13 September 2026:** The original numerical tables and claims below are historical. Supplied L-ordinates have been replaced by finite certified lists. Positive spectra for χ and χ̄ differ, so the doubled-character approximation does not establish the reported full Dedekind witness or its 5–6× ratio. Those historical numerical conclusions remain withdrawn. A [fresh all-factor recomputation](../../../../docs/frontier/2026-09-13-dedekind-delta/README.md) now uses certified factors, matched cutoffs and common weights; its results vary with height, window and sampling. The [L-function audit](../../../../docs/frontier/2026-09-13-lfunction-delta/README.md) preserves the earlier data corrections.
 
 **Author**: Bradley Wallace + Claude
 **Date**: May 2026

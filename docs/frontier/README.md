@@ -9,6 +9,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [12 September 2026 mean-error delta](2026-09-12-mean-delta/README.md): the changing-configuration mean criterion and an explicit mean-versus-total counterfamily are now kernel checked; testing one layer is shown insufficient.
 - [12 September 2026 source/data delta](2026-09-12-source-delta/README.md): source and primary-table mapping, finite data-error enclosures, a certified rounded-count mismatch, and a canonical overflow/normalization correction.
 - [13 September 2026 L-function delta](2026-09-13-lfunction-delta/README.md): finite completeness certificates, missing and inaccurate ordinate corrections, independent checks, and separate conjugate spectra.
-- [Current research queue](2026-09-13-lfunction-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [13 September 2026 Dedekind delta](2026-09-13-dedekind-delta/README.md): all four finite cyclotomic factors, exact Euler coefficients, normalization corrections, and declared window/cutoff comparisons.
+- [Current research queue](2026-09-13-dedekind-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

@@ -1,0 +1,424 @@
+{
+  "status": "passed",
+  "source_sha256": "918a9020ce742c98b6cf586fb8680389de54ee2257e760a7db64ac21b8b21155",
+  "input_sha256": "0659b5fbff9578b835c8c9f6bc6b48db744df850ec0a6315a6bf27271f5c908a",
+  "refined_sha256": "c00165764cb584674d849e0244e6c52adad21c8cd62ac91edf4089c1e4c2d04e",
+  "settings": {
+    "top": 220,
+    "precision_bits": 224,
+    "delta": {
+      "mid": [
+        0,
+        0
+      ],
+      "rad": [
+        0,
+        0
+      ]
+    },
+    "count": 528,
+    "known_moment": {
+      "mid": [
+        1340956776728061579296686742633493336204749202743663967415469,
+        -200
+      ],
+      "rad": [
+        110137187,
+        -129
+      ]
+    },
+    "unknown_moment_upper": {
+      "mid": [
+        3363144902719143959282449896898828585004350760885710931186213676197,
+        -223
+      ],
+      "rad": [
+        881097497,
+        -132
+      ]
+    }
+  },
+  "branches": [
+    {
+      "target_assignment": {
+        "359": 0,
+        "361": 1
+      },
+      "domains_sha256": "28824cc6e1cdba08e05d3394cc481c7b8bf82b0e821c98f006c2feeacf131420",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.28326916105892863,
+      "multipliers": [
+        [
+          177,
+          "174904417/200000000"
+        ],
+        [
+          180,
+          "25095583/200000000"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          -12853286396150121818242311755096373765511794665855998869826263744791,
+          -224
+        ],
+        "rad": [
+          699530185,
+          -251
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          -5216364950607101514437677817119268388180454949643317424553156889617,
+          -224
+        ],
+        "rad": [
+          603980289,
+          -254
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          3818460722771510151902316968988552688665669858106340722636553427587,
+          -223
+        ],
+        "rad": [
+          387513861,
+          -250
+        ]
+      },
+      "excluded": true
+    },
+    {
+      "target_assignment": {
+        "359": 0,
+        "361": 2
+      },
+      "domains_sha256": "3601967a0455a5394ce858789e2f04b5ca2410989b967f793522d985ca194020",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.14606762920165609,
+      "multipliers": [
+        [
+          177,
+          "174904417/200000000"
+        ],
+        [
+          180,
+          "25095583/200000000"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          -12853286396150121818242311755096373765511794665855998869826263744791,
+          -224
+        ],
+        "rad": [
+          699530185,
+          -251
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          -8915310947914830654614303288542160448784634558448186110841988344827,
+          -224
+        ],
+        "rad": [
+          570425601,
+          -253
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          984493862058822790907002116638553329181790026851953189746068849991,
+          -222
+        ],
+        "rad": [
+          421068293,
+          -250
+        ]
+      },
+      "excluded": true
+    },
+    {
+      "target_assignment": {
+        "359": 0,
+        "361": 3
+      },
+      "domains_sha256": "54b1665a8f99246fb1fdcc28bb71c9c0059efc00e71a544ba0cffa3352141de8",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.008866097344383692,
+      "multipliers": [
+        [
+          177,
+          "174904417/200000000"
+        ],
+        [
+          180,
+          "25095583/200000000"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          -12853286396150121818242311755096373765511794665855998869826263744791,
+          -224
+        ],
+        "rad": [
+          699530185,
+          -251
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          -12614256945222559794790928759965052509388814167253054797130819800037,
+          -224
+        ],
+        "rad": [
+          570425601,
+          -253
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          119514725463781011725691497565660628061490249301472036347721972377,
+          -223
+        ],
+        "rad": [
+          421068293,
+          -250
+        ]
+      },
+      "excluded": true
+    },
+    {
+      "target_assignment": {
+        "359": 0,
+        "361": 4
+      },
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.0,
+      "multipliers": [],
+      "weighted_rhs": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "excluded": false
+    },
+    {
+      "target_assignment": {
+        "359": 1,
+        "361": 1
+      },
+      "domains_sha256": "7070d2ff04d6f83af9dd37b9ad55f9a45da3b214def79f8d1b7aa49171907d3e",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.0,
+      "multipliers": [],
+      "weighted_rhs": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          0,
+          0
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "excluded": false
+    },
+    {
+      "target_assignment": {
+        "359": 1,
+        "361": 2
+      },
+      "domains_sha256": "c45b79b97913ce0dc39899dadbaeed20b68e3fa15b499cb0e94265ae9d58d983",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.03425078740166043,
+      "multipliers": [
+        [
+          176,
+          "1"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          18602713935241923399082744631616867017669962550347373517831573936785,
+          -223
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          9532206818035131430614592024973388558608588726003346098023519980723,
+          -222
+        ],
+        "rad": [
+          603980033,
+          -253
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          461699700828339462146439418329910099547214901659318678215466024661,
+          -223
+        ],
+        "rad": [
+          603980033,
+          -253
+        ]
+      },
+      "excluded": true
+    },
+    {
+      "target_assignment": {
+        "359": 1,
+        "361": 3
+      },
+      "domains_sha256": "d5c8696f857d6d9ce8d914aa64b11f4386c1b6333a1d1d893c269953bdb23c23",
+      "solver_status": 0,
+      "proposed_uniform_violation": 0.7113134972229114,
+      "multipliers": [
+        [
+          180,
+          "1"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          7137461915584950813850142534768980581233906754443264306292310731505,
+          -220
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          16672045581061756366342314144821999530923684100780806880372277730493,
+          -221
+        ],
+        "rad": [
+          671612929,
+          -250
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          2397121749891854738642029075284038368455870591894278267787656267483,
+          -221
+        ],
+        "rad": [
+          671612929,
+          -250
+        ]
+      },
+      "excluded": true
+    },
+    {
+      "target_assignment": {
+        "359": 1,
+        "361": 4
+      },
+      "domains_sha256": "bf97cd72fce694e7eb3df195e72340609e38a8477939a4d50ba27558edcfdf2f",
+      "solver_status": 0,
+      "proposed_uniform_violation": 1.7113134972229114,
+      "multipliers": [
+        [
+          180,
+          "1"
+        ]
+      ],
+      "weighted_rhs": {
+        "mid": [
+          7137461915584950813850142534768980581233906754443264306292310731505,
+          -220
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      },
+      "box_minimum_lower_bound": {
+        "mid": [
+          5010509728613896585168922757674863341282081788399594610127557252911,
+          -219
+        ],
+        "rad": [
+          671612929,
+          -250
+        ]
+      },
+      "strict_separation_gap": {
+        "mid": [
+          2883557541642842356487702980580746101330256822355924913962803774317,
+          -220
+        ],
+        "rad": [
+          671612929,
+          -250
+        ]
+      },
+      "excluded": true
+    }
+  ],
+  "surviving_assignments": [
+    {
+      "359": 0,
+      "361": 4
+    },
+    {
+      "359": 1,
+      "361": 1
+    }
+  ],
+  "scope": "All eight remaining target pairs enumerated. A strictly positive rational-multiplier separation gap proves the entire candidate box infeasible. A non-excluded branch is not certified feasible by the float solver."
+}

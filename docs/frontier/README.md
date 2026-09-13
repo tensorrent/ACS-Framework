@@ -12,6 +12,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [13 September 2026 Dedekind delta](2026-09-13-dedekind-delta/README.md): all four finite cyclotomic factors, exact Euler coefficients, normalization corrections, and declared window/cutoff comparisons.
 - [13 September 2026 explicit-formula delta](2026-09-13-explicit-delta/README.md): Gaussian zero/prime comparisons with pole and gamma terms, unconditional tail bounds, independent routes and adversarial checks.
 - [13 September 2026 coefficient-recovery delta](2026-09-13-recovery-delta/README.md): 7602 certified finite roots, noncircular recovery of 91 prime-power coefficients, cross-method checks and remaining local ambiguities.
-- [Current research queue](2026-09-13-recovery-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [13 September 2026 coupled-recovery delta](2026-09-13-coupled-delta/README.md): coupled inequalities and validated dual bounds reduce the required cutoff, while explicit integer witnesses distinguish a bound limitation from a solver failure.
+- [Current research queue](2026-09-13-coupled-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

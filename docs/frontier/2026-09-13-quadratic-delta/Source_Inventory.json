@@ -1,0 +1,29 @@
+{
+  "baseline_commit": "ec8ab3d26964deeb3611004e673e33d6b06dc4b0",
+  "instruments": {
+    "code/frontier_verification/dedekind_quadratic_ordinate.py": "272a1a2f6cdd3e99e36f89bdeb8059d81d7dd575e71e5f6c02edaedca4d66b8c",
+    "code/frontier_verification/dedekind_quadratic_recovery.py": "14a9f75826c89f3fe0579302fc0ca29d222fb6274adefbd99c6cafb6f98a31bc",
+    "code/frontier_verification/dedekind_quadratic_conic.py": "8ff7c5ed482de18ab2c61be719be71c4041659bb3f6aabb8cdcdb0a8ddbeb624",
+    "code/frontier_verification/dedekind_quadratic_union.py": "c9af08ac39acb34b5b65f3b91375c0b8e2b649d754568c059b5dded280b2e945",
+    "code/frontier_verification/dedekind_quadratic_audit.py": "043feedb93ae0bc61f7680c2d60b0ebcc06764ce52d7282c5c0698725412a45b",
+    "code/frontier_verification/dedekind_quadratic_numeric.py": "660dcad06a7b6aa1f53d87bc8417753706922363d928feb03b067bac584dab4d",
+    "code/frontier_verification/check_quadratic_lean.py": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7",
+    "code/frontier_verification/proofs/QuadraticSupport.lean": "905cacc2da416328f653f2f05dbdf51eb744a2a3d36ee2772a2f28713a90f6d8",
+    "code/frontier_verification/quadratic_requirements.txt": "889f0e63ea72ec4ef7a3f80bef673e940c56943ee8fbe27c7220deafa432338e",
+    "code/frontier_verification/verify_quadratic_delta.py": "60f344bcb8bf23723189b4ae7b995ea234b11abdd1cdb897db8f43e2ed467d63",
+    "code/frontier_verification/QUADRATIC_README.md": "f479768b336e8293e78a5e813fcc88b8f94244d43ef2ff0a815988c15b271666"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_shared_ordinate.py": "c827c04e09e65c6eb5e6c0a64c72ae693522e32c256ce8904acd81f5f973786e",
+    "code/frontier_verification/dedekind_shared_audit.py": "3251308058a7b147d055817b7eaac0073bf61803b60cb5e7ae365b661569cf0d",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_audit.py": "41a3fb51193283126e20e74f32c313c3e79727cc8902f64fe7c23e45e31b374a",
+    "code/frontier_verification/verify_shared_delta.py": "02d934ef013cbebfbf95fe73065bd29e4c2e33aeb3e724419f785c2f80fa1530",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f",
+    "code/frontier_verification/SHARED_README.md": "5ae4640e55c78b58882d065ca899c7d2bdbebe2508d91fdbc71f04b1e74d844d",
+    "code/frontier_verification/ORDINATE_README.md": "936d0e5b9073bae99127f08166847c2bf92aebe681edcdf958c7d3b83f04641e",
+    "code/frontier_verification/COUPLED_README.md": "7f050ed2f17f6e6302182765ccb93c0d2f96fd25f4ad0b7e4786daf0c7af3d41",
+    "code/frontier_verification/RECOVERY_README.md": "64e23d4fc34eb088cf827dc73bc2d48cfc1e693ffaa48ea383755184cc6128ef"
+  },
+  "scope": "New quadratic instruments and source snapshots, including failed versions. Earlier pinned source and dated evidence remain unchanged."
+}

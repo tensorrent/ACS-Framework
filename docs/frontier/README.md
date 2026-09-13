@@ -16,6 +16,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [13 September 2026 ordinate uncertainty delta](2026-09-13-uncertainty-delta/README.md): per-root derivative and turning-point bounds strengthen recovery under lost ordinate precision, while retaining earlier measurements preserves information.
 - [13 September 2026 shared-error delta](2026-09-13-shared-delta/README.md): certified common ordinate displacements allow error cancellation across measurements and identify eight additional coefficients at the larger uncertainty radius.
 - [13 September 2026 quadratic-error delta](2026-09-13-quadratic-delta/README.md): certified cubic remainders and quadratic terms identify two more coefficients, with exact integer replay, scalar kernel proofs and retained conic limits.
-- [Current research queue](2026-09-13-quadratic-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [13 September 2026 local-information and uncertainty delta](2026-09-13-local-noise-delta/README.md): explicit Euler-factor assumptions resolve the remaining narrow-radius coefficients and extend conditional recovery to larger uncertainty, with independent catalogue and adversarial audits.
+- [Current research queue](2026-09-13-local-noise-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

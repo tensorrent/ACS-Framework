@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-09-14T01:20:31.612295+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "docs/frontier/2026-09-13-aggregate-delta/Measurements_Recovery.zip": "fdec85cf88d86ba5782d6347861a7d95fa6253a1cee09c831ea84aadd4434bc1",
+    "docs/frontier/2026-09-13-aggregate-delta/Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "docs/frontier/2026-09-13-aggregate-delta/Input_Provenance.json": "acf6c62260582724441d12b5817fbcfbe9d6317fdd86dd3926c7faea2bc8cb42",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Candidate_Class.json": "959e92d1078b1fa12c1f31fa6d4b5f16d660c79a124e84730aee6c9e293b2ddb",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Decoding.json": "c518da2319770e106a1af57b34622dbb000d35fb52d98f0a319405bf9ce44039",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Spectra.zip": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd",
+    "docs/frontier/2026-09-14-aggregate-primal-delta/Manifest.json": "dd54d22b55f73e71309b648e4e9033c34795e190fd9d9c84a06f21b24439df57",
+    "docs/frontier/2026-09-14-aggregate-primal-delta/Verification.json": "6a0f6cc7ced1bae6a5c12945377d8762122320683b9c858cc0cd42d1b1dafde2"
+  },
+  "scope": "The metadata-only classifier reads only four fields extracted from anonymous inputs. Candidate spectra are inherited. Labelled arithmetic, aggregate templates and the older V4-conditional classification are downstream audit comparisons; they do not seed the new classifier or count selector."
+}

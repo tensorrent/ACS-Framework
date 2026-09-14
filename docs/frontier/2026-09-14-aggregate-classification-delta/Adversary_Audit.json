@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "source_sha256": "7e64d2eba245bafbf2ebb0a135495d1d592c878962d786db813d771c5129f76f",
+  "inputs_sha256": {
+    "Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "Metadata.json": "138e4f57181d0878c456fea76dac5780487b40ba96345e0f5663c53116472c88",
+    "A4_Field_Controls.json": "00c9cd1a74d9aaf8ede1d34c3c244e3f21e30d8d4a325114ff6ecf7fe0298d86",
+    "Complete_Class_Count_Decode.json": "35895ef13b7b0a98c2a339e9f1ad82f1af493b9274319431694fcea428d57321",
+    "Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "Pair_Decoding.json": "c518da2319770e106a1af57b34622dbb000d35fb52d98f0a319405bf9ce44039",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Pair_Spectrum160.json": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+    "Pair_Spectrum224.json": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 13,
+  "mutations": [
+    {
+      "mutation": "omit_transitive_A4_candidate",
+      "rejected": true
+    },
+    {
+      "mutation": "invent_normal_wild_C3_inside_A4",
+      "rejected": true
+    },
+    {
+      "mutation": "enlarge_C3_normalizer_to_A4",
+      "rejected": true
+    },
+    {
+      "mutation": "use_tame_exponent_two_at_wild_prime_three",
+      "rejected": true
+    },
+    {
+      "mutation": "replace_strict_Minkowski_obstruction_by_one",
+      "rejected": true
+    },
+    {
+      "mutation": "drop_one_complete_field_candidate",
+      "rejected": true
+    },
+    {
+      "mutation": "supply_Galois_group_as_metadata_input",
+      "rejected": true
+    },
+    {
+      "mutation": "leak_field_label_to_count_selector",
+      "rejected": true
+    },
+    {
+      "mutation": "accept_boolean_count_as_integer",
+      "rejected": true
+    },
+    {
+      "mutation": "assume_no_unknown_roots_enter_noisy_cutoff_20",
+      "rejected": true
+    },
+    {
+      "mutation": "corrupt_predicted_coefficient_at_seven",
+      "rejected": true
+    },
+    {
+      "mutation": "claim_unique_field_from_ambiguous_half_radius_count",
+      "rejected": true
+    },
+    {
+      "mutation": "drop_an_observation_precision_case",
+      "rejected": true
+    }
+  ],
+  "actual_A4_hypothesis_controls": [
+    {
+      "actual_A4_discriminant": 3136,
+      "guarded_A4_exclusion": false,
+      "reason": "extra_ramified_prime_7"
+    },
+    {
+      "actual_A4_discriminant": 5184,
+      "guarded_A4_exclusion": false,
+      "reason": "wild_exponent_4_at_3"
+    }
+  ],
+  "signed_discriminant_guard": {
+    "signed_discriminant": -400,
+    "signed_discriminant_square": false,
+    "prime_factorization": [
+      [
+        2,
+        4
+      ],
+      [
+        5,
+        2
+      ]
+    ],
+    "A4_excluded_by_cubic_quotient_obstruction": false
+  },
+  "incompatible_count_returns_empty": true,
+  "scope": "Semantic checks reject broken group coverage, normality, wild exponent, Minkowski bound, class completeness, leaked labels, malformed counts, insufficient completeness margin and forged decoding results. Two certified A4 fields remain allowed when the exact metadata hypotheses are relaxed. Count-statistic ambiguity is not asserted for full spectra."
+}

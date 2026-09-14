@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_sha256": "1cec3afccfff343c84069529a1956ff57e0479452a834bbda3e4144937adc978",
+  "cause": "JSON roundtrip changes integer object keys to strings. Sorting fresh integer keys numerically and stored string keys lexically gives unequal byte serializations despite identical subgroup counts.",
+  "stored_key_types": [
+    "str"
+  ],
+  "fresh_key_types": [
+    "int"
+  ],
+  "counts": {
+    "1": 1,
+    "2": 3,
+    "3": 4,
+    "4": 1,
+    "12": 1
+  },
+  "raw_sorted_serialization_equal": false,
+  "JSON_normalized_full_document_equal": true,
+  "scope": "The entire regenerated audit equals the recorded document after JSON normalization. No numerical, group-theoretic, arithmetic or scientific-source change is required. Correct only the new verifier comparison in a separate version."
+}

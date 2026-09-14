@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T04:54:50.849101+00:00",
+  "manifest_files": 36,
+  "fresh_proposals_and_12_contraction_certificates": "passed",
+  "fresh_independent_complex_Taylor_rank_and_arithmetic_audits": "passed",
+  "fresh_noisy_22_feature_release": "passed",
+  "fresh_adversarial_audit": "passed",
+  "fresh_Lean_compilation": "passed",
+  "preserved_certificate_failure_reproduced": "passed",
+  "preceding_checkpoint_integrity": "passed",
+  "derived_results": {
+    "collision_dimensions": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "critical_splits": [
+      "1e-8",
+      "1e-12",
+      "1e-18"
+    ],
+    "certified_collision_count": 12,
+    "complete_source_population": 22,
+    "source_cutoff": "39/2",
+    "largest_split_root_error_radius": "90839418064418614701455025847221831488999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+    "largest_split_strict_improvement_below_L": "4999999999999999999999/500000000000000000000000000000",
+    "correction_box_radius": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "uniform_source_root_box_checks": 1056,
+    "independent_scalar_coordinate_inequalities": 2112,
+    "direct_interval_precisions": [
+      640,
+      896
+    ],
+    "independent_complex_Taylor_precision": 768,
+    "local_injective_feature_dimension": 22,
+    "local_neighborhood_radius": "1/10000000000",
+    "local_derivative_defect_bound": "1/2",
+    "inverse_Lipschitz_bound": "1641498175293314952578508115624454094780665817735571572336319385362409359358503660495093829597621321581081219321910632682258623245341666985508858461085819932848221068504549913/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "local_collision_membership": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "full_preconditioner_modular_determinant": 62994,
+    "center_43_feature_differences_display": {
+      "Enlarged": -9.090178056650613e-08,
+      "Small": -9.019270289808756e-12,
+      "Local": -9.019263211683786e-18
+    },
+    "noisy_22_feature_error_bound": "1/200000000000000000",
+    "explicit_last_feature_offset": "-9/2000000000000000000",
+    "independent_polynomial_factorizations": 1128,
+    "coefficient_comparisons": 1208,
+    "fixed_arithmetic_coefficients": 456,
+    "ambiguous_arithmetic_coefficients": 148,
+    "mutations_rejected": 45,
+    "exact_zero_margin_controls": 16,
+    "binary64_false_negative_margins": 8,
+    "Lean_lemmas": 6,
+    "new_source_roots_computed": 0,
+    "global_injectivity_established": false,
+    "optimal_measurement_noise_threshold_established": false
+  },
+  "recorded_commands": 13,
+  "successful_commands": 11,
+  "failed_commands": 2,
+  "research_branches": 117,
+  "ledger_events": 443,
+  "preserved_event_prefix": 438,
+  "ledger_head_sha256": "8d15b3bde01ec0b98125151fa656b553c151bfa98d8d213662aba1d5e0467479",
+  "local_links": 59,
+  "entire_calculus_arithmetic_spectral_bridge_Lean_formalized": false,
+  "scope": "Joint finite observables through dimension 21 admit actual-source collisions. The selected 22-feature map is locally injective on a certified neighborhood containing smaller collisions; an explicit bounded feature error restores ambiguity there. Global identification, optimal radii/noise thresholds and the wider ACS program remain open."
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-09-14T04:35:29.250138+00:00",
+  "source_sha256": "ccdd9d280d78f96a0d98e0d4c7885b91196935374dba2745e146c8ecf9adeee3",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "pinned_sources": [
+    {
+      "path": "Mathlib/Analysis/Calculus/MeanValue.lean",
+      "sha256": "7e1e6f097fe92a2493ea5b4bc9a1896c850514604f26f863f812906fb500b856",
+      "bytes": 47850,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Group/Basic.lean",
+      "sha256": "4a16138ea1b7ac2dfe475ffb4eb13174a1df8bc012a986b0eb4316e9adf8c95b",
+      "bytes": 44516,
+      "matches_pinned_git_object": true
+    }
+  ],
+  "retrieved_primary_documentation": {
+    "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Calculus/MeanValue.html",
+    "retrieval": "Successfully opened with the web tool on 14 September 2026.",
+    "relevant_results": [
+      "Convex.norm_image_sub_le_of_norm_hasFDerivWithin_le",
+      "Convex.norm_image_sub_le_of_norm_fderiv_le",
+      "Convex.norm_image_sub_le_of_norm_fderiv_le'"
+    ],
+    "use": "Primary documentation for the derivative-bound to Lipschitz step. The current web page is not asserted to be the exact pinned runtime revision."
+  },
+  "runtime_change": "No package acquisition or version changes. The new generic Lean lemmas use the already available normed-group and tactic modules; the full vector mean-value bridge remains a written derivation.",
+  "scope": "Exact local reference sources are compared to their pinned Git objects and archived with the existing mathlib license. Current primary documentation supplements, rather than replaces, the pinned source evidence."
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-14T04:43:14.823826+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "docs/frontier/2026-09-14-aggregate-feature-delta/Verification.json": "8584b9c0c2c421167c020f821ad94ce288bc473bcec1f65c37c4a541320d8703",
+    "docs/frontier/2026-09-14-aggregate-feature-delta/Research_Queue.json": "4e92eba69d06464d8d2d5e361bdc8676402640dd6ad071b2dcd7732971ebda98",
+    "docs/frontier/2026-09-14-aggregate-feature-delta/Branch_Events.jsonl": "194187a1e1d8bf3415798c11cc4eaf55a48e09680c6a2c1cccaf2e0bb8e79018",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "code/frontier_verification/verify_aggregate_feature_delta.py": "a0c43c8b396d33fd6a825314399001a5f577daa80c11d8378fed30812281ccd2"
+  },
+  "scope": "Complete field classification, finite source populations, coefficient predictions and the preceding checkpoint chain are inherited; both source precision variants are freshly used."
+}

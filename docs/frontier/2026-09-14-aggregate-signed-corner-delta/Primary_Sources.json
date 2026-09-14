@@ -1,0 +1,8 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-variable-noise-delta/Primary_Sources.json": "e4508fde4dbe556f048078c7609a3631610c0c7c36258b5c005cec7b82b004df",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Primary_Sources.json": "42bab3b6116dd0cae4051b66e8dc056a8baffc22877f4ddbd883a1fafd8ff021"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "scope": "Current primary Mathlib nonsingular inverse and adjugate documentation was retrieved. Five exact pinned local source files match Git objects and are archived with their license. The closed-hull and secant implications are explicitly derived in the guide and written audit."
+}

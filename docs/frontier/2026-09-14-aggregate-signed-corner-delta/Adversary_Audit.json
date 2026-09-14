@@ -1,0 +1,195 @@
+{
+  "status": "passed",
+  "source_sha256": "b9e0792d00654d7a3e33b7676358eeb37d2a26c10d3bdfe9bcc59b746565a2cd",
+  "inputs_sha256": {
+    "Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "Variable_Noise_Certificate.json": "c3461e37ae38bcc16f35d8155a556c3987c4fae5cdb20ce172c4de6af38198b5",
+    "Signed_Corner_Certificate.json": "b5c313cdf3d0c094798ffed44fc9c56edf6b0bc11b18c12d0efe9f5b601a06eb"
+  },
+  "mutations_rejected": 28,
+  "mutations": [
+    {
+      "mutation": "pointwise_family_substitution",
+      "rejected": true
+    },
+    {
+      "mutation": "omitted_secant_bridge",
+      "rejected": true
+    },
+    {
+      "mutation": "overstated_formalization",
+      "rejected": true
+    },
+    {
+      "mutation": "unsupported_threshold_sharpness",
+      "rejected": true
+    },
+    {
+      "mutation": "changed_coordinate_region",
+      "rejected": true
+    },
+    {
+      "mutation": "raw_roots_added",
+      "rejected": true
+    },
+    {
+      "mutation": "feature_order_swapped",
+      "rejected": true
+    },
+    {
+      "mutation": "critical_index_changed",
+      "rejected": true
+    },
+    {
+      "mutation": "inverse_row_sign_flipped",
+      "rejected": true
+    },
+    {
+      "mutation": "negative_resolvent_row",
+      "rejected": true
+    },
+    {
+      "mutation": "broken_exact_residual",
+      "rejected": true
+    },
+    {
+      "mutation": "undersized_direction_supersolution",
+      "rejected": true
+    },
+    {
+      "mutation": "omitted_large_region_flip_penalty",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_Taylor_orders",
+      "rejected": true
+    },
+    {
+      "mutation": "missing_eighth_derivative",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_remainder_power",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_remainder_factorial",
+      "rejected": true
+    },
+    {
+      "mutation": "curvature_sign_flipped",
+      "rejected": true
+    },
+    {
+      "mutation": "uncertified_global_direction_12",
+      "rejected": true
+    },
+    {
+      "mutation": "opposite_endpoint",
+      "rejected": true
+    },
+    {
+      "mutation": "coordinate_12_replaced_too_early",
+      "rejected": true
+    },
+    {
+      "mutation": "face_sign_claimed_globally",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_last_endpoint",
+      "rejected": true
+    },
+    {
+      "mutation": "nonnegative_face_reference",
+      "rejected": true
+    },
+    {
+      "mutation": "determinant_enclosure_contains_zero",
+      "rejected": true
+    },
+    {
+      "mutation": "corner_norm_understated",
+      "rejected": true
+    },
+    {
+      "mutation": "guarantee_overstated",
+      "rejected": true
+    },
+    {
+      "mutation": "upper_endpoint_changed",
+      "rejected": true
+    }
+  ],
+  "exact_counterexample_controls": [
+    {
+      "name": "finite_inverse_step_uses_old_direction_factor",
+      "actual": "-1/2",
+      "correct": "-1/2",
+      "wrong_new_direction": "-1/4"
+    },
+    {
+      "name": "Cramer_numerator_independent_of_replaced_column_only",
+      "fixed_numerator": "-1",
+      "wrong_column_numerator_changes": true
+    },
+    {
+      "name": "same_sign_nonsingular_endpoints_do_not_prove_nonsingular_hull",
+      "endpoint_determinants": [
+        "1",
+        "1"
+      ],
+      "midpoint_determinant": "0"
+    },
+    {
+      "name": "signed_row_bound_requires_flip_penalty",
+      "row_value": "-1/4",
+      "absolute_value": "1/4",
+      "necessary_penalty": "1/2"
+    },
+    {
+      "name": "negative_B_invalidates_positive_resolvent_logic",
+      "B": "-2",
+      "resolvent_minus_identity": "-2/3"
+    },
+    {
+      "name": "eighth_derivative_remainder_needs_six_factorial",
+      "polynomial": "t^8",
+      "exact_curvature": "7/125000000000",
+      "underestimate_with_7_factorial": "1/125000000000"
+    },
+    {
+      "name": "endpoint_inverse_values_without_monotonicity_miss_interior_maximum",
+      "derivative": "1+t^2",
+      "endpoint_inverse": "1/2",
+      "center_inverse": "1"
+    },
+    {
+      "name": "negative_affine_weights_do_not_preserve_endpoint_bounds",
+      "weights": [
+        "2",
+        "-1"
+      ],
+      "values": [
+        "1",
+        "0"
+      ],
+      "combination": "2",
+      "endpoint_upper": "1"
+    },
+    {
+      "name": "quotient_sign_transfer_requires_denominator_orientation",
+      "numerator": "-1",
+      "denominators": [
+        "1",
+        "-1"
+      ],
+      "quotients": [
+        "-1",
+        "1"
+      ]
+    }
+  ],
+  "scope": "Twenty-eight premise mutations and nine exact algebraic controls. These exercise the proof conditions; they are not an exhaustive audit or a replacement for the analytic closed-hull/secant proof. The polar map (exp(x)cos(y),exp(x)sin(y)) on [0,1] x [0,2*pi] additionally illustrates in the written audit why everywhere nonsingular pointwise derivatives do not imply a global inverse bound."
+}

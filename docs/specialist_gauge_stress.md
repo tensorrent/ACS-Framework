@@ -478,9 +478,107 @@ The finding is stronger than "R-fix's converse fails." It is that **satisfying R
 is not evidence for R-fix**, because a quantity with no invariant meaning — one that moves when
 you change a gauge condition — can satisfy it.
 
-## 5. Case of my own choosing
+## 5. Case of my own choosing — the irrational rotation
 
-(pending)
+**Instrument.** `gauge_stress.py::g5_irrational_rotation`. **Tier.** T1 machine + T2 proved.
+
+### The assumption, named and then lifted (Rule 9)
+
+The four rows that built the table are actions on well-behaved spaces with **closed orbits**,
+whose quotients are manifolds or orbifolds. Hold the group (`Z`), the space (`S^1`) and the kind
+of map (a rotation) fixed, and lift only "well-behaved":
+
+> `Z` acting on `S^1` by `x -> x + alpha` (mod 1).
+
+- **`alpha = p/q` rational:** `n = q` acts trivially, so every point has stabiliser `qZ` — the
+  action is **not free**. But no element outside the kernel has **any** fixed point. A period `q`
+  is forced; the quotient is `S^1`, a manifold.
+- **`alpha` irrational:** the action **is free**. Every orbit is dense, the quotient is
+  indiscrete, and **no period is forced at all**.
+
+### (a) freeness, measured
+
+```
+       N         golden       xN      Liouville       xN    13/34 (exact)
+      10      5.573e-02   0.5573      9.991e-03   0.0999          5.9e-02
+     100      5.025e-03   0.5025      1.000e-04   0.0100          0.0e+00
+    1000      4.531e-04   0.4531      1.000e-04   0.1000          0.0e+00
+  100000      5.961e-06   0.5961      9.000e-06   0.9000          0.0e+00
+```
+
+Irrational: never `0`, at any `N` — the action is free. But the value falls as `~c/N`, so no `n`
+ever returns the circle to itself: **no period is forced.** Rational `13/34`: **exactly** `0` at
+`n = 34` — not free, and a period *is* forced.
+
+Both irrationals are free and their quantitative structure is not alike: the golden ratio sits
+near `0.5/N`, the Liouville number lurches between `0.01/N` and `0.9/N`. Freeness is blind to it.
+
+### (b) the quotient is not Hausdorff — measured
+
+```
+       N    max gap, golden        x N
+      10       1.458980e-01     1.4590
+    1000       1.186241e-03     1.1862
+   50000       2.525061e-05     1.2625
+```
+
+The gap goes to zero: every orbit is **dense**. No two orbits can be separated by disjoint
+saturated open sets, so the quotient topology is indiscrete — not Hausdorff, not even `T0`. There
+is no smooth structure on which to impose anything and no continuous function on the quotient
+except the constants. **R-free's mechanism clause — "forces periodicity globally" — has nothing
+to force.**
+
+### (c) the forced period is a nowhere-continuous function of `alpha`
+
+Convergents `p_k/q_k -> golden`; `q_k` *is* the forced period of rotation by `p_k/q_k`:
+
+```
+     q_k      |p_k/q_k - golden|
+      34               3.869e-04
+      55               1.478e-04
+      89               5.646e-05
+     144               2.157e-05
+     610               1.202e-06
+```
+
+Arbitrarily small changes in `alpha` send the forced period to `34, 55, 89, 144, ...` without
+bound, and to *no period at all* on a dense set of full measure — while **freeness is constant
+on each class.** A discrete, wildly discontinuous antecedent is being asked to control a quantity
+that is neither.
+
+### (d) the boundary this draws
+
+The table offers two rows. This single one-parameter family already needs four, and lands in the
+two that do not exist:
+
+| mode | quotient | period forced? | table row |
+|---|---|---|---|
+| free **+ proper** | manifold | yes | Möbius, spinor, AB, θ — covered |
+| free **but not proper** | non-Hausdorff | **no** | **none** |
+| non-free, effective, isolated fixed locus | orbifold | yes, locally | Schwarzschild — covered |
+| non-free, **non-effective**, no fixed point anywhere | manifold | yes, by the **kernel** | **none** |
+
+The rational rotation is the sharper of the two gaps. It is not free, so the table routes it to
+the fixed-point column and predicts a local physical scale. It has **no fixed points at all** —
+the stabiliser is the same subgroup at every point — there is nothing local to impose smoothness
+at, and the forced period `q` is a pure integer with no scale anywhere near it.
+**"Not free" does not mean "has a fixed point", and the classification treats them as the same
+thing.**
+
+### (e) the same failure is what goes wrong in infinite dimensions (T2)
+
+A manifold quotient needs more than freeness: the action must be **proper** and admit slices. The
+irrational rotation is the smallest free-but-not-proper example, and its pathology — dense orbits,
+indiscrete quotient — is exactly that of free actions of non-compact groups in infinite
+dimensions, where orbits need not be closed. **"Free" was standing in for "free and proper"
+throughout the table**, and all four constructing cases are proper, so the distinction never had
+to be made.
+
+### Verdict — **F3, a boundary**
+
+On one family, with group and space held fixed, **freeness and forced periodicity are exactly
+anti-correlated**: free ⟺ irrational ⟺ no period forced. The dichotomy is not exhaustive, "not
+free" ≠ "has a fixed point", and "free" was doing the work of "free and proper".
 
 ## 6. Verdict
 

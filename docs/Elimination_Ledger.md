@@ -4246,3 +4246,83 @@ grid scan at step `0.001` with tolerance `1e-6` cannot land on a root at `β = 0
 bisection, which finds it to `1.78e-15`. The failure shape is the corpus's usual one only in
 appearance: this time the number was wrong and the sentence was right, which is the same defect
 (prose and computation not derived from each other) with the roles swapped.
+
+---
+
+### 2026-09-14 — §6's ultralight scalar taken to data: excluded by ten published limits · T3 measured
+
+**Instrument.** `code/constraint_projection/fuzzy_dm_bounds.py`, exit 0, 18 CITED bound rows each
+carrying source, confidence level and the caveat its own source states. Report:
+`docs/specialist_fuzzy_dm.md`, 699 lines. **Independently re-run and negative-tested by the
+orchestrator before landing** (see D1 below).
+
+**The escalation.** The audit's existing result on §6 was **T2 structural** — *"at any Standard
+Model mass the effect is absent; at the mass that works, the particle is exotic."* That had never
+been taken to data. It has now.
+
+**D1 — the orchestrator's own brief was wrong by a decade, in the direction that flattered it.**
+The brief asserted Rogers & Peiris 2021 give `m > 2e-21 eV`. The paper states verbatim *"a 95%
+lower limit m_a > 2 × 10⁻²⁰ eV"* (arXiv:2007.12705v3 = PRL **126**, 071302), restated as
+`log(m_a[eV]) > −19.64`. **The specialist's correction was right and the brief was low by 10×.**
+The error has a traceable provenance rather than being invention: `2e-21` is the **previous**
+Lyman-alpha bound (Irsic+ 2017) that Rogers & Peiris supersede and cite by that value in their own
+Fig. 2 caption. Checking it moved the bound a decade **away** from the framing the brief was
+setting up. The stored value is also conservative against the paper's own log form —
+`10^-19.64 = 2.29e-20` vs stored `2.0e-20`.
+
+**D2 — the bracket, and what excludes it.** §6 requires
+`m ∈ [9.5858e-24, 6.0229e-23] eV` (reduced / standard de Broglie convention; the manuscript's
+stated `1e-23 eV` sits at its bottom).
+
+| probe family | rows | reduced `9.59e-24` | standard `6.02e-23` |
+|---|---|---|---|
+| Lyman-alpha (3 papers, 8 variants) | 8 | excluded by all | excluded by all |
+| UFD wave-interference heating | 2 | excluded by both | excluded by both |
+| dSph soliton core size | 4 | **allowed by all 4** | excluded by 2 of 4 |
+| BH superradiance | 4 | no verdict | no verdict |
+
+**Ten published limits exclude both ends.** The result survives adversarial choice of paper: even
+the **weakest** Lyman-alpha entry anywhere (Irsic XQ-100+Planck, `2.7e-22 eV`) clears the top of the
+bracket by **0.65 decades**. It also survives choice of thermal history, de Broglie convention, and
+galactic scale — Section 1 already showed the whole plausible `(v, L)` grid spans only 1.78 decades.
+
+**D3 — tiered T3, not T4, and the reason is stated rather than hidden.** Every Lyman-alpha bound
+**extrapolates below its own simulated range**: Rogers & Peiris's prior floor is `1e-22 eV`, Irsic's
+lightest simulated model is `1e-22 eV`, and Armengaud+ explicitly decline to vouch below `1e-22 eV`.
+The entire bracket sits below all three. The extrapolation is monotone and safe in direction, but at
+that mass it is an **entailment, not an observation**. T4 would overclaim. The specialist proposed
+T3 and named the gap; that is the tier.
+
+**D4 — the 2π is decisive in exactly one place, and carrying both conventions is why we can see
+it.** The reduced value is **allowed** by the dSph core limit (`m < 4.0e-23 eV`, 97.5% C.L.) by a
+factor 4.2; the standard value is **excluded** by it. Separately, Dalal & Kravtsov's quoted
+`λ ~ 600 pc at 1e-22 eV` reproduces to **602.3 pc under the standard convention** and 95.9 pc under
+the reduced — while their granule coherence length uses `ħ/(mv)`. External confirmation that the
+audit's `9.6e-24 eV` is the literature's coherence-length convention, **not a slip**. This narrows
+the available correction recorded earlier this session.
+
+**D5 — the mixed-dark-matter escape is unavailable.** Every bound above assumes ULAs are 100% of the
+dark matter. §6 asserts exactly that (`T_00 = ρ_vis c² + ρ_DM c²` — the scalar **is** the dark
+matter), so the assumption is matched and the usual fractional-abundance escape does not apply.
+Also recorded: **§6's text names no mass at all.** The `1e-23 eV` at CPF L88 is the audit-summary
+tcolorbox, not §6 — so the mass under test is one the audit derived from §6's mechanism, which is
+why Section 1 re-derived it from constants rather than quoting it.
+
+**D6 — superradiance returns no verdict, and that is a result.** Placing the bracket inside a
+superradiance band would require a black hole of `3.1e11` to `3.1e12 M_☉` — **5× to 30× the heaviest
+known SMBH**. The lightest boson reachable with the heaviest known (`6.6e10 M_☉`) is `2.86e-22 eV`,
+above the top of the bracket. Superradiance cannot see this mass; the row is recorded as
+no-verdict rather than as support.
+
+**A defect in the specialist's own instrument, found by negative-testing it.** Its first extension
+checked only *verdicts*. Corrupting Rogers & Peiris back to the brief's wrong `2e-21` left it at
+**exit 0** — both values exclude the bracket, so no verdict moved. **An instrument that cannot
+detect the error it was built to settle is not a check** (rule 3). Fixed by pinning magnitude
+(`EXPECTED_GAP_DEC`, 18 rows, ±0.01 decades) plus a check reproducing `2e-20` from the paper's own
+log form. Verified here independently: corrupting the value to `2e-21` **exits 1**, corrupting it to
+`2e-19` **exits 1**, unmodified **exits 0**.
+
+**Open, and named as the highest-value next step:** Hložek+ 2015/2018 CMB bounds are the only probe
+cited anywhere that sits **at** the CPF mass rather than above it, and would close D3's
+extrapolation gap. They were read only second-hand, inside Rogers & Peiris's Fig. 2 caption. They
+are **not** in `BOUNDS` and are **not** verified.

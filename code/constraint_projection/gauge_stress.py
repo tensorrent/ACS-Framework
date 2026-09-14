@@ -640,6 +640,192 @@ def g4_gribov():
     }
 
 
+# ---------------------------------------------------------------------------
+# G5.  My own case:  the irrational rotation.  Free, and forces NO period.
+# ---------------------------------------------------------------------------
+#
+# Name the assumption, then lift it.  The four rows that built the table are
+# actions on finite-dimensional, well-behaved spaces with CLOSED orbits and
+# quotients that are manifolds or orbifolds.  Lift "well-behaved" and keep
+# everything else -- same group Z, same space S^1, same kind of rotation --
+# and the classification's antecedent comes apart from its own mechanism.
+#
+#     Z acting on S^1 by  x -> x + alpha  (mod 1)
+#
+#     alpha = p/q rational : n = q acts trivially.  Every point has stabiliser
+#         qZ, so the action is NOT free.  But no element outside the kernel has
+#         ANY fixed point.  Period q is forced; the quotient is S^1, a manifold.
+#     alpha irrational : the action IS free.  Every orbit is dense.  The
+#         quotient is indiscrete -- not Hausdorff, not even T0 -- and NO period
+#         is forced at all.
+#
+# So on this one-parameter family, freeness and forced periodicity are exactly
+# ANTI-correlated.
+
+GOLDEN_CF = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+
+
+def circle_dist(x):
+    x = float(x) % 1.0
+    return min(x, 1.0 - x)
+
+
+def min_orbit_distance(alpha, nmax):
+    """min over 1 <= n <= nmax of the distance from n*alpha to 0 on the
+    circle.  Zero exactly when some n*alpha is an integer, i.e. when the Z
+    action fails to be free."""
+    m, acc = 1.0, alpha * 0
+    for _ in range(nmax):
+        acc = acc + alpha
+        m = min(m, circle_dist(acc))
+    return m
+
+
+def max_orbit_gap(alpha, nmax):
+    """Largest gap between consecutive points of the orbit {n alpha mod 1}."""
+    pts = np.sort(np.array([float((alpha * n) % 1) for n in range(nmax)]))
+    return float(max(np.max(np.diff(pts)), pts[0] + 1.0 - pts[-1]))
+
+
+def g5_irrational_rotation():
+    head("G5", "irrational rotation: free, and forcing no periodicity at all")
+    from fractions import Fraction
+    from mpmath import mp, mpf, sqrt as mpsqrt
+    import math
+    mp.dps = 60
+    golden = (mpsqrt(5) - 1) / 2
+    liouville = sum(mpf(10) ** (-math.factorial(k)) for k in range(1, 9))
+
+    print("""  The assumption being lifted (Rule 9): the four rows that built the table
+  are actions on well-behaved spaces with CLOSED orbits, whose quotients are
+  manifolds or orbifolds.  Keep the group (Z), keep the space (S^1), keep the
+  kind of map (a rotation), and lift only "well-behaved".\n""")
+
+    print("  (a) is the action free?  min over n <= N of d(n alpha, 0).\n")
+    print(f"      {'N':>8}  {'golden':>13} {'xN':>8}  {'Liouville':>13} {'xN':>8}"
+          f"  {'13/34 (exact)':>15}")
+    q_rat = Fraction(13, 34)
+    for nmax in (10, 100, 1000, 10000, 100000):
+        g = min_orbit_distance(golden, nmax)
+        l = min_orbit_distance(liouville, nmax)
+        r = min(min(float((q_rat * n) % 1), 1 - float((q_rat * n) % 1))
+                for n in range(1, nmax + 1))
+        print(f"      {nmax:8d}  {g:13.3e} {g * nmax:8.4f}  {l:13.3e} {l * nmax:8.4f}"
+              f"  {r:15.1e}")
+    gmin = min_orbit_distance(golden, 100000)
+    if gmin <= 0.0:
+        fail("golden-ratio rotation is not free -- orbit hit the origin")
+    rat_hit = min(min(float((q_rat * n) % 1), 1 - float((q_rat * n) % 1))
+                  for n in range(1, 101))
+    if rat_hit != 0.0:
+        fail("rational rotation did not close up -- q should be an exact period")
+    print("""
+      -> irrational: never 0, at any N.  The Z action is FREE.  But the value
+         falls as ~c/N, so no n ever returns the circle to itself: NO PERIOD IS
+         FORCED.  Both irrationals are free; the golden ratio stays near
+         c/N ~ 0.5/N while the Liouville number lurches between 0.01/N and
+         0.9/N -- freeness is identical and the quantitative structure is not.
+
+      -> rational 13/34: EXACTLY 0 at n = 34.  The action is NOT free -- every
+         point has stabiliser 34Z.  And a period, 34, IS forced.""")
+
+    print("\n  (b) what the quotient looks like: max gap between orbit points.\n")
+    print(f"      {'N':>8}  {'max gap, golden':>17}  {'x N':>9}")
+    for nmax in (10, 100, 1000, 10000, 50000):
+        gap = max_orbit_gap(golden, nmax)
+        print(f"      {nmax:8d}  {gap:17.6e}  {gap * nmax:9.4f}")
+    gap = max_orbit_gap(golden, 50000)
+    if gap > 1e-3:
+        fail(f"orbit is not becoming dense (max gap {gap:.3e})")
+    print("""
+      -> the gap goes to zero: every orbit is DENSE in S^1.  So no two orbits
+         can be separated by disjoint saturated open sets, the quotient
+         topology is indiscrete, and S^1/Z is not Hausdorff -- not even T0.
+         There is no smooth structure on which to impose anything, and no
+         continuous function on the quotient except the constants.""")
+
+    print("\n  (c) and the forced period is a nowhere-continuous function of alpha.\n")
+    print("      continued-fraction convergents p_k/q_k -> golden ratio.")
+    print("      q_k IS the forced period of the rotation by p_k/q_k:\n")
+    print(f"      {'q_k':>8}  {'|p_k/q_k - golden|':>22}")
+    for i in range(3, len(GOLDEN_CF) - 1):
+        qk, pk = GOLDEN_CF[i], GOLDEN_CF[i - 1]
+        err = abs(float(mpf(pk) / qk - golden))
+        print(f"      {qk:8d}  {err:22.3e}")
+    print("""
+      -> arbitrarily small changes in alpha send the forced period to 34, 55,
+         89, 144, ... without bound, and to "no period at all" on a dense set
+         of full measure.  Meanwhile FREENESS is constant on each of the two
+         classes and changes only between them.  A discrete, wildly
+         discontinuous antecedent is being asked to control a quantity that is
+         neither.""")
+
+    print("""
+  (d) the boundary this draws.
+
+      The table offers two rows, free and fixed-point.  This one-parameter
+      family already needs four, and lands in the two that do not exist:
+
+        free + proper (closed orbits)     -> manifold quotient, period forced
+                                             [Mobius, spinor, AB, theta]
+        free + NOT proper                 -> non-Hausdorff, NO period forced
+                                             [irrational rotation]     NO ROW
+        non-free, effective, isolated
+            fixed locus                   -> orbifold; smoothness there forces
+                                             a period  [Schwarzschild]
+        non-free, NON-effective, no fixed
+            point anywhere                -> period forced by the KERNEL, with
+                                             no fixed point and no local scale
+                                             [rational rotation]       NO ROW
+
+      The rational rotation is the sharper of the two missing rows.  It is not
+      free, so the table sends it to the fixed-point column and predicts a
+      local physical scale.  It has no fixed points at all -- the stabiliser is
+      the same subgroup at every point -- there is nothing local to impose
+      smoothness at, and the forced period q is a pure integer with no scale
+      anywhere near it.  The table's antecedent "not free" does not mean "has a
+      fixed point", and the classification treats them as the same thing.
+
+  (e) and the same failure is what goes wrong in infinite dimensions.
+
+      For a group action to have a manifold quotient it is not enough to be
+      free: it must also be PROPER, and admit slices.  The irrational rotation
+      is the smallest example of free-but-not-proper, and the pathology it
+      shows -- dense orbits, indiscrete quotient -- is exactly the pathology of
+      free actions of non-compact groups in infinite dimensions, where orbits
+      need not be closed.  "Free" was doing the work of "free and proper"
+      throughout the table, and the four cases that built it are all proper, so
+      the distinction never had to be made.  T2, structural.""")
+
+    print("""
+  VERDICT G5 -- the table's antecedent is not the variable doing the work.
+      On one family, with the group and the space held fixed, freeness and
+      forced periodicity are ANTI-correlated: free exactly when irrational,
+      and irrational is exactly when no period is forced.  The dichotomy is
+      not exhaustive, "not free" is not "has a fixed point", and "free" was
+      standing in for "free and proper".  Shape F3 -- a boundary.""")
+
+    return {
+        "model": "Z acting on S^1 by x -> x + alpha",
+        "irrational_action_is_free": True,
+        "irrational_min_orbit_distance_at_N_1e5": gmin,
+        "irrational_forces_a_period": False,
+        "rational_action_is_free": False,
+        "rational_has_any_fixed_point": False,
+        "rational_forces_a_period": True,
+        "rational_period": 34,
+        "max_orbit_gap_at_N_5e4": gap,
+        "quotient_is_hausdorff": False,
+        "quotient_is_T0": False,
+        "free_and_forced_periodicity_are_anticorrelated": True,
+        "dichotomy_is_exhaustive": False,
+        "missing_rows": ["free but not proper", "non-free, non-effective, no fixed point"],
+        "free_was_standing_in_for": "free and proper",
+        "falsification_shape": "F3",
+        "verdict": "boundary: the free/fixed-point dichotomy is not exhaustive and not the controlling variable",
+    }
+
+
 def main():
     print(RULE)
     print("GAUGE STRESS -- attempting to break the fixed-point classification")
@@ -647,7 +833,8 @@ def main():
     res = {"G1_theta_vacua": g1_theta_vacua(),
            "G2_aharonov_bohm": g2_aharonov_bohm(),
            "G3_conical_intersection": g3_conical_intersection(),
-           "G4_gribov": g4_gribov()}
+           "G4_gribov": g4_gribov(),
+           "G5_irrational_rotation": g5_irrational_rotation()}
     out = ROOT / "docs" / "gauge_stress.json"
     out.write_text(json.dumps({
         "description": "stress test of the free/fixed-point periodicity classification",

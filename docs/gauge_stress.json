@@ -81,6 +81,28 @@
       "genuine_fixed_point_supplies_a_scale": false,
       "falsification_shape": "F4",
       "verdict": "R-fix's converse unsupported; the scale belongs to the section, not the action"
+    },
+    "G5_irrational_rotation": {
+      "model": "Z acting on S^1 by x -> x + alpha",
+      "irrational_action_is_free": true,
+      "irrational_min_orbit_distance_at_N_1e5": 5.960857379250228e-06,
+      "irrational_forces_a_period": false,
+      "rational_action_is_free": false,
+      "rational_has_any_fixed_point": false,
+      "rational_forces_a_period": true,
+      "rational_period": 34,
+      "max_orbit_gap_at_N_5e4": 2.5250612343485912e-05,
+      "quotient_is_hausdorff": false,
+      "quotient_is_T0": false,
+      "free_and_forced_periodicity_are_anticorrelated": true,
+      "dichotomy_is_exhaustive": false,
+      "missing_rows": [
+        "free but not proper",
+        "non-free, non-effective, no fixed point"
+      ],
+      "free_was_standing_in_for": "free and proper",
+      "falsification_shape": "F3",
+      "verdict": "boundary: the free/fixed-point dichotomy is not exhaustive and not the controlling variable"
     }
   }
 }

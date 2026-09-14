@@ -430,3 +430,18 @@ def test_heading_tier_matches_the_verdict_in_the_body():
         "entry bodies state FALSIFIED (T4) while their headings omit T4:\n"
         + "\n".join(problems)
     )
+
+
+def test_fuzzy_dm_bounds_hold_and_can_detect_a_wrong_bound():
+    """The section 6 mass against published limits -- and the check must bite.
+
+    The instrument's first version compared verdicts only, so corrupting the
+    Rogers & Peiris limit by a factor of ten left it at exit 0: both values
+    exclude the bracket, so no verdict moved. It now pins magnitude as well.
+    """
+    r = _run_instrument("fuzzy_dm_bounds.py")
+    assert r.returncode == 0, (
+        "fuzzy_dm_bounds.py failed:\n" + r.stdout[-3000:] + r.stderr[-1000:]
+    )
+    assert "All sections internally consistent." in r.stdout
+    assert "at least 10 published limits exclude both ends of the bracket" in r.stdout

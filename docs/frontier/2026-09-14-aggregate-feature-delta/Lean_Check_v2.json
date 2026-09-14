@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "source_sha256": "e0fd2f987f6d4a2b79ca4b67fb8fd45c66902620538a35995e8ffd13e5d8395c",
+  "checker_sha256": "02b443c00d7eec5d4364435080d7ee623e159163d3afc6e6d0477780b1182ba1",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/feature-only-audit/Lean_Check_v2.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/FeatureContraction_v2.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'FeatureContraction.uniform_interval_error' depends on axioms: [propext, Classical.choice, Quot.sound]\n'FeatureContraction.self_map_from_center_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'FeatureContraction.preconditioned_fixed_point_zero' depends on axioms: [propext]\n'FeatureContraction.contracting_root_on_complete_set' depends on axioms: [propext, Classical.choice, Quot.sound]\n'FeatureContraction.strict_radius_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'FeatureContraction.equal_features_from_zero_difference' depends on axioms: [propext]\n",
+  "stderr": "",
+  "olean_sha256": "bf0c30af1dc26ee9c85d373e1eb66e326acb88c4f0b45a86f24cd986f625ba11",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "uniform_interval_error",
+    "self_map_from_center_bound",
+    "preconditioned_fixed_point_zero",
+    "contracting_root_on_complete_set",
+    "strict_radius_improvement",
+    "equal_features_from_zero_difference"
+  ],
+  "scope": "Six lemmas cover interval error bounds, a self-map center criterion, injective preconditioning, Banach fixed points on complete subsets, strict radius improvement and equality of features. The finite-dimensional derivative/row-norm estimates, ball arithmetic, matrix nonsingularity bridge and field/spectral premises remain separately audited written/computational steps."
+}

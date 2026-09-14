@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T04:19:23.707132+00:00",
+  "manifest_files": 43,
+  "preceding_checkpoint_integrity": "passed",
+  "fresh_numerical_proposal_and_both_contraction_certificates": "passed",
+  "fresh_independent_complex_Taylor_modular_and_arithmetic_audits": "passed",
+  "fresh_omitted_observable_boundaries_and_adversaries": "passed",
+  "fresh_original_export_bug_rejection": "passed",
+  "fresh_exploratory_replay": "passed",
+  "fresh_Lean_compilation": "passed",
+  "derived_results": {
+    "released_features": 17,
+    "preselected_population_per_field": 22,
+    "source_cutoff": "39/2",
+    "gaussian_a": "1/25",
+    "actual_common_feature_radius": "90839261192656836458066590630200166208999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+    "full_point_list_threshold_lower": "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+    "strict_radius_gap_below_lower": "499999999999999999999999/500000000000000000000000000000",
+    "critical_split_epsilon": "1/1000000",
+    "earlier_critical_split_epsilon": "1/1000000000000",
+    "critical_split_amplification": 1000000,
+    "correction_box_radius": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "uniform_source_root_box_checks": 88,
+    "independent_scalar_coordinate_inequalities": 176,
+    "primary_contraction_precisions": [
+      512,
+      768
+    ],
+    "independent_complex_Taylor_precision": 640,
+    "modular_preconditioner_determinant_prime": 65537,
+    "modular_determinant": 37610,
+    "polynomial_factorizations_per_audit": 1128,
+    "coefficient_comparisons_per_audit": 1208,
+    "fixed_common_feature_coefficients": 456,
+    "ambiguous_common_feature_coefficients": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "mutations_rejected": 35,
+    "exact_zero_margin_controls": 4,
+    "witness_interior_counts": [
+      1,
+      2
+    ],
+    "additional_observables_distinguishing_this_witness": [
+      "finite_rational_moment",
+      "extra_center_37_same_width",
+      "center_2_width_1_over_24"
+    ],
+    "kernel_checked_lemmas": 6,
+    "new_source_roots_computed": 0,
+    "optimal_feature_threshold_established": false,
+    "moments_or_unknown_tails_included_in_release": false
+  },
+  "recorded_commands": 18,
+  "successful_commands": 14,
+  "failed_commands": 4,
+  "separately_recorded_launch_failures": 1,
+  "research_branches": 117,
+  "ledger_events": 438,
+  "preserved_event_prefix": 433,
+  "ledger_head_sha256": "0a6998ef3dcb2ce0331895c2edbbdaa5205a003d3aab7e2f58f43f90194790b0",
+  "local_links": 67,
+  "full_calculus_arithmetic_and_spectral_bridge_formalized_in_Lean": false,
+  "scope": "Two actual fields share exactly17finite Gaussian features at a radius strictly below the full-point-list ambiguity bound. Independent interval existence routes and rational coordinate checks replace a mere small-residual claim. The constructed witness has different interior counts and omitted moments/kernels; optimal augmented-feature identifiability and the wider ACS program remain open."
+}

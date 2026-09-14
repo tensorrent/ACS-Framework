@@ -1,0 +1,48 @@
+{
+  "baseline_commit": "68ce209ce56ddc2991ce8eb14b49ec6efe594adf",
+  "instruments": {
+    "code/frontier_verification/FEATURE_COLLISION_README.md": "069558693e1f554d064e3b9d24c45487759ff841a8992c85bb8e71e563f631cc",
+    "code/frontier_verification/check_feature_contraction_lean.py": "02b443c00d7eec5d4364435080d7ee623e159163d3afc6e6d0477780b1182ba1",
+    "code/frontier_verification/dedekind_feature_adversary.py": "00a977781919c7283c2ae085dd7f81788f1eecc7dcb0b20f25f813e8a8e5f6e7",
+    "code/frontier_verification/dedekind_feature_audit.py": "0e832175695efba9c8cdde220e3b4fee9abe1d177b5f39cf60053952a875d7eb",
+    "code/frontier_verification/dedekind_feature_certificate.py": "ae4056a64113ca485687bd48b9cd0580749815b82cda23d7f265dc09eafec942",
+    "code/frontier_verification/dedekind_feature_export_audit.py": "d2eb596e78acba84b16793b6b83ecbb31500e328695db277e0a49a5755e56995",
+    "code/frontier_verification/dedekind_feature_observable_boundary.py": "85311b1320cf64469cffe08fb9b0f83f7f3e15a39d9c2ef9c5b47e70dea3640b",
+    "code/frontier_verification/dedekind_feature_proposal.py": "bcaaed3874fcfac1223cddca9396cfaac0a82f75593196ec21782ff09ca098e0",
+    "code/frontier_verification/proofs/FeatureContraction.lean": "24e2881befa0a22faaebab806afc97f8ca30934a0cd02c2be005d76ec3b3dfe0",
+    "code/frontier_verification/proofs/FeatureContraction_v2.lean": "e0fd2f987f6d4a2b79ca4b67fb8fd45c66902620538a35995e8ffd13e5d8395c",
+    "code/frontier_verification/verify_aggregate_feature_delta.py": "a0c43c8b396d33fd6a825314399001a5f577daa80c11d8378fed30812281ccd2"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_aggregate_integer_audit.py": "ef0cec02cac7302e5fed2440f74f0ed8e679dd754bb509a1833d0c4cf7ceee31",
+    "code/frontier_verification/dedekind_aggregate_local_audit.py": "4b24497f463d9bfba3d3fd30310761b4ab22a68b1e5436b5d7707d2d9aa97fce",
+    "code/frontier_verification/dedekind_aggregate_moment_adversary.py": "1ef60cb00a23e5e576a575f786894d7ff7f7b7e969664ca803a964e0c33ca6d3",
+    "code/frontier_verification/dedekind_aggregate_moment_audit.py": "044b995035378d75130a23554fb71c7c1c0e00e684bc94e4a2b58b4646f6322d",
+    "code/frontier_verification/dedekind_aggregate_moment_certificate.py": "0a74b7104877c81357ba2d6d1d54c8743fe3b8e3d2d17abd430d3a6569bf8f35",
+    "code/frontier_verification/dedekind_aggregate_moment_feedback.py": "4d291e5910bb68451160c55bc6ece91183788affd3c34f824c8bf82ec5ecdd48",
+    "code/frontier_verification/dedekind_aggregate_moment_local.py": "3c27247d3276514c95666e9a019581858a3078c51f4ed60c3185b88b9b33623d",
+    "code/frontier_verification/dedekind_aggregate_moment_local_audit.py": "ecb0d829f8d0f2067cbf51cafaa8d49483441179b71eb147a447eaa5380928bf",
+    "code/frontier_verification/dedekind_aggregate_moment_proposals.py": "9a647c4278a3789535b292905b5b3230aaa28293347bcf448addc99e35caf20a",
+    "code/frontier_verification/dedekind_aggregate_noise_audit.py": "e96a9482d1c6ad10b40063083a6ef1cd7774a209b7c03f97cd18ef5409218f57",
+    "code/frontier_verification/dedekind_aggregate_noise_certificate.py": "32584a36fe5d30741a619620e7c9fda676d91371fae9d5895462ee1454a3669c",
+    "code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445",
+    "code/frontier_verification/dedekind_aggregate_shared_audit.py": "a008926d702b7eae8eae2ac2560a89a6b5e535a04a2c611dad4fd4272bdcafe4",
+    "code/frontier_verification/dedekind_class_count_audit.py": "bb478b52511f4cb5316d9831a0a9cdb7243f69b99cc1ddef3f179c9f77ff95cb",
+    "code/frontier_verification/dedekind_class_count_decode.py": "3d910cf101c0464fdff0de566a574bcd3c134767a13182cfe5c6c47b6a6568c3",
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_full_class_adversary.py": "7e64d2eba245bafbf2ebb0a135495d1d592c878962d786db813d771c5129f76f",
+    "code/frontier_verification/dedekind_full_quartic_audit.py": "438051faed4b796173485984f1113ad06b25d4a5e17c746177734dcd6349db07",
+    "code/frontier_verification/dedekind_full_quartic_class.py": "180184e946f79296ff637719afc9aecf3188496a967f792dafa69718943d6077",
+    "code/frontier_verification/dedekind_quartic_class_controls.py": "3ce404d1c48d74c148b64396e74a9e000a80b27107eb55b8a7ae377d2a7def5f",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f",
+    "code/frontier_verification/verify_aggregate_classification_delta_v2.py": "6a979db731e512fba16a4837017dcbaa327ae5a9f0a910e1b13561210d7e6ac5",
+    "code/frontier_verification/verify_aggregate_moment_delta.py": "54b8687b0537f7e8edfdabf149104b268dd1294a2331be6dbb88dcb570d23863"
+  },
+  "external_runtime_sources": {
+    "external/Mathlib/Topology/MetricSpace/Contracting.lean": "8d567fac6fdd9223c975598f79080ca011a5651a2dcc6c78472644fee424c3cb",
+    "external/mathlib-LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "scope": "All new instruments, two immutable Lean versions and proof guide, transitive local Python imports, frozen exploratory sources and the pinned Mathlib Banach source with its license. Canonical Lean source is FeatureContraction_v2.lean."
+}

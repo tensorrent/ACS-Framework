@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-09-14T07:16:44.936171+00:00",
+  "source_sha256": "3801b24df1a412573be8c12733324e98148ace3b26b544736487e2c006be90df",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "pinned_sources": [
+    {
+      "path": "Mathlib/Analysis/Calculus/Deriv/Add.lean",
+      "sha256": "0c337370d60b27ce270b4efb71ecf5c7a2a11ddf2cda2ad19ba1049d7174b47c",
+      "bytes": 17177,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Analysis/Calculus/FDeriv/Add.lean",
+      "sha256": "97e9f2bad278f96d5b72b5c365dddde7ffda0f33d980c0d5fa9a796472247f4b",
+      "bytes": 38361,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Order/Interval/Set/Basic.lean",
+      "sha256": "e4f9f8b9b54582eb244947849c453052e50b49e707080f0dd7bd4dfcae3acaae",
+      "bytes": 28117,
+      "matches_pinned_git_object": true
+    }
+  ],
+  "retrieved_primary_documentation": {
+    "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Calculus/Deriv/Add.html",
+    "retrieval": "Successfully opened with the web tool on14September2026.",
+    "relevant_results": [
+      "HasDerivAt.sub_const",
+      "HasDerivAt.const_sub"
+    ],
+    "scope": "Current primary documentation is distinct from the pinned runtime sources."
+  },
+  "runtime_change": "No package acquisition, version change or new source roots. Existing pinned numerical and Lean/mathlib runtimes are reused.",
+  "scope": "Three pinned derivative/interval source files match local Git objects and are archived with the mathlib license. New scalar source and conditional-budget implications are explicitly derived and generic forms are compiled in Lean. The complete concrete analytic assembly remains partly written or computational."
+}

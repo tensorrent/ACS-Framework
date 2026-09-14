@@ -34,6 +34,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [14 September 2026 weighted stability and feature-noise delta](2026-09-14-aggregate-weighted-feature-delta/README.md): larger uniqueness regions, exact componentwise stability, and two-sided local noise bounds.
 - [14 September 2026 moving midpoint and variable-noise delta](2026-09-14-aggregate-variable-noise-delta/README.md): four exact pairs tighten the local noise threshold bracket to about 3.6%.
 - [14 September 2026 signed corner and uniform noise delta](2026-09-14-aggregate-signed-corner-delta/README.md): a convex column-family proof strengthens the lower guarantee and reduces the local threshold bracket to about 1.7%.
-- [Current research queue](2026-09-14-aggregate-signed-corner-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [14 September 2026 source-strip and mixed observation delta](2026-09-14-aggregate-source-constrained-delta/README.md): source constraints and mixed A/B constructions narrow the local threshold bracket to about 0.65%.
+- [Current research queue](2026-09-14-aggregate-source-constrained-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

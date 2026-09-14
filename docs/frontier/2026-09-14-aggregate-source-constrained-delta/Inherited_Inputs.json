@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-09-14T07:22:46.174129+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-14-aggregate-signed-corner-delta/Signed_Corner_Certificate.json": "b5c313cdf3d0c094798ffed44fc9c56edf6b0bc11b18c12d0efe9f5b601a06eb",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "docs/frontier/2026-09-14-aggregate-variable-noise-delta/Variable_Noise_Certificate.json": "c3461e37ae38bcc16f35d8155a556c3987c4fae5cdb20ce172c4de6af38198b5",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "docs/frontier/2026-09-14-aggregate-signed-corner-delta/Verification.json": "5d27e4e6e86134674722fb057084606542f192f730466946e239c3f2d6c2343e",
+    "docs/frontier/2026-09-14-aggregate-signed-corner-delta/Research_Queue.json": "a0c4289974220f1abafc55562559db27590a8fe3b61a8a4aaf3d3d94598053ee",
+    "docs/frontier/2026-09-14-aggregate-signed-corner-delta/Branch_Events.jsonl": "2a2e2bbda0a6aec1bca02ad53e2610e27eb46b97b3081b414fc4b1709d164443",
+    "code/frontier_verification/verify_aggregate_signed_corner_delta.py": "fba827efcdac4c12e465b04ec7107711a91a9af4578baacf77387f09a0bc0f0c"
+  },
+  "scope": "Source selection, field classification, root-error radius, coordinate cube, feature units and prior full-family secant theorem are inherited unchanged and recursively verified. A conditional source-strip deduction strengthens the lower guarantee; new mixed pairs improve the upper endpoint."
+}

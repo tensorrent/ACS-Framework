@@ -1,0 +1,292 @@
+{
+  "status": "passed",
+  "source_sha256": "4540ae178dcd2ef2ea3408a604a4a0d79614da87238b9fdbb035f6896e923e29",
+  "inputs_sha256": {
+    "Signed_Corner_Certificate.json": "b5c313cdf3d0c094798ffed44fc9c56edf6b0bc11b18c12d0efe9f5b601a06eb",
+    "Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "Variable_Noise_Certificate.json": "c3461e37ae38bcc16f35d8155a556c3987c4fae5cdb20ce172c4de6af38198b5",
+    "Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "Source_Strip_Certificate.json": "70effcfc56b365dd4fb006ba4b3f988716f98c458b41b81687f773c4ba92a7c2",
+    "Mixed_Noise_Certificate.json": "f6683e9bbc2d4250a249d1a2b9d02f1478ec7b2433bb72da5d46894829b139fc",
+    "Complementary_Pair_Proposals.json": "c1c69d650da42a599700d7cfda8fc9acfd64ef3a9a5ca19c71178cbdcf753acf"
+  },
+  "mutations_rejected": 46,
+  "mutations": [
+    {
+      "mutation": "unconditional_strip_claim",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "externally_narrowed_root_contract",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "overstated_formalization",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "necessary_bound_uses_source_upper",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "necessary_bound_uses_source_lower",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "common_report_factor_two_omitted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "bootstrap_cap_replaced",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "wrong_old_secant_constant",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "A_interval_upper_understated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "B_interval_lower_overstated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "incorrect_column_curve_lower",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "wrong_critical_endpoint",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "coordinate12_replaced_before_face",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "wrong_final_endpoint",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "nonnegative_face_quotient",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "singular_face_determinant",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "undersized_inverse_bound",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "unsupported_lower_budget",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "dropped_non_circularity_check",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "changed_feature_units",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "post_noise_selection",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "missing_mixed_pair",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "critical_safety_increment_changed",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "mixed_root_count_changed",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "noise_index_moved",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "free_side_flipped",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "root_Jacobian_sign_flipped",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "unscaled_alpha",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "wrong_noise_scale",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "wrong_noise_column",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "incorrect_variable_radius",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "fixed_critical_box_varied",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "transferred_root_box",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "inflated_cube_margin",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "undersized_upper_endpoint",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "common_midpoint_replaced",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "feature_error_erased",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "unproved_best_upper",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "numerical_rejection_relabelled",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "boolean_coordinate_index",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "uncertified_root_side",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "missing_source_entry",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "changed_source_cutoff",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "source_margin_inflated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "false_contraction",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "mutation": "false_midpoint_enclosure",
+      "rejected": true,
+      "exception": "AssertionError"
+    }
+  ],
+  "exact_controls": [
+    {
+      "name": "necessary_outer_interval_is_not_uniform_source_sufficiency",
+      "source_interval": [
+        "0",
+        "2"
+      ],
+      "radius": "1",
+      "observation": "-1",
+      "error_at_low_root": "1",
+      "error_at_high_root": "3"
+    },
+    {
+      "name": "source_strip_endpoint_direction",
+      "a": "2",
+      "b": "0",
+      "difference_cap": "3",
+      "admissible_A": "3",
+      "admissible_B": "0",
+      "A_upper": "3",
+      "B_lower": "-1"
+    },
+    {
+      "name": "below_cap_exclusion_does_not_cover_larger_claim",
+      "budget_cap": "1",
+      "unsupported_lower": "3",
+      "possible_ambiguity_budget": "2"
+    },
+    {
+      "name": "free_B_kernel_has_opposite_derivative",
+      "kernel": "x^2",
+      "x": "3",
+      "step": "1/10",
+      "A_residual_increment": "61/100",
+      "B_residual_increment": "-61/100"
+    },
+    {
+      "name": "scaled_noise_interval_width",
+      "scale": "1/10",
+      "alpha": "2",
+      "variable_radius": "1/100",
+      "tau_width": "1/500"
+    }
+  ],
+  "scope": "Forty-six mutations and five exact controls check conditional strip scope, necessary versus sufficient source endpoints, mixed A/B assignment and derivative signs, variable/error scales and numerical proof premises. This is not an exhaustive audit or proof of the sharp source-feasible threshold."
+}

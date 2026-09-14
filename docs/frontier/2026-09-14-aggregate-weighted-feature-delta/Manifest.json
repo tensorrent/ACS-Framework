@@ -1,0 +1,155 @@
+{
+  "recorded_utc": "2026-09-14T05:34:45.010159+00:00",
+  "baseline_commit": "4ff63e9ceb097962ae4c83a0c55509dd20535eaa",
+  "files": {
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Adversary_Audit.json": {
+      "bytes": 10202,
+      "sha256": "475514688b80ac5704e8d948a2227c6a9b453437f8430c2581f216a30f5bf278"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Branch_Events.jsonl": {
+      "bytes": 455489,
+      "sha256": "9398ade143c04d0dfbeb485a637691eb45dc06f43a323a382450122fe17f5275"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Development_Notes.json": {
+      "bytes": 2270,
+      "sha256": "d1e75b397d8c94051fd46ad71cf43375586dfc2ad5f885e42d937f7a28abb7d4"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Execution_Artifacts.zip": {
+      "bytes": 21868,
+      "sha256": "66fd7622a3cea020aadde2f083610cda8e366ec0d4296df5d3a2ca5e76d6db44"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Execution_Receipts.json": {
+      "bytes": 17267,
+      "sha256": "074c78bb6e496584af814b55828fa521064c272482275406120e53e42bb7ba5b"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Feature_Space_Certificate.json": {
+      "bytes": 1823944,
+      "sha256": "8a7185dcd9132f3407652eb6cd5da437b5196b95706541f9ee9f70f1fb1750e9"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Feature_Space_Proposals.json": {
+      "bytes": 791471,
+      "sha256": "419ffb641f73a9efbb8100786671ab6196a073a82c59ff581def6d98249028e1"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Independent_Feature_Space_Audit.json": {
+      "bytes": 1080015,
+      "sha256": "f6e395413db18d0cd963151fcb0855914badccf9d4e490bfec3c2d23dfdf7da5"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Independent_Weighted_Candidate_Audit.json": {
+      "bytes": 14034,
+      "sha256": "2958780e42828ce80f291a464c3b83c288152ba03172dddcc99ab32f666e9d59"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Independent_Weighted_Region_Audit_v2.json": {
+      "bytes": 134054,
+      "sha256": "509f59d1c33722f7f96ebe46e328221cba481f06e0943861e595bb070b0eb355"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Inherited_Inputs.json": {
+      "bytes": 2389,
+      "sha256": "275929d2c58e7d3ceb31f1ad700dc01b559f9b4adb0b8abbd80bf7958f6e39b2"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Lean_Artifacts.zip": {
+      "bytes": 89784,
+      "sha256": "533b981bbc6dfba20e3e60a0d3c0e22a0d12c320e7437c24ce3dc8f418f92349"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Lean_Check.json": {
+      "bytes": 2481,
+      "sha256": "ab7e857cd3b439683fd8867f492cacd12f21c875a7b99b29ce248087bf772e77"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Preconditioned_Taylor_Exploration.json": {
+      "bytes": 319836,
+      "sha256": "cab746132e110a4301e36fc19f7548a9ca03f5914dd28c2fcccc7458022b4819"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Primary_Sources.json": {
+      "bytes": 900,
+      "sha256": "42bab3b6116dd0cae4051b66e8dc056a8baffc22877f4ddbd883a1fafd8ff021"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/README.md": {
+      "bytes": 6338,
+      "sha256": "31534708cb1024c73575e9b26e8502e7f977a46ae0a39411aa0e192164337392"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Research_Queue.json": {
+      "bytes": 280476,
+      "sha256": "78fe36c6f408b7ed956a764df21c90172852ee3405331e9c725c559fb9ab42c4"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Runtime.json": {
+      "bytes": 1042,
+      "sha256": "b10c77460138462cd388ab811ba719a9056dc130bca0846136b8ea634753c424"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Serialized_Endpoint_Diagnosis.json": {
+      "bytes": 81244,
+      "sha256": "985a8706e69838e8da927ffd2cd9075f309da25076204341f9ecdb4010ceb5be"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Source_Acquisition.json": {
+      "bytes": 2237,
+      "sha256": "6d791956b0da4c29be7c363f3de895b74a26dbea1b5a6600844f8fe0dae422fc"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Source_Inventory.json": {
+      "bytes": 7326,
+      "sha256": "d2f7fc8d639cdca6caf373c2c6335e37deaf5503d14414962ef354c72c6e7eb3"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Source_Snapshot.zip": {
+      "bytes": 182392,
+      "sha256": "1102e1c58c4a05fd71ac05b0d067c044c1603c5b6f3b226af0d87b42b3c6fabd"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Weighted_Feature_Summary.json": {
+      "bytes": 11392,
+      "sha256": "66540dae7b8ce256c1812ae363ee077804e1564afc2b540c58960fba2789d97d"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Weighted_Region_Certificate.json": {
+      "bytes": 2014479,
+      "sha256": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a"
+    },
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Weighted_Taylor_Exploration.json": {
+      "bytes": 498568,
+      "sha256": "6def5391134d2398f5162b5dcc4eecbc66c54b620a60ee75c6af6df4b9c22543"
+    },
+    "code/frontier_verification/dedekind_weighted_region_certificate.py": {
+      "bytes": 7344,
+      "sha256": "43a12c33fdf1c35772c0d1e2417e476b0ec2eb9abf1f4018362a611c8bc968c9"
+    },
+    "code/frontier_verification/dedekind_weighted_region_audit.py": {
+      "bytes": 10727,
+      "sha256": "a65636a63734d64d222e5e783521f2da74602663211147f86f4688d5e05ded96"
+    },
+    "code/frontier_verification/dedekind_weighted_region_audit_v2.py": {
+      "bytes": 10831,
+      "sha256": "c9564e7bc49a8377fd5d9a079ec9adaa23595e975e3b90c69cd2aaf4a8babab7"
+    },
+    "code/frontier_verification/dedekind_feature_space_proposal.py": {
+      "bytes": 3571,
+      "sha256": "c22e1a1f9a8479d9fdb4d776dce5099f106bb5b94f4c64ada542efe1fae6e4f2"
+    },
+    "code/frontier_verification/dedekind_feature_space_certificate.py": {
+      "bytes": 8096,
+      "sha256": "ae1adb8ae55bdea3f94e81ab90231f708ce8cc739662269993733ee24ea2c9d9"
+    },
+    "code/frontier_verification/dedekind_feature_space_audit.py": {
+      "bytes": 11227,
+      "sha256": "37a557214fbaa9f9cdd97d8e0eb2e47363a8835139bd57af84bedf8f8e3a4316"
+    },
+    "code/frontier_verification/dedekind_weighted_feature_adversary.py": {
+      "bytes": 10317,
+      "sha256": "6056d796bb7c6aca8d51753f42361a3d91b1527f7b9a4be20b6fbf0d5c6e9c65"
+    },
+    "code/frontier_verification/check_weighted_feature_lean.py": {
+      "bytes": 2571,
+      "sha256": "2954ae9caf49777368f67ada1fa8d852f409e290521343bc4a6eef4e12e821e5"
+    },
+    "code/frontier_verification/verify_aggregate_weighted_feature_delta.py": {
+      "bytes": 15097,
+      "sha256": "b079f2b11ce30a71f830157e591d101a6a24fdbdd1d8b724358cfbe80c712370"
+    },
+    "code/frontier_verification/verify_aggregate_weighted_feature_delta_v2.py": {
+      "bytes": 15686,
+      "sha256": "73dd43fc7f060d6cd5a987c3ebb96b7638b34ea23c22f237633a993957c017ad"
+    },
+    "code/frontier_verification/WEIGHTED_FEATURE_README.md": {
+      "bytes": 12085,
+      "sha256": "ca5c88d22b6c25625716c5baa88925d3de33e7ac33eb6a9e7869f78728fc4dcb"
+    },
+    "code/frontier_verification/proofs/WeightedFeatureStability.lean": {
+      "bytes": 3971,
+      "sha256": "c58a9e13ca45a7423fa9db0831b2d3bef528d4e5d9785b8c9d0d178ed6b346f5"
+    }
+  },
+  "scope": "Manifest and Verification excluded from self-reference. Preceding checkpoints are recursively verified."
+}

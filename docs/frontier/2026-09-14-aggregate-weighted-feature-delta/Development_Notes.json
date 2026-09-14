@@ -1,0 +1,24 @@
+{
+  "recorded_commands": 14,
+  "successful_commands": 12,
+  "failed_commands": 2,
+  "failures": [
+    {
+      "receipt": "independent-weighted-region",
+      "result": "The first independent region auditor reconstructs an Arb ball from serialized exact midpoint/radius data before comparing its upper endpoint. Additional rounding falsely rejects a valid stored bound. It emits no audit JSON. A controlled 1024-bit diagnosis finds 108 reconstruction false rejections among 1936 comparisons and zero exact endpoint violations. Separate v2 compares exact rational midpoint-plus-radius endpoints. The certificate and its bounds are unchanged."
+    },
+    {
+      "receipt": "weighted-feature-final-verification",
+      "result": "The first recursive verifier passes the decoder record to the proposal generator, which expects the midpoint/preconditioner record. It fails with KeyError full_rank_proposal before producing verification output. Separate v2 corrects the input argument and reproduces the original error as a control. All scientific certificates are unchanged."
+    }
+  ],
+  "canonical_sources": [
+    "code/frontier_verification/verify_aggregate_weighted_feature_delta_v2.py",
+    "code/frontier_verification/dedekind_weighted_region_audit_v2.py",
+    "code/frontier_verification/proofs/WeightedFeatureStability.lean"
+  ],
+  "source_policy": "Executed sources, the original failed auditor and its actual receipt remain immutable. The final recursive verifier runs after packaging, preserves a separate external receipt and supplies its exact stdout as Verification.json.",
+  "runtime": "No package acquisition, version change or new source roots. Existing pinned Python, FLINT and Lean/mathlib environments are reused.",
+  "independence": "Complex Hermite jets and real derivative polynomials provide distinct analytic calculations. Exact elimination and positive Neumann sums provide distinct stability constructions. Both interval methods share FLINT; field classification and finite-source premises are inherited.",
+  "negative_results": "Larger-radius failed sufficient bounds and two excluded signed inverse target pairs are preserved with their limited meanings. Neither establishes global noninjectivity or a universal noise impossibility threshold."
+}

@@ -31,6 +31,7 @@ This is an ongoing record of useful research deltas: stronger derivations, indep
 - [14 September 2026 equal-population interior-count delta](2026-09-14-aggregate-equal-population-delta/README.md): equal total counts, a sharp interior count gate, actual common observations, independent matching/arithmetic audits and eight Lean lemmas.
 - [14 September 2026 actual finite-feature ambiguity delta](2026-09-14-aggregate-feature-delta/README.md): two actual fields share seventeen Gaussian features below the full-point-list threshold, certified by independent contraction proofs, arithmetic audits and six Lean lemmas.
 - [14 September 2026 joint-feature and local precision delta](2026-09-14-aggregate-augmented-feature-delta/README.md): certified collisions through 21 joint features, local injectivity at 22, and an explicit noisy 22-feature common release.
-- [Current research queue](2026-09-14-aggregate-augmented-feature-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
+- [14 September 2026 weighted stability and feature-noise delta](2026-09-14-aggregate-weighted-feature-delta/README.md): larger uniqueness regions, exact componentwise stability, and two-sided local noise bounds.
+- [Current research queue](2026-09-14-aggregate-weighted-feature-delta/Research_Queue.json): all inherited branches, their accumulated evidence, and their remaining gates.
 
 The queue distinguishes carried-forward records from new work in the current pass. A reproducibility check is recorded separately from a new derivation. Cross-method verification identifies what is shared between methods. New statements retain their model and hypothesis boundaries, and failed attempts remain part of the evidence.

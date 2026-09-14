@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T00:41:52.500334+00:00",
+  "manifest_files": 34,
+  "preceding_checkpoint_integrity": "passed",
+  "derived_results": {
+    "directions_by_observation": [
+      163,
+      188
+    ],
+    "exact_global_cuts": 351,
+    "stored_midpoints_checked": 378480,
+    "fresh_quadratic_interval_leaves": 756960,
+    "independent_displaced_controls": 1404,
+    "exact_model_hull_objectives": 52,
+    "local_removals": 0,
+    "dual_removals": 0,
+    "verified_selected_witnesses": 66,
+    "verified_full_pool_witnesses": 37,
+    "joint_assignments": 99,
+    "refuted_branches": 91,
+    "feasible_branches": 8,
+    "unresolved_branches": 0,
+    "joint_relaxation_unique_targets": [
+      15,
+      15,
+      14,
+      14
+    ],
+    "parity_results": [
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "seed_profile": "degree_only",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "seed_profile": "degree_discriminant",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "seed_profile": "degree_only",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "seed_profile": "degree_discriminant",
+        "unique_targets": 17
+      }
+    ],
+    "permutation_checks": 24,
+    "even_permutations": 12,
+    "parity_integer_witnesses": 4,
+    "parity_refuted_relaxed_tuples": 4,
+    "actual_component_mutations_rejected": 10,
+    "optimal_but_infeasible_proposals": 12
+  },
+  "fresh_real_and_complex_interval_replay": "passed",
+  "fresh_model_hull_LP_replay": "passed",
+  "complete_joint_projection_and_exact_separation_replay": "passed",
+  "fresh_parity_deduction_and_witness_audit": "passed",
+  "new_MILP_search_repeated_in_final_verifier": false,
+  "joint_branch_LP_search_repeated_in_final_verifier": false,
+  "new_number_theory_formalized_in_Lean": false,
+  "recorded_commands": 12,
+  "successful_commands": 10,
+  "failed_commands": 2,
+  "research_branches": 117,
+  "ledger_events": 418,
+  "preserved_event_prefix": 413,
+  "ledger_head_sha256": "87b39d527053667c7771fb440cc1ee9d60dcecef84d1577e8ba9670058a0c7ce",
+  "local_links": 51,
+  "scope": "Fresh continuum and LP deduction replay, independent exact finite projection and all stored witnesses, derived signed-discriminant parity and semantic controls. General arithmetic derivation is source-backed written mathematics. Success certifies necessary target recovery under the declared data contract; it does not classify all fields or prove optimal noise thresholds. Ongoing research remains active."
+}

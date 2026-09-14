@@ -1,0 +1,85 @@
+{
+  "recorded_utc": "2026-09-14T00:30:46.895728+00:00",
+  "result": "All seventeen targets recovered at radius 1/10 for A and 3/50 for B using simultaneous cuts, exhaustive finite target projection and parity derived from the signed field discriminant.",
+  "input_contract": [
+    "degree four",
+    "absolute field discriminant 576",
+    "signature (0,2)",
+    "complete aggregate finite critical-line spectra through 20",
+    "unchanged root population, original intervals and measurement family",
+    "validated domains at the same or a containing uncertainty radius"
+  ],
+  "derived_metadata_consequence": "Signed discriminant is +576=24^2. Unramified Frobenius permutations are even, allowing degree partitions 1111, 31 and 22. This does not identify the group as V4.",
+  "final_profile": "degree plus discriminant ramification plus derived signed-square parity; both historical seed profiles use this consequence in the final step",
+  "not_inference_inputs": [
+    "Galois-group label",
+    "candidate-field catalogue",
+    "defining polynomials",
+    "arithmetic coefficient seeds",
+    "new zeros or measurement rows"
+  ],
+  "new_roots_computed": 0,
+  "target_count": 17,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "derived_results": {
+    "directions_by_observation": [
+      163,
+      188
+    ],
+    "exact_global_cuts": 351,
+    "stored_midpoints_checked": 378480,
+    "fresh_quadratic_interval_leaves": 756960,
+    "independent_displaced_controls": 1404,
+    "exact_model_hull_objectives": 52,
+    "local_removals": 0,
+    "dual_removals": 0,
+    "verified_selected_witnesses": 66,
+    "verified_full_pool_witnesses": 37,
+    "joint_assignments": 99,
+    "refuted_branches": 91,
+    "feasible_branches": 8,
+    "unresolved_branches": 0,
+    "joint_relaxation_unique_targets": [
+      15,
+      15,
+      14,
+      14
+    ],
+    "parity_results": [
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "seed_profile": "degree_only",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "seed_profile": "degree_discriminant",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "seed_profile": "degree_only",
+        "unique_targets": 17
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "seed_profile": "degree_discriminant",
+        "unique_targets": 17
+      }
+    ],
+    "permutation_checks": 24,
+    "even_permutations": 12,
+    "parity_integer_witnesses": 4,
+    "parity_refuted_relaxed_tuples": 4,
+    "actual_component_mutations_rejected": 10,
+    "optimal_but_infeasible_proposals": 12
+  },
+  "scope": "The 99-branch projection is complete for the old necessary-cut/local-model relaxation; two target tuples per observation/profile survive it. Signed-discriminant parity refutes one per case. Four new full integer witnesses satisfy the strengthened relaxation, not a claimed alternate-field realization. The success radii are sufficient and extend to contained smaller boxes, not optimal thresholds.",
+  "full_number_theoretic_proof_formalized": false,
+  "next_gate": "Extend noise-radius tests with the derived parity rule; separate spectral information from metadata consequences; investigate additional actual fields, global compatibility and complete arithmetic formalization."
+}

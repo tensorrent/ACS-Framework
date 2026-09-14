@@ -1,0 +1,9 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Primary_Sources.json": "42bab3b6116dd0cae4051b66e8dc056a8baffc22877f4ddbd883a1fafd8ff021",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Primary_Sources.json": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "scope": "Primary Mathlib absolute-value documentation was retrieved. Pinned absolute-value and normed-group sources match local Git objects and are archived with their license. Current documentation is distinct from pinned source evidence. The new midpoint, scaling and implicit-derivative arguments are explicitly derived."
+}

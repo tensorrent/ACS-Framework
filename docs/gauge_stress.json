@@ -1,0 +1,86 @@
+{
+  "description": "stress test of the free/fixed-point periodicity classification",
+  "source": "code/constraint_projection/gauge_stress.py",
+  "claim_under_test": "docs/Elimination_Ledger.md L3263-3266",
+  "checks": {
+    "G1_theta_vacua": {
+      "model": "lowest Bloch band of -1/2 d2/dx2 + V0 cos(2 pi x); Coleman map to theta-vacua",
+      "z_action_on_winding_sectors": "free (translation of Z by itself)",
+      "worst_period_defect_from_2pi_absolute": 3.0665692207776374e-11,
+      "worst_period_defect_relative_to_Hnorm": 9.709638224073489e-16,
+      "defect_is_lapack_roundoff": true,
+      "period_depends_on_local_data": false,
+      "criterion_C_type": "free",
+      "bandwidth_by_V0": {
+        "0.0": 4.934802200544679,
+        "0.5": 4.689559858183275,
+        "2.0": 4.010977999376613,
+        "8.0": 2.0882797478713897,
+        "32.0": 0.1962541275648615,
+        "128.0": 0.0004472931846777328
+      },
+      "bandwidth_monotone_suppressed_by_barrier": true,
+      "consequent_locally_unobservable": false,
+      "falsification_shape": "F1",
+      "verdict": "R-free consequent fails; controlled by a local datum absent from the antecedent"
+    },
+    "G2_aharonov_bohm": {
+      "model": "tight-binding ring of L sites, N spinless fermions, flux phase theta",
+      "deck_action": "free (pi_1(R^2 minus a point) = Z on the universal cover)",
+      "worst_period_defect_from_2pi": 1.4210854715202004e-14,
+      "period_depends_on_local_data": false,
+      "period_is_dimensionful": true,
+      "flux_quantum_h_over_e_Wb": 4.135667696923859e-15,
+      "criterion_C_type": "free",
+      "amplitude_scaling_exponent_in_L": -1.0072209910822791,
+      "consequent_locally_unobservable": true,
+      "row_predicted_by_table": "free / global / locally unobservable",
+      "row_measured": "free / global / locally unobservable",
+      "table_row_holds": true,
+      "independent_mechanism": false,
+      "refutes_A3_pure_number_reading": true,
+      "verdict": "R-free holds here; the 'free -> pure number' reading does not"
+    },
+    "G3_conical_intersection": {
+      "model": "H = R cos(phi) sx + R sin(phi) sy + Delta sz; gauge-invariant Wilson loop",
+      "so2_action_on_parameter_plane": "has a fixed point (the origin)",
+      "berry_phase_at_degeneracy": "pi exactly",
+      "max_deviation_of_argW_from_pi": 8.881784197001252e-16,
+      "invariant_under": [
+        "loop radius 0.01..100",
+        "anisotropy 1:35",
+        "nstep 6..2000"
+      ],
+      "period_depends_on_local_data": false,
+      "criterion_C_type": "free",
+      "prose_table_type": "fixed-point",
+      "criterion_C_and_prose_table_agree": false,
+      "mechanism_clause_holds": true,
+      "gapping_unquantises_the_phase": true,
+      "longuet_higgins_shift_times_inertia": 0.125,
+      "consequent_is_a_physical_scale": false,
+      "consequent_is": "a sign (pure number 1/8) times a pre-existing scale 1/I",
+      "falsification_shape": "F2 and F3",
+      "verdict": "R-fix mechanism holds; R-fix consequent fails; C and the prose table disagree"
+    },
+    "G4_gribov": {
+      "model": "SO(2) on R^3 rotating (x,y); section f = y - eps z (x^2 - y^2)",
+      "fixed_locus_of_action": "r = 0 (the z-axis); stabiliser SO(2)",
+      "stabiliser_condition": "D_mu[A] w = 0 -- a property of the action",
+      "gribov_condition": "d.D[A] w = 0 -- a property of the section (weaker)",
+      "copy_count_below_horizon": 2,
+      "copy_count_above_horizon": 4,
+      "horizon_at_beta": 1.0,
+      "fp_determinant_at_horizon": 1.8369701987210297e-16,
+      "horizon_location": "r_h = 1/(eps z)",
+      "horizon_intersects_fixed_locus": false,
+      "stabilisers_on_the_horizon": "trivial",
+      "horizon_scale_moves_with_section_parameter_eps": true,
+      "fixed_locus_moves_with_eps": false,
+      "any_periodicity_present": false,
+      "genuine_fixed_point_supplies_a_scale": false,
+      "falsification_shape": "F4",
+      "verdict": "R-fix's converse unsupported; the scale belongs to the section, not the action"
+    }
+  }
+}

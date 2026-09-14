@@ -8,7 +8,7 @@ landed kill credits the survivors by elimination — no proof required. Don't pr
 the gold is there; remove everything that isn't.
 
 - Seed convention: `20260423`
-- Tiers: **T0** machine-CHECKED (kernel-verified by a proof assistant, axiom dependencies disclosed; added 2026-08-30, strictly stronger than T1) / **T1** machine-verified (a script ran and asserted) / **T2** proved (complete mathematical proof, human-verified) / **T3** numerical (measured, consistent across runs) / **T4** falsified. `· method` is a declared **non-claim** tag, not a tier: it marks an entry that adopts a discipline rather than asserting a proposition.
+- Tiers name the **ROUTE** the evidence took, not its strength: **T0** machine-CHECKED (kernel-verified by a proof assistant, axiom dependencies disclosed; added 2026-08-30) / **T1** machine-verified (a script ran and asserted) / **T2** proved (complete mathematical proof, human-verified) / **T3** numerical (measured, consistent across runs) / **T4** falsified — a verdict marker, not a route. *Corrected 2026-09-14: T0 was defined here as "strictly stronger than T1" two lines above the statement that the ladder is not a strength ordering. Both were written in `a943ad2`, in the same edit. T0's distinction is the route (a kernel checks the proof; a script checks itself), which is what the original T0 entry at L1300 actually argued; "strictly stronger" imported the axis the next line denies. The prior-art specialist found this against the GUM's Type A/Type B split.* `· method` is a declared **non-claim** tag, not a tier: it marks an entry that adopts a discipline rather than asserting a proposition.
 - **"Tiers never promote" means the PATH marker, not a strength ordering.** T1 and T2 record *which route was available* (L28–32: recompute under an instrument swap → T1; argue from the quantity's construction when no pipeline is reachable → T2), so a claim that later becomes recomputable moves T2 → T1 by design. What never happens is a claim being re-tiered on the same evidence, or a weaker route wearing a stronger route's clothes. Stated 2026-09-11 by the joint-coherence audit, which found the phrase used twice and defined nowhere; previously the ledger used both readings (L88→L370 raises a tier, L1300–1303 refuses to).
 - Status tags: `QUEUED` / `IN-PROGRESS` / `KILLED` / `SURVIVED` / `SPLIT` / `BLOCKED`
 
@@ -4112,3 +4112,137 @@ closed, two instruments and two gate tests added so the tenth fails loudly. The 
 matters is not any single defect — it is that **a corpus disciplined about evidence was undisciplined
 about pointers**, and that nobody noticed until the record was read as a joint object instead of
 entry by entry.
+
+---
+
+### 2026-09-14 — Prior art for the method: ten rules searched, zero came back ours · T2 structural / T3 cited
+
+**Specialist report:** `docs/specialist_method_prior_art.md`. Nineteen queries and six fetch
+attempts tabled, fetched-vs-search-summary marked per source. Verified by the orchestrator on the
+two load-bearing arithmetic claims before landing.
+
+**The tally.** Ten of twelve rules now carry a row (9 and 10 were already settled against Schwartz
+2023). **IDENTICAL 6, NARROWER/IDENTICAL 1, NARROWER-us 3. Zero rules came back without prior
+art.** Rule 1 → Kimball 1957's *error of the third kind* and ICH E9(R1)'s **estimand**. Rule 5 →
+Swanson 1986, *Undiscovered Public Knowledge*; our only addition is an ordering, which is a cost
+argument. Rule 11 → E-Prime (Bourland/Korzybski), the GAGAS criteria/condition/cause/effect finding
+structure, Rosenberg's observation-vs-evaluation.
+
+**The one plausible extension.** Rule 6 forbids indicting *people* (Just Culture — already tabled).
+Rule 11 forbids indicting *documents*. That scope extension may be ours; it is logged as **may be**,
+not as found-nothing.
+
+**N1 — the tier ladder has near-exact prior art, and it is 46 years older.** The GUM's **Type A /
+Type B** split classifies uncertainty components by **the method of evaluation**, explicitly not by
+strength. §3.3.4, quoted from the BIPM primary (the specialist extracted the PDF locally after
+WebFetch could not read it): *"the classification is not meant to indicate that there is any
+difference in the nature of the components."* T1↔Type A and T2↔Type B map one-to-one onto this
+ledger's own (a)/(b) criterion at L28–32. **IDENTICAL.** Metrology states the property more
+explicitly than we do, and stated it in 1980 (INC-1). Contrast cases all mix the axes and permit
+promotion: GRADE has a dedicated *rating up* guideline; ESSA's tiers are explicitly non-static;
+IPCC AR5's evidence/agreement grid separates two axes but both are strength axes.
+
+**N2 — a contradiction in our own legend, introduced three days ago by the orchestrator.** L11
+defined T0 as *"strictly stronger than T1"* while L12, **two lines below**, states the ladder is
+*"not a strength ordering."* Both were written in `a943ad2`, in the same edit, by the same author,
+as part of the repair that was supposed to resolve exactly this ambiguity. **The repair reproduced
+the defect it repaired.** Corrected here: T0's distinction is the **route** (a kernel checks the
+proof; a script checks itself), which is what the original T0 entry at L1300 actually argued;
+"strictly stronger" imported the axis the next line denies. T4 is separately noted as a **verdict**
+marker, not a route — the ladder is not homogeneous and saying so is cleaner than pretending it is.
+
+**N3 — our negative benchmark was underpowered by construction, and this bounds our own
+conclusion.** From the numbers in `SKILL.md` L271–288, re-derived and confirmed here: the three
+valid fixtures scored `4/5`, `4/4`, `5/5` — **13/14 in BOTH arms**. Maximum detectable improvement
+was therefore **1 point out of 14, 7.1%**, with two of three fixtures already at ceiling in
+baseline. The design could detect large harm and at most 7.1% benefit. **"It did not separate" is
+only weakly distinguishable from "it could not have separated upward."** This does not overturn the
+recorded negative; it bounds what that negative is entitled to claim, and it is a correction to our
+own record, not to anyone else's.
+
+**N4 — the null result is concordant with the literature, which removes the motive to re-run it.**
+Checklist and debiasing interventions have a large null literature: **Urbach 2014** (NEJM, >100
+Ontario hospitals, complications 3.86→3.82%, mortality 0.71→0.65%, neither significant, >90%
+compliance); **Bion 2013** Matching Michigan (both arms declined — secular trend); **Sherbino 2014**
+(cognitive forcing strategies, n=191, no reduction in diagnostic error). Nearest analogues in our
+own medium: **Zheng et al., EMNLP 2024** (personas in system prompts do not improve performance) and
+**Huang et al., ICLR 2024** (intrinsic self-correction without external feedback *degrades*
+reasoning) — the latter is a sharper statement of the skill's own recorded finding that everything
+in it is a verifier and none of it is a generator.
+
+**Verdict.** **The canon is unevidenced — not falsified, unevidenced.** Almost none of it is ours,
+its central organising property was standard metrology in 1980, our one measurement of it could
+barely have detected a benefit, and that measurement agrees with what the prior art predicts for an
+intervention of this shape. Three **GENUINELY-NOT-FOUND** rows carry their search records: the
+deferred-substitution technique as a stated rule; "tiers never promote" as a levels-scheme principle
+(the search returned the *opposite* — ESSA tiers explicitly non-static); and GAGAS "not to assign
+blame" language (four rounds; element definitions found, blame clause not).
+
+---
+
+### 2026-09-14 — Lived duration is the invariant; the shared coordinate is the variable one · T1 machine / T2 structural
+
+**Instrument.** `code/constraint_projection/proper_time_invariance.py`, exit 0, five checks.
+Prompted by a conversational claim: *"time is objective to the observer whose time it is, and how
+they experience it is relative and subjective."* Logged because the claim is falsifiable and the
+usual assumption runs the other way.
+
+**The usual assumption is that objective means shared and subjective means private.** Proper time
+**inverts it**, and the inversion is measurable.
+
+**PT1 — the private quantity is the shared one.** One worldline segment (`dt = 10 s`,
+`dx = 1e9 m`), boosted through eight frames from `β = −0.9` to `+0.99`:
+
+```
+coordinate time t' spread over 8 frames :  8.267 s
+proper time     spread over 8 frames    :  < 1e-9 s
+```
+
+Every frame disagrees about *when*. Every frame computes the **same 9.427274232 s** of lived
+duration. The quantity belonging to one worldline is the one nobody can argue about; the shared
+coordinate description is the one that varies.
+
+**PT2 — the twins are a path-length statement, not a clock malfunction.** Over 20 yr of coordinate
+time, the traveller's lived years fall 20.0 → 17.32 → 12.00 → 6.24 → 2.82 as `β` runs 0 → 0.99. A
+straight worldline **maximises** proper time (the reverse triangle inequality of Lorentzian
+geometry). Both path lengths are objective. Neither clock failed.
+
+**PT3 — and the frame-dependence is quarantined exactly where it can do nothing.** Searching all
+boosts in `(−0.99, 0.99)` for an order reversal:
+
+```
+timelike (causal)      ds^2 = -7.988e+18   order reversible? False
+null (light)           ds^2 = +0.000e+00   order reversible? False
+spacelike (no signal)  ds^2 = +8.898e+18   order reversible? True
+```
+
+**Causal order is absolute. Simultaneity is conventional only between events no signal can
+connect.** The convention floats precisely where it is causally inert — which is the structural
+reason the subjectivity is harmless rather than the reason it is unreal.
+
+**PT4 — the scale of it.** Andromeda is `2.537e6 ly` away and spacelike separated. Two people
+passing on a sidewalk at **1.4 m/s** assign "now" there **4.33 days** apart; a highway speed gives
+**92.73 days**; an airliner **772.73 days**. Neither is mistaken, and nothing causal turns on it.
+
+**PT5 — and averaging the observers destroys the wrong quantity.** A assigns `t = 10.000000 s`,
+B assigns `12.219145 s`, their mean is `11.109573 s`. **A real frame does assign that mean** —
+`β = 0.733240083`, residual `1.78e-15 s`. So the mean is not nonsense: it is a **third observer's
+reading**, an answer to a question neither A nor B asked. Meanwhile the proper time is
+`9.427274232 s` for all three. **The invariant survives the averaging; the thing averaged does
+not.** That is the consensus result from this corpus's own governance entry, made geometric — and
+here the geometry says which quantity was lost.
+
+**Where the conversational claim lands.** *Objective to the observer whose time it is* — **yes, and
+more strongly than intended**: the subjective quantity is the frame-independent one. *How they
+experience it is relative* — **no, in the sharpest reading**: the *experience* is invariant; what is
+relative is every **comparison** between experiences. This corpus's earlier governance entry recorded
+*"all true but global is correct."* Relativity puts the **local** quantity in the invariant role and
+makes the global coordinate the conventional one. The two threads do not agree, and the
+disagreement is logged rather than smoothed.
+
+**A tenth instrument bug, caught in this run.** PT5 first printed `NONE FOUND` for a frame assigning
+the mean, beside prose asserting one exists. The prose was right and the **search** was wrong — a
+grid scan at step `0.001` with tolerance `1e-6` cannot land on a root at `β = 0.7332`. Replaced with
+bisection, which finds it to `1.78e-15`. The failure shape is the corpus's usual one only in
+appearance: this time the number was wrong and the sentence was right, which is the same defect
+(prose and computation not derived from each other) with the roles swapped.

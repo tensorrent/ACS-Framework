@@ -57,7 +57,7 @@ ANCHORS = [
     (540, "Möbius-screw"),
     (390, "SCORECARD UPDATE"),
     (1478, "tiers never promote"),
-    (11, "Tiers: **T0** machine-CHECKED"),
+    (11, "Tiers name the **ROUTE** the evidence took"),
 ]
 
 MARKER = re.compile(r"^>\s+\*\*(SUPERSEDED|TIER RAISED|PART OF THIS FINDING|DATED SNAPSHOT|On the)")

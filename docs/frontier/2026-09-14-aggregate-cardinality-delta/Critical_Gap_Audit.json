@@ -1,0 +1,305 @@
+{
+  "status": "passed",
+  "source_sha256": "5dbe70cb38c3d4736d02e05c44133118923c409e0116dc31290e1d78f6cb5cf2",
+  "inputs_sha256": {
+    "Population_Matching.json": "886ce398de6a32e625894c3b2a362144d8ba69cab1c00a6069663c919b27c25e",
+    "Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09"
+  },
+  "cases": [
+    {
+      "precision_bits": 160,
+      "critical_pair_zero_based": [
+        1,
+        1
+      ],
+      "root_gap_interval": [
+        "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+        "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+      ],
+      "optimal_deletion_indices_zero_based": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "dominance_margins": [
+        {
+          "omitted_A_index_zero_based": 17,
+          "critical_lower_minus_other_uniform_upper": "89002624954339901875074933896416086455170294406028931560249/633825300114114700748351602688000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 18,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 19,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 20,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 21,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 22,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        }
+      ],
+      "excluded_deletion_margins": [
+        {
+          "omitted_A_index_zero_based": 0,
+          "row_lower_minus_critical_upper": "281258932482953161140145610971722242777530333163353150310249/633825300114114700748351602688000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 1,
+          "row_lower_minus_critical_upper": "7022169958190727356019659251931340969670126930129074208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 2,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 3,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 4,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 5,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 6,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 7,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 8,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 9,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 10,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 11,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 12,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 13,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 14,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 15,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 16,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "precision_bits": 224,
+      "critical_pair_zero_based": [
+        1,
+        1
+      ],
+      "root_gap_interval": [
+        "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+        "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+      ],
+      "optimal_deletion_indices_zero_based": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "dominance_margins": [
+        {
+          "omitted_A_index_zero_based": 17,
+          "critical_lower_minus_other_uniform_upper": "89002624954339901875074933896416086455170294406028931560249/633825300114114700748351602688000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 18,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 19,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 20,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 21,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 22,
+          "critical_lower_minus_other_uniform_upper": "45787913998422249660779447731498543813040594638393494100437/316912650057057350374175801344000000000000000000000000000000"
+        }
+      ],
+      "excluded_deletion_margins": [
+        {
+          "omitted_A_index_zero_based": 0,
+          "row_lower_minus_critical_upper": "281258932482953161140145610971722242777530333163353150310249/633825300114114700748351602688000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 1,
+          "row_lower_minus_critical_upper": "7022169958190727356019659251931340969670126930129074208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 2,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 3,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 4,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 5,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 6,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 7,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 8,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 9,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 10,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 11,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 12,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 13,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 14,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 15,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        },
+        {
+          "omitted_A_index_zero_based": 16,
+          "row_lower_minus_critical_upper": "6778449764934589793588816094459426916706870094191574208703/79228162514264337593543950336000000000000000000000000000000"
+        }
+      ]
+    }
+  ],
+  "exact_symbolic_threshold": "(second_positive_ordinate_A - second_positive_ordinate_B) / 2",
+  "numerical_threshold_bracket_width": "1/500000000000000000000000000000",
+  "nominal_precision_input_bytes_equal_by_field": {
+    "A": false,
+    "B": false
+  },
+  "proof": [
+    "Each of the six retained optimal deletions pairs the second source roots together, whose intervals have A strictly above B.",
+    "For every actual root choice in the certified intervals, every other pair distance is strictly smaller than that critical pair distance.",
+    "For every other deletion, a certified lower bound is strictly larger than the critical pair upper bound.",
+    "Ordered matching is optimal by uncrossing, so the global deletion/matching threshold equals exactly half the second-root difference. Six deletion indices are exactly optimal; arbitrary coordinate matchings with those deletions need not be unique.",
+    "Midpoints of the actual paired roots give a common observation at this exact symbolic threshold. The separately stored rational observation works at the certified upper bound uniformly over all source intervals."
+  ],
+  "scope": "This strengthens a numerical bracket to an exact expression in two well-defined source ordinates under the same one-deletion model. It does not replace the ordinates with exact numerical constants. Nominal160/224 exported input equality is checked explicitly; duplicate inputs are not independent new root certificates.",
+  "independent_source_interval_audit": {
+    "cases": [
+      {
+        "precision_bits": 160,
+        "dominance_inequalities": 126,
+        "excluded_deletion_inequalities": 17,
+        "optimal_deletion_indices_zero_based": [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      {
+        "precision_bits": 224,
+        "dominance_inequalities": 126,
+        "excluded_deletion_inequalities": 17,
+        "optimal_deletion_indices_zero_based": [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      }
+    ],
+    "total_strict_inequalities": 286,
+    "source_interval_reconstruction": "passed",
+    "numeric_bracket_remains_nonzero": true
+  },
+  "mutations": [
+    {
+      "mutation": "wrong_critical_pair",
+      "rejected": true
+    },
+    {
+      "mutation": "omit_optimal_deletion",
+      "rejected": true
+    },
+    {
+      "mutation": "forge_strict_dominance_margin",
+      "rejected": true
+    },
+    {
+      "mutation": "claim_collapsed_numerical_interval",
+      "rejected": true
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "status": "passed",
+  "source_sha256": "108922c7988b478093c7d71d269720ed934cc298847253046b45406840d8b3bc",
+  "inputs_sha256": {
+    "Population_Matching.json": "886ce398de6a32e625894c3b2a362144d8ba69cab1c00a6069663c919b27c25e",
+    "Critical_Gap_Audit.json": "dd84b6154b6942ffcde001d62a3f7cb514a5b1f9c50f8935212ca455ea97c601",
+    "Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09"
+  },
+  "contract": {
+    "observation_window": [
+      "0",
+      "20"
+    ],
+    "window_endpoints": "open",
+    "source_population": "all_positive_nontrivial_zero_ordinates_with_multiplicity",
+    "coordinate_error": "independent_absolute_error_before_window_selection",
+    "observe_every_transformed_entry_inside_window": true,
+    "arbitrary_insertions_or_deletions": false,
+    "unknown_source_ordinates_above20": "left_unchanged_in_the_constructive_witness"
+  },
+  "cases": [
+    {
+      "precision_bits": 160,
+      "threshold_interval": [
+        "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+        "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+      ],
+      "exact_symbolic_threshold": "(second_positive_ordinate_A - second_positive_ordinate_B) / 2",
+      "protected_prefixes": [
+        {
+          "source": "A",
+          "always_retained_source_indices_zero_based": [
+            0,
+            1
+          ],
+          "lower_boundary_margin": "27807365393765279123884798946656815820499214056941753415457/19807040628566084398385987584000000000000000000000000000000",
+          "upper_boundary_margin": "4659887776906537556995831657350460561466550569118068787069187/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "source": "B",
+          "always_retained_source_indices_zero_based": [
+            0,
+            1
+          ],
+          "lower_boundary_margin": "167597733639950342363401134202935709870922873512160324208703/79228162514264337593543950336000000000000000000000000000000",
+          "upper_boundary_margin": "5023245455502465016942798768222230089002436141551540466756687/316912650057057350374175801344000000000000000000000000000000"
+        }
+      ],
+      "A_boundary_exit": {
+        "source_index_zero_based": 22,
+        "observed_value_outside_window": "12770721806673892804042688309725248727961590628207729431600437/633825300114114700748351602688000000000000000000000000000000",
+        "uniform_error_upper": "288988886922934415756856986617646428095/680564733841876926926749214863536422912",
+        "critical_lower_minus_exit_error": "94215804391598789075656255965248727961590628207729431600437/633825300114114700748351602688000000000000000000000000000000"
+      },
+      "common_observation": [
+        "198463252657984851734942700427180770387/85070591730234615865843651857942052864",
+        "1411978600627841645479140495578793091273/340282366920938463463374607431768211456",
+        "1734147878576259250419377752199259066903/340282366920938463463374607431768211456",
+        "4604306739134040793208230576992856012039/680564733841876926926749214863536422912",
+        "640704984613611488020189065616943379615/85070591730234615865843651857942052864",
+        "1367890394378751503803186166781428118289/170141183460469231731687303715884105728",
+        "6076251065721875796346296496232285793197/680564733841876926926749214863536422912",
+        "6715238511775491940754548915686768069259/680564733841876926926749214863536422912",
+        "3615893120610595554332367379333640070137/340282366920938463463374607431768211456",
+        "1913953257181344338851744546200996142145/170141183460469231731687303715884105728",
+        "8260817420922398032287511363957935276731/680564733841876926926749214863536422912",
+        "2121804898080173983502340054623859123555/170141183460469231731687303715884105728",
+        "2341940848317789836741850166974010326789/170141183460469231731687303715884105728",
+        "1291120246116720861990875727223856470496638665095/91343852333181432387730302044767688728495783936",
+        "156197652860417084848697386239579714795/10633823966279326983230456482242756608",
+        "5240248275029211850357903019727710150005/340282366920938463463374607431768211456",
+        "2672002492523397362284040904005460318463/170141183460469231731687303715884105728",
+        "5646471991746560120433880929123749631929/340282366920938463463374607431768211456",
+        "11613630855640982857233771791950470769693/680564733841876926926749214863536422912",
+        "3074163787935928764798349558425252015671/170141183460469231731687303715884105728",
+        "12496970766426659775276966551817195614905/680564733841876926926749214863536422912",
+        "6447057876758876224537524662873002505559/340282366920938463463374607431768211456"
+      ],
+      "A_after_noise_source_population_size_through20": 23,
+      "B_after_noise_source_population_size_through20": 22,
+      "visible_population_after_window_selection": [
+        22,
+        22
+      ],
+      "unknown_tail_error": "0",
+      "complete_tail_coverage_argument": "Every unrecorded positive source ordinate is at least20 by inherited finite completeness; leaving it unchanged keeps it outside the open window.",
+      "common_observation_compatible_actual_classes": [
+        "quadratic_discriminants_-24_-3_8",
+        "quadratic_discriminants_-8_-3_24"
+      ]
+    },
+    {
+      "precision_bits": 224,
+      "threshold_interval": [
+        "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+        "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+      ],
+      "exact_symbolic_threshold": "(second_positive_ordinate_A - second_positive_ordinate_B) / 2",
+      "protected_prefixes": [
+        {
+          "source": "A",
+          "always_retained_source_indices_zero_based": [
+            0,
+            1
+          ],
+          "lower_boundary_margin": "27807365393765279123884798946656815820499214056941753415457/19807040628566084398385987584000000000000000000000000000000",
+          "upper_boundary_margin": "4659887776906537556995831657350460561466550569118068787069187/316912650057057350374175801344000000000000000000000000000000"
+        },
+        {
+          "source": "B",
+          "always_retained_source_indices_zero_based": [
+            0,
+            1
+          ],
+          "lower_boundary_margin": "167597733639950342363401134202935709870922873512160324208703/79228162514264337593543950336000000000000000000000000000000",
+          "upper_boundary_margin": "5023245455502465016942798768222230089002436141551540466756687/316912650057057350374175801344000000000000000000000000000000"
+        }
+      ],
+      "A_boundary_exit": {
+        "source_index_zero_based": 22,
+        "observed_value_outside_window": "12770721806673892804042688309725248727961590628207729431600437/633825300114114700748351602688000000000000000000000000000000",
+        "uniform_error_upper": "288988886922934415756856986617646428095/680564733841876926926749214863536422912",
+        "critical_lower_minus_exit_error": "94215804391598789075656255965248727961590628207729431600437/633825300114114700748351602688000000000000000000000000000000"
+      },
+      "common_observation": [
+        "198463252657984851734942700427180770387/85070591730234615865843651857942052864",
+        "1411978600627841645479140495578793091273/340282366920938463463374607431768211456",
+        "1734147878576259250419377752199259066903/340282366920938463463374607431768211456",
+        "4604306739134040793208230576992856012039/680564733841876926926749214863536422912",
+        "640704984613611488020189065616943379615/85070591730234615865843651857942052864",
+        "1367890394378751503803186166781428118289/170141183460469231731687303715884105728",
+        "6076251065721875796346296496232285793197/680564733841876926926749214863536422912",
+        "6715238511775491940754548915686768069259/680564733841876926926749214863536422912",
+        "3615893120610595554332367379333640070137/340282366920938463463374607431768211456",
+        "1913953257181344338851744546200996142145/170141183460469231731687303715884105728",
+        "8260817420922398032287511363957935276731/680564733841876926926749214863536422912",
+        "2121804898080173983502340054623859123555/170141183460469231731687303715884105728",
+        "2341940848317789836741850166974010326789/170141183460469231731687303715884105728",
+        "23816964748500038284208074813492777940843431214158850790182596655239/1684996666696914987166688442938726917102321526408785780068975640576",
+        "156197652860417084848697386239579714795/10633823966279326983230456482242756608",
+        "5240248275029211850357903019727710150005/340282366920938463463374607431768211456",
+        "2672002492523397362284040904005460318463/170141183460469231731687303715884105728",
+        "5646471991746560120433880929123749631929/340282366920938463463374607431768211456",
+        "11613630855640982857233771791950470769693/680564733841876926926749214863536422912",
+        "3074163787935928764798349558425252015671/170141183460469231731687303715884105728",
+        "12496970766426659775276966551817195614905/680564733841876926926749214863536422912",
+        "6447057876758876224537524662873002505559/340282366920938463463374607431768211456"
+      ],
+      "A_after_noise_source_population_size_through20": 23,
+      "B_after_noise_source_population_size_through20": 22,
+      "visible_population_after_window_selection": [
+        22,
+        22
+      ],
+      "unknown_tail_error": "0",
+      "complete_tail_coverage_argument": "Every unrecorded positive source ordinate is at least20 by inherited finite completeness; leaving it unchanged keeps it outside the open window.",
+      "common_observation_compatible_actual_classes": [
+        "quadratic_discriminants_-24_-3_8",
+        "quadratic_discriminants_-8_-3_24"
+      ]
+    }
+  ],
+  "allowed_arbitrary_deletions": 0,
+  "no_new_zero_computations_required": true,
+  "lower_bound_proof": "For any radius below the critical root gap, which is at most U, both source first two roots must remain inside the observed window. Every other retained source root has larger original ordinate. Any identical observed finite multisets induce a bijection between the retained source multisets with pair distances at most twice the radius. Uncrossing implies their sorted second roots must satisfy that bound, contradicting the critical gap. Tail entries may enter or leave; they cannot change the first two retained source ranks.",
+  "upper_bound_proof": "Pair A first22 source roots with all22 recorded B roots using their actual midpoints. Critical-gap dominance bounds their errors by the exact symbolic threshold. Move A last recorded source root to the fixed rational exit value above20; its error is strictly below L. Leave every other positive source ordinate unchanged, outside the window. Both windowed observations are then identical, with no arbitrary insertion/deletion. The stored rational midpoint-hull observation gives the uniform certificate at U.",
+  "scope": "An ideal complete observation of the open window after bounded coordinate noise has the same exact symbolic ambiguity threshold as the one-deletion model for this field pair. All zero entries remain in the transformed source family; one exits the displayed window. This is not a claim of infinite-spectrum equality, a physical detector implementation, or robustness under unmodeled missed/extra roots.",
+  "independent_interval_audit": {
+    "cases": [
+      {
+        "precision_bits": 160,
+        "protected_prefix_root_checks": 8,
+        "exit_checks": 3,
+        "matched_endpoint_checks": 88,
+        "window_membership_complete_for_constructed_noise_map": true,
+        "unknown_tail_left_unchanged": true
+      },
+      {
+        "precision_bits": 224,
+        "protected_prefix_root_checks": 8,
+        "exit_checks": 3,
+        "matched_endpoint_checks": 88,
+        "window_membership_complete_for_constructed_noise_map": true,
+        "unknown_tail_left_unchanged": true
+      }
+    ],
+    "total_exact_inequalities": 198,
+    "proof_scope": "The finite inequalities protect the first two source roots and construct an exit of A last source root. Completeness through20 identifies every source entry originally inside the window; outside entries are fixed. General lower and upper arguments are written and use elementary Lean interval/uncrossing lemmas."
+  },
+  "mutations": [
+    {
+      "mutation": "exit_point_remains_inside_window",
+      "rejected": true
+    },
+    {
+      "mutation": "incorrect_protected_prefix",
+      "rejected": true
+    },
+    {
+      "mutation": "unjustified_tail_shift",
+      "rejected": true
+    },
+    {
+      "mutation": "retain_original_window_count_after_exit",
+      "rejected": true
+    },
+    {
+      "mutation": "allow_unmodeled_deletions",
+      "rejected": true
+    }
+  ]
+}

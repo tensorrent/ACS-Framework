@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T03:28:39.082279+00:00",
+  "manifest_files": 33,
+  "preceding_checkpoint_integrity": "passed",
+  "fresh_input_restriction": "passed",
+  "fresh_count_and_actual_witness_science": "passed",
+  "fresh_independent_arithmetic_counts_and_bipartite_matching": "passed",
+  "fresh_adversaries_and_cutoff_continuum": "passed",
+  "fresh_lean_compilation": "passed",
+  "derived_results": {
+    "source_cutoff": "39/2",
+    "equal_populations": [
+      22,
+      22
+    ],
+    "anonymous_input_files": 4,
+    "parent_intervals_partitioned": 90,
+    "retained_intervals": 88,
+    "metadata_and_total_population_fixed_coefficients": 456,
+    "interior_count_cases": 32,
+    "uniformly_unique_count_cases": 20,
+    "coefficients_fixed_by_unique_count": 604,
+    "common_observation_fixed_coefficients": 456,
+    "common_observation_ambiguous_coefficients": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "exact_symbolic_threshold": "(a_1 - b_1)/2, with zero-based sorted true source indices",
+    "rational_height": "1411978600627841645479140495578793091273/340282366920938463463374607431768211456",
+    "threshold_bracket": [
+      "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+    ],
+    "threshold_bracket_width": "1/500000000000000000000000000000",
+    "rational_gate_guarantee": "0 <= r < L",
+    "actual_common_observation_at_U": true,
+    "actual_ambiguity_at_L_claimed": false,
+    "independent_polynomial_factorizations": 1128,
+    "polynomial_coefficient_comparisons": 1208,
+    "common_observation_endpoint_checks": 176,
+    "strict_noncritical_pair_comparisons": 42,
+    "all_bipartite_pair_cost_entries": 1936,
+    "bipartite_boundary_checks": 8,
+    "finite_multiset_pairs": 1741,
+    "literal_indexed_matchings": 32016,
+    "finite_positive_gap_count_gates": 1672,
+    "mutations_rejected": 36,
+    "cutoff_plateau": [
+      "378045925415659873749288033426620929703984929857744333253209/19807040628566084398385987584000000000000000000000000000000",
+      "6250789966234782066585688727409680876843704899341367767558031/316912650057057350374175801344000000000000000000000000000000"
+    ],
+    "cutoff_plateau_exact_checks": 162,
+    "kernel_checked_lemmas": 8,
+    "new_roots_computed": 0,
+    "new_Gaussian_measurements": 0
+  },
+  "recorded_commands": 8,
+  "successful_commands": 6,
+  "failed_commands": 2,
+  "research_branches": 117,
+  "ledger_events": 433,
+  "preserved_event_prefix": 428,
+  "ledger_head_sha256": "d5dc1661c420cab62ec71bca4f7a1ae411ed87bf229733028eee75d7fbcddc30",
+  "local_links": 56,
+  "complete_arithmetic_and_full_matching_formalized_in_Lean": false,
+  "scope": "The certified equal-population benchmark removes total-count identification. A sharp theoretical interior count still separates the actual binary field class below half the second-root gap; a rational gate certifies r<L and a shared actual observation is constructed at U. Closed-box ambiguity at L is not promoted to actual-field ambiguity. All prior ACS branches and the ongoing delta objective remain active."
+}

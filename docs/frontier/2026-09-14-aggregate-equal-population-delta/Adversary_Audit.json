@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "source_sha256": "d5387ed518653c5b6e70165f828ce69a22f880483cb6e920558e70d34887c259",
+  "inputs_sha256": {
+    "Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "Input_Provenance.json": "9e251536077682664cf1e605d535bf14dcb1c7a192cd37eafc4e7a2a260c82af",
+    "Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "Pair_Spectra.zip": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+    "Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "E1_160.json": "93fd0c131931393daeceeffdcc0acc26357d4b9da155bf8b05582507f9d4bd8a",
+    "E1_224.json": "ac12e016adec0cec4fe9e15dd8bd6b077aa2d7e8a8481a383f5e420eadc4f477",
+    "E2_160.json": "befb48a15a03eb6d58d5dd81cb667a44c5c220d11d317a995d0730e5754ce22e",
+    "E2_224.json": "6da3d3be1b4404528f959667d4bc48e7abe3d310fdb7caa6c9aa28daba7b4f6a"
+  },
+  "mutations": [
+    {
+      "name": "missing retained root",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "retained excluded parent root",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "parent population leaked into anonymous payload",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "old cutoff attached to smaller dataset",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "root multiplicity duplicated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "cutoff at interval lower endpoint",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "cutoff at interval upper endpoint",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "new rational cutoff sent to old integer-T20 consumer",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "candidate class removed",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong Euler coefficient",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false total-count identification",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "lost common-observation entry",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "shared ordinate outside radius",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong critical rank",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "lower endpoint substituted for witness radius",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "box-overlap claimed as actual ambiguity",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "post-noise censoring substituted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false boundary uniqueness",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "count envelope corrupted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "decision removed from case",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "boolean count",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "negative count",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "count above population",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "parent filename leaked to selector",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "field label leaked to selector",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "wrong scalar height",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "negative radius",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "binary64 radius",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "deletion allowance",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "boolean deletion budget",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "false completeness declaration",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "name": "wrong population size",
+      "rejected": true,
+      "exception": "ValueError"
+    }
+  ],
+  "mutations_rejected": 32,
+  "finite_crosscheck": {
+    "equal_length_multiset_pairs": 1741,
+    "literal_indexed_matchings": 32016,
+    "positive_gap_count_gates": 1672,
+    "scope": "Exhaustive small finite tests, including repeated and negative coordinates, independently compare every indexed permutation and endpoint-generated count. This supports but does not replace the general written proof."
+  },
+  "floating_point_boundary_counterexample": {
+    "r_below": "769439813521473098667817294899999622269155296547493673014906981062581425856450323408353142440319061145079147/1342177280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "r_above": "769439813521473098667817294899999622269155296547493673014906981062581425856450323408353142440319061413514603/1342177280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "same_binary64": 0.5732773345123776,
+    "below_certificate_unique": true,
+    "above_certificate_unique": false,
+    "scope": "Distinct closed-box certificate outcomes, not a claim of actual ambiguity immediately above L."
+  },
+  "strict_versus_closed_gate_control": {
+    "height": "1411978600627841645479140495578793091273/340282366920938463463374607431768211456",
+    "shared_observation_strict_count": 1,
+    "shared_observation_closed_count": 2
+  },
+  "scope": "These semantic mutations are exercised against actual decoder and audit functions. A finite list count still cannot authenticate a false external completeness premise. The two supplied benchmark inputs remain known examples, not statistically blind data."
+}

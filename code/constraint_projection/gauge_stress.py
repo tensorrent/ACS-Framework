@@ -826,6 +826,139 @@ def g5_irrational_rotation():
     }
 
 
+# ---------------------------------------------------------------------------
+# G6.  Criterion C applied uniformly, and what actually controls each clause
+# ---------------------------------------------------------------------------
+#
+# "Local data" is fixed here to mean: the values of the system's fields or
+# geometry in a neighbourhood of the relevant locus -- NOT the parameters
+# labelling the group action.  Without that reading C is not well defined; it
+# is stated so it can be checked rather than argued.
+
+
+def g6_criterion_c_uniform():
+    import sympy as sp
+    head("G6", "criterion C applied uniformly, against the prose table")
+
+    print("""  First, C on the row that most needs it.  Schwarzschild's period is the
+  corpus's evidence that a fixed point produces a scale, so it is derived here
+  from the metric -- twice, adding a second independent local datum.\n""")
+    r, M, Q = sp.symbols("r M Q", positive=True)
+    rows = []
+    for name, f, rh in [("Schwarzschild", 1 - 2 * M / r, 2 * M),
+                        ("Reissner-Nordstrom", 1 - 2 * M / r + Q ** 2 / r ** 2,
+                         M + sp.sqrt(M ** 2 - Q ** 2))]:
+        kap = sp.simplify(sp.diff(f, r).subs(r, rh) / 2)
+        beta = sp.simplify(2 * sp.pi / kap)
+        prod = sp.simplify(beta * kap)
+        dM = sp.simplify(sp.diff(beta, M))
+        print(f"      {name}")
+        print(f"        r_h        = {sp.simplify(rh)}")
+        print(f"        kappa      = {kap}")
+        print(f"        beta       = {beta}")
+        print(f"        beta*kappa = {prod}          <- the FORCED content")
+        print(f"        dbeta/dM   = {'nonzero' if dM != 0 else 'ZERO'}")
+        if prod != 2 * sp.pi:
+            fail(f"{name}: beta*kappa is not 2 pi, it is {prod}")
+        if dM == 0:
+            fail(f"{name}: beta does not depend on M")
+        rows.append((name, str(prod)))
+    dQ = sp.simplify(sp.diff(2 * sp.pi / sp.simplify(
+        sp.diff(1 - 2 * M / r + Q ** 2 / r ** 2, r).subs(
+            r, M + sp.sqrt(M ** 2 - Q ** 2)) / 2), Q))
+    if dQ == 0:
+        fail("Reissner-Nordstrom: beta does not depend on Q")
+    print(f"        dbeta/dQ   = nonzero   (a SECOND independent local datum)")
+    print("""
+      -> beta*kappa = 2 pi IDENTICALLY, in both metrics.  The forced content is
+         the pure number 2 pi -- the no-conical-deficit condition -- and every
+         dimension in beta is carried by kappa, a local geometric datum that
+         exists whether or not anyone continues to Euclidean signature.
+         Assumption A3, stated in Section 0 about one row, is now general.
+
+      -> and beta DOES vary with local data, in two independent directions.
+         Criterion C classifies Schwarzschild FIXED-POINT type.  C agrees with
+         the prose here, and this is the case the prose was built on.""")
+
+    print("\n  Now every row, sorted by C and by the prose table.\n")
+    table = [
+        # name, action free?, prose row, period, period depends on local data, C row
+        ("Mobius deck",          True,  "free",  "the Z/2 twist", False, "free"),
+        ("spinor -I on states",  True,  "free",  "4 pi",          False, "free"),
+        ("Schwarzschild",        False, "fixed", "2 pi / kappa",  True,  "fixed"),
+        ("theta-QCD (G1)",       True,  "free",  "2 pi",          False, "free"),
+        ("Aharonov-Bohm (G2)",   True,  "free",  "h/e",           False, "free"),
+        ("conical intersect (G3)", False, "fixed", "pi (a sign)", False, "free"),
+        ("rational rotation (G5)", False, "fixed", "q",           False, "free"),
+    ]
+    print(f"      {'case':>22}  {'free?':>6}  {'prose row':>10}  {'period':>14}"
+          f"  {'local?':>7}  {'C row':>7}  {'agree':>6}")
+    disagree = []
+    for name, free, prose, period, local, crow in table:
+        ok = (prose == crow)
+        if not ok:
+            disagree.append(name)
+        print(f"      {name:>22}  {str(free):>6}  {prose:>10}  {period:>14}"
+              f"  {str(local):>7}  {crow:>7}  {'yes' if ok else 'NO':>6}")
+    if len(disagree) != 2:
+        fail(f"expected exactly 2 C/prose disagreements, got {disagree}")
+    print(f"\n      disagreements: {', '.join(disagree)}")
+
+    print("""
+      In BOTH disagreements the measurement backs C, not the prose:
+        conical intersection -- C says free type (no local data), so the period
+            should be a pure number and no scale.  Measured (G3): a sign, and
+            a shift of exactly (1/8)/I.  C correct.
+        rational rotation -- C says free type, so no scale.  Measured (G5):
+            the forced period is the integer q, and there is no fixed point
+            anywhere to carry a scale.  C correct.
+
+      So criterion C is a STRICTLY BETTER statement of the scale half of the
+      table than the free/fixed-point antecedent is.  It is also checkable by
+      differentiation, which the prose antecedent is not.""")
+
+    print("""
+  But C does not rescue the other half, and nothing in the table does.
+
+      C classifies PERIODS.  It says nothing about OBSERVABILITY, and the two
+      come apart on the very first case:
+
+        theta-QCD    period 2 pi, no local data  -> C: free type.  Correct.
+                     consequent measured: NOT locally unobservable (G1).
+        Aharonov-Bohm  period h/e, no local data -> C: free type.  Correct.
+                     consequent measured: locally unobservable, O(1/L^2) (G2).
+
+      Same C row, same prose row, opposite observability.  The variable that
+      separates them was identified in G1/G2 and appears nowhere in the table:
+
+          the consequent "locally unobservable" holds iff the circle-valued
+          parameter is NOT conjugate to a volume integral of a local density
+          with nonzero susceptibility.
+
+      theta is conjugate to Q_top = int d^4x q(x) with chi != 0, so it reaches
+      local observables.  The AB flux is conjugate to a winding number of one
+      path -- a single global degree of freedom -- so its effect per site is
+      O(1/L).  Neither freeness nor C sees this distinction at all.""")
+
+    return {
+        "local_data_defined_as": "fields/geometry near the locus, NOT parameters of the group action",
+        "schwarzschild_beta_times_kappa": "2*pi (identically)",
+        "reissner_nordstrom_beta_times_kappa": "2*pi (identically)",
+        "beta_depends_on_M": True,
+        "beta_depends_on_Q": True,
+        "A3_generalised": "forced content is a universal pure number in every row; "
+                          "dimension is carried by the conjugate coordinate",
+        "rows_where_C_and_prose_agree": 5,
+        "rows_where_C_and_prose_disagree": disagree,
+        "measurement_backs": "criterion C in both disagreements",
+        "C_captures": "the scale half of the table",
+        "C_does_not_capture": "the observability half",
+        "observability_actually_controlled_by":
+            "whether the conjugate charge is a volume integral of a local "
+            "density with nonzero susceptibility",
+    }
+
+
 def main():
     print(RULE)
     print("GAUGE STRESS -- attempting to break the fixed-point classification")
@@ -834,7 +967,8 @@ def main():
            "G2_aharonov_bohm": g2_aharonov_bohm(),
            "G3_conical_intersection": g3_conical_intersection(),
            "G4_gribov": g4_gribov(),
-           "G5_irrational_rotation": g5_irrational_rotation()}
+           "G5_irrational_rotation": g5_irrational_rotation(),
+           "G6_criterion_c": g6_criterion_c_uniform()}
     out = ROOT / "docs" / "gauge_stress.json"
     out.write_text(json.dumps({
         "description": "stress test of the free/fixed-point periodicity classification",

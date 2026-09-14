@@ -1,6 +1,6 @@
 # Specialist report: stressing the fixed-point classification
 
-**STATUS: in progress**
+**STATUS: complete**
 
 **Mission.** Try to break the corpus's own fixed-point classification, logged at
 `docs/Elimination_Ledger.md` L3263-3266:
@@ -582,4 +582,141 @@ free" ≠ "has a fixed point", and "free" was doing the work of "free and proper
 
 ## 6. Verdict
 
-(pending)
+**Instrument.** `code/constraint_projection/gauge_stress.py`, artifact `docs/gauge_stress.json`.
+Clean run exits `0`. Five mutations — gapping the conical intersection, destroying the Gribov
+copy structure, changing the cone-smoothness number from `2 pi` to `3 pi`, breaking the ring's
+`1/L` scaling, and substituting a rational for the irrational rotation — each exit `1`. The
+instrument can fail.
+
+### What the sentence bundles, and what each part did under test
+
+The ledger sentence contains **five** separable claims, not two. Sorting the results by claim
+rather than by case:
+
+| # | claim | status | evidence |
+|---|---|---|---|
+| M1 | a free action forces any periodicity **globally**, from topology | **holds** on every case tested | G1, G2 (T1) |
+| M2 | a fixed point can force a periodicity **locally**, from smoothness there | **holds**, and is load-bearing | G3(b), G6 (T1) |
+| C1 | the free case's result is **locally unobservable** | **T4 falsified** | G1 |
+| C2 | the fixed-point case's result is a **physical scale** | **T4 falsified** | G3, G6 |
+| A0 | free / fixed-point is an **exhaustive** dichotomy | **T4 falsified** | G4, G5 |
+
+**The mechanism half survives everything thrown at it.** On four cases that had no part in
+building the table, periodicity forced by a free action was forced globally and periodicity
+forced at a fixed point was forced locally — and G3(b) shows the latter is not decoration:
+gapping the conical intersection unquantises the phase. That is a real result and it is reported
+as one.
+
+**The consequent half does not survive.** Both consequent clauses fail, each on a case where its
+own antecedent and mechanism hold.
+
+### C1 fails because the controlling variable is not in the antecedent
+
+θ-QCD and Aharonov-Bohm are both free actions, both forcing a `2 pi` periodicity whose period
+depends on no local datum. Same row on every axis the table has. Opposite observability:
+
+- AB: flux dependence of the energy density falls as `1/L^2`, measured (`L^(-1.0072)` for the
+  total). Locally unobservable.
+- θ: `chi_top != 0`, the vacuum energy depends on `theta`, measured as a bandwidth positive at
+  every finite barrier. Locally observable.
+
+And within θ alone, a **single knob held against a fixed antecedent** flips the consequent:
+`W(V0=0.5)/W(V0=128) = 1.048e+04`. In QCD that knob is the light quark mass. The free action is
+identical on both sides.
+
+The variable that does the work, identified in G1/G2 and absent from the table:
+
+> C1 holds iff the circle-valued parameter is **not** conjugate to a volume integral of a local
+> density with nonzero susceptibility.
+
+`theta` is conjugate to `Q_top = int d^4x q(x)` with `chi != 0`. AB flux is conjugate to the
+winding number of one path — one global degree of freedom, hence `O(1/L)`. (T2, supported by
+three cases: θ, AB, spinor. Not proved in general.)
+
+### C2 fails because the fixed point never supplied the scale
+
+`beta * kappa = 2 pi` **identically**, in Schwarzschild and in Reissner-Nordström, derived from
+the metrics. The smoothness condition supplies the pure number `2 pi`; every dimension in `beta`
+is carried by `kappa`, a local geometric datum present before anyone continued to Euclidean
+signature. The same decomposition holds in every row:
+
+| row | forced pure number | carrier of the dimension |
+|---|---|---|
+| Schwarzschild / RN | `2 pi` | `kappa` |
+| conical intersection | `1/8` (measured: `shift * I = 0.125` exactly) | `1/I` |
+| spinor | `4 pi` | — (angle is dimensionless) |
+| θ-QCD | `2 pi` | — |
+| AB | 1 flux quantum | `h/e`, universal constants |
+
+This generalises Section 0's assumption A3 from a remark about one row to a statement covering
+all of them. The conical intersection then makes it a falsification rather than a reframing: a
+genuine fixed point, a mechanism that is measurably load-bearing, and a consequent that is `-1`.
+
+### A0 fails: the dichotomy is not exhaustive
+
+Two modes have no row, and both are reachable inside a single one-parameter family:
+
+- **free but not proper** (irrational rotation): free, dense orbits, quotient not even `T0`, and
+  **no periodicity forced at all**. R-free's antecedent is empty here.
+- **non-free but with no fixed point anywhere** (rational rotation; and the Gribov horizon, whose
+  every point has trivial stabiliser): routed to the fixed-point column, predicted a local scale,
+  has neither a fixed point nor a scale.
+
+On that family freeness and forced periodicity are **exactly anti-correlated**. And "free"
+throughout the table was standing in for **"free and proper"** — a distinction the four
+constructing cases never had to make because all four are proper.
+
+### What replaces it (T2, offered rather than asserted)
+
+Split the one sentence into three independent statements and one scope note:
+
+1. **Mechanism (holds).** A free *and proper* action forces any periodicity globally, from
+   topology. An action with an isolated fixed locus can force one locally, from smoothness there.
+2. **Scale (criterion C).** A period carries a physical scale iff it is a function of local data
+   near the locus. The forced content is always a universal pure number; the dimension is carried
+   by the conjugate coordinate. C is checkable by differentiation, which the free/fixed-point
+   antecedent is not — and where C and the prose disagree, **measurement backed C both times**
+   (conical intersection, rational rotation: 2 of 7 rows reassigned).
+3. **Observability (new, and independent of 1 and 2).** The periodicity is locally unobservable
+   iff its circle coordinate is not conjugate to a volume integral of a local density with
+   nonzero susceptibility.
+4. **Scope.** Free / fixed-point is not exhaustive; the four modes are free+proper,
+   free+improper, non-free with an isolated fixed locus, and non-free but non-effective.
+
+### Is the classification vacuous outside its construction cases?
+
+**No — and that was live, not a formality.** The mechanism half is contentful and was confirmed
+on three cases that did not build it (AB, conical intersection's mechanism, θ's global forcing).
+The table's original four rows are all untouched: Möbius, spinor, zeta and Schwarzschild each
+still land where the corpus put them, and the Schwarzschild entry's claim that it "lands in it
+without adjustment" holds. The failures are located in the **consequent** clauses and in the
+**scope of the antecedent**, not in the sorting of the cases that produced it.
+
+### Where trust extends
+
+| | |
+|---|---|
+| **Trust** the mechanism half on any proper action with an isolated fixed locus or none | confirmed on 4 non-constructing cases |
+| **Do not** read a free action as implying local unobservability | fails on θ-QCD |
+| **Do not** read a fixed point as implying a physical scale | fails on the conical intersection; the forced content is always a pure number |
+| **Do not** read "not free" as "has a fixed point" | fails on rational rotation and on the whole Gribov horizon |
+| **Do not** treat a scale's presence as evidence for R-fix | a gauge-condition artifact satisfies it (G4) |
+
+### Tier assignments
+
+- **T4 falsified:** C1 (R-free's consequent), C2 (R-fix's consequent), A0 (exhaustiveness).
+- **T1 machine:** every number in Sections 1-6; `docs/gauge_stress.json`.
+- **T2 proved:** the Coleman map, the A3 generalisation `beta*kappa = 2 pi`, the four-mode scope
+  note, the free-and-proper reading, and the proposed observability criterion.
+- **Literature, cited as literature and used as no input to any assertion:** nEDM bound on
+  `theta-bar`, `chi_top^(1/4) ~ 180 MeV`, Tonomura et al. PRL **56** 792 (1986), Gribov
+  NPB **139** 1 (1978), Singer CMP **60** 7 (1978), Longuet-Higgins et al. (1958).
+
+### Correcting this report
+
+Section 0's assumption **A3** stated that what differs between rows is "whether the period is a
+function of local data at all", and offered criterion C on that basis. G2 shows A3's other half —
+the implicit "free → pure number" — is false: `h/e` is dimensionful and depends on no local datum.
+C itself survives that correction; the prose gloss around it did not. Logged here rather than
+edited over Section 0.
+

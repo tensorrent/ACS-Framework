@@ -4326,3 +4326,93 @@ log form. Verified here independently: corrupting the value to `2e-21` **exits 1
 cited anywhere that sits **at** the CPF mass rather than above it, and would close D3's
 extrapolation gap. They were read only second-hand, inside Rogers & Peiris's Fig. 2 caption. They
 are **not** in `BOUNDS` and are **not** verified.
+
+---
+
+### 2026-09-14 — Our own fixed-point classification, stress-tested: **THREE OF ITS FIVE CLAIMS FALSIFIED** · T1 machine / T2 structural / T4 falsified
+
+**Instrument.** `code/constraint_projection/gauge_stress.py` (982 lines), six checks G1–G6, all with
+`assert`/`sys.exit(1)`. Artifact `docs/gauge_stress.json`. Report
+`docs/specialist_gauge_stress.md`, 585→876 lines. **Read, re-run and independently mutation-tested
+by the orchestrator before landing** — two orchestrator-chosen mutations (golden ratio → 1/2,
+→ 3/7) each exit 1; unmodified exits 0. This closes the provenance break logged in `fa95e79`,
+where `git add -A` swept this file into a commit unread.
+
+**Why this run exists.** The classification at L3263–3266 had been **confirmed four times and tested
+zero times**. Schwarzschild landing in it unadjusted was recorded as *"the only reason to extend
+trust to a classification at all."* Confirmation is not a test. This run set out to break it.
+
+**N0 — the sentence bundles FIVE separable claims, not two.** That decomposition is itself the
+finding; the prose hid it.
+
+| | claim | status |
+|---|---|---|
+| **M1** | a free action forces periodicity **globally** | **HOLDS** on four non-constructing cases |
+| **M2** | a fixed point can force it **locally** | **HOLDS**, and measurably load-bearing |
+| **C1** | free ⟹ the result is **locally unobservable** | **T4 FALSIFIED** (θ-vacua) |
+| **C2** | fixed point ⟹ the result is a **physical scale** | **T4 FALSIFIED** (conical intersection) |
+| **A0** | free / fixed-point is **exhaustive** | **T4 FALSIFIED** (Gribov; rotations) |
+
+**The mechanism half survives. Both consequent halves and the dichotomy do not.**
+
+**N1 — C1 dies on θ-QCD, and Aharonov–Bohm is the control that kills it.** θ-QCD and AB are **the
+same row on every axis the table has** — free action, `2π`-type period, no local data — and have
+**opposite observability**. AB's flux dependence falls off as `L^(-1.0072)` (fitted), i.e. locally
+unobservable, `O(1/L)` per site. θ's band width is **positive at every finite barrier**; within θ
+alone one knob flips the consequent at ratio **1.048e+04** with the antecedent held fixed. In QCD
+that knob is the light quark mass.
+
+The controlling variable, identified and **absent from the table**: *the result is locally
+unobservable iff the circle-valued parameter is **not** conjugate to a volume integral of a local
+density with nonzero susceptibility.* θ is conjugate to `Q_top = ∫d⁴x q(x)` with `χ ≠ 0`, so it
+reaches local observables. AB flux is conjugate to a winding number of a single path — one global
+degree of freedom. **Neither freeness nor the table sees this distinction at all.**
+
+> Mission question answered: **θ is not a superselection label** — and that is *why* it breaks C1.
+> Superselection is the `V₀→∞` limit where the band flattens and θ becomes unobservable. The physics
+> is the other limit.
+
+**N2 — C2 dies on the conical intersection, and the fixed point never supplied a scale in the first
+place.** `β·κ = 2π` **identically**, derived independently from Schwarzschild *and*
+Reissner–Nordström. The fixed point supplies a **universal pure number** in every row; the dimension
+is always carried by the conjugate coordinate. The conical intersection turns this from a reframing
+into a falsification: a genuine fixed point, mechanism measurably load-bearing (gapping it
+unquantises the phase), and the consequent is **−1** — a sign, times a pre-existing `1/I`. Measured
+across four rows with different moments of inertia, `shift · I = 0.125` **exactly** in every one.
+**A sign is not a scale.**
+
+**N3 — A0 dies twice, and both failures sit inside one one-parameter family.** Two modes have no row
+in the table: **free-but-not-proper** (irrational rotation — free, non-Hausdorff quotient, and
+**no periodicity forced at all**) and **non-free-with-no-fixed-point** (rational rotation; and the
+entire Gribov horizon, every point of which has trivial stabiliser). On that family **freeness and
+forced periodicity are exactly anti-correlated.** The word "free" in our sentence was standing in
+for **"free and proper"** — an assumption never written down, which is rule 9 exactly, and the same
+shape as "planar" baked into R1–R4 before R5 lifted it.
+
+**N4 — Gribov: the scale is real and belongs to something else.** The Gribov horizon does supply a
+scale, but it is **disjoint from the fixed locus** and moves with the *section* parameter while the
+fixed locus does not. The genuine fixed point (`A = 0`, stabiliser the global colour group) **forces
+no periodicity and supplies no scale.** R-fix's converse is unsupported.
+
+**Two corrections to our own work, both from this run.**
+1. **Section 0's A3 was half wrong in our own voice.** Its "free → pure number" gloss fails: `h/e` is
+   dimensionful and depends on no local datum. The underlying criterion survives; the gloss did not.
+   Logged forward in Section 6 rather than edited over Section 0.
+2. **An in-flight instrument correction, the eleventh of this shape.** G1 first asserted on an
+   *absolute* period defect of `3.07e-11`. Varying basis size showed the defect **grows**
+   (`1.1e-12 → 1.7e-10`) while its ratio to `‖H‖` stays flat at `~1e-15` — **LAPACK backward error,
+   not physics**. Now asserts on the relative defect. Separately, a sign-change root scan **missed
+   the Gribov horizon entirely** (a tangential double root produces no sign change), reporting
+   `min|FP| = 2.598` where the true value is **0**; replaced with exact roots. Both were caught by
+   the specialist, not by us.
+
+**Not vacuous — which was a live possibility, not a formality.** The mechanism half is contentful
+and confirmed on four cases that had no part in building it, and **all four original rows are
+untouched.** What fails is everything the sentence claimed *beyond* the mechanism.
+
+**Offered, not asserted (T2).** Section 6 proposes splitting the sentence into independent
+mechanism / scale / observability statements plus a four-mode scope note. An alternative criterion C
+(classifying by period rather than by prose antecedent) reassigns 2 of 7 rows, and **measurement
+backed C both times** — but a replacement classification built by the same run that broke the old
+one has been confirmed zero times, which is exactly the condition this entry exists to punish. It
+is logged as a proposal awaiting its own stress test.

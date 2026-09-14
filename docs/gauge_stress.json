@@ -103,6 +103,23 @@
       "free_was_standing_in_for": "free and proper",
       "falsification_shape": "F3",
       "verdict": "boundary: the free/fixed-point dichotomy is not exhaustive and not the controlling variable"
+    },
+    "G6_criterion_c": {
+      "local_data_defined_as": "fields/geometry near the locus, NOT parameters of the group action",
+      "schwarzschild_beta_times_kappa": "2*pi (identically)",
+      "reissner_nordstrom_beta_times_kappa": "2*pi (identically)",
+      "beta_depends_on_M": true,
+      "beta_depends_on_Q": true,
+      "A3_generalised": "forced content is a universal pure number in every row; dimension is carried by the conjugate coordinate",
+      "rows_where_C_and_prose_agree": 5,
+      "rows_where_C_and_prose_disagree": [
+        "conical intersect (G3)",
+        "rational rotation (G5)"
+      ],
+      "measurement_backs": "criterion C in both disagreements",
+      "C_captures": "the scale half of the table",
+      "C_does_not_capture": "the observability half",
+      "observability_actually_controlled_by": "whether the conjugate charge is a volume integral of a local density with nonzero susceptibility"
     }
   }
 }

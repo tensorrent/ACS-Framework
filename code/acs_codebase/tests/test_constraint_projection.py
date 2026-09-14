@@ -445,3 +445,23 @@ def test_fuzzy_dm_bounds_hold_and_can_detect_a_wrong_bound():
     )
     assert "All sections internally consistent." in r.stdout
     assert "at least 10 published limits exclude both ends of the bracket" in r.stdout
+
+
+def test_gauge_stress_classification_findings_hold():
+    """Three of the classification's five claims are falsified; pin that.
+
+    Guards against a silent revert of the stress result. The instrument exits
+    non-zero if any of its six checks stops reproducing.
+    """
+    r = _run_instrument("gauge_stress.py")
+    assert r.returncode == 0, (
+        "gauge_stress.py failed:\n" + r.stdout[-3000:] + r.stderr[-1000:]
+    )
+    art = DOCS / "gauge_stress.json"
+    if not art.exists():
+        pytest.skip("gauge_stress.json not present")
+    d = json.loads(art.read_text())
+    checks = d.get("checks", {})
+    for key in ["G1_theta_vacua", "G3_conical_intersection", "G5_irrational_rotation"]:
+        assert key in checks, f"{key} missing from gauge_stress.json"
+        assert checks[key].get("verdict"), f"{key} carries no verdict"

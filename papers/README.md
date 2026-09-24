@@ -1,106 +1,75 @@
-> **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
+# Paper catalog
 
-# Papers
+[Repository home](../README.md) · [Documentation](../docs/README.md) · [Reproduction](../docs/REPRODUCTION.md) · [Branches](../docs/BRANCHES.md)
 
-Manuscripts and companion notes. LaTeX sources are canonical; compiled PDFs are
-committed alongside them where available. Claim tiers and the claim-to-code
-mapping live in [`../MANIFEST.md`](../MANIFEST.md), not here.
+All **35 canonical manuscripts** have a PDF and authoritative LaTeX source. The 33 earlier manuscripts carry dated amendments; the two current consolidations explain the action-to-carrier findings and limits. Read the [publication record](../docs/publication/2026-09-24/README.md) before using historical claims. Labels below are short navigation titles, not replacements for the formal titles in the papers.
 
-## September 2026 update
+## Reading routes
 
-All 33 existing sources have dated, claim-specific amendments and rebuilt PDFs. Two new papers consolidate the completed action-to-carrier audit:
+- **Latest findings:** begin with the two current consolidations, then follow their [evidence index](../docs/CONDENSATE_EVIDENCE.md).
+- **Primes and zeros:** Paper B, Paper B′, N3, the methodology papers, and the [frontier continuations](../docs/frontier/README.md).
+- **Gauge structure and matter:** Paper A, Paper C, the condensate notes, and the current identification-boundary papers.
+- **Framework and engineering:** the core monograph, Paper D, and discrete geometry formalism.
 
-- [Complete Scalar Actions and Identifiability Boundaries](updates/ACS_Action_Identifiability.pdf) ([source](updates/ACS_Action_Identifiability.tex)).
-- [Condensate Binding, Charge Protection, and the Boundary of Particle Identification](updates/ACS_Condensate_Carrier_Boundary.pdf) ([source](updates/ACS_Condensate_Carrier_Boundary.tex)).
+## Current consolidations
 
-Read the [release record and reproduction commands](../docs/publication/2026-09-24/README.md) for corrections, retained failures and the exact verification scope. LaTeX/PDF build success does not certify every historical scientific assertion.
+- **Complete Scalar Actions and Identifiability Boundaries** — [PDF](updates/ACS_Action_Identifiability.pdf) · [LaTeX](updates/ACS_Action_Identifiability.tex). Full scalar action, hidden directions, stability, scale freedom, and RG input dependence.
+- **Condensate Binding and Particle-Identification Limits** — [PDF](updates/ACS_Condensate_Carrier_Boundary.pdf) · [LaTeX](updates/ACS_Condensate_Carrier_Boundary.tex). Charge, gauge carriers, framing, topology, color, and torsion boundaries.
 
-## `core_trilogy/` — the foundational papers
+## Foundational papers
 
-| Role | File | Subject |
-|------|------|---------|
-| A | `Palatini_Gauge_Attractor.tex` | SU(3) as a closure attractor in the Palatini bracket |
-| B | `Riemann_Spectral_Critical_Line.tex` | Spectral positional duality; deepest form |
-| B′ | `Spectral_Witness_Refinement.tex` | Retitled, tightened witness-survival variant |
-| C | `Holographic_Spectral_Inversion.tex` | Holographic resolution / ER=EPR algebraic |
+- **Paper A — Palatini Gauge Attractor** — [PDF](core_trilogy/Palatini_Gauge_Attractor.pdf) · [LaTeX](core_trilogy/Palatini_Gauge_Attractor.tex). Gauge-algebra construction; read the corrected torsion and color claims.
+- **Paper B — Riemann Spectral Critical Line** — [PDF](core_trilogy/Riemann_Spectral_Critical_Line.pdf) · [LaTeX](core_trilogy/Riemann_Spectral_Critical_Line.tex). Finite spectral constructions and their limits; does not prove RH.
+- **Paper B′ — Spectral Witness Refinement** — [PDF](core_trilogy/Spectral_Witness_Refinement.pdf) · [LaTeX](core_trilogy/Spectral_Witness_Refinement.tex). Witness survival and transport obstructions.
+- **Paper C — Holographic Spectral Inversion** — [PDF](core_trilogy/Holographic_Spectral_Inversion.pdf) · [LaTeX](core_trilogy/Holographic_Spectral_Inversion.tex). Algebraic correspondences and amended interpretation limits.
 
-Shared figures are in `core_trilogy/figures/`; `figures/` at this level holds the
-subset used by the root monograph.
+## Companion notes
 
-## `notes/` — companion notes
+- **N1 — Pythagorean Lattice Limits** — [PDF](notes/Pythagorean_Lattice_Limits.pdf) · [LaTeX](notes/Pythagorean_Lattice_Limits.tex). Minimal algebra and lattice projections.
+- **N2 — Adjoint Clifford Signature Selection** — [PDF](notes/Adjoint_Clifford_Signature_Selection.pdf) · [LaTeX](notes/Adjoint_Clifford_Signature_Selection.tex). Grading and signature-selection proposal.
+- **N3 — Prime-Gap Transition Operator** — [PDF](notes/Prime_Gap_Transition_Operator.pdf) · [LaTeX](notes/Prime_Gap_Transition_Operator.tex). Operators on prime-gap ensembles.
+- **Möbius Screw Electron** — [PDF](notes/Mobius_Screw_Electron.pdf) · [LaTeX](notes/Mobius_Screw_Electron.tex). Framed-unknot proposal; the framing-to-g=2 inference is withdrawn.
+- **Framing Transformer and Spin Parity** — [PDF](notes/Framing_Transformer_Spin_Parity.pdf) · [LaTeX](notes/Framing_Transformer_Spin_Parity.tex). Frame-loop lift, parity, and a falsified moment-ratio inference.
+- **Möbius Ribbon Capacitance** — [PDF](notes/Mobius_Ribbon_Capacitance.pdf) · [LaTeX](notes/Mobius_Ribbon_Capacitance.tex). Capacitance models; cutoff and normalization limits remain explicit.
+- **Klein-Foam Monad** — [PDF](notes/Klein_Foam_Monad.pdf) · [LaTeX](notes/Klein_Foam_Monad.tex). Condensate ontology and its required physical completion.
+- **Flag Condensate Nuclear Decay** — [PDF](notes/Flag_Condensate_Nuclear_Decay.pdf) · [LaTeX](notes/Flag_Condensate_Nuclear_Decay.tex). Phase-slip and Gamow-channel model.
+- **Alpha Overlap — Baseline** — [PDF](notes/Flag_Condensate_Palpha_Overlap.pdf) · [LaTeX](notes/Flag_Condensate_Palpha_Overlap.tex). Baseline overlap proposal.
+- **Alpha Overlap — Refined** — [PDF](notes/Flag_Condensate_Palpha_Refined.pdf) · [LaTeX](notes/Flag_Condensate_Palpha_Refined.tex). Refined model and expanded catalog.
+- **Alpha Overlap — Throat Channel** — [PDF](notes/Flag_Condensate_Palpha_Throat_Overlap.pdf) · [LaTeX](notes/Flag_Condensate_Palpha_Throat_Overlap.tex). Throat-channel overlap model.
+- **Density Engine and Many Worlds** — [PDF](notes/Density_Engine_Many_Worlds.pdf) · [LaTeX](notes/Density_Engine_Many_Worlds.tex). Interpretive note, distinct from experimental confirmation.
+- **Critical Line as a Fibered Object** — [PDF](notes/Critical_Line_As_Fibered_Object.pdf) · [LaTeX](notes/Critical_Line_As_Fibered_Object.tex). Fibered/seam formulation and its identification limits.
 
-| Role | File | Subject |
-|------|------|---------|
-| N1 | `Pythagorean_Lattice_Limits.tex` | Pythagorean structure in the minimal PS algebra |
-| N2 | `Adjoint_Clifford_Signature_Selection.tex` | Grading selection from adjoint spectral activity |
-| N3 | `Prime_Gap_Transition_Operator.tex` | Prime-gap transition operator on (ℤ/mℤ)* |
-| — | `Mobius_Screw_Electron.tex` | Framed-unknot electron model (Flag Condensate) |
-| — | `Framing_Transformer_Spin_Parity.tex` | SU(2) lift of that frame loop; parity law; T4 kill |
-| — | `Mobius_Ribbon_Capacitance.tex` | Annulus / conformal-modulus / BIE revisions of α |
-| — | `Klein_Foam_Monad.tex` | Klein-foam Monad postulation (ontology) |
-| — | `Flag_Condensate_Nuclear_Decay.tex` | Phase-slip / Bogoliubov Gamow channel |
-| — | `Flag_Condensate_Palpha_{Overlap,Refined,Throat_Overlap}.tex` | Pα overlap trilogy |
-| — | `Density_Engine_Many_Worlds.tex` | Density Engine interpretive note |
-| — | `Critical_Line_As_Fibered_Object.tex` | The critical line as a two-sided seam (Fork C synthesis) |
+## Methodology
 
-## `methodology/` — empirical tools
+- **FF06e — Spectral Rigidity and the Shuffle Knife** — [PDF](methodology/Spectral_Rigidity_Shuffle_Knife.pdf) · [LaTeX](methodology/Spectral_Rigidity_Shuffle_Knife.tex). Finite-sample discriminants and reference ensembles.
+- **FF06f — Prime-Carrier Position Form Factor** — [PDF](methodology/Prime_Carrier_Position_Form_Factor.pdf) · [LaTeX](methodology/Prime_Carrier_Position_Form_Factor.tex). Position statistics and the prime/zero correspondence.
+- **FF06g-M — Form/Function Relativity** — [PDF](methodology/Form_Function_Relativity.pdf) · [LaTeX](methodology/Form_Function_Relativity.tex). Reference-frame dependence of the form/function labels.
+- **FF06h-M — Scaled Invariance of Infinity and Zero** — [PDF](methodology/Scaled_Invariance_of_Infinity_and_Zero.pdf) · [LaTeX](methodology/Scaled_Invariance_of_Infinity_and_Zero.tex). Resolution-relative counts and joint-scaling invariants.
+- **I7 — Section 9 Cone Chain and Four-Thirds Tests** — [PDF](methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf) · [LaTeX](methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex). Exact constraints and negative controls.
 
-| Role | File |
-|------|------|
-| FF06e | `Spectral_Rigidity_Shuffle_Knife.tex` |
-| FF06f | `Prime_Carrier_Position_Form_Factor.tex` |
-| **FF06g-M** | `Form_Function_Relativity.tex` |
-| **FF06h-M** | `Scaled_Invariance_of_Infinity_and_Zero.tex` |
-| I7 | `Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex` |
+## Later research sequence
 
-## `later_FF06_series/` — chronological research thread
+- **FF06g-L — The Geometry Engine** — [PDF](later_FF06_series/The_Geometry_Engine.pdf) · [LaTeX](later_FF06_series/The_Geometry_Engine.tex). Reference-engine specification.
+- **FF06h-L — When a Number Lies** — [PDF](later_FF06_series/When_a_Number_Lies.pdf) · [LaTeX](later_FF06_series/When_a_Number_Lies.tex). Relational limits and domain tests.
+- **FF06i — The Reversible Flattening** — [PDF](later_FF06_series/The_Reversible_Flattening.pdf) · [LaTeX](later_FF06_series/The_Reversible_Flattening.tex). Reversible representation changes.
+- **FF06J — Reversible Flattening Monograph** — [PDF](later_FF06_series/The_Reversible_Flattening_Monograph.pdf) · [LaTeX](later_FF06_series/The_Reversible_Flattening_Monograph.tex). Expanded presentation of the research thread.
+- **FF06K — Reversible Flattening Process Record** — [PDF](later_FF06_series/The_Reversible_Flattening_Process_Record.pdf) · [LaTeX](later_FF06_series/The_Reversible_Flattening_Process_Record.tex). Historical process record.
+- **K1 — The Elimination Ledger** — [PDF](later_FF06_series/The_Elimination_Ledger.pdf) · [LaTeX](later_FF06_series/The_Elimination_Ledger.tex). Falsifications and revised interpretations.
+- **Σ — One Mechanism, Many Forms** — [PDF](later_FF06_series/One_Mechanism_Many_Forms_Sigma.pdf) · [LaTeX](later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex). Consolidated synthesis.
+- **Three-Layer Decomposition** — [PDF](later_FF06_series/Three_Layer_Decomposition.pdf) · [LaTeX](later_FF06_series/Three_Layer_Decomposition.tex). Level decomposition of the zero statistics.
 
-| Role | File |
-|------|------|
-| **FF06g-L** | `The_Geometry_Engine.tex` |
-| **FF06h-L** | `When_a_Number_Lies.tex` |
-| FF06i | `The_Reversible_Flattening.tex` |
-| FF06J | `The_Reversible_Flattening_Monograph.tex` |
-| FF06K | `The_Reversible_Flattening_Process_Record.tex` |
-| K1 | `The_Elimination_Ledger.tex` |
-| Σ | `One_Mechanism_Many_Forms_Sigma.tex` |
-| — | `Three_Layer_Decomposition.tex` |
+## Monographs and engineering
 
-The four `*_disp.py` files here are display copies of engine code used in that
-thread; the verification code proper lives under [`../code/`](../code).
+- **Form, Function, and Asymmetry** — [PDF](Form_Function_and_Asymmetry.pdf) · [LaTeX](Form_Function_and_Asymmetry.tex). Consolidated core monograph with dated amendments.
+- **Paper D — Deterministic AI Stack PDR** — [PDF](ACS_Deterministic_AI_Stack_PDR.pdf) · [LaTeX](ACS_Deterministic_AI_Stack_PDR.tex). Engineering blueprint, not a benchmark certification.
+- **Discrete Geometry Formalism** — [PDF](discrete_geometry_formalism.pdf) · [LaTeX](discrete_geometry_formalism.tex). Dynamical epistemic algebra formalization.
 
-### ⚠️ The FF06 g/h collision — read before citing by letter
+## Naming and source conventions
 
-Two independent lettering schemes grew in parallel, and **the bare labels
-`FF06g` and `FF06h` each name two different papers**:
+`FF06g` and `FF06h` each refer to two different papers. Use **FF06g-M / FF06h-M** for methodology and **FF06g-L / FF06h-L** for the later sequence. The older bare labels remain in historical documents. FF06f refers to the prime-carrier position form factor, not the separate three-layer decomposition.
 
-| Bare label | In `methodology/` | In `later_FF06_series/` |
-|---|---|---|
-| `FF06g` | Form/Function Relativity | The Geometry Engine |
-| `FF06h` | Scaled Invariance of ∞ and 0 | When a Number Lies |
+Markdown mirrors and `*_disp.py` files are historical reading/display copies. LaTeX is authoritative for manuscripts; verification entry points are listed in the [code guide](../code/README.md). Shared figures remain in their original directories.
 
-Both schemes are entrenched in existing documents, so neither is being
-retired. Instead, **use the suffixed forms**: `-M` for the `methodology/`
-paper, `-L` for the `later_FF06_series/` paper. A bare `FF06g` or `FF06h`
-should be read as ambiguous and resolved by looking at the surrounding
-subtree. Unsuffixed letters elsewhere in the series (e, f, i, J, K, K1, Σ)
-are unambiguous and need no qualifier.
+The [machine-readable catalog](catalog.json) is checked against every canonical LaTeX document by CI. The [supporting Yang–Mills comparison paper](../docs/ym_comparison_methodology_paper.pdf) and [source](../docs/ym_comparison_methodology_paper.tex) live under `docs/` and are outside this 35-paper publication inventory.
 
-A second, resolved case: `FF06f` designates
-`methodology/Prime_Carrier_Position_Form_Factor.tex`. Some older text used it
-loosely for the three-layer decomposition, which is the separate
-`later_FF06_series/Three_Layer_Decomposition.tex`.
-
-## Root-level
-
-- `Form_Function_and_Asymmetry.tex` — consolidated core monograph
-- `ACS_Deterministic_AI_Stack_PDR.tex` — Paper D, Deterministic AI Stack blueprint
-- `discrete_geometry_formalism.tex` — Dynamical Epistemic Algebra formalization
-
-## Conventions
-
-- `.md` mirrors accompany the recent Flag Condensate notes for readability; the
-  `.tex` is authoritative where the two differ.
-- Artifact paths cited inside papers are repo-relative. Where a run log or
-  results file was not committed, the paper says so rather than citing a path
-  that does not resolve.
+Authorship and [paper licensing](LICENSE-PAPERS.md) remain unchanged.

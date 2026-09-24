@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-24",
+  "repository": "tensorrent/ACS-Framework",
+  "audited_main": "b75cf44fd1b18ceabce89758d2ae4b26f1606686",
+  "branches_before": 16,
+  "merged_branch_candidates": 9,
+  "retained_unmerged_branches": 6,
+  "branches": [
+    {
+      "branch": "claude/constraint-projection-framework-010dsu",
+      "sha": "eb52629acc6eb6b80ded6e01873acb728fa409c5",
+      "merged_into_audited_main": false,
+      "unique_commits": 46,
+      "main_only_commits": 9,
+      "common_ancestor": "29e574084ec6892f81de1712283bad6854393fb4",
+      "last_commit_date": "2026-09-14T17:09:31Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/constraint-projection-framework-010dsu",
+          "mergedAt": null,
+          "number": 14,
+          "state": "OPEN",
+          "title": "CPF: a manuscript audited, then the audit audited \u2014 three of our own classification's five claims falsified, and the method found to be almost entirely prior art",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/14"
+        }
+      ],
+      "disposition": "retain_unmerged"
+    },
+    {
+      "branch": "claude/electron-banach-tarski-lduyf6",
+      "sha": "f46ec478ad1f5dbdf4b2d5dedd46d3b027563968",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 47,
+      "common_ancestor": "f46ec478ad1f5dbdf4b2d5dedd46d3b027563968",
+      "last_commit_date": "2026-07-26T15:20:12Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/electron-banach-tarski-lduyf6",
+          "mergedAt": "2026-07-26T11:59:30Z",
+          "number": 8,
+          "state": "MERGED",
+          "title": "Fix recursive find-replace corruption from title standardization",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/8"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "claude/form-function-perspective-trsjjg",
+      "sha": "e6a7625ba432f6b849b1e05d5707c004ae79618f",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 75,
+      "common_ancestor": "e6a7625ba432f6b849b1e05d5707c004ae79618f",
+      "last_commit_date": "2026-07-11T23:12:26Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/form-function-perspective-trsjjg",
+          "mergedAt": "2026-07-11T20:39:29Z",
+          "number": 1,
+          "state": "MERGED",
+          "title": "papers(methodology): add FF06g \u2014 form/function is relative to the reference frame",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/1"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "claude/infinity-zero-scaled-invariance-vzm54b",
+      "sha": "ef82e58eb021d7837889272c8e377ae723bb60b4",
+      "merged_into_audited_main": false,
+      "unique_commits": 1,
+      "main_only_commits": 70,
+      "common_ancestor": "5442eab851ed401ac07f33985769b3ce6586502c",
+      "last_commit_date": "2026-07-14T13:54:35Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/infinity-zero-scaled-invariance-vzm54b",
+          "mergedAt": null,
+          "number": 4,
+          "state": "CLOSED",
+          "title": "Add scaled invariance verification for infinity and zero as counting labels",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/4"
+        }
+      ],
+      "disposition": "retain_unmerged"
+    },
+    {
+      "branch": "claude/neiman-tensor-equation-nub8q8",
+      "sha": "b31d1d06481ef487ecadb512b8b9ac80ecb12211",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 54,
+      "common_ancestor": "b31d1d06481ef487ecadb512b8b9ac80ecb12211",
+      "last_commit_date": "2026-07-17T16:09:35Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/neiman-tensor-equation-nub8q8",
+          "mergedAt": "2026-08-07T13:53:16Z",
+          "number": 7,
+          "state": "MERGED",
+          "title": "Spectral witness arc: two-face census, p^{-k/2} ladder tower, \u03c7^k twist + commutator law, quantified HP wall and its resolution class; seam synthesis note (+ FF06h reconciled)",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/7"
+        },
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/neiman-tensor-equation-nub8q8",
+          "mergedAt": "2026-07-13T22:07:56Z",
+          "number": 3,
+          "state": "MERGED",
+          "title": "paper_a(extras): equation that solves the Riemann curvature tensor (Palatini/ACS Layer 2)",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/3"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "claude/papers-repo-analysis-kce6bn",
+      "sha": "e4bc97195e2d697dce2aade749d62ea6aff7bc4b",
+      "merged_into_audited_main": false,
+      "unique_commits": 1,
+      "main_only_commits": 10,
+      "common_ancestor": "1c8e0e1ff69ad79d238af2793aa101c91fad6385",
+      "last_commit_date": "2026-08-12T18:48:56Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/papers-repo-analysis-kce6bn",
+          "mergedAt": "2026-08-12T17:45:04Z",
+          "number": 13,
+          "state": "MERGED",
+          "title": "skill: add self-contained ACS framework knowledge module",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/13"
+        }
+      ],
+      "disposition": "retain_unmerged"
+    },
+    {
+      "branch": "claude/public-ip-exposure-audit-6zxyf4",
+      "sha": "93c94595ad94a98aba94f9caa77d81e25b361149",
+      "merged_into_audited_main": false,
+      "unique_commits": 1,
+      "main_only_commits": 13,
+      "common_ancestor": "08abbbdf70a70114a71f46540d5ee45612b28cf5",
+      "last_commit_date": "2026-08-10T15:19:37Z",
+      "pull_requests": [],
+      "disposition": "retain_unmerged"
+    },
+    {
+      "branch": "claude/repo-cleanup-public-u5wyz8",
+      "sha": "66b201ed785283cbe8c9e256b50346c9fe456734",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 14,
+      "common_ancestor": "66b201ed785283cbe8c9e256b50346c9fe456734",
+      "last_commit_date": "2026-08-07T20:09:34Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/repo-cleanup-public-u5wyz8",
+          "mergedAt": "2026-08-07T20:10:11Z",
+          "number": 12,
+          "state": "MERGED",
+          "title": "Resolve all 99 medium/low editorial-audit findings (full pass)",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/12"
+        },
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/repo-cleanup-public-u5wyz8",
+          "mergedAt": "2026-08-07T19:32:27Z",
+          "number": 11,
+          "state": "MERGED",
+          "title": "Fix the eight high-severity editorial-audit findings (for review)",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/11"
+        },
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/repo-cleanup-public-u5wyz8",
+          "mergedAt": "2026-08-07T18:53:42Z",
+          "number": 10,
+          "state": "MERGED",
+          "title": "Full glossary and key-term index, citation metadata, and full-corpus editorial audit",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/10"
+        },
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/repo-cleanup-public-u5wyz8",
+          "mergedAt": "2026-08-07T13:53:14Z",
+          "number": 9,
+          "state": "MERGED",
+          "title": "Repo cleanup: consolidate all outstanding branch work into main",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/9"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "claude/torsion-topological-condensation-h6v40k",
+      "sha": "905ed4939514c3b69a8f114022bb76ed40a21f79",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 65,
+      "common_ancestor": "905ed4939514c3b69a8f114022bb76ed40a21f79",
+      "last_commit_date": "2026-07-17T14:52:43Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/torsion-topological-condensation-h6v40k",
+          "mergedAt": "2026-08-07T13:53:16Z",
+          "number": 6,
+          "state": "MERGED",
+          "title": "Conjecture tests: EM-annihilator killed (F-6); condensate-as-collapse and hypercone-projection survive",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/6"
+        },
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/torsion-topological-condensation-h6v40k",
+          "mergedAt": "2026-07-17T14:07:46Z",
+          "number": 5,
+          "state": "MERGED",
+          "title": "Torsion-induced topological condensation: holonomy verdict (T4 \u2014 Topological Dissipation)",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/5"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "claude/tr8g-pythagorean-theorem-4332wx",
+      "sha": "558874e8d0ea345b48a937c88aabc536a35193a5",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 73,
+      "common_ancestor": "558874e8d0ea345b48a937c88aabc536a35193a5",
+      "last_commit_date": "2026-07-13T13:07:07Z",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "claude/tr8g-pythagorean-theorem-4332wx",
+          "mergedAt": "2026-07-13T14:22:37Z",
+          "number": 2,
+          "state": "MERGED",
+          "title": "Paper B: reframe prime-zero acoustic coupling as complementary cancellation, not cross-species resonance",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/2"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "codex/acs-frontier-delta-2026-09-12",
+      "sha": "6234df3811a635d139e3eeba30cfaa78b1015e2b",
+      "merged_into_audited_main": false,
+      "unique_commits": 27,
+      "main_only_commits": 2,
+      "common_ancestor": "173398ba4e5453f9c2162f52551f925f9a16104a",
+      "last_commit_date": "2026-09-14T03:39:57-04:00",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "codex/acs-frontier-delta-2026-09-12",
+          "mergedAt": null,
+          "number": 16,
+          "state": "OPEN",
+          "title": "Advance Frontier: source constraints and mixed observations tighten noise bounds",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/16"
+        }
+      ],
+      "disposition": "retain_unmerged"
+    },
+    {
+      "branch": "codex/acs-publication-update-2026-09-24",
+      "sha": "a51abfea189e08104b52f71ecdc0c63732601815",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 1,
+      "common_ancestor": "a51abfea189e08104b52f71ecdc0c63732601815",
+      "last_commit_date": "2026-09-24T12:01:11-04:00",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "codex/acs-publication-update-2026-09-24",
+          "mergedAt": "2026-09-24T16:07:12Z",
+          "number": 17,
+          "state": "MERGED",
+          "title": "Publish amended ACS manuscripts and reproducible research checks",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/17"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "codex/import-acs-frontier-2026-09-11",
+      "sha": "89bbb278a5d72791b4104925a83f10758cd22535",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 8,
+      "common_ancestor": "89bbb278a5d72791b4104925a83f10758cd22535",
+      "last_commit_date": "2026-09-12T10:17:57-04:00",
+      "pull_requests": [
+        {
+          "baseRefName": "main",
+          "headRefName": "codex/import-acs-frontier-2026-09-11",
+          "mergedAt": "2026-09-12T15:03:42Z",
+          "number": 15,
+          "state": "MERGED",
+          "title": "Import ACS Frontier continuation, checklist, and evidence",
+          "url": "https://github.com/tensorrent/ACS-Framework/pull/15"
+        }
+      ],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "docs/glossary",
+      "sha": "8fdfcfe504fb33e6d97adbe670606eb0095e1930",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 57,
+      "common_ancestor": "8fdfcfe504fb33e6d97adbe670606eb0095e1930",
+      "last_commit_date": "2026-07-30T16:09:01-04:00",
+      "pull_requests": [],
+      "disposition": "removed_merged_ref"
+    },
+    {
+      "branch": "feature/prime-fhe-homomorphic-primitive",
+      "sha": "8fea47f4153dcb13287c90d8f2dbb809bed6d9cc",
+      "merged_into_audited_main": false,
+      "unique_commits": 17,
+      "main_only_commits": 92,
+      "common_ancestor": null,
+      "last_commit_date": "2026-07-29T21:20:19-04:00",
+      "pull_requests": [],
+      "disposition": "retain_unmerged",
+      "history_note": "Separate root history; unique/main-only counts are reachable commit counts, not divergence from a common ancestor."
+    },
+    {
+      "branch": "main",
+      "sha": "b75cf44fd1b18ceabce89758d2ae4b26f1606686",
+      "merged_into_audited_main": true,
+      "unique_commits": 0,
+      "main_only_commits": 0,
+      "common_ancestor": "b75cf44fd1b18ceabce89758d2ae4b26f1606686",
+      "last_commit_date": "2026-09-24T12:07:12-04:00",
+      "pull_requests": [],
+      "disposition": "default"
+    }
+  ],
+  "cleanup_status": "completed",
+  "branches_after_cleanup": 7,
+  "cleanup_receipt": {
+    "repository": "tensorrent/ACS-Framework",
+    "main_verified": "b75cf44fd1b18ceabce89758d2ae4b26f1606686",
+    "removed": [
+      {
+        "branch": "claude/electron-banach-tarski-lduyf6",
+        "sha": "f46ec478ad1f5dbdf4b2d5dedd46d3b027563968"
+      },
+      {
+        "branch": "claude/form-function-perspective-trsjjg",
+        "sha": "e6a7625ba432f6b849b1e05d5707c004ae79618f"
+      },
+      {
+        "branch": "claude/neiman-tensor-equation-nub8q8",
+        "sha": "b31d1d06481ef487ecadb512b8b9ac80ecb12211"
+      },
+      {
+        "branch": "claude/repo-cleanup-public-u5wyz8",
+        "sha": "66b201ed785283cbe8c9e256b50346c9fe456734"
+      },
+      {
+        "branch": "claude/torsion-topological-condensation-h6v40k",
+        "sha": "905ed4939514c3b69a8f114022bb76ed40a21f79"
+      },
+      {
+        "branch": "claude/tr8g-pythagorean-theorem-4332wx",
+        "sha": "558874e8d0ea345b48a937c88aabc536a35193a5"
+      },
+      {
+        "branch": "codex/acs-publication-update-2026-09-24",
+        "sha": "a51abfea189e08104b52f71ecdc0c63732601815"
+      },
+      {
+        "branch": "codex/import-acs-frontier-2026-09-11",
+        "sha": "89bbb278a5d72791b4104925a83f10758cd22535"
+      },
+      {
+        "branch": "docs/glossary",
+        "sha": "8fdfcfe504fb33e6d97adbe670606eb0095e1930"
+      }
+    ],
+    "result": "removed_merged_refs_all_commits_preserved_in_main"
+  },
+  "remote_snapshot_after_cleanup": [
+    {
+      "name": "claude/constraint-projection-framework-010dsu",
+      "protected": false,
+      "sha": "eb52629acc6eb6b80ded6e01873acb728fa409c5"
+    },
+    {
+      "name": "claude/infinity-zero-scaled-invariance-vzm54b",
+      "protected": false,
+      "sha": "ef82e58eb021d7837889272c8e377ae723bb60b4"
+    },
+    {
+      "name": "claude/papers-repo-analysis-kce6bn",
+      "protected": false,
+      "sha": "e4bc97195e2d697dce2aade749d62ea6aff7bc4b"
+    },
+    {
+      "name": "claude/public-ip-exposure-audit-6zxyf4",
+      "protected": false,
+      "sha": "93c94595ad94a98aba94f9caa77d81e25b361149"
+    },
+    {
+      "name": "codex/acs-frontier-delta-2026-09-12",
+      "protected": false,
+      "sha": "6234df3811a635d139e3eeba30cfaa78b1015e2b"
+    },
+    {
+      "name": "feature/prime-fhe-homomorphic-primitive",
+      "protected": false,
+      "sha": "8fea47f4153dcb13287c90d8f2dbb809bed6d9cc"
+    },
+    {
+      "name": "main",
+      "protected": false,
+      "sha": "b75cf44fd1b18ceabce89758d2ae4b26f1606686"
+    }
+  ],
+  "count_scope": "Remote branch refs immediately after the nine-branch cleanup; excludes the subsequent temporary navigation delivery branch."
+}

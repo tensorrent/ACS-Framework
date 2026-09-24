@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "scope": "Canonical documentclass-bearing LaTeX sources under papers/",
+  "papers": [
+    {
+      "label": "Complete Scalar Actions and Identifiability Boundaries",
+      "group": "Current consolidations",
+      "source": "papers/updates/ACS_Action_Identifiability.tex",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "summary": "Full scalar action, hidden directions, stability, scale freedom, and RG input dependence."
+    },
+    {
+      "label": "Condensate Binding and Particle-Identification Limits",
+      "group": "Current consolidations",
+      "source": "papers/updates/ACS_Condensate_Carrier_Boundary.tex",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "summary": "Charge, gauge carriers, framing, topology, color, and torsion boundaries."
+    },
+    {
+      "label": "Paper A — Palatini Gauge Attractor",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "summary": "Gauge-algebra construction; read the corrected torsion and color claims."
+    },
+    {
+      "label": "Paper B — Riemann Spectral Critical Line",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "summary": "Finite spectral constructions and their limits; does not prove RH."
+    },
+    {
+      "label": "Paper B′ — Spectral Witness Refinement",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+      "pdf": "papers/core_trilogy/Spectral_Witness_Refinement.pdf",
+      "summary": "Witness survival and transport obstructions."
+    },
+    {
+      "label": "Paper C — Holographic Spectral Inversion",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "summary": "Algebraic correspondences and amended interpretation limits."
+    },
+    {
+      "label": "N1 — Pythagorean Lattice Limits",
+      "group": "Companion notes",
+      "source": "papers/notes/Pythagorean_Lattice_Limits.tex",
+      "pdf": "papers/notes/Pythagorean_Lattice_Limits.pdf",
+      "summary": "Minimal algebra and lattice projections."
+    },
+    {
+      "label": "N2 — Adjoint Clifford Signature Selection",
+      "group": "Companion notes",
+      "source": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+      "pdf": "papers/notes/Adjoint_Clifford_Signature_Selection.pdf",
+      "summary": "Grading and signature-selection proposal."
+    },
+    {
+      "label": "N3 — Prime-Gap Transition Operator",
+      "group": "Companion notes",
+      "source": "papers/notes/Prime_Gap_Transition_Operator.tex",
+      "pdf": "papers/notes/Prime_Gap_Transition_Operator.pdf",
+      "summary": "Operators on prime-gap ensembles."
+    },
+    {
+      "label": "Möbius Screw Electron",
+      "group": "Companion notes",
+      "source": "papers/notes/Mobius_Screw_Electron.tex",
+      "pdf": "papers/notes/Mobius_Screw_Electron.pdf",
+      "summary": "Framed-unknot proposal; the framing-to-g=2 inference is withdrawn."
+    },
+    {
+      "label": "Framing Transformer and Spin Parity",
+      "group": "Companion notes",
+      "source": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "summary": "Frame-loop lift, parity, and a falsified moment-ratio inference."
+    },
+    {
+      "label": "Möbius Ribbon Capacitance",
+      "group": "Companion notes",
+      "source": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+      "pdf": "papers/notes/Mobius_Ribbon_Capacitance.pdf",
+      "summary": "Capacitance models; cutoff and normalization limits remain explicit."
+    },
+    {
+      "label": "Klein-Foam Monad",
+      "group": "Companion notes",
+      "source": "papers/notes/Klein_Foam_Monad.tex",
+      "pdf": "papers/notes/Klein_Foam_Monad.pdf",
+      "summary": "Condensate ontology and its required physical completion."
+    },
+    {
+      "label": "Flag Condensate Nuclear Decay",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+      "pdf": "papers/notes/Flag_Condensate_Nuclear_Decay.pdf",
+      "summary": "Phase-slip and Gamow-channel model."
+    },
+    {
+      "label": "Alpha Overlap — Baseline",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Overlap.pdf",
+      "summary": "Baseline overlap proposal."
+    },
+    {
+      "label": "Alpha Overlap — Refined",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Refined.pdf",
+      "summary": "Refined model and expanded catalog."
+    },
+    {
+      "label": "Alpha Overlap — Throat Channel",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.pdf",
+      "summary": "Throat-channel overlap model."
+    },
+    {
+      "label": "Density Engine and Many Worlds",
+      "group": "Companion notes",
+      "source": "papers/notes/Density_Engine_Many_Worlds.tex",
+      "pdf": "papers/notes/Density_Engine_Many_Worlds.pdf",
+      "summary": "Interpretive note, distinct from experimental confirmation."
+    },
+    {
+      "label": "Critical Line as a Fibered Object",
+      "group": "Companion notes",
+      "source": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "summary": "Fibered/seam formulation and its identification limits."
+    },
+    {
+      "label": "FF06e — Spectral Rigidity and the Shuffle Knife",
+      "group": "Methodology",
+      "source": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+      "pdf": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.pdf",
+      "summary": "Finite-sample discriminants and reference ensembles."
+    },
+    {
+      "label": "FF06f — Prime-Carrier Position Form Factor",
+      "group": "Methodology",
+      "source": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+      "pdf": "papers/methodology/Prime_Carrier_Position_Form_Factor.pdf",
+      "summary": "Position statistics and the prime/zero correspondence."
+    },
+    {
+      "label": "FF06g-M — Form/Function Relativity",
+      "group": "Methodology",
+      "source": "papers/methodology/Form_Function_Relativity.tex",
+      "pdf": "papers/methodology/Form_Function_Relativity.pdf",
+      "summary": "Reference-frame dependence of the form/function labels."
+    },
+    {
+      "label": "FF06h-M — Scaled Invariance of Infinity and Zero",
+      "group": "Methodology",
+      "source": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+      "pdf": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.pdf",
+      "summary": "Resolution-relative counts and joint-scaling invariants."
+    },
+    {
+      "label": "I7 — Section 9 Cone Chain and Four-Thirds Tests",
+      "group": "Methodology",
+      "source": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+      "pdf": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf",
+      "summary": "Exact constraints and negative controls."
+    },
+    {
+      "label": "FF06g-L — The Geometry Engine",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Geometry_Engine.tex",
+      "pdf": "papers/later_FF06_series/The_Geometry_Engine.pdf",
+      "summary": "Reference-engine specification."
+    },
+    {
+      "label": "FF06h-L — When a Number Lies",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/When_a_Number_Lies.tex",
+      "pdf": "papers/later_FF06_series/When_a_Number_Lies.pdf",
+      "summary": "Relational limits and domain tests."
+    },
+    {
+      "label": "FF06i — The Reversible Flattening",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening.pdf",
+      "summary": "Reversible representation changes."
+    },
+    {
+      "label": "FF06J — Reversible Flattening Monograph",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.pdf",
+      "summary": "Expanded presentation of the research thread."
+    },
+    {
+      "label": "FF06K — Reversible Flattening Process Record",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.pdf",
+      "summary": "Historical process record."
+    },
+    {
+      "label": "K1 — The Elimination Ledger",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "summary": "Falsifications and revised interpretations."
+    },
+    {
+      "label": "Σ — One Mechanism, Many Forms",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+      "pdf": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.pdf",
+      "summary": "Consolidated synthesis."
+    },
+    {
+      "label": "Three-Layer Decomposition",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+      "pdf": "papers/later_FF06_series/Three_Layer_Decomposition.pdf",
+      "summary": "Level decomposition of the zero statistics."
+    },
+    {
+      "label": "Form, Function, and Asymmetry",
+      "group": "Monographs and engineering",
+      "source": "papers/Form_Function_and_Asymmetry.tex",
+      "pdf": "papers/Form_Function_and_Asymmetry.pdf",
+      "summary": "Consolidated core monograph with dated amendments."
+    },
+    {
+      "label": "Paper D — Deterministic AI Stack PDR",
+      "group": "Monographs and engineering",
+      "source": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+      "pdf": "papers/ACS_Deterministic_AI_Stack_PDR.pdf",
+      "summary": "Engineering blueprint, not a benchmark certification."
+    },
+    {
+      "label": "Discrete Geometry Formalism",
+      "group": "Monographs and engineering",
+      "source": "papers/discrete_geometry_formalism.tex",
+      "pdf": "papers/discrete_geometry_formalism.pdf",
+      "summary": "Dynamical epistemic algebra formalization."
+    }
+  ]
+}

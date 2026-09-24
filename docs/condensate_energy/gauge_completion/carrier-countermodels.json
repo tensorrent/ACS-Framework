@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "gauged_T15_cubic_anomaly_cancels": true,
+    "mixed_weak_trace_zero": true,
+    "weak_Witten_doublet_count_even": true,
+    "two_antilepton_weights_equal_Delta": true,
+    "light-carrier_mass_map": true,
+    "heavy-carrier_mass_map": true,
+    "same_Yukawa_ratio_allows_opposite_threshold_outcomes": true,
+    "same_Yukawa_ratio_allows_opposite_total_energy_outcomes": true
+  },
+  "cases": [
+    {
+      "label": "light-carrier",
+      "Y_eigenvalue": "1/10",
+      "Z_over_Y": "2/3",
+      "fermion_mass": "1/12",
+      "pair_threshold": "1/6",
+      "infinitesimal_pair_emission_kinematically_open": true,
+      "complete_dispersal_to_free_pairs_energetically_open": true
+    },
+    {
+      "label": "heavy-carrier",
+      "Y_eigenvalue": "1",
+      "Z_over_Y": "2/3",
+      "fermion_mass": "5/6",
+      "pair_threshold": "5/3",
+      "infinitesimal_pair_emission_kinematically_open": false,
+      "complete_dispersal_to_free_pairs_energetically_open": false
+    }
+  ],
+  "reference": {
+    "charge": 1000,
+    "coupling": 0.08,
+    "omega": 0.8538913226848815,
+    "energy_per_charge": 0.895895737139069
+  },
+  "assumptions": [
+    "Canonical selected vacuum Phi=I2/2, Delta=0, with source-convention Dirac mass (Y+Z)/2.",
+    "A nonzero Majorana-type interaction F Delta R R permits the appropriate antilepton pair; F is an additional selected nonzero coefficient.",
+    "The m_R=0 Delta component couples the two weak components of the lepton pair; both have equal Dirac mass in this chosen equal-VEV vacuum.",
+    "These are tree-level kinematic comparisons. Fermion occupation, Pauli blocking, transition matrix elements, loop corrections, and actual rates are not calculated.",
+    "Neither absolute Y value is asserted to be the physical ACS choice. The comparison proves that the 2/3 ratio plus gauge content cannot alone select the threshold."
+  ],
+  "conclusion": "Existing gauge charge avoids the global-X anomaly obstruction but does not assign carrier masses or protect scalar q-number.",
+  "source_sha256": {
+    "code/condensate_energy/carrier_threshold_countermodels.py": "d71a94bddc3cd914a600b4b00e4f09e0d44e028315af0028c2065af92dc9b287",
+    "docs/condensate_energy/gauge_completion/results.json": "def66ce478a08cb5f18b329518788549f1b5421d52cb7a0eea4571ac8ec7f134",
+    "docs/condensate_energy/gauge_completion/carrier-contract.json": "ca82f286c0435942e646bb2115fe301a25d34b6cbf452c0d42028843d2906560",
+    "docs/frontier/2026-09-11/workstreams/rg/report.md": "d93c4c9526f497194ba9249a3f885e1d90aafb028bcc23aac6d86eb930dc3a80"
+  },
+  "all_checks_passed": true
+}

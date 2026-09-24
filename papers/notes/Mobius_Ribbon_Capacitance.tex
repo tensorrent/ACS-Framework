@@ -30,6 +30,9 @@ Annulus, Conformal Modulus, and BIE Revisions of the $\alpha$ Estimate}\\[0.35em
 \small\textit{Sovereign-Stack ACS Research Program}}
 \date{July 22, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -49,6 +52,11 @@ inputs.  Comparison uses the CODATA-style reference
 $\alpha^{-1}\approx 137.035999084$; no uniqueness or derivation claim
 for $\alpha$ is made.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 \newpage
@@ -157,16 +165,16 @@ aspect window where the half-width is panel-resolved
 \label{sec:results}
 
 Code path:
-\texttt{code/capacitance\_ribbon/ribbon\_capacitance.py}.
+\nolinkurl{code/capacitance_ribbon/ribbon_capacitance.py}.
 Artifacts:
-\texttt{docs/capacitance\_ribbon\_results.json} (machine-readable results)
-and \texttt{docs/capacitance\_ribbon\_run.log} (full run log), regenerated
+\nolinkurl{docs/capacitance_ribbon_results.json} (machine-readable results)
+and \nolinkurl{docs/capacitance_ribbon_run.log} (full run log), regenerated
 from the script above.
 
 \subsection{Worked demo at $a/R=0.05$}
 
 \begin{center}
-\begin{tabular}{@{}lccc@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lccc@{}}
 \toprule
 Model & $C$ [F] & $\alpha^{-1}$ & $C/(\epsilon_0 R)$ \\
 \midrule
@@ -174,7 +182,7 @@ Annulus & $1.768\times 10^{-24}$ & $3.037587$ & $1.034$ \\
 Conformal (cover$=2$) & $3.174\times 10^{-24}$ & $1.692054$ & $1.857$ \\
 BIE M\"obius & $1.441\times 10^{-23}$ & $0.372688$ & $8.430$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 At moderate aspect ratio the log-ring models sit near the thin-wire
@@ -186,7 +194,7 @@ $\mathcal{O}(137)$.
 \subsection{CODATA-matching aspect ratios (analytic models)}
 
 \begin{center}
-\begin{tabular}{@{}lll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lll@{}}
 \toprule
 Model & $a/R$ at $\alpha^{-1}_{\mathrm{ref}}$ & Note \\
 \midrule
@@ -194,7 +202,7 @@ Annulus & $\approx 2.039\times 10^{-118}$ & closed form \\
 Conformal & $\approx 3.824\times 10^{-237}$ & root find; cover$=2$ \\
 BIE & --- & not resolved at that aspect \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \subsection{Ordering on the scanned grid}
@@ -224,7 +232,7 @@ caveat of~\cite{mobius2026}, \S4.2, made quantitative.
 \section{Summary}
 
 \begin{center}
-\begin{tabular}{@{}lp{0.55\textwidth}@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lp{0.55\textwidth}@{}}
 \toprule
 Object & Status \\
 \midrule
@@ -233,12 +241,25 @@ $C_{\mathrm{conf}}$ & conformal-modulus revision; still log-ring scheme \\
 $C_{\mathrm{BIE}}$ & immersed M\"obius collocation; moderate-aspect only \\
 $\alpha^{-1}$ via~\eqref{eq:alphaC} & model output; not a uniqueness claim \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \section*{Acknowledgments}
 This sequel answers the revision path stated in~\cite{mobius2026},
 \S4.2 (geometric fidelity of the capacitance model).
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The annulus, modulus and boundary-integral calculations compare specified geometric models. Their radius, cutoff, charge split and self-energy convention remain inputs. In the later recovered capacitor proposal, the printed $C=2\pi\epsilon_0R/L$, $q=e/2$ and spin radius imply $\alpha^{-1}=L/2$. Choosing an exponential cutoff to reproduce an inserted target does not derive that target. This does not identify all three numerical models with that later formula; it requires each model's normalization to be checked separately before a physical comparison.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{9}
 
@@ -247,7 +268,7 @@ Flag Condensate Collaboration,
 \textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$
 and a Capacitance Model of $\alpha$},
 preprint (July 2026),
-\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+\nolinkurl{papers/notes/Mobius_Screw_Electron.tex}.
 
 \end{thebibliography}
 

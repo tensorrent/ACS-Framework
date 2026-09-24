@@ -1,0 +1,41 @@
+{
+  "checks_total": 45,
+  "checks_passed": 45,
+  "failures": [],
+  "algebraic_pairing": {
+    "original_raw_sum": "0",
+    "orthonormal_raw_sum": "0",
+    "rescaled_raw_sum": "640/3",
+    "rotated_raw_sum": "-128/9",
+    "full_contraction": "0",
+    "positive_operator_trace": "32/3",
+    "positive_oscillator_energy": 4,
+    "qualification": "Oscillator example is a diagnostic, not an identification of ACS particle modes."
+  },
+  "beta_Omega": "(8*m0**2 + 2*m1**2 + 2*m2**2 + 60*md**2)/(32*pi**2)",
+  "gauge_check": {
+    "charged_mass_block": [
+      [
+        0.015624999999999998,
+        -0.017499999999999998
+      ],
+      [
+        -0.017499999999999998,
+        0.15312499999999998
+      ]
+    ],
+    "expected_charged_mass_block": [
+      [
+        0.015624999999999998,
+        -0.017499999999999998
+      ],
+      [
+        -0.017499999999999998,
+        0.15312499999999998
+      ]
+    ],
+    "TBL_unbroken": false,
+    "Q_unbroken": true,
+    "source_torsion_fraction_of_total": "2/7"
+  }
+}

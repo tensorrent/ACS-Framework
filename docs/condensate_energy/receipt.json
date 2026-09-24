@@ -1,0 +1,33 @@
+{
+  "scope": "condensate-energy linear-wave experiment; original manuscripts unchanged",
+  "grouped_checks_passed": 19,
+  "stationary_cases": 180,
+  "dynamic_variants": 23,
+  "preserved_failed_attempts": [
+    "attempt-1",
+    "capture-attempt-1"
+  ],
+  "artifact_sha256": {
+    "code/condensate_energy/capture.py": "bb83c4c92d5615019e0c466ecf8b4838073b8478b5021d01dda1bdf2a8a3d37c",
+    "code/condensate_energy/plot_capture.py": "27d37e1475a3729579f4e50ca69964b9678155643fc48b503345d13a94e58672",
+    "code/condensate_energy/run.py": "7a78920341b97c2fd2f6b5a03c5c6b0099921d277b4a5254f66d9d565b6ce7ba",
+    "docs/condensate_energy/README.md": "0bfbe748d1d6e8d8c187b0e74f1b7a82f45ff0ae6f235e8624dcc1fc3af89128",
+    "docs/condensate_energy/attempt-1/failed-checks.json": "98ebd62ae2147438b64a18bf927ffa4a1301bdebcda745066ba7b023ed21139d",
+    "docs/condensate_energy/attempt-1/protocol.md": "0cebbf2333d8791c35e30c150f09b8fabe634f219308f64b53afe85eb0f31696",
+    "docs/condensate_energy/attempt-1/run.py": "2c1540b81f7d244e12d9647a55b20b4d2d886078f7a5cb31d66a4674deadf6e4",
+    "docs/condensate_energy/capture-attempt-1/capture.py": "fe0805193eb1efbde9f3d17981f1149a8118f73a3ae723c85544f2bce5c254e3",
+    "docs/condensate_energy/capture-attempt-1/failed-checks.json": "068698706b35cb51407f515d75bbd440ee9b796e07b5134d452915d1a1093483",
+    "docs/condensate_energy/capture-attempt-1/protocol.md": "669d8bac8832aa6bd4ba3028fc07965cbd27a28448fe7451ac8acc82ed41afd3",
+    "docs/condensate_energy/capture-comparison.png": "ea82a705e5869e97bc7892109166acd8dbef4f8402874255afdccd55a35c1923",
+    "docs/condensate_energy/capture-comparison.svg": "1a6364cb1b16e8b7152a528ef572a5a82dbfd0acef53a421f9f1a9037422e22a",
+    "docs/condensate_energy/capture-protocol.md": "86e2e1824889b56627829cd68c02a8d622561fdd4edf2ff86995c9a0f74ff597",
+    "docs/condensate_energy/capture-results.json": "3a1aa3f9e16ad40543f3e42e2f9b20690958c06dcdd5309cf4fd4e8114919d39",
+    "docs/condensate_energy/checks.json": "793f560ff1da631f200d9d43e7b338e4f3e4c81ca1bfc207b4fdbbcb20dc8959",
+    "docs/condensate_energy/energy-comparison.png": "a77740716ba600a47ccdd0aac3b2380da465d57b2230103ff008dce81cfcd3e0",
+    "docs/condensate_energy/energy-comparison.svg": "df82545d92a63ea2d21bc90c21e77b38db6e4aa94db692b87303322b1e14ef81",
+    "docs/condensate_energy/failed-checks.json": "068698706b35cb51407f515d75bbd440ee9b796e07b5134d452915d1a1093483",
+    "docs/condensate_energy/projective-alignment.log": "380f25d405ec2c914d4446a228064ec14941fbeaa289284e6b0fb4afd6be2680",
+    "docs/condensate_energy/protocol.md": "470c6f00b39d5818db6892001da1dccd5fc70328216052e4af439351a4eff551",
+    "docs/condensate_energy/results.json": "c2bb3bcf581e29c50b26f493ff94f177eb537342cd6fb9c310d9c9a7695011d3"
+  }
+}

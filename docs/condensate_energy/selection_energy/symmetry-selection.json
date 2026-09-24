@@ -1,0 +1,258 @@
+{
+  "checks_total": 38,
+  "checks_passed": 38,
+  "checks": [
+    {
+      "name": "split_sl3 has eight independent real directions",
+      "passed": true
+    },
+    {
+      "name": "split_sl3 is exactly closed",
+      "passed": true
+    },
+    {
+      "name": "split_sl3 basis orthonormal for real Frobenius metric",
+      "passed": true
+    },
+    {
+      "name": "upper_solvable8 has eight independent real directions",
+      "passed": true
+    },
+    {
+      "name": "upper_solvable8 is exactly closed",
+      "passed": true
+    },
+    {
+      "name": "upper_solvable8 basis orthonormal for real Frobenius metric",
+      "passed": true
+    },
+    {
+      "name": "compact_su3 has eight independent real directions",
+      "passed": true
+    },
+    {
+      "name": "compact_su3 is exactly closed",
+      "passed": true
+    },
+    {
+      "name": "compact_su3 basis orthonormal for real Frobenius metric",
+      "passed": true
+    },
+    {
+      "name": "distinct closed 8D algebra has degenerate Killing form",
+      "passed": true
+    },
+    {
+      "name": "split algebra Killing form nondegenerate",
+      "passed": true
+    },
+    {
+      "name": "compact realization genuinely skew Hermitian",
+      "passed": true
+    },
+    {
+      "name": "compact realization is not a real-matrix basis",
+      "passed": true
+    },
+    {
+      "name": "Hermitian compactness vanishes on su3",
+      "passed": true
+    },
+    {
+      "name": "archived transpose predicate would reject compact su3 even with complex arrays",
+      "passed": true
+    },
+    {
+      "name": "split and solvable candidates tie in stated combined score",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric projector idempotent",
+      "passed": true
+    },
+    {
+      "name": "real antisymmetric space dimension six",
+      "passed": true
+    },
+    {
+      "name": "rank-eight compactness lower bound defeats source threshold",
+      "passed": true
+    },
+    {
+      "name": "orthonormal saturator attains compactness lower bound",
+      "passed": true
+    },
+    {
+      "name": "archived compactness function confirms saturator",
+      "passed": true
+    },
+    {
+      "name": "archived closure accepts solvable counterexample",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 3",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 3",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 11",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 11",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 23",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 23",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 47",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 47",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 83",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 83",
+      "passed": true
+    },
+    {
+      "name": "source short flow retains real rank-eight domain seed 109",
+      "passed": true
+    },
+    {
+      "name": "source short flow obeys exact compactness bound seed 109",
+      "passed": true
+    },
+    {
+      "name": "compact color embedding can move under unitary conjugation",
+      "passed": true
+    },
+    {
+      "name": "conjugate compact embedding retains closure",
+      "passed": true
+    },
+    {
+      "name": "conjugate compact embedding retains negative Killing form",
+      "passed": true
+    },
+    {
+      "name": "original selection-principle script replays",
+      "passed": true
+    }
+  ],
+  "structures": {
+    "split_sl3": {
+      "dimension": 8,
+      "derived_rank": 8,
+      "killing_rank": 8,
+      "killing_eigenvalues": {
+        "6": 5,
+        "-6": 3
+      }
+    },
+    "upper_solvable8": {
+      "dimension": 8,
+      "derived_rank": 6,
+      "killing_rank": 2,
+      "killing_eigenvalues": {
+        "4": 2,
+        "0": 6
+      }
+    },
+    "compact_su3": {
+      "dimension": 8,
+      "derived_rank": 8,
+      "killing_rank": 8,
+      "killing_eigenvalues": {
+        "-6": 8
+      }
+    }
+  },
+  "compactness_lower_bound": 8,
+  "mean_defect_lower_bound": 0.5,
+  "source_su3_threshold": 0.15,
+  "seeded_short_flows": [
+    {
+      "seed": 3,
+      "steps": 20,
+      "initial_score": 1.7507578446708405,
+      "final_score": 1.6968830051101003,
+      "score_increasing_steps": 0,
+      "min_compactness": 21.25923596697966,
+      "minimum_mean_transpose_defect": 1.6017779645393138,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 11,
+      "steps": 20,
+      "initial_score": 1.7097884943442305,
+      "final_score": 1.6531577900399197,
+      "score_increasing_steps": 0,
+      "min_compactness": 20.89016472797406,
+      "minimum_mean_transpose_defect": 1.5989572813135111,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 23,
+      "steps": 20,
+      "initial_score": 1.6564285577478983,
+      "final_score": 1.6218161817266872,
+      "score_increasing_steps": 0,
+      "min_compactness": 19.642006848865407,
+      "minimum_mean_transpose_defect": 1.5588313542087058,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 47,
+      "steps": 20,
+      "initial_score": 1.5617251031076278,
+      "final_score": 1.5279197006634861,
+      "score_increasing_steps": 0,
+      "min_compactness": 17.335593395023743,
+      "minimum_mean_transpose_defect": 1.4663841239919382,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 83,
+      "steps": 20,
+      "initial_score": 1.7404446256838975,
+      "final_score": 1.6829491051226497,
+      "score_increasing_steps": 0,
+      "min_compactness": 20.985978462917835,
+      "minimum_mean_transpose_defect": 1.5638686070812788,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 109,
+      "steps": 20,
+      "initial_score": 1.5538294346783892,
+      "final_score": 1.5129817542305497,
+      "score_increasing_steps": 0,
+      "min_compactness": 17.711525067753712,
+      "minimum_mean_transpose_defect": 1.4627248334889846,
+      "final_label": "no_algebra"
+    }
+  ],
+  "status": "Archived real rank-eight search cannot reach its claimed compact su3 target. Exact compact su3 exists in a different, complex representation domain.",
+  "limits": [
+    "Closure plus an inserted dimension and penalty is not an Euler-Lagrange vacuum selector.",
+    "The 8D solvable counterexample refutes uniqueness of closure, not a classification of all compact subalgebras.",
+    "The corrected complex real form is a different physical choice, not merely a rescaling.",
+    "Short flows are diagnostics, not an exhaustive attractor study."
+  ]
+}

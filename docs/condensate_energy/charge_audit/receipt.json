@@ -1,0 +1,14 @@
+{
+  "status": "completed_scoped_charge_audit",
+  "checks_passed": 24,
+  "conclusion": "Generic minimal action has no continuous scalar phase charge; the conditional classical candidate is anomalous and does not charge the neutral Delta component.",
+  "artifact_sha256": {
+    "docs/condensate_energy/charge_audit/README.md": "c5c57485855c083d121e0a388cdc0cafe78768fbfc88501037456506d5a98088",
+    "docs/condensate_energy/charge_audit/archive-provenance.json": "4eeb065acd08077e0029934059c69e8658333ce0812761e44ecfa8bf594f5c68",
+    "docs/condensate_energy/charge_audit/protocol.md": "ff03e2b736e9a6ea9a28b254151b8c01c02d6e0e484c6fe3802e029fe1f916c4",
+    "docs/condensate_energy/charge_audit/results.json": "f443a190b2230ac2c8f647abe220ffe0b9fb25079426bb6764463ac83fa11081",
+    "docs/condensate_energy/charge_audit/source-snapshots/full_scalar_basis.py": "6c08934979e373aad514dd45d45be3496a53b5f57cedb5db40a5e12990c520ed",
+    "docs/condensate_energy/charge_audit/source-snapshots/scalar_invariant_basis.py": "246f4215a2622d73b83424e9c84e5c9fb395fe510867bb4a476d680baa7165fc",
+    "code/condensate_energy/charge_audit.py": "6b021abd862a0255f6f2faf19882239d8e456350cac70d29f9cc9a709af1112f"
+  }
+}

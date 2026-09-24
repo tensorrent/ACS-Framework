@@ -36,6 +36,9 @@ and the $4/3$ Coincidence}\\[0.35em]
 \author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification in-repo}
 \date{\small TR-2026-FF06-I7 \ ---\ 2026-07-22 \ ---\ SIP License v1.1}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -57,6 +60,11 @@ integer lattice.  All scripts, JSON artefacts, SHA-256 anchors, and an
 end-to-end verification pipeline are included in-repo.  Claims are
 scoped to tested models and parameter windows.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section*{License}
 Co-governed and enforced under the
@@ -95,9 +103,9 @@ collapse under normalisation changes and bookkeeping-identity checks?
 
 Scripts under \texttt{code/issue7/}:
 \begin{itemize}[leftmargin=1.4em,itemsep=2pt]
-  \item \texttt{section9\_toy\_kill\_test.py} --- baseline TFIM toy;
+  \item \nolinkurl{section9_toy_kill_test.py} --- baseline TFIM toy;
   \item \texttt{exhaustive\_issue7.py} --- multi-size / multi-threshold sweep;
-  \item \texttt{cross\_model\_kill\_pass.py} --- TFIM and XXZ+$h$ with dual leakage summaries;
+  \item \nolinkurl{cross_model_kill_pass.py} --- TFIM and XXZ+$h$ with dual leakage summaries;
   \item \texttt{long\_range\_kill\_pass.py} --- power-law Ising, $\alpha\in\{3,2\}$.
 \end{itemize}
 
@@ -112,14 +120,14 @@ for every required leakage proxy.
 
 \subsection{Section~9 exact (no IEEE float)}
 
-\texttt{section9\_exact\_kill\_test.py} uses integer Ising energies,
+\nolinkurl{section9_exact_kill_test.py} uses integer Ising energies,
 integer Boltzmann base $B$, connected correlators in
 \texttt{Fraction}, and local-majority influence fractions in
 \texttt{Fraction}.  The decision path uses only signs of
 \texttt{Fraction} covariances.
 
 Companion exact ACS TE automaton (already in-repo):
-\texttt{code/acs\_codebase/extras/integer\_acs.py}.
+\nolinkurl{code/acs_codebase/extras/integer_acs.py}.
 
 \subsection{$4/3$ mechanism tests}
 
@@ -134,7 +142,7 @@ Companion exact ACS TE automaton (already in-repo):
 
 \subsection{End-to-end verification}
 
-\texttt{verify\_issue7\_pipeline.py} reruns all Issue~\texttt{\#7}
+\nolinkurl{verify_issue7_pipeline.py} reruns all Issue~\texttt{\#7}
 scripts, rewrites canonical stdout logs, checks stdout-vs-JSON
 consistency, and verifies SHA-256 anchors listed in the companion
 markdown artefacts under \texttt{docs/}.
@@ -155,7 +163,7 @@ remain positive in every tested cell.
 \subsection{Cross-model and long-range}
 
 \begin{center}
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Family & Support & Rate \\
 \midrule
@@ -164,7 +172,7 @@ XXZ+$h$ & $1/6$ & $0.17$ \\
 Long-range $\alpha=3$ & $2/6$ & $0.33$ \\
 Long-range $\alpha=2$ & $3/6$ & $0.50$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The single XXZ support cell and the long-range support cells concentrate
@@ -203,12 +211,12 @@ hash checks $0$.
 \section{Reproducibility}
 
 Canonical artefacts and SHA-256 anchors are listed in
-\texttt{docs/issue7\_paper\_section9\_and\_4over3.md}
-and \texttt{docs/issue7\_takeup\_section9\_and\_4over3.md}.
+\nolinkurl{docs/issue7_paper_section9_and_4over3.md}
+and \nolinkurl{docs/issue7_takeup_section9_and_4over3.md}.
 
 Observed environment for float suite and anchors:
 Python~$3.14.6$, NumPy~$2.5.0$,
-\texttt{macOS-15.3.2-arm64-arm-64bit-Mach-O}.
+\nolinkurl{macOS-15.3.2-arm64-arm-64bit-Mach-O}.
 
 \begin{lstlisting}[caption={Reproduction commands}]
 python3 code/issue7/section9_toy_kill_test.py
@@ -229,9 +237,9 @@ python3 code/issue7/verify_issue7_pipeline.py
         diagonalisation / commutator norms) are byte-anchored to one machine
         (macOS~$15.3.2$ arm64, Python~$3.14.6$, NumPy~$2.5.0$), with
         same-machine byte-identical reruns recorded in
-        \texttt{docs/issue7\_verification\_report.json}.  A second-platform
+        \nolinkurl{docs/issue7_verification_report.json}.  A second-platform
         replication (Linux x86\_64, Python~$3.11$, NumPy~$2.4$;
-        \texttt{docs/issue7\_linux\_replication/}) reproduces every
+        \nolinkurl{docs/issue7_linux_replication/}) reproduces every
         decision-level output exactly (all \texttt{supports\_chain}
         booleans and support rates identical; float values agree to
         $\sim\!10^{-12}$), and the exact-arithmetic artifact is
@@ -266,19 +274,32 @@ only for the remaining float NumPy Section~9 scripts.
 \section*{Tier map (MANIFEST)}
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Claim & Tier & Evidence \\
 \midrule
 TFIM exhaustive chain support rate $0/12$ & T1 & \texttt{exhaustive\_issue7.py} \\
-Cross-model combined support $1/12$ & T1 & \texttt{cross\_model\_kill\_pass.py} \\
+Cross-model combined support $1/12$ & T1 & \nolinkurl{cross_model_kill_pass.py} \\
 Long-range combined support $5/12$ & T1 & \texttt{long\_range\_kill\_pass.py} \\
-Exact joint chain support false & T1 & \texttt{section9\_exact\_kill\_test.py} \\
+Exact joint chain support false & T1 & \nolinkurl{section9_exact_kill_test.py} \\
 $4/3$ identity family $n=d+1$ & T1 & \texttt{mechanism\_4over3\_test.py} \\
 $4/3$ mechanism established & T4 & failed K1/K2 \\
 Section~9 chain as general theorem & --- & not claimed \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The kill tests constrain the particular cone chain and normalization hypotheses that were tested. A surviving algebraic coefficient does not select an action normalization or an observed coupling. The later scalar audit retains this distinction with explicit kinetic metrics and alternative complete potentials sharing neutral data. Earlier falsifications remain falsifications; numerical agreement in another channel does not reinstate them.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

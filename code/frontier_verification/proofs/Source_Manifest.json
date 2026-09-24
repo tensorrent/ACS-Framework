@@ -1,0 +1,46 @@
+{
+  "AxiomIII.lean": {
+    "sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+    "provenance": "unchanged Frontier source"
+  },
+  "BoundaryAxioms.lean": {
+    "sha256": "b085b0123d6dd4786edb833a631b370f397c933d463f7c43aa38445f8e028378",
+    "provenance": "new continuation proof or audit"
+  },
+  "CoreAxioms.lean": {
+    "sha256": "ce869b3937933c63a7a027b6c01c597c253ca662e3b0310f64cde0118119e2bc",
+    "provenance": "new continuation proof or audit"
+  },
+  "LFBound.lean": {
+    "sha256": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f",
+    "provenance": "unchanged Frontier source"
+  },
+  "LFReal.lean": {
+    "sha256": "152c938e2ae405394e490c1f277ecd315155282fda1b66a0201c4a98ece35bd7",
+    "provenance": "new continuation proof or audit"
+  },
+  "MathlibAxioms.lean": {
+    "sha256": "d2df94a5ab1312e59484acbd4dd108e7d536b2b15b547d4c8cf73a98946f54b9",
+    "provenance": "new continuation proof or audit"
+  },
+  "PerZero.lean": {
+    "sha256": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a",
+    "provenance": "unchanged Frontier source"
+  },
+  "PerZeroBoundary.lean": {
+    "sha256": "0d64e02526b2de58c412258e8c5d161f66b095c63e2fa039b37016e2b0c6aa1d",
+    "provenance": "new continuation proof or audit"
+  },
+  "lake-manifest.json": {
+    "sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+    "provenance": "unchanged Frontier source"
+  },
+  "lakefile.toml": {
+    "sha256": "4272c3fdb74d0e85539b5049edcde899ec73d7f1086ffc4323aa092d3bdb21dc",
+    "provenance": "unchanged Frontier source"
+  },
+  "lean-toolchain": {
+    "sha256": "108ca2895820de2c74101f81de81756b41ca0165dfdc8ced16a82c3f810152d0",
+    "provenance": "unchanged Frontier source"
+  }
+}

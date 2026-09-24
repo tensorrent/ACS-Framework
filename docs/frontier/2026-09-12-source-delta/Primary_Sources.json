@@ -1,0 +1,18 @@
+{
+  "retrieved_utc": "2026-09-12T17:06:05.804786+00:00",
+  "sources": [
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/",
+      "title": "Andrew Odlyzko: Tables of zeros of the Riemann zeta function",
+      "supports": "Table identities, index ranges and declared absolute uncertainties. Raw tables and index retained.",
+      "access": "Direct HTTPS acquisition; headers and hashes in Primary_Receipt.json."
+    },
+    {
+      "url": "https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/S0025-5718-1976-0457374-X.pdf",
+      "title": "Lowell Schoenfeld (1976), Sharper Bounds for the Chebyshev Functions theta(x) and psi(x). II",
+      "location": "Theorem 10, equation (6.2), printed page 337",
+      "supports": "RH-dependent sqrt(x)*log(x)^2/(8*pi) bound on psi(x)-x above 73.2; gives O(u^2) in logarithmic normalization.",
+      "access": "Primary publisher text retrieved through indexed search; direct PDF retrieval returned HTTP 403."
+    }
+  ]
+}

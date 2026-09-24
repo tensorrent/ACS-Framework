@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-12T17:08:44.184097+00:00",
+  "scope": "Retained evidence and integrity; mathematical checks are not rerun.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 25,
+  "baseline_source_files": 325,
+  "corrected_source_files": 5,
+  "primary_large_table_rows": 2001052,
+  "finite_interval_configurations": 12,
+  "certified_endpoint_counterexample": true,
+  "canonical_baseline_tests_passed": 42,
+  "corrected_tests_passed": 46,
+  "old_code_regressions_failed_as_expected": 2,
+  "ledger_events": 335,
+  "preserved_event_prefix": 329,
+  "research_branches": 114,
+  "ledger_head_sha256": "7a4b0f1fbc14963a8b136c78817edeb98cb604ca6d34e2cfd34e5a8629a0521d",
+  "local_links": 23
+}

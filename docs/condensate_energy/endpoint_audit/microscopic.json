@@ -1,0 +1,216 @@
+{
+  "checks_total": 32,
+  "checks_passed": 31,
+  "checks": [
+    {
+      "name": "two recovered CPF payloads have identical bytes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "recovered CPF payload hash 27",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "recovered CPF payload hash 65770",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "proposed cover automorphism fails required deck commutation",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "cover descent forces both homological off-diagonal entries to zero",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unipotent trace cannot determine a unique twist",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source capacitance and radius imply E over mc2 equals alpha L over two",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "self-energy matching requires inverse alpha L over two",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "CPF cutoff is inverse insertion of any desired number",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "CPF displayed approximate cutoff also disagrees numerically",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normal Gaussian surface regulator has inverse-width squared norm",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "surface kernel is not an ordinary L2 volume state in zero-width limit",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "printed metric respects the glide pullback",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "metric determinant retains an unfixed positive radius and pitch",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Bell correlator equals the printed cosine",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "chosen Bell settings give two root two",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "same operators with product state do not give same Bell value",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "hexagonal coordinates are rank two with a linear constraint",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "pi over two phase rotation preserves covariant kinetic density",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "claimed real-imaginary orthogonality fails for constant pi over four phase",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "printed finite-visible-mass rotation speed tends to zero",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "printed curvature summand on the critical line is nonzero",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "actual finite critical-line summand time average vanishes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finite-summand primitive independently checked (0.5, 20.0)",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finite-summand primitive independently checked (0.5, 200.0)",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finite-summand primitive independently checked (0.73, 20.0)",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finite-summand primitive independently checked (0.73, 200.0)",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "torsion-contortion map has full 24-component rank",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "quadratic torsion term has no connection velocity kinetic matrix",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "quadratic torsion term is algebraic degree two in contortion",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "covariantly constant Palatini coefficient leaves derivative term as boundary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Phase6 full source replay completes",
+      "passed": false,
+      "evidence": {
+        "source": "source-snapshots/phase6_dynamics.py",
+        "scope": "full unchanged source replay",
+        "completed": false,
+        "timeout_seconds": 60,
+        "stdout_captured": false,
+        "note": "First driver raised before storing buffered subprocess output; traceback and exact failed driver preserved in ../phase6-timeout-60s. This replay is incomplete, not a mathematical counterexample."
+      }
+    }
+  ],
+  "CPF_cutoffs": {
+    "inserted_inverse_alpha": "137.035999171",
+    "source_exponential": "6.658956944377300791368108016527980110039489697448703080877214433251181e-59",
+    "self_energy_consistent_exponential": "2.039050325964883169718233255173193473286571876422987706083200707139052e-118"
+  },
+  "finite_curvature_averages": [
+    {
+      "beta": 0.5,
+      "T": 20.0,
+      "real": 0.3084055152036067,
+      "imag": 0.0,
+      "printed_value": -28.57142857142857
+    },
+    {
+      "beta": 0.5,
+      "T": 200.0,
+      "real": 0.0308744616019027,
+      "imag": 0.0,
+      "printed_value": -28.57142857142857
+    },
+    {
+      "beta": 0.73,
+      "T": 20.0,
+      "real": -0.005591162716670328,
+      "imag": -0.000916658949053395,
+      "printed_value": 2.916666666666668
+    },
+    {
+      "beta": 0.73,
+      "T": 200.0,
+      "real": -0.0005252118471592704,
+      "imag": -9.212214877485358e-05,
+      "printed_value": 2.916666666666668
+    }
+  ],
+  "qualifications": [
+    "Finite-summand averages do not justify swapping an infinite zero sum with a limit",
+    "No actual zeta zero is located or excluded by the internal contradiction",
+    "Torsion conclusion is for a smooth nondegenerate tetrad, independent metric-compatible connection and stated Palatini plus T-squared bulk action",
+    "Extra curvature-derivative terms, singular defects or constrained teleparallel models require their own action and mode analysis",
+    "Bell identity assumes the quantum state and observables; it does not derive their physics from coordinate topology",
+    "Empirical claims in the CPF bibliography have not been independently authenticated by this algebra audit"
+  ]
+}

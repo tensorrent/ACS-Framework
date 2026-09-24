@@ -1,0 +1,32 @@
+[
+  {
+    "file": "PerZero.lean",
+    "sha256": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/PerZero.olean",
+      "PerZero.lean"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "file": "LFReal.lean",
+    "sha256": "007207b075f00a079e38ddece16f5fba1ecb5e5dc2dbe42fcbe957f4afbf8aaa",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/LFReal.olean",
+      "LFReal.lean"
+    ],
+    "returncode": 1,
+    "stdout": "LFReal.lean:1:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\nLFReal.lean:55:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'\n",
+    "stderr": ""
+  }
+]

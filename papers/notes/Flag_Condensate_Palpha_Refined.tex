@@ -45,6 +45,9 @@ Parametric Spectroscopic Factor and Self-Consistent WS+Coulomb Eigenmode}
 
 \date{July 23, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \maketitle
@@ -66,6 +69,11 @@ global-$S$ RMS $=0.8247$).  The eigenmode raises Pearson $r$ to
 $+0.9676$ but leaves global-$S$ RMS essentially unchanged ($0.8257$).
 RC1 (Release Candidate 1) scope: documented proxies --- not uniqueness.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.1em}
 \hrule
@@ -344,7 +352,7 @@ stated 14-isotope set.  LOO applies only to parametric $S$.}
 \label{tab:accept}
 \scriptsize
 \renewcommand{\arraystretch}{0.85}
-\begin{tabular}{lcccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccc}
 \toprule
 \textbf{Channel} & $\langle\log_{10}P\rangle$ & $r$ & $\mathrm{RMS}_{\mathrm{raw}}$
  & $\mathrm{RMS}_{S_\star}$ / LOO \\
@@ -356,7 +364,7 @@ Gamow outgoing$^{*}$ & $-0.1110$ & $+0.9676$ & $2.0237$ & $0.8257$ / --- \\
 parametric $S(A,Z)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.2862$ \\
 parametric $S(R)$ (LOO) & (base throat+WS) & --- & --- & LOO $0.4695$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 
 \vspace{0.3em}
 {\footnotesize $^{*}$Identical to the refined-eigenmode row by construction:
@@ -375,16 +383,16 @@ to throat+WS on this set ($\Delta\mathrm{RMS}_{S_\star}\approx +0.001$).
 \section{Artifacts and protocol}
 
 Implementation:
-\texttt{code/palpha\_overlap/palpha\_overlap\_refined.py}.
+\nolinkurl{code/palpha_overlap/palpha_overlap_refined.py}.
 JSON:
-\texttt{docs/palpha\_overlap/palpha\_overlap\_refined\_results.json}.
+\nolinkurl{docs/palpha_overlap/palpha_overlap_refined_results.json}.
 Logs:
 (run logs not committed to this repository).
 Baselines retained:
 \texttt{palpha\_overlap.py}, \texttt{palpha\_overlap\_throat.py}.
 Gamow channel: \texttt{palpha\_overlap\_gamow.py}.
-Extended catalog ($n=29$): \texttt{palpha\_overlap\_extended.py},
-\texttt{isotope\_catalog.py}, \texttt{docs/palpha\_overlap/palpha\_overlap\_extended\_results.json}.
+Extended catalog ($n=29$): \nolinkurl{palpha_overlap_extended.py},
+\texttt{isotope\_catalog.py}, \nolinkurl{docs/palpha_overlap/palpha_overlap_extended_results.json}.
 Audit: \texttt{docs/palpha\_audit\_log.md}.
 
 \section{Channel C --- Gamow outgoing boundary on \texorpdfstring{$[0,b]$}{[0,b]}}
@@ -419,22 +427,35 @@ Channel~C (Gamow outgoing on $[0,b]$) likewise leaves global-$S$ RMS
 unchanged on the stated set.  Extended catalog ($n=29$) degrades LOO
 parametric RMS as documented.  Absolute uniqueness is not claimed.
 
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Leave-one-out comparison on the stated isotope set qualifies the selected parametric model; it is not independent validation on a new catalog. Per-isotope factors are diagnostic extractions. Tuning a potential to a measured energy supplies that energy as input, and isospectral data need not determine a channel overlap. The remaining requirement is a physically normalized many-body preformation calculation or a separately tested predictive model. No new isotope performance is claimed by this editorial release.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{99}
 \bibitem{NuclearDecay2026}
   ACS Theoretical Physics Working Group,
   \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Nuclear_Decay.tex}.
 \bibitem{PalphaOverlap2026}
   ACS Theoretical Physics Working Group,
   \emph{Standing-Wave Overlap Proxy for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Palpha_Overlap.tex}.
 \bibitem{PalphaThroat2026}
   ACS Theoretical Physics Working Group,
   \emph{Throat-Geometry Overlap for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Throat\_Overlap.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex}.
 \end{thebibliography}
 
 \end{document}

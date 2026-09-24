@@ -1,0 +1,5 @@
+exact-all-coupling-quartic-RG-identity PASS
+exact-all-coupling-mass-RG-identity PASS
+exact-independence-of-orthogonal-doublet-Yukawa-split PASS
+omitting-wave-function-fails-generic-RG-identity PASS
+{"checks_passed": 4, "checks_total": 4}

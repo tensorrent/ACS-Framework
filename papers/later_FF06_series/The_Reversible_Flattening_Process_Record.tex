@@ -33,6 +33,9 @@
 \small Document key: \textsf{Process Record} (corpus index)}
 \date{June 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -54,6 +57,11 @@ pre-registered test with a stated kill condition, compression into theorem or fi
 Tiers are labelled throughout: \TT{} machine-verified, \Tw{} proven/forced, \Th{}
 numerically verified, \Tf{} falsified.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 
@@ -100,14 +108,14 @@ respect, and the value is in locating exactly where.
 \subsection{The four-tier hierarchy}
 No claim is reported without a tier, and a lower tier may never be promoted by enthusiasm:
 \begin{center}
-\begin{tabular}{ll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ll}
 \toprule
 \TT & machine-verified (executed, reproducible under seed \seed) \\
 \Tw & proven or forced by a stated argument \\
 \Th & numerically verified at finite scale (cannot stand in for \Tw) \\
 \Tf & falsified (retained in the record with its mechanism) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 A persistent temptation throughout was to let a \Th{} numerical result read as a \Tw{} proof. The
 review rounds (Section~\ref{sec:gauntlet}) caught this more than once.
@@ -208,7 +216,7 @@ relational form did not'' --- presented as the scalar representation failing whe
 survived.\\
 \textbf{Caught.} The integer itself computes in milliseconds. The only thing that fails is the
 \emph{base-10 string projection}, throttled by a Python configuration limit
-(\texttt{sys.set\_int\_max\_str\_digits}, CVE-2022-45061 mitigation). Crucially,
+(\nolinkurl{sys.set_int_max_str_digits}, CVE-2022-45061 mitigation). Crucially,
 \texttt{Shape.volume()} --- the relational form's own projection back to an integer --- hits the
 \emph{identical} wall. The relational form is not immune; it simply never \emph{needs} the
 projection step.\\
@@ -487,7 +495,7 @@ integers ($0.4$). The result is a ranking of the signatures by discriminating po
 
 \begin{center}
 \small
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 \textbf{signature} & \textbf{discriminating power} & \textbf{shared by} \\
 \midrule
@@ -495,7 +503,7 @@ prime-orbits ($F_w$ peaks) & strong & only arithmetic spectra \\
 GUE spacing / rigidity & medium & \emph{all} chaotic spectra (incl.\ random matrices) \\
 Maslov constant $7/8$ & weak & any curve-matched sequence \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent The GUE decoy passing the statistics while empty of orbits is exactly \textsf{LF01}
@@ -618,5 +626,18 @@ spectral results in \textsf{FF06b$'$} (Spectral Witness Survival and the Transpo
 shuffle-knife categorisation in \textsf{FF06e}, and the L-function localisation note \textsf{LF01},
 whose central observable it rediscovered and whose operator constraints it sharpens.
 It documents the path; those documents state the destination.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+This document preserves the sequence of attempted constructions and corrections. Historical milestones are not a current certification of every interpretation. Reversible encoding must meet the final domain and injectivity conditions; the physical action and carrier requirements are independently audited in the new companion papers. Failed source runs and withdrawn hypotheses remain visible rather than being retroactively counted as completed proofs.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

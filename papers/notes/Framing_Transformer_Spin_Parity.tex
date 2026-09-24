@@ -31,6 +31,9 @@ Where the Spin-$1/2$ Content of the M\"obius-Screw Actually Lives}\\[0.35em]
 \small\textit{Sovereign-Stack ACS Research Program}}
 \date{July 26, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -63,6 +66,11 @@ and Kirby-calculus literature (\S\ref{sec:lit}) --- and the contribution
 here is its evaluation on this curve, together with the resulting
 correction.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 \newpage
@@ -73,12 +81,12 @@ This note is a computation, not a new model.  It takes the centerline and
 framing already defined in the M\"obius-screw note and asks a single
 question: \emph{at which stage, if any, does spin-$1/2$ enter?}  Every
 number below is produced by the three scripts
-\texttt{code/framed\_unknot/framing\_transformer.py} (Sections~2--5),
-\texttt{code/framed\_unknot/moment\_ratio.py} (Section~6), and
-\texttt{code/framed\_unknot/one\_object.py} (Section~7), archived in
-\texttt{docs/framed\_unknot\_results.json},
-\texttt{docs/framed\_unknot\_moment\_ratio.json}, and
-\texttt{docs/framed\_unknot\_one\_object.json} respectively.
+\nolinkurl{code/framed_unknot/framing_transformer.py} (Sections~2--5),
+\nolinkurl{code/framed_unknot/moment_ratio.py} (Section~6), and
+\nolinkurl{code/framed_unknot/one_object.py} (Section~7), archived in
+\nolinkurl{docs/framed_unknot_results.json},
+\nolinkurl{docs/framed_unknot_moment_ratio.json}, and
+\nolinkurl{docs/framed_unknot_one_object.json} respectively.
 
 Nothing here bears on QED, on radiative corrections to $g-2$, or on the
 capacitance estimate of $\alpha$.  The result is topological.
@@ -138,7 +146,7 @@ writhe by the Gauss double integral, and $Sl$ independently as the linking
 number $\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+\epsilon\bm{U})$.
 
 \begin{center}
-\begin{tabular}{@{}lrl@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lrl@{}}
 \toprule
 Quantity & Value & Method \\
 \midrule
@@ -149,7 +157,7 @@ $\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+0.10a\bm{U})$ & $-2.000000$ & Gauss linking
 $\mathrm{Lk}(\bm{\gamma},\bm{\gamma}+0.05a\bm{U})$ & $-2.000019$ & same, halved offset \\
 $pq$                 & $2$         & torus-framing formula \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The magnitude $|Sl| = 2$ claimed in the M\"obius-screw note is confirmed
@@ -252,7 +260,7 @@ carrying $n$ framing twists, for which $Wr = 0$ and $|Sl| = n$ --- with
 the measured result reproducing \eqref{eq:parity2} exactly:
 
 \begin{center}
-\begin{tabular}{@{}rrrrl@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}rrrrl@{}}
 \toprule
 $n$ & $Tw$ & $Wr$ & $Sl$ & class \\
 \midrule
@@ -264,7 +272,7 @@ $2$  & $-2$ & $0$ & $-2$ & spinorial \\
 $3$  & $-3$ & $0$ & $-3$ & trivial \\
 $4$  & $-4$ & $0$ & $-4$ & spinorial \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \begin{corollary}[The identification $Sl=2 \leftrightarrow g=2$ loses its support]
@@ -326,7 +334,7 @@ axis.
 Across that entire sweep the invariants do not move:
 
 \begin{center}
-\begin{tabular}{@{}rrrrr@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}rrrrr@{}}
 \toprule
 $a/R$ & $\rho_{\min}$ & $Tw$ & $Wr$ & $\sigma$ \\
 \midrule
@@ -337,7 +345,7 @@ $0.85$ & $0.150$ & $-1.15375$ & $-0.84625$ & $-1$ \\
 $0.97$ & $0.030$ & $-1.11872$ & $-0.88128$ & $-1$ \\
 $0.999$& $0.001$ & $-1.10597$ & $-0.89403$ & $-1$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 $Tw + Wr = -2.000000$ at every row, and the holonomy stays $\sigma = -1$
@@ -361,7 +369,7 @@ reachable by deformation from a shape that has no throat at all.
 The obvious next step is not a larger analogy but a smaller question:
 compute the shape's \emph{magnetic moment} against its \emph{angular
 momentum} and read off a $g$ that has dimensions and can fail.  We ran it
-(\texttt{code/framed\_unknot/moment\_ratio.py}).  It fails, and the way it
+(\nolinkurl{code/framed_unknot/moment_ratio.py}).  It fails, and the way it
 fails is instructive.
 
 Let a particle of charge $q$ and mass $m$ traverse the closed centerline
@@ -385,7 +393,7 @@ g = 1 \quad\text{exactly, for every closed curve.}
 \end{equation}
 
 \begin{center}
-\begin{tabular}{@{}lrr@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lrr@{}}
 \toprule
 Curve & $A_z$ & $A_z/\pi$ \\
 \midrule
@@ -395,7 +403,7 @@ M\"obius screw $(2,1)$, $a/R = 0.97$ & $+9.23911$ & $+2.94090$ \\
 round circle, one turn               & $+3.14159$ & $+1.00000$ \\
 round circle, two turns              & $+6.28319$ & $+2.00000$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The double winding is entirely real: the screw carries $2.09\times$ the
@@ -463,7 +471,7 @@ geometry, separates where the charge sits from where the mass sits?
 
 Three structural readings of this geometry turn out to be exactly right,
 and together they relocate where spin-$1/2$ lives.  All are verified in
-\texttt{code/framed\_unknot/one\_object.py}.
+\nolinkurl{code/framed_unknot/one_object.py}.
 
 \subsection{$(2,1)$ is the $xy$-axis twisted}
 
@@ -526,7 +534,7 @@ presupposes a \emph{closed} curve, and a torus curve closes iff its
 winding ratio $q/p$ is rational.
 
 \begin{center}
-\begin{tabular}{@{}lr@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lr@{}}
 \toprule
 Winding ratio & Closes after \\
 \midrule
@@ -536,7 +544,7 @@ $3/5$ \ \ (5,3) & 5 turns \\
 $1/\phi$ (golden) & never --- dense \\
 $1/\sqrt{2}$ & never --- dense \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 At irrational slope the curve never closes, fills the torus densely, and
@@ -621,7 +629,20 @@ python3 code/framed_unknot/framing_transformer.py
 \end{verbatim}
 Grid $N = 2000$ for the $(2,1)$ curve, $N = 1200$ for the controls,
 $R = 1$, $a = 0.3$.  Results archived at
-\texttt{docs/framed\_unknot\_results.json}.
+\nolinkurl{docs/framed_unknot_results.json}.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The explicit parity correction remains in force. The later carrier audit separates it from magnetic-moment dynamics: uniform classical charge-to-mass density gives $g=1$ for every closed curve, while varying the densities can change the moment without changing the framing. Thus the geometric parity result neither supplies the Dirac magnetic moment nor identifies an electron. Its value is the precisely scoped lift computation and the falsification of the earlier magnitude inference.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{9}
 
@@ -704,7 +725,7 @@ Flag Condensate Collaboration,
 \textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$ and a
 Capacitance Model of $\alpha$},
 preprint (July 2026),
-\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+\nolinkurl{papers/notes/Mobius_Screw_Electron.tex}.
 
 \end{thebibliography}
 

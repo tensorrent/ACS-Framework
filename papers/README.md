@@ -6,6 +6,15 @@ Manuscripts and companion notes. LaTeX sources are canonical; compiled PDFs are
 committed alongside them where available. Claim tiers and the claim-to-code
 mapping live in [`../MANIFEST.md`](../MANIFEST.md), not here.
 
+## September 2026 update
+
+All 33 existing sources have dated, claim-specific amendments and rebuilt PDFs. Two new papers consolidate the completed action-to-carrier audit:
+
+- [Complete Scalar Actions and Identifiability Boundaries](updates/ACS_Action_Identifiability.pdf) ([source](updates/ACS_Action_Identifiability.tex)).
+- [Condensate Binding, Charge Protection, and the Boundary of Particle Identification](updates/ACS_Condensate_Carrier_Boundary.pdf) ([source](updates/ACS_Condensate_Carrier_Boundary.tex)).
+
+Read the [release record and reproduction commands](../docs/publication/2026-09-24/README.md) for corrections, retained failures and the exact verification scope. LaTeX/PDF build success does not certify every historical scientific assertion.
+
 ## `core_trilogy/` — the foundational papers
 
 | Role | File | Subject |

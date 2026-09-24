@@ -1,0 +1,51 @@
+two recovered CPF payloads have identical bytes PASS
+recovered CPF payload hash 27 PASS
+recovered CPF payload hash 65770 PASS
+proposed cover automorphism fails required deck commutation PASS
+cover descent forces both homological off-diagonal entries to zero PASS
+unipotent trace cannot determine a unique twist PASS
+source capacitance and radius imply E over mc2 equals alpha L over two PASS
+self-energy matching requires inverse alpha L over two PASS
+CPF cutoff is inverse insertion of any desired number PASS
+CPF displayed approximate cutoff also disagrees numerically PASS
+normal Gaussian surface regulator has inverse-width squared norm PASS
+surface kernel is not an ordinary L2 volume state in zero-width limit PASS
+printed metric respects the glide pullback PASS
+metric determinant retains an unfixed positive radius and pitch PASS
+Bell correlator equals the printed cosine PASS
+chosen Bell settings give two root two PASS
+same operators with product state do not give same Bell value PASS
+hexagonal coordinates are rank two with a linear constraint PASS
+pi over two phase rotation preserves covariant kinetic density PASS
+claimed real-imaginary orthogonality fails for constant pi over four phase PASS
+printed finite-visible-mass rotation speed tends to zero PASS
+printed curvature summand on the critical line is nonzero PASS
+actual finite critical-line summand time average vanishes PASS
+finite-summand primitive independently checked (0.5, 20.0) PASS
+finite-summand primitive independently checked (0.5, 200.0) PASS
+finite-summand primitive independently checked (0.73, 20.0) PASS
+finite-summand primitive independently checked (0.73, 200.0) PASS
+torsion-contortion map has full 24-component rank PASS
+quadratic torsion term has no connection velocity kinetic matrix PASS
+quadratic torsion term is algebraic degree two in contortion PASS
+covariantly constant Palatini coefficient leaves derivative term as boundary PASS
+Traceback (most recent call last):
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/microscopic_selector_boundary.py", line 151, in <module>
+    if __name__=='__main__':audit_microscopic_selectors()
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/microscopic_selector_boundary.py", line 133, in audit_microscopic_selectors
+    run=subprocess.run([sys.executable,str(snapshots/'phase6_dynamics.py')],cwd=checks_path,capture_output=True,text=True,timeout=60)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['/private/tmp/acs-threshold-20260920-venv/bin/python', '/Users/coo-koba42/dev/ACS-Framework-threshold-audit/docs/condensate_energy/endpoint_audit/source-snapshots/phase6_dynamics.py']' timed out after 60 seconds

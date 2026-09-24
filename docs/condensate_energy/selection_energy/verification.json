@@ -1,0 +1,177 @@
+{
+  "checks_total": 19,
+  "checks_passed": 19,
+  "checks": [
+    {
+      "name": "all-angle raw diagonal-product counterexample",
+      "passed": true
+    },
+    {
+      "name": "all-angle full contraction invariant",
+      "passed": true
+    },
+    {
+      "name": "pairing cancellation extends to arbitrary diagonal symmetric T",
+      "passed": true
+    },
+    {
+      "name": "source replay has beginning and ending flow measurements",
+      "passed": true
+    },
+    {
+      "name": "source measured closure worsens despite static relaxation conclusion",
+      "passed": true,
+      "evidence": [
+        {
+          "step": 0,
+          "defect": 0.229914,
+          "bracket_rank": 15
+        },
+        {
+          "step": 5,
+          "defect": 0.230183,
+          "bracket_rank": 15
+        },
+        {
+          "step": 10,
+          "defect": 0.230552,
+          "bracket_rank": 15
+        },
+        {
+          "step": 15,
+          "defect": 0.231017,
+          "bracket_rank": 15
+        },
+        {
+          "step": 20,
+          "defect": 0.231579,
+          "bracket_rank": 15
+        }
+      ]
+    },
+    {
+      "name": "source printed one-percent defect contradicts below-one-percent claim",
+      "passed": true
+    },
+    {
+      "name": "independent 80 orthonormal frames obey C>=8",
+      "passed": true,
+      "evidence": {
+        "minimum": 16.672712305129394
+      }
+    },
+    {
+      "name": "independent frames obey mean defect >=1/2",
+      "passed": true,
+      "evidence": {
+        "minimum": 1.4075283147822018
+      }
+    },
+    {
+      "name": "independent symbolic charged kinetic mass block",
+      "passed": true
+    },
+    {
+      "name": "independent exact TBL action is nonzero",
+      "passed": true
+    },
+    {
+      "name": "independent exact TBL/2 plus R3 action is zero",
+      "passed": true
+    },
+    {
+      "name": "independent neutral Phi electromagnetic action vanishes",
+      "passed": true
+    },
+    {
+      "name": "80-digit closed spectrum mass-fourth sum ('1.4', '.2', '.3', '.7')",
+      "passed": true
+    },
+    {
+      "name": "80-digit independent vacuum RG cancellation ('1.4', '.2', '.3', '.7')",
+      "passed": true
+    },
+    {
+      "name": "80-digit closed spectrum mass-fourth sum ('2', '.7', '.8', '1.1')",
+      "passed": true
+    },
+    {
+      "name": "80-digit independent vacuum RG cancellation ('2', '.7', '.8', '1.1')",
+      "passed": true
+    },
+    {
+      "name": "80-digit closed spectrum mass-fourth sum ('3', '0', '0', '.4')",
+      "passed": true
+    },
+    {
+      "name": "80-digit independent vacuum RG cancellation ('3', '0', '0', '.4')",
+      "passed": true
+    },
+    {
+      "name": "vacuum RG solution retains arbitrary boundary constant",
+      "passed": true
+    }
+  ],
+  "raw_rotation_formula": "-128 sin(2 theta)^2 / 9",
+  "corrected_contraction": 0,
+  "source_flow_measurements": [
+    {
+      "step": 0,
+      "defect": 0.229914,
+      "bracket_rank": 15
+    },
+    {
+      "step": 5,
+      "defect": 0.230183,
+      "bracket_rank": 15
+    },
+    {
+      "step": 10,
+      "defect": 0.230552,
+      "bracket_rank": 15
+    },
+    {
+      "step": 15,
+      "defect": 0.231017,
+      "bracket_rank": 15
+    },
+    {
+      "step": 20,
+      "defect": 0.231579,
+      "bracket_rank": 15
+    }
+  ],
+  "independent_origin_rg": [
+    {
+      "mass_coefficients": [
+        "1.4",
+        ".2",
+        ".3",
+        ".7"
+      ],
+      "vacuum_beta": "0.14355945207323732991454671443528284837261333886373932889562229706505654076336734",
+      "loop_log_mu_derivative": "-0.14355945207323732991454671443528284837261333886373932889562229706505654076336734"
+    },
+    {
+      "mass_coefficients": [
+        "2",
+        ".7",
+        ".8",
+        "1.1"
+      ],
+      "vacuum_beta": "0.33834942762563169551540498245598423416624308317113331905130566088160436581326498",
+      "loop_log_mu_derivative": "-0.33834942762563169551540498245598423416624308317113331905130566088160436581326498"
+    },
+    {
+      "mass_coefficients": [
+        "3",
+        "0",
+        "0",
+        ".4"
+      ],
+      "vacuum_beta": "0.25836901828796131718189263118480547920611487541422869955630303133014145845370037",
+      "loop_log_mu_derivative": "-0.25836901828796131718189263118480547920611487541422869955630303133014145845370038"
+    }
+  ],
+  "general_running": "Omega(mu)=Omega(mu0)+integral beta_Omega d log(mu); its initial value is not selected by this equation."
+}

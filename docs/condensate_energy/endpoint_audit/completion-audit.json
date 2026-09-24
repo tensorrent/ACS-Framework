@@ -1,0 +1,207 @@
+{
+  "status": "Requirement-by-requirement evidential endpoint; final sealing checks still required",
+  "objective": "Follow the ACS condensate and hidden-coupling investigation to its evidential endpoint: recover and inspect the underlying ACS action, coefficient/normalization and matching-scale derivations across the relevant local and archived work; derive and independently test every available link from that action to the complete scalar interactions, vacuum and physical predictions; pursue viable unresolved branches without adding unsupported assumptions; deliver reproducible evidence distinguishing proven consequences, failed proposals, conditional constructions and precisely demonstrated underdetermination. Finish only after an explicit completion audit shows no further required derivable work remains within these assumptions, or identify an actual external-input block.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Recover and inspect the ACS action and coefficient, normalization and matching-scale proposals in the relevant local and archived work.",
+      "resolution": "achieved_with_explicit_discovery_scope",
+      "evidence": [
+        "docs/condensate_energy/source_endpoint/inventory-reconciliation.json",
+        "docs/condensate_energy/input_closure/source-coverage.json",
+        "docs/condensate_energy/endpoint_audit/provenance.json",
+        "docs/condensate_energy/endpoint_audit/microscopic-provenance.json",
+        "docs/condensate_energy/endpoint_audit/supplementary-provenance.json",
+        "docs/condensate_energy/endpoint_audit/CPF-recovery.json",
+        "docs/condensate_energy/endpoint_audit/archive-rescreen.json",
+        "docs/condensate_energy/endpoint_audit/colour-provenance.json"
+      ],
+      "finding": "The targeted 36-entry source inventory is reconciled; canonical actions and additional archived normalization, CPF, gravitational and color routes have source-linked dispositions.",
+      "limits": "A heuristic screen of 3645 extracted paths with 138 matches is not a semantic audit of every stored or cloud-only conversation. No universal absence-of-files claim supports the physical conclusion."
+    },
+    {
+      "id": "R2",
+      "requirement": "Derive and independently test the complete scalar interactions and vacuum implications of the specified action.",
+      "resolution": "achieved_as_forward_calculation_and_nonidentification",
+      "evidence": [
+        "docs/condensate_energy/canonical_vacuum/qualified-results.json",
+        "docs/condensate_energy/canonical_vacuum/README.md",
+        "docs/condensate_energy/hidden_couplings/results.json",
+        "docs/condensate_energy/hidden_couplings/exact-witnesses.json",
+        "docs/condensate_energy/action_matching/spectrum.json",
+        "docs/condensate_energy/action_matching/orbit-bounds.json",
+        "docs/condensate_energy/family_boundary/results.json"
+      ],
+      "finding": "All 17 quartics and four quadratics act on 68 real coordinates with the trace kinetic metric. Gauge and coordinate checks qualify spectra. Exact transverse and bounded witnesses show that the neutral restriction cannot select physical stability or a unique vacuum.",
+      "limits": "No unique global physical vacuum is asserted; chosen local stable witnesses are not empirical particle models."
+    },
+    {
+      "id": "R3",
+      "requirement": "Follow the available normalization, matching and running routes to their physical predictions or demonstrated boundary.",
+      "resolution": "achieved_with_exact_scale_ambiguity",
+      "evidence": [
+        "docs/condensate_energy/action_matching/tree-matching.json",
+        "docs/condensate_energy/finite_matching/matching.json",
+        "docs/condensate_energy/finite_matching/verification.json",
+        "docs/condensate_energy/finite_matching/exact-RG.json",
+        "docs/condensate_energy/source_endpoint/algebra.json",
+        "docs/condensate_energy/source_endpoint/running.json",
+        "docs/condensate_energy/endpoint_audit/identifiability.json",
+        "docs/condensate_energy/endpoint_audit/phase6-real-roots.json"
+      ],
+      "finding": "Tree matching and the declared finite one-loop branch are calculated and independently checked. A complete-action dilation family changes physical masses without changing dimensionless labels, including arbitrary complex flavor. Historical running has nonzero boundary sensitivity; the exact real roots of its four-quartic proxy do not equal the proposed coefficient.",
+      "limits": "General mixed-quartic complex-flavor finite EFT matching, physical pole masses and all-orders RG are not performed. No surviving supplied selection law fixes the input point those calculations would require."
+    },
+    {
+      "id": "R4",
+      "requirement": "Trace the condensate mechanism to binding, conserved charges and physical carrier identification.",
+      "resolution": "achieved_as_conditional_mechanism_and_countermodels",
+      "evidence": [
+        "docs/condensate_energy/self_binding/assessment.json",
+        "docs/condensate_energy/charge_audit/results.json",
+        "docs/condensate_energy/charge_leakage/assessment.json",
+        "docs/condensate_energy/gauge_completion/carrier-contract.json",
+        "docs/condensate_energy/gauge_completion/carrier-countermodels.json",
+        "docs/condensate_energy/gauge_completion/assessment.json",
+        "docs/condensate_energy/endpoint_audit/microscopic.json",
+        "docs/condensate_energy/endpoint_audit/colour-singlet.json"
+      ],
+      "finding": "Conditional classical binding and charge-breaking radiation survive independent checks. Generic charge protection fails; the selected gauged exterior contains additional massless charged vectors. The conventional neutral component is electromagnetically neutral. Allowed Yukawa choices give opposite emission thresholds. CPF framing, projection and optical-singlet proposals do not supply quantum particle identification.",
+      "limits": "No full non-Abelian decay width, all-partitions fission theorem, quantum lifetime or universal nonexistence theorem is claimed."
+    },
+    {
+      "id": "R5",
+      "requirement": "Pursue viable unresolved branches without adding unsupported assumptions.",
+      "resolution": "achieved_for_recovered_proposals",
+      "evidence": [
+        "docs/condensate_energy/input_closure/fallback-resolution.json",
+        "docs/condensate_energy/input_closure/selector-results.json",
+        "docs/condensate_energy/selection_energy/symmetry-selection.json",
+        "docs/condensate_energy/selection_energy/vacuum-energy.json",
+        "docs/condensate_energy/selection_energy/yukawa-boundary.json",
+        "docs/condensate_energy/family_boundary/verification.json",
+        "docs/condensate_energy/radiative_flat_modes/results.json",
+        "docs/condensate_energy/endpoint_audit/microscopic.json",
+        "docs/condensate_energy/endpoint_audit/phase6-real-roots.json",
+        "docs/condensate_energy/endpoint_audit/colour-singlet.json"
+      ],
+      "finding": "The previously misclassified selector fallback was restored and tested. Gauge completion, invisible quartics, radiative lifting, finite matching, family replication, complex-flavor scaling and recovered microscopic/gravitational/color routes have explicit dispositions. The Palatini plus torsion-squared action lacks an independent contortion wave operator under its stated smooth assumptions.",
+      "limits": "Adding curvature-derivative dynamics, a singular-defect sector or a new coefficient-selection rule constitutes new premises; those alternatives are not universally excluded."
+    },
+    {
+      "id": "R6",
+      "requirement": "Deliver reproducible evidence distinguishing proven consequences, failed proposals, conditional constructions and precisely demonstrated underdetermination.",
+      "resolution": "achieved_subject_to_final_receipt_verification",
+      "evidence": [
+        "docs/condensate_energy/endpoint_audit/README.md",
+        "docs/condensate_energy/endpoint_audit/identifiability.json",
+        "docs/condensate_energy/endpoint_audit/microscopic.json",
+        "docs/condensate_energy/endpoint_audit/phase6-real-roots.json",
+        "docs/condensate_energy/endpoint_audit/colour-singlet.json",
+        "docs/condensate_energy/endpoint_audit/attempts/phase6-timeout-60s/driver.log",
+        "docs/condensate_energy/endpoint_audit/attempts/phase6_dynamics/execution.json",
+        "docs/condensate_energy/source_endpoint/receipt.json"
+      ],
+      "finding": "Exact algebra, alternative numerical methods, source replays, failure records, snapshots and chained hashes distinguish the kinds of evidence. The full Phase6 replay is incomplete and remains a failed completion check; independent exact elimination resolves its mathematical real-root question.",
+      "limits": "Pass counts are checks, not independent experiments. Hash verification establishes provenance, not scientific truth."
+    },
+    {
+      "id": "R7",
+      "requirement": "Audit completion against the unchanged original goal, with no required derivable work left unresolved within the supplied assumptions.",
+      "resolution": "achieved_as_evidential_endpoint_not_theory_completion",
+      "evidence": [
+        "docs/condensate_energy/endpoint_audit/README.md",
+        "docs/condensate_energy/endpoint_audit/protocol.md",
+        "docs/condensate_energy/source_endpoint/assessment.json",
+        "docs/condensate_energy/finite_matching/assessment.json",
+        "docs/condensate_energy/input_closure/assessment.json",
+        "docs/condensate_energy/family_boundary/assessment.json"
+      ],
+      "finding": "Prior pending source inventory and action-to-carrier requirements are mapped above. Scale, vacuum, flavor and carrier uniqueness fail by explicit compatible alternatives or invalid proposed implications, rather than by failure to find a file. Further predictions need a normalized microscopic map and additional selection data.",
+      "limits": "The overall ACS research program, RH, a theory of matter and future constructions remain unresolved. This closes the investigation specified by the durable goal, not those broader scientific problems."
+    }
+  ],
+  "protocol_items": [
+    {
+      "item": 1,
+      "requirement": "Primary Klein/Palatini scope and later complete-action connection",
+      "evidence_requirements": [
+        "R1",
+        "R2",
+        "R4",
+        "R5"
+      ]
+    },
+    {
+      "item": 2,
+      "requirement": "Normalization and matching-source replays with declared section scope",
+      "evidence_requirements": [
+        "R1",
+        "R3",
+        "R6"
+      ]
+    },
+    {
+      "item": 3,
+      "requirement": "All-invariant scale family including general complex flavor",
+      "evidence_requirements": [
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "item": 4,
+      "requirement": "Independent finite-RG sensitivity",
+      "evidence_requirements": [
+        "R3"
+      ]
+    },
+    {
+      "item": 5,
+      "requirement": "One-loop potential log scaling, without claiming general EFT matching",
+      "evidence_requirements": [
+        "R3"
+      ]
+    },
+    {
+      "item": 6,
+      "requirement": "Record archive discovery scope without claiming semantic completeness",
+      "evidence_requirements": [
+        "R1",
+        "R6"
+      ]
+    },
+    {
+      "item": 7,
+      "requirement": "Preserve physical unknowns and do not substitute an invented action",
+      "evidence_requirements": [
+        "R4",
+        "R5",
+        "R7"
+      ]
+    }
+  ],
+  "unresolved_execution": [
+    {
+      "item": "Phase6 full unchanged source replay",
+      "status": "incomplete_60_second_symbolic_timeout",
+      "mathematical_disposition": "All real solutions of the printed fixed-gauge proxy independently resolved by exact elimination and Sturm counts",
+      "is_required_unresolved_mathematical_work": false
+    }
+  ],
+  "deferred_calculations": [
+    {
+      "item": "General complex-flavor mixed-quartic finite EFT matching",
+      "reason": "The source-derived input point and particle identification are not selected. The scale ambiguity is already exact for the general complete action, so this extension cannot identify them."
+    },
+    {
+      "item": "Full non-Abelian decay trajectory and quantum lifetime",
+      "reason": "The proposed scalar-only charge threshold is invalid and allowed carrier spectra differ. An identified action, vacuum and physical quantum sector must be supplied first."
+    },
+    {
+      "item": "All-orders gravity/RG or new microscopic foam dynamics",
+      "reason": "No prescribed coefficient or quantization law is supplied. Choosing one would introduce new assumptions rather than complete a derivation from the stated action."
+    }
+  ],
+  "delivery_gate": "Publisher must verify datasets, exact one incomplete source replay, source hashes, linked evidence, reviewed figure and chained receipts before the goal is marked complete."
+}

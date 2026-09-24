@@ -1,0 +1,33 @@
+{
+  "status": "qualified_scoped_charge_breaking_experiment",
+  "nonlinear_runs": 20,
+  "preserved_original_failures": [
+    "strong .5 coarse/fine curve tolerance",
+    "complex radiation BVP residual"
+  ],
+  "qualifications": "unchanged tolerance passed by targeted third-grid evolution and real-form radiation BVP",
+  "artifact_sha256": {
+    "docs/condensate_energy/charge_leakage/README.md": "c4426a3056d74ec2c1312c94946bffd6be5cdfab1fea4e4eebf56e271ad50950",
+    "docs/condensate_energy/charge_leakage/assessment.json": "74ff21c314429f3f18a22236bccac4adc18371824a7874b73464b81a374dccfc",
+    "docs/condensate_energy/charge_leakage/attempts/20260924T013527303056Z/charge_leakage.py": "299cb0bb7250924f695649df109148e5ab47d5381cd33cf7e8ae056863ded736",
+    "docs/condensate_energy/charge_leakage/attempts/20260924T013527303056Z/protocol.md": "727e094d5d6f4d50cba861940fd592ba05dd4fa757a9532cf9f0916ae1d60d3b",
+    "docs/condensate_energy/charge_leakage/attempts/20260924T013527303056Z/results.json": "3c18dade16563ed865ee3b45a2f0e89310631a259211f047b6d09dee4a92922d",
+    "docs/condensate_energy/charge_leakage/attempts/20260924T013527303056Z/self_binding.py": "2bca1b217255316d2357a259f85be1fcf9efbf46a3b851622b2e4e62d39313ec",
+    "docs/condensate_energy/charge_leakage/attempts/20260924T013527303056Z/self_binding_dynamics.py": "3db906479b55c761b057130ba10defcbd91440ce18ff2728c19e8e0032b5ba86",
+    "docs/condensate_energy/charge_leakage/latest-attempt.json": "13a400024701c53c431a97e055c0f6b6f91fca435e084126ae874ca227200f9a",
+    "docs/condensate_energy/charge_leakage/leakage-evidence.png": "cea7c45d000634578ce715809a3f47900c4a56260d0e6f1de2a4b56d4c8aca93",
+    "docs/condensate_energy/charge_leakage/leakage-evidence.svg": "1344284ad4454ec84136cf88b69c579202df73fb1a684544b7547ca5b5d10797",
+    "docs/condensate_energy/charge_leakage/numerical-amendment.md": "4e662e9c8c10f6790366b3dc45fa4bac83e7451d6389168f25cc68c2593f71de",
+    "docs/condensate_energy/charge_leakage/protocol.md": "727e094d5d6f4d50cba861940fd592ba05dd4fa757a9532cf9f0916ae1d60d3b",
+    "docs/condensate_energy/charge_leakage/radiation-protocol.md": "cd6f77d471a5b727f395c06b31205abba80d4a6af9cbbbad22b832a956c36c8f",
+    "docs/condensate_energy/charge_leakage/radiation-qualified.json": "32874d0b7187304980d90b1da3191a314e1a0fb7c3393a52d43b2368b63aeb47",
+    "docs/condensate_energy/charge_leakage/radiation-results.json": "c679c6c486fd9c27f88b687d4fa1e0ab4681cc88e743d1a9d153f8d385672d81",
+    "docs/condensate_energy/charge_leakage/refinement-results.json": "065341e086b1dcee637f58b45da3cdfa42d9f401869c64ef7d7f539d53cb18cd",
+    "docs/condensate_energy/charge_leakage/results.json": "3c18dade16563ed865ee3b45a2f0e89310631a259211f047b6d09dee4a92922d",
+    "code/condensate_energy/charge_leakage.py": "299cb0bb7250924f695649df109148e5ab47d5381cd33cf7e8ae056863ded736",
+    "code/condensate_energy/charge_leakage_refine.py": "e80f90d4dff0a5dec4e96e06abbbc2de5a66e31e6522e61134c13d14208e1c66",
+    "code/condensate_energy/charge_radiation.py": "de15e81b4a1716aabb2556e240313e2c377cddee10256a398b4135e9119a8ba3",
+    "code/condensate_energy/charge_radiation_refine.py": "8194af9eab90eca5787cb025c3a29ec216de384f6467efb00ab9808277b61271",
+    "code/condensate_energy/summarize_charge_leakage.py": "37cfab9247b4cc7b72dac5ad5b071886baf3c751eb3f82f221c0e1ae83411818"
+  }
+}

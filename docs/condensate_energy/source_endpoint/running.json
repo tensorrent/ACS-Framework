@@ -1,0 +1,862 @@
+{
+  "checks_total": 19,
+  "checks_passed": 19,
+  "checks": [
+    {
+      "name": "historical reaches declared endpoint",
+      "passed": true
+    },
+    {
+      "name": "corrected reaches declared endpoint",
+      "passed": true
+    },
+    {
+      "name": "second solver reaches declared endpoint",
+      "passed": true
+    },
+    {
+      "name": "GUT convention reaches declared endpoint",
+      "passed": true
+    },
+    {
+      "name": "two independent integrators agree",
+      "passed": true,
+      "evidence": {
+        "max_absolute_state_difference": 1.078692690725802e-12
+      }
+    },
+    {
+      "name": "properly transformed hypercharge conventions agree",
+      "passed": true
+    },
+    {
+      "name": "gauge trajectories match their closed form",
+      "passed": true
+    },
+    {
+      "name": "reverse integration returns the historical inputs",
+      "passed": true
+    },
+    {
+      "name": "universal rescaling contributes exactly zero angular velocity",
+      "passed": true
+    },
+    {
+      "name": "angle extraction is scale invariant 0.001",
+      "passed": true
+    },
+    {
+      "name": "angle extraction is scale invariant 7.0",
+      "passed": true
+    },
+    {
+      "name": "angle extraction is scale invariant 100000.0",
+      "passed": true
+    },
+    {
+      "name": "flavor-ratio integral agrees with coupled flow",
+      "passed": true
+    },
+    {
+      "name": "candidate Koide amplitudes stay positive",
+      "passed": true
+    },
+    {
+      "name": "candidate downward trajectory reaches IR",
+      "passed": true
+    },
+    {
+      "name": "candidate initial angle is reconstructed without fitting",
+      "passed": true
+    },
+    {
+      "name": "corrected source diagnostic cannot bridge its claimed angle gap",
+      "passed": true
+    },
+    {
+      "name": "source replay koide_rg_flow",
+      "passed": true
+    },
+    {
+      "name": "source replay koide_clebsch_gordan",
+      "passed": true
+    }
+  ],
+  "convention": "gY at historical initial value; g1_GUT=sqrt(5/3) gY is a separately integrated control",
+  "equation_reference": "https://arxiv.org/html/hep-ph/0501272v3#A4",
+  "comparison_inputs": {
+    "MZ_GeV": 91.1876,
+    "UV_GeV": 2e+16,
+    "v_GeV": 246.22,
+    "state": [
+      0.35749124345644157,
+      0.6519161404487752,
+      1.2171996941475736,
+      2.9350241468946925e-06,
+      0.0006068699033807536,
+      0.010205748966120778,
+      0.9942342930987847
+    ]
+  },
+  "initial": {
+    "theta_degrees": 12.732819967108291,
+    "mean": 0.04245714261119184,
+    "radius_over_mean": 1.414200505184577,
+    "Q": 0.6666605114773856
+  },
+  "historical_final": {
+    "theta_degrees": 12.732513182199225,
+    "mean": 0.05008722107517577,
+    "radius_over_mean": 1.4142097279408417,
+    "Q": 0.6666648591004185
+  },
+  "corrected_final": {
+    "theta_degrees": 12.732578081545638,
+    "mean": 0.04214284691938296,
+    "radius_over_mean": 1.414207776883479,
+    "Q": 0.6666639393662857
+  },
+  "forced_radius_fit": {
+    "initial_degrees": 12.732357346047445,
+    "corrected_final_degrees": 12.732373100793305
+  },
+  "candidate": {
+    "initial_degrees": 11.565051177077986,
+    "IR_degrees": 11.565274148567221,
+    "shift_degrees": 0.00022297148923478005,
+    "gap_to_input_angle_degrees": 1.1677687900303049,
+    "fraction_of_gap": 0.0001909380445327655
+  },
+  "source_angular_estimate_degrees": 0.0018718968101939459,
+  "flavor_log_ratio_integral": 3.4160010884828105e-05,
+  "trajectories": [
+    {
+      "log_mu_over_MZ": 0.0,
+      "scale_GeV": 91.1876,
+      "historical_angle": 12.732819967108291,
+      "corrected_angle": 12.732819967108291,
+      "corrected_radius_ratio": 1.414200505184577
+    },
+    {
+      "log_mu_over_MZ": 0.33021589745540736,
+      "scale_GeV": 126.866432494538,
+      "historical_angle": 12.732817653641131,
+      "corrected_angle": 12.732817654631951,
+      "corrected_radius_ratio": 1.4142005747030608
+    },
+    {
+      "log_mu_over_MZ": 0.6604317949108147,
+      "scale_GeV": 176.50526709652593,
+      "historical_angle": 12.73281532403573,
+      "corrected_angle": 12.732815328260717,
+      "corrected_radius_ratio": 1.4142006446392668
+    },
+    {
+      "log_mu_over_MZ": 0.9906476923662221,
+      "scale_GeV": 245.56621243493422,
+      "historical_angle": 12.732812978719295,
+      "corrected_angle": 12.732812988803454,
+      "corrected_radius_ratio": 1.4142007149688791
+    },
+    {
+      "log_mu_over_MZ": 1.3208635898216294,
+      "scale_GeV": 341.6485280105624,
+      "historical_angle": 12.732810618083372,
+      "corrected_angle": 12.732810637019996,
+      "corrected_radius_ratio": 1.4142007856690553
+    },
+    {
+      "log_mu_over_MZ": 1.6510794872770367,
+      "scale_GeV": 475.3248239421839,
+      "historical_angle": 12.73280824248721,
+      "corrected_angle": 12.732808273625835,
+      "corrected_radius_ratio": 1.4142008567182862
+    },
+    {
+      "log_mu_over_MZ": 1.9812953847324442,
+      "scale_GeV": 661.3044393057744,
+      "historical_angle": 12.732805852260629,
+      "corrected_angle": 12.732805899296181,
+      "corrected_radius_ratio": 1.414200928096273
+    },
+    {
+      "log_mu_over_MZ": 2.3115112821878516,
+      "scale_GeV": 920.0520137334938,
+      "historical_angle": 12.732803447706525,
+      "corrected_angle": 12.732803514669495,
+      "corrected_radius_ratio": 1.4142009997838236
+    },
+    {
+      "log_mu_over_MZ": 2.641727179643259,
+      "scale_GeV": 1280.0393550415192,
+      "historical_angle": 12.73280102910309,
+      "corrected_angle": 12.73280112035063,
+      "corrected_radius_ratio": 1.4142010717627533
+    },
+    {
+      "log_mu_over_MZ": 2.971943077098666,
+      "scale_GeV": 1780.8783916533262,
+      "historical_angle": 12.732798596705695,
+      "corrected_angle": 12.732798716913583,
+      "corrected_radius_ratio": 1.414201144015807
+    },
+    {
+      "log_mu_over_MZ": 3.3021589745540734,
+      "scale_GeV": 2477.6799505159483,
+      "historical_angle": 12.73279615074863,
+      "corrected_angle": 12.73279630490396,
+      "corrected_radius_ratio": 1.4142012165265834
+    },
+    {
+      "log_mu_over_MZ": 3.632374872009481,
+      "scale_GeV": 3447.117987371111,
+      "historical_angle": 12.732793691446568,
+      "corrected_angle": 12.732793884841165,
+      "corrected_radius_ratio": 1.4142012892794666
+    },
+    {
+      "log_mu_over_MZ": 3.9625907694648883,
+      "scale_GeV": 4795.866559110282,
+      "historical_angle": 12.732791218995894,
+      "corrected_angle": 12.732791457220323,
+      "corrected_radius_ratio": 1.4142013622595735
+    },
+    {
+      "log_mu_over_MZ": 4.2928066669202956,
+      "scale_GeV": 6672.337917372282,
+      "historical_angle": 12.732788733575916,
+      "corrected_angle": 12.732789022514067,
+      "corrected_radius_ratio": 1.4142014354526946
+    },
+    {
+      "log_mu_over_MZ": 4.623022564375703,
+      "scale_GeV": 9283.013348032597,
+      "historical_angle": 12.732786235349877,
+      "corrected_angle": 12.732786581174114,
+      "corrected_radius_ratio": 1.4142015088452509
+    },
+    {
+      "log_mu_over_MZ": 4.95323846183111,
+      "scale_GeV": 12915.163753230394,
+      "historical_angle": 12.732783724465902,
+      "corrected_angle": 12.73278413363268,
+      "corrected_radius_ratio": 1.4142015824242484
+    },
+    {
+      "log_mu_over_MZ": 5.283454359286518,
+      "scale_GeV": 17968.460080702953,
+      "historical_angle": 12.732781201057858,
+      "corrected_angle": 12.732781680303788,
+      "corrected_radius_ratio": 1.4142016561772415
+    },
+    {
+      "log_mu_over_MZ": 5.613670256741925,
+      "scale_GeV": 24998.95191735831,
+      "historical_angle": 12.732778665246064,
+      "corrected_angle": 12.732779221584428,
+      "corrected_radius_ratio": 1.4142017300922956
+    },
+    {
+      "log_mu_over_MZ": 5.943886154197332,
+      "scale_GeV": 34780.253519752005,
+      "historical_angle": 12.732776117137998,
+      "corrected_angle": 12.73277675785566,
+      "corrected_radius_ratio": 1.4142018041579545
+    },
+    {
+      "log_mu_over_MZ": 6.27410205165274,
+      "scale_GeV": 48388.67000893254,
+      "historical_angle": 12.732773556828871,
+      "corrected_angle": 12.732774289483567,
+      "corrected_radius_ratio": 1.4142018783632138
+    },
+    {
+      "log_mu_over_MZ": 6.604317949108147,
+      "scale_GeV": 67321.6307610762,
+      "historical_angle": 12.732770984402158,
+      "corrected_angle": 12.732771816820142,
+      "corrected_radius_ratio": 1.4142019526974907
+    },
+    {
+      "log_mu_over_MZ": 6.934533846563554,
+      "scale_GeV": 93662.46204936077,
+      "historical_angle": 12.732768399930118,
+      "corrected_angle": 12.732769340204163,
+      "corrected_radius_ratio": 1.414202027150602
+    },
+    {
+      "log_mu_over_MZ": 7.264749744018962,
+      "scale_GeV": 130309.6300248878,
+      "historical_angle": 12.732765803474177,
+      "corrected_angle": 12.73276685996188,
+      "corrected_radius_ratio": 1.4142021017127393
+    },
+    {
+      "log_mu_over_MZ": 7.594965641474369,
+      "scale_GeV": 181295.6792474047,
+      "historical_angle": 12.732763195085338,
+      "corrected_angle": 12.732764376407784,
+      "corrected_radius_ratio": 1.414202176374448
+    },
+    {
+      "log_mu_over_MZ": 7.925181538929777,
+      "scale_GeV": 252230.96180612594,
+      "historical_angle": 12.73276057480451,
+      "corrected_angle": 12.73276188984519,
+      "corrected_radius_ratio": 1.41420225112661
+    },
+    {
+      "log_mu_over_MZ": 8.255397436385184,
+      "scale_GeV": 350920.983653581,
+      "historical_angle": 12.732757942662817,
+      "corrected_angle": 12.732759400566865,
+      "corrected_radius_ratio": 1.4142023259604246
+    },
+    {
+      "log_mu_over_MZ": 8.585613333840591,
+      "scale_GeV": 488225.29909334035,
+      "historical_angle": 12.732755298681848,
+      "corrected_angle": 12.732756908855597,
+      "corrected_radius_ratio": 1.4142024008673895
+    },
+    {
+      "log_mu_over_MZ": 8.915829231295998,
+      "scale_GeV": 679252.4635975818,
+      "historical_angle": 12.732752642873901,
+      "corrected_angle": 12.732754414984656,
+      "corrected_radius_ratio": 1.41420247583929
+    },
+    {
+      "log_mu_over_MZ": 9.246045128751406,
+      "scale_GeV": 945022.5339821571,
+      "historical_angle": 12.732749975242184,
+      "corrected_angle": 12.732751919218321,
+      "corrected_radius_ratio": 1.4142025508681817
+    },
+    {
+      "log_mu_over_MZ": 9.576261026206813,
+      "scale_GeV": 1314780.0524771407,
+      "historical_angle": 12.732747295780978,
+      "corrected_angle": 12.7327494218123,
+      "corrected_radius_ratio": 1.414202625946377
+    },
+    {
+      "log_mu_over_MZ": 9.90647692366222,
+      "scale_GeV": 1829212.0285297146,
+      "historical_angle": 12.732744604475801,
+      "corrected_angle": 12.73274692301416,
+      "corrected_radius_ratio": 1.4142027010664333
+    },
+    {
+      "log_mu_over_MZ": 10.236692821117629,
+      "scale_GeV": 2544925.0154150594,
+      "historical_angle": 12.732741901303493,
+      "corrected_angle": 12.732744423063687,
+      "corrected_radius_ratio": 1.4142027762211415
+    },
+    {
+      "log_mu_over_MZ": 10.566908718573035,
+      "scale_GeV": 3540673.92575104,
+      "historical_angle": 12.732739186232347,
+      "corrected_angle": 12.732741922193277,
+      "corrected_radius_ratio": 1.4142028514035172
+    },
+    {
+      "log_mu_over_MZ": 10.897124616028442,
+      "scale_GeV": 4926027.986112858,
+      "historical_angle": 12.732736459222147,
+      "corrected_angle": 12.732739420628263,
+      "corrected_radius_ratio": 1.4142029266067846
+    },
+    {
+      "log_mu_over_MZ": 11.22734051348385,
+      "scale_GeV": 6853427.406427988,
+      "historical_angle": 12.732733720224266,
+      "corrected_angle": 12.732736918587241,
+      "corrected_radius_ratio": 1.4142030018243728
+    },
+    {
+      "log_mu_over_MZ": 11.557556410939258,
+      "scale_GeV": 9534957.443926724,
+      "historical_angle": 12.73273096918161,
+      "corrected_angle": 12.732734416282339,
+      "corrected_radius_ratio": 1.414203077049904
+    },
+    {
+      "log_mu_over_MZ": 11.887772308394664,
+      "scale_GeV": 13265685.62938625,
+      "historical_angle": 12.732728206028717,
+      "corrected_angle": 12.732731913919555,
+      "corrected_radius_ratio": 1.4142031522771863
+    },
+    {
+      "log_mu_over_MZ": 12.217988205850073,
+      "scale_GeV": 18456130.11411963,
+      "historical_angle": 12.732725430691682,
+      "corrected_angle": 12.73272941169895,
+      "corrected_radius_ratio": 1.4142032275002052
+    },
+    {
+      "log_mu_over_MZ": 12.54820410330548,
+      "scale_GeV": 25677431.857328925,
+      "historical_angle": 12.732722643088128,
+      "corrected_angle": 12.73272690981497,
+      "corrected_radius_ratio": 1.414203302713115
+    },
+    {
+      "log_mu_over_MZ": 12.878420000760887,
+      "scale_GeV": 35724201.26597166,
+      "historical_angle": 12.732719843127171,
+      "corrected_angle": 12.732724408456619,
+      "corrected_radius_ratio": 1.4142033779102334
+    },
+    {
+      "log_mu_over_MZ": 13.208635898216293,
+      "scale_GeV": 49701954.74308657,
+      "historical_angle": 12.732717030709333,
+      "corrected_angle": 12.732721907807724,
+      "corrected_radius_ratio": 1.4142034530860343
+    },
+    {
+      "log_mu_over_MZ": 13.538851795671702,
+      "scale_GeV": 69148762.40037443,
+      "historical_angle": 12.732714205726435,
+      "corrected_angle": 12.732719408047117,
+      "corrected_radius_ratio": 1.4142035282351417
+    },
+    {
+      "log_mu_over_MZ": 13.869067693127109,
+      "scale_GeV": 96204492.68483812,
+      "historical_angle": 12.732711368061496,
+      "corrected_angle": 12.732716909348856,
+      "corrected_radius_ratio": 1.4142036033523235
+    },
+    {
+      "log_mu_over_MZ": 14.199283590582516,
+      "scale_GeV": 133846277.09109883,
+      "historical_angle": 12.732708517588575,
+      "corrected_angle": 12.732714411882387,
+      "corrected_radius_ratio": 1.4142036784324847
+    },
+    {
+      "log_mu_over_MZ": 14.529499488037924,
+      "scale_GeV": 186216104.79081735,
+      "historical_angle": 12.732705654172632,
+      "corrected_angle": 12.732711915812745,
+      "corrected_radius_ratio": 1.4142037534706644
+    },
+    {
+      "log_mu_over_MZ": 14.859715385493331,
+      "scale_GeV": 259076594.71068472,
+      "historical_angle": 12.732702777669333,
+      "corrected_angle": 12.732709421300717,
+      "corrected_radius_ratio": 1.414203828462029
+    },
+    {
+      "log_mu_over_MZ": 15.189931282948738,
+      "scale_GeV": 360445096.852838,
+      "historical_angle": 12.732699887924852,
+      "corrected_angle": 12.732706928502989,
+      "corrected_radius_ratio": 1.4142039034018679
+    },
+    {
+      "log_mu_over_MZ": 15.520147180404146,
+      "scale_GeV": 501475897.46706605,
+      "historical_angle": 12.732696984775625,
+      "corrected_angle": 12.73270443757232,
+      "corrected_radius_ratio": 1.414203978285589
+    },
+    {
+      "log_mu_over_MZ": 15.850363077859553,
+      "scale_GeV": 697687603.2886419,
+      "historical_angle": 12.732694068048138,
+      "corrected_angle": 12.732701948657661,
+      "corrected_radius_ratio": 1.4142040531087143
+    },
+    {
+      "log_mu_over_MZ": 16.180578975314962,
+      "scale_GeV": 970670762.5257667,
+      "historical_angle": 12.732691137558604,
+      "corrected_angle": 12.73269946190433,
+      "corrected_radius_ratio": 1.4142041278668749
+    },
+    {
+      "log_mu_over_MZ": 16.51079487277037,
+      "scale_GeV": 1350463624.0935922,
+      "historical_angle": 12.73268819311268,
+      "corrected_angle": 12.732696977454095,
+      "corrected_radius_ratio": 1.4142042025558086
+    },
+    {
+      "log_mu_over_MZ": 16.841010770225775,
+      "scale_GeV": 1878857456.522584,
+      "historical_angle": 12.732685234505132,
+      "corrected_angle": 12.73269449544534,
+      "corrected_radius_ratio": 1.4142042771713563
+    },
+    {
+      "log_mu_over_MZ": 17.171226667681182,
+      "scale_GeV": 2613995133.930289,
+      "historical_angle": 12.732682261519479,
+      "corrected_angle": 12.732692016013159,
+      "corrected_radius_ratio": 1.414204351709456
+    },
+    {
+      "log_mu_over_MZ": 17.50144256513659,
+      "scale_GeV": 3636769003.6783247,
+      "historical_angle": 12.732679273927575,
+      "corrected_angle": 12.732689539289499,
+      "corrected_radius_ratio": 1.4142044261661406
+    },
+    {
+      "log_mu_over_MZ": 17.831658462591996,
+      "scale_GeV": 5059722037.90191,
+      "historical_angle": 12.732676271489224,
+      "corrected_angle": 12.73268706540322,
+      "corrected_radius_ratio": 1.4142045005375374
+    },
+    {
+      "log_mu_over_MZ": 18.161874360047406,
+      "scale_GeV": 7039431724.956142,
+      "historical_angle": 12.732673253951667,
+      "corrected_angle": 12.73268459448026,
+      "corrected_radius_ratio": 1.414204574819859
+    },
+    {
+      "log_mu_over_MZ": 18.492090257502813,
+      "scale_GeV": 9793739387.088346,
+      "historical_angle": 12.732670221049109,
+      "corrected_angle": 12.732682126643661,
+      "corrected_radius_ratio": 1.4142046490094073
+    },
+    {
+      "log_mu_over_MZ": 18.82230615495822,
+      "scale_GeV": 13625720786.830017,
+      "historical_angle": 12.73266717250218,
+      "corrected_angle": 12.732679662013757,
+      "corrected_radius_ratio": 1.4142047231025643
+    },
+    {
+      "log_mu_over_MZ": 19.152522052413627,
+      "scale_GeV": 18957035675.8133,
+      "historical_angle": 12.732664108017328,
+      "corrected_angle": 12.732677200708165,
+      "corrected_radius_ratio": 1.4142047970957943
+    },
+    {
+      "log_mu_over_MZ": 19.482737949869033,
+      "scale_GeV": 26374325970.440224,
+      "historical_angle": 12.7326610272862,
+      "corrected_angle": 12.73267474284195,
+      "corrected_radius_ratio": 1.414204870985638
+    },
+    {
+      "log_mu_over_MZ": 19.81295384732444,
+      "scale_GeV": 36693768070.63453,
+      "historical_angle": 12.732657929984953,
+      "corrected_angle": 12.732672288527676,
+      "corrected_radius_ratio": 1.4142049447687115
+    },
+    {
+      "log_mu_over_MZ": 20.14316974477985,
+      "scale_GeV": 51050882465.41639,
+      "historical_angle": 12.732654815773518,
+      "corrected_angle": 12.732669837875475,
+      "corrected_radius_ratio": 1.4142050184417034
+    },
+    {
+      "log_mu_over_MZ": 20.473385642235257,
+      "scale_GeV": 71025483005.20398,
+      "historical_angle": 12.732651684294787,
+      "corrected_angle": 12.732667390993155,
+      "corrected_radius_ratio": 1.414205092001373
+    },
+    {
+      "log_mu_over_MZ": 20.803601539690664,
+      "scale_GeV": 98815514884.38849,
+      "historical_angle": 12.732648535173762,
+      "corrected_angle": 12.73266494798624,
+      "corrected_radius_ratio": 1.4142051654445487
+    },
+    {
+      "log_mu_over_MZ": 21.13381743714607,
+      "scale_GeV": 137478909944.9188,
+      "historical_angle": 12.732645368016609,
+      "corrected_angle": 12.732662508958068,
+      "corrected_radius_ratio": 1.4142052387681225
+    },
+    {
+      "log_mu_over_MZ": 21.464033334601478,
+      "scale_GeV": 191270072333.84476,
+      "historical_angle": 12.732642182409656,
+      "corrected_angle": 12.73266007400985,
+      "corrected_radius_ratio": 1.4142053119690527
+    },
+    {
+      "log_mu_over_MZ": 21.794249232056885,
+      "scale_GeV": 266108020388.3763,
+      "historical_angle": 12.732638977918274,
+      "corrected_angle": 12.732657643240717,
+      "corrected_radius_ratio": 1.4142053850443583
+    },
+    {
+      "log_mu_over_MZ": 22.12446512951229,
+      "scale_GeV": 370227697678.8189,
+      "historical_angle": 12.732635754085713,
+      "corrected_angle": 12.732655216747833,
+      "corrected_radius_ratio": 1.4142054579911192
+    },
+    {
+      "log_mu_over_MZ": 22.4546810269677,
+      "scale_GeV": 515086121525.0565,
+      "historical_angle": 12.73263251043179,
+      "corrected_angle": 12.73265279462638,
+      "corrected_radius_ratio": 1.4142055308064732
+    },
+    {
+      "log_mu_over_MZ": 22.78489692442311,
+      "scale_GeV": 716623078854.2734,
+      "historical_angle": 12.732629246451507,
+      "corrected_angle": 12.732650376969694,
+      "corrected_radius_ratio": 1.4142056034876145
+    },
+    {
+      "log_mu_over_MZ": 23.115112821878515,
+      "scale_GeV": 997015092594.7565,
+      "historical_angle": 12.732625961613506,
+      "corrected_angle": 12.732647963869267,
+      "corrected_radius_ratio": 1.414205676031792
+    },
+    {
+      "log_mu_over_MZ": 23.445328719333922,
+      "scale_GeV": 1387115659812.3884,
+      "historical_angle": 12.732622655358409,
+      "corrected_angle": 12.732645555414827,
+      "corrected_radius_ratio": 1.4142057484363093
+    },
+    {
+      "log_mu_over_MZ": 23.77554461678933,
+      "scale_GeV": 1929850278082.8186,
+      "historical_angle": 12.73261932709703,
+      "corrected_angle": 12.732643151694386,
+      "corrected_radius_ratio": 1.4142058206985195
+    },
+    {
+      "log_mu_over_MZ": 24.105760514244736,
+      "scale_GeV": 2684939838628.927,
+      "historical_angle": 12.732615976208379,
+      "corrected_angle": 12.73264075279428,
+      "corrected_radius_ratio": 1.4142058928158279
+    },
+    {
+      "log_mu_over_MZ": 24.435976411700146,
+      "scale_GeV": 3735472134251.955,
+      "historical_angle": 12.732612602037511,
+      "corrected_angle": 12.732638358799234,
+      "corrected_radius_ratio": 1.414205964785687
+    },
+    {
+      "log_mu_over_MZ": 24.766192309155553,
+      "scale_GeV": 5197044591099.044,
+      "historical_angle": 12.732609203893158,
+      "corrected_angle": 12.73263596979239,
+      "corrected_radius_ratio": 1.4142060366055969
+    },
+    {
+      "log_mu_over_MZ": 25.09640820661096,
+      "scale_GeV": 7230484263077.11,
+      "historical_angle": 12.732605781045129,
+      "corrected_angle": 12.73263358585537,
+      "corrected_radius_ratio": 1.4142061082731043
+    },
+    {
+      "log_mu_over_MZ": 25.426624104066367,
+      "scale_GeV": 10059544758985.773,
+      "historical_angle": 12.732602332721475,
+      "corrected_angle": 12.732631207068318,
+      "corrected_radius_ratio": 1.414206179785799
+    },
+    {
+      "log_mu_over_MZ": 25.756840001521773,
+      "scale_GeV": 13995527419206.684,
+      "historical_angle": 12.732598858105348,
+      "corrected_angle": 12.732628833509914,
+      "corrected_radius_ratio": 1.4142062511413171
+    },
+    {
+      "log_mu_over_MZ": 26.08705589897718,
+      "scale_GeV": 19471535982460.766,
+      "historical_angle": 12.732595356331544,
+      "corrected_angle": 12.732626465257466,
+      "corrected_radius_ratio": 1.414206322337333
+    },
+    {
+      "log_mu_over_MZ": 26.417271796432587,
+      "scale_GeV": 27090134023527.598,
+      "historical_angle": 12.732591826482658,
+      "corrected_angle": 12.732624102386907,
+      "corrected_radius_ratio": 1.414206393371564
+    },
+    {
+      "log_mu_over_MZ": 26.747487693887997,
+      "scale_GeV": 37689649243579.85,
+      "historical_angle": 12.732588267584896,
+      "corrected_angle": 12.732621744972844,
+      "corrected_radius_ratio": 1.4142064642417682
+    },
+    {
+      "log_mu_over_MZ": 27.077703591343404,
+      "scale_GeV": 52436420538575.81,
+      "historical_angle": 12.732584678603335,
+      "corrected_angle": 12.732619393088614,
+      "corrected_radius_ratio": 1.4142065349457404
+    },
+    {
+      "log_mu_over_MZ": 27.40791948879881,
+      "scale_GeV": 72953138436721.98,
+      "historical_angle": 12.732581058436722,
+      "corrected_angle": 12.732617046806292,
+      "corrected_radius_ratio": 1.4142066054813127
+    },
+    {
+      "log_mu_over_MZ": 27.738135386254218,
+      "scale_GeV": 101497401102201.08,
+      "historical_angle": 12.732577405911629,
+      "corrected_angle": 12.732614706196738,
+      "corrected_radius_ratio": 1.4142066758463558
+    },
+    {
+      "log_mu_over_MZ": 28.068351283709625,
+      "scale_GeV": 141210133672817.72,
+      "historical_angle": 12.732573719775928,
+      "corrected_angle": 12.732612371329633,
+      "corrected_radius_ratio": 1.4142067460387757
+    },
+    {
+      "log_mu_over_MZ": 28.39856718116503,
+      "scale_GeV": 196461206251148.25,
+      "historical_angle": 12.732569998691492,
+      "corrected_angle": 12.732610042273521,
+      "corrected_radius_ratio": 1.4142068160565096
+    },
+    {
+      "log_mu_over_MZ": 28.72878307862044,
+      "scale_GeV": 273330281317381.75,
+      "historical_angle": 12.732566241225943,
+      "corrected_angle": 12.732607719095814,
+      "corrected_radius_ratio": 1.4142068858975325
+    },
+    {
+      "log_mu_over_MZ": 29.05899897607585,
+      "scale_GeV": 380275801572414.2,
+      "historical_angle": 12.732562445843373,
+      "corrected_angle": 12.732605401862855,
+      "corrected_radius_ratio": 1.4142069555598489
+    },
+    {
+      "log_mu_over_MZ": 29.389214873531255,
+      "scale_GeV": 529065731629004.2,
+      "historical_angle": 12.73255861089382,
+      "corrected_angle": 12.732603090639913,
+      "corrected_radius_ratio": 1.4142070250414973
+    },
+    {
+      "log_mu_over_MZ": 29.719430770986662,
+      "scale_GeV": 736072469577929.2,
+      "historical_angle": 12.732554734601319,
+      "corrected_angle": 12.732600785491242,
+      "corrected_radius_ratio": 1.4142070943405456
+    },
+    {
+      "log_mu_over_MZ": 30.04964666844207,
+      "scale_GeV": 1024074416618007.1,
+      "historical_angle": 12.732550815050256,
+      "corrected_angle": 12.732598486480104,
+      "corrected_radius_ratio": 1.4142071634550917
+    },
+    {
+      "log_mu_over_MZ": 30.379862565897476,
+      "scale_GeV": 1424762444074103.5,
+      "historical_angle": 12.732546850169737,
+      "corrected_angle": 12.732596193668773,
+      "corrected_radius_ratio": 1.414207232383264
+    },
+    {
+      "log_mu_over_MZ": 30.710078463352886,
+      "scale_GeV": 1982227061923779.0,
+      "historical_angle": 12.732542837715657,
+      "corrected_angle": 12.732593907118597,
+      "corrected_radius_ratio": 1.4142073011232177
+    },
+    {
+      "log_mu_over_MZ": 31.040294360808293,
+      "scale_GeV": 2757810006408759.0,
+      "historical_angle": 12.732538775249914,
+      "corrected_angle": 12.732591626889993,
+      "corrected_radius_ratio": 1.4142073696731368
+    },
+    {
+      "log_mu_over_MZ": 31.3705102582637,
+      "scale_GeV": 3836854100895495.0,
+      "historical_angle": 12.732534660116297,
+      "corrected_angle": 12.732589353042494,
+      "corrected_radius_ratio": 1.4142074380312306
+    },
+    {
+      "log_mu_over_MZ": 31.700726155719106,
+      "scale_GeV": 5338094124449479.0,
+      "historical_angle": 12.732530489412376,
+      "corrected_angle": 12.73258708563476,
+      "corrected_radius_ratio": 1.4142075061957362
+    },
+    {
+      "log_mu_over_MZ": 32.03094205317451,
+      "scale_GeV": 7426722031163880.0,
+      "historical_angle": 12.732526259956465,
+      "corrected_angle": 12.732584824724608,
+      "corrected_radius_ratio": 1.4142075741649158
+    },
+    {
+      "log_mu_over_MZ": 32.361157950629924,
+      "scale_GeV": 1.0332564177830684e+16,
+      "historical_angle": 12.73252196824865,
+      "corrected_angle": 12.732582570369031,
+      "corrected_radius_ratio": 1.4142076419370555
+    },
+    {
+      "log_mu_over_MZ": 32.69137384808533,
+      "scale_GeV": 1.4375370727623414e+16,
+      "historical_angle": 12.732517610424422,
+      "corrected_angle": 12.732580322624235,
+      "corrected_radius_ratio": 1.4142077095104648
+    },
+    {
+      "log_mu_over_MZ": 33.02158974554074,
+      "scale_GeV": 1.9999999999999988e+16,
+      "historical_angle": 12.732513182199225,
+      "corrected_angle": 12.732578081545638,
+      "corrected_radius_ratio": 1.414207776883479
+    }
+  ],
+  "replays": [
+    {
+      "source": "koide_rg_flow",
+      "returncode": 0,
+      "plot_path_replacements": 2,
+      "replay_sha256": "7b133c1b056058c868d810fb88cdbc15251ec87abd85a3ac9512a5fa4ccf9463"
+    },
+    {
+      "source": "koide_clebsch_gordan",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "e612c8095adc1f883296b4012017535512ff2d5189903f8dafd009fabc1186f8"
+    }
+  ],
+  "limitations": [
+    "Diagnostic uses historical mixed-scheme numerical inputs, not a precision SM mass fit",
+    "All quark Yukawas except top and all neutrino Yukawas are set to zero",
+    "No thresholds or new physics between the stated endpoints are included",
+    "RG evolution is conditional on boundary values; no ACS matching scale is derived",
+    "The exact Fourier angle does not force the Koide radius ratio to sqrt(2)"
+  ]
+}

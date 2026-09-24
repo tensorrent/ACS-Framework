@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-12T15:40:41.734883+00:00",
+  "scope": "Integrity and retained receipts; mathematical commands were not rerun by this verifier.",
+  "manifest_files": 56,
+  "retained_branch_prefix_events": 315,
+  "ledger_events": 319,
+  "ledger_head_sha256": "cf318b6b988c03de31123e340b5d9d1bf2288ce6543b13f75593b7e303937744",
+  "branches": 112,
+  "registered_replay_commands_passed": 18,
+  "replay_streams": 7,
+  "lean_modules_passed": 5,
+  "distinct_lean_mutations_rejected": 11,
+  "older_runtime_standalone_modules_passed": 2,
+  "older_runtime_mutations_rejected": 4,
+  "original_lean_sources_byte_identical": 3,
+  "locked_dependency_revisions": 9,
+  "new_python_audits_passed": 2,
+  "replay_delta_files": 332,
+  "local_links_checked": 29
+}

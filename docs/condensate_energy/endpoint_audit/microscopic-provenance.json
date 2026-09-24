@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase6_dynamics.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/phase6_dynamics.py",
+    "sha256": "04ebb30bb52b6589bfa9432f1b55c5df80b295331af979692d2353d52141a6ee"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/Palatini_Gauge_Attractor.tex",
+    "sha256": "398b376729e7f495eaeecedf7e1950aaa8e3c83c3930e556449bc4a63abaad06"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/papers/notes/Klein_Foam_Monad.tex",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/Klein_Foam_Monad.tex",
+    "sha256": "89edb252fb55b68d78e499b51d8e29ddb2adee7fde6aeebdef78fa1f43cfff90"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/TR-2026-FF06-ACS/docs/ACS_Relational_Electrodynamics_Paper.md",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/ACS_Relational_Electrodynamics_Paper.md",
+    "sha256": "c0675acbad7f8dd504bccb75ba30c69a6cce724beafedb9a39e187ff96932323"
+  }
+]

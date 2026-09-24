@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-23",
+  "seagate_path_entries": 460414,
+  "selected_text_files": 57685,
+  "matching_text_paths": 5694,
+  "distinct_matching_file_contents": 2720,
+  "text_errors": [],
+  "text_exclusions": {
+    "generated_claude_retrieval_chunks": 80711,
+    "selection_rule": "See screen_files.py EXT/EXCLUDE/PRIVATE plus /claude_imported_data/corpus/; original selected path list retained."
+  },
+  "generated_claude_chunks_excluded": 80711,
+  "parent_export_records": 82,
+  "unmapped_chunk_conversation_prefixes": [],
+  "antigravity_stores": 201,
+  "antigravity_sql_steps": 81359,
+  "antigravity_pb_files": 112,
+  "antigravity_matching_payloads": 1778,
+  "antigravity_unresolved_errors": [],
+  "antigravity_unread_wal_bytes": 0,
+  "cursor_composer_records": 714,
+  "cursor_bubble_records": 428064,
+  "cursor_matching_distinct_ids": 136,
+  "cursor_errors": [],
+  "cursor_search_index_conversations": 304,
+  "cursor_search_index_matches": 118,
+  "claude_export_payloads": 7,
+  "claude_export_errors": [],
+  "archive_candidates": 225,
+  "archive_coverage_rows": 260,
+  "archive_matching_records": 1796,
+  "archive_errors": [
+    {
+      "source": "/Volumes/Seagate 4tb/Cold_Vault/Sovereign_Monolith_FINAL_20260130_003048.zip!SOVEREIGN_IEEE_REPORT.md",
+      "error": "File <ZipInfo filename='SOVEREIGN_IEEE_REPORT.md' compress_type=deflate filemode='-rwx------' file_size=5751 compress_size=2738> is encrypted, password required for extraction"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/Cold_Vault/Sovereign_Monolith_FINAL_20260130_003048.zip!sovereign_paper.tex",
+      "error": "File <ZipInfo filename='sovereign_paper.tex' compress_type=deflate filemode='-rwx------' file_size=6385 compress_size=3030> is encrypted, password required for extraction"
+    }
+  ],
+  "archive_gaps": [
+    {
+      "source": "/Volumes/Seagate 4tb/acs_codebase.tar.gz!sovereign_sdk/monolith_bench.log",
+      "reason": "TAR member >=200 MB"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_codebase.tar.gz!sovereign_sdk/sovereign_training_corpus.jsonl",
+      "reason": "TAR member >=200 MB"
+    }
+  ],
+  "filesystem_pdf_records": 280,
+  "filesystem_pdf_statuses": {
+    "text extracted": 164,
+    "no text": 54,
+    "duplicate": 62
+  },
+  "excluded_benchmark_pdfs": 23770,
+  "archive_document_records": 362,
+  "archive_document_statuses": {
+    "duplicate bytes": 263,
+    "text extracted": 99
+  },
+  "archive_document_errors": [
+    {
+      "source": "/Volumes/Seagate 4tb/computational-tensegrity (1).tar.gz!computational-tensegrity/paper/._Computational_Tensegrity_Wallace_2026.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/computational-tensegrity (1).tar.gz!computational-tensegrity/paper/._Computational_Tensegrity_Wallace_2026_FINAL (draft.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/handoffs/omniforge-seggci-complete-3-patched-20260321T202255Z.tar.gz!omniforge-seggci-complete-3/._ASC_Addendum_Final.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/omniforge-seggci-complete (3).tar.gz!./documentation/._TR-2026-FF06_FINAL.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/.trash_dedupe/archive/cleanup_2026_01_30/dev_backup_20251231_123205.tar.gz!./organized/docs/reports/._PODCAST_SYNOPSIS_FINAL_PRIME_ZETA_CONSCIOUSNESS_CONDENSED.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_codebase.tar.gz!sovereign_sdk/omniforge_extracted/._ASC_Addendum_Final.pdf",
+      "error": "Syntax Warning: May not be a PDF file (continuing anyway)\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't find trailer dictionary\nSyntax Error: Couldn't read xref table\n"
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_codebase.tar.gz!sovereign_sdk/omniforge_extracted/._Scaling_Law_Transparent_Constraint.docx",
+      "error": "File is not a zip file"
+    }
+  ],
+  "catalogued_records": 7068,
+  "matched_extracted_records": 4348,
+  "distinct_extracted_texts": 3645,
+  "triaged_leads": 17,
+  "scope": "Broad source discovery with explicit exclusions and targeted semantic review. Not every keyword match was manually read, and not every scientific claim was independently retested.",
+  "limitations": [
+    "The inventory excludes dependency/build environments, Git internals, AppleDouble metadata and protected OS directories. The protected directories reported by the inventory are Spotlight, Trash and TemporaryItems.",
+    "Generated Claude retrieval chunks (80,711 files) were inventoried and their conversation prefixes all mapped to the 82-record parent export, which was fully screened. Chunk contents were not individually checked for later edits.",
+    "Keyword screening can miss work that uses unrelated vocabulary. Binary arrays, images, audio, video, Git packs/bundles and model weights were not generally interpreted; selected arrays were inspected separately.",
+    "54 filesystem PDFs have no extractable text, mainly figures/icons and unrelated documents; no general OCR pass was run. Archive-document no-text cases are listed separately. One relevant mathematical proof page was rendered and visually checked.",
+    "Seven archive-document extraction errors are AppleDouble metadata sidecars (._ filenames), not unread primary documents. Their paired primary documents were covered by the document pass.",
+    "Two encrypted members of Sovereign_Monolith_FINAL_20260130_003048.zip remain unread. Two TAR members at least 200 MB (a training corpus and a monolith benchmark log) were not content-screened; exact paths are in the coverage ledger.",
+    "Antigravity PB files were byte-keyword screened and matching protobuf text leaves decoded. This heuristic is not a schema-complete semantic decoder and cannot certify hidden/compressed content. Immutable main-database retries found no nonempty WAL companions.",
+    "Cursor counts include duplicate current/archive snapshots. Bubble extraction covers text, richText, thinking and summary fields, not every code diff, image or attachment. JSON parse failures inside the original extractor were not separately counted.",
+    "Live Claude research searches, project inventory and selected recent message tails were read. Long cloud chats were not fully paginated; all cloud attachments and every cloud-only conversation were not exported or independently hashed.",
+    "Old assistant praise, ratification labels, timing tables and claimed test results remain historical claims unless a fresh check is explicitly identified. No RH proof, physical interpretation or asymptotic theorem is established by this audit.",
+    "Stores were read in place. Fingerprints record the bytes encountered; this is not an atomic snapshot of every application at one instant.",
+    "No original research file, app conversation, standing rule, repository history or remote was changed. New audit artifacts and local diagnostic outputs were written."
+  ]
+}

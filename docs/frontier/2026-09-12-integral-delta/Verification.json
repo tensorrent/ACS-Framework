@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-12T15:58:05.286252+00:00",
+  "scope": "Integrity and retained evidence; no mathematical reruns.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 18,
+  "ledger_events": 322,
+  "preserved_event_prefix": 319,
+  "ledger_head_sha256": "1f5aafca6fecc08a06fa34318d2cc609b919f5fa35d6ed365692f2fdf3cae038",
+  "research_branches": 112,
+  "new_lean_theorems": 19,
+  "lean_modules_checked_including_dependency": 4,
+  "false_mutations_rejected": 7,
+  "complex_quadrature_cases": 24,
+  "finite_configurations": 9,
+  "development_attempts_retained": 10,
+  "failed_development_attempts_retained": 6,
+  "local_links": 20
+}

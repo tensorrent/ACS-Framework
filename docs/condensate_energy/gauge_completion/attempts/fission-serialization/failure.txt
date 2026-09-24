@@ -1,0 +1,6 @@
+Initial fission run completed all 15 BVP solves but failed while serializing checks.
+TypeError: Object of type bool is not JSON serializable
+when serializing dict item passed, list item 1, dict item checks.
+Cause: NumPy comparison result was not explicitly converted to native bool.
+Repair: bool(relative < 1e-5), no changes to numerical calculation or tolerance.
+All cases rerun after the serialization-only repair.

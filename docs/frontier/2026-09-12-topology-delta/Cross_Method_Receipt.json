@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/klein_lift_crosscheck.py"
+  ],
+  "started_utc": "2026-09-12T16:11:11.300673+00:00",
+  "returncode": 0,
+  "source_sha256": "f2281d5db73279c303dab59c34cc313c48cd32b4bfaaa6585212913bd26f6eab",
+  "stdout_sha256": "a50adcdd6d790f154b06e772c75a8b7429126feddbfadd9cc432c4f00f5a32c9",
+  "elapsed_seconds": 0.214008,
+  "stderr": ""
+}

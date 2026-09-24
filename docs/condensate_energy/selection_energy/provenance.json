@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_principle.py",
+    "snapshot": "docs/condensate_energy/selection_energy/source-snapshots/selection_principle.py",
+    "sha256": "15938b79184c388286c46c0cd96b95c18a732649526da08b6eae8253507c7d28"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_full.py",
+    "snapshot": "docs/condensate_energy/selection_energy/source-snapshots/selection_full.py",
+    "sha256": "614c2372305188f32c3bc7b741fe564c5631e36b83e1eaf2455cf0a09df6fccf"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_vacuum.py",
+    "snapshot": "docs/condensate_energy/selection_energy/source-snapshots/acs_vacuum.py",
+    "sha256": "6290ef93e158976420d08f7c9f1aaf5819809836ce44648fef72b0093dfd318b"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/torsion_higgs_vacuum.py",
+    "snapshot": "docs/condensate_energy/selection_energy/source-snapshots/torsion_higgs_vacuum.py",
+    "sha256": "f11fa20c9b5a8923e0ba77e661dd03c571fff95b3ac00ed5e12c316b700cb158"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_higgs_wall.py",
+    "snapshot": "docs/condensate_energy/selection_energy/source-snapshots/acs_higgs_wall.py",
+    "sha256": "ddccf4e7a7c91723105c8f116bdc76c3124be0c25b86440262cf20c193d2398c"
+  }
+]

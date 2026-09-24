@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-12T15:23:09.908223+00:00",
+  "file": "PerZeroBoundary.lean",
+  "sha256": "0d64e02526b2de58c412258e8c5d161f66b095c63e2fa039b37016e2b0c6aa1d",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/PerZeroBoundary.olean",
+    "PerZeroBoundary.lean"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

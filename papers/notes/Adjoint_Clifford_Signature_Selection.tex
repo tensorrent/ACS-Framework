@@ -34,8 +34,11 @@ in $\sln{n}$}
 \author{B.~Wallace\thanks{Independent researcher.}}
 \date{May 2026 \\ \textit{Adjoint Spectral Minimization and Bipartite Grading Selection in $\sln{n}$} \\
 Companion to \textit{Colour from Gravity} \\
-{\footnotesize (Legacy filename \texttt{Adjoint\_Clifford\_Signature\_Selection} retained for link stability; the Clifford-algebra extension is future work.)}}
+{\footnotesize (Legacy filename \nolinkurl{Adjoint_Clifford_Signature_Selection} retained for link stability; the Clifford-algebra extension is future work.)}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -77,6 +80,11 @@ this internal $(3,1)$ decomposition with Lorentzian spacetime
 signature would require an additional bridging mechanism not
 provided here.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 %-----------------------------------------------------------------
 \section{Setup}
@@ -467,7 +475,7 @@ the pattern as an empirical observation pending that analysis.
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}llcll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}llcll@{}}
 \toprule
 Type & Algebra & Compact? & $\ad_T^2$ sign & Selected grading \\
 \midrule
@@ -480,7 +488,7 @@ $D_2$ & $\mathfrak{so}(3,1)$ boost & No & Positive & nontrivial \\
 $D_2$ & $\mathfrak{so}(3,1)$ rotation & compact dir. & Negative & trivial \\
 $C_2$ & $\mathfrak{sp}(4,\mathbb{R})$ & No & Positive & $(2,2)$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Grading selection across classical Lie algebra types.
 The sign of $\ad_T^2$ refers to its diagonal entries on the active
 sector, computed in the defining (fundamental) representation with
@@ -501,8 +509,8 @@ specific choice of spectral functional, coordinate frame,
 optimisation path, and small perturbations of the generator.
 
 \paragraph{Test 1: Functional universality.}
-Six spectral functionals ($f(x) = x^2,\, x^4,\, |x|,\,
-\mathbf{1}_{x \ne 0},\, e^{x^2}{-}1,\, \cosh x{-}1$) all select
+Six spectral functionals ($f(x)=x^2$, $x^4$, $|x|$,
+$\mathbf{1}_{x\ne0}$, $e^{x^2}-1$, $\cosh x-1$) all select
 $(3,1)$ as the unique minimum among the three grading
 classes, and as the global minimum on $\Gr(1,4)$ (5000-sample
 Monte Carlo confirmation, machine-precision agreement).
@@ -524,7 +532,7 @@ weighted max-cut criterion of part~(ii).
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}llll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}llll@{}}
 \toprule
 Algebra & Cartan element & Eigenvalue structure & Selected grading \\
 \midrule
@@ -538,7 +546,7 @@ $\sln{6}$ & $((1/5)^5, -1)$ & $5+1$ & $(5,1)$ \\
 $\sln{6}$ & $((1/4)^4, (-1/2)^2)$ & $4+2$ & $(4,2)$ \\
 $\sln{6}$ & $((1/3)^3, (-1/3)^3)$ & $3+3$ & $(3,3)$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Grading selected by $\widetilde{\mathcal{S}}_g$ with $g(x) = x^2$
 for Cartan elements
 across $\sln{3}$--$\sln{6}$.  All $9$ cases match the
@@ -711,6 +719,19 @@ physical spacetime signature, in light of the Coleman--Mandula
 theorem.  These corrections significantly strengthened the paper.
 
 %-----------------------------------------------------------------
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+A signature or grading selection within an algebraic construction is distinct from deriving a physical spacetime metric. The recovered soldering construction inserts a Lorentzian internal metric and a nondegenerate vierbein; congruence then preserves the supplied signature. That example cannot independently validate a physical signature-selection claim. Applying the adjoint calculation to matter requires a specified map, kinetic terms and vacuum, with those additional inputs kept explicit.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{9}
 
 \bibitem{WallaceA}

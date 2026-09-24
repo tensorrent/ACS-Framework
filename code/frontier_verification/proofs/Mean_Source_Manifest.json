@@ -1,0 +1,38 @@
+{
+  "PerZero.lean": {
+    "sha256": "b44f0fac79db4fe7df81e22ae6ace0275ae61442620616c56f1cddcdee77d75a",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "PerZeroIntegral.lean": {
+    "sha256": "03e8bb3f30f031568ef0e9fed9a5aaaa3f1bfd04910b05ee5523730fb7fcd49a",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "PerZeroError.lean": {
+    "sha256": "37932454843519c2b84e36671c8efd4e5dd57382d714c5fa73a13414d01c63ee",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "PerZeroSums.lean": {
+    "sha256": "982bc63a2b3faa7c721328821c18870d1650d6dc55c7f8239c3981aa0b96e5cf",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "PerZeroMean.lean": {
+    "sha256": "a00b59a36ebb4ffe11dbd01167774d329594f7ad39ca0e19a01a587a50ebd0c9",
+    "provenance": "new mean-error continuation"
+  },
+  "PerZeroCounterfamily.lean": {
+    "sha256": "9b64a11724e5279f32edc24128fcfe89cd708099231483d10485e9961d2d70a7",
+    "provenance": "new mean-error continuation"
+  },
+  "lake-manifest.json": {
+    "sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "lean-toolchain": {
+    "sha256": "108ca2895820de2c74101f81de81756b41ca0165dfdc8ced16a82c3f810152d0",
+    "provenance": "unchanged earlier source or lock"
+  },
+  "lakefile.toml": {
+    "sha256": "4272c3fdb74d0e85539b5049edcde899ec73d7f1086ffc4323aa092d3bdb21dc",
+    "provenance": "unchanged earlier source or lock"
+  }
+}

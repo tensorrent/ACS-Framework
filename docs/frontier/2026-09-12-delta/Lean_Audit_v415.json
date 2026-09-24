@@ -1,0 +1,126 @@
+{
+  "runtime": "Lean (version 4.15.0, arm64-apple-darwin23.6.0, commit 11651562caae, Release)",
+  "core_only": true,
+  "all_passed": true,
+  "verified_modules": [
+    "LFBound",
+    "AxiomIII"
+  ],
+  "rejected_mutations": 4,
+  "package_revisions": {},
+  "source_hashes": {
+    "LFBound": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f",
+    "AxiomIII": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e"
+  },
+  "events": [
+    {
+      "name": "LFBound",
+      "started_utc": "2026-09-12T15:28:27.617596+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/compiled/LFBound.olean",
+        "LFBound.lean"
+      ],
+      "elapsed_seconds": 0.391117,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f"
+    },
+    {
+      "name": "AxiomIII",
+      "started_utc": "2026-09-12T15:28:28.009091+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/compiled/AxiomIII.olean",
+        "AxiomIII.lean"
+      ],
+      "elapsed_seconds": 0.355818,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e"
+    },
+    {
+      "name": "axiom_dependencies",
+      "started_utc": "2026-09-12T15:28:28.365585+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/AuditAxioms.lean"
+      ],
+      "elapsed_seconds": 0.201717,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "'LFBound.corr2_le_two' depends on axioms: [propext, Quot.sound]\n'LFBound.neg_two_le_corr2' depends on axioms: [propext, Quot.sound]\n'LFBound.S_le_four' depends on axioms: [propext, Quot.sound]\n'LFBound.star_nonneg' does not depend on any axioms\n'LFBound.star_normalised' does not depend on any axioms\n'LFBound.star_nosignalling' does not depend on any axioms\n'LFBound.star_aoe' does not depend on any axioms\n'LFBound.star_is_LF' does not depend on any axioms\n'LFBound.star_S_eq_four' does not depend on any axioms\n'LFBound.lf_bound_is_four' depends on axioms: [propext, Quot.sound]\n'AxiomIII.commutes_iff_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_not_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_conj_D' depends on axioms: [propext]\n'AxiomIII.centraliser_unimodular' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.trace_two_only_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_infinite_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.axiom_III_clause3_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "input_sha256": "ce869b3937933c63a7a027b6c01c597c253ca662e3b0310f64cde0118119e2bc"
+    },
+    {
+      "name": "wrong_attainment",
+      "started_utc": "2026-09-12T15:28:28.567927+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_attainment.lean"
+      ],
+      "elapsed_seconds": 0.312977,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_attainment.lean:186:43: error: tactic 'decide' proved that the proposition\n  S2 star = 9\nis false\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_attainment.lean:199:29: error: application type mismatch\n  \u27e8star_is_LF, star_S_eq_four\u27e9\nargument\n  star_S_eq_four\nhas type\n  S2 star = 9 : Prop\nbut is expected to have type\n  S2 star = 8 : Prop\n",
+      "stderr": "",
+      "input_sha256": "6a6d401709e830d6376ce2584fa70bad0b27f2b1f24bd33d19e9968b682e50c7"
+    },
+    {
+      "name": "wrong_upper_bound",
+      "started_utc": "2026-09-12T15:28:28.881479+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_upper_bound.lean"
+      ],
+      "elapsed_seconds": 0.291958,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_upper_bound.lean:140:2: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  h \u2265 -2\n  g \u2264 2\n  f \u2264 2\n  e \u2264 2\n  e + f + g - h \u2265 8\nwhere\n e := corr2 B Setting.s2 Setting.s2\n f := corr2 B Setting.s2 Setting.s3\n g := corr2 B Setting.s3 Setting.s2\n h := corr2 B Setting.s3 Setting.s3\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_upper_bound.lean:201:2: error: type mismatch\n  S_le_four B hn hs\nhas type\n  S2 B \u2264 7 : Prop\nbut is expected to have type\n  S2 B \u2264 8 : Prop\n",
+      "stderr": "",
+      "input_sha256": "5a140d45554480e6d62f019d58c8806b88c31aa0dfd21ca3e2e3a6a5eb0c5182"
+    },
+    {
+      "name": "diagonal_phi",
+      "started_utc": "2026-09-12T15:28:29.173943+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/diagonal_phi.lean"
+      ],
+      "elapsed_seconds": 0.326958,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/diagonal_phi.lean:95:45: error: unsolved goals\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/diagonal_phi.lean:100:79: error: unsolved goals\ncase left\n\u22a2 False\n\ncase right\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/diagonal_phi.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n",
+      "stderr": "",
+      "input_sha256": "4776d62c54c62efff4988c1ec99ba546bf59cba16c106f333d4c5606df2eafc5"
+    },
+    {
+      "name": "wrong_power",
+      "started_utc": "2026-09-12T15:28:29.501422+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.15.0-darwin_aarch64/bin/lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_power.lean"
+      ],
+      "elapsed_seconds": 0.330711,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-lean-audit-v415/mutations/wrong_power.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n",
+      "stderr": "",
+      "input_sha256": "3fdd0eb9b347f92472b1b0e72aa03474dec4d33441eff20bd31dc8fee40f784d"
+    }
+  ]
+}

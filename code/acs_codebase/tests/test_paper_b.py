@@ -61,12 +61,27 @@ def test_leibniz_difference_nonzero():
 
 # ---------- Renormalized stability ----------
 
-def test_delta_norm_bounded_under_RH():
-    """Delta_norm is bounded in u in [5, 20] under RH (50 zeros)."""
+def test_truncated_delta_norm_grid_diagnostic():
+    """The declared finite grid passes its running-maximum slope threshold."""
     r = boundedness_check()
     assert r["consistent_with_boundedness"] is True
     # Slope of running max should be small
     assert abs(r["running_max_slope"]) < 0.05
+
+
+@pytest.mark.parametrize("u", [5.0, 700.0, 710.0, 1000.0])
+def test_delta_norm_avoids_intermediate_exponential_overflow(u):
+    """A bounded finite trigonometric sum stays finite beyond exp's range."""
+    gammas = np.array([3.0, 7.0])  # synthetic ordinates also have this bound
+    expected = -2 * np.sum(
+        (0.5 * np.cos(gammas * u) + gammas * np.sin(gammas * u))
+        / (0.25 + gammas ** 2)
+    )
+    with np.errstate(over="raise", invalid="raise"):
+        actual = delta_norm(u, gammas=gammas)
+    assert np.isfinite(actual)
+    assert np.isclose(actual, expected, rtol=1e-13, atol=1e-14)
+    assert abs(actual) <= 2 * np.sum(1 / np.sqrt(0.25 + gammas ** 2))
 
 
 def test_off_critical_zero_diverges_faster():

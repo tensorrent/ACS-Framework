@@ -1,0 +1,95 @@
+{
+  "checks_total": 38,
+  "checks_passed": 38,
+  "failures": [],
+  "structures": {
+    "split_sl3": {
+      "dimension": 8,
+      "derived_rank": 8,
+      "killing_rank": 8,
+      "killing_eigenvalues": {
+        "6": 5,
+        "-6": 3
+      }
+    },
+    "upper_solvable8": {
+      "dimension": 8,
+      "derived_rank": 6,
+      "killing_rank": 2,
+      "killing_eigenvalues": {
+        "4": 2,
+        "0": 6
+      }
+    },
+    "compact_su3": {
+      "dimension": 8,
+      "derived_rank": 8,
+      "killing_rank": 8,
+      "killing_eigenvalues": {
+        "-6": 8
+      }
+    }
+  },
+  "flows": [
+    {
+      "seed": 3,
+      "steps": 20,
+      "initial_score": 1.7507578446708405,
+      "final_score": 1.6968830051101003,
+      "score_increasing_steps": 0,
+      "min_compactness": 21.25923596697966,
+      "minimum_mean_transpose_defect": 1.6017779645393138,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 11,
+      "steps": 20,
+      "initial_score": 1.7097884943442305,
+      "final_score": 1.6531577900399197,
+      "score_increasing_steps": 0,
+      "min_compactness": 20.89016472797406,
+      "minimum_mean_transpose_defect": 1.5989572813135111,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 23,
+      "steps": 20,
+      "initial_score": 1.6564285577478983,
+      "final_score": 1.6218161817266872,
+      "score_increasing_steps": 0,
+      "min_compactness": 19.642006848865407,
+      "minimum_mean_transpose_defect": 1.5588313542087058,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 47,
+      "steps": 20,
+      "initial_score": 1.5617251031076278,
+      "final_score": 1.5279197006634861,
+      "score_increasing_steps": 0,
+      "min_compactness": 17.335593395023743,
+      "minimum_mean_transpose_defect": 1.4663841239919382,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 83,
+      "steps": 20,
+      "initial_score": 1.7404446256838975,
+      "final_score": 1.6829491051226497,
+      "score_increasing_steps": 0,
+      "min_compactness": 20.985978462917835,
+      "minimum_mean_transpose_defect": 1.5638686070812788,
+      "final_label": "no_algebra"
+    },
+    {
+      "seed": 109,
+      "steps": 20,
+      "initial_score": 1.5538294346783892,
+      "final_score": 1.5129817542305497,
+      "score_increasing_steps": 0,
+      "min_compactness": 17.711525067753712,
+      "minimum_mean_transpose_defect": 1.4627248334889846,
+      "final_label": "no_algebra"
+    }
+  ]
+}

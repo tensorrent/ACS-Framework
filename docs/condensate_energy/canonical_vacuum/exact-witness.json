@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "transverse_canonical_mass_formula": true,
+    "stable_side_positive": true,
+    "unstable_side_negative": true,
+    "holomorphic_cubic_vertex_survives": true,
+    "holomorphic_third_derivative_nonzero": true,
+    "reverse_fitted_vacuum_is_identity": true
+  },
+  "transverse_field": "Re(D3_00), canonical fluctuation sqrt(2)*Re(D3_00)",
+  "electric_charge_of_complex_component": "-1/3",
+  "mass_squared": "5*k/3 + 4/5625",
+  "k_positive_mass_squared": "1879/5625",
+  "k_negative_mass_squared": "-1871/5625",
+  "exact_transverse_restricted_potential": "k*t**4/3 + 5*k*t**2/3 + t**4 + 4*t**2/5625 - 10547/10125",
+  "holomorphic_cubic": "3*sqrt(2)*a*b*c*d/2",
+  "phase50_input_mass_map": [
+    "alpha*y + 2*lambda*x",
+    "alpha*x + 2*rho*y"
+  ],
+  "phase50_recovered_targets": [
+    "x",
+    "y"
+  ],
+  "boundary": "The spectrum witness uses the gauge-only canonical potential class, not a claim that these coefficients obey an unprovided complete ACS selection map. The instability is exact for this witness.",
+  "source_sha256": {
+    "code/condensate_energy/canonical_exact_witness.py": "10927eb430a64bd957fca0d03edccf5969808816d971f3c11f9e60a8d098d909",
+    "docs/condensate_energy/canonical_vacuum/protocol.md": "b9e131d9199d43d4a0dd91c18c1d8d117471f44afc365fcad1392c07bbfac29c",
+    "docs/condensate_energy/canonical_vacuum/qualified-results.json": "f03f7736ef2cf177a01a5b4510417245d00fd47faf12a979a3d7c452e2354db1",
+    "code/condensate_energy/canonical_scalar_action.py": "8304c7db862dde5453b0236f82301c00818a9b19730b9cdadaa833f66a352991"
+  },
+  "all_checks_passed": true
+}

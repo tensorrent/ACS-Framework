@@ -1,0 +1,6 @@
+{
+  "source": "higgs_potential",
+  "returncode": 0,
+  "plot_path_replacements": 1,
+  "replay_sha256": "e0ddeee3d9be771ef5ba1b6f90087b87f74639393b87b61372bea2b6a41a916d"
+}

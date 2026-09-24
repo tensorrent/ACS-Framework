@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-12T15:18:02.951714+00:00",
+  "runtime": "Lean (version 4.15.0, arm64-apple-darwin23.6.0, commit 11651562caae, Release)",
+  "results": [
+    {
+      "file": "LFBound.lean",
+      "sha256": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "AxiomIII.lean",
+      "sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "axiom_print_returncode": 0,
+  "axiom_output": "'LFBound.corr2_le_two' depends on axioms: [propext, Quot.sound]\n'LFBound.neg_two_le_corr2' depends on axioms: [propext, Quot.sound]\n'LFBound.S_le_four' depends on axioms: [propext, Quot.sound]\n'LFBound.star_nonneg' does not depend on any axioms\n'LFBound.star_normalised' does not depend on any axioms\n'LFBound.star_nosignalling' does not depend on any axioms\n'LFBound.star_aoe' does not depend on any axioms\n'LFBound.star_is_LF' does not depend on any axioms\n'LFBound.star_S_eq_four' does not depend on any axioms\n'LFBound.lf_bound_is_four' depends on axioms: [propext, Quot.sound]\n'AxiomIII.commutes_iff_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_not_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_conj_D' depends on axioms: [propext]\n'AxiomIII.centraliser_unimodular' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.trace_two_only_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_infinite_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.axiom_III_clause3_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "axiom_stderr": ""
+}

@@ -1,0 +1,31 @@
+{
+  "status": "all_registered_and_targeted_numerical_checks_passed",
+  "original_variants": 76,
+  "targeted_variants": 4,
+  "numerical_checks": 24,
+  "symbolic_checks": 4,
+  "artifact_sha256": {
+    "code/condensate_energy/summarize_autonomous_gate.py": "ce7be34160e9c7e19eff25b64f576c0e60fa77243a1ce2f88ab81eb036df7b21",
+    "code/condensate_energy/autonomous_gate.py": "f0be56ad64b4dd92e57920586a1905604c5e5e501543d9b3b58deff23d4808bb",
+    "code/condensate_energy/autonomous_refinement.py": "48e2f40923f2d8fa982f05a87bd7187168dc1f727c805f4015f372f75e6e6a79",
+    "docs/condensate_energy/autonomous_gate/README.md": "0488cfb8311bfd5e117c3a61a9fd245fb1553293259f652967a0a91d2c8a5b02",
+    "docs/condensate_energy/autonomous_gate/assessment.json": "15b34e33fc6e216a0d4671935930e608399120a03ef7f1d424f9abe4b22e214a",
+    "docs/condensate_energy/autonomous_gate/attempts/20260923T212301717723Z/autonomous_gate.py": "f0be56ad64b4dd92e57920586a1905604c5e5e501543d9b3b58deff23d4808bb",
+    "docs/condensate_energy/autonomous_gate/attempts/20260923T212301717723Z/checks.json": "a70c83385af7cda6cdb5a57f15194ddd4747f96084b0f7a5e2c04b1696596534",
+    "docs/condensate_energy/autonomous_gate/attempts/20260923T212301717723Z/protocol.md": "a4aa2285fde22b4a9dc21ec4a6d8cff53445f99cf4002e73f0a21a23ce0f9efb",
+    "docs/condensate_energy/autonomous_gate/attempts/20260923T212301717723Z/results.json": "aaf9091c4af890ff0259b1b53f4021e3fac055d0065e28a6af594a47e8f9dd0d",
+    "docs/condensate_energy/autonomous_gate/attempts/20260923T212301717723Z/run.py": "7a78920341b97c2fd2f6b5a03c5c6b0099921d277b4a5254f66d9d565b6ce7ba",
+    "docs/condensate_energy/autonomous_gate/autonomous-dynamics.png": "d9749c8aa6c784ba0954e5af7609529e5fa2890524372f2eb606803014375414",
+    "docs/condensate_energy/autonomous_gate/autonomous-dynamics.svg": "a3f7b7d7e3e72586ffc17190182d9f16c07fe3c25fcf3967725a3f10dde41de6",
+    "docs/condensate_energy/autonomous_gate/checks.json": "a70c83385af7cda6cdb5a57f15194ddd4747f96084b0f7a5e2c04b1696596534",
+    "docs/condensate_energy/autonomous_gate/latest-attempt.json": "18799ba3beddd3e5b356443fcdd702f2c6ae81ed8b2803d8ccfeb79cd2eef909",
+    "docs/condensate_energy/autonomous_gate/model.md": "f87b5d97b9a4b53956e71f16cce45f75f7b1cdababfcb41734aa4a4f8a94ac0e",
+    "docs/condensate_energy/autonomous_gate/parameter-sweep.png": "125f2fdc19209a039714d613c29ab3706b3377d5d4c39539cd89c2c191272f75",
+    "docs/condensate_energy/autonomous_gate/parameter-sweep.svg": "531621aae5cfa4cba8a716aadb5bbea969575522ce71b71247aa94dfbf1aea9b",
+    "docs/condensate_energy/autonomous_gate/protocol.md": "a4aa2285fde22b4a9dc21ec4a6d8cff53445f99cf4002e73f0a21a23ce0f9efb",
+    "docs/condensate_energy/autonomous_gate/refinement-protocol.md": "052be04ab98ea9691b7b93bc7ba2fdbd43951280ce65848142c698b08d1fe432",
+    "docs/condensate_energy/autonomous_gate/refinement-results.json": "0158500d5ebd831d394f7f93dbb0f2e9f926b95eb4b7ac141655d73c4dbd446b",
+    "docs/condensate_energy/autonomous_gate/results.json": "aaf9091c4af890ff0259b1b53f4021e3fac055d0065e28a6af594a47e8f9dd0d",
+    "docs/condensate_energy/autonomous_gate/symbolic-checks.json": "d4a7751b8e771d54995f3112702652d82bf4c61fdb8069c091d34206deffe085"
+  }
+}

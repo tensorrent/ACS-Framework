@@ -1,0 +1,28 @@
+{
+  "status": "qualified_with_documented_domain_amendment",
+  "dynamic_variants": 23,
+  "original_passed": 12,
+  "original_failed": 1,
+  "supplemental_passed": 3,
+  "unresolved_numerical_checks": 0,
+  "artifact_sha256": {
+    "code/condensate_energy/summarize_capture_stability.py": "90d130e32a278fdfece84dfe1cfd1e1c01c3dced9b446ccb1fb4feb5ee02fdeb",
+    "code/condensate_energy/capture_stability.py": "84c54b263c9ec6cd050d01500f301196e6933ea672862b2c2829020fb0007f7a",
+    "code/condensate_energy/bound_domain_check.py": "9e03c64f4faf28c80e204869da7b24dcd268c99528924f407c2f45ea355504a0",
+    "docs/condensate_energy/capture_stability/attempts/20260923T173312563494Z/results.json": "39be03960cf11d3d4f6521e5784821c6e0b82c4e7babee8661c53c42672801ea",
+    "docs/condensate_energy/capture_stability/attempts/20260923T173312563494Z/checks.json": "e2d57a67bf49c25e17402bccbe1d49be81660d7ae11475440a937b3fa44eeef7",
+    "docs/condensate_energy/capture_stability/attempts/20260923T173312563494Z/capture_stability.py": "84c54b263c9ec6cd050d01500f301196e6933ea672862b2c2829020fb0007f7a",
+    "docs/condensate_energy/capture_stability/attempts/20260923T173312563494Z/run.py": "7a78920341b97c2fd2f6b5a03c5c6b0099921d277b4a5254f66d9d565b6ce7ba",
+    "docs/condensate_energy/capture_stability/attempts/20260923T173312563494Z/protocol.md": "0b9a8e7e36e3f3c72b1d63dcc94ca7f3ac0cfef604e4962c3f40f83871ff9acc",
+    "docs/condensate_energy/capture_stability/README.md": "937a2d2ec358a651e4e4f84c967fe893686c8c3e95ce5cb17f7e4d9e1ba34fc5",
+    "docs/condensate_energy/capture_stability/assessment.json": "3c6aef9cdae5ad57610e0cef0aa01eafff6d3ac4781807b15fc137f081f2ebe7",
+    "docs/condensate_energy/capture_stability/bound-domain-results.json": "3f3fade3fbaf364400f187426ac6ab78760f933ff250bc5b8c84863cc463c93b",
+    "docs/condensate_energy/capture_stability/bound-mode-control.png": "ebc5b51f7bcc6d04c34fb3ee4303531c1eacf8ed0489b65e22df8720fc57e8f3",
+    "docs/condensate_energy/capture_stability/bound-mode-control.svg": "5a4527c8be04ab37e79cddbd63fe9f70d781ac54498c048c4534b73a94eaa2ff",
+    "docs/condensate_energy/capture_stability/domain-amendment.md": "c92bb5b7572bc882ac2b1dbd20c04c26aafb8d8faba14abeadaefe15f1a4228a",
+    "docs/condensate_energy/capture_stability/gated-capture.png": "1c6bd425b94161a59446ec2675a496496888611d770e9ade14f46fae07e27976",
+    "docs/condensate_energy/capture_stability/gated-capture.svg": "739019e60f35352019f9f3d7c187d02abe9ae1b1300878e77cdd0fddda66103f",
+    "docs/condensate_energy/capture_stability/latest-attempt.json": "5e544a365d34c93ff00fe7233bc59be4a9a81222a21dfe8e5c79aaa8390c1e2c",
+    "docs/condensate_energy/capture_stability/protocol.md": "0b9a8e7e36e3f3c72b1d63dcc94ca7f3ac0cfef604e4962c3f40f83871ff9acc"
+  }
+}

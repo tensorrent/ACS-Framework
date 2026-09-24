@@ -1,0 +1,62 @@
+{
+  "utc": "2026-09-12T15:20:45.658639+00:00",
+  "axiom_output": "'PerZero.imag_cancels' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.real_doubles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_lt_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.contribution_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PerZero.per_zero_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.corr_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.S_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_normalised' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_nosignalling' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_aoe' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_is_LF' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.star_attains_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFReal.lf_real_bound_is_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "axiom_returncode": 0,
+  "mutations": [
+    {
+      "module": "PerZero",
+      "mutation": "wrong_limit",
+      "old": "Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0)) := by",
+      "new": "Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0)) := by",
+      "sha256": "4a390cc7368cd0933fd62fef7a0fe9e1feb4693107d9337de87046da2b104bae",
+      "returncode": 1,
+      "stdout": "mutations/wrong_limit.lean:125:2: error: Type mismatch\n  key\nhas type\n  Tendsto (fun eps => 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0))\nmutations/wrong_limit.lean:145:3: error: Application type mismatch: The argument\n  contribution_tendsto gamma T hg hgT\nhas type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (3 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nin the application\n  \u27e8contribution_lt_two_pi gamma T, contribution_tendsto gamma T hg hgT\u27e9\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    },
+    {
+      "module": "PerZero",
+      "mutation": "wrong_pi_bound",
+      "old": "theorem contribution_lt_two_pi (gamma T eps : \u211d) : contribution gamma T eps < 2 * \u03c0 := by",
+      "new": "theorem contribution_lt_two_pi (gamma T eps : \u211d) : contribution gamma T eps < \u03c0 := by",
+      "sha256": "4c804d346bb23a00b781e4a68900f646cdcfd9899ff9ce5ca7a8d132ffa04b07",
+      "returncode": 1,
+      "stdout": "mutations/wrong_pi_bound.lean:107:2: error: linarith failed to find a contradiction\ngamma T eps : \u211d\nh1 : arctan ((T - gamma) / eps) < \u03c0 / 2\nh2 : arctan (gamma / eps) < \u03c0 / 2\na\u271d : \u03c0 \u2264 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))\n\u22a2 False\nfailed\nmutations/wrong_pi_bound.lean:144:47: error: Application type mismatch: The argument\n  contribution_lt_two_pi gamma T\nhas type\n  \u2200 (eps : \u211d), contribution gamma T eps < \u03c0\nbut is expected to have type\n  \u2200 (eps : \u211d), contribution gamma T eps < 2 * \u03c0\nin the application\n  And.intro (contribution_lt_two_pi gamma T)\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    },
+    {
+      "module": "PerZero",
+      "mutation": "wrong_contribution_coefficient",
+      "old": "  2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))",
+      "new": "  3 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))",
+      "sha256": "dd3d29f610b5ac84400017b1efb12514586840965ca107ced8a5c81eca018b35",
+      "returncode": 1,
+      "stdout": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nmutations/wrong_contribution_coefficient.lean:95:81: error: unsolved goals\ngamma T eps : \u211d\n\u22a2 arctan (T * eps\u207b\u00b9 - gamma * eps\u207b\u00b9) * 2 + arctan (gamma * eps\u207b\u00b9) * 2 =\n    arctan (T * eps\u207b\u00b9 - gamma * eps\u207b\u00b9) * 3 + arctan (gamma * eps\u207b\u00b9) * 3\nmutations/wrong_contribution_coefficient.lean:107:2: error: linarith failed to find a contradiction\ngamma T eps : \u211d\nh1 : arctan ((T - gamma) / eps) < \u03c0 / 2\nh2 : arctan (gamma / eps) < \u03c0 / 2\na\u271d : 2 * \u03c0 \u2264 3 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))\n\u22a2 False\nfailed\nmutations/wrong_contribution_coefficient.lean:125:2: error: Type mismatch\n  key\nhas type\n  Tendsto (fun eps => 2 * (arctan ((T - gamma) / eps) + arctan (gamma / eps))) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\nbut is expected to have type\n  Tendsto (contribution gamma T) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * \u03c0))\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    },
+    {
+      "module": "LFReal",
+      "mutation": "wrong_real_bound",
+      "old": "(hs : Normalised B) : S B \u2264 4 := by",
+      "new": "(hs : Normalised B) : S B \u2264 3 := by",
+      "sha256": "66c0de92463d3affe77e9268352a2e957e436a654f22c0155cc3c5564c205e24",
+      "returncode": 1,
+      "stdout": "mutations/wrong_real_bound.lean:53:2: error: linarith failed to find a contradiction\nB : Behaviour\nhn : NonNeg B\nhs : Normalised B\na : corr B LFBound.Setting.s2 LFBound.Setting.s2 \u2264 1\nb : corr B LFBound.Setting.s2 LFBound.Setting.s3 \u2264 1\nc : corr B LFBound.Setting.s3 LFBound.Setting.s2 \u2264 1\nd : -1 \u2264 corr B LFBound.Setting.s3 LFBound.Setting.s3\na\u271d :\n  3 <\n    corr B LFBound.Setting.s2 LFBound.Setting.s2 + corr B LFBound.Setting.s2 LFBound.Setting.s3 +\n        corr B LFBound.Setting.s3 LFBound.Setting.s2 -\n      corr B LFBound.Setting.s3 LFBound.Setting.s3\n\u22a2 False\nfailed\nmutations/wrong_real_bound.lean:91:4: error: Type mismatch\n  S_le_four B h.left h.right.left\nhas type\n  S B \u2264 3\nbut is expected to have type\n  S B \u2264 4\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    },
+    {
+      "module": "LFReal",
+      "mutation": "wrong_real_attainment",
+      "old": "theorem star_attains_four : S star = 4 := by",
+      "new": "theorem star_attains_four : S star = 5 := by",
+      "sha256": "5aa8a2420d097bf5d796276d777819625750f33eec23c8e9c88453871b696c9f",
+      "returncode": 1,
+      "stdout": "mutations/wrong_real_attainment.lean:82:42: error: unsolved goals\n\u22a2 False\nmutations/wrong_real_attainment.lean:89:29: error: Application type mismatch: The argument\n  star_attains_four\nhas type\n  S star = 5\nbut is expected to have type\n  S star = 4\nin the application\n  \u27e8star_is_LF, star_attains_four\u27e9\n",
+      "stderr": "",
+      "rejected_with_lean_error": true
+    }
+  ]
+}

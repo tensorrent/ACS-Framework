@@ -1,0 +1,22 @@
+{
+  "AxiomIII.lean": {
+    "sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+    "provenance": "unchanged Frontier source or dependency lock"
+  },
+  "KleinLiftAudit.lean": {
+    "sha256": "d4a0b65578991f39aa9ff784cfc8b63e68ae5519616f6648b4e76610af10f328",
+    "provenance": "new topology audit"
+  },
+  "lake-manifest.json": {
+    "sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+    "provenance": "unchanged Frontier source or dependency lock"
+  },
+  "lakefile.toml": {
+    "sha256": "4272c3fdb74d0e85539b5049edcde899ec73d7f1086ffc4323aa092d3bdb21dc",
+    "provenance": "unchanged Frontier source or dependency lock"
+  },
+  "lean-toolchain": {
+    "sha256": "108ca2895820de2c74101f81de81756b41ca0165dfdc8ced16a82c3f810152d0",
+    "provenance": "unchanged Frontier source or dependency lock"
+  }
+}

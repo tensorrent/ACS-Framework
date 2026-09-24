@@ -1,0 +1,32 @@
+{
+  "status": "qualified_reduced_model_binding_mechanism",
+  "numerical_checks": 23,
+  "symbolic_checks": 5,
+  "artifact_sha256": {
+    "docs/condensate_energy/self_binding/README.md": "2ae479c05642265ee925e91d0f56118b5819f86c2eb6ae6236cacbec15bf3c99",
+    "docs/condensate_energy/self_binding/assessment.json": "7837a518079b94f191fcc6fc00b83ab18155d1b74e5517211f7e7843e6b3f366",
+    "docs/condensate_energy/self_binding/attempts/20260923T220707250253Z/protocol.md": "02b95e1a573ed641a3ae37db16023054a3d8bff19d2f034f1e8f6f8249043713",
+    "docs/condensate_energy/self_binding/attempts/20260923T220707250253Z/results.json": "97ca2bc025ce896de7b3c543415cacb909d8193df55e45422dc1a01b1c2a9976",
+    "docs/condensate_energy/self_binding/attempts/20260923T220707250253Z/self_binding.py": "2bca1b217255316d2357a259f85be1fcf9efbf46a3b851622b2e4e62d39313ec",
+    "docs/condensate_energy/self_binding/binding-evidence.png": "69ca0b3734b69c77a9feab2c0a207e154f9f97cd5597bde30e7dd516aa32d159",
+    "docs/condensate_energy/self_binding/binding-evidence.svg": "f77a7c52b29c8a5b594054567f56d6d39aa5432096b44b6f14a2b8bb70273df9",
+    "docs/condensate_energy/self_binding/dynamic-evidence.png": "bb8e183cd70f945622cf39753e77f38c8b0ccbaf4a4045e77b6c215f736eaca4",
+    "docs/condensate_energy/self_binding/dynamic-evidence.svg": "bd694d6700527c5ca22e14ba359b902df6214e32d76310c24900510af7f7f755",
+    "docs/condensate_energy/self_binding/dynamic-protocol.md": "42335c7daa09123e296ea85d0d192c6e80b775ced9405965c5e9fa69faa90173",
+    "docs/condensate_energy/self_binding/dynamic-results.json": "766f47bc88aa64035167af4cb36f5fbe51c227171923d5a5b6170d13d1e79951",
+    "docs/condensate_energy/self_binding/formation-protocol.md": "075a1be7aa945edc24f158e4c117a058ccc21a3b47035e648f246460ffb5a41e",
+    "docs/condensate_energy/self_binding/formation-results.json": "86a5ecf1248806172da52f4ff1cdf07d14154c98caa1eaa67490f0b9626f3e75",
+    "docs/condensate_energy/self_binding/latest-attempt.json": "2f59dc56ae518cf279405de7d8fd3e3972956f5a82fdd9a12c11c50c3bb0a32a",
+    "docs/condensate_energy/self_binding/numerical-amendment.md": "3254f5402849a669f8bb5a00bfcefa8c22fc2d648af9d8b8325ce68b4ce5b50e",
+    "docs/condensate_energy/self_binding/protocol.md": "02b95e1a573ed641a3ae37db16023054a3d8bff19d2f034f1e8f6f8249043713",
+    "docs/condensate_energy/self_binding/results.json": "c10aaeb94a3dc71e1709519115ad61e20fa23398d6fd955c54449f43468dc23a",
+    "docs/condensate_energy/self_binding/source-contract.json": "72771de92a6ea9b0802268903f5978ace8d2fea10ee4e37c4ebd8057db8aa0a2",
+    "docs/condensate_energy/self_binding/source-map.md": "e0ceba612398954342a9a5ac2120036eebf3ab99aabd08c3ff6af9d9cbb84a3a",
+    "code/condensate_energy/self_binding.py": "2bca1b217255316d2357a259f85be1fcf9efbf46a3b851622b2e4e62d39313ec",
+    "code/condensate_energy/self_binding_contract.py": "1ba7a692d333049bba77106550eca2d8210dd5e1427d58a76ffe1283ff62ef89",
+    "code/condensate_energy/self_binding_dynamics.py": "3db906479b55c761b057130ba10defcbd91440ce18ff2728c19e8e0032b5ba86",
+    "code/condensate_energy/self_binding_formation.py": "6fca360b051cc41f77b97d825bfae8c7a49b86080894284f262538e57224e6ec",
+    "code/condensate_energy/self_binding_polish.py": "1460e376408ec1d2c3db2f87f34482b3f38c893ee81f73526e41a1e9997e2903",
+    "code/condensate_energy/summarize_self_binding.py": "1b1783ac28f5782375a829831d99d63ab41bfc43c525cbc3ceaf54a1b9944555"
+  }
+}

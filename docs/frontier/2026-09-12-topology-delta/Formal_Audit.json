@@ -1,0 +1,185 @@
+{
+  "runtime": "Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+  "core_only": false,
+  "all_passed": true,
+  "verified_modules": [
+    "AxiomIII",
+    "KleinLiftAudit"
+  ],
+  "rejected_mutations": 6,
+  "package_revisions": {
+    "mathlib": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+    "plausible": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "LeanSearchClient": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "importGraph": "d8823026ac7ef130c253089d95685f9877b95323",
+    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "aesop": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "Qq": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "batteries": "7e23602c91bc04586b2b06de2708a041853e4681",
+    "Cli": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+  },
+  "source_hashes": {
+    "AxiomIII": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+    "KleinLiftAudit": "d4a0b65578991f39aa9ff784cfc8b63e68ae5519616f6648b4e76610af10f328"
+  },
+  "audit_source_sha256": "1b5abd343e417aadd1bfa1a2131b5241abcbf44cfd2c21f51fbbd032f75dc1d2",
+  "events": [
+    {
+      "name": "AxiomIII",
+      "started_utc": "2026-09-12T16:07:44.877116+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/AxiomIII.olean",
+        "AxiomIII.lean"
+      ],
+      "elapsed_seconds": 1.675537,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "AxiomIII.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e"
+    },
+    {
+      "name": "KleinLiftAudit",
+      "started_utc": "2026-09-12T16:07:46.553056+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "-o",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/build/lib/lean/KleinLiftAudit.olean",
+        "KleinLiftAudit.lean"
+      ],
+      "elapsed_seconds": 2.907771,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "",
+      "stderr": "",
+      "input_sha256": "d4a0b65578991f39aa9ff784cfc8b63e68ae5519616f6648b4e76610af10f328"
+    },
+    {
+      "name": "axiom_dependencies",
+      "started_utc": "2026-09-12T16:07:49.461532+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/AuditAxioms.lean"
+      ],
+      "elapsed_seconds": 2.740428,
+      "returncode": 0,
+      "expected_rejection": false,
+      "passed": true,
+      "stdout": "'AxiomIII.commutes_iff_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_not_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_conj_D' depends on axioms: [propext]\n'AxiomIII.centraliser_unimodular' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.trace_two_only_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_infinite_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.axiom_III_clause3_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'KleinLiftAudit.sign_add' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.sign_neg' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.sign_square' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.parity_cocycle' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.mul_assoc' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.one_mul' depends on axioms: [propext]\n'KleinLiftAudit.mul_one' depends on axioms: [propext]\n'KleinLiftAudit.inv_mul' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.mul_inv' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.klein_relation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'KleinLiftAudit.twist_mul' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.twist_untwist' depends on axioms: [propext]\n'KleinLiftAudit.untwist_twist' depends on axioms: [propext]\n'KleinLiftAudit.twist_b' depends on axioms: [propext]\n'KleinLiftAudit.inner_b' depends on axioms: [propext, Classical.choice, Quot.sound]\n'KleinLiftAudit.twist_not_inner' depends on axioms: [propext, Classical.choice, Quot.sound]\n'KleinLiftAudit.twist_fixes_cover' depends on axioms: [propext]\n'KleinLiftAudit.twist_square_inner' depends on axioms: [propext, Quot.sound]\n'KleinLiftAudit.parabolic_still_excluded' depends on axioms: [propext, Classical.choice, Quot.sound]\n'KleinLiftAudit.normalizer_two_commutes' depends on axioms: [propext]\n'KleinLiftAudit.positive_centraliser' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "input_sha256": "f03f6ed394faee55f0fd6629565a62ec6f63e866d65d583945adb049bc7f25d5"
+    },
+    {
+      "name": "even_twist_is_not_inner",
+      "started_utc": "2026-09-12T16:07:52.202631+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/even_twist_is_not_inner.lean"
+      ],
+      "elapsed_seconds": 3.024142,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/even_twist_is_not_inner.lean:74:57: error: unsolved goals\nm n : \u2124\n\u22a2 m - n % 2 + 2 * (n % 2) = m\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/even_twist_is_not_inner.lean:78:57: error: unsolved goals\nm n : \u2124\n\u22a2 m + 2 * (n % 2) - n % 2 = m\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/even_twist_is_not_inner.lean:82:38: error: unsolved goals\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/even_twist_is_not_inner.lean:109:18: error: omega could not prove the goal:\nNo usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.\n",
+      "stderr": "",
+      "input_sha256": "a009196c7dd287a730324fd8ca3d81c16d64b3a7b971a9aa0561b69f4ceee97c"
+    },
+    {
+      "name": "wrong_inner_parity",
+      "started_utc": "2026-09-12T16:07:55.227262+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_inner_parity.lean"
+      ],
+      "elapsed_seconds": 3.065616,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_inner_parity.lean:86:2: error: unsolved goals\ncase pos\ng : K\nh\u271d : g.2 % 2 = 0\n\u22a2 -g.1 = 0\n\ncase neg\ng : K\nh\u271d : \u00acg.2 % 2 = 0\n\u22a2 -g.1 = 0\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_inner_parity.lean:100:2: error: 'change' tactic failed, pattern\n  1 = 2 * g.1\nis not definitionally equal to target\n  (1, 1).1 = (g.1, 1).1\n",
+      "stderr": "",
+      "input_sha256": "8f532a734af97e06225a81d1c708902215444044119763e7e4895d1148a4ccb5"
+    },
+    {
+      "name": "odd_cover_fixed",
+      "started_utc": "2026-09-12T16:07:58.293474+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/odd_cover_fixed.lean"
+      ],
+      "elapsed_seconds": 3.186126,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/odd_cover_fixed.lean:103:79: error: unsolved goals\nm n : \u2124\n\u22a2 False\n",
+      "stderr": "",
+      "input_sha256": "ad7aa4e08ff9636e6fa192dabe22dc5aca1b24b04f0aa5a35124c0285d47d577"
+    },
+    {
+      "name": "twist_square_is_identity",
+      "started_utc": "2026-09-12T16:08:01.480121+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean"
+      ],
+      "elapsed_seconds": 3.169144,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean:109:18: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c \u2265 2\nwhere\n c := one.1\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean:109:18: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c - d \u2265 2\nwhere\n c := one.1\n d := g.1\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean:109:18: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c \u2264 -1\nwhere\n c := g.1\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean:108:22: warning: This simp argument is unused:\n  a\n\nHint: Omit it from the simp argument list.\n  [apply] simp [twist, mul, inv, sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/twist_square_is_identity.lean:110:22: warning: This simp argument is unused:\n  a\n\nHint: Omit it from the simp argument list.\n  [apply] simp [twist, mul, inv]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": "",
+      "input_sha256": "86ab25715a1547318326a57ad5dfd0b4f05d0478cb0bb1597c0bbfc78b957895"
+    },
+    {
+      "name": "abelian_klein_relation",
+      "started_utc": "2026-09-12T16:08:04.649807+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/abelian_klein_relation.lean"
+      ],
+      "elapsed_seconds": 3.194011,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/abelian_klein_relation.lean:61:54: error: unsolved goals\n\u22a2 False\n",
+      "stderr": "",
+      "input_sha256": "ba348432b7c8ef51a48111ebb45da543cd2af1a15a59eb25718cad61658b0790"
+    },
+    {
+      "name": "wrong_orientation_sign",
+      "started_utc": "2026-09-12T16:08:07.844434+00:00",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_orientation_sign.lean"
+      ],
+      "elapsed_seconds": 3.213028,
+      "returncode": 1,
+      "expected_rejection": true,
+      "passed": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_orientation_sign.lean:130:54: error: Application type mismatch: The argument\n  hd\nhas type\n  M.det = -1\nbut is expected to have type\n  M.det = 1\nin the application\n  Or.inl hd\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_orientation_sign.lean:133:2: error: unsolved goals\ncase inr.inr.inl\nM : AxiomIII.Mat2\nhc : AxiomIII.Commutes M\nh : M = { a := 1, b := 0, c := 0, d := -1 }\nhd : True\n\u22a2 M = AxiomIII.Mat2.one \u2228 M = { a := -1, b := 0, c := 0, d := -1 }\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/final-topology-audit/mutations/wrong_orientation_sign.lean:134:2: error: unsolved goals\ncase inr.inr.inr\nM : AxiomIII.Mat2\nhc : AxiomIII.Commutes M\nh : M = { a := -1, b := 0, c := 0, d := 1 }\nhd : True\n\u22a2 M = AxiomIII.Mat2.one \u2228 M = { a := -1, b := 0, c := 0, d := -1 }\n",
+      "stderr": "",
+      "input_sha256": "d66a64ae2c6c333ce0845af8897640f91a54ce77c8bd674e597f80d7b31ea69e"
+    }
+  ]
+}

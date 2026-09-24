@@ -1,0 +1,30 @@
+{
+  "status": "complete canonical scalar calculator and qualified counterexample; ACS coefficient selection remains open",
+  "checks_passed": 33,
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa",
+    "docs/condensate_energy/gauge_completion/receipt.json": "e0c9ad942c072c042bd0ab0ef650b54836b6c66fbccdd8deb592b3ff8714b3a7"
+  },
+  "artifact_sha256": {
+    "code/condensate_energy/canonical_exact_witness.py": "10927eb430a64bd957fca0d03edccf5969808816d971f3c11f9e60a8d098d909",
+    "code/condensate_energy/canonical_scalar_action.py": "8304c7db862dde5453b0236f82301c00818a9b19730b9cdadaa833f66a352991",
+    "code/condensate_energy/canonical_vacuum_audit.py": "4fc720b67ae566eee1fb77e0924578952662b459a7e42bbe4349d5d6935fd269",
+    "code/condensate_energy/canonical_vacuum_qualify.py": "5962f0f3288580f85b240d309b0cb9017d403203369aea771dc3cfbc81f3fb92",
+    "code/condensate_energy/summarize_canonical_vacuum.py": "bb92a1c380399744028e1f556b8685b35c0df0efdd212516344b67c2112b266f",
+    "docs/condensate_energy/canonical_vacuum/README.md": "cce28075689b066e5f5a24a6836377fb4d01338202768c1d85f6b5d396e5d84a",
+    "docs/condensate_energy/canonical_vacuum/assessment.json": "22abc24db51f3aa66685ddaeeaef7a7d534f150728692aafacb524839df4fb68",
+    "docs/condensate_energy/canonical_vacuum/attempts/20260924T102638180657Z/canonical_scalar_action.py": "8304c7db862dde5453b0236f82301c00818a9b19730b9cdadaa833f66a352991",
+    "docs/condensate_energy/canonical_vacuum/attempts/20260924T102638180657Z/canonical_vacuum_audit.py": "4fc720b67ae566eee1fb77e0924578952662b459a7e42bbe4349d5d6935fd269",
+    "docs/condensate_energy/canonical_vacuum/attempts/20260924T102638180657Z/protocol.md": "b9e131d9199d43d4a0dd91c18c1d8d117471f44afc365fcad1392c07bbfac29c",
+    "docs/condensate_energy/canonical_vacuum/attempts/20260924T102638180657Z/results.json": "04b298e0282f052ecfd01c5f6147a3198d0c7d87c6958b00820b5b083389374a",
+    "docs/condensate_energy/canonical_vacuum/canonical-evidence.png": "bbb566d19506f4482606fcc2b74e6041ad65880dcdda6552834ab0a20279a616",
+    "docs/condensate_energy/canonical_vacuum/canonical-evidence.svg": "b010539c9a953a0c2abef7272f862cc9e69a754d798992b2b2137d274791b498",
+    "docs/condensate_energy/canonical_vacuum/exact-witness.json": "219eafa0aa147ea40811baaa29ef513e59bc002d2c7cb5103368968e0927dc86",
+    "docs/condensate_energy/canonical_vacuum/numerical-amendment.md": "1f747400e43bf05a514a9fa7997f6eda5aedc6ad720c24f67ddcc9c81f38494f",
+    "docs/condensate_energy/canonical_vacuum/protocol.md": "b9e131d9199d43d4a0dd91c18c1d8d117471f44afc365fcad1392c07bbfac29c",
+    "docs/condensate_energy/canonical_vacuum/qualified-results.json": "f03f7736ef2cf177a01a5b4510417245d00fd47faf12a979a3d7c452e2354db1",
+    "docs/condensate_energy/canonical_vacuum/results.json": "208bb25d2ca92463a875de1156ad9fbf71a32e4124c8fc54749661f267e10d09"
+  }
+}

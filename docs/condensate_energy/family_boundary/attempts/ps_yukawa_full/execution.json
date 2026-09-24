@@ -1,0 +1,4 @@
+{
+  "returncode": 0,
+  "wrapper": "import numpy as np, runpy, sys; np.random.seed(924104); runpy.run_path(sys.argv[1], run_name=\"__main__\")"
+}

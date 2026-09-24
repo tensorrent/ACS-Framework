@@ -1,0 +1,39 @@
+[
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/koide_from_vev.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/koide_from_vev.py",
+    "sha256": "5fc937e4c27b1b14e25c775df47c64aaf5926037a39bcd0d8377dd32695ef836",
+    "local_counterpart": "code/acs_codebase/extras/koide_from_vev.py",
+    "same_as_local": false
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_mass_derivation.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/neutrino_mass_derivation.py",
+    "sha256": "578fa27b1f2abc6b003b0bf7aae39c88f14120328f50f43f8b1a1beed7f7aa8f",
+    "local_counterpart": "code/acs_codebase/extras/neutrino_mass_derivation.py",
+    "same_as_local": false
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_geometric_seesaw.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/neutrino_geometric_seesaw.py",
+    "sha256": "901b3c681e6c904f5cee778ce11117cfdaae0073812f9acb845506b8ebc9fa65",
+    "local_counterpart": "code/acs_codebase/extras/neutrino_geometric_seesaw.py",
+    "same_as_local": false
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/vacuum_theta0.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/vacuum_theta0.py",
+    "sha256": "94a5f46aa79a836e7c71755009d115e29da4460f9cd83c5a919bb8764396fce1",
+    "local_counterpart": "code/acs_codebase/extras/vacuum_theta0.py",
+    "same_as_local": false
+  },
+  {
+    "source": "https://claude.ai/chat/e6d3dc8b-693d-495c-92dd-9a9fa7c8eb09",
+    "conversation": "Asymmetric codependent systems and free parameters",
+    "recovery": "Attachment Copy button; pasted into blank TextEdit; saved as UTF-8 plain text via UI, no message sent",
+    "snapshot": "docs/condensate_energy/input_closure/gfe-cutoff-attachment.txt",
+    "sha256": "abe62913bc7fd37a35ab85a944b2d9546c6db6bffce1ae0aa49320f41b165a72",
+    "bytes": 8743,
+    "lines": 195
+  }
+]

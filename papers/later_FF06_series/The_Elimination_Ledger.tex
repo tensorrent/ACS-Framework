@@ -16,6 +16,9 @@ in the ACS / AISO Program}
 \author{Bradley Wallace \\ \small TensorRent}
 \date{June 2026 \quad\textbar\quad SIP License v1.1}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -38,6 +41,11 @@ quantities which survive a change of instrument are relations, ratios, and equal
 bare convention-laden numbers are not. Every verdict is labelled by a four-tier
 verification hierarchy, and every kill test states what it does and does not claim.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 
@@ -63,16 +71,12 @@ both falsifications of claims the program had previously advanced.
 \section{Methodology}
 
 \subsection{Adversarial compression}
-Every claim passes through the cycle
-\[
-\text{conjecture} \;\longrightarrow\; \text{pre-registered test (with kill condition)}
-\;\longrightarrow\;
-\begin{cases}
-\text{survives} \Rightarrow \text{compress to theorem (with proof)}\\
-\text{fails} \Rightarrow \text{record as negative result (with the killing computation)}\\
-\text{partial} \Rightarrow \text{record as observation (with explicit scope boundary)}.
-\end{cases}
-\]
+Every conjecture receives a pre-registered test with a kill condition.
+\begin{itemize}
+\item A survivor becomes a theorem only after a proof is supplied.
+\item A failure is retained as a negative result with the killing computation.
+\item A partial result remains an observation with an explicit scope boundary.
+\end{itemize}
 The rules are non-negotiable: a conjecture is never described in theorem language until
 its proof is complete; a negative result is documented with its conjecture, its killing
 computation, the mechanism of failure, and the boundary it establishes; every scope
@@ -82,7 +86,7 @@ boundary states what the result does and does not claim.
 Each verdict is labelled by the strongest tier it has earned, and a lower tier is never
 allowed to pass as a higher one.
 \begin{center}
-\begin{tabular}{cll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cll}
 \toprule
 Tier & Standard & Example in this paper\\
 \midrule
@@ -91,7 +95,7 @@ Tier & Standard & Example in this paper\\
 \tier{T3} & numerical, not yet theorem-level & GUE level-repulsion $\beta\approx 2.12$\\
 \tier{T4} & explicitly falsified by computation & $\Tmin=(2\pi e)^d/q$ at $d=2$\\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \subsection{The tomographic invariance engine and its kill-criterion}
@@ -128,7 +132,7 @@ derivations under instrument swaps) are summarized in Table~\ref{tab:constants}.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lllc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lllc}
 \toprule
 Quantity & As carried & Under instrument swap & Verdict\\
 \midrule
@@ -137,7 +141,7 @@ $\gamma$ (Barbero--Immirzi) & $0.274067$ & $\to 0.190206$ under SU(2)$\to$SO(3) 
 $\lambda_\phi$ (Higgs quartic) & $2\sqrt3/27\approx0.1283$ & scales with Killing-form norm.\ & refraction\\
 $\tilde h/h$ (Yukawa ratio) & $2/3$ & $d/d(\ln\mu)\approx 0$, normalization cancels & invariant\\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Framework constants under the tomographic kill-criterion. Three bare values are
 refractions; one dimensionless ratio is an invariant.}
 \label{tab:constants}
@@ -209,7 +213,7 @@ of the $\zeta$ zeros and the $L(\chi_{-4})$ zeros, so its counting function is e
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lccccc}
 \toprule
 $L$-function & $d$ & $q$ & framework $(2\pi e)^d/q$ & standard $2\pi e\,q^{-1/d}$ & $N_{\text{actual}}$ at framework floor\\
 \midrule
@@ -217,7 +221,7 @@ $L(\chi_{-4})$ & 1 & 4 & $4.27$ & $4.27$ & $0$ (first zero $6.02$)\\
 $L(\chi_{3})$ & 1 & 3 & $5.69$ & $5.69$ & $0$ (first zero $8.04$)\\
 $\zeta_{\mathbb{Q}(i)}$ & \textbf{2} & \textbf{4} & $\mathbf{72.93}$ & $\mathbf{8.54}$ & $\mathbf{51}$\\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{The degree-two case falsifies the scaling law. The framework floor sits above
 51 actual zeros; the standard floor sits just after the first zero.}
 \label{tab:q3}
@@ -293,7 +297,7 @@ kernel against it.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{cccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cccc}
 \toprule
 $N$ & BRA f64 (ns/op) & TF f32 (ns/op) & ratio\\
 \midrule
@@ -302,7 +306,7 @@ $N$ & BRA f64 (ns/op) & TF f32 (ns/op) & ratio\\
 256 & 2505.5 & 1638.0 & $1.53\times$ slower\\
 1024 & 8326.3 & 6074.5 & $1.37\times$ slower\\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Measured BRA vs.\ TF throughput. The speed-superiority claim is killed.}
 \label{tab:q2}
 \end{table}
@@ -385,7 +389,7 @@ mapped before this campaign --- with the mechanism that killed each.
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{p{5.4cm}p{8.2cm}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{p{5.4cm}p{8.2cm}}
 \toprule
 Killed claim & Killing mechanism\\
 \midrule
@@ -404,7 +408,7 @@ Action-proximity ($\tau$) off-diagonal mechanism & inconsistent with the incomme
 Difference-tone / Tartini off-diagonal mechanism & inconsistent with the surrogate null\\
 ``$3$-$6$-$9$'' attractor & retired as falsified (no structural support)\\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Prior dead ends gathered from the program. Each is a first-class negative
 result with an explicit killing mechanism.}
 \label{tab:deadends}
@@ -477,7 +481,7 @@ remove everything that is not gold, and keep an honest ledger of every tunnel.
 All numerical tests are reproducible from the accompanying scripts, \emph{with the
 caveat that the two scripts named below were run on external session machines and
 are not committed to the public repository}: the recorded verdicts rest on the
-logged outputs quoted here and in \texttt{docs/Elimination\_Ledger.md}. The degree-two
+logged outputs quoted here and in \nolinkurl{docs/Elimination_Ledger.md}. The degree-two
 falsification (Sec.~\ref{sec:q3}) uses \texttt{q3\_scaling\_test.py} (mpmath
 Dirichlet-$L$ zeros via Hurwitz-zeta construction and Hardy-$Z$ sign changes; $\zeta$
 zeros from the first $10^5$ accurate to $3\times10^{-9}$; the degree-two case built as
@@ -485,6 +489,19 @@ $\zeta\cdot L(\chi_{-4})$). The reference $c$-function (Sec.~\ref{sec:q4}) uses
 \texttt{q4\_cfunction\_testbed.py} (free-fermion BdG correlation-matrix method, gate-validated
 against exact diagonalization). Verdicts and tiers are recorded in this paper (the ledger of record for
 the campaign) and mirrored in the repository's living kill log,
-\texttt{docs/Elimination\_Ledger.md}. Random seed $20260423$ where randomness appears.
+\nolinkurl{docs/Elimination_Ledger.md}. Random seed $20260423$ where randomness appears.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The September carrier audit adds finite obstructions to the existing elimination discipline: the cover shear fails deck commutation, the balanced triplet is not a singlet, the capacitor normalization differs by a factor of two, and the stated torsion term is algebraic. The action audit also disproves uniqueness from a neutral restriction by a stable/flat/unstable counterfamily. These retire specific implications under their assumptions. They neither eliminate all future ACS models nor prove the remaining conjectures.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

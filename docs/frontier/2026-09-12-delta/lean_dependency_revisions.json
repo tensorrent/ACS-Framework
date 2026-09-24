@@ -1,0 +1,56 @@
+[
+  {
+    "package": "mathlib",
+    "expected_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+    "checked_out_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+    "source": "https://github.com/leanprover-community/mathlib4"
+  },
+  {
+    "package": "plausible",
+    "expected_revision": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "checked_out_revision": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "source": "https://github.com/leanprover-community/plausible"
+  },
+  {
+    "package": "LeanSearchClient",
+    "expected_revision": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "checked_out_revision": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "source": "https://github.com/leanprover-community/LeanSearchClient"
+  },
+  {
+    "package": "importGraph",
+    "expected_revision": "d8823026ac7ef130c253089d95685f9877b95323",
+    "checked_out_revision": "d8823026ac7ef130c253089d95685f9877b95323",
+    "source": "https://github.com/leanprover-community/import-graph"
+  },
+  {
+    "package": "proofwidgets",
+    "expected_revision": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "checked_out_revision": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "source": "https://github.com/leanprover-community/ProofWidgets4"
+  },
+  {
+    "package": "aesop",
+    "expected_revision": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "checked_out_revision": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "source": "https://github.com/leanprover-community/aesop"
+  },
+  {
+    "package": "Qq",
+    "expected_revision": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "checked_out_revision": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "source": "https://github.com/leanprover-community/quote4"
+  },
+  {
+    "package": "batteries",
+    "expected_revision": "7e23602c91bc04586b2b06de2708a041853e4681",
+    "checked_out_revision": "7e23602c91bc04586b2b06de2708a041853e4681",
+    "source": "https://github.com/leanprover-community/batteries"
+  },
+  {
+    "package": "Cli",
+    "expected_revision": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "checked_out_revision": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+    "source": "https://github.com/leanprover/lean4-cli"
+  }
+]

@@ -26,6 +26,9 @@ The Relational Representation Principle and Its Limits}\\[4pt]
 \small with computational verification by Claude (Anthropic)}
 \date{\small Companion to Papers~a--g \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -51,6 +54,11 @@ $10^{80}$-scale verified-optimal structure search as the headline efficiency ins
 of the negative results --- including four architecture-integration hypotheses falsified against live source
 and two performance hypotheses falsified against measurement --- because the boundary is the contribution.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{The principle}
 
@@ -87,7 +95,7 @@ are graded HIT (relation wins), SPLIT (the multiplicative part wins, the additiv
 DOWNGRADED (an existing method already wins), or FALSE FIT (no hidden relation).
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 domain / problem & grade & mechanism \\
 \midrule
@@ -104,7 +112,7 @@ probability products & DOWNGRADED & log-space floats already avoid underflow \\
 exact rational products & DOWNGRADED & compiled \texttt{Fraction} gcd beats dict merge \\
 measured continuous data (temperatures, fluxes) & FALSE FIT & no hidden relation; the scalar is the datum \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \begin{observation}[The headline efficiency instance, verified-optimal]
@@ -208,5 +216,18 @@ miss set, and a fundamental wall at addition.
 \vspace{1em}\noindent\rule{\linewidth}{0.4pt}\\
 \small Companion to \textit{Colour from Gravity} through \textit{The Geometry Engine} (Papers~a--g). Reference engine, dominance engine, search code, and the domain test
 harnesses accompany this study. SIP License v1.1. Seed \texttt{20260423}.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The later action and carrier audits give concrete instances of the distinction between a number and what it identifies. A fitted cutoff can reproduce any inserted coupling target; zero Cartan expectation can occur in a non-singlet; a positive neutral spectrum can hide negative transverse directions. The appropriate conclusion is failure of the corresponding inference under its assumptions, not rejection of numerical measurement. Units, state spaces and alternate models remain part of every claim.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

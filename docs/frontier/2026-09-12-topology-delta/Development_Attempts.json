@@ -1,0 +1,36 @@
+{
+  "attempts": [
+    {
+      "directory": "lean/20260912T160303884097Z_KleinLiftAudit",
+      "returncode": 1,
+      "source_sha256": "2d73582a30c34e542d02c10658e55fd249619a5db6f69ec7f1632dd53dcbdc42",
+      "source_file": "KleinLiftAudit.lean"
+    },
+    {
+      "directory": "lean/20260912T160324008113Z_KleinLiftAudit",
+      "returncode": 1,
+      "source_sha256": "0daaebb0658059324b7913f60ccec2ff136ee2de1b78aa3cb312806153ba1d6b",
+      "source_file": "KleinLiftAudit.lean"
+    },
+    {
+      "directory": "lean/20260912T160439112025Z_KleinLiftAudit",
+      "returncode": 0,
+      "source_sha256": "4818ce0857480ef0b9309f47c8dac2b12b438c924a55c5836e091ea106fed93d",
+      "source_file": "KleinLiftAudit.lean"
+    },
+    {
+      "directory": "topology-crosscheck",
+      "returncode": 0,
+      "source_sha256": "265cbeb5c55b62a57f5ee48afc410f2af5e631c701790fd65c79d2972f6440cc",
+      "source_file": "source.py"
+    },
+    {
+      "directory": "topology-crosscheck-2",
+      "returncode": 0,
+      "source_sha256": "f2281d5db73279c303dab59c34cc313c48cd32b4bfaaa6585212913bd26f6eab",
+      "source_file": "source.py"
+    }
+  ],
+  "failed": 2,
+  "meaning": "Three iterative Lean attempts and two successful exact cross-check runs; the second cross-check adds the explicit negative-identity realization. The final Lean mutation audit is separate."
+}

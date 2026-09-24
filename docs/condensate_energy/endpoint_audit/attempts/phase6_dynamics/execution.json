@@ -1,0 +1,8 @@
+{
+  "source": "source-snapshots/phase6_dynamics.py",
+  "scope": "full unchanged source replay",
+  "completed": false,
+  "timeout_seconds": 60,
+  "stdout_captured": false,
+  "note": "First driver raised before storing buffered subprocess output; traceback and exact failed driver preserved in ../phase6-timeout-60s. This replay is incomplete, not a mathematical counterexample."
+}

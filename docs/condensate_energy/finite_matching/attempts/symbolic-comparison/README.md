@@ -1,0 +1,1 @@
+Initial audit: 23/24 checks passed. A structural SymPy equality compared unsimplified products when testing Hermiticity of -iM. Exact skew symmetry and all independent numerical spectra already passed. The qualified check simplifies the difference entry by entry before comparing with zero. Original source, result and failure log are retained.

@@ -41,6 +41,9 @@ Warped Measure and Woods--Saxon Cluster Trial}
 
 \date{July 22, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \maketitle
@@ -62,6 +65,11 @@ to $0.8247$.  Relative to the flat-Gaussian proxy, correlation changes by
 $\Delta r\approx -0.0007$; absolute-scale $S$ shifts modestly.  Still a
 geometric/structural proxy---not microscopic uniqueness.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.1em}
 \hrule
@@ -90,7 +98,7 @@ structure.  Absolute scale may still need one global factor $S$.
   with optional WS$\times$Coulomb-tail match for comparison.
 \item \textbf{Artifacts:} new code
   \texttt{palpha\_overlap\_throat.py}, JSON
-  \texttt{palpha\_overlap\_throat\_results.json}; baseline proxy files
+  \nolinkurl{palpha_overlap_throat_results.json}; baseline proxy files
   retained.
 \end{itemize}
 
@@ -109,9 +117,9 @@ structure.  Absolute scale may still need one global factor $S$.
 Parametric isotope-resolved $S(A,Z)$ (with leave-one-out) and a
 self-consistent WS+Coulomb interior eigenmode are implemented as
 comparison channels in the refined sequel
-\texttt{palpha\_overlap\_refined.py}.\footnote{The refined note includes a
+\nolinkurl{palpha_overlap_refined.py}.\footnote{The refined note includes a
 DAW-style radial track schematic (\texttt{fig:daw-tracks} in
-\texttt{papers/notes/Flag\_Condensate\_Palpha\_Refined.tex}): radius $r$ as timeline,
+\nolinkurl{papers/notes/Flag_Condensate_Palpha_Refined.tex}): radius $r$ as timeline,
 overlap lanes as automation tracks, global $S$ as master fader, and
 Dirichlet vs Gamow routing at $R$.}
 On the stated set, parametric
@@ -171,9 +179,9 @@ phenomenological).
 \section{Numerical protocol}
 
 Simpson quadrature, $N=4096$ on $[0,R]$.  Implementation:
-\texttt{code/palpha\_overlap/palpha\_overlap\_throat.py}.
+\nolinkurl{code/palpha_overlap/palpha_overlap_throat.py}.
 Results:
-\texttt{docs/palpha\_overlap/palpha\_overlap\_throat\_results.json}.
+\nolinkurl{docs/palpha_overlap/palpha_overlap_throat_results.json}.
 Logs:
 (run logs not committed to this repository).
 
@@ -188,7 +196,7 @@ Primary model; $S$ is one global factor.}
 \scriptsize
 \renewcommand{\arraystretch}{0.75}
 \setlength{\tabcolsep}{5pt}
-\begin{tabular}{lcccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccccc}
 \toprule
 \textbf{Isotope} & \textbf{$R$ (fm)} & \textbf{$\log_{10} P_{\mathrm{model}}$}
  & \textbf{$\log_{10} P_\alpha^{\mathrm{ext}}$}
@@ -211,7 +219,7 @@ $^{238}\mathrm{Pu}$ & 9.34 & $-0.4718$ & $-3.28$ & $+2.8082$ & $-1.9697$ & $+1.3
 $^{240}\mathrm{Pu}$ & 9.36 & $-0.4734$ & $-2.91$ & $+2.4366$ & $-1.9713$ & $+0.9387$ \\
 $^{244}\mathrm{Cm}$ & 9.42 & $-0.4781$ & $-3.61$ & $+3.1319$ & $-1.9760$ & $+1.6340$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{table}
 
 \subsection{Primary summary (throat + Woods--Saxon)}
@@ -234,7 +242,7 @@ S_{\star}=3.178\times 10^{-2},\qquad
 \label{tab:model-compare}
 \scriptsize
 \renewcommand{\arraystretch}{0.8}
-\begin{tabular}{lcccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccc}
 \toprule
 \textbf{Model} & $\langle\log_{10} P\rangle$ & $r$ & $\mathrm{RMS}_{S=1}$ & $\mathrm{RMS}_{S_\star}$ \\
 \midrule
@@ -244,7 +252,7 @@ throat + Gaussian & $-0.2791$ & $+0.8881$ & $1.8715$ & $0.8260$ \\
 flat + WS & $-0.6786$ & $+0.8876$ & $1.5201$ & $0.8200$ \\
 flat + Gaussian (baseline proxy) & $-0.3905$ & $+0.8882$ & $1.7705$ & $0.8220$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{table}
 
 Relative to flat+Gaussian~\cite{PalphaOverlap2026}:
@@ -271,23 +279,36 @@ flat-Gaussian proxy.  Isotope-resolved / parametric $S$ and
 self-consistent WS+Coulomb eigenmodes are reported in the refined
 sequel~\cite{PalphaRefined2026}.  Absolute uniqueness is not claimed.
 
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Changing the radial weight and trial state changes the overlap definition. The global factor remains fitted, and the reported near-unchanged correlation is not evidence for a unique throat geometry. Interior support, barrier transmission and channel normalization must stay separate. The subsequent action audit reinforces this point: geometry and a restricted background do not determine all transverse couplings or a physical vacuum. This amendment adds no new isotope observations.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{99}
 \bibitem{NuclearDecay2026}
   ACS Theoretical Physics Working Group,
   \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Nuclear_Decay.tex}.
 \bibitem{PalphaOverlap2026}
   ACS Theoretical Physics Working Group,
   \emph{Standing-Wave Overlap Proxy for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Palpha_Overlap.tex}.
 \bibitem{PalphaRefined2026}
   ACS Theoretical Physics Working Group,
   \emph{Refined $P_\alpha$ Overlap: Parametric $S$ and WS+Coulomb Eigenmode},
   ACS Framework note (2026),
-  \texttt{flag\_condensate\_palpha\_refined.tex} /
-  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Refined.tex}.
+  \nolinkurl{flag_condensate_palpha_refined.tex} /
+  \nolinkurl{papers/notes/Flag_Condensate_Palpha_Refined.tex}.
 \bibitem{gamow1928}
   G. Gamow, \emph{Zur Quantentheorie des Atomkernes},
   Z. Phys. \textbf{51}, 204 (1928).

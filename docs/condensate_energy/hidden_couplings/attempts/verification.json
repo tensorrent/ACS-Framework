@@ -1,0 +1,8 @@
+{
+  "compiled_scripts": 3,
+  "local_links_checked": 12,
+  "archive_members_verified": 7,
+  "prior_receipts_verified": 5,
+  "figure_visually_inspected": true,
+  "verification_note": "Initial naive link regex misclassified a TeX matrix expression as a path. Validation was restricted to linked artifact file extensions; no report correction or scientific test rerun was needed."
+}

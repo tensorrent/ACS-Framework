@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "phi_radial_mass_squared_two": true,
+    "potential_and_kinetic_density_scale_to_fourth_power": true,
+    "integrated_energy_scales_linearly": true,
+    "integrated_charge_invariant": true,
+    "binding_reference_below_completed_square_boundary": true,
+    "allowed_no_binding_control_above_boundary": true
+  },
+  "canonical_selected_vacuum_scalar_spectrum": {
+    "0": 7,
+    "1": 60,
+    "2": 1
+  },
+  "physical_flat_scalar_directions": 4,
+  "flat_direction_scope": "Seven zero scalar Hessian modes, three eaten by the broken weak generators, leave four physical tree-level flat directions of the selected norm potential. General allowed angular couplings change this conclusion.",
+  "scale_family": "v -> a v, quadratic masses -> a^2 masses, field amplitudes -> a fields, length/time -> length/time divided by a, energy -> a energy, Q unchanged; dimensionless couplings fixed.",
+  "countermodel_scope": "Gauge-invariant potential class and representation content, not a proof that both satisfy every proposed unverified ACS bracket/kinetic matching rule.",
+  "input_boundary": [
+    "The source has not mapped all 17 quartics and four mass parameters through canonical normalization to a selected physical vacuum.",
+    "The proposed Phi quartic does not specify the independent Delta quartic b, mixed coupling, Delta mass or all angular invariants.",
+    "Yukawa matrices and the selected vacuum determine the available fermion thresholds; gauge charges alone do not.",
+    "The exact unbroken gauge generator is computable once the vacuum is specified. Choosing that vacuum is a different problem.",
+    "Classical results at fixed continuous charge do not determine integer occupation, elementary particle masses, or quantum widths."
+  ],
+  "source_sha256": {
+    "code/condensate_energy/parameter_identifiability.py": "a079463b525c5774a1e3a860b826c3ab83e6031fe5c8ac716b7294f89de07694",
+    "docs/condensate_energy/gauge_completion/protocol.md": "3ac057bb184a1ecab6411e9fff344a5087a55eebb55b5969e5cf3e9fb6d3a28e",
+    "docs/condensate_energy/gauge_completion/fission-protocol.md": "771aa38dfa99e6838ab2056e4d2d361b9d3af8fee2d3b82cb350e3215127c119",
+    "docs/frontier/2026-09-11/workstreams/rg/report.md": "d93c4c9526f497194ba9249a3f885e1d90aafb028bcc23aac6d86eb930dc3a80",
+    "docs/condensate_energy/self_binding/results.json": "c10aaeb94a3dc71e1709519115ad61e20fa23398d6fd955c54449f43468dc23a"
+  },
+  "all_checks_passed": true
+}

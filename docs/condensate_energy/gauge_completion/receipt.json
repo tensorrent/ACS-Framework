@@ -1,0 +1,37 @@
+{
+  "status": "qualified selected gauge branch; ACS particle identification remains underdetermined",
+  "checks_passed": 45,
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa"
+  },
+  "artifact_sha256": {
+    "code/condensate_energy/carrier_threshold_countermodels.py": "d71a94bddc3cd914a600b4b00e4f09e0d44e028315af0028c2065af92dc9b287",
+    "code/condensate_energy/gauge_carrier_contract.py": "34c3b999bc24ed562ca755439bbe712adcf70626f9048794cdef53f5135d6941",
+    "code/condensate_energy/gauge_completion.py": "1f9afcb40524da551a503e089b64df80e9df0411bf9502d91afe2987db84781f",
+    "code/condensate_energy/gauge_finite_volume.py": "3f82da398438af0d7b09fa11444219d7b2d797a889c1e536c28ec20f18f5b87c",
+    "code/condensate_energy/gauge_fission.py": "01146778c46f8d4bc387473eef2bbc9f8eb08b289b99bfc8525b2653df89f073",
+    "code/condensate_energy/parameter_identifiability.py": "a079463b525c5774a1e3a860b826c3ab83e6031fe5c8ac716b7294f89de07694",
+    "code/condensate_energy/summarize_gauge_completion.py": "95b39bb391d923ae551f4ec590715537e50cb2e72a8c6996c27e98a36dcbc8ee",
+    "docs/condensate_energy/gauge_completion/README.md": "5c559f4ceda8359e37d5d0fe21fe2b3b2ae096848635b915126fbf2b641ae597",
+    "docs/condensate_energy/gauge_completion/assessment.json": "8cb41d098a751caf57b753cf5a01a5368aabb53e485276c77b78c67c357a30f7",
+    "docs/condensate_energy/gauge_completion/attempts/20260924T020257780348Z/gauge_completion.py": "1f9afcb40524da551a503e089b64df80e9df0411bf9502d91afe2987db84781f",
+    "docs/condensate_energy/gauge_completion/attempts/20260924T020257780348Z/protocol.md": "3ac057bb184a1ecab6411e9fff344a5087a55eebb55b5969e5cf3e9fb6d3a28e",
+    "docs/condensate_energy/gauge_completion/attempts/20260924T020257780348Z/results.json": "904bd2f1312efaf625e4567bbb7f018b2126841e2f7e8e720ac9417d4d74f571",
+    "docs/condensate_energy/gauge_completion/attempts/20260924T020257780348Z/self-binding-results.json": "c10aaeb94a3dc71e1709519115ad61e20fa23398d6fd955c54449f43468dc23a",
+    "docs/condensate_energy/gauge_completion/attempts/fission-serialization/failure.txt": "05972a970597a16f6ee1e263e3fe995a34d936cb6a4a786d4a4e0129892b6dd9",
+    "docs/condensate_energy/gauge_completion/attempts/fission-serialization/gauge_fission.py": "a8135e9925d4219fd0a7d450c3747a3cfc3d90553e2f467a00e8548faafb8d5b",
+    "docs/condensate_energy/gauge_completion/carrier-contract.json": "ca82f286c0435942e646bb2115fe301a25d34b6cbf452c0d42028843d2906560",
+    "docs/condensate_energy/gauge_completion/carrier-countermodels.json": "e9ec0252a132466f5cf884233018ced4cabae2b85fd64e6b5bd898a31c4f1e48",
+    "docs/condensate_energy/gauge_completion/finite-volume-results.json": "90a5c02bf2a060d6e54c38ad2db1f76cb79bf8d6820a5eccb1dfd2ff5b300401",
+    "docs/condensate_energy/gauge_completion/fission-protocol.md": "771aa38dfa99e6838ab2056e4d2d361b9d3af8fee2d3b82cb350e3215127c119",
+    "docs/condensate_energy/gauge_completion/fission-results.json": "a06f67b24a989031d39cd40aa5b5676e83e39c196c3141cf7992032cb3ecb38a",
+    "docs/condensate_energy/gauge_completion/gauge-evidence.png": "92a0f32dfe63f4c4b6fde1f57f39e5181a7357180ac5f24e451d89628117fbc2",
+    "docs/condensate_energy/gauge_completion/gauge-evidence.svg": "0eb7b5db8e9401e499b7fd72b249d5aaed167ea24abaf81ec31961ed83eeaab7",
+    "docs/condensate_energy/gauge_completion/parameter-contract.json": "78f8043639bb98f34623809d803082d11c4c20742d9bc5c8418eef4720405076",
+    "docs/condensate_energy/gauge_completion/protocol.md": "3ac057bb184a1ecab6411e9fff344a5087a55eebb55b5969e5cf3e9fb6d3a28e",
+    "docs/condensate_energy/gauge_completion/results.json": "def66ce478a08cb5f18b329518788549f1b5421d52cb7a0eea4571ac8ec7f134",
+    "docs/condensate_energy/investigation-conclusion.md": "92baf23c199f3f7b791d0e54a2fed8d30423f5ca5de3711063c2aacc7d05589f"
+  }
+}

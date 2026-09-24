@@ -1,0 +1,24 @@
+{
+  "checks_total": 19,
+  "checks_passed": 19,
+  "failures": [],
+  "initial": {
+    "theta_degrees": 12.732819967108291,
+    "mean": 0.04245714261119184,
+    "radius_over_mean": 1.414200505184577,
+    "Q": 0.6666605114773856
+  },
+  "corrected_final": {
+    "theta_degrees": 12.732578081545638,
+    "mean": 0.04214284691938296,
+    "radius_over_mean": 1.414207776883479,
+    "Q": 0.6666639393662857
+  },
+  "candidate": {
+    "initial_degrees": 11.565051177077986,
+    "IR_degrees": 11.565274148567221,
+    "shift_degrees": 0.00022297148923478005,
+    "gap_to_input_angle_degrees": 1.1677687900303049,
+    "fraction_of_gap": 0.0001909380445327655
+  }
+}

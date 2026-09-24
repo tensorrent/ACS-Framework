@@ -14,12 +14,20 @@
 \author{Bradley Wallace\\ \small Independent Researcher}
 \date{2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
 \begin{abstract}
 We formalize the discrete operator geometry stack of the ACS Deterministic AI architecture. Rather than asserting a continuum geometric ontology or a strict categorical renormalization group, we rigorously define the system as a multi-parameter, non-commuting dynamical system on matrix-valued states, analyzed through iterated projection-valued observables. We explicitly construct the scheme-indexed action semigroup, the nonlinear observation map (a lossy projection, deliberately not a functor --- no categorical structure is assumed), and the cross-scheme coherence obstruction tensor. In this framework, traditionally geometric quantities---such as curvature, renormalization flow, fixed points, and holonomy---are fully de-sublimated into rigorously computable secondary statistics on an orbit sheaf of measurement trajectories.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{The Mathematical Object}
 
@@ -81,5 +89,18 @@ This metric does not measure geometric curvature; it rigorously measures the \te
 \section{Conclusion}
 
 The ACS Deterministic AI Stack does not model an ontological continuum. It provides a formal, disciplined computational laboratory for measuring how nonlinear update rules collapse under partial observation. The mathematical frontier of this system lies not in adding geometric layers, but in characterizing the boundaries of observation: identifying the minimal generating set of schemes $\mathcal{S}_{\text{min}}$, probing the conditions for coherence restoration, and determining the sufficiency of $\Phi$ for classifying equivalence classes of rewrite histories.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+A discrete representation and its reconstruction rule specify what information is retained. A faithful reconstruction requires injectivity on the declared domain, and physical interpretation additionally requires a normalized measurement map. The complete-action scale family shows that geometric or dimensionless labels alone do not fix dimensional mass. Consequently any proposed universal physical identification remains conditional on the action, boundary data and resolution. This amendment does not replace the discrete definitions or enlarge their theorem domain.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

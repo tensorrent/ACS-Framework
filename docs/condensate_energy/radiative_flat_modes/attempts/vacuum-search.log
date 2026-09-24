@@ -1,0 +1,79 @@
+general-family-0-scalar-stationarity-and-spectrum PASS
+general-family-0-component-vector-spectrum PASS
+general-family-0-component-Weyl-spectrum PASS
+general-family-0-CW-and-permutation-invariance PASS
+general-family-1-scalar-stationarity-and-spectrum PASS
+general-family-1-component-vector-spectrum PASS
+general-family-1-component-Weyl-spectrum PASS
+general-family-1-CW-and-permutation-invariance PASS
+general-family-2-scalar-stationarity-and-spectrum PASS
+general-family-2-component-vector-spectrum PASS
+general-family-2-component-Weyl-spectrum PASS
+general-family-2-CW-and-permutation-invariance PASS
+general-family-3-scalar-stationarity-and-spectrum PASS
+general-family-3-component-vector-spectrum PASS
+general-family-3-component-Weyl-spectrum PASS
+general-family-3-CW-and-permutation-invariance PASS
+general-family-4-scalar-stationarity-and-spectrum PASS
+general-family-4-component-vector-spectrum PASS
+general-family-4-component-Weyl-spectrum PASS
+general-family-4-CW-and-permutation-invariance PASS
+general-family-5-scalar-stationarity-and-spectrum PASS
+general-family-5-component-vector-spectrum PASS
+general-family-5-component-Weyl-spectrum PASS
+general-family-5-CW-and-permutation-invariance PASS
+general-family-6-scalar-stationarity-and-spectrum PASS
+general-family-6-component-vector-spectrum PASS
+general-family-6-component-Weyl-spectrum PASS
+general-family-6-CW-and-permutation-invariance PASS
+general-family-7-scalar-stationarity-and-spectrum PASS
+general-family-7-component-vector-spectrum PASS
+general-family-7-component-Weyl-spectrum PASS
+general-family-7-CW-and-permutation-invariance PASS
+general-family-8-scalar-stationarity-and-spectrum PASS
+general-family-8-component-vector-spectrum PASS
+general-family-8-component-Weyl-spectrum PASS
+general-family-8-CW-and-permutation-invariance PASS
+general-family-9-scalar-stationarity-and-spectrum PASS
+general-family-9-component-vector-spectrum PASS
+general-family-9-component-Weyl-spectrum PASS
+general-family-9-CW-and-permutation-invariance PASS
+spin-previous-orbit-recovered PASS
+color-previous-orbit-recovered PASS
+search-[]-rank-1-has-successful-solves PASS
+search-[]-rank-1-denser-restart-agreement PASS
+search-[]-rank-2-has-successful-solves PASS
+search-[]-rank-2-denser-restart-agreement PASS
+search-[]-rank-3-has-successful-solves PASS
+search-[]-rank-3-denser-restart-agreement PASS
+search-[]-rank-4-has-successful-solves PASS
+search-[]-rank-4-denser-restart-agreement PASS
+candidate [] [6.580392179516235e-26, 7.043956731819455e-26, 1.0, 0.0] 0.0 -2.168404344971009e-18
+search-[0.3]-rank-1-has-successful-solves PASS
+search-[0.3]-rank-1-denser-restart-agreement PASS
+search-[0.3]-rank-2-has-successful-solves PASS
+search-[0.3]-rank-2-denser-restart-agreement PASS
+search-[0.3]-rank-3-has-successful-solves PASS
+search-[0.3]-rank-3-denser-restart-agreement PASS
+search-[0.3]-rank-4-has-successful-solves PASS
+search-[0.3]-rank-4-denser-restart-agreement PASS
+candidate [0.3] [1.0, 0.0, 0.0, 0.0] 9.801235141869576e-09 -1.3010426069826053e-18
+search-[0.5]-rank-1-has-successful-solves PASS
+search-[0.5]-rank-1-denser-restart-agreement PASS
+search-[0.5]-rank-2-has-successful-solves PASS
+search-[0.5]-rank-2-denser-restart-agreement PASS
+search-[0.5]-rank-3-has-successful-solves PASS
+search-[0.5]-rank-3-denser-restart-agreement PASS
+search-[0.5]-rank-4-has-successful-solves PASS
+search-[0.5]-rank-4-denser-restart-agreement PASS
+candidate [0.5] [0.249999992610632, 0.2500000140825472, 0.24999999641198148, 0.24999999689483945] 0.7853981633974483 -0.0006607404477991007
+search-[0.3, 0.3, 0.3]-rank-1-has-successful-solves PASS
+search-[0.3, 0.3, 0.3]-rank-1-denser-restart-agreement PASS
+search-[0.3, 0.3, 0.3]-rank-2-has-successful-solves PASS
+search-[0.3, 0.3, 0.3]-rank-2-denser-restart-agreement PASS
+search-[0.3, 0.3, 0.3]-rank-3-has-successful-solves PASS
+search-[0.3, 0.3, 0.3]-rank-3-denser-restart-agreement PASS
+search-[0.3, 0.3, 0.3]-rank-4-has-successful-solves PASS
+search-[0.3, 0.3, 0.3]-rank-4-denser-restart-agreement PASS
+candidate [0.3, 0.3, 0.3] [0.2499999894542374, 0.25000001257902177, 0.2500000053924218, 0.2499999925743191] 0.7853981633974483 -0.00013318952218337047
+{"checks_passed": 74, "checks_total": 74}

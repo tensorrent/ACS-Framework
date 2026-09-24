@@ -1,0 +1,34 @@
+{
+  "archive": "docs/frontier/2026-09-11/ACS_Frontier_Evidence.zip",
+  "archive_sha256": "aa30efed92490592a8fde49970d9573107d1bd0909f076b920190113443e7485",
+  "members": {
+    "full_one_loop_rg.py": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/full_one_loop_rg.py",
+      "sha256": "b900bcc1c3554e541feec3c98ed2cf7365f46ba9dfe3b170e8ddde9a7e46d1c0"
+    },
+    "gauge_coefficients.json": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/gauge_coefficients.json",
+      "sha256": "61842d21acd79205469a581ccf51037f7eb9aa5a727687327d7b938deb7e30eb"
+    },
+    "mass_coefficients.json": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/mass_coefficients.json",
+      "sha256": "5e64502bb61ee13e8bbf4d9858be59db3f9cf5e949405fc326e46f2588166714"
+    },
+    "quartics.json": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/quartics.json",
+      "sha256": "3d66e7c4bffb4436c6c1c0bbf21b80c95d31dfb01e7a8a38ebe7083ede9c87c2"
+    },
+    "scalar_coefficients.json": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/scalar_coefficients.json",
+      "sha256": "c37bc5ff77da7bd2d8b72afb098fd473dc52798a0bdf191d4fb4510b418bcc78"
+    },
+    "yukawa_model.py": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/yukawa_model.py",
+      "sha256": "fce8ca5b2a4e7bd2e9e879f82d1efd58ffe3f4d9776c3d045aaac6b8bcca5cf8"
+    },
+    "yukawa_scalar_coefficients.json": {
+      "member": "acs-parallel-frontier-20260911/workstreams/rg/support/yukawa_scalar_coefficients.json",
+      "sha256": "6c43f2665d573696bd09977867f3456e26ba518f0198e17de8368ee49f61c89f"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source": "/Users/coo-koba42/dev/reports/rh-research-audit-20260923/seagate-extension/history-text/3b41fbf9f0bc797304a4923dcb3d2d62653b81589eb09dd81af46f20c9f288f3.txt",
+  "source_sha256": "3b41fbf9f0bc797304a4923dcb3d2d62653b81589eb09dd81af46f20c9f288f3",
+  "objects": [
+    {
+      "offset": 27,
+      "target": "/Users/coo-koba42/.gemini/antigravity/brain/db40ebd8-0ad8-4c7a-bc88-b0dd965d6a68/CPF_Framework_Article.tex",
+      "characters": 31026,
+      "output": "docs/condensate_energy/endpoint_audit/source-snapshots/CPF-recovered-0.tex",
+      "sha256": "4734a7dddf9094903b91bf0fed4552bb74ab5f56f734b4e9b99a77434f8b0a4a"
+    },
+    {
+      "offset": 65770,
+      "target": "/Users/coo-koba42/.gemini/antigravity/brain/db40ebd8-0ad8-4c7a-bc88-b0dd965d6a68/CPF_Framework_Article.tex",
+      "characters": 31026,
+      "output": "docs/condensate_energy/endpoint_audit/source-snapshots/CPF-recovered-1.tex",
+      "sha256": "4734a7dddf9094903b91bf0fed4552bb74ab5f56f734b4e9b99a77434f8b0a4a"
+    }
+  ]
+}

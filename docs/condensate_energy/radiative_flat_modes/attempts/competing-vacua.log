@@ -1,0 +1,21 @@
+rank-four-real-spin-explicit-vector-spectrum PASS
+rank-four-real-spin-ten-massless-vectors PASS
+closed-endpoint-energy-[] PASS
+rank-four-explicit-Weyl-spectrum-[] PASS
+full-component-endpoint-energy-[] PASS
+path-maximum-optimization-[] PASS
+closed-endpoint-energy-[0.3] PASS
+rank-four-explicit-Weyl-spectrum-[0.3] PASS
+full-component-endpoint-energy-[0.3] PASS
+path-maximum-optimization-[0.3] PASS
+closed-endpoint-energy-[0.5] PASS
+rank-four-explicit-Weyl-spectrum-[0.5] PASS
+full-component-endpoint-energy-[0.5] PASS
+closed-endpoint-energy-[0.3, 0.3, 0.3] PASS
+rank-four-explicit-Weyl-spectrum-[0.3, 0.3, 0.3] PASS
+full-component-endpoint-energy-[0.3, 0.3, 0.3] PASS
+path-maximum-optimization-[0.3, 0.3, 0.3] PASS
+explicit-local-positive-but-lower-competing-configuration PASS
+explicit-path-positive-barrier-before-lower-endpoint PASS
+70-digit-counterexample-energy PASS
+{"checks_passed": 20, "checks_total": 20}

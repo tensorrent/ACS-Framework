@@ -29,6 +29,9 @@ and the Two Faces of the Riemann Zeta Function}}
 \small with computational verification by Claude (Anthropic)}
 \date{\small Companion to Papers~a--f \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -55,6 +58,11 @@ explicit formula, which we verify in both directions on the real first $10^5$ ze
 results are labeled as verification rather than novelty, negative results are retained as first-class outputs,
 and the applied target is overhead reduction, for which a battle-tested known law is an asset.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{Orientation and honesty protocol}
 
@@ -88,7 +96,7 @@ The content of the representation is that the \emph{multiplicative} questions ab
 The following operations are computable from the shape alone and were verified exact against integer ground
 truth at the indicated scale (seed \texttt{20260423}):
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 operation & geometry & verification \\
 \midrule
@@ -101,7 +109,7 @@ primality & atomic box: one side, unit dimension & all $[2,2\!\times\!10^4)$ \\
 perfect power & dimensional symmetry: $\gcd$ of dims $\ge 2$ & all $[2,5000)$ \\
 factorization & the box \emph{is} the decomposition & $500$ samples \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 \end{theorem}
 
@@ -126,7 +134,7 @@ departure from the geometric world. Addition is never hidden inside a geometric 
 We raced the engine against the standard method for each task, reporting wins and losses flatly.
 
 \begin{center}
-\begin{tabular}{llrl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{llrl}
 \toprule
 ontology & task & factor & outcome \\
 \midrule
@@ -142,7 +150,7 @@ number theory & $B$-smoothness detection & $106\times$ & loss (trial division) \
 cryptography & factor an arbitrary semiprime & --- & no advantage (by design) \\
 prime generation & generate primes below $N$ & $73\times$ & loss (sieve) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \begin{observation}[The predictive law]
@@ -168,7 +176,7 @@ between the two is statistical, never an address.
 \end{principle}
 
 \begin{center}
-\begin{tabular}{llll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{llll}
 \toprule
 instance & individual structure & density governed by & coupling \\
 \midrule
@@ -176,7 +184,7 @@ Riemann zeros & spacings generic (GUE) & positions $\leftarrow$ primes & $+122\s
 Goldbach & decomposition a cloud & count $\leftarrow$ Hardy--Littlewood & $0.9952$ (strong) \\
 prime gaps & gaps generic (Poisson) & density $\leftarrow$ small-prime richness & $0.59$ (moderate) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \begin{observation}[Honest variation, including a falsified sub-claim, T4]
@@ -218,7 +226,7 @@ A Taylor \emph{series value} is an additive object and has no box. But the \emph
 geometry in its singularities, and the engine transfers wholesale with poles in place of primes.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
  & integer engine & analysis engine \\
 \midrule
@@ -228,7 +236,7 @@ free structural questions & divisibility, \textsc{gcd}, $\varphi$ & radius of co
 value (still work) & $\mathrm{volume}()$ & summing the series \\
 wall (no finite shape) & generic large numbers & entire / lacunary functions \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Verified: the radius of convergence equals the distance from the expansion center to the nearest pole
@@ -280,5 +288,18 @@ measurement --- a primorial compresses by only $1.25\times$; see the Process Rec
 \noindent\rule{\linewidth}{0.4pt}\\
 \small Companion to \textit{Colour from Gravity} through \textit{Three-Layer Decomposition} (Papers~a--f). Reference engine, harness, and specification accompany this paper.
 SIP License v1.1. Seed \texttt{20260423}.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The engine computes features relative to its declared representation and observer. Independent response directions do not automatically measure the intrinsic dimension of an unknown source. For example, a one-dimensional curved trajectory can span several linear directions. A physical application must retain sensor calibration, noise alternatives and the forward map. The new complete-action counterfamily shows why agreement on a restricted observation does not guarantee agreement on hidden stability.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_C_rigorous.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/task_C_rigorous.py",
+    "sha256": "68835f67e90a864b3db4973dea3ce0f5f98bf354af53892f89f2eab4328dfe8a"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_D_lagrangian.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/task_D_lagrangian.py",
+    "sha256": "3ef5945ec563542c10db7e80a52a8a314d9f4bf8ea567fbbd6a5dbd85810a0c0"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase50_vacuum.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/phase50_vacuum.py",
+    "sha256": "6b11a290e38be834f9369af4824999db398c3e1ca5ec712c69c30adf47daa0eb"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase51_tanbeta.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/phase51_tanbeta.py",
+    "sha256": "99f5b7b86996c6ed3ddbf7c8e3e21314e91ae00496a7b182e9c4a18a9499004d"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase52_yukawa.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/phase52_yukawa.py",
+    "sha256": "435190b8864551ef76a67df6c81ef53056561640d5f97ff0b365a27fcfbdb4bd"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase7_qfp_yukawa.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/phase7_qfp_yukawa.py",
+    "sha256": "1e6b31b9db5460611ac6f21c35507139b25d94c530a358fa593489c11abc8549"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/ps_yukawa_full.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/ps_yukawa_full.py",
+    "sha256": "f6921bc2f7621da39f676ce59b9da52661489fe29cefc82fcc217bf61dcbb918"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_c/theorem_c.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/theorem_c.py",
+    "sha256": "1490f518b97b080ec91ab87af03ffd6935f53102af01d29abd45a6dd81c8b12d"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_parameters.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/branch_a_parameters.py",
+    "sha256": "1c6bf9966e56eed3df7e368a69b569922de36d1d17c2016e2c62cbaa483bc245"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/yukawa_no_go.py",
+    "snapshot": "docs/condensate_energy/family_boundary/source-snapshots/yukawa_no_go.py",
+    "sha256": "77b2cabc645e19613b205ea9b1ac5ebb5235385472cc791985a7c9d0d8167233"
+  }
+]

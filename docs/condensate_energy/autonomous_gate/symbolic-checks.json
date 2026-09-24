@@ -1,0 +1,11 @@
+{
+  "sympy": "1.14.0",
+  "checks": {
+    "equilibrium_force_vanishes": true,
+    "effective_potential": true,
+    "effective_field_coupling": true,
+    "strict_equilibrium_minimum": true
+  },
+  "equilibrium": "k/(I*g + k)",
+  "effective_potential": "I*g*k/(2*(I*g + k))"
+}

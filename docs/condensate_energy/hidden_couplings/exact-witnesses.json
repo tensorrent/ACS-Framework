@@ -1,0 +1,156 @@
+{
+  "checks": [
+    {
+      "name": "exact-X-action-0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-5",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-6",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-7",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-8",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-9",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-10",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-11",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-12",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-13",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-14",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-15",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-X-action-16",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Yukawa-vertices-neutral-in-Weyl-convention",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-scalar-loop-full-polynomial",
+      "passed": true,
+      "evidence": 5106
+    },
+    {
+      "name": "exact-scalar-loop-adds-fifth-direction",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "historical-point-satisfies-source-relation",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "historical-two-trace-plane-not-RG-invariant",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "off-neutral-trace-counterexample",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 23,
+  "checks_total": 23,
+  "scalar_closure_witness": {
+    "input": [
+      45,
+      45,
+      9,
+      9,
+      -3
+    ],
+    "output": [
+      "212112",
+      "212112",
+      "96336",
+      "96336",
+      "66960"
+    ],
+    "polynomial_monomials": 5106,
+    "starting_rank": 4,
+    "final_rank": 5
+  },
+  "historical_counterexample": {
+    "rho1": "8/9",
+    "rho2": "0",
+    "g4": "4/3",
+    "gL": "4/3",
+    "gR": "4/3",
+    "yukawas": "zero",
+    "other_quartics": "zero",
+    "B_lambda6_minus_lambda7": "-2560/9",
+    "meaning": "Fails tangency to both old two-trace planes even at a point satisfying the claimed scalar relation; not a claim of a physical vacuum."
+  },
+  "trace_counterexample": {
+    "Delta": "D1=I4, D2=D3=0",
+    "color": "4",
+    "spin": "16"
+  }
+}

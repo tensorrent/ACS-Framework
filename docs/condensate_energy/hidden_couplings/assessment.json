@@ -1,0 +1,25 @@
+{
+  "status": "Scoped radiative-closure audit complete; ACS boundary-value derivation unresolved",
+  "checks_passed": 61,
+  "verified": [
+    "six exact gauge-quartic polynomial identities",
+    "five-dimensional Hermitian Delta operator closure with exact scalar-loop witness",
+    "one-loop invariance of the holomorphic zero pair",
+    "historical two-trace nonclosure witness",
+    "independent full beta component checks",
+    "illustrative forward/backward flow"
+  ],
+  "conditional": [
+    "canonical minimal representation and kinetic action from prior audits",
+    "MS one-loop truncation",
+    "optional holomorphic-zero boundary condition"
+  ],
+  "not_established": [
+    "ACS boundary coefficients and matching scale",
+    "finite threshold corrections",
+    "physical vacuum or pole masses",
+    "exact non-anomalous global charge",
+    "all-orders stability or matter-origin explanation"
+  ],
+  "default_computational_requirement": "Use all 17 quartics; permit a labeled 15-quartic branch only with lambda11=lambda12=0 supplied explicitly."
+}

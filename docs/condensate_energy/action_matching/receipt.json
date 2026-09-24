@@ -1,0 +1,43 @@
+{
+  "status": "Action-to-spectrum and tree-level matching stage complete; broader goal active",
+  "checks_passed": 81,
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa",
+    "docs/condensate_energy/gauge_completion/receipt.json": "e0c9ad942c072c042bd0ab0ef650b54836b6c66fbccdd8deb592b3ff8714b3a7",
+    "docs/condensate_energy/canonical_vacuum/receipt.json": "5f07db81d4ce65a01825e61d8f8cd922d7c93933608071edbf90f2c9c7794614",
+    "docs/condensate_energy/hidden_couplings/receipt.json": "cdd63d47e5ce35fed0f79776d8d80f339159f45541be66c63f520cc6c6189460"
+  },
+  "artifact_sha256": {
+    "code/condensate_energy/action_matching_spectrum.py": "706a3e28f78782175bfd4f25df5efd84c1df88f2687d6725331108f10d8128b3",
+    "code/condensate_energy/action_orbit_bounds.py": "fd95866d35ced8239a58759f25583bab98e6f9fe1bf61be2d1bffbac8aa5e680",
+    "code/condensate_energy/action_tree_matching.py": "4a05b48315657cb933a2d772b800fe00d0b1ec2d45a94a91d1d49b7c5dd3d522",
+    "code/condensate_energy/seal_action_matching.py": "dbc7a805211cabcbcaa8f74d8869df7de8a0afe586e4fe18ac3d2f737f6d2995",
+    "docs/condensate_energy/action_matching/README.md": "7fe676319608ab79e862a88cc93136332181c2eccb30975c11b7a2b637269726",
+    "docs/condensate_energy/action_matching/action-matching.png": "93cbf2e378c79579eba41cf91327eb721618a2f84867118640ceac50090d9ff0",
+    "docs/condensate_energy/action_matching/action-matching.svg": "85837db4011f9a040de0b2d014c60273cedf8838b736c893b3cdbbbcba9ac003",
+    "docs/condensate_energy/action_matching/assessment.json": "b0792be607899c9e8b29b6b640d33f3b78f1fefc5990a4812f9a5a34d6af71a3",
+    "docs/condensate_energy/action_matching/attempts/gauge-symbol-identity/acs-action-spectrum-run1.log": "f63653bdf1f196311675ceacceb1d1ada648a61b345f5f3bba2c10164d1c2c19",
+    "docs/condensate_energy/action_matching/attempts/gauge-symbol-identity/action_matching_spectrum.py": "a1c53a349c68989bfc19144bc654d260a6658899950e323e79f46a0f4b9801e8",
+    "docs/condensate_energy/action_matching/attempts/gauge-symbol-identity/explanation.md": "8694ed8396b39002c61a67e8c7231952d5cfa090397397e2397d3ae9fd80f2fe",
+    "docs/condensate_energy/action_matching/attempts/gauge-symbol-identity/spectrum.json": "beb3157d678caf94e6191d950157b08262e7d4d85ab4fad7f823066c32fdc335",
+    "docs/condensate_energy/action_matching/attempts/orbit-bounds.log": "d6f6140d5196a8c14d166b534d2acde72ce8cb68b3e177f8083c844065a38ccf",
+    "docs/condensate_energy/action_matching/attempts/spectrum-qualified.log": "46d938e7aaad3c3b120baa84c79eebc0bf5c012304589f431914a7f064002f78",
+    "docs/condensate_energy/action_matching/attempts/tree-matching.log": "2e5a9cb2973b1b4d06fa7f6f4b592b6370c3da813e4ac9469c4ce93c56d03b09",
+    "docs/condensate_energy/action_matching/orbit-bounds.json": "590dbf84c8cccbbf6086f8c13a9306230b23f9690c2201d9292ef42f00f1c0c1",
+    "docs/condensate_energy/action_matching/protocol.md": "bd6ad46bd2586ea479ff6cfa5f23d455a121349b5370c971a3d95b48343c29d2",
+    "docs/condensate_energy/action_matching/source-snapshots/baseline_normalization_flavor_constraints.py": "22e3d6caa5dcff77adec0457bc821f082dbec6d8f9d92557d3bba4053752dec4",
+    "docs/condensate_energy/action_matching/source-snapshots/baseline_result.json": "3e657b516bf8b724a32e971dba57f0534bf3014f51954d071bfaa3da65b7dc71",
+    "docs/condensate_energy/action_matching/source-snapshots/higgs_derivation.py": "695b0cda7430a402d3a67679978686e09e6b60ad1c6fbf291257fd561900235f",
+    "docs/condensate_energy/action_matching/source-snapshots/higgs_mass_ratio.py": "d7cdf5e658c8686500eb99ed6b6e749c9a699b3132efc0ad4130f7c1058363a3",
+    "docs/condensate_energy/action_matching/source-snapshots/phase8_full_qfp.py": "8ccf48ad3cb16647653d382487bf809a5f4ac2c89f68b569a652a74fa1a5b67d",
+    "docs/condensate_energy/action_matching/source-snapshots/provenance.json": "23b042c7090997c1de934992bbb87f86333591f51f892184aae7052c9196daa1",
+    "docs/condensate_energy/action_matching/source-snapshots/seagate_bl_vev_projection.py": "8c49c34fe07cb80eeb778d73def25debf9d88dfe2d059395f848506e5d33b0c2",
+    "docs/condensate_energy/action_matching/source-snapshots/seagate_higgs_from_acs.py": "d03c877defa00efc01bede9e6df8167edd0e74b4e86ec0d6b27e981c0129db3e",
+    "docs/condensate_energy/action_matching/source-snapshots/seagate_higgs_potential.py": "e97c0587a2d71d26254ec124a0278d939775e52ae7a513ebc416d21880361f38",
+    "docs/condensate_energy/action_matching/source-snapshots/task_A_parameters.py": "4952747c729ec3439617a70a90f43861f369009f1ccc60668fb2d6850d2e518d",
+    "docs/condensate_energy/action_matching/spectrum.json": "4a6395c8d6cb289b3d16b14a6096813114be09dd7cb02f465ccd1bb85e05ca84",
+    "docs/condensate_energy/action_matching/tree-matching.json": "0c0233ca09af29224a24ab9273ec3e473e24ddd52f3558e46ed146318d16dbf8"
+  }
+}

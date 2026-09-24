@@ -1,0 +1,967 @@
+{
+  "status": "completed_scoped_charge_audit",
+  "fields": [
+    "Phi",
+    "Delta",
+    "psi_L",
+    "psi_R_physical"
+  ],
+  "convention": "physical psi_R is (4,1,2), Delta is (bar10,1,3); anomalies use psi_R^c",
+  "checks": {
+    "parent_self_binding_receipt_unchanged": true,
+    "full_uniform_phase_constraints_rank_four": true,
+    "minimal_obstruction_determinant_nonzero": true,
+    "classical_X_survives_only_without_holomorphic_Delta": true,
+    "full_three_family_phase_constraints_rank_eight": true,
+    "three_family_no_holomorphic_has_one_phase": true,
+    "17_quartics_and_nine_independent_phase_invariants": true,
+    "exactly_two_real_quartics_break_classical_X": true,
+    "full_basis_gauge_covariance": true,
+    "full_basis_phase_covariance": true,
+    "independent_Wick_and_polarization_agree": true,
+    "holomorphic_term_nonzero_exact_witness": true,
+    "vacuum_slice_hides_cubic_transverse_breaker": true,
+    "exact_Noether_source_for_holomorphic_breaking": true,
+    "arbitrary_flavor_generators_full_terms_leave_none": true,
+    "arbitrary_flavor_generators_no_hol_leave_X": true,
+    "trace_conditions_force_zero_Phi_charge": true,
+    "flavor_basis_independent_scalar_anomaly_obstruction": true,
+    "candidate_X_mixed_weak_anomalies_nonzero": true,
+    "candidate_X_SU4_gravity_cubic_cancel": true,
+    "ordinary_instanton_survivors_are_gauge_centers": true,
+    "vacuum_preserving_combination_is_baryon_number_on_fermions": true,
+    "neutral_Delta_cannot_carry_this_unbroken_global_charge": true,
+    "colored_Delta_components_do_carry_baryon_charge": true
+  },
+  "all_checks_passed": true,
+  "phases": {
+    "full": {
+      "rank": 4,
+      "dimension": 0,
+      "basis": [],
+      "constraints": [
+        [
+          1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          4,
+          0,
+          0
+        ]
+      ]
+    },
+    "no_holomorphic_Delta": {
+      "rank": 3,
+      "dimension": 1,
+      "basis": [
+        [
+          "0",
+          "-2",
+          "1",
+          "1"
+        ]
+      ],
+      "constraints": [
+        [
+          1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    "no_Majorana_or_holomorphic_Delta": {
+      "rank": 2,
+      "dimension": 2,
+      "basis": [
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "constraints": [
+        [
+          1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          1
+        ]
+      ]
+    },
+    "full_three_family": {
+      "rank": 8,
+      "dimension": 0,
+      "basis": [],
+      "constraints": [
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "no_holomorphic_three_family": {
+      "rank": 7,
+      "dimension": 1,
+      "basis": [
+        [
+          "0",
+          "-2",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ],
+      "constraints": [
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ]
+    }
+  },
+  "quartic_weights": [
+    {
+      "name": "Nphi^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "|detPhi|^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Re[(detPhi)^2]",
+      "underlying_complex_weight": [
+        4,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Im[(detPhi)^2]",
+      "underlying_complex_weight": [
+        4,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Nphi Re(detPhi)",
+      "underlying_complex_weight": [
+        2,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Nphi Im(detPhi)",
+      "underlying_complex_weight": [
+        2,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "norm(35,spin0)^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "norm(35,spin2)^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "norm(20prime,spin0)^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "norm(20prime,spin2)^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "norm(45,spin1)^2",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Re H_Delta",
+      "underlying_complex_weight": [
+        0,
+        4
+      ],
+      "X_weight": -8
+    },
+    {
+      "name": "Im H_Delta",
+      "underlying_complex_weight": [
+        0,
+        4
+      ],
+      "X_weight": -8
+    },
+    {
+      "name": "Nphi NDelta",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Re(detPhi) NDelta",
+      "underlying_complex_weight": [
+        2,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Im(detPhi) NDelta",
+      "underlying_complex_weight": [
+        2,
+        0
+      ],
+      "X_weight": 0
+    },
+    {
+      "name": "Jphi_R dot JDelta_R",
+      "underlying_complex_weight": [
+        0,
+        0
+      ],
+      "X_weight": 0
+    }
+  ],
+  "quadratic_weights": [
+    {
+      "name": "Nphi",
+      "weight": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Re detPhi",
+      "weight": [
+        2,
+        0
+      ]
+    },
+    {
+      "name": "Im detPhi",
+      "weight": [
+        2,
+        0
+      ]
+    },
+    {
+      "name": "NDelta",
+      "weight": [
+        0,
+        0
+      ]
+    }
+  ],
+  "flavor": {
+    "aligned_2_over_3_hol_False": {
+      "rank": 19,
+      "dimension": 1,
+      "normalized_X_is_symmetry": true,
+      "determinants": [
+        "6",
+        "16/9",
+        "29254/1225"
+      ],
+      "scalar_projections": [
+        [
+          "0",
+          "-2"
+        ]
+      ]
+    },
+    "aligned_2_over_3_hol_True": {
+      "rank": 20,
+      "dimension": 0,
+      "normalized_X_is_symmetry": false,
+      "determinants": [
+        "6",
+        "16/9",
+        "29254/1225"
+      ],
+      "scalar_projections": []
+    },
+    "nonaligned_complex_hol_False": {
+      "rank": 19,
+      "dimension": 1,
+      "normalized_X_is_symmetry": true,
+      "determinants": [
+        "6",
+        "5 - I/6",
+        "29254/1225"
+      ],
+      "scalar_projections": [
+        [
+          "0",
+          "-2"
+        ]
+      ]
+    },
+    "nonaligned_complex_hol_True": {
+      "rank": 20,
+      "dimension": 0,
+      "normalized_X_is_symmetry": false,
+      "determinants": [
+        "6",
+        "5 - I/6",
+        "29254/1225"
+      ],
+      "scalar_projections": []
+    }
+  },
+  "numerical_transform_errors": {
+    "gauge": 3.018500873022326e-15,
+    "phase": 4.4333984128130245e-16,
+    "wick": 7.963142775414442e-17
+  },
+  "exact_witnesses": {
+    "polynomial": "3*a*b*c*v",
+    "zero_through_quadratic": true,
+    "third_mixed_derivative": "3*v",
+    "exact_nonzero_witness": true,
+    "X_charge_source": "-16*H_I*kappa_R - 16*H_R*kappa_I",
+    "source_identity": true
+  },
+  "universal_invertible_Yukawa_trace_solution": {
+    "p": "0",
+    "trace_TL": "-3*d/2",
+    "trace_TR": "-3*d/2"
+  },
+  "candidate_X_anomalies": {
+    "SU4_squared_X": "0",
+    "SU2L_squared_X": "6",
+    "SU2R_squared_X": "-6",
+    "gravity_squared_X": "0",
+    "X_cubed": "0"
+  },
+  "anomaly_normalization": "sum over left-handed Weyl fermions X*T(rep)*spectator multiplicity, T(fund)=1/2",
+  "instanton_delta_X": {
+    "SU2L_unit_charge": 12,
+    "SU2R_unit_charge": -12
+  },
+  "arbitrary_flavor_weak_anomalies": [
+    "-3*d",
+    "3*d"
+  ],
+  "discrete": {
+    "smith_diagonal": [
+      1,
+      1,
+      2,
+      8
+    ],
+    "classical_field_actions": 16,
+    "gauge_center_field_actions": 8,
+    "classical_quotient_order": 2,
+    "ordinary_instanton_survivors": 8,
+    "survivors_equal_gauge_center": true,
+    "centers_preserve_all_terms": true,
+    "scope": "family-uniform field phases; ordinary instantons; not line operators or bundle classification"
+  },
+  "broken_phase": {
+    "generator": "B=(X+(B-L))/4",
+    "fermion_charges": [
+      "1/3",
+      "1/3",
+      "1/3",
+      "0"
+    ],
+    "Delta_symmetric_color_components": {
+      "11": "-2/3",
+      "12": "-2/3",
+      "13": "-2/3",
+      "14": "-1/3",
+      "22": "-2/3",
+      "23": "-2/3",
+      "24": "-1/3",
+      "33": "-2/3",
+      "34": "-1/3",
+      "44": "0"
+    },
+    "holomorphic_quartic_B_charge": -2
+  },
+  "outcome": "No exact independent continuous scalar charge established for the stated complete minimal action; truncation candidate is anomalous and neutral-Delta identification fails.",
+  "boundaries": [
+    "no assertion excluding other field content or explicitly justified coupling restrictions",
+    "no classification of nonlinear/topological/emergent symmetries",
+    "no soliton lifetime computed",
+    "no complete gauged soliton solved",
+    "charge-generator trace theorem assumes both Dirac matrices and Majorana matrix invertible"
+  ],
+  "versions": {
+    "numpy": "2.5.0",
+    "sympy": "1.14.0"
+  },
+  "source_sha256": {
+    "code/condensate_energy/charge_audit.py": "6b021abd862a0255f6f2faf19882239d8e456350cac70d29f9cc9a709af1112f",
+    "docs/condensate_energy/charge_audit/protocol.md": "ff03e2b736e9a6ea9a28b254151b8c01c02d6e0e484c6fe3802e029fe1f916c4",
+    "docs/condensate_energy/charge_audit/archive-provenance.json": "4eeb065acd08077e0029934059c69e8658333ce0812761e44ecfa8bf594f5c68",
+    "papers/core_trilogy/Palatini_Gauge_Attractor.tex": "398b376729e7f495eaeecedf7e1950aaa8e3c83c3930e556449bc4a63abaad06",
+    "code/acs_codebase/extras/task2_lagrangian.py": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7",
+    "docs/frontier/2026-09-11/Branch_Catalog.json": "828e9d567a7ffb158a7c235b0ca775f8867e449b148683bc195328f790361da5",
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/source-snapshots/full_scalar_basis.py": "6c08934979e373aad514dd45d45be3496a53b5f57cedb5db40a5e12990c520ed",
+    "docs/condensate_energy/charge_audit/source-snapshots/scalar_invariant_basis.py": "246f4215a2622d73b83424e9c84e5c9fb395fe510867bb4a476d680baa7165fc"
+  }
+}

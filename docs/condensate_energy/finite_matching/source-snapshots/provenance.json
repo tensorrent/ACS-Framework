@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/electroweak_vacuum_selection.py",
+    "snapshot": "docs/condensate_energy/finite_matching/source-snapshots/electroweak_vacuum_selection.py",
+    "sha256": "284bfeb0c4d0ea0f3580b6266aa197338c7f730d1c438b82eec57791203a9a30"
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/higgs_bivev/neutrino_honest.py",
+    "snapshot": "docs/condensate_energy/finite_matching/source-snapshots/neutrino_honest.py",
+    "sha256": "6a2eb534cbef565ea2f47d2d01c8af2d80b6863a225dbf6fdcb00d6b7c692bd5"
+  }
+]

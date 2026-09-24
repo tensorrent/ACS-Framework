@@ -1,0 +1,135 @@
+{
+  "checks_total": 13,
+  "checks_passed": 13,
+  "checks": [
+    {
+      "name": "source beta4 factorization",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nonzero w branch impossible over reals",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "remaining beta3 factorization",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero elimination reconstructs both original equations exactly",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero all real roots isolated by exact Sturm count",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero original residual 0",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "zero independent numerical root 0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero original residual 1",
+      "passed": true,
+      "evidence": 1.1102230246251565e-16
+    },
+    {
+      "name": "zero independent numerical root 1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero proposed Higgs number is not a proxy root",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nonzero elimination reconstructs both original equations exactly",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nonzero all real roots isolated by exact Sturm count",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nonzero proposed Higgs number is not a proxy root",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "source_equations": [
+    "24*x**2 + 2*x*y - 12*x + 2*y**2 + 3/4",
+    "2*w**2 + 4*x*y + 4*y**2 - 12*y + 2*z**2 + 3",
+    "4*x*z + 4*y*z + 8*z**2 - 12*z",
+    "4*w*x + 4*w*y - 12*w"
+  ],
+  "branches": [
+    {
+      "label": "zero",
+      "univariate": "x**4 - 5*x**3/4 + 17*x**2/16 - 43*x/128 + 25/1024",
+      "y_of_x": "-4*x**2 + 2*x + 1/8",
+      "z_of_x_y": "0",
+      "real_roots": [
+        {
+          "interval": [
+            "1770869257/17378695927",
+            "623827116/6122022683"
+          ],
+          "multiplicity": 1,
+          "scaled_quartics": [
+            0.10189885733881394,
+            0.2872642061698041,
+            0.0,
+            0.0
+          ],
+          "quartics": [
+            0.18115352415789146,
+            0.5106919220796516,
+            0.0,
+            0.0
+          ],
+          "residual": 0.0
+        },
+        {
+          "interval": [
+            "9478397702/26136400125",
+            "3001095967/8275432987"
+          ],
+          "multiplicity": 1,
+          "scaled_quartics": [
+            0.36265123187082365,
+            0.3242387998319437,
+            0.0,
+            0.0
+          ],
+          "quartics": [
+            0.6447133011036864,
+            0.5764245330345665,
+            0.0,
+            0.0
+          ],
+          "residual": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "label": "nonzero",
+      "univariate": "x**4 - 297*x**3/241 + 4135*x**2/3856 - 5277*x/15424 + 10083/246784",
+      "y_of_x": "-30848*x**3/252929 - 887424*x**2/252929 + 407603*x/252929 + 98052/252929",
+      "z_of_x_y": "-x/2 - y/2 + 3/2",
+      "real_roots": []
+    }
+  ],
+  "scope": "Exact all-real solution set of the printed fixed-gauge four-quartic proxy, not a fixed point of the complete running ACS action"
+}

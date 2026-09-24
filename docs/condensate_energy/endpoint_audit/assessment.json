@@ -1,0 +1,31 @@
+{
+  "status": "Scoped action-to-carrier investigation at evidential endpoint",
+  "checks_passed": 95,
+  "checks_total": 96,
+  "incomplete_source_replays": [
+    {
+      "dataset": "microscopic.json",
+      "check": "Phase6 full source replay completes"
+    }
+  ],
+  "incomplete_replay_math_resolved_by": "phase6-real-roots.json",
+  "forward_calculation": "Complete scalar action and specified conditional matching, binding and leakage",
+  "established_obstruction": "Compatible complete actions have different masses, vacua and carrier thresholds",
+  "missing_physical_inputs": [
+    "Normalized microscopic condensate-to-field map",
+    "Coefficient, scale and flavor selection law",
+    "Physical vacuum and quantum carrier identification"
+  ],
+  "discovery_limit": "No exhaustive semantic recovery of whole drives, encrypted archives or unexported cloud chats",
+  "scientific_limit": "No completed theory of matter, RH proof or universal no-go theorem for future ACS constructions",
+  "dependency_versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.0",
+    "scipy": "1.18.0",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "matplotlib": "3.11.2"
+  },
+  "requirements_reviewed": 7,
+  "protocol_items_reviewed": 7
+}

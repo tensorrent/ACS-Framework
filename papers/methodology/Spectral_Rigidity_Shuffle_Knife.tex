@@ -35,12 +35,20 @@ Categorising Spectral Witnesses by What They Respond To}}
 \author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
 \date{\small FF06e \ $\cdot$ \ Companion to \textit{Spectral Witness Survival}\ ---\ SIP License v1.1}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
 \begin{abstract}
 A spectrum admits many ``witnesses'' --- pair correlation, spacing distribution, counting function, shape statistics, serial correlations, arithmetic phase --- and on the Riemann zeros they all ``point at the critical line.'' We ask whether this agreement is many independent confirmations or one reading refracted through several lenses, and we make the question decidable with a single operator we call the \emph{shuffle knife}: replace the object by a marginal-matched surrogate (its own spacing distribution, re-randomised so that object-specific correlations are destroyed but the distribution class is preserved) and ask whether each witness's value survives. A witness whose value is unchanged is reading the \emph{universality class} --- we call it \textbf{form}; a witness whose value collapses is reading the \emph{object} --- we call it \textbf{function}, and the size of the collapse measures its true influence. On the full first $10^5$ zeros with $60$ surrogate seeds the split is unambiguous: spacing, counting, and Wigner-shape are FORM ($0.4$--$1.0\sigma$ from the surrogate null --- residuals of the re-interpolation step; zero by construction on bare permuted spacings, see the surrogate-construction remark); arithmetic prime-resonance and lag-1 correlation are FUNCTION ($\sim\!11{,}500\sigma$ and $\sim\!97\sigma$), with the function signal \emph{amplifying} with $N$. Almost all of the $\zeta$-specific influence lives in one witness --- the arithmetic one, i.e.\ the explicit-formula coupling. We frame the result with an epistemological observation we found load-bearing throughout: scientific categories are routinely \emph{reactional} (a thing named by the response it emits), where the correct frame is \emph{response-driven} (a thing defined by what it responds to), and the reactional frame is precisely the one in which form and function cannot be separated. The shuffle knife is the operator that converts one frame into the other. We state the discipline, give the measurements, and mark exactly where the method stops.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{The question: one witness or many?}
 
@@ -71,7 +79,7 @@ The knife is the operator that asks, of each witness, \emph{respond to what?} A 
 We evaluate five scalar witnesses on the first $N=10^5$ zeros and on $60$ marginal-matched surrogates (seed $20260423$). The arithmetic witness is the prime-resonance power $\sum_{p\le29}\langle\cos(\gamma\log p)\rangle^2$, summed over the actual (not unfolded) heights; the remaining four are computed on unfolded spacings.
 
 \begin{center}
-\begin{tabular}{lrrrl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lrrrl}
 \toprule
 witness & $W_{\mathrm{real}}$ & $\overline{W}_{\mathrm{shuf}}$ & $z$ ($\sigma$) & category \\
 \midrule
@@ -81,7 +89,7 @@ spacing mean deviation        & $0.0000$ & $0.0000$ & $1.0$ & FORM \\
 counting deviation            & $1\times10^{-5}$ & $1\times10^{-5}$ & $1.0$ & FORM \\
 Wigner-shape $L^2$            & $0.0258$ & $0.0258$ & $0.4$ & FORM \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent\textbf{The split is clean.} Three witnesses sit within one standard deviation of the surrogate: spacing, counting, and shape are statistically \emph{indistinguishable} on the real zeros from any marginal-matched sequence. They are reading the universality class.
@@ -129,5 +137,18 @@ We include this framing because it is honest about \emph{why} the categorisation
 \vspace{1em}
 \noindent\rule{\linewidth}{0.4pt}\\
 \small This companion accompanies \textit{Spectral Witness Survival} (\emph{Spectral Witness Survival and the Character of the Transport Obstruction}). All measurements use the real first $10^5$ Riemann zeros and the canonical seed $20260423$; the form/function suite is reproducible standalone. SIP License v1.1.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Shuffle controls isolate sensitivity to the information that a particular shuffle removes. They do not exhaust all arithmetic alternatives or prove that every local statistic is universally arithmetic-blind. Results remain scoped to the stated window, unfolding and ensemble. A valid positive identification requires competitors and held-out prediction, while a null result must retain power and resolution limits. No finite shuffle experiment settles RH.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

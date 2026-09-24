@@ -1,0 +1,9 @@
+name = "cpfperzero"
+defaultTargets = ["PerZero"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "PerZero"

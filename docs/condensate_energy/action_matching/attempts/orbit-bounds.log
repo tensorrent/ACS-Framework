@@ -1,0 +1,12 @@
+color_gram-sharp-lower-bound-identity PASS
+color_gram-sharp-upper-bound-identity PASS
+color_gram-lower-bound-attained-by-actual-Delta-fields PASS
+color_gram-neutral-vacuum-attains-upper-bound PASS
+color_gram-negative-rho2-favors-neutral-rankone PASS
+color_gram-lower-energy-nonneutral-vacuum-at-fixed-action PASS
+spin_gram-sharp-lower-bound-identity PASS
+spin_gram-sharp-upper-bound-identity PASS
+spin_gram-lower-bound-attained-by-actual-Delta-fields PASS
+spin_gram-neutral-vacuum-attains-upper-bound PASS
+spin_gram-negative-rho2-favors-neutral-rankone PASS
+spin_gram-lower-energy-nonneutral-vacuum-at-fixed-action PASS

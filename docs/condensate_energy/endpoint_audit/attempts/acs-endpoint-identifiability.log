@@ -1,0 +1,68 @@
+canonical field map fixes kinetic coefficient PASS
+canonical quartic invariant under consistent field reparameterization PASS
+common action prefactor remains in physical quartic PASS
+all 17 invariants are homogeneous quartics PASS
+all four mass polynomials are homogeneous quadratics PASS
+flavor witness is complex and noncommuting PASS
+potential dilation 0.4 PASS
+gradient dilation 0.4 PASS
+hessian dilation 0.4 PASS
+gauge_gram dilation 0.4 PASS
+fermion_mass dilation 0.4 PASS
+fermion_squared_singular_values dilation 0.4 PASS
+potential dilation 2.3 PASS
+gradient dilation 2.3 PASS
+hessian dilation 2.3 PASS
+gauge_gram dilation 2.3 PASS
+fermion_mass dilation 2.3 PASS
+fermion_squared_singular_values dilation 2.3 PASS
+CW scale witness retains scalar stability PASS
+one-loop potential including complex flavor scales to fourth power 0.4 PASS
+one-loop potential including complex flavor scales to fourth power 2.3 PASS
+CW logarithm is exactly invariant under simultaneous scale change PASS
+one-loop dimensional transmutation still needs its integration scale PASS
+source upward RG reaches endpoint PASS
+two RG endpoint methods agree PASS
+perturbed boundary reaches endpoint -1e-05 PASS
+perturbed boundary reaches endpoint 1e-05 PASS
+RG variational sensitivity agrees with boundary differences PASS
+finite RG flow retains nonzero boundary sensitivity PASS
+alternate boundary reaches endpoint 0.08 PASS
+alternate boundary reaches endpoint 0.12830005981991682 PASS
+alternate boundary reaches endpoint 0.18 PASS
+different source quartics do not become identical PASS
+source QCD crossing exactly reproduces inserted target PASS
+one-coupling crossing does not give simultaneous gauge equality PASS
+printed square-root texture is rank one PASS
+commuting curvature can have nonzero wedge-square trace PASS
+real Yukawa matrices need not have positive determinant PASS
+thermal-source norm portal preserves both independent phases PASS
+norm portal has no off-diagonal quadratic term in unbroken phase PASS
+source replay four_computations PASS
+source replay seven_tests_kinetic PASS
+{
+  "checks_total": 42,
+  "checks_passed": 42,
+  "source_RG": {
+    "upward_lambda": -0.0052413721422975975,
+    "downward_lambda": 0.18063150932202007,
+    "derivative_IR_wrt_UV": 0.2088898195217001,
+    "tree_mass_proxy_GeV": 147.99092347347138,
+    "alternatives": [
+      {
+        "lambda_UV": 0.08,
+        "lambda_IR": 0.16855204148900993
+      },
+      {
+        "lambda_UV": 0.12830005981991682,
+        "lambda_IR": 0.1806315093220131
+      },
+      {
+        "lambda_UV": 0.18,
+        "lambda_IR": 0.18981213769367805
+      }
+    ],
+    "QCD_crossing_GeV": 25.647622061908745,
+    "g2_at_crossing": 0.6588567151287571
+  }
+}

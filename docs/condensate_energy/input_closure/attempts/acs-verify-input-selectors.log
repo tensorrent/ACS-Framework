@@ -1,0 +1,29 @@
+{
+  "checks_total": 26,
+  "checks_passed": 26,
+  "failures": [],
+  "fallback_selector": {
+    "squared_norms": [
+      "2*a**2 + 2*b**2",
+      "8*b**2*(a**2 + b**2)",
+      "32*b**2*(a**2 + b**2)*(a**2 + 2*b**2)"
+    ],
+    "normalized_example_squared_norms": [
+      2.0,
+      5.12,
+      33.5872
+    ],
+    "verdict": "Primary projector vanishes; implemented fallback does not. Historical blanket annihilation claim is too strong. This does not make the remaining target-fit a prediction."
+  },
+  "export_quantum": {
+    "source_correlation": -0.6408455292095048,
+    "converted_units_correlation": -0.6570781124871166,
+    "inputs": "The source inserts both the dimensional constants and fine-structure value; no parameter-selection equation appears in this test."
+  },
+  "unspecified_kernel": {
+    "first_derivative_at_phi": 57.00263777268692,
+    "second_derivative_at_phi": 55.4939186811949,
+    "domain": "u=log(lambda+epsilon) in [2,3], gamma in [0,1], K=1",
+    "limitation": "Counterexample to an inference without kernel/domain hypotheses; not a theorem about every specified spectral-correlation kernel."
+  }
+}

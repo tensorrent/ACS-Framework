@@ -1,0 +1,113 @@
+======================================================================
+QUARK KOIDE AT THE GUT SCALE
+Running Masses UP via QCD Renormalization Group
+======================================================================
+
+── Low-Energy Masses (GeV) ──
+
+  Up quarks:   u = 0.00216, c = 1.2700, t = 173.1
+  Down quarks: d = 0.00467, s = 0.0934, b = 4.180
+  Leptons:     e = 0.000511, μ = 0.10566, τ = 1.7769
+
+  Koide ratios at low energy:
+    Leptons:     Q = 0.666661 (target: 0.666667, error: 0.0008%)
+    Up quarks:   Q = 0.849131 (error: 27.4%)
+    Down quarks: Q = 0.731428 (error: 9.7%)
+
+── Running Quark Masses to High Scales ──
+
+  Scale        Q_up       Q_down     Q_lep      Best?
+  --------------------------------------------------
+  2 GeV        0.846001   0.731428   0.666661  
+  10 GeV       0.848414   0.733148   0.666661  
+  100 GeV      0.851350   0.733148   0.666661  
+  1 TeV        0.851910   0.733148   0.666661  
+  10 TeV       0.851910   0.733148   0.666661  
+  10⁶          0.851910   0.733148   0.666661  
+  10⁸          0.851910   0.733148   0.666661  
+  10¹⁰         0.851910   0.733148   0.666661  
+  10¹²         0.851910   0.733148   0.666661  
+  10¹⁴         0.851910   0.733148   0.666661  
+  10¹⁶ (GUT)   0.851910   0.733148   0.666661  
+
+── Detailed Analysis ──
+
+  Best up-type Koide:   Q = 0.846001 at μ = 2e+00 GeV
+    Error: 26.90%
+  Best down-type Koide: Q = 0.731428 at μ = 2e+00 GeV
+    Error: 9.71%
+
+  Masses at GUT scale (10¹⁶ GeV):
+    u = 1.4365 MeV, c = 0.8349 GeV, t = 118.99 GeV
+    d = 3.1057 MeV, s = 62.11 MeV, b = 2.8300 GeV
+
+  Mass ratios at GUT scale:
+    m_t/m_c = 142.5 (low E: 128.3)
+    m_c/m_u = 581.2 (low E: 588.0)
+    m_b/m_s = 45.6 (low E: 44.8)
+    m_s/m_d = 20.0 (low E: 20.0)
+
+── The Running Effect ──
+
+  KEY INSIGHT: At 1-loop QCD, all quark masses run with the
+  SAME anomalous dimension γ₀ = 1/π. Therefore mass RATIOS
+  are scale-independent, and the Koide ratio is INVARIANT.
+
+  This means: the Koide failure for quarks is NOT from QCD running.
+  It is an INTRINSIC property of the quark mass matrix.
+
+  HOWEVER: at 2-loop and beyond, the anomalous dimensions differ
+  between quarks (through Yukawa coupling dependence). The top
+  quark, being so heavy, has a large Yukawa y_t ≈ 1, which
+  modifies its running differently from u and c.
+
+── Yukawa-Corrected Running ──
+
+  Yukawa couplings: y_u=0.000012, y_c=0.0073, y_t=0.9371
+                    y_d=0.000027, y_s=0.00054, y_b=0.0240
+
+  Koide at GUT scale with Yukawa corrections:
+    Up quarks:   Q = 0.851884 (low E: 0.849131)
+    Down quarks: Q = 0.733148 (low E: 0.731428)
+    Change up:   +0.41% toward 2/3
+    Change down: +0.26% toward 2/3
+
+    Up quarks move AWAY from 2/3 at GUT scale
+    Down quarks move AWAY from 2/3 at GUT scale
+
+======================================================================
+RESULT
+======================================================================
+
+  1-LOOP: Quark Koide is SCALE-INVARIANT (all quarks run identically).
+    Q_up  = 0.849131 at ALL scales (1-loop)
+    Q_down = 0.731428 at ALL scales (1-loop)
+    
+  2-LOOP (Yukawa): The top quark's large Yukawa (y_t = 0.94) 
+    modifies its running relative to u and c.
+    Q_up at GUT: 0.851884 (worsens)
+    Q_down at GUT: 0.733148 (worsens)
+    
+  INTERPRETATION:
+    The Koide deviation for quarks is NOT a QCD artifact.
+    At 1-loop, QCD running preserves the Koide ratio exactly.
+    At 2-loop, the top Yukawa shifts Q slightly but doesn't
+    bring it to 2/3.
+    
+    The quark Koide deviation (Q_up = 0.85, Q_down = 0.73) is 
+    INTRINSIC to the quark mass matrix. It reflects a genuine
+    difference between the quark and lepton sectors:
+    
+    - Leptons: pure Koide (Q = 2/3 to 0.001%)
+      → The three generations sit EXACTLY on the su(3) fundamental cone
+    
+    - Quarks: modified Koide (Q ≠ 2/3)
+      → The quark masses are SHIFTED by the colour interaction
+      → The strong force modifies the vacuum direction in the GL(4) fiber
+      → The quark θ₀ differs from the lepton θ₀
+    
+    This is consistent with the ACS picture: leptons are colourless
+    (their masses come purely from the Higgs), while quarks carry 
+    colour charge (their masses are shifted by the gluon condensate).
+    The Koide formula is the COLOUR-FREE limit of the mass formula.
+

@@ -1,0 +1,91 @@
+[
+  {
+    "name": "independent time-dependent ODE state convergence",
+    "passed": true,
+    "coarse_error": 0.002644130798112881,
+    "fine_error": 0.0006619513667755832,
+    "evaluations": 6050
+  },
+  {
+    "name": "independent continuum work integral convergence",
+    "passed": true,
+    "reference_work": 0.5754057005336861,
+    "coarse_error": 2.4607895448003347e-06,
+    "fine_error": 6.012234102792391e-07
+  },
+  {
+    "name": "analytic half-line bound modes satisfy matching",
+    "passed": true,
+    "omega": [
+      0.6964755285194697,
+      1.3803616074940754,
+      1.989330373550987
+    ],
+    "eigenvalues": [
+      0.4850781618264747,
+      1.905398167443628,
+      3.9574353351325096
+    ],
+    "decay_rates": [
+      1.874812480802687,
+      1.4472739314160163,
+      0.20631205700949823
+    ]
+  },
+  {
+    "name": "bound-mode eigenvalues converge to analytic continuum values",
+    "passed": true,
+    "coarse_error": 0.00576493325348526,
+    "fine_error": 0.0014235686335251074
+  },
+  {
+    "name": "bound-mode control is insensitive to remote wall",
+    "passed": false,
+    "domain_error": 0.00011610012327967212
+  },
+  {
+    "name": "global energy plus signed gate work closes",
+    "passed": true,
+    "max_residual": 5.706352057543995e-12
+  },
+  {
+    "name": "core and trap energy plus flux and gate work close",
+    "passed": true,
+    "core_residual": 3.1791253657376117e-12,
+    "trap_residual": 3.584355035002318e-12
+  },
+  {
+    "name": "no sampled outgoing tail reaches distant boundary zone",
+    "passed": true,
+    "max_tail": 1.3809551616109817e-10
+  },
+  {
+    "name": "combined spatial and temporal refinement",
+    "passed": true,
+    "max_trapped_curve_errors": [
+      0.006364991824373001,
+      0.002507666498583472
+    ]
+  },
+  {
+    "name": "remote boundary control",
+    "passed": true,
+    "max_trapped_curve_error": 0.0
+  },
+  {
+    "name": "global phase leaves observables invariant",
+    "passed": true,
+    "max_observable_error": 5.329070518200751e-15
+  },
+  {
+    "name": "discrete work approaches continuum midpoint work under time refinement",
+    "passed": true,
+    "coarse_difference": 4.0959138102592e-06,
+    "fine_difference": 1.0239587210081336e-06
+  },
+  {
+    "name": "all frozen dynamic variants were executed",
+    "passed": true,
+    "variants": 23
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-12T15:21:58.519365+00:00",
+  "file": "PerZeroBoundary.lean",
+  "sha256": "16e8be1746f3fd0e316805982f201408ab6206c3cee0d2df00b05dce7ebcb62d",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/PerZeroBoundary.olean",
+    "PerZeroBoundary.lean"
+  ],
+  "returncode": 1,
+  "stdout": "PerZeroBoundary.lean:22:2: error: Type mismatch: After simplification, term\n  Tendsto.const_mul 2 (Tendsto.add_const (arctan c) (Tendsto.comp ha hi))\n has type\n  @Tendsto \u211d \u211d (fun x => 2 * (arctan (x\u207b\u00b9 + -c) + arctan c)) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * (\u03c0 / 2 + arctan c)))\nbut is expected to have type\n  @Tendsto \u211d \u211d (scaled c) (\ud835\udcdd[>] 0) (\ud835\udcdd (2 * (\u03c0 / 2 + arctan c)))\n",
+  "stderr": ""
+}

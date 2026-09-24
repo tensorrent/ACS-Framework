@@ -1,0 +1,128 @@
+[
+  {
+    "name": "independent coupled ODE state convergence",
+    "passed": true,
+    "coarse_error": 0.0006023826073196284,
+    "fine_error": 0.00015061153585196362,
+    "ode_evaluations": 5750
+  },
+  {
+    "name": "independent work integral convergence",
+    "passed": true,
+    "coarse_error": 0.00011758025057980598,
+    "fine_error": 2.9407124787737826e-05,
+    "reference_work": -0.06009159595095269
+  },
+  {
+    "name": "Verlet physical energy drift decreases on time refinement",
+    "passed": true,
+    "coarse": 2.8052317461724208e-05,
+    "fine": 7.011399465572943e-06
+  },
+  {
+    "name": "coupled trajectory reverses without loss",
+    "passed": true,
+    "error": 8.478083344250869e-14
+  },
+  {
+    "name": "energy_drift within registered tolerance",
+    "passed": true,
+    "max_residual": 3.1087866346979354e-05
+  },
+  {
+    "name": "field_work_residual within registered tolerance",
+    "passed": true,
+    "max_residual": 5.851623873373568e-05
+  },
+  {
+    "name": "gate_work_residual within registered tolerance",
+    "passed": true,
+    "max_residual": 4.668734054674717e-05
+  },
+  {
+    "name": "trap_budget_residual within registered tolerance",
+    "passed": true,
+    "max_residual": 5.779173020233064e-05
+  },
+  {
+    "name": "distant boundary zone remains negligible",
+    "passed": true,
+    "max_tail": 9.406109607624562e-09
+  },
+  {
+    "name": "all designated and selected trapped curves refine",
+    "passed": true,
+    "comparisons": [
+      {
+        "base": "middle-g4-M1-K1",
+        "refined": "refined-middle-g4-M1-K1",
+        "errors": {
+          "trapped": 0.0033121019189759895,
+          "gate": 0.000491747843644287,
+          "height": 0.027233225540397303
+        }
+      },
+      {
+        "base": "middle-g16-M0.1-K0.1",
+        "refined": "refined-middle-g16-M0.1-K0.1",
+        "errors": {
+          "trapped": 0.0175317185912196,
+          "gate": 0.016704727596825116,
+          "height": 2.7423739544486447
+        }
+      },
+      {
+        "base": "low-g4-M1-K1",
+        "refined": "selected-refined-low",
+        "errors": {
+          "trapped": 0.0027360793591773014,
+          "gate": 0.0005739722176686043,
+          "height": 0.0192557984160886
+        }
+      },
+      {
+        "base": "middle-g4-M1-K1",
+        "refined": "selected-refined-middle",
+        "errors": {
+          "trapped": 0.0033121019189759895,
+          "gate": 0.000491747843644287,
+          "height": 0.027233225540397303
+        }
+      },
+      {
+        "base": "high-g4-M1-K1",
+        "refined": "selected-refined-high",
+        "errors": {
+          "trapped": 0.006720423666641828,
+          "gate": 0.0005874007536711013,
+          "height": 0.04498006771744878
+        }
+      }
+    ]
+  },
+  {
+    "name": "global phase invariance",
+    "passed": true,
+    "max_observable_error": 1.1241008124329708e-15
+  },
+  {
+    "name": "dynamic larger-domain invariance",
+    "passed": true,
+    "max_observable_error": 1.5543122344752188e-15
+  },
+  {
+    "name": "vacuum remains at zero-energy equilibrium",
+    "passed": true,
+    "max_deviation": 0.0
+  },
+  {
+    "name": "fixed barrier agrees with prior independent midpoint integrator",
+    "passed": true,
+    "max_trapped_curve_error": 6.157738238948829e-06
+  },
+  {
+    "name": "all registered variants executed",
+    "passed": true,
+    "variants": 76
+  }
+]

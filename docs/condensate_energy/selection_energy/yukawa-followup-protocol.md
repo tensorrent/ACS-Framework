@@ -1,0 +1,3 @@
+# Follow the source's proposed tan-beta repair
+
+The next source, `acs_higgs_wall.py`, corrects the earlier assignment tan(beta)=1/2 but asserts that a large positive tan(beta) can produce a top/bottom ratio around 40 with positive proportional Yukawa ratio r=2/3. Test the actual printed formula analytically over its full positive domain, then check the matrix-level proportionality and the alternative norm-only interpretation separately. Keep the historical comparison value 40 as a source target, not a newly inferred measurement. A failure of matrix proportionality must not be extended to two independent Yukawa matrices with a norm constraint.

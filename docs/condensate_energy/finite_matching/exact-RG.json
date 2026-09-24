@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "exact-all-coupling-quartic-RG-identity",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "name": "exact-all-coupling-mass-RG-identity",
+      "passed": true,
+      "evidence": "0"
+    },
+    {
+      "name": "exact-independence-of-orthogonal-doublet-Yukawa-split",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "omitting-wave-function-fails-generic-RG-identity",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 4,
+  "checks_total": 4,
+  "scaling": "All beta and explicit matching-scale derivatives multiplied by 32 pi^2",
+  "tree_quartic_beta": "-(-6912*H**2*l7**2 + 1944*H*gL**2*l7**2 + 1944*H*gR**2*l7**2 + 2160*H*k**2*l7 - 6912*H*l7**2*y**2 + 216*f**4*k**2 - 864*f**2*k*l7*y**2 - 1215*g4**4*k**2 - 972*g4**2*gR**2*k**2 - 243*gL**4*l7**2 - 486*gL**2*gR**2*l7**2 - 486*gL**2*k**2*l7 - 486*gR**4*k**2 + 648*gR**4*k*l7 - 243*gR**4*l7**2 - 486*gR**2*k**2*l7 - 216*k**4 + 432*k**3*l7 - 972*k**2*l10**2 - 360*k**2*l10*l6 + 3168*k**2*l10*l7 - 288*k**2*l10*l8 - 576*k**2*l10*l9 - 184*k**2*l6**2 + 824*k**2*l6*l7 - 64*k**2*l6*l8 - 32*k**2*l6*l9 - 3772*k**2*l7**2 + 544*k**2*l7*l8 + 2144*k**2*l7*l9 + 1728*k**2*l7*y**2 - 64*k**2*l8**2 - 64*k**2*l8*l9 - 736*k**2*l9**2 + 3456*l7**2*y**4)/(108*l7**2)",
+  "tree_mass_beta": "-(-432*H*Mchi2*l7 + 108*Mchi2*k**2 - 216*f**4*k*v**2 + 432*f**2*l7*v**2*y**2 + 1215*g4**4*k*v**2 + 972*g4**2*gR**2*k*v**2 + 486*gR**4*k*v**2 - 324*gR**4*l7*v**2 - 216*k**2*l7*v**2 + 972*k*l10**2*v**2 + 360*k*l10*l6*v**2 - 3168*k*l10*l7*v**2 + 288*k*l10*l8*v**2 + 576*k*l10*l9*v**2 + 184*k*l6**2*v**2 - 824*k*l6*l7*v**2 + 64*k*l6*l8*v**2 + 32*k*l6*l9*v**2 + 3772*k*l7**2*v**2 - 544*k*l7*l8*v**2 - 2144*k*l7*l9*v**2 + 64*k*l8**2*v**2 + 64*k*l8*l9*v**2 + 736*k*l9**2*v**2)/(27*l7)",
+  "missing_wave_residual": "-(-4*H*l7 + k**2)*(-9*g4**2*gR**2 + 6*g4**2*y**2 - 9*gR**4 + 4*gR**2*y**2)/(l7*(3*g4**2 + 2*gR**2))",
+  "canonical_quartic_residual": "0",
+  "mass_residual": "0",
+  "domain": "Real diagonal flavor, arbitrary stable Delta quartics l6..l10, norm portal and declared determinant mass. One-family Yukawa identity extends by summing diagonal families: all one-loop flavor terms are single traces."
+}

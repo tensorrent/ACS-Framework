@@ -1,0 +1,1339 @@
+{
+  "checks": [
+    {
+      "name": "[]-all-independent-retries-successful",
+      "passed": true
+    },
+    {
+      "name": "[]-no-retry-undercuts-selected-candidate",
+      "passed": true
+    },
+    {
+      "name": "[]-all-retries-return-neutral-energy",
+      "passed": true
+    },
+    {
+      "name": "[0.3]-all-independent-retries-successful",
+      "passed": true
+    },
+    {
+      "name": "[0.3]-no-retry-undercuts-selected-candidate",
+      "passed": true
+    },
+    {
+      "name": "[0.3]-all-retries-return-neutral-energy",
+      "passed": true
+    }
+  ],
+  "checks_passed": 6,
+  "checks_total": 6,
+  "reviews": [
+    {
+      "Majorana_singular": [],
+      "retries": [
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 0,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640829824578e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640829824578e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 2,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.176264084449475e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.176264084449475e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 5,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844494755e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844494755e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 6,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844824135e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844824135e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 7,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844277035e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844277035e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 9,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844277031e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844277031e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 11,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896894e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896894e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "initial",
+          "original_run": 13,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640845229854e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640845229854e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 3,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.176264084482413e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.176264084482413e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 4,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896894e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896894e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 6,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.176264084482414e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.176264084482414e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 10,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896895e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896895e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 11,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896899e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896899e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 12,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640845682168e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640845682168e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 14,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896902e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896902e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 16,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844277035e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844277035e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 23,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640844824132e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640844824132e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 24,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1762640845162274e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1762640845162274e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 1,
+          "batch": "repeated",
+          "original_run": 28,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -1.3010426069826053e-18,
+            "parameters": [
+              1.1107131353896892e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -1.3010426069826053e-18,
+          "theta": 1.1107131353896892e-08,
+          "q": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "initial",
+          "original_run": 1,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 8.673617379884035e-19,
+            "parameters": [
+              1.4572941372515194e-08,
+              2.6657885270306857e-08,
+              0.6002107452418244
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 8.673617379884035e-19,
+          "theta": 1.4572941372515194e-08,
+          "q": [
+            0.9999999999999993,
+            4.839352988023972e-16,
+            2.2670754828244593e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 7,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -4.336808689942018e-19,
+            "parameters": [
+              1.0159436020133188e-08,
+              4.3017517856797844e-09,
+              1.4264538786150225
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -4.336808689942018e-19,
+          "theta": 1.0159436020133188e-08,
+          "q": [
+            1.0,
+            3.828781599160668e-19,
+            1.8122190265683147e-17,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 9,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -4.336808689942018e-19,
+            "parameters": [
+              1.4513108384571855e-08,
+              1.6911106440781903e-08,
+              1.5707963225930257
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -4.336808689942018e-19,
+          "theta": 1.4513108384571855e-08,
+          "q": [
+            0.9999999999999998,
+            5.049280045015436e-33,
+            2.8598552105145516e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 17,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -4.336808689942018e-19,
+            "parameters": [
+              5.389752819634805e-09,
+              6.207447744947448e-09,
+              0.8124487483062379
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -4.336808689942018e-19,
+          "theta": 5.389752819634805e-09,
+          "q": [
+            1.0,
+            1.822438798718263e-17,
+            2.0308019519070523e-17,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 30,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 8.673617379884035e-19,
+            "parameters": [
+              2.1770648953655807e-08,
+              1.105071547717938e-08,
+              1.5707963156877651
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 8.673617379884035e-19,
+          "theta": 2.1770648953655807e-08,
+          "q": [
+            0.9999999999999998,
+            1.506553718141436e-32,
+            1.2211831255757187e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "initial",
+          "original_run": 4,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -4.336808689942018e-19,
+            "parameters": [
+              2.0191891092401393e-08,
+              1.0364251634277303e-08,
+              1.5677813785708696,
+              1.5707963158052591
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -4.336808689942018e-19,
+          "theta": 2.0191891092401393e-08,
+          "q": [
+            1.0,
+            9.764146754927144e-22,
+            1.2972948163793364e-32,
+            1.0741673552394423e-16
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "initial",
+          "original_run": 13,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": -4.336808689942018e-19,
+            "parameters": [
+              4.3858199038164914e-09,
+              5.9082208403352945e-09,
+              0.970805533121444,
+              1.0165475780033812
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": -4.336808689942018e-19,
+          "theta": 4.3858199038164914e-09,
+          "q": [
+            1.0,
+            1.1128812840487327e-17,
+            6.586497311379095e-18,
+            1.7191763346305866e-17
+          ]
+        }
+      ]
+    },
+    {
+      "Majorana_singular": [
+        0.3
+      ],
+      "retries": [
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 0,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.3010426069826053e-18,
+            "parameters": [
+              1.898862615676025e-09,
+              2.4141434675100046e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.3010426069826053e-18,
+          "theta": 1.898862615676025e-09,
+          "q": [
+            0.9999999999999993,
+            5.828088681721227e-16,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 2,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              1.9596905669792285e-08,
+              9.95977261710423e-09
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 1.9596905669792285e-08,
+          "q": [
+            1.0,
+            9.919707058441926e-17,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 3,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 2.168404344971009e-18,
+            "parameters": [
+              8.620177531965381e-09,
+              1.5707962945848135
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 2.168404344971009e-18,
+          "theta": 8.620177531965381e-09,
+          "q": [
+            1.037489453724201e-15,
+            0.9999999999999989,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 5,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.3010426069826053e-18,
+            "parameters": [
+              2.7497004421656044e-08,
+              1.7971716162762763e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.3010426069826053e-18,
+          "theta": 2.7497004421656044e-08,
+          "q": [
+            0.9999999999999998,
+            3.229825818349083e-16,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 10,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              1.13287132947221e-08,
+              1.5707963086800085
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 1.13287132947221e-08,
+          "q": [
+            3.2814917070455487e-16,
+            0.9999999999999998,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 12,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 4.336808689942018e-19,
+            "parameters": [
+              1.486728998744324e-08,
+              2.1879311750322305e-08
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 4.336808689942018e-19,
+          "theta": 1.486728998744324e-08,
+          "q": [
+            0.9999999999999996,
+            4.787042826677916e-16,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 15,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              2.3525281339088614e-08,
+              1.5707963200856117
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 2.3525281339088614e-08,
+          "q": [
+            4.50145047638305e-17,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 2,
+          "batch": "repeated",
+          "original_run": 28,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.00015518975029599116,
+            "parameters": [
+              0.7560010253108416,
+              1.5707886306708194
+            ]
+          },
+          "constrained_refinement": true,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "energy_relative": 0.0,
+          "theta": 5.562762583302208e-19,
+          "q": [
+            3.749399456654644e-33,
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "initial",
+          "original_run": 14,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 4.336808689942018e-19,
+            "parameters": [
+              1.833024351473702e-08,
+              1.510466847202881e-08,
+              0.714576052368238
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 4.336808689942018e-19,
+          "theta": 1.833024351473702e-08,
+          "q": [
+            0.9999999999999998,
+            1.301796647918338e-16,
+            9.797134485806734e-17,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 19,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 4.336808689942018e-19,
+            "parameters": [
+              2.168934496330307e-08,
+              1.557843814723734e-08,
+              0.4710888811239561
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 4.336808689942018e-19,
+          "theta": 2.168934496330307e-08,
+          "q": [
+            0.9999999999999998,
+            1.9269745424333874e-16,
+            4.999028086396084e-17,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 22,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.3010426069826053e-18,
+            "parameters": [
+              2.8459793893006655e-08,
+              2.6989699039415698e-08,
+              0.9761170004771749
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.3010426069826053e-18,
+          "theta": 2.8459793893006655e-08,
+          "q": [
+            0.9999999999999993,
+            2.286384197848605e-16,
+            4.99805434453376e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 23,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.734723475976807e-18,
+            "parameters": [
+              2.8434352091737987e-08,
+              1.5441405199393375e-08,
+              0.8999861586691721
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.734723475976807e-18,
+          "theta": 2.8434352091737987e-08,
+          "q": [
+            0.9999999999999998,
+            9.213501894636703e-17,
+            1.4630197558548573e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 24,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              2.9678842528878822e-08,
+              6.602434024069373e-09,
+              1.5707963073372906
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 2.9678842528878822e-08,
+          "q": [
+            1.0,
+            1.6503913996348655e-32,
+            4.3592135042188874e-17,
+            0.0
+          ]
+        },
+        {
+          "rank": 3,
+          "batch": "repeated",
+          "original_run": 27,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.734723475976807e-18,
+            "parameters": [
+              2.841631961350079e-08,
+              1.1107131439878561e-08,
+              1.5690563932849737
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.734723475976807e-18,
+          "theta": 2.841631961350079e-08,
+          "q": [
+            0.9999999999999998,
+            3.734811514567379e-22,
+            1.2336799534158736e-16,
+            0.0
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "initial",
+          "original_run": 5,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              1.9219971089421632e-08,
+              1.226380063467327e-08,
+              0.9708055249294876,
+              1.1581880183790036
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 1.9219971089421632e-08,
+          "q": [
+            0.9999999999999998,
+            4.7949664450764e-17,
+            1.6474254501884225e-17,
+            8.597688705436428e-17
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "initial",
+          "original_run": 9,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 4.336808689942018e-19,
+            "parameters": [
+              2.633940090327669e-08,
+              1.0203257194911151e-08,
+              1.5659180281337135,
+              1.5707963240843907
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 4.336808689942018e-19,
+          "theta": 2.633940090327669e-08,
+          "q": [
+            1.0,
+            2.4774847724309936e-21,
+            7.648355055464167e-34,
+            1.0410397990073374e-16
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "initial",
+          "original_run": 11,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 1.3010426069826053e-18,
+            "parameters": [
+              9.31129933484353e-09,
+              2.580246206416857e-08,
+              0.9168569405614951,
+              1.015161847611106
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 1.3010426069826053e-18,
+          "theta": 9.31129933484353e-09,
+          "q": [
+            0.9999999999999993,
+            2.463674461831022e-16,
+            1.1669279025018975e-16,
+            3.027068121395659e-16
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "repeated",
+          "original_run": 3,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              2.352528166551095e-08,
+              9.727621553867909e-09,
+              0.9708055341769178,
+              0.599990826154168
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 2.352528166551095e-08,
+          "q": [
+            1.0,
+            3.016815353205574e-17,
+            4.3908297705829834e-17,
+            2.0550169857389938e-17
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "repeated",
+          "original_run": 18,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 3.0357660829594124e-18,
+            "parameters": [
+              2.288609145465125e-08,
+              3.9689836555074786e-08,
+              0.5599603927737837,
+              1.156212887090659
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 3.0357660829594124e-18,
+          "theta": 2.288609145465125e-08,
+          "q": [
+            0.9999999999999984,
+            1.130859324316646e-15,
+            7.210991466149857e-17,
+            3.7231388679040553e-16
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "repeated",
+          "original_run": 25,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              1.151072806971708e-08,
+              2.2960668255402436e-08,
+              0.6354004718972308,
+              1.5689387609904801
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 1.151072806971708e-08,
+          "q": [
+            0.9999999999999996,
+            3.4149296746278865e-16,
+            6.407641823999197e-22,
+            1.8569867850767392e-16
+          ]
+        },
+        {
+          "rank": 4,
+          "batch": "repeated",
+          "original_run": 26,
+          "original_message": "ABNORMAL: ",
+          "original_energy": 0.0,
+          "powell": {
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "energy_relative": 0.0,
+            "parameters": [
+              1.2259933199575748e-08,
+              4.265568206149333e-09,
+              0.813244491079267,
+              1.212724190214522
+            ]
+          },
+          "constrained_refinement": false,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "energy_relative": 0.0,
+          "theta": 1.2259933199575748e-08,
+          "q": [
+            1.0,
+            8.591131998137159e-18,
+            1.1796397605616464e-18,
+            8.424300362613234e-18
+          ]
+        }
+      ]
+    },
+    {
+      "Majorana_singular": [
+        0.5
+      ],
+      "retries": []
+    },
+    {
+      "Majorana_singular": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "retries": []
+    }
+  ],
+  "retries_total": 47,
+  "qualification": "Original abnormal L-BFGS-B stops remain in vacuum-search.json. Powell retries use original starts; a returned energy above the original returned value triggers SLSQP refinement, with both method results retained. These checks qualify optimizer stops, not a mathematical global-minimum certificate."
+}

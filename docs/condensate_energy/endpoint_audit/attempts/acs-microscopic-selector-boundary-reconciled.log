@@ -1,0 +1,41 @@
+two recovered CPF payloads have identical bytes PASS
+recovered CPF payload hash 27 PASS
+recovered CPF payload hash 65770 PASS
+proposed cover automorphism fails required deck commutation PASS
+cover descent forces both homological off-diagonal entries to zero PASS
+unipotent trace cannot determine a unique twist PASS
+source capacitance and radius imply E over mc2 equals alpha L over two PASS
+self-energy matching requires inverse alpha L over two PASS
+CPF cutoff is inverse insertion of any desired number PASS
+CPF displayed approximate cutoff also disagrees numerically PASS
+normal Gaussian surface regulator has inverse-width squared norm PASS
+surface kernel is not an ordinary L2 volume state in zero-width limit PASS
+printed metric respects the glide pullback PASS
+metric determinant retains an unfixed positive radius and pitch PASS
+Bell correlator equals the printed cosine PASS
+chosen Bell settings give two root two PASS
+same operators with product state do not give same Bell value PASS
+hexagonal coordinates are rank two with a linear constraint PASS
+pi over two phase rotation preserves covariant kinetic density PASS
+claimed real-imaginary orthogonality fails for constant pi over four phase PASS
+printed finite-visible-mass rotation speed tends to zero PASS
+printed curvature summand on the critical line is nonzero PASS
+actual finite critical-line summand time average vanishes PASS
+finite-summand primitive independently checked (0.5, 20.0) PASS
+finite-summand primitive independently checked (0.5, 200.0) PASS
+finite-summand primitive independently checked (0.73, 20.0) PASS
+finite-summand primitive independently checked (0.73, 200.0) PASS
+torsion-contortion map has full 24-component rank PASS
+quadratic torsion term has no connection velocity kinetic matrix PASS
+quadratic torsion term is algebraic degree two in contortion PASS
+covariantly constant Palatini coefficient leaves derivative term as boundary PASS
+Phase6 full source replay completes FAIL
+{
+  "checks_total": 32,
+  "checks_passed": 31,
+  "CPF_cutoffs": {
+    "inserted_inverse_alpha": "137.035999171",
+    "source_exponential": "6.658956944377300791368108016527980110039489697448703080877214433251181e-59",
+    "self_energy_consistent_exponential": "2.039050325964883169718233255173193473286571876422987706083200707139052e-118"
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/quark_koide_gut.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/seagate-quark_koide_gut.py",
+    "sha256": "665398e6727bcafcae5da031664e012d984a304a16780d60f80baf858f982806"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_potential.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/higgs_potential.py",
+    "sha256": "6fdfd08df0ab47a5c0de44247d6a6fb74f773da0d794b0aa966d627a81091015"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_clebsch_gordan.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/koide_clebsch_gordan.py",
+    "sha256": "e612c8095adc1f883296b4012017535512ff2d5189903f8dafd009fabc1186f8"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_rg_flow.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/koide_rg_flow.py",
+    "sha256": "8e4e662d1dcbef5908b81f9d712aea4b18c1b7d82dbd7acb2113d62dfb44527e"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_exact.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_exact.py",
+    "sha256": "03eb9eeafe1b5b0dfc3e965900e368a14607abd0b6294b56c39ff542b06a78bd"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_honest.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_honest.py",
+    "sha256": "fe1f7ad9e49379a2b218e23d8f20b940262e3b240093aff1dce9665c8940501c"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_seesaw.py",
+    "sha256": "8ad18c7a07e965b70d0584069966700036fef05e63d7c4b0eafe9abc7edfd9c3"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw_v2.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_seesaw_v2.py",
+    "sha256": "72bb4a70505f3c309807f7171a2e6d9c069fbfb26c40fa9582438ac163a9e634"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/quark_koide_gut.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/quark_koide_gut.py",
+    "sha256": "b4d186ebfa4e9ae017eb584db4b3a182e0da166bae00f43b5cb90e8d7e94c04b"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task2_lagrangian.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/task2_lagrangian.py",
+    "sha256": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_cabibbo.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/theta0_cabibbo.py",
+    "sha256": "f44dcd49db9f194bf51362c005704b3443c554dfeb6ee4a68157578de0f246a0"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_vacuum.py",
+    "snapshot": "docs/condensate_energy/source_endpoint/source-snapshots/branch_a_vacuum.py",
+    "sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f"
+  }
+]

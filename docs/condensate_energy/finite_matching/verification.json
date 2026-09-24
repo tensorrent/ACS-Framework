@@ -1,0 +1,929 @@
+{
+  "high_precision_and_scale": [
+    {
+      "label": "full_three_family",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.0011984487410324075,
+          "quartic_estimate": -0.0005572465768293229,
+          "mass_error": 2.786232884146614e-08,
+          "quartic_error": 8.875832861218824e-08,
+          "without_light_subtraction": -0.02895142822876109
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.0011984233866688672,
+          "quartic_estimate": -0.0005573256224871902,
+          "mass_error": 2.5079653011923558e-09,
+          "quartic_error": 9.71267074483946e-09,
+          "without_light_subtraction": -0.03486022855961512
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.0011984211573706064,
+          "quartic_estimate": -0.0005573340811193894,
+          "mass_error": 2.786670405596947e-10,
+          "quartic_error": 1.254038545650818e-09,
+          "without_light_subtraction": -0.040251881904998434
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.00119842090378365,
+          "quartic_estimate": -0.0005573352050482883,
+          "mass_error": 2.5080084227172976e-11,
+          "quartic_error": 1.3010964669901393e-10,
+          "without_light_subtraction": -0.04616060431412349
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.0011984208814902425,
+          "quartic_estimate": -0.0005573353189527548,
+          "mass_error": 2.7866765947637735e-12,
+          "quartic_error": 1.6205180300491566e-11,
+          "without_light_subtraction": -0.05155224931477907
+        }
+      ],
+      "expected_mass": "-0.0011984208787035659436377178338996504635582536593190068100606397256666095470270705",
+      "expected_potential_quartic": "-0.00055733533515793502849595783399335564729647740191307411297710908504571993875903623",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.17679970828559127,
+          "EFT_run_lambda": 0.1767997082855913,
+          "matched_mass": -0.0011984208787035747,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 7.806255641895632e-18
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.18058427590151122,
+          "EFT_run_lambda": 0.18058427590151124,
+          "matched_mass": -0.001198420878703567,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.18436884351743116,
+          "EFT_run_lambda": 0.18436884351743119,
+          "matched_mass": -0.001198420878703559,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 7.806255641895632e-18
+        }
+      ]
+    },
+    {
+      "label": "one_family",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.002803358237653416,
+          "quartic_estimate": -0.0005167883804934508,
+          "mass_error": 2.5839419024672543e-08,
+          "quartic_error": 4.707471712859563e-08,
+          "without_light_subtraction": -0.03322076041320573
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.0028033347239713423,
+          "quartic_estimate": -0.0005168304335330147,
+          "mass_error": 2.3257369508985664e-09,
+          "quartic_error": 5.02167756467198e-09,
+          "without_light_subtraction": -0.040049822496141405
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.0028033326566518,
+          "quartic_estimate": -0.0005168348176551991,
+          "mass_error": 2.5841740882759955e-10,
+          "quartic_error": 6.375553803599845e-10,
+          "without_light_subtraction": -0.04628123451459541
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.002803332421491984,
+          "quartic_estimate": -0.0005168353899803331,
+          "mass_error": 2.3257592549114988e-11,
+          "quartic_error": 6.523024638376406e-11,
+          "without_light_subtraction": -0.053110255116816656
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.002803332400818569,
+          "quartic_estimate": -0.0005168354471668532,
+          "mass_error": 2.5841772358342663e-12,
+          "quartic_error": 8.043726160834752e-12,
+          "without_light_subtraction": -0.05934166280833499
+        }
+      ],
+      "expected_mass": "-0.0028033323982343914623638454313193052496471477492686078323043859140052534253616315",
+      "expected_potential_quartic": "-0.00051683545521057942497155394144505828477892965718814145373651863314858354618223819",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.18984439828586497,
+          "EFT_run_lambda": 0.18984439828586494,
+          "matched_mass": -0.002803332398234385,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 7.37257477290143e-18
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.1936384756146928,
+          "EFT_run_lambda": 0.1936384756146928,
+          "matched_mass": -0.0028033323982343925,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.19743255294352066,
+          "EFT_run_lambda": 0.19743255294352066,
+          "matched_mass": -0.0028033323982344,
+          "quartic_error": 0.0,
+          "mass_error": 7.37257477290143e-18
+        }
+      ]
+    },
+    {
+      "label": "zero_portal",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.0049856647162731214,
+          "quartic_estimate": -0.0005169022846133976,
+          "mass_error": 2.584511423066988e-08,
+          "quartic_error": 1.7443780732030477e-08,
+          "without_light_subtraction": -0.03529086428008633
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.004985641197290046,
+          "quartic_estimate": -0.0005169180345441709,
+          "mass_error": 2.326131155448769e-09,
+          "quartic_error": 1.6938499586974957e-09,
+          "without_light_subtraction": -0.042590263940738636
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.004985639129618654,
+          "quartic_estimate": -0.0005169195276270028,
+          "mass_error": 2.584597638135014e-10,
+          "quartic_error": 2.0076712688005933e-10,
+          "without_light_subtraction": -0.049250875071523904
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.004985638894420277,
+          "quartic_estimate": -0.0005169197090861382,
+          "mass_error": 2.326138690887622e-11,
+          "quartic_error": 1.9307991388713708e-11,
+          "without_light_subtraction": -0.05655025916370457
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.004985638873743489,
+          "quartic_estimate": -0.0005169197261231831,
+          "mass_error": 2.5845986306159155e-12,
+          "quartic_error": 2.270946489938645e-12,
+          "without_light_subtraction": -0.06321086881844405
+        }
+      ],
+      "expected_mass": "-0.0049856388711588903761890531023553187966054932144014597531006193524031504820383585",
+      "expected_potential_quartic": "-0.00051691972839412961773636842451079384425018231644603236159665746478770819017023311",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.19617028858216853,
+          "EFT_run_lambda": 0.19617028858216853,
+          "matched_mass": -0.00498563887115889,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.20080219779305944,
+          "EFT_run_lambda": 0.20080219779305944,
+          "matched_mass": -0.00498563887115889,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.20543410700395034,
+          "EFT_run_lambda": 0.20543410700395034,
+          "matched_mass": -0.00498563887115889,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        }
+      ]
+    },
+    {
+      "label": "scalar_only",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.001500589413261043,
+          "quartic_estimate": -0.0004066420575714064,
+          "mass_error": 2.033210287857032e-08,
+          "quartic_error": 8.18567810194775e-08,
+          "without_light_subtraction": -0.02896996156099173
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.0015005709113754247,
+          "quartic_estimate": -0.000406714946719562,
+          "mass_error": 1.830217260238029e-09,
+          "quartic_error": 8.96763286383674e-09,
+          "without_light_subtraction": -0.03489864880106383
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.0015005692845195422,
+          "quartic_estimate": -0.00040672275565732365,
+          "mass_error": 2.0336137782866183e-10,
+          "quartic_error": 1.1586951021843787e-09,
+          "without_light_subtraction": -0.040308453706162505
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.0015005690994607352,
+          "quartic_estimate": -0.0004067237940626377,
+          "mass_error": 1.8302570732818696e-11,
+          "quartic_error": 1.2028978814268425e-10,
+          "without_light_subtraction": -0.04623706909549176
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.001500569083191784,
+          "quartic_estimate": -0.00040672389936395506,
+          "mass_error": 2.033619496819775e-12,
+          "quartic_error": 1.4988470805957675e-11,
+          "without_light_subtraction": -0.05164686629695398
+        }
+      ],
+      "expected_mass": "-0.0015005690811581644615970095408773869137571864917460254788446950951685642531609578",
+      "expected_potential_quartic": "-0.00040672391435242583872882680943160286744443157031796822811084927925000481306368821",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.17610073488549619,
+          "EFT_run_lambda": 0.17610073488549619,
+          "matched_mass": -0.0015005690811581984,
+          "quartic_error": 0.0,
+          "mass_error": 3.2959746043559335e-17
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.17954768155300851,
+          "EFT_run_lambda": 0.17954768155300851,
+          "matched_mass": -0.0015005690811581655,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.18299462822052084,
+          "EFT_run_lambda": 0.18299462822052084,
+          "matched_mass": -0.0015005690811581327,
+          "quartic_error": 0.0,
+          "mass_error": 3.2742905609062234e-17
+        }
+      ]
+    },
+    {
+      "label": "scalar_gauge",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.001095365852783527,
+          "quartic_estimate": -0.00054696908450985,
+          "mass_error": 2.73484542254925e-08,
+          "quartic_error": 8.876927132504321e-08,
+          "without_light_subtraction": -0.02949936482270434
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.001095340966045932,
+          "quartic_estimate": -0.0005470481401255104,
+          "mass_error": 2.4617166305647966e-09,
+          "quartic_error": 9.71365566463226e-09,
+          "without_light_subtraction": -0.035496308471414675
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.0010953387778576014,
+          "quartic_estimate": -0.0005470565996331929,
+          "mass_error": 2.735282998165965e-10,
+          "quartic_error": 1.2541479820707108e-09,
+          "without_light_subtraction": -0.04096839164206255
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.001095338528946899,
+          "quartic_estimate": -0.0005470577236616791,
+          "mass_error": 2.4617597564775558e-11,
+          "quartic_error": 1.3011949598732108e-10,
+          "without_light_subtraction": -0.04696525735918571
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.0010953385070645908,
+          "quartic_estimate": -0.0005470578375749004,
+          "mass_error": 2.7352891878745017e-12,
+          "quartic_error": 1.620627466597661e-11,
+          "without_light_subtraction": -0.05243733218423913
+        }
+      ],
+      "expected_mass": "-0.001095338504329301570281665145229376038445363389091154988776343833326036660080977",
+      "expected_potential_quartic": "-0.00054705785378117502311750053468674453885001888126945353288798332370561574445807884",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.17790105172205445,
+          "EFT_run_lambda": 0.17790105172205442,
+          "matched_mass": -0.0010953385043293107,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 8.239936510889834e-18
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.18078512633047156,
+          "EFT_run_lambda": 0.18078512633047156,
+          "matched_mass": -0.0010953385043293024,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.18366920093888867,
+          "EFT_run_lambda": 0.1836692009388887,
+          "matched_mass": -0.001095338504329294,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 8.456776945386935e-18
+        }
+      ]
+    },
+    {
+      "label": "scalar_Yukawa",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": -0.0016036723015099234,
+          "quartic_estimate": -0.0004169195498908792,
+          "mass_error": 2.084597749454396e-08,
+          "quartic_error": 8.184583830662252e-08,
+          "without_light_subtraction": -0.02842202496704848
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": -0.0016036533319983596,
+          "quartic_estimate": -0.0004169924290812418,
+          "mass_error": 1.876465930865588e-09,
+          "quartic_error": 8.966647944043942e-09,
+          "without_light_subtraction": -0.034262568889264274
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": -0.0016036516640325475,
+          "quartic_estimate": -0.0004170002371435201,
+          "mass_error": 2.0850011857176004e-10,
+          "quartic_error": 1.158585665764486e-09,
+          "without_light_subtraction": -0.03959194396909838
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": -0.0016036514742974863,
+          "quartic_estimate": -0.000417001275449247,
+          "mass_error": 1.8765057395216114e-11,
+          "quartic_error": 1.202799388543771e-10,
+          "without_light_subtraction": -0.04543241605042954
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": -0.0016036514576174357,
+          "quartic_estimate": -0.0004170013807418094,
+          "mass_error": 2.0850069037090472e-12,
+          "quartic_error": 1.498737644047263e-11,
+          "without_light_subtraction": -0.050761783427493934
+        }
+      ],
+      "expected_mass": "-0.0016036514555324288349530622295476613388700767619738773001289909875091371401070513",
+      "expected_potential_quartic": "-0.0004170013957291858441072841087382139758908900909615888081999750405901090073646456",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.17499939144903304,
+          "EFT_run_lambda": 0.174999391449033,
+          "matched_mass": -0.001603651455532455,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 2.5153490401663703e-17
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.17934683112404817,
+          "EFT_run_lambda": 0.17934683112404814,
+          "matched_mass": -0.00160365145553243,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.1836942707990633,
+          "EFT_run_lambda": 0.18369427079906328,
+          "matched_mass": -0.001603651455532405,
+          "quartic_error": 2.7755575615628914e-17,
+          "mass_error": 2.4936649967166602e-17
+        }
+      ]
+    },
+    {
+      "label": "different_full_basis",
+      "limits": [
+        {
+          "h": 0.01,
+          "mass_estimate": 0.00536369549267803,
+          "quartic_estimate": 0.00035494703290504337,
+          "mass_error": 1.774735164525217e-08,
+          "quartic_error": 5.9229698951177486e-08,
+          "without_light_subtraction": -0.02807085031552735
+        },
+        {
+          "h": 0.003,
+          "mass_estimate": 0.005363679342350352,
+          "quartic_estimate": 0.0003548942148625215,
+          "mass_error": 1.5970239668813467e-09,
+          "quartic_error": 6.4116564292806645e-09,
+          "without_light_subtraction": -0.034192137413962195
+        },
+        {
+          "h": 0.001,
+          "mass_estimate": 0.005363677922770697,
+          "quartic_estimate": 0.0003548886252187935,
+          "mass_error": 1.7744431260939674e-10,
+          "quartic_error": 8.220127012918581e-10,
+          "without_light_subtraction": -0.03977770372233041
+        },
+        {
+          "h": 0.0003,
+          "mass_estimate": 0.00536367776129634,
+          "quartic_estimate": 0.0003548878879979533,
+          "mass_error": 1.5969954959907897e-11,
+          "quartic_error": 8.479186107614366e-11,
+          "without_light_subtraction": -0.04589893873994357
+        },
+        {
+          "h": 0.0001,
+          "mass_estimate": 0.005363677747100824,
+          "quartic_estimate": 0.0003548878137234851,
+          "mass_error": 1.7744390686174257e-12,
+          "quartic_error": 1.0517392892732007e-11,
+          "without_light_subtraction": -0.05148449953294252
+        }
+      ],
+      "expected_mass": "0.0053636777453263846704130893973746860337693817813983662119799429830606459523651234",
+      "expected_potential_quartic": "0.00035488780320609221900139859018017832272681237909312135010214635826664700559880658",
+      "scale_transport": [
+        {
+          "log_scale_ratio": -0.7,
+          "matched_lambda": 0.1804426739044529,
+          "EFT_run_lambda": 0.1804426739044529,
+          "matched_mass": 0.005363677745326412,
+          "quartic_error": 0.0,
+          "mass_error": 2.5153490401663703e-17
+        },
+        {
+          "log_scale_ratio": 0.0,
+          "matched_lambda": 0.18435700163468272,
+          "EFT_run_lambda": 0.18435700163468272,
+          "matched_mass": 0.005363677745326387,
+          "quartic_error": 0.0,
+          "mass_error": 0.0
+        },
+        {
+          "log_scale_ratio": 0.7,
+          "matched_lambda": 0.18827132936491253,
+          "EFT_run_lambda": 0.18827132936491253,
+          "matched_mass": 0.005363677745326357,
+          "quartic_error": 0.0,
+          "mass_error": 3.0357660829594124e-17
+        }
+      ]
+    }
+  ],
+  "vector_two_point_weights": [
+    {
+      "group": "color",
+      "squared_mass": 0.09,
+      "component_weight": 0.0,
+      "expected_weight": 0.0
+    },
+    {
+      "group": "right",
+      "squared_mass": 0.12249999999999998,
+      "component_weight": 0.061250000000000006,
+      "expected_weight": 0.06124999999999999
+    },
+    {
+      "group": "neutral",
+      "squared_mass": 0.515,
+      "component_weight": 0.01456917475728155,
+      "expected_weight": 0.01456917475728155
+    }
+  ],
+  "two_point_integrals": [
+    {
+      "M2": 2.0,
+      "cubic": 0.2828427124732048,
+      "Yukawa": 0.14,
+      "mu": 1.0,
+      "estimates": [
+        {
+          "fraction": 0.01,
+          "scalar": 0.00012665359049408718,
+          "fermion": -2.3972094324501213e-05
+        },
+        {
+          "fraction": 0.001,
+          "scalar": 0.00012665150066024452,
+          "fermion": -2.3973118322401507e-05
+        },
+        {
+          "fraction": 0.0001,
+          "scalar": 0.00012665147976276974,
+          "fermion": -2.3973128562188258e-05
+        }
+      ],
+      "scalar_exact": 0.00012665147955165571,
+      "fermion_exact": -2.3973128665604642e-05
+    },
+    {
+      "M2": 0.3,
+      "cubic": 0.21,
+      "Yukawa": 0.19,
+      "mu": 0.7,
+      "estimates": [
+        {
+          "fraction": 0.01,
+          "scalar": 0.00046545194507043004,
+          "fermion": 0.00022646416886268876
+        },
+        {
+          "fraction": 0.001,
+          "scalar": 0.0004654442649309755,
+          "fermion": 0.00022646228282579076
+        },
+        {
+          "fraction": 0.0001,
+          "scalar": 0.000465444188132058,
+          "fermion": 0.00022646226396566953
+        }
+      ],
+      "scalar_exact": 0.0004654441873569891,
+      "fermion_exact": 0.00022646226377524966
+    }
+  ],
+  "primary_sources": [
+    "https://arxiv.org/html/2003.05936v2 (11), field-rescaling convention",
+    "https://arxiv.org/html/2107.12133v2 (90), zero-light-mass diagonal-flavor limit"
+  ],
+  "checks": [
+    {
+      "name": "full_three_family-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.786232884146614e-08,
+        2.5079653011923558e-09,
+        2.786670405596947e-10,
+        2.5080084227172976e-11,
+        2.7866765947637735e-12
+      ]
+    },
+    {
+      "name": "full_three_family-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        8.875832861218824e-08,
+        9.71267074483946e-09,
+        1.254038545650818e-09,
+        1.3010964669901393e-10,
+        1.6205180300491566e-11
+      ]
+    },
+    {
+      "name": "full_three_family-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.5839419024672543e-08,
+        2.3257369508985664e-09,
+        2.5841740882759955e-10,
+        2.3257592549114988e-11,
+        2.5841772358342663e-12
+      ]
+    },
+    {
+      "name": "one_family-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        4.707471712859563e-08,
+        5.02167756467198e-09,
+        6.375553803599845e-10,
+        6.523024638376406e-11,
+        8.043726160834752e-12
+      ]
+    },
+    {
+      "name": "one_family-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.584511423066988e-08,
+        2.326131155448769e-09,
+        2.584597638135014e-10,
+        2.326138690887622e-11,
+        2.5845986306159155e-12
+      ]
+    },
+    {
+      "name": "zero_portal-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        1.7443780732030477e-08,
+        1.6938499586974957e-09,
+        2.0076712688005933e-10,
+        1.9307991388713708e-11,
+        2.270946489938645e-12
+      ]
+    },
+    {
+      "name": "zero_portal-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.033210287857032e-08,
+        1.830217260238029e-09,
+        2.0336137782866183e-10,
+        1.8302570732818696e-11,
+        2.033619496819775e-12
+      ]
+    },
+    {
+      "name": "scalar_only-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        8.18567810194775e-08,
+        8.96763286383674e-09,
+        1.1586951021843787e-09,
+        1.2028978814268425e-10,
+        1.4988470805957675e-11
+      ]
+    },
+    {
+      "name": "scalar_only-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.73484542254925e-08,
+        2.4617166305647966e-09,
+        2.735282998165965e-10,
+        2.4617597564775558e-11,
+        2.7352891878745017e-12
+      ]
+    },
+    {
+      "name": "scalar_gauge-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        8.876927132504321e-08,
+        9.71365566463226e-09,
+        1.2541479820707108e-09,
+        1.3011949598732108e-10,
+        1.620627466597661e-11
+      ]
+    },
+    {
+      "name": "scalar_gauge-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        2.084597749454396e-08,
+        1.876465930865588e-09,
+        2.0850011857176004e-10,
+        1.8765057395216114e-11,
+        2.0850069037090472e-12
+      ]
+    },
+    {
+      "name": "scalar_Yukawa-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        8.184583830662252e-08,
+        8.966647944043942e-09,
+        1.158585665764486e-09,
+        1.202799388543771e-10,
+        1.498737644047263e-11
+      ]
+    },
+    {
+      "name": "scalar_Yukawa-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-80-digit-mass-limit",
+      "passed": true,
+      "evidence": [
+        1.774735164525217e-08,
+        1.5970239668813467e-09,
+        1.7744431260939674e-10,
+        1.5969954959907897e-11,
+        1.7744390686174257e-12
+      ]
+    },
+    {
+      "name": "different_full_basis-80-digit-subtracted-quartic-limit",
+      "passed": true,
+      "evidence": [
+        5.9229698951177486e-08,
+        6.4116564292806645e-09,
+        8.220127012918581e-10,
+        8.479186107614366e-11,
+        1.0517392892732007e-11
+      ]
+    },
+    {
+      "name": "different_full_basis-unsubtracted-potential-is-not-a-threshold",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-double-vs-80-digit-coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-fixed-boundary-scale-transport",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-dimensionful-unit-rescaling",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color-heavy-vector-light-generator-weight",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "right-heavy-vector-light-generator-weight",
+      "passed": true,
+      "evidence": 0.061250000000000006
+    },
+    {
+      "name": "neutral-heavy-vector-light-generator-weight",
+      "passed": true,
+      "evidence": 0.01456917475728155
+    },
+    {
+      "name": "component-cubic-for-scalar-kinetic-loop",
+      "passed": true,
+      "evidence": 0.2828427124732048
+    },
+    {
+      "name": "regulated-two-point-quadrature-M-2.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "regulated-two-point-quadrature-M-0.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "singlet-primary-source-kinetic-convention",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "seesaw-primary-source-diagonal-limit",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 50,
+  "checks_total": 50
+}

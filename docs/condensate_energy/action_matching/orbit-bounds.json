@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "name": "color_gram-sharp-lower-bound-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-sharp-upper-bound-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-lower-bound-attained-by-actual-Delta-fields",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-neutral-vacuum-attains-upper-bound",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-negative-rho2-favors-neutral-rankone",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-lower-energy-nonneutral-vacuum-at-fixed-action",
+      "passed": true,
+      "evidence": {
+        "mDelta": "-23/9",
+        "neutral_energy": "-23/18",
+        "other_energy": "-529/225"
+      }
+    },
+    {
+      "name": "spin_gram-sharp-lower-bound-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-sharp-upper-bound-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-lower-bound-attained-by-actual-Delta-fields",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-neutral-vacuum-attains-upper-bound",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-negative-rho2-favors-neutral-rankone",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-lower-energy-nonneutral-vacuum-at-fixed-action",
+      "passed": true,
+      "evidence": {
+        "mDelta": "-23/9",
+        "neutral_energy": "-23/18",
+        "other_energy": "-529/246"
+      }
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "models": {
+    "color_gram": {
+      "ratio_range": [
+        "1/4",
+        "1"
+      ],
+      "coercive_quartic_conditions": [
+        "rho1+rho2>0",
+        "rho1+rho2/4>0"
+      ],
+      "source_neutral_coefficient": "16/9 - rho1",
+      "source_spread_coefficient": "rho1/2 + 4/9",
+      "source_coercive_range": "-8/9<rho1<16/9",
+      "neutral_favored_range_under_source_relation": "8/9<rho1<16/9 (rho2<0); necessary orientation sign, with additional exact tree-level flat modes)",
+      "lower_bound_witness": "D1=I4,D2=D3=0",
+      "negative_mass_counterexample": {
+        "mDelta": "-23/9",
+        "neutral_energy": "-23/18",
+        "competing_energy": "-529/225"
+      }
+    },
+    "spin_gram": {
+      "ratio_range": [
+        "1/3",
+        "1"
+      ],
+      "coercive_quartic_conditions": [
+        "rho1+rho2>0",
+        "rho1+rho2/3>0"
+      ],
+      "source_neutral_coefficient": "16/9 - rho1",
+      "source_spread_coefficient": "rho1/3 + 16/27",
+      "source_coercive_range": "-16/9<rho1<16/9",
+      "neutral_favored_range_under_source_relation": "8/9<rho1<16/9 (rho2<0); necessary orientation sign, with additional exact tree-level flat modes)",
+      "lower_bound_witness": "D1=E11,D2=E22,D3=E33",
+      "negative_mass_counterexample": {
+        "mDelta": "-23/9",
+        "neutral_energy": "-23/18",
+        "competing_energy": "-529/246"
+      }
+    }
+  },
+  "proof": "Each Gram is positive semidefinite; its eigenvalues are nonnegative. Cauchy-Schwarz and pairwise-product identities bound Tr(Gram^2)/(Tr Gram)^2 between 1/n and 1. Explicit Delta matrices attain both endpoints. A linear function of this ratio is positive everywhere iff it is positive at both endpoints.",
+  "limitations": "Coercivity of the quartic and minimization within the pure-Delta two-trace models only. At a zero quartic endpoint, a negative quadratic can make the full potential unbounded. This does not replace boundedness tests for the full 17-quartic action."
+}

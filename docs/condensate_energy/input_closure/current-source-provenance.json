@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/vacuum_theta0.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/current-vacuum_theta0.py",
+    "sha256": "5bf683ecf153e79cdd7e5b936af702281f909dc8e630ccb971fb24210370b157"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_derivation_suite.py",
+    "snapshot": "docs/condensate_energy/input_closure/source-snapshots/current-theta0_derivation_suite.py",
+    "sha256": "4f7fc9af7bd5eafe43cefcd104ac3364ea276c39254294254053463036929d6d"
+  }
+]

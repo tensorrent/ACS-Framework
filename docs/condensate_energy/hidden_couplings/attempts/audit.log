@@ -1,0 +1,38 @@
+archived-basis-identical PASS
+archived-kinetic-metric-identical PASS
+source-hashes PASS
+all-generators-preserve-kinetic-metric PASS
+exact-gauge-pair-[0, 0] PASS
+exact-gauge-pair-[0, 1] PASS
+exact-gauge-pair-[0, 2] PASS
+exact-gauge-pair-[1, 1] PASS
+exact-gauge-pair-[1, 2] PASS
+exact-gauge-pair-[2, 2] PASS
+holomorphic-11-scalar-zero-surface PASS
+holomorphic-11-gauge-source-zero PASS
+holomorphic-11-fermion-box-source-zero PASS
+holomorphic-11-wave-multiplicative PASS
+holomorphic-12-scalar-zero-surface PASS
+holomorphic-12-gauge-source-zero PASS
+holomorphic-12-fermion-box-source-zero PASS
+holomorphic-12-wave-multiplicative PASS
+isotropic-scalar-control PASS
+gauge-breaks-isotropic-ansatz PASS
+four-hidden-norm-gauge-sources-nonzero PASS
+majorana-breaks-isotropic-ansatz PASS
+trace-definitions-have-distinct-exact-expansions PASS
+trace-definitions-agree-on-neutral-vacuum PASS
+delta-hermitian-closure-requires-five-operator-directions PASS
+full-component-beta-0 PASS
+full-component-beta-1 PASS
+full-component-beta-2 PASS
+full-component-beta-3 PASS
+full-component-beta-4 PASS
+full-component-beta-5 PASS
+running-tolerance-convergence PASS
+running-reversal PASS
+running-initial-derivative PASS
+running-holomorphic-zeros-preserved PASS
+running-hidden-norm-splitting PASS
+previous-canonical-artifacts-unchanged PASS
+previous-ancestral-receipts-unchanged PASS

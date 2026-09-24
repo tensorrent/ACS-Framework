@@ -1,0 +1,51 @@
+{
+  "utc": "2026-09-12T15:11:56.260195+00:00",
+  "axiom_print_returncode": 0,
+  "axiom_output": "'LFBound.corr2_le_two' depends on axioms: [propext, Quot.sound]\n'LFBound.neg_two_le_corr2' depends on axioms: [propext, Quot.sound]\n'LFBound.S_le_four' depends on axioms: [propext, Quot.sound]\n'LFBound.star_nonneg' depends on axioms: [propext]\n'LFBound.star_normalised' depends on axioms: [propext]\n'LFBound.star_nosignalling' depends on axioms: [propext]\n'LFBound.star_aoe' depends on axioms: [propext]\n'LFBound.star_is_LF' depends on axioms: [propext]\n'LFBound.star_S_eq_four' depends on axioms: [propext]\n'LFBound.lf_bound_is_four' depends on axioms: [propext, Quot.sound]\n'AxiomIII.commutes_iff_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_not_commutes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_conj_D' depends on axioms: [propext]\n'AxiomIII.centraliser_unimodular' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.trace_two_only_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.phi_infinite_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomIII.axiom_III_clause3_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "mutations": [
+    {
+      "module": "LFBound",
+      "mutation": "wrong_attainment",
+      "old": "theorem star_S_eq_four : S2 star = 8 := by decide",
+      "new": "theorem star_S_eq_four : S2 star = 9 := by decide",
+      "sha256": "6a6d401709e830d6376ce2584fa70bad0b27f2b1f24bd33d19e9968b682e50c7",
+      "returncode": 1,
+      "rejected_with_lean_error": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_attainment.lean:186:43: error: Tactic `decide` proved that the proposition\n  S2 star = 9\nis false\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_attainment.lean:199:29: error: Application type mismatch: The argument\n  star_S_eq_four\nhas type\n  S2 star = 9\nbut is expected to have type\n  S2 star = 8\nin the application\n  \u27e8star_is_LF, star_S_eq_four\u27e9\n",
+      "stderr": ""
+    },
+    {
+      "module": "LFBound",
+      "mutation": "wrong_upper_bound",
+      "old": "theorem S_le_four (hn : NonNeg B) (hs : Normalised B) : S2 B \u2264 8 := by",
+      "new": "theorem S_le_four (hn : NonNeg B) (hs : Normalised B) : S2 B \u2264 7 := by",
+      "sha256": "5a140d45554480e6d62f019d58c8806b88c31aa0dfd21ca3e2e3a6a5eb0c5182",
+      "returncode": 1,
+      "rejected_with_lean_error": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_upper_bound.lean:140:2: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  h \u2265 -2\n  g \u2264 2\n  f \u2264 2\n  e \u2264 2\n  e + f + g - h \u2265 8\nwhere\n e := corr2 B Setting.s2 Setting.s2\n f := corr2 B Setting.s2 Setting.s3\n g := corr2 B Setting.s3 Setting.s2\n h := corr2 B Setting.s3 Setting.s3\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_upper_bound.lean:201:2: error: Type mismatch\n  S_le_four B hn hs\nhas type\n  S2 B \u2264 7\nbut is expected to have type\n  S2 B \u2264 8\n",
+      "stderr": ""
+    },
+    {
+      "module": "AxiomIII",
+      "mutation": "diagonal_phi",
+      "old": "def phi : Mat2 := \u27e81, 2, 0, 1\u27e9",
+      "new": "def phi : Mat2 := \u27e81, 0, 0, 1\u27e9",
+      "sha256": "4776d62c54c62efff4988c1ec99ba546bf59cba16c106f333d4c5606df2eafc5",
+      "returncode": 1,
+      "rejected_with_lean_error": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:95:45: error: unsolved goals\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:100:79: error: unsolved goals\ncase left\n\u22a2 False\n\ncase right\n\u22a2 False\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/diagonal_phi.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": ""
+    },
+    {
+      "module": "AxiomIII",
+      "mutation": "wrong_power",
+      "old": "Mat2.pow phi n = \u27e81, 2 * (n : Int), 0, 1\u27e9",
+      "new": "Mat2.pow phi n = \u27e81, 3 * (n : Int), 0, 1\u27e9",
+      "sha256": "3fdd0eb9b347f92472b1b0e72aa03474dec4d33441eff20bd31dc8fee40f784d",
+      "returncode": 1,
+      "rejected_with_lean_error": true,
+      "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_power.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_power.lean:150:6: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  a \u2265 0\nwhere\n a := \u2191k\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_power.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/mutations/wrong_power.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": ""
+    }
+  ]
+}

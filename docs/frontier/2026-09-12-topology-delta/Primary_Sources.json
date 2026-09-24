@@ -1,0 +1,30 @@
+{
+  "retrieved_utc": "2026-09-12T16:13:10.765689+00:00",
+  "sources": [
+    {
+      "title": "Characteristic classes of Klein bottle bundles",
+      "year": 2017,
+      "url": "https://doi.org/10.1016/j.topol.2017.01.026",
+      "location": "Sections 2 and 6",
+      "supports": "The four-element mapping class group and the antipodal fiber map representing the nontrivial Dehn-twist class.",
+      "access": "Publisher text retrieved through indexed search extracts; direct open returned an internal retrieval error."
+    },
+    {
+      "title": "Faithful actions of automorphisms on the space of orderings of a group",
+      "author": "Thomas Koberda",
+      "year": 2011,
+      "url": "https://nyjm.albany.edu/j/2011/17-33p.pdf",
+      "location": "Section 6, Proposition 6.1, printed page 796",
+      "supports": "The Klein group outer automorphism calculation and an independent non-inner automorphism fixing the fiber generator.",
+      "access": "Primary journal PDF retrieved and relevant text inspected."
+    },
+    {
+      "title": "Algebraic Topology",
+      "author": "Allen Hatcher",
+      "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+      "location": "Example 1.42 and section 3.3, printed page 234",
+      "supports": "The affine Klein-bottle group action, its index-two torus cover, and the orientation cover constructed from local orientations.",
+      "access": "Author-hosted PDF retrieved and relevant text inspected."
+    }
+  ]
+}

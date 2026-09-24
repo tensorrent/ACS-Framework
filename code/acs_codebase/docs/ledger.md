@@ -5,7 +5,7 @@
 Status of every claim in the ACS trilogy as of repository commit.
 
 Categories:
-- **Rigorous** — proved symbolically and/or verified numerically at machine precision
+- **Rigorous** — historical label combining symbolic arguments and numerical checks. It is not, by itself, a proof classification; the evidence and scoped Frontier audits must be consulted.
 - **Conjectural** — explicitly flagged in the papers as open
 - **Disproved** — negative results that delimit model space (first-class)
 
@@ -39,18 +39,18 @@ Categories:
 
 | Claim | Status | Evidence | Module |
 |---|---|---|---|
-| χ(ω) = Σ 1/(ω−γ_k) is meromorphic with simple poles at γ_k | Rigorous | numerical pole structure | `src/paper_b/explicit_formula_resolvent.py` |
+| Finite χ(ω) = Σ 1/(ω−γ_k) on supplied ordinates | Finite identity; numerical pole samples | 50 rounded inputs; no infinite trace or natural-operator construction | `src/paper_b/explicit_formula_resolvent.py` |
 | Tr[(ω−H)^{-1}] = χ(ω) for trivial H = diag(γ_k) | Rigorous (tautological) | direct verification | `src/paper_b/explicit_formula_resolvent.py` |
 | Wronskian satisfies Plücker identity | Rigorous (algebraic triviality) | symbolic + 1000 trials | (Phase 53 script in extras/) |
 | Wronskian fails Leibniz: W(fg,h) − [fW(g,h)+gW(f,h)] = −fgh' | **Disproved as Poisson bracket** | symbolic identity | `src/paper_b/wronskian_leibniz.py` |
-| Renormalized Δ_norm(u) bounded under RH (von Koch 1901) | Rigorous (forward direction) | numerical, 50 zeros, u ∈ [5, 20] | `src/paper_b/renormalized_stability.py` |
-| Off-critical zero would induce exponential divergence | Rigorous | hypothetical σ=0.7 test | `src/paper_b/renormalized_stability.py` |
+| Fixed finite normalized zero sum is bounded | Finite algebraic bound and grid diagnostic | Applies to arbitrary real ordinates; does not establish an RH-wide arithmetic bound | `src/paper_b/renormalized_stability.py` |
+| Added off-critical term has a growing envelope | Toy term and finite-grid diagnostic | Hypothetical σ=0.7; no infinite-sum cancellation/converse theorem | `src/paper_b/renormalized_stability.py` |
 | Berry-Keating leading counting matches RvM | Rigorous | within ~1 zero through T = 143 | `src/paper_b/berry_keating_counting.py` |
 | Berry-Keating exact spectrum = {γ_k} | **Open** | 26+ years (1999) | (Hilbert-Pólya) |
 | Plasma Hamiltonian as foundation | **Disproved** | requires Poisson structure (Leibniz fails) | downgraded to analogy |
 | Plasma resonance phenomenology (analogy only) | Defensible | dispersion peaks, beat zeros verified | (interpretive) |
 | Hilbert-Pólya operator construction | **Open** | 100+ years (Hilbert/Pólya 1914) | (open) |
-| Converse: bounded Δ_norm ⟹ RH | **Conjectural** | requires technical hypotheses on truncation | (open) |
+| Bridge from finite zero sums to a full arithmetic RH criterion | **Open** | Requires correct normalization, summation conventions, and truncation control | (open) |
 
 ---
 
@@ -79,7 +79,7 @@ Categories:
 | a-theorem (4D) as inversion-arc forward instance | Cited (Komargodski-Schwimmer 2011) | not re-derived here | (literature) |
 | Post-attractor ΔI < 0 (sign flip past IR) | **Conjectural** | structural argument, not proved | (open) |
 | "3-cap in AdS/CFT entanglement hierarchies" | **Conjectural / research direction** | bridge to AdS/CFT not constructed | (open) |
-| von Koch (1901) bound restated as ACS stability | Cited and reframed | not a new theorem | (interpretive) |
+| von Koch-type RH estimate in log coordinates | Source-backed O(u²) bound for full normalized arithmetic error | Earlier identification with the fixed finite O(1) bound is corrected | Schoenfeld (1976), Theorem 10, (6.2) |
 
 ---
 
@@ -90,7 +90,9 @@ $ python -m pytest tests/ -v
 ======================= 42 passed in 4.08s =======================
 ```
 
-All tests reproduce within machine tolerance using `numpy>=1.24`, `scipy>=1.10`, `sympy>=1.12`. Random seed `20260423` is canonical.
+The block above is a historical run. The September 2026 source audit freshly replayed all 42 original cases and added four regression cases for artificial exponential overflow. A passing finite test does not elevate its surrounding interpretation to a theorem. Runtime and outputs are retained in the [source/data checkpoint](../../../docs/frontier/2026-09-12-source-delta/README.md).
+
+The suite uses `numpy>=1.24`, `scipy>=1.10`, `sympy>=1.12`. Random seed `20260423` is canonical.
 
 ---
 
@@ -121,4 +123,8 @@ These are durable theorems-by-falsification: they tell future model-builders whi
 3. FeynRules UFO export (Phase D1) — needed for predictive scattering work
 4. Hilbert-Pólya construction — exact spectrum match remains 100+ year open problem
 5. Post-attractor ΔI < 0 (Paper C) — structural conjecture, not proved
-6. Converse direction of renormalized boundedness (Paper B) — full RH equivalence open
+6. Finite-sum to arithmetic RH bridge (Paper B) — correct normalization, truncation control, and converse hypotheses remain open
+
+## September 2026 source correction
+
+For the full arithmetic quantity `(psi(exp(u))-exp(u))/exp(u/2)`, RH gives an O(u²) estimate. [Schoenfeld (1976), Theorem 10, (6.2)](https://www.ams.org/mcom/1976-30-134/S0025-5718-1976-0457374-X/S0025-5718-1976-0457374-X.pdf) supplies `u²/(8*pi)` above the stated threshold. The code evaluates a fixed finite sum, bounded by the sum of its coefficient magnitudes for every real ordinate list. Its earlier description as that full RH bound was unjustified. Original sources and the successful baseline replay are preserved in the source/data checkpoint; other historical ledger entries are not newly validated by this correction.

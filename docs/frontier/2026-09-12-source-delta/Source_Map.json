@@ -1,0 +1,248 @@
+{
+  "baseline_commit": "f75fa752d5b973ca3d4f6ca7e4641c75570e7d26",
+  "tracked_paths_sha256": "ad0dabf841d5913abbc4015f66ffa5f0e85d069f10e17f34092225fa871b3f49",
+  "areas": [
+    {
+      "area": "canonical_paper_a",
+      "related_branches": [
+        "S01",
+        "S02",
+        "S04",
+        "F01",
+        "F03"
+      ],
+      "sources": [
+        {
+          "path": "code/acs_codebase/src/paper_a/branch_a_parameters.py",
+          "baseline_sha256": "1c6bf9966e56eed3df7e368a69b569922de36d1d17c2016e2c62cbaa483bc245"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_a/branch_a_vacuum.py",
+          "baseline_sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_a/betac_tan_beta.py",
+          "baseline_sha256": "720579a4c793ea965520a3b782dba80ebf334438e3006e6fa33e7b63e5c681b2"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_a/yukawa_no_go.py",
+          "baseline_sha256": "77b2cabc645e19613b205ea9b1ac5ebb5235385472cc791985a7c9d0d8167233"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_a/theta13_obstruction.py",
+          "baseline_sha256": "a2da96f3a7db5ef5e1487fb9bf8ba0df4c352a9a61919716c26d3f08c05ab29a"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_a/tm1_pmns.py",
+          "baseline_sha256": "04623f7adb70b76e528081321e1fb39a10d01d63eb0394638b7352888a6a88dd"
+        }
+      ],
+      "assessment": "Canonical suite replayed; model/pruning and phenomenological interpretations remain subject to the more specific Frontier branch audits."
+    },
+    {
+      "area": "canonical_paper_b",
+      "related_branches": [
+        "R01",
+        "R04",
+        "R05",
+        "R06",
+        "R11"
+      ],
+      "sources": [
+        {
+          "path": "code/acs_codebase/src/paper_b/explicit_formula_resolvent.py",
+          "baseline_sha256": "5f91823e15a9434624cc63b85d94361688721d1682ba20d0a1842a0d7de3e3e5"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_b/wronskian_leibniz.py",
+          "baseline_sha256": "abe24f4cf56c318c26053f66c153415660bfd2b425897628e5875b21452c698b"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_b/renormalized_stability.py",
+          "baseline_sha256": "e1bb7d0da008cc35f5739aaf52fc3509270c97959021e5e19dd5f1f303864bb8"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_b/berry_keating_counting.py",
+          "baseline_sha256": "108620a012750febc651cfa3ad1affa7568f329e5401feeb97b9876e32c2e2db"
+        }
+      ],
+      "assessment": "Uses the 50 inline rounded ordinates. Finite diagonal identity and finite-grid tests do not establish an infinite trace, a natural operator, or the arithmetic RH normalization."
+    },
+    {
+      "area": "canonical_paper_c",
+      "related_branches": [
+        "A01",
+        "A03",
+        "A07",
+        "I01",
+        "I04"
+      ],
+      "sources": [
+        {
+          "path": "code/acs_codebase/src/paper_c/theorem_c.py",
+          "baseline_sha256": "1490f518b97b080ec91ab87af03ffd6935f53102af01d29abd45a6dd81c8b12d"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_c/killing_orthogonality.py",
+          "baseline_sha256": "343c3d77a7bcc3930c87448cd6057cad96cb292cefa96b773d9930dcb1d78be9"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_c/orthogonal_complement_probe.py",
+          "baseline_sha256": "243e20f4b1fb0e1b00aa9947a0b3d412e45f5b5bd6b1b8591125ef1fc125a672"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_c/spectral_taxonomy.py",
+          "baseline_sha256": "c51d1371578adc965565fa3602a7a01b729c05e6ef94753304b863934bad7cb6"
+        },
+        {
+          "path": "code/acs_codebase/src/paper_c/er_epr_algebraic.py",
+          "baseline_sha256": "f7f6c273b21c5265753fe191055a1f50b7420a494a982b36576708695ce2208c"
+        }
+      ],
+      "assessment": "Canonical tests replayed; random numerical trials and named modules are not by themselves proofs of surrounding physical/information-theoretic interpretations."
+    },
+    {
+      "area": "hp_knife_suite",
+      "related_branches": [
+        "P05",
+        "P06",
+        "R06",
+        "R07",
+        "R10",
+        "R11"
+      ],
+      "sources": [
+        {
+          "path": "code/hp_knife_suite/hp_knife.py",
+          "baseline_sha256": "334002541b32bb05419410f96c6a592d3ed5523c60f5e5b5573d16ba9ba88216"
+        },
+        {
+          "path": "code/hp_knife_suite/hp_twist_hardened.py",
+          "baseline_sha256": "f016aef0be6af2e45a4a3a69a6011eb2a193b344ea2edf7d68c739dea0e3435f"
+        },
+        {
+          "path": "code/hp_knife_suite/data_zeros/generate_more_lzeros.py",
+          "baseline_sha256": "0a5f3ec048edc31485c3fb270529d1efcd20a03bcdd8ede008a143c79a2858f9"
+        }
+      ],
+      "assessment": "Source and dataset consumers inspected. This pass certifies selected Riemann counts and scalar errors, not every spectral witness or L-function root/completeness claim."
+    },
+    {
+      "area": "nuclear_overlap",
+      "related_branches": [
+        "N01",
+        "N02",
+        "N03",
+        "N04"
+      ],
+      "sources": [
+        {
+          "path": "code/palpha_overlap/isotope_catalog.py",
+          "baseline_sha256": "aa0ee6475ef534eb50a573e49d0f8255d8d3cfbf2e87715bec688f32c4ce6bd7"
+        },
+        {
+          "path": "code/palpha_overlap/palpha_overlap.py",
+          "baseline_sha256": "f3b520d0a12bc3eac01a23d8cb0cb9c8663c785529f1f9f6342caa19b509769e"
+        },
+        {
+          "path": "code/palpha_overlap/palpha_overlap_throat.py",
+          "baseline_sha256": "9a7629d36b0ae4411f2e728503117b9c02f5fcdd3462879d8f57d62f647f3c76"
+        }
+      ],
+      "assessment": "Source and embedded isotope catalog are accessible; external input provenance and predictive-value audits remain required."
+    },
+    {
+      "area": "finite_geometry",
+      "related_branches": [
+        "M01",
+        "M02"
+      ],
+      "sources": [
+        {
+          "path": "code/framed_unknot/framing_transformer.py",
+          "baseline_sha256": "2af47de31c02d100b00457315b91eb21e4c840f3480cb35ca126968568083d70"
+        },
+        {
+          "path": "code/framed_unknot/moment_ratio.py",
+          "baseline_sha256": "0b7639d34a3a9751393d06a6d9a80fa761668d009885148371b61c61081ba08a"
+        },
+        {
+          "path": "code/capacitance_ribbon/ribbon_capacitance.py",
+          "baseline_sha256": "0ebd9983eb5e573a785dee29689996ddf21bb4093626223dfd3f74c1e57d6008"
+        }
+      ],
+      "assessment": "Source mapped; no new geometry or physical-prediction replay in this pass."
+    },
+    {
+      "area": "training",
+      "related_branches": [
+        "K02",
+        "K05"
+      ],
+      "sources": [
+        {
+          "path": "harness/training/train_unified_phase1.py",
+          "baseline_sha256": "81b9ed6631f731394de5f171da8200047bf81d7906a04a15123b00004a06c348"
+        },
+        {
+          "path": "harness/training/run_phase1_tune_batch.sh",
+          "baseline_sha256": "07987f4602985687c74a9940dc6f55aed0ada630cb025ecbfe3a3e735377f086"
+        },
+        {
+          "path": "harness/training/run_phase1_phase_d_telemetry_sweep.sh",
+          "baseline_sha256": "48b7d4568f27ac707777806c035e36e985ddbafb6ff686224b2eaf909351f6f4"
+        }
+      ],
+      "assessment": "NumPy training source is present. Named corpora, reference reports, Merkle-memory file, and comparison helper are absent; this does not reproduce private speed or deployment claims."
+    },
+    {
+      "area": "yang_mills_comparison",
+      "related_branches": [
+        "K03"
+      ],
+      "sources": [
+        {
+          "path": "scripts/ym_comparison_checker.py",
+          "baseline_sha256": "7cb1ceab4b2c0a15b5b2d4ea4837c9301cb35c52d8645063aec9e725c75c9906"
+        },
+        {
+          "path": "docs/PARALLEL_YM_SEALED_20260704.md",
+          "baseline_sha256": "6661f80153cdaf5afa1098d37c202836108fc44ba8bd6d2e84a7a7c3bf0ac13e"
+        }
+      ],
+      "assessment": "A keyword-based comparison instrument and sealed prediction document are present. An identified external proof and mathematical verification remain separate inputs."
+    }
+  ],
+  "missing_training_inputs": [
+    {
+      "path": "harness/fixtures/training/mmlu_train.jsonl",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/fixtures/training/mmlu_test.jsonl",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/fixtures/training/gsm8k_train.jsonl",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/fixtures/training/gsm8k_test.jsonl",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/reports/upg/upg_merkle_tensor_scroll.current.json",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/reports/training/gsm_merged_telemetry_x50.jsonl",
+      "exists_at_audited_revision": false
+    },
+    {
+      "path": "harness/training/compare_runs.py",
+      "exists_at_audited_revision": false
+    }
+  ],
+  "index_availability": "GitNexus list_repos returned two other repositories and no ACS index; direct file/AST inspection used.",
+  "coverage_boundary": "This is a map of inspected implementation areas and an inventory of selected text/source files, not a semantic audit of all 113 inherited research branches."
+}

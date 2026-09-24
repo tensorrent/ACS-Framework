@@ -1,0 +1,70 @@
+{
+  "status": "complete canonical scalar calculator and qualified counterexample; ACS coefficient selection remains open",
+  "checks_passed": 33,
+  "fields_real": 68,
+  "quartics": 17,
+  "quadratics": 4,
+  "neutral_quartic_rank": 11,
+  "neutral_invisible_quartics": 6,
+  "physical_modes": 56,
+  "gauge_directions": 12,
+  "witness_spectra": {
+    "angular-positive": {
+      "positive": 56,
+      "negative": 0,
+      "zero": 0,
+      "minimum_mass_squared": 0.04321111111111051,
+      "tadpole_infinity_norm": 5.224050407306143e-16,
+      "phase_derivative": 0.0
+    },
+    "angular-zero": {
+      "positive": 44,
+      "negative": 0,
+      "zero": 12,
+      "minimum_mass_squared": 2.2232723818477215e-16,
+      "tadpole_infinity_norm": 5.224050407306143e-16,
+      "phase_derivative": 0.0
+    },
+    "angular-negative": {
+      "positive": 6,
+      "negative": 50,
+      "zero": 0,
+      "minimum_mass_squared": -0.3763555555555563,
+      "tadpole_infinity_norm": 5.224050407306143e-16,
+      "phase_derivative": 0.0
+    },
+    "phase-tadpole": {
+      "positive": 56,
+      "negative": 0,
+      "zero": 0,
+      "minimum_mass_squared": 0.043211111111111145,
+      "tadpole_infinity_norm": 0.007071067811865473,
+      "phase_derivative": 0.0019999999999999996
+    },
+    "phase-balanced": {
+      "positive": 56,
+      "negative": 0,
+      "zero": 0,
+      "minimum_mass_squared": 0.04321111111111119,
+      "tadpole_infinity_norm": 5.224050407306143e-16,
+      "phase_derivative": -4.672188561964201e-19
+    }
+  },
+  "exact_transverse_mass": "5*k/3 + 4/5625",
+  "neutral_mass_squared": [
+    0.06992729159768157,
+    0.19361111111111132,
+    0.7264371438252216,
+    4.001691120132655
+  ],
+  "original_verification_failure": [
+    "neutral-hessian-unchanged-by-hidden-coefficients"
+  ],
+  "scope": "Chosen bounded witness potentials; not a physical spectrum prediction, global minimum theorem or quantum stability proof.",
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa",
+    "docs/condensate_energy/gauge_completion/receipt.json": "e0c9ad942c072c042bd0ab0ef650b54836b6c66fbccdd8deb592b3ff8714b3a7"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "checks_total": 33,
+  "checks_passed": 33,
+  "checks": [
+    {
+      "name": "quark source variants differ only outside the executable syntax",
+      "passed": true
+    },
+    {
+      "name": "neutrino honest variant has identical syntax to audited source",
+      "passed": true
+    },
+    {
+      "name": "chirality map preserves every real Frobenius norm",
+      "passed": true
+    },
+    {
+      "name": "symmetric-antisymmetric bracket is symmetric",
+      "passed": true
+    },
+    {
+      "name": "symmetric-symmetric bracket is antisymmetric",
+      "passed": true
+    },
+    {
+      "name": "chirality map is not a Lie homomorphism of the split algebra",
+      "passed": true
+    },
+    {
+      "name": "projection counterfamily uses unit-norm generators",
+      "passed": true
+    },
+    {
+      "name": "normalized projection ratio varies with direction",
+      "passed": true
+    },
+    {
+      "name": "lepton squared projection fraction is three quarters",
+      "passed": true
+    },
+    {
+      "name": "color squared projection fraction is one quarter",
+      "passed": true
+    },
+    {
+      "name": "zero internal charge does not imply zero spin rotation",
+      "passed": true
+    },
+    {
+      "name": "exact-neutrino displayed result has a factor-1000 conversion error",
+      "passed": true
+    },
+    {
+      "name": "v2 stated 0.147 eV is incompatible with its inputs",
+      "passed": true
+    },
+    {
+      "name": "Koide cone angle has cosine squared one half",
+      "passed": true
+    },
+    {
+      "name": "proxy quadratic sign depends on common generator normalization",
+      "passed": true
+    },
+    {
+      "name": "proxy quartic has sixth normalization power",
+      "passed": true
+    },
+    {
+      "name": "same generator rays give opposite proxy quadratic signs",
+      "passed": true
+    },
+    {
+      "name": "canonical radial curvature is four times quadratic magnitude",
+      "passed": true
+    },
+    {
+      "name": "source alpha slope is half the log-mu QCD coefficient",
+      "passed": true
+    },
+    {
+      "name": "source mass exponent is half the canonical one-loop exponent",
+      "passed": true
+    },
+    {
+      "name": "common-scale QCD rescaling preserves Koide exactly",
+      "passed": true
+    },
+    {
+      "name": "actual source QCD scan is constant once all inputs are above threshold",
+      "passed": true
+    },
+    {
+      "name": "radial vacuum inverse returns its inserted target",
+      "passed": true
+    },
+    {
+      "name": "printed bar4 tensor 10 tensor 4 contains no invariant under the center",
+      "passed": true
+    },
+    {
+      "name": "canonical graviton cubic operator needs negative-dimension coupling",
+      "passed": true
+    },
+    {
+      "name": "source replay neutrino_exact",
+      "passed": true
+    },
+    {
+      "name": "source replay neutrino_seesaw",
+      "passed": true
+    },
+    {
+      "name": "source replay neutrino_seesaw_v2",
+      "passed": true
+    },
+    {
+      "name": "source replay quark_koide_gut",
+      "passed": true
+    },
+    {
+      "name": "source replay theta0_cabibbo",
+      "passed": true
+    },
+    {
+      "name": "source replay higgs_potential",
+      "passed": true
+    },
+    {
+      "name": "source replay task2_lagrangian",
+      "passed": true
+    },
+    {
+      "name": "source replay branch_a_vacuum",
+      "passed": true
+    }
+  ],
+  "normalized_projection_ratio": "sqrt(2)*cos(theta)",
+  "projection_ratio_range_on_quarter_turn": [
+    0,
+    1.4142135623730951
+  ],
+  "neutrino_mass_correct_eV": 48.9852749421456,
+  "neutrino_mass_source_eV": 0.0489852749421456,
+  "neutrino_v2_correct_eV": 146.657,
+  "proxy": {
+    "quadratic": "-8*a**4 + 4*a**2",
+    "quartic": "64*a**6",
+    "canonical_curvature": "4*mu"
+  },
+  "source_qcd_scan": [
+    {
+      "scale": 1000.0,
+      "Q_up": 0.8519103135972333,
+      "Q_down": 0.7331482016684394
+    },
+    {
+      "scale": 1000000.0,
+      "Q_up": 0.8519103135972336,
+      "Q_down": 0.7331482016684394
+    },
+    {
+      "scale": 10000000000.0,
+      "Q_up": 0.8519103135972336,
+      "Q_down": 0.7331482016684395
+    },
+    {
+      "scale": 1e+16,
+      "Q_up": 0.8519103135972331,
+      "Q_down": 0.7331482016684394
+    }
+  ],
+  "replays": [
+    {
+      "source": "neutrino_exact",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "03eb9eeafe1b5b0dfc3e965900e368a14607abd0b6294b56c39ff542b06a78bd"
+    },
+    {
+      "source": "neutrino_seesaw",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "8ad18c7a07e965b70d0584069966700036fef05e63d7c4b0eafe9abc7edfd9c3"
+    },
+    {
+      "source": "neutrino_seesaw_v2",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "72bb4a70505f3c309807f7171a2e6d9c069fbfb26c40fa9582438ac163a9e634"
+    },
+    {
+      "source": "quark_koide_gut",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "b4d186ebfa4e9ae017eb584db4b3a182e0da166bae00f43b5cb90e8d7e94c04b"
+    },
+    {
+      "source": "theta0_cabibbo",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "f44dcd49db9f194bf51362c005704b3443c554dfeb6ee4a68157578de0f246a0"
+    },
+    {
+      "source": "higgs_potential",
+      "returncode": 0,
+      "plot_path_replacements": 1,
+      "replay_sha256": "e0ddeee3d9be771ef5ba1b6f90087b87f74639393b87b61372bea2b6a41a916d"
+    },
+    {
+      "source": "task2_lagrangian",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7"
+    },
+    {
+      "source": "branch_a_vacuum",
+      "returncode": 0,
+      "plot_path_replacements": 0,
+      "replay_sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f"
+    }
+  ],
+  "qualifications": [
+    "Frobenius identities do not identify an action or a physical Yukawa map",
+    "The spin counterexample separates internal gauge neutrality from a spacetime representation",
+    "QCD homogeneity applies to consistent common-scale masses; mixed input schemes are not a precision dataset",
+    "The source gravity power-counting assertion is not a proof of quantum renormalizability"
+  ]
+}

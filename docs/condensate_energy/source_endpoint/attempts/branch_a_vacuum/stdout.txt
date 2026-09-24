@@ -1,0 +1,31 @@
+Paper A §5 — Branch A vacuum analysis (alpha_2 = 0)
+============================================================
+
+Locked couplings:
+  lam_phi = 2 sqrt(3)/27 = 0.128300
+  rho_1 (test) = 0.5
+  rho_2 = 16/9 - 2 rho_1 = 0.7778
+  rho_tot = 1.2778
+
+Stability bound: |alpha_1| < 0.8098
+
+ alpha_1     det(M)    v^2 (GeV^2)    v_R^2 (GeV^2)   stable
+   -0.50     0.4058      6.052e+04        1.000e+30     True
+   -0.30     0.5658      6.052e+04        1.000e+30     True
+   -0.10     0.6458      6.052e+04        1.000e+30     True
+    0.00     0.6558      6.052e+04        1.000e+30     True
+    0.10     0.6458      6.052e+04        1.000e+30     True
+    0.30     0.5658      6.052e+04        1.000e+30     True
+    0.50     0.4058      6.052e+04        1.000e+30     True
+    0.70     0.1658      6.052e+04        1.000e+30     True
+    0.80     0.0158      6.052e+04        1.000e+30     True
+
+Custodial SU(2) breaking (one-loop heavy):
+  Delta rho estimate: 3.76e-29
+  Experimental bound: 2.00e-04
+  Safety factor: 5.32e+24
+
+lam_eff consistency:
+  lam_eff (ACS): 0.12830
+  lam_SM:       0.12938
+  Fractional difference: 0.0084

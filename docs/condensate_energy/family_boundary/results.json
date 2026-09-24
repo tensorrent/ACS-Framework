@@ -1,0 +1,461 @@
+{
+  "checks_total": 52,
+  "checks_passed": 52,
+  "checks": [
+    {
+      "name": "exact cubic identity retained",
+      "passed": true
+    },
+    {
+      "name": "adjoint rank is six",
+      "passed": true
+    },
+    {
+      "name": "adjoint kernel has dimension nine",
+      "passed": true
+    },
+    {
+      "name": "three eigenvalues have multiplicities nine three three",
+      "passed": true
+    },
+    {
+      "name": "no quadratic annihilating polynomial",
+      "passed": true
+    },
+    {
+      "name": "source symmetric seed has cyclic dimension two",
+      "passed": true
+    },
+    {
+      "name": "generic seed with all spectral components has cyclic dimension three",
+      "passed": true
+    },
+    {
+      "name": "claimed three directions transform into one another under color",
+      "passed": true
+    },
+    {
+      "name": "two-block splitting gives three eigenvalues for n=1",
+      "passed": true
+    },
+    {
+      "name": "two-block splitting gives three eigenvalues for n=2",
+      "passed": true
+    },
+    {
+      "name": "two-block splitting gives three eigenvalues for n=3",
+      "passed": true
+    },
+    {
+      "name": "two-block splitting gives three eigenvalues for n=4",
+      "passed": true
+    },
+    {
+      "name": "same gauge action permits explicit family multiplicity 1",
+      "passed": true
+    },
+    {
+      "name": "same gauge action permits explicit family multiplicity 2",
+      "passed": true
+    },
+    {
+      "name": "same gauge action permits explicit family multiplicity 4",
+      "passed": true
+    },
+    {
+      "name": "source up mass prefactor cancels tan beta exactly",
+      "passed": true
+    },
+    {
+      "name": "source down mass prefactor cancels tan beta exactly",
+      "passed": true
+    },
+    {
+      "name": "source mass matrices are exactly proportional for every phase input",
+      "passed": true
+    },
+    {
+      "name": "implemented CKM scan stays aligned at (0.1, 0.1)",
+      "passed": true
+    },
+    {
+      "name": "implemented generation ratios reproduce inserted normalization (0.1, 0.1)",
+      "passed": true
+    },
+    {
+      "name": "implemented CKM scan stays aligned at (0.5, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "implemented generation ratios reproduce inserted normalization (0.5, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "implemented CKM scan stays aligned at (4.0, 1.3)",
+      "passed": true
+    },
+    {
+      "name": "implemented generation ratios reproduce inserted normalization (4.0, 1.3)",
+      "passed": true
+    },
+    {
+      "name": "implemented CKM scan stays aligned at (100.0, 3.0)",
+      "passed": true
+    },
+    {
+      "name": "implemented generation ratios reproduce inserted normalization (100.0, 3.0)",
+      "passed": true
+    },
+    {
+      "name": "QFP source mass ratio remains an inserted datum at 1.0",
+      "passed": true
+    },
+    {
+      "name": "QFP source mass ratio remains an inserted datum at 10.0",
+      "passed": true
+    },
+    {
+      "name": "QFP source mass ratio remains an inserted datum at 60.0",
+      "passed": true
+    },
+    {
+      "name": "equal positive VEV mass identity retained",
+      "passed": true
+    },
+    {
+      "name": "equal negative VEVs give opposite masses of equal singular values",
+      "passed": true
+    },
+    {
+      "name": "explicit product-of-traces term has twice the final Phase51 coefficient",
+      "passed": true
+    },
+    {
+      "name": "full stationary unequal-VEV witness at beta=0.2617993877991494",
+      "passed": true
+    },
+    {
+      "name": "all 56 physical scalar directions positive at beta=0.2617993877991494",
+      "passed": true
+    },
+    {
+      "name": "gauge Ward identity at beta=0.2617993877991494",
+      "passed": true
+    },
+    {
+      "name": "independent neutral angular curvature is positive at beta=0.2617993877991494",
+      "passed": true
+    },
+    {
+      "name": "full stationary unequal-VEV witness at beta=0.39269908169872414",
+      "passed": true
+    },
+    {
+      "name": "all 56 physical scalar directions positive at beta=0.39269908169872414",
+      "passed": true
+    },
+    {
+      "name": "gauge Ward identity at beta=0.39269908169872414",
+      "passed": true
+    },
+    {
+      "name": "independent neutral angular curvature is positive at beta=0.39269908169872414",
+      "passed": true
+    },
+    {
+      "name": "full stationary unequal-VEV witness at beta=0.5235987755982988",
+      "passed": true
+    },
+    {
+      "name": "all 56 physical scalar directions positive at beta=0.5235987755982988",
+      "passed": true
+    },
+    {
+      "name": "gauge Ward identity at beta=0.5235987755982988",
+      "passed": true
+    },
+    {
+      "name": "independent neutral angular curvature is positive at beta=0.5235987755982988",
+      "passed": true
+    },
+    {
+      "name": "all witness quartics have a positive analytic lower bound",
+      "passed": true
+    },
+    {
+      "name": "generic two-Yukawa loops generate a determinant-dependent Phi quartic",
+      "passed": true
+    },
+    {
+      "name": "generic Majorana plus two-Yukawa loops generate a determinant portal",
+      "passed": true
+    },
+    {
+      "name": "unchanged source replay task_C_rigorous",
+      "passed": true
+    },
+    {
+      "name": "unchanged source replay phase51_tanbeta",
+      "passed": true
+    },
+    {
+      "name": "unchanged source replay phase52_yukawa",
+      "passed": true
+    },
+    {
+      "name": "unchanged source replay ps_yukawa_full",
+      "passed": true
+    },
+    {
+      "name": "unchanged source replay phase7_qfp_yukawa",
+      "passed": true
+    }
+  ],
+  "adjoint": {
+    "rank": 6,
+    "nullity": 9,
+    "minimal_polynomial": "t(t-4/3)(t+4/3)",
+    "multiplicities": {
+      "0": 9,
+      "4/3": 3,
+      "-4/3": 3
+    },
+    "cyclic_dimensions": [
+      2,
+      3
+    ]
+  },
+  "splitting_countercontrols": [
+    {
+      "color_block": 1,
+      "algebra_dimension": 3,
+      "zero": 1,
+      "positive": 1
+    },
+    {
+      "color_block": 2,
+      "algebra_dimension": 8,
+      "zero": 4,
+      "positive": 2
+    },
+    {
+      "color_block": 3,
+      "algebra_dimension": 15,
+      "zero": 9,
+      "positive": 3
+    },
+    {
+      "color_block": 4,
+      "algebra_dimension": 24,
+      "zero": 16,
+      "positive": 4
+    }
+  ],
+  "independent_family_replicas": [
+    {
+      "families": 1,
+      "weyl_matrix_shape": [
+        16,
+        16
+      ]
+    },
+    {
+      "families": 2,
+      "weyl_matrix_shape": [
+        32,
+        32
+      ]
+    },
+    {
+      "families": 4,
+      "weyl_matrix_shape": [
+        64,
+        64
+      ]
+    }
+  ],
+  "source_ckm_scan": [
+    {
+      "tan_beta": 0.1,
+      "phase_scale": 0.1,
+      "mixing_residual": 6.780521932479436e-11,
+      "mass_ratios": [
+        41.26794258373195,
+        41.2679425837312,
+        41.26794258373209
+      ]
+    },
+    {
+      "tan_beta": 0.5,
+      "phase_scale": 1.0,
+      "mixing_residual": 1.922554580947158e-11,
+      "mass_ratios": [
+        41.267942583732065,
+        41.267942583731745,
+        41.2679425837321
+      ]
+    },
+    {
+      "tan_beta": 4.0,
+      "phase_scale": 1.3,
+      "mixing_residual": 1.6538037064681006e-11,
+      "mass_ratios": [
+        41.26794258373208,
+        41.26794258373246,
+        41.26794258373208
+      ]
+    },
+    {
+      "tan_beta": 100.0,
+      "phase_scale": 3.0,
+      "mixing_residual": 1.927607474453459e-11,
+      "mass_ratios": [
+        41.267942583732236,
+        41.26794258373163,
+        41.26794258373209
+      ]
+    }
+  ],
+  "qfp_inserted_mass_ratios": [
+    {
+      "tan_beta": 1.0,
+      "reconstructed_mass_ratio": 41.267942583732065
+    },
+    {
+      "tan_beta": 10.0,
+      "reconstructed_mass_ratio": 41.26794258373206
+    },
+    {
+      "tan_beta": 60.0,
+      "reconstructed_mass_ratio": 41.26794258373205
+    }
+  ],
+  "neutral_vacua": [
+    {
+      "beta": 0.2617993877991494,
+      "tan_beta": 0.2679491924311227,
+      "quartics": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2,
+        1.0,
+        1.2,
+        1.2,
+        1.2,
+        0.0,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.02
+      ],
+      "quadratic_coefficients": [
+        -0.26845299461620753,
+        -0.011547005383792512,
+        0.0,
+        -2.0082205771365937
+      ],
+      "minimum_physical_mass_squared": 0.023091742618697567,
+      "physical_positive": 56,
+      "tadpole_norm": 2.3560188173768237e-16,
+      "angular_curvature": 0.004156921938165305
+    },
+    {
+      "beta": 0.39269908169872414,
+      "tan_beta": 0.4142135623730951,
+      "quartics": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2,
+        1.0,
+        1.2,
+        1.2,
+        1.2,
+        0.0,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.02
+      ],
+      "quadratic_coefficients": [
+        -0.2658578643762691,
+        -0.019999999999999997,
+        0.0,
+        -2.008363603896932
+      ],
+      "minimum_physical_mass_squared": 0.02827972848676033,
+      "physical_positive": 56,
+      "tadpole_norm": 7.365264060026987e-16,
+      "angular_curvature": 0.005091168824543142
+    },
+    {
+      "beta": 0.5235987755982988,
+      "tan_beta": 0.5773502691896256,
+      "quartics": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.2,
+        1.0,
+        1.2,
+        1.2,
+        1.2,
+        0.0,
+        0.0,
+        0.1,
+        0.0,
+        0.0,
+        0.02
+      ],
+      "quadratic_coefficients": [
+        -0.26,
+        -0.03464101615137754,
+        0.0,
+        -2.00855
+      ],
+      "minimum_physical_mass_squared": 0.0399931643041753,
+      "physical_positive": 56,
+      "tadpole_norm": 5.836291408031537e-16,
+      "angular_curvature": 0.007199999999999999
+    }
+  ],
+  "generated_quartic_beta_times_32pi2": [
+    -0.02720000000000001,
+    0.003200000000000001,
+    -0.025600000000000008,
+    0.0,
+    -0.06400000000000002,
+    0.0,
+    0.0324,
+    -0.0648,
+    -0.0162,
+    0.0324,
+    0.0,
+    0.0,
+    0.0,
+    -0.036,
+    -0.05759999999999999,
+    0.0,
+    -0.043199999999999995
+  ],
+  "status": "Family count is not derived by the cubic identity; the archived CKM scan is aligned; complete-action vacuum alignment remains an input.",
+  "limitations": [
+    "No universal classification of flavor mechanisms",
+    "Witness actions use chosen coefficients, not physical boundary values",
+    "Strict local minima and quartic boundedness do not certify global minima",
+    "The loop-source check reuses the previously independently verified complete beta tables",
+    "No full finite one-loop minimization at arbitrary mixed couplings is claimed"
+  ]
+}

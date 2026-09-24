@@ -2,6 +2,8 @@
 
 # Asymmetric Codependent Systems (ACS) — Technical Whitepaper
 
+**Status amendment, 24 September 2026.** This is a historical overview. The [publication update](publication/2026-09-24/README.md) governs its physical interpretation: the complete scalar action retains undetermined coefficients, vacuum and physical scale. Framing does not derive `g=2`; balanced triplet expectation is not a singlet; the stated torsion-squared term is algebraic. The two new papers give the forward calculations, counterexamples and remaining inputs. The overview's cross-domain equations require their stated domains and maps; they are not universal identities between unlike objects.
+
 This document provides a consolidated mathematical and physical specification of the Asymmetric Codependent Systems (ACS) framework. It outlines the algebraic foundations of the gauge sector, the spectral positional duality of L-functions, the holographic boundary conditions of the inversion arc, and the deterministic AI stack governance model.
 
 ---
@@ -30,7 +32,7 @@ This relation establishes a direct morphism between information dynamics and Lie
 ## 2. The Gauge Sector (Paper A)
 
 ### 2.1 The Palatini Bracket
-Applying the BCH-TE morphism to the vierbein $e^a{}_\mu$ and connection $\omega^{ab}{}_\mu$ in Palatini gravity, the Lie bracket generates the split real Lie algebra $\mathfrak{sl}(4, \mathbb{R})$ (rank 15):
+Applying the BCH-TE morphism to the vierbein $e^a{}_\mu$ and connection $\omega^{ab}{}_\mu$ in Palatini gravity, the Lie bracket generates the split real Lie algebra $\mathfrak{sl}(4, \mathbb{R})$ (dimension 15, rank 3):
 
 $$[e, \omega] \in \mathfrak{sl}(4, \mathbb{R})$$
 
@@ -77,7 +79,7 @@ Using the **shuffle knife** operator, we randomly permute the nearest-neighbor s
 - **Form (Universality):** Spacing and counting functions remain within $0.4\sigma - 1.0\sigma$ of the surrogate null.
 - **Function (Arithmetic):** Prime-resonance collapses under permutation (exhibiting $\sim\!11,500\sigma$ significance on the real sequence).
 
-This confirms that the arithmetic content of the zeros resides entirely in their exact level positions, not in their spacing law.
+This supports arithmetic sensitivity of the tested position observables relative to the specified shuffle controls. It does not establish universal arithmetic blindness of all spacing statistics or prove RH.
 
 ---
 

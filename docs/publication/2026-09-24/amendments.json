@@ -1,0 +1,134 @@
+[
+  {
+    "path": "papers/discrete_geometry_formalism.tex",
+    "amendment": "A discrete representation and its reconstruction rule specify what information is retained. A faithful reconstruction requires injectivity on the declared domain, and physical interpretation additionally requires a normalized measurement map. The complete-action scale family shows that geometric or dimensionless labels alone do not fix dimensional mass. Consequently any proposed universal physical identification remains conditional on the action, boundary data and resolution. This amendment does not replace the discrete definitions or enlarge their theorem domain."
+  },
+  {
+    "path": "papers/Form_Function_and_Asymmetry.tex",
+    "amendment": "The structural form/function vocabulary remains a way to organize specified calculations. It does not by itself determine a physical action or its coefficients. The complete scalar sector contains 17 quartic and four quadratic coefficients; six quartic directions are invisible on the neutral family. A scale family changes physical masses while preserving dimensionless labels. Earlier reduced parameter counts apply only to their stated ansatz. Cross-domain identifications require an explicit map preserving the relevant equations and observables, rather than a shared name or a numerical match."
+  },
+  {
+    "path": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+    "amendment": "Deterministic replay and provenance are engineering properties of a specified implementation. They do not establish that its geometric features identify a unique physical source. The action audit supplies a concrete counterexample: different complete actions can share neutral observations while differing in transverse stability. A deployed witness must therefore retain its measurement convention, uncertainty and alternate-model controls. The release checks verify manuscript integrity and selected calculations; they do not certify production security or benchmark generalization."
+  },
+  {
+    "path": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+    "amendment": "The strong reported correlation supports the stated finite position-based observable and explicit-formula comparison. It does not uniquely identify a microscopic carrier or exclude every arithmetic contribution to other observables. Truncation, smoothing, normalization and the sampled interval remain part of the experiment. Extending the result to an infinite zero sum requires convergence control beyond correlation. The new physical carrier audit concerns a separate field-theoretic identification problem and supplies no missing RH premise."
+  },
+  {
+    "path": "papers/methodology/Form_Function_Relativity.tex",
+    "amendment": "Changing the reference frame or measurement map can exchange which features are treated as input and response. An invariant claim must specify its transformation law and compare like observables. The complete-action study supplies a concrete case: coordinate rescaling preserves generalized mass eigenvalues, whereas scaling a physically different action changes all masses. Those operations must not be conflated. The distinction strengthens the methodology without asserting a universal physical equivalence among domains."
+  },
+  {
+    "path": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+    "amendment": "A finite-resolution count and its joint-scaling ratio are properties of a specified observation protocol. They do not replace mathematical zero, infinity or quantification over an infinite domain. In the action study, dimensional scaling preserves mass ratios while changing the physical scale; this is a family of actions, not proof that a dimensionful observable is invariant. Any limit claim needs its own topology, norm and convergence assumptions."
+  },
+  {
+    "path": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+    "amendment": "The kill tests constrain the particular cone chain and normalization hypotheses that were tested. A surviving algebraic coefficient does not select an action normalization or an observed coupling. The later scalar audit retains this distinction with explicit kinetic metrics and alternative complete potentials sharing neutral data. Earlier falsifications remain falsifications; numerical agreement in another channel does not reinstate them."
+  },
+  {
+    "path": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+    "amendment": "Shuffle controls isolate sensitivity to the information that a particular shuffle removes. They do not exhaust all arithmetic alternatives or prove that every local statistic is universally arithmetic-blind. Results remain scoped to the stated window, unfolding and ensemble. A valid positive identification requires competitors and held-out prediction, while a null result must retain power and resolution limits. No finite shuffle experiment settles RH."
+  },
+  {
+    "path": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+    "amendment": "The explicit parity correction remains in force. The later carrier audit separates it from magnetic-moment dynamics: uniform classical charge-to-mass density gives $g=1$ for every closed curve, while varying the densities can change the moment without changing the framing. Thus the geometric parity result neither supplies the Dirac magnetic moment nor identifies an electron. Its value is the precisely scoped lift computation and the falsification of the earlier magnitude inference."
+  },
+  {
+    "path": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+    "amendment": "The reported 14-isotope slope comparison uses measured decay inputs and does not predict preformation from first principles. A barrier factor, an assault rate and an interior channel overlap are separate ingredients. The later physical frontier retains counterexamples in which spectral information does not fix the overlap. The scalar binding study likewise has a specified charge and free-wave threshold, not a derivation of nuclear isotope lifetimes. Structural parallels to other tunneling problems must preserve these distinct physical inputs."
+  },
+  {
+    "path": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+    "amendment": "The annulus, modulus and boundary-integral calculations compare specified geometric models. Their radius, cutoff, charge split and self-energy convention remain inputs. In the later recovered capacitor proposal, the printed $C=2\\pi\\epsilon_0R/L$, $q=e/2$ and spin radius imply $\\alpha^{-1}=L/2$. Choosing an exponential cutoff to reproduce an inserted target does not derive that target. This does not identify all three numerical models with that later formula; it requires each model's normalization to be checked separately before a physical comparison."
+  },
+  {
+    "path": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+    "amendment": "Leave-one-out comparison on the stated isotope set qualifies the selected parametric model; it is not independent validation on a new catalog. Per-isotope factors are diagnostic extractions. Tuning a potential to a measured energy supplies that energy as input, and isospectral data need not determine a channel overlap. The remaining requirement is a physically normalized many-body preformation calculation or a separately tested predictive model. No new isotope performance is claimed by this editorial release."
+  },
+  {
+    "path": "papers/notes/Mobius_Screw_Electron.tex",
+    "amendment": "The framed-curve geometry survives, but the inference from self-linking to $g=2$ is withdrawn. The spin-cover class is a parity datum, whereas the gyromagnetic ratio depends on charge/current and mass distributions. For uniform charge-to-mass ratio on the same classical closed curve, the conventional ratio is $g=1$. The capacitor model also retains a cutoff and charge split. For $C=2\\pi\\epsilon_0R/L$, charge $e/2$ and $R=\\hbar/(2mc)$, energy matching gives $\\alpha^{-1}=L/2$, not $L$. These findings preclude treating either estimate as a parameter-free particle derivation."
+  },
+  {
+    "path": "papers/notes/Pythagorean_Lattice_Limits.tex",
+    "amendment": "The factors of two and three describe the stated representation and normalization. They are not a measured mass-selection rule. The complete-action scale family and residual sensitivity of finite running preserve dimensional and boundary freedom. Any tree-level relation quoted here is conditional on its restricted matching assumptions; the later full-potential audit does not derive arbitrary flavor or a physical pole mass. The reported negative phenomenological result remains a negative result. Musical octave equivalence identifies frequencies only after a chosen quotient and does not make their dimensional frequencies equal."
+  },
+  {
+    "path": "papers/notes/Density_Engine_Many_Worlds.tex",
+    "amendment": "The nested-substrate and opcode language remains interpretive. The subsequent scalar study qualifies binding for a specified action and charge sector; it does not establish an inexhaustible energy source, a many-worlds ontology or a consciousness mechanism. Radius, pitch, field coefficients and physical normalization remain additional data in the recovered geometric proposals. Distinguishing interpretations from measured observables is necessary before two such descriptions can be tested against one another."
+  },
+  {
+    "path": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+    "amendment": "A signature or grading selection within an algebraic construction is distinct from deriving a physical spacetime metric. The recovered soldering construction inserts a Lorentzian internal metric and a nondegenerate vierbein; congruence then preserves the supplied signature. That example cannot independently validate a physical signature-selection claim. Applying the adjoint calculation to matter requires a specified map, kinetic terms and vacuum, with those additional inputs kept explicit."
+  },
+  {
+    "path": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+    "amendment": "Changing the radial weight and trial state changes the overlap definition. The global factor remains fitted, and the reported near-unchanged correlation is not evidence for a unique throat geometry. Interior support, barrier transmission and channel normalization must stay separate. The subsequent action audit reinforces this point: geometry and a restricted background do not determine all transverse couplings or a physical vacuum. This amendment adds no new isotope observations."
+  },
+  {
+    "path": "papers/notes/Prime_Gap_Transition_Operator.tex",
+    "amendment": "The source-only kernel inclusion follows from the stated stochastic and continuity assumptions; exact saturation is an observation on the tested moduli. The effective-rank exponent is pre-asymptotic and depends on the rank convention. Neither the transition kernel nor an octave or geometric representation establishes a universal physical prime generator. The variance-floor connection remains a phenomenological comparison. Verification of finite primes and transition counts must not be promoted to an exclusion of off-line zeta zeros."
+  },
+  {
+    "path": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+    "amendment": "The overlap is a normalized proxy relative to the selected interior and cluster trial states. The fitted global spectroscopic factor fixes an absolute scale from data; correlation is unaffected by that log shift. Isospectral alternatives can change channel overlap, so the spectrum alone does not identify preformation. A microscopic prediction would additionally require the many-body channel, interaction and matching prescription. This release retains the negative absolute-scale result and does not interpret the fit as a unique origin."
+  },
+  {
+    "path": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+    "amendment": "The fibered-seam language organizes distinct symmetry and observation maps. In the standard $s$ plane, the critical line remains one real dimension. The map $s\\mapsto1-s$ fixes only $1/2$; the reflection $s\\mapsto1-\\overline{s}$ fixes the entire line. A transformed image can be curved without altering either statement. The proposed identification of the arithmetic, character and algebraic-holographic descriptions remains a conjecture, with no inferred proof of RH or unique inverse recovery from finite observations."
+  },
+  {
+    "path": "papers/notes/Klein_Foam_Monad.tex",
+    "amendment": "The ontology remains a postulation, not an experimentally identified microscopic medium. Framing does not derive $g=2$, and a chosen cutoff does not derive the fine-structure constant. A proposed cover-homology map must commute with the deck action; the tested shear fails that necessary condition. A valid glide-compatible metric still retains radius and pitch inputs. Likewise a surface delta distribution does not automatically define a normalized volume state. The companion carrier paper records these distinctions and the conditional scalar binding mechanism without elevating them to a universal cosmological model."
+  },
+  {
+    "path": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+    "amendment": "The algebraic closure calculations do not establish a unique microscopic dynamics. For the stated smooth, metric-compatible Palatini action, writing the connection as its Levi--Civita part plus contortion leaves the added torsion-squared term algebraic in contortion. It supplies no independent contortion wave operator. Also, a balanced vector in the fundamental color triplet is not a singlet: vanishing Cartan expectations do not imply that the generators annihilate the state. These two inferences are withdrawn. The complete scalar action and physical vacuum still require coefficients, kinetic normalization and a selection rule."
+  },
+  {
+    "path": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+    "amendment": "The finite ordinate experiments test the declared spectral statistics; they neither locate nor exclude all off-line zeta zeros. A diagonal operator assembled only from real ordinates loses the real-part displacement and cannot alone establish the Hilbert--P\\'olya identification. The critical line is exactly the locus $\\operatorname{Re}s=1/2$ in the standard complex coordinate. Curving its image by a coordinate map changes the representation, not RH. All infinite-sum or long-time conclusions require the relevant convergence and exchange-of-limit argument. The corrected growth bounds and reflection conventions in this version govern older interpretations."
+  },
+  {
+    "path": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+    "amendment": "Killing-form identities and algebraic projections retain their stated mathematical scope. A Cartan projection is not a singlet projection, and optical color addition does not construct an invariant vector of the fundamental SU(3) representation. The optical identification is withdrawn below. Physical holography, confinement and particle identification require a state space and dynamics in addition to these algebraic maps. Reduced scalar-potential formulas apply only to their restricted ansatz: the complete invariant audit has 17 quartics, hidden transverse directions and nontrivial running."
+  },
+  {
+    "path": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+    "amendment": "Witness survival is conditional on the chosen observation operator, null ensemble and finite data window. It is not an exhaustive identification of the unobserved zero set. SVD rank measures independent response directions in that operator; even a one-dimensional curve can have a higher-dimensional secant span. Neither rank nor finite spectral correlation establishes intrinsic object dimension or RH. Future use must retain alternative sources, normalization changes and held-out windows as controls."
+  },
+  {
+    "path": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+    "amendment": "The September carrier audit adds finite obstructions to the existing elimination discipline: the cover shear fails deck commutation, the balanced triplet is not a singlet, the capacitor normalization differs by a factor of two, and the stated torsion term is algebraic. The action audit also disproves uniqueness from a neutral restriction by a stable/flat/unstable counterfamily. These retire specific implications under their assumptions. They neither eliminate all future ACS models nor prove the remaining conjectures."
+  },
+  {
+    "path": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+    "amendment": "A common organizing mechanism is a research hypothesis until maps between the relevant state spaces preserve their equations and observables. The later audit supplies both a surviving conditional binding mechanism and failed microscopic identifications. Framing parity, optical color balance, scalar charge and zeta statistics are not interchangeable observables. A shared vocabulary cannot fill the missing normalized action, parameter selector or physical vacuum."
+  },
+  {
+    "path": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+    "amendment": "The injectivity and inverse-domain requirements remain essential. The subsequent physical audit illustrates a separate identification limit: different complete scalar actions can share the same neutral restriction. Reversible internal bookkeeping cannot recover coefficients that never entered the observation. A physical inverse problem therefore needs the forward map, admissible model class and additional measurements, alongside the monograph's formal reconstruction conditions."
+  },
+  {
+    "path": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+    "amendment": "This document preserves the sequence of attempted constructions and corrections. Historical milestones are not a current certification of every interpretation. Reversible encoding must meet the final domain and injectivity conditions; the physical action and carrier requirements are independently audited in the new companion papers. Failed source runs and withdrawn hypotheses remain visible rather than being retroactively counted as completed proofs."
+  },
+  {
+    "path": "papers/later_FF06_series/When_a_Number_Lies.tex",
+    "amendment": "The later action and carrier audits give concrete instances of the distinction between a number and what it identifies. A fitted cutoff can reproduce any inserted coupling target; zero Cartan expectation can occur in a non-singlet; a positive neutral spectrum can hide negative transverse directions. The appropriate conclusion is failure of the corresponding inference under its assumptions, not rejection of numerical measurement. Units, state spaces and alternate models remain part of every claim."
+  },
+  {
+    "path": "papers/later_FF06_series/The_Geometry_Engine.tex",
+    "amendment": "The engine computes features relative to its declared representation and observer. Independent response directions do not automatically measure the intrinsic dimension of an unknown source. For example, a one-dimensional curved trajectory can span several linear directions. A physical application must retain sensor calibration, noise alternatives and the forward map. The new complete-action counterfamily shows why agreement on a restricted observation does not guarantee agreement on hidden stability."
+  },
+  {
+    "path": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+    "amendment": "Reversibility requires an injective encoding on the stated domain and a defined inverse on its image. Preservation of one operation alone is insufficient to establish lossless reconstruction. The later monograph's domain restrictions govern the general reading of this short paper. In physical applications an additional observation map may discard information even when the internal representation is reversible; neither property by itself identifies a microscopic action."
+  },
+  {
+    "path": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+    "amendment": "The decomposition distinguishes features of the finite zero data under the chosen unfolding and spectral tests. Its layers do not identify a unique physical source or certify the full zeta zero set. Ensemble dependence, finite-size uncertainty and negative controls remain part of the result. Neither octave-scaled prime labels nor a change of geometric display can substitute for a convergence argument or the exact real-part condition in RH."
+  }
+]

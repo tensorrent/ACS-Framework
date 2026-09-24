@@ -1,0 +1,290 @@
+{
+  "checks_total": 42,
+  "checks_passed": 42,
+  "checks": [
+    {
+      "name": "canonical field map fixes kinetic coefficient",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "canonical quartic invariant under consistent field reparameterization",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "common action prefactor remains in physical quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "all 17 invariants are homogeneous quartics",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "all four mass polynomials are homogeneous quadratics",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "flavor witness is complex and noncommuting",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "potential dilation 0.4",
+      "passed": true,
+      "evidence": 1.3877787807814457e-16
+    },
+    {
+      "name": "gradient dilation 0.4",
+      "passed": true,
+      "evidence": 1.3929062458110759e-15
+    },
+    {
+      "name": "hessian dilation 0.4",
+      "passed": true,
+      "evidence": 7.140681610867702e-16
+    },
+    {
+      "name": "gauge_gram dilation 0.4",
+      "passed": true,
+      "evidence": 9.174896304122121e-17
+    },
+    {
+      "name": "fermion_mass dilation 0.4",
+      "passed": true,
+      "evidence": 1.2135530132185835e-16
+    },
+    {
+      "name": "fermion_squared_singular_values dilation 0.4",
+      "passed": true,
+      "evidence": 8.745285766873017e-17
+    },
+    {
+      "name": "potential dilation 2.3",
+      "passed": true,
+      "evidence": 2.1291941940820863e-16
+    },
+    {
+      "name": "gradient dilation 2.3",
+      "passed": true,
+      "evidence": 1.3923019204242648e-15
+    },
+    {
+      "name": "hessian dilation 2.3",
+      "passed": true,
+      "evidence": 7.3693416367088905e-16
+    },
+    {
+      "name": "gauge_gram dilation 2.3",
+      "passed": true,
+      "evidence": 1.8600764777590557e-16
+    },
+    {
+      "name": "fermion_mass dilation 2.3",
+      "passed": true,
+      "evidence": 1.2997050037128274e-16
+    },
+    {
+      "name": "fermion_squared_singular_values dilation 2.3",
+      "passed": true,
+      "evidence": 6.667447270336451e-16
+    },
+    {
+      "name": "CW scale witness retains scalar stability",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one-loop potential including complex flavor scales to fourth power 0.4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one-loop potential including complex flavor scales to fourth power 2.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "CW logarithm is exactly invariant under simultaneous scale change",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one-loop dimensional transmutation still needs its integration scale",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source upward RG reaches endpoint",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "two RG endpoint methods agree",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "perturbed boundary reaches endpoint -1e-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "perturbed boundary reaches endpoint 1e-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "RG variational sensitivity agrees with boundary differences",
+      "passed": true,
+      "evidence": {
+        "variational": 0.2088898195217001,
+        "difference": 0.20888981972361217
+      }
+    },
+    {
+      "name": "finite RG flow retains nonzero boundary sensitivity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "alternate boundary reaches endpoint 0.08",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "alternate boundary reaches endpoint 0.12830005981991682",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "alternate boundary reaches endpoint 0.18",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different source quartics do not become identical",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source QCD crossing exactly reproduces inserted target",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one-coupling crossing does not give simultaneous gauge equality",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "printed square-root texture is rank one",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "commuting curvature can have nonzero wedge-square trace",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "real Yukawa matrices need not have positive determinant",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "thermal-source norm portal preserves both independent phases",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "norm portal has no off-diagonal quadratic term in unbroken phase",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source replay four_computations",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source replay seven_tests_kinetic",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "general_action_scaling": [
+    {
+      "scale": 0.4,
+      "residuals": {
+        "potential": 1.3877787807814457e-16,
+        "gradient": 1.3929062458110759e-15,
+        "hessian": 7.140681610867702e-16,
+        "gauge_gram": 9.174896304122121e-17,
+        "fermion_mass": 1.2135530132185835e-16,
+        "fermion_squared_singular_values": 8.745285766873017e-17
+      }
+    },
+    {
+      "scale": 2.3,
+      "residuals": {
+        "potential": 2.1291941940820863e-16,
+        "gradient": 1.3923019204242648e-15,
+        "hessian": 7.3693416367088905e-16,
+        "gauge_gram": 1.8600764777590557e-16,
+        "fermion_mass": 1.2997050037128274e-16,
+        "fermion_squared_singular_values": 6.667447270336451e-16
+      }
+    }
+  ],
+  "complex_flavor_CW": {
+    "value": -0.009270146722323673,
+    "mu": 0.8
+  },
+  "source_RG": {
+    "upward_lambda": -0.0052413721422975975,
+    "downward_lambda": 0.18063150932202007,
+    "derivative_IR_wrt_UV": 0.2088898195217001,
+    "tree_mass_proxy_GeV": 147.99092347347138,
+    "alternatives": [
+      {
+        "lambda_UV": 0.08,
+        "lambda_IR": 0.16855204148900993
+      },
+      {
+        "lambda_UV": 0.12830005981991682,
+        "lambda_IR": 0.1806315093220131
+      },
+      {
+        "lambda_UV": 0.18,
+        "lambda_IR": 0.18981213769367805
+      }
+    ],
+    "QCD_crossing_GeV": 25.647622061908745,
+    "g2_at_crossing": 0.6588567151287571
+  },
+  "replays": [
+    {
+      "source": "four_computations",
+      "scope": "entire program",
+      "returncode": 0,
+      "replay_sha256": "4bf7f60165baa285f43c695293d6a02d0e79836c74cd216acca0446279d55f6e"
+    },
+    {
+      "source": "seven_tests_kinetic",
+      "scope": "only normalization section: source lines 358-472",
+      "returncode": 0,
+      "replay_sha256": "31b1995c0b448b6e0e3a9553bfbdfdd87a46b7ff2bcad4cc4329a276d9b1ca22"
+    }
+  ],
+  "limitations": [
+    "Dilation compares different flat-space actions, not a symmetry at fixed dimensional inputs",
+    "One-loop potential scaling is not general complex-flavor finite EFT matching",
+    "Historical SM running uses source inputs and truncations; mass output is a tree proxy, not a pole prediction",
+    "Thermal selection rule assumes an unbroken phase and no added bilinear, condensate or charge-breaking interaction",
+    "No full microscopic foam action or empirical particle identification is supplied by these diagnostics"
+  ]
+}

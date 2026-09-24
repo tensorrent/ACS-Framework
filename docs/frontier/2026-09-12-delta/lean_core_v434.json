@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-09-12T15:10:30.890103+00:00",
+  "runtime": "Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+  "results": [
+    {
+      "file": "LFBound.lean",
+      "sha256": "9526d55d275c8d03bdb0783ac6f767680b405073c1e26893d09f08aef3cfa49f",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lean",
+        "-o",
+        "LFBound.olean",
+        "LFBound.lean"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "AxiomIII.lean",
+      "sha256": "f9414d26689e7cdca494bf61ec7374d4e8b3bf0ad81abd4e2a42fdc56645403e",
+      "command": [
+        "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lean",
+        "-o",
+        "AxiomIII.olean",
+        "AxiomIII.lean"
+      ],
+      "returncode": 0,
+      "stdout": "AxiomIII.lean:125:38: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:47: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, and_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nAxiomIII.lean:149:57: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Mat2.mul, phi, Mat2.mk.injEq, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 > **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
 
+> **24 September 2026 update:** The [publication record](docs/publication/2026-09-24/README.md) and dated amendments govern earlier physical interpretations. The new [action paper](papers/updates/ACS_Action_Identifiability.tex) and [carrier paper](papers/updates/ACS_Condensate_Carrier_Boundary.tex) map the completed scoped investigation to `code/condensate_energy/` and its frozen evidence. Fresh publication checks are in `code/publication_20260924/verify_science.py`. A reduced parameter count, a numerical correlation or a build result is not a physical uniqueness theorem.
+
+
 # MANIFEST — ACS Complete Bundle
 
 Core bundle assembled 2026-06-27; sections below the core (Issue #7, Flag

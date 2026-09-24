@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/four_computations.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/four_computations.py",
+    "sha256": "4bf7f60165baa285f43c695293d6a02d0e79836c74cd216acca0446279d55f6e"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/seven_tests.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/seven_tests.py",
+    "sha256": "8cfeb097ec68fe1df5a16a047c23079b43b91b1aa56a563599afe5480305893e"
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/rc7_lagrangian.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/rc7_lagrangian.py",
+    "sha256": "773bee9f2b421de3f6655395e2da1e4a789e076872726dbf79b82540b6e1e6fe"
+  },
+  {
+    "source": "/Volumes/Seagate 4tb/tensorrent_tent_io_publish/tent_io/harness/tools/palatini_colour_charges.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/palatini_colour_charges.py",
+    "sha256": "24b117fd36cf10915088f4a928bc13b05894eb6569235e42b8d8fa4ef0688fd1"
+  }
+]

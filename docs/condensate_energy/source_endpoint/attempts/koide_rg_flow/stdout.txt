@@ -1,0 +1,118 @@
+======================================================================
+THE KOIDE ANGLE RG FLOW
+From GUT Scale (11.57°) to IR (12.73°)
+======================================================================
+
+── Initial Conditions at M_Z = 91.1876 GeV ──
+
+  Gauge couplings: g₁=0.3575, g₂=0.6519, g₃=1.2172
+  Yukawa couplings:
+    y_e  = 2.935024e-06
+    y_μ  = 6.068699e-04
+    y_τ  = 1.020575e-02
+    y_t  = 0.9942
+
+  θ₀ at M_Z: 12.7324°
+  Target:    12.73°
+
+── SM 1-Loop Beta Functions ──
+
+  Running from M_Z = 91.2 GeV up to M_GUT = 2×10¹⁶ GeV...
+
+  ODE solved successfully (333 steps)
+
+  Scale (GeV)      y_e          y_μ          y_τ          y_t      θ₀ (deg)
+  ------------------------------------------------------------------------
+  91.2             2.9350e-06   6.0687e-04   1.0206e-02   0.9942   12.7324
+  71965.9          3.1055e-06   6.4213e-04   1.0799e-02   0.8706   12.7324
+  56795939.1       3.2484e-06   6.7166e-04   1.1295e-02   0.8489   12.7324
+  44823734193.6    3.4123e-06   7.0555e-04   1.1866e-02   0.8866   12.7324
+  3.5e+13          3.6514e-06   7.5499e-04   1.2697e-02   1.0014   12.7324
+  2.0e+16          4.0846e-06   8.4456e-04   1.4204e-02   1.2914   12.7324
+
+── Results ──
+
+  θ₀ at M_Z (IR):          12.7324°
+  θ₀ at M_GUT (UV):        12.7324°
+  Shift (UV → IR):         -0.0000°
+
+  Bare geometric angle:     11.5651°
+  Observed IR angle:        12.7328°
+  Required shift:           +1.1677°
+  RG-computed shift:        -0.0000°
+
+  Direction match: NO ✗
+  Magnitude: RG gives 0.0000° of the needed 1.1677°
+  Fraction explained: 0.0%
+
+── The Flavour-Dependent Shift ──
+
+  Analytic estimate of flavour-dependent shift:
+    Δθ₀ ≈ (3/(32π²)) × y_τ² × ln(M_GUT/M_Z)
+         = (3/(32π²)) × 1.0416e-04 × 33.02
+         = 0.000033 rad = 0.0019°
+
+  This is the dominant contribution. The exact numerical RG gives
+  0.0000° (including gauge coupling effects).
+
+── Critical Test: Start from Bare Angle at GUT Scale ──
+
+  SM Yukawas at M_GUT (from running UP):
+    y_e  = 4.084595e-06
+    y_μ  = 8.445649e-04
+    y_τ  = 1.420369e-02
+    θ₀(M_GUT) from SM = 12.7324°
+
+  Bare Koide masses at M_GUT (θ₀ = 11.57°):
+    m_e = 1.663407e-03 GeV
+    m_μ = 1.334679e-01 GeV
+    m_τ = 2.485545e+00 GeV
+  θ₀ extracted: 11.5651° (should be 11.5651°)
+
+  Running bare Yukawas DOWN from M_GUT to M_Z...
+
+  Masses at M_Z (from bare θ₀ = 11.57° at GUT):
+    m_e = 1.1953 MeV
+    m_μ = 95.9046 MeV
+    m_τ = 1785.9330 MeV
+
+  θ₀ at M_Z (from bare): 11.5650°
+  θ₀ observed:            12.7328°
+  RG shift:               -0.0000°
+  Needed shift:           +1.1677°
+
+  ==================================================
+  RG FLOW ACCOUNTS FOR 0.0% OF THE GAP
+  ==================================================
+
+  Figure saved: fig_koide_rg_flow.pdf
+
+======================================================================
+FINAL RESULT
+======================================================================
+
+  CANDIDATE ANGLE (numerical coincidence, NOT derived — see docstring):
+    θ₀_candidate = π/6 - arctan(1/3) = 11.5651°
+    
+  OBSERVED IR ANGLE (from charged lepton masses):
+    θ₀_obs = 12.7328°
+    
+  GAP: 1.1677°
+    
+  1-LOOP RG FLOW:
+    The SM beta functions for lepton Yukawa couplings shift θ₀
+    as the energy scale runs from M_GUT to M_Z.
+    
+    The dominant contribution is the tau Yukawa self-energy:
+    Δθ₀ ≈ (3/(32π²)) × y_τ² × ln(M_GUT/M_Z)
+    
+    The tau Yukawa y_τ = 1.0206e-02 is 200× larger than y_μ,
+    so it pulls the mass triangle TOWARD the τ vertex, increasing θ₀.
+    
+    Computed shift: 0.0000°
+    (from SM Yukawas running up)
+    
+  STATUS:
+    Direction of shift: WRONG ✗
+    Fraction of gap explained by 1-loop RG: 0.0%
+

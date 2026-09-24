@@ -1,0 +1,166 @@
+{
+  "checks_total": 26,
+  "checks_passed": 26,
+  "checks": [
+    {
+      "name": "exact phase-scale-two texture is rank one",
+      "passed": true
+    },
+    {
+      "name": "exact phase-scale-two texture has two massless modes",
+      "passed": true
+    },
+    {
+      "name": "nonzero singular value is the vector norm squared",
+      "passed": true
+    },
+    {
+      "name": "null-subspace rotation preserves the mass matrix 0.0",
+      "passed": true
+    },
+    {
+      "name": "null-subspace rotation preserves the mass matrix 0.04",
+      "passed": true
+    },
+    {
+      "name": "null-subspace rotation preserves the mass matrix 0.3",
+      "passed": true
+    },
+    {
+      "name": "full source replay best phase scale is the rank-one value",
+      "passed": true
+    },
+    {
+      "name": "full replay reports zero first-two-family masses",
+      "passed": true
+    },
+    {
+      "name": "QFP replay finds no scanned crossing",
+      "passed": true
+    },
+    {
+      "name": "closed Weyl fourth trace includes all sixteen entries",
+      "passed": true
+    },
+    {
+      "name": "independent determinant-portal box coefficient",
+      "passed": true
+    },
+    {
+      "name": "independent determinant-Phi box coefficient",
+      "passed": true
+    },
+    {
+      "name": "portal coefficient agrees with full beta result",
+      "passed": true
+    },
+    {
+      "name": "Phi determinant coefficient agrees with full beta result",
+      "passed": true
+    },
+    {
+      "name": "closed fermion trace matches independent component mass at (0.2, 0.3, 1.0)",
+      "passed": true
+    },
+    {
+      "name": "closed fermion trace matches independent component mass at (0.4, -0.1, 0.8)",
+      "passed": true
+    },
+    {
+      "name": "closed fermion trace matches independent component mass at (0.11, 0.05, 0.6)",
+      "passed": true
+    },
+    {
+      "name": "independent projector recovers angular curvature 0",
+      "passed": true
+    },
+    {
+      "name": "independent directional tadpoles vanish 0",
+      "passed": true
+    },
+    {
+      "name": "exact-form angular stationarity 0",
+      "passed": true
+    },
+    {
+      "name": "independent projector recovers angular curvature 1",
+      "passed": true
+    },
+    {
+      "name": "independent directional tadpoles vanish 1",
+      "passed": true
+    },
+    {
+      "name": "exact-form angular stationarity 1",
+      "passed": true
+    },
+    {
+      "name": "independent projector recovers angular curvature 2",
+      "passed": true
+    },
+    {
+      "name": "independent directional tadpoles vanish 2",
+      "passed": true
+    },
+    {
+      "name": "exact-form angular stationarity 2",
+      "passed": true
+    }
+  ],
+  "replay_degeneracy": {
+    "best_phase_scale": 2.0,
+    "exact_rank": 1,
+    "zero_masses_per_sector": 2,
+    "arbitrary_null_rotations": [
+      {
+        "angle": 0.0,
+        "apparent_mixing": 7.73037524543484e-17
+      },
+      {
+        "angle": 0.04,
+        "apparent_mixing": 0.03998933418663407
+      },
+      {
+        "angle": 0.3,
+        "apparent_mixing": 0.29552020666133927
+      }
+    ]
+  },
+  "independent_loop_coefficients": {
+    "B_lambda14": "-32*f**2*y*z",
+    "B_lambda4": "-64*y**3*z - 64*y*z**3"
+  },
+  "independent_projector_controls": [
+    {
+      "tan_beta": 0.2679491924311227,
+      "projector_angular_curvature": 0.004156963662182989,
+      "directional_tadpoles": [
+        2.498001805406602e-10,
+        -1.6098233857064767e-10,
+        1.3877787807814457e-10,
+        2.9976021664879227e-10
+      ]
+    },
+    {
+      "tan_beta": 0.4142135623730951,
+      "projector_angular_curvature": 0.00509114972402358,
+      "directional_tadpoles": [
+        -1.4988010832439613e-10,
+        1.8873791418627659e-10,
+        1.6098233857064767e-10,
+        -5.551115123125782e-12
+      ]
+    },
+    {
+      "tan_beta": 0.5773502691896256,
+      "projector_angular_curvature": 0.00719997395037808,
+      "directional_tadpoles": [
+        -1.5543122344752192e-10,
+        2.775557561562891e-11,
+        -4.4408920985006255e-11,
+        4.4408920985006255e-11
+      ]
+    }
+  ],
+  "qualification": "Apparent CKM mixing inside a massless degenerate subspace is not a physical mixing prediction."
+}

@@ -1,0 +1,1090 @@
+{
+  "checks_total": 58,
+  "checks_passed": 58,
+  "checks": [
+    {
+      "name": "real projection identically zero on full real matrix x symmetric matrix domain",
+      "passed": true,
+      "evidence": {
+        "basis_pairs": 160
+      }
+    },
+    {
+      "name": "archived real projection agrees with exact zero identity",
+      "passed": true,
+      "evidence": {
+        "trials": 100,
+        "max_absolute_roundoff": 4.440892098500626e-16
+      }
+    },
+    {
+      "name": "imaginary repair has rank three",
+      "passed": true,
+      "evidence": {
+        "rank": 3,
+        "nullity": 6
+      }
+    },
+    {
+      "name": "repaired projection exact right inverse",
+      "passed": true
+    },
+    {
+      "name": "repair fits ratios (1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "repair VEV unit norm (1, 2, 3)",
+      "passed": true
+    },
+    {
+      "name": "repair fits ratios (1, 10, 100)",
+      "passed": true
+    },
+    {
+      "name": "repair VEV unit norm (1, 10, 100)",
+      "passed": true
+    },
+    {
+      "name": "repair fits ratios (5, 5, 1)",
+      "passed": true
+    },
+    {
+      "name": "repair VEV unit norm (5, 5, 1)",
+      "passed": true
+    },
+    {
+      "name": "claimed trough is not DeltaI zero",
+      "passed": true,
+      "evidence": {
+        "DeltaI_exact": "3716749362089/6250000000000",
+        "DeltaI": 0.59467989793424
+      }
+    },
+    {
+      "name": "claimed point not stationary for I or I squared",
+      "passed": true,
+      "evidence": {
+        "gradient_I_norm": 5.91335974084209,
+        "gradient_I_squared_norm": 7.033112334264835
+      }
+    },
+    {
+      "name": "normalizing Form does not make point stationary",
+      "passed": true,
+      "evidence": {
+        "tangent_gradient_covector_norm": 5.96650048902649
+      }
+    },
+    {
+      "name": "squared potential has a lower point at Form zero",
+      "passed": true
+    },
+    {
+      "name": "source Hessian differs from squared-potential Hessian",
+      "passed": true
+    },
+    {
+      "name": "source basis has nonidentity positive metric",
+      "passed": true
+    },
+    {
+      "name": "independent polynomial derivative 0",
+      "passed": true
+    },
+    {
+      "name": "independent squared polynomial derivative 0",
+      "passed": true
+    },
+    {
+      "name": "independent polynomial derivative 3",
+      "passed": true
+    },
+    {
+      "name": "independent squared polynomial derivative 3",
+      "passed": true
+    },
+    {
+      "name": "independent polynomial derivative 9",
+      "passed": true
+    },
+    {
+      "name": "independent squared polynomial derivative 9",
+      "passed": true
+    },
+    {
+      "name": "independent polynomial derivative 14",
+      "passed": true
+    },
+    {
+      "name": "independent squared polynomial derivative 14",
+      "passed": true
+    },
+    {
+      "name": "archived finite difference Hessian at step 0.001",
+      "passed": true,
+      "evidence": {
+        "step": 0.001,
+        "max_error": 0.00019051525142188552
+      }
+    },
+    {
+      "name": "archived finite difference Hessian at step 0.0003",
+      "passed": true,
+      "evidence": {
+        "step": 0.0003,
+        "max_error": 1.714729254587155e-05
+      }
+    },
+    {
+      "name": "archived finite difference Hessian at step 0.0001",
+      "passed": true,
+      "evidence": {
+        "step": 0.0001,
+        "max_error": 1.900178112634876e-06
+      }
+    },
+    {
+      "name": "generalized I Hessian invariant under basis scaling 2.0",
+      "passed": true
+    },
+    {
+      "name": "generalized squared Hessian invariant under basis scaling 2.0",
+      "passed": true
+    },
+    {
+      "name": "generalized I Hessian invariant under basis scaling 5.0",
+      "passed": true
+    },
+    {
+      "name": "generalized squared Hessian invariant under basis scaling 5.0",
+      "passed": true
+    },
+    {
+      "name": "generalized I Hessian invariant under basis scaling 10.0",
+      "passed": true
+    },
+    {
+      "name": "generalized squared Hessian invariant under basis scaling 10.0",
+      "passed": true
+    },
+    {
+      "name": "source curvature ratio changes under coordinate rescaling",
+      "passed": true
+    },
+    {
+      "name": "negative curvature is hidden by source absolute value",
+      "passed": true,
+      "evidence": {
+        "I_eigenvalue_signs": {
+          "negative": 1,
+          "zero": 0,
+          "positive": 14
+        },
+        "I_squared_eigenvalue_signs": {
+          "negative": 1,
+          "zero": 0,
+          "positive": 14
+        }
+      }
+    },
+    {
+      "name": "quark block singular",
+      "passed": true,
+      "evidence": {
+        "rank": 2
+      }
+    },
+    {
+      "name": "lepton block and both mixing blocks are zero",
+      "passed": true
+    },
+    {
+      "name": "pseudoinverse Schur expression exactly zero",
+      "passed": true
+    },
+    {
+      "name": "SU3 triplet Casimir nonzero on every vector",
+      "passed": true
+    },
+    {
+      "name": "no common invariant color triplet vector",
+      "passed": true
+    },
+    {
+      "name": "valid archived symmetric-antisymmetric bracket identity",
+      "passed": true
+    },
+    {
+      "name": "computed complement never read by source",
+      "passed": true,
+      "evidence": {
+        "load_count": 0
+      }
+    },
+    {
+      "name": "archived neutrino source replay exits successfully",
+      "passed": true
+    },
+    {
+      "name": "replayed scale equals noncanonical Hessian ratio times inserted 246 GeV",
+      "passed": true
+    },
+    {
+      "name": "replayed neutrino mass uses inserted electron mass",
+      "passed": true
+    },
+    {
+      "name": "claimed modular fixed point fails",
+      "passed": true
+    },
+    {
+      "name": "parabolic modular action has no finite fixed point",
+      "passed": true
+    },
+    {
+      "name": "two claimed gap equalities incompatible for finite R",
+      "passed": true
+    },
+    {
+      "name": "integer mode fails required antiperiodicity",
+      "passed": true
+    },
+    {
+      "name": "half-integer mode has required antiperiodicity",
+      "passed": true
+    },
+    {
+      "name": "claimed convergence holds at alternate ratio 1/4",
+      "passed": true
+    },
+    {
+      "name": "claimed convergence holds at alternate ratio 1/2",
+      "passed": true
+    },
+    {
+      "name": "claimed convergence holds at alternate ratio 1",
+      "passed": true
+    },
+    {
+      "name": "claimed convergence holds at alternate ratio 2",
+      "passed": true
+    },
+    {
+      "name": "nonorientability alone does not force every scalar to be antiperiodic",
+      "passed": true
+    },
+    {
+      "name": "cutoff substitution returns any preselected inverse coupling",
+      "passed": true
+    },
+    {
+      "name": "displayed matrix action stationary relative metric b=1",
+      "passed": true
+    },
+    {
+      "name": "displayed action is not primary GfE warmup action up to an additive constant",
+      "passed": true
+    }
+  ],
+  "projection": {
+    "exact_real_projection": 0,
+    "repaired_matrix": [
+      [
+        "2",
+        "-1",
+        "0",
+        "3/10",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "9/100",
+        "3/10",
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-153/1000",
+        "0",
+        "0",
+        "-2/5",
+        "0",
+        "0"
+      ]
+    ],
+    "repaired_rank": 3,
+    "repaired_nullity": 6,
+    "examples": [
+      {
+        "target_ratios": [
+          1,
+          2,
+          3
+        ],
+        "observed_ratios": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "raw_vev_norm_squared": "2476209781/10510362"
+      },
+      {
+        "target_ratios": [
+          1,
+          10,
+          100
+        ],
+        "observed_ratios": [
+          1.0,
+          10.0,
+          100.0
+        ],
+        "raw_vev_norm_squared": "464774760309/1167818"
+      },
+      {
+        "target_ratios": [
+          5,
+          5,
+          1
+        ],
+        "observed_ratios": [
+          1.0,
+          1.0,
+          0.2
+        ],
+        "raw_vev_norm_squared": "816220525/10510362"
+      }
+    ],
+    "qualification": "Imaginary projection is a changed hypothesis; it fits arbitrary nonzero ratios and still needs a VEV-selection law and a field-representation map."
+  },
+  "curvature": {
+    "I_exact": "3716749362089/6250000000000",
+    "I": 0.59467989793424,
+    "gradient_I": [
+      "6604957377/3125000000",
+      "11818904343/6250000000",
+      "153532181/39062500",
+      "25160967363/312500000000",
+      "33489/125000",
+      "0",
+      "40830533/1562500000",
+      "0",
+      "0",
+      "-124423232637/312500000000",
+      "33489/125000",
+      "0",
+      "-5221444877/1562500000",
+      "0",
+      "0"
+    ],
+    "I_squared": 0.3536441810070781,
+    "hessian_I": [
+      [
+        "293022797/39062500",
+        "-1384077301/156250000",
+        "-266010569/39062500",
+        "259015089/156250000",
+        "0",
+        "0",
+        "3198448807/390625000",
+        "0",
+        "0",
+        "-94852011/156250000",
+        "0",
+        "0",
+        "-3745681393/390625000",
+        "0",
+        "0"
+      ],
+      [
+        "-1384077301/156250000",
+        "6267206629/312500000",
+        "203463722/9765625",
+        "-789815739/312500000",
+        "-68618961/62500000",
+        "0",
+        "-13735673353/781250000",
+        "0",
+        "0",
+        "625652661/312500000",
+        "-68618961/62500000",
+        "0",
+        "14794349947/781250000",
+        "0",
+        "0"
+      ],
+      [
+        "-266010569/39062500",
+        "203463722/9765625",
+        "505983069/19531250",
+        "-3538671/1562500",
+        "-22872987/15625000",
+        "0",
+        "-1756204091/97656250",
+        "0",
+        "0",
+        "3538671/1562500",
+        "-22872987/15625000",
+        "0",
+        "1841444759/97656250",
+        "0",
+        "0"
+      ],
+      [
+        "259015089/156250000",
+        "-789815739/312500000",
+        "-3538671/1562500",
+        "62099624121/15625000000",
+        "30374523/6250000",
+        "0",
+        "23431137/15625000",
+        "0",
+        "0",
+        "-10742527/3125000",
+        "-19211523/6250000",
+        "0",
+        "-18943611/15625000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-68618961/62500000",
+        "-22872987/15625000",
+        "30374523/6250000",
+        "491897450121/15625000000",
+        "0",
+        "904203/1250000",
+        "0",
+        "0",
+        "-19211523/6250000",
+        "-1588867/62500",
+        "0",
+        "-20193867/312500000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "53650301/12500000",
+        "0",
+        "-222110211/312500000",
+        "-6128487/62500000",
+        "0",
+        "0",
+        "-3650301/12500000",
+        "0",
+        "222110211/312500000",
+        "6128487/62500000"
+      ],
+      [
+        "3198448807/390625000",
+        "-13735673353/781250000",
+        "-1756204091/97656250",
+        "23431137/15625000",
+        "904203/1250000",
+        "0",
+        "300430983793/7812500000",
+        "0",
+        "0",
+        "-78152163/15625000",
+        "904203/1250000",
+        "0",
+        "-9526083727/312500000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-222110211/312500000",
+        "0",
+        "83930731121/15625000000",
+        "11129511/6250000",
+        "0",
+        "0",
+        "1216767/1250000",
+        "0",
+        "301401/3125000",
+        "-4119147/6250000"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-6128487/62500000",
+        "0",
+        "11129511/6250000",
+        "236461963121/15625000000",
+        "0",
+        "0",
+        "6128487/62500000",
+        "0",
+        "-4119147/6250000",
+        "156282/15625"
+      ],
+      [
+        "-94852011/156250000",
+        "625652661/312500000",
+        "3538671/1562500",
+        "-10742527/3125000",
+        "-19211523/6250000",
+        "0",
+        "-78152163/15625000",
+        "0",
+        "0",
+        "12238224121/15625000000",
+        "30374523/6250000",
+        "0",
+        "73664637/15625000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-68618961/62500000",
+        "-22872987/15625000",
+        "-19211523/6250000",
+        "-1588867/62500",
+        "0",
+        "904203/1250000",
+        "0",
+        "0",
+        "30374523/6250000",
+        "442036050121/15625000000",
+        "0",
+        "-20193867/312500000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3650301/12500000",
+        "0",
+        "1216767/1250000",
+        "6128487/62500000",
+        "0",
+        "0",
+        "53650301/12500000",
+        "0",
+        "-1216767/1250000",
+        "-6128487/62500000"
+      ],
+      [
+        "-3745681393/390625000",
+        "14794349947/781250000",
+        "1841444759/97656250",
+        "-18943611/15625000",
+        "-20193867/312500000",
+        "0",
+        "-9526083727/312500000",
+        "0",
+        "0",
+        "73664637/15625000",
+        "-20193867/312500000",
+        "0",
+        "214071038993/7812500000",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "222110211/312500000",
+        "0",
+        "301401/3125000",
+        "-4119147/6250000",
+        "0",
+        "0",
+        "-1216767/1250000",
+        "0",
+        "34069331121/15625000000",
+        "11129511/6250000"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "6128487/62500000",
+        "0",
+        "-4119147/6250000",
+        "156282/15625",
+        "0",
+        "0",
+        "-6128487/62500000",
+        "0",
+        "11129511/6250000",
+        "186600563121/15625000000"
+      ]
+    ],
+    "kinetic_Gram": [
+      [
+        "2",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2",
+        "4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2"
+      ]
+    ],
+    "raw_I_eigenvalues": [
+      -2.673031915507083,
+      0.3660578461907675,
+      0.47866674878650006,
+      0.7477304714504914,
+      3.707535391397504,
+      3.993478801135171,
+      4.193046098586734,
+      4.212971496903451,
+      4.817896180607333,
+      6.222051299777744,
+      7.19840944989027,
+      17.76300361380467,
+      23.733600837458816,
+      56.55732606138352,
+      95.7417146094941
+    ],
+    "raw_squared_eigenvalues": [
+      -3.1720810680347387,
+      0.4353744852215069,
+      0.8748679842337702,
+      2.5224941559211262,
+      4.4095935362877015,
+      4.749683131723223,
+      5.010738919556818,
+      5.218027342620081,
+      5.927331043614142,
+      8.561498793899235,
+      13.983129435495737,
+      28.227790647264,
+      67.23287914422839,
+      81.63763516267569,
+      114.37326291156513
+    ],
+    "generalized_I_eigenvalues": [
+      -1.3224152933444957,
+      0.18302892309538332,
+      0.23975984941181003,
+      1.853767695698752,
+      1.9967394005675845,
+      1.9999999999999998,
+      2.0030827449560618,
+      2.106485748451727,
+      2.3031356028212024,
+      2.8386821365733494,
+      3.5992047249451335,
+      5.024888098820733,
+      11.866800418729419,
+      28.26877382900582,
+      38.30247236794748
+    ],
+    "generalized_squared_eigenvalues": [
+      -1.571804379017804,
+      0.2176872426107526,
+      1.1066668640342132,
+      2.2047967681438494,
+      2.374841565861615,
+      2.3787195917369592,
+      2.5053694597784113,
+      2.594774344286042,
+      2.9377053030564007,
+      4.280749396949617,
+      5.304121516822843,
+      14.113895323632008,
+      26.981469473261534,
+      33.622085409902155,
+      48.91852681245821
+    ],
+    "original_raw_mass_ratio": 16.17244714284889,
+    "basis_variations": [
+      {
+        "basis_scale_bound": 2.0,
+        "raw_abs_curvature_mass_ratio": 23.397022379192006,
+        "generalized_eigenvalue_error": 1.4210854715202004e-14
+      },
+      {
+        "basis_scale_bound": 5.0,
+        "raw_abs_curvature_mass_ratio": 87.08503800163456,
+        "generalized_eigenvalue_error": 5.684341886080802e-14
+      },
+      {
+        "basis_scale_bound": 10.0,
+        "raw_abs_curvature_mass_ratio": 318.7473035633226,
+        "generalized_eigenvalue_error": 1.7763568394002505e-14
+      }
+    ],
+    "finite_difference_errors": [
+      {
+        "step": 0.001,
+        "max_error": 0.00019051525142188552
+      },
+      {
+        "step": 0.0003,
+        "max_error": 1.714729254587155e-05
+      },
+      {
+        "step": 0.0001,
+        "max_error": 1.900178112634876e-06
+      }
+    ],
+    "qualification": "A Frobenius kinetic metric is stipulated for coordinate diagnostics; the point is not a vacuum, so none of these eigenvalues is a derived physical mass spectrum."
+  },
+  "seesaw": {
+    "matrix": [
+      [
+        "0",
+        "549/5000",
+        "183/500",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-61/50",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "quark_rank": 2,
+    "pseudoinverse_complement": 0,
+    "source_replay": {
+      "kappa_max": 95.7417172399921,
+      "kappa_min": 0.3660581085592495,
+      "mass_ratio_Lambda_v": 16.172441569296556,
+      "Lambda_PS_GeV": 3978.4206260469527,
+      "m_nu_eV": 0.06563433697543833
+    },
+    "printed_static_claim": {
+      "Lambda_PS_GeV": 3900,
+      "m_nu_eV": 0.067
+    },
+    "qualification": "Singlet-to-triplet mixing requires color-breaking structure. A true color-singlet heavy-neutrino seesaw remains possible, with its own mass/Yukawa inputs."
+  },
+  "cutoff": {
+    "modular_map": "tau -> tau + 2",
+    "claimed_fixed_point_residual": 2,
+    "gap_equality_residual": "1/R^2",
+    "alternative_finite_integrals": [
+      {
+        "a_over_R": "1/4",
+        "integral": 0.5805649647699622,
+        "periodic_torus_gap": 1.0,
+        "one_antiperiodic_cycle_gap": 0.25,
+        "source_gap": 17.0
+      },
+      {
+        "a_over_R": "1/2",
+        "integral": 3.9478417604357436,
+        "periodic_torus_gap": 1.0,
+        "one_antiperiodic_cycle_gap": 0.25,
+        "source_gap": 5.0
+      },
+      {
+        "a_over_R": "1",
+        "integral": 19.739208802178716,
+        "periodic_torus_gap": 1.0,
+        "one_antiperiodic_cycle_gap": 0.25,
+        "source_gap": 2.0
+      },
+      {
+        "a_over_R": "2",
+        "integral": 63.1654681669719,
+        "periodic_torus_gap": 0.25,
+        "one_antiperiodic_cycle_gap": 0.25,
+        "source_gap": 1.25
+      }
+    ],
+    "arbitrary_target_identity": "log(8 / (8 exp(-(K-1)))) + 1 = K",
+    "recovered_cutoff": 6.658956944377301e-59,
+    "fixed_half_ratio_inverse_coupling": 3.772588722239781,
+    "qualification": "Boundary conditions, bundle/parity and metric must be specified. No beta function, compactification prescription or boundary datum deriving the exponent is supplied by the recovered attachment."
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "base_commit": "173398ba4e5453f9c2162f52551f925f9a16104a",
+  "main_at_start": "56f7b2f",
+  "canonical_manuscripts": 33,
+  "local_reconciliations_imported": [
+    "Riemann_Spectral_Critical_Line.tex",
+    "Critical_Line_As_Fibered_Object.tex"
+  ],
+  "papers": [
+    {
+      "path": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+      "sha256": "111daeb90062f8cb5adaa4a526b768d116834a3db0feebad59d58d3d3f619c42",
+      "bytes": 66265
+    },
+    {
+      "path": "papers/Form_Function_and_Asymmetry.tex",
+      "sha256": "c2be918abd8883ed1a713fd096df00c7667719b4888004e1b9ce0ca5913d89a3",
+      "bytes": 130538
+    },
+    {
+      "path": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+      "sha256": "7d1695721974a3b45251f66c7177b982d7a7adaeb24b3fd77ce9595d60463ccc",
+      "bytes": 50634
+    },
+    {
+      "path": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+      "sha256": "398b376729e7f495eaeecedf7e1950aaa8e3c83c3930e556449bc4a63abaad06",
+      "bytes": 159552
+    },
+    {
+      "path": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+      "sha256": "abb5cfe9251eaf83c6b862d98ad443b70d8f2be9561e3cde45d67058da27fd8e",
+      "bytes": 80789
+    },
+    {
+      "path": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+      "sha256": "697a103f7e3499326ddcff542228b7ab6f1c19486748dbfee99319205a5ba3fa",
+      "bytes": 44677
+    },
+    {
+      "path": "papers/discrete_geometry_formalism.tex",
+      "sha256": "8e9033b8f05caf1ccf9a4709352a4073479438c7a01d96342a6e887fb6357168",
+      "bytes": 6518
+    },
+    {
+      "path": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+      "sha256": "7c8839e825e647e78891540dc6caa1880437a51c40baae835600c53a9c7247bc",
+      "bytes": 18563
+    },
+    {
+      "path": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+      "sha256": "b5fd889c9d2286bdfa89debf70e541523c73530010dc41f02ac0f0c62946def1",
+      "bytes": 27632
+    },
+    {
+      "path": "papers/later_FF06_series/The_Geometry_Engine.tex",
+      "sha256": "3e1f13c9635cf0c9874d4592693a8ff5220e4b85cbcbf00203d799260a45774d",
+      "bytes": 16753
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+      "sha256": "4a792d183e09414d714395a87f667d8b1b2e9d322476062b980ebccb26d17d39",
+      "bytes": 17517
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+      "sha256": "c59c268cad09d7d67515279882caac794d9d2a36c74a10bccd054bb6c9950a0d",
+      "bytes": 28212
+    },
+    {
+      "path": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+      "sha256": "f016668c897227561ff994ba52745f8c530475fc995e95de6aec886131ccde1c",
+      "bytes": 40786
+    },
+    {
+      "path": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+      "sha256": "9b6d9b700a9c96bb0e0d511292f23265aed21e40a96fa1aed3a940e97528bb0a",
+      "bytes": 11480
+    },
+    {
+      "path": "papers/later_FF06_series/When_a_Number_Lies.tex",
+      "sha256": "064258196093ad1dab9f102259c6dab701037a1820f2a6f8f40c9cc7a6fe727f",
+      "bytes": 13858
+    },
+    {
+      "path": "papers/methodology/Form_Function_Relativity.tex",
+      "sha256": "bd841110abec41660f47d51a18bf7a453280b373e2fb15e9a81beefb85db84ca",
+      "bytes": 20205
+    },
+    {
+      "path": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+      "sha256": "f59ac6dbcc1eb6f56f438bcb326eab93baa70dccb35efe2f9ab2e36594ea4b7c",
+      "bytes": 14438
+    },
+    {
+      "path": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+      "sha256": "36ea3edb2525e199af9e745f615c6af088ab05d62430870baea2e9fd963b240c",
+      "bytes": 14411
+    },
+    {
+      "path": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+      "sha256": "84294a742d661f5ce59dfb239bf4f34222c58a01d832c4058b89f5063338ac9a",
+      "bytes": 11394
+    },
+    {
+      "path": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+      "sha256": "f3470ed542ed357a72e25257c600669f9bbfbb8a4ce48c8a9748b42fc1dca322",
+      "bytes": 16421
+    },
+    {
+      "path": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+      "sha256": "ee4dd3bc06b549333f47c65d82fe51a032e65f96830a5c30659282d024743612",
+      "bytes": 32877
+    },
+    {
+      "path": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+      "sha256": "e77c71d35259531caac989c54353efd016cc03d51292187343b7119e7ecc8769",
+      "bytes": 19819
+    },
+    {
+      "path": "papers/notes/Density_Engine_Many_Worlds.tex",
+      "sha256": "a7a87054cd585dc8424588b5c40dfdee885a9432c2ab7d4371e83609a68cf224",
+      "bytes": 19871
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+      "sha256": "c39f21aac11ea473dc22b89f4b22e5317303c57c6984eb7f9261e51f4b0de0eb",
+      "bytes": 17425
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+      "sha256": "c296af6a78bc1302641713748704db177e5a2aa106d303ffb70f827da238e4b6",
+      "bytes": 9256
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+      "sha256": "096cb688ae1e5bba46031b804bfdfa89fdf55ef4adbd762982d98c44e41c0b41",
+      "bytes": 18540
+    },
+    {
+      "path": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+      "sha256": "6fb3e7c7d10b6a133dcf08ad6b48a7de4c62bd136fc874cce6d9fb007be45b67",
+      "bytes": 11666
+    },
+    {
+      "path": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+      "sha256": "74aacda6bbbf7e60440d8b20c7a15acfa23e34d12fa0eab45c3d248e8f62150a",
+      "bytes": 30004
+    },
+    {
+      "path": "papers/notes/Klein_Foam_Monad.tex",
+      "sha256": "89edb252fb55b68d78e499b51d8e29ddb2adee7fde6aeebdef78fa1f43cfff90",
+      "bytes": 15039
+    },
+    {
+      "path": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+      "sha256": "c603157898a0fba0dcf564f7f71fec95fb3d91388f30dd97bc46389ff9fb7ef7",
+      "bytes": 8655
+    },
+    {
+      "path": "papers/notes/Mobius_Screw_Electron.tex",
+      "sha256": "2fe7c47d395a6983ae21ab0d762297514f03a57dfc7b61ac2e4adb6bc26b0bac",
+      "bytes": 14537
+    },
+    {
+      "path": "papers/notes/Prime_Gap_Transition_Operator.tex",
+      "sha256": "6630298f66f046cfb2b899fc0dd3cfd0614eed1f0159872e62d0a8210bd03371",
+      "bytes": 28023
+    },
+    {
+      "path": "papers/notes/Pythagorean_Lattice_Limits.tex",
+      "sha256": "eb4032528d011301f72d40a9a4e54c01f7799a0232e68eef13fc8f76f3b8f838",
+      "bytes": 16470
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sympy": "1.14.0",
+  "checks": {
+    "general_no_binding_square_identity": true,
+    "phase_invariant_potential_has_zero_Noether_charge_source": true,
+    "explicit_phase_breaking_supplies_charge_source": true,
+    "both_bidoublet_Yukawas_force_zero_overall_Phi_phase_charge": true,
+    "historical_norm_proxy_quadratic_changes_with_unmatched_generator_scale": true
+  },
+  "no_binding_condition": "b >= g^4/lambda_chi implies E >= g v |Q|",
+  "charge_breaking_source": "2*epsilon*x*y",
+  "bidoublet_phase_solutions": "{(q_R, q_R, 0)}",
+  "historical_proxy_quadratic": "-8*a**4 + 4*a**2",
+  "source_sha256": {
+    "code/condensate_energy/self_binding_contract.py": "1ba7a692d333049bba77106550eca2d8210dd5e1427d58a76ffe1283ff62ef89",
+    "papers/core_trilogy/Palatini_Gauge_Attractor.tex": "398b376729e7f495eaeecedf7e1950aaa8e3c83c3930e556449bc4a63abaad06",
+    "code/acs_codebase/extras/task2_lagrangian.py": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7",
+    "code/acs_codebase/extras/higgs_potential.py": "6fdfd08df0ab47a5c0de44247d6a6fb74f773da0d794b0aa966d627a81091015",
+    "docs/frontier/2026-09-11/Branch_Catalog.json": "828e9d567a7ffb158a7c235b0ca775f8867e449b148683bc195328f790361da5"
+  },
+  "ACS_embedding": {
+    "polynomial_ingredients": "present in source scalar sector",
+    "reduced_field_identification": "not established",
+    "conserved_charge": "required; not automatically supplied by scalar norm terms",
+    "direct_overall_bidoublet_phase": "obstructed if both displayed Yukawa couplings are nonzero",
+    "gauge_fields_and_other_scalar_directions": "not included in reduced-model tests",
+    "dimensionful_scale": "input, not predicted",
+    "generic_formation_from_zero_charge": "not demonstrated or implied"
+  }
+}

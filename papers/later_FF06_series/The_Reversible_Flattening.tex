@@ -21,6 +21,9 @@ Algebraic Representation as a Recoverable Compression of Relational Structure}\\
 \small with computational verification by Claude (Anthropic)}
 \date{\small Parent of \textit{The Geometry Engine} / \textit{When a Number Lies} \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -54,6 +57,11 @@ us both perform and \emph{verify} the inverse transposition. We keep the full ne
 falsified search heuristics and four architecture-integration hypotheses falsified against live source ---
 because the boundary, not the enthusiasm, is the result.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{Thesis}
 
@@ -105,7 +113,7 @@ Every operation that is homomorphic into exponent-vector structure is reversible
 relational form, exact against ground truth (oracle: standard libraries; seed \texttt{20260423}).
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 domain & operations & verification \\
 \midrule
@@ -117,7 +125,7 @@ lattice index / SNF & product of elementary divisors & $\sim\!1479$-digit index,
 multinomial multiplicity & $N!/\prod n_i!$ & $\sim\!4978$-digit $W$, exact \\
 radical / perfect power & squarefree kernel, exponent $\gcd$ & exact, $200$ values \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \begin{observation}[$14/14$ exact; the flattening visibly fails where the relation does not]
@@ -249,5 +257,18 @@ the otherwise-unrepresentable). Within those bounds it is exact, reproducible, a
 engine, dominance engine, and the reproducible ledger \texttt{verify\_ledger.py} ($14/14$ exact) accompany
 this paper (committed as the display listing \texttt{verify\_ledger\_disp.py} in this directory;
 the runnable original is not in the repository). SIP License v1.1. Seed \texttt{20260423}.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Reversibility requires an injective encoding on the stated domain and a defined inverse on its image. Preservation of one operation alone is insufficient to establish lossless reconstruction. The later monograph's domain restrictions govern the general reading of this short paper. In physical applications an additional observation map may discard information even when the internal representation is reversible; neither property by itself identifies a microscopic action.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

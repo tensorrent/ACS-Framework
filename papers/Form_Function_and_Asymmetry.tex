@@ -60,6 +60,9 @@
 
 \date{March 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -121,6 +124,11 @@ The Barbero--Immirzi parameter is derived from the ACS information balance
 condition, yielding $\gamma = 0.274$ via the discrete spin-$j$ area spectrum,
 matching the Meissner partition function result.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 \newpage
@@ -606,7 +614,7 @@ from the empirical distributions (no binning, no floating point).
 Results (coupling strength implicitly fixed by the deterministic map):
 
 \begin{center}
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Configuration & $\Delta I = \TE(X{\to}Y)-\TE(Y{\to}X)$ & Direction \\
 \midrule
@@ -615,7 +623,7 @@ Symmetric ($f=g=x^2$)               & $-0.000063$ & $\approx 0$ \\
 Asymmetric ($f=x^2$, $g=|y-8|$)    & $-1.499$    & Function $\to$ Form \\
 Swapped ($f=|x-8|$, $g=y^2$)       & $+1.499$    & Form $\to$ Function \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The sign reversal is exact: swapping which function is the polynomial flips
@@ -740,11 +748,12 @@ to be postulated in advance:
     (\cite{BKR1955}).  This route requires no
     modification of the gravitational action.
   \item \textbf{Poincar\'{e} gauge gravity (PGT)}: augmenting the Palatini action
-    with the parity-preserving quadratic torsion kinetic term
+    with the parity-preserving quadratic torsion term
     $\beta\,T^a\wedge{*T_a}$ (\cite{Kibble1961,Sciama1964,Hehl1976})
-    yields a propagating torsion field as a purely geometric degree of freedom.
-    The ACS framework is compatible with PGT; the Palatini case ($\beta=0$)
-    is the degenerate ACS limit.
+    changes the algebraic contortion equation. It does not, in this smooth
+    metric-compatible action, supply a propagating torsion mode. A dynamical
+    torsion extension requires additional terms and a separate mode analysis.
+    The earlier description of this term as kinetic is withdrawn.
 \end{enumerate}
 Case (b) establishes that torsion can precede any spinor field; the
 Atiyah--Singer chiral modes of Theorem~\ref{thm:gravity-acs} therefore
@@ -1010,7 +1019,7 @@ Historical instances (Table~\ref{tab:acs-instances}):
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Domain & ACS Form & ACS Function \\
 \midrule
@@ -1020,7 +1029,7 @@ Gauge theory & vierbein $e$ & connection $\omega$ \\
 Quantum gravity & triad $\tilde{E}$ & Ashtekar $A$ \\
 Number theory & primes $\{p_n\}$ & Riemann zeros $\{\gamma_k\}$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{ACS instances across domains.  The RG examples (top two rows) provide
 proved instances of the inversion arc (Zamolodchikov $c$-theorem~\cite{Zamolodchikov1986} and the
 Komargodski--Schwimmer $a$-theorem~\cite{KomargodskiSchwimmer2011}), anchoring the framework in known results.}
@@ -1050,11 +1059,12 @@ the new attractor.
 
 The cycle is:
 \[
-  T^a = 0 \;\;\xrightarrow{\;\text{torsion activates}\;}\;\;
-  T^a \neq 0 \;\;\xrightarrow{\;\text{chiral modes}\;}\;\;
-  \text{spinor bundle} \;\;\xrightarrow{\;\text{complexify}\;}\;\;
-  \mathfrak{su}(3) \;\;\xrightarrow{\;\text{confine}\;}\;\;
-  \text{new constraint}
+\begin{gathered}
+  T^a=0 \xrightarrow{\text{torsion activates}} T^a\ne0
+  \xrightarrow{\text{chiral modes}} \text{spinor bundle},\\
+  \text{spinor bundle}\xrightarrow{\text{complexify}}\mathfrak{su}(3)
+  \xrightarrow{\text{confine}}\text{new constraint}.
+\end{gathered}
 \]
 Each stage is one step of the inversion arc.
 The Lie bracket $[f,g]$ at each stage measures the asymmetry
@@ -1095,7 +1105,7 @@ being the emergent pattern.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lllll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lllll}
 \toprule
 Domain & Form $\Form$ & Function $\Func$ & Bracket $[f,g]$ & Pattern \\
 \midrule
@@ -1106,7 +1116,7 @@ Tensegrity & Cables & Struts & Equilibrium & Zero modes \\
 RG flow & UV couplings & IR couplings & $\beta$-function & $c$-theorem \\
 Quantum gravity & $\tilde{E}^a_i$ & $A^i_a$ & LQG constraints & Spin foam \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{All five domains as projections of the ACS framework.}
 \end{table}
 
@@ -1193,7 +1203,7 @@ at site $s$ and $\mathrm{nn}(t)$ denotes nearest neighbours.
 \textbf{Key result:} the spectral index (positive minus negative eigenvalue count), 
 measured across six lattice sizes with exact integer Hamiltonian:
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccc}
 \toprule
 Lattice & $T^a = 0$ index & $T^a \neq 0$ index & $|\mathrm{index}|/N$ & $\sum|T|$ \\
 \midrule
@@ -1204,7 +1214,7 @@ $20 \times 20$ & 0 & 121 & 0.302 & 282 \\
 $24 \times 24$ & 0 & 175 & 0.304 & 398 \\
 $32 \times 32$ & 0 & 309 & 0.302 & 690 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The ratio $|\mathrm{index}|/N$ converges to $\approx 0.30$: the spectral index 
@@ -1252,7 +1262,7 @@ floating point).  The results are shown in Table~\ref{tab:integer}.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Configuration & $\Delta I = \TE(X{\to}Y)-\TE(Y{\to}X)$ & Direction \\
 \midrule
@@ -1261,7 +1271,7 @@ Symmetric ($f=g=x^2$)               & $-0.000063$ & $\approx 0$ \\
 Asymmetric ($f=x^2$, $g=|y-8|$)    & $-1.499$    & Function $\to$ Form \\
 Swapped ($f=|x-8|$, $g=y^2$)       & $+1.499$    & Form $\to$ Function \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Exact integer automaton confirms sign reversal.}
 \label{tab:integer}
 \end{table}
@@ -1290,7 +1300,7 @@ The Wronskian of mode functions $\varphi_k, \varphi_j$ is:
 which is the 2nd-order ACS bracket $[\mathrm{Func}_k, \mathrm{Func}_j]$ 
 in function space.  Numerical evaluation at $x = \ln 2$:
 \begin{center}
-\begin{tabular}{ccrr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccrr}
 \toprule
 $(k,j)$ & $(\gamma_k, \gamma_j)$ & $W[\varphi_k,\varphi_j]$ & $|W|/(A_k A_j)$ \\
 \midrule
@@ -1299,7 +1309,7 @@ $(2,3)$ & $(21.022, 25.011)$ & $+3961.1$ & $1.1 \times 10^9$ \\
 $(3,4)$ & $(25.011, 30.425)$ & $-13467.9$ & $7.8 \times 10^9$ \\
 $(4,5)$ & $(30.425, 32.935)$ & $+31347.7$ & $3.1 \times 10^{10}$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 All Wronskians are non-zero: the Riemann zero modes are \emph{non-commuting} 
@@ -1327,7 +1337,7 @@ bracket implies combination frequencies $\gamma_k \pm \gamma_j$ not present in t
 original zero list --- the zeros mixing with \emph{each other} (same-species). This is
 not a resonance with the primes: no direct zero--prime frequency alignment is observed,
 and the difference-tone channel across the prime--zero boundary is tested and falsified
-(cf.\ \emph{Spectral Witness Refinement} \S7.2, \texttt{papers/core\_trilogy/Spectral\_Witness\_Refinement.tex}; Elimination Ledger, \texttt{docs/Elimination\_Ledger.md}).
+(cf.\ \emph{Spectral Witness Refinement} \S7.2, \nolinkurl{papers/core_trilogy/Spectral_Witness_Refinement.tex}; Elimination Ledger, \nolinkurl{docs/Elimination_Ledger.md}).
 
 The cross-species relation is of a different kind. The primes form the structural
 boundary (the instrument), but the explicit formula $\psi(x)$ does not make the two
@@ -1629,7 +1639,7 @@ $H_2 = \mathrm{diag}(0,1,-1,0)$ sit in the torsion sector
 Their eigenvalues on the fundamental $\mathbf{3}$ representation
 define the three colour charges:
 \begin{center}
-\begin{tabular}{lrrl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lrrl}
 \toprule
 State & $h_1$ & $h_2$ & Colour \\
 \midrule
@@ -1638,7 +1648,7 @@ $|1\rangle$ & $-1$ & $+1$ & Blue \\
 $|2\rangle$ & $0$ & $-1$ & Green \\
 $|3\rangle$ & $0$ & $0$ & White (colourless/lepton) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 The three colour weights form a triangle in $(h_1, h_2)$-space.
 The colour quantum numbers are \emph{geometric}: they measure
@@ -1682,19 +1692,15 @@ torsion--Lorentz pairs.
 A physical gluon exchange requires both sectors simultaneously.
 \end{remark}
 
-\begin{remark}[Confinement as ACS attractor]
-The colour singlet $|\psi\rangle = (|R\rangle + |B\rangle + |G\rangle)/\sqrt{3}$
-has $\langle H_1\rangle = \langle H_2 \rangle = 0$: zero eigenvalue
-under both Cartan generators, zero information asymmetry in both
-torsion directions.
-In ACS language, confinement is the statement that the only
-long-distance-observable states are at the attractor $\DI = 0$
-in the colour sector.
-The QCD vacuum screens unconfined colour charge ($\DI \neq 0$)
-by creating quark--antiquark pairs until a colour singlet
-($\DI = 0$) is formed.  This is the constraint--attractor
-cycle of Section~\ref{sec:holographic}: the colour-charged state
-is the constraint; the singlet is the attractor.
+\begin{remark}[Color balance is not a singlet: corrected 24 September 2026]
+The vector $|\psi\rangle=(|R\rangle+|B\rangle+|G\rangle)/\sqrt3$
+belongs to the fundamental triplet. Its Cartan expectations vanish, but
+it is not annihilated by the generators. With $T_a=\lambda_a/2$, its
+quadratic Casimir is $4/3$, and the sum of the two Cartan variances is
+$1/3$. A vanishing expectation is not a zero eigenvalue or a singlet.
+Actual singlets require the appropriate tensor-product state space,
+such as $3\otimes\overline3$ or the antisymmetric sector of $3^{\otimes3}$.
+The earlier inference of confinement from this balanced vector is withdrawn.
 \end{remark}
 
 \begin{figure}[ht]
@@ -2314,6 +2320,19 @@ result reported in this paper, except where explicitly noted.
     residuals identically zero.  Third-order BCH term
     $\beta_3 = (ac^2x^2/12,\; b^2dy^2/12) \neq 0$ for generic parameters.
 \end{itemize}
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The structural form/function vocabulary remains a way to organize specified calculations. It does not by itself determine a physical action or its coefficients. The complete scalar sector contains 17 quartic and four quadratic coefficients; six quartic directions are invisible on the neutral family. A scale family changes physical masses while preserving dimensionless labels. Earlier reduced parameter counts apply only to their stated ansatz. Cross-domain identifications require an explicit map preserving the relevant equations and observables, rather than a shared name or a numerical match.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{99}
 

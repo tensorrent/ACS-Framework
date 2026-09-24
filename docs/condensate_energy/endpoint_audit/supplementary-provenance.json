@@ -1,0 +1,16 @@
+[
+  {
+    "source": "/Users/coo-koba42/.gemini/antigravity/brain/a4757387-3e93-4519-8010-1d2258d4cb8c/scratch/mac02_soldering.py",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/mac02_soldering.py",
+    "sha256": "a10ea31810a84b3579f980ff07fd48411f8b3133ae109eeb0687351f837c2285"
+  },
+  {
+    "source": "/Users/coo-koba42/dev/reports/rh-research-audit-20260923/seagate-extension/history-text/a11a532eb45788f768d00031e3d4a4158b834055a6a6e5a0d27ee4b00df6cff5.txt",
+    "source_sha256": "a11a532eb45788f768d00031e3d4a4158b834055a6a6e5a0d27ee4b00df6cff5",
+    "snapshot": "docs/condensate_energy/endpoint_audit/source-snapshots/M1-M2-archive-excerpt.txt",
+    "sha256": "95498d252f293ccb4fb38f8072789ba4dcb5a5f855fb69977e5430f55cb3bb9b",
+    "character_start": 3396,
+    "character_end": 4596,
+    "scope": "Exact excerpt; no full-record semantic completeness claim"
+  }
+]

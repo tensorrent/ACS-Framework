@@ -1,0 +1,30 @@
+{
+  "status": "Source endpoint stage complete; original ACS goal active",
+  "checks_passed": 52,
+  "source_entries_reconciled": 12,
+  "targeted_inventory_reconciled": 36,
+  "full_replays": 10,
+  "executable_duplicates": 2,
+  "retained": [
+    "Matrix norm and bracket-parity identities",
+    "Koide common-scale invariance",
+    "Conditional flavor-differential one-loop running"
+  ],
+  "failed": [
+    "Fixed normalized neutrino suppression",
+    "Displayed neutrino unit conversions",
+    "Running closes the historical angle gap",
+    "Unnormalized proxy selects Higgs scale"
+  ],
+  "remaining": [
+    "Integrated original-scope action-to-carrier completion audit",
+    "Broader relevant source coverage reconciliation"
+  ],
+  "limits": [
+    "Diagnostic uses historical mixed-scheme numerical inputs, not a precision SM mass fit",
+    "All quark Yukawas except top and all neutrino Yukawas are set to zero",
+    "No thresholds or new physics between the stated endpoints are included",
+    "RG evolution is conditional on boundary values; no ACS matching scale is derived",
+    "The exact Fourier angle does not force the Koide radius ratio to sqrt(2)"
+  ]
+}

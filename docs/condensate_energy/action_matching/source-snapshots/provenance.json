@@ -1,0 +1,55 @@
+{
+  "sources": {
+    "phase8_full_qfp.py": {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase8_full_qfp.py",
+      "sha256": "8ccf48ad3cb16647653d382487bf809a5f4ac2c89f68b569a652a74fa1a5b67d"
+    },
+    "task_A_parameters.py": {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_A_parameters.py",
+      "sha256": "4952747c729ec3439617a70a90f43861f369009f1ccc60668fb2d6850d2e518d"
+    },
+    "higgs_derivation.py": {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_derivation.py",
+      "sha256": "695b0cda7430a402d3a67679978686e09e6b60ad1c6fbf291257fd561900235f"
+    },
+    "higgs_mass_ratio.py": {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_mass_ratio.py",
+      "sha256": "d7cdf5e658c8686500eb99ed6b6e749c9a699b3132efc0ad4130f7c1058363a3"
+    },
+    "seagate_higgs_from_acs.py": {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/higgs_from_acs.py",
+      "sha256": "d03c877defa00efc01bede9e6df8167edd0e74b4e86ec0d6b27e981c0129db3e"
+    },
+    "seagate_bl_vev_projection.py": {
+      "path": "/Volumes/Seagate 4tb/higgs_bivev/bl_vev_projection.py",
+      "sha256": "8c49c34fe07cb80eeb778d73def25debf9d88dfe2d059395f848506e5d33b0c2"
+    },
+    "seagate_higgs_potential.py": {
+      "path": "/Volumes/Seagate 4tb/higgs_bivev/higgs_potential.py",
+      "sha256": "e97c0587a2d71d26254ec124a0278d939775e52ae7a513ebc416d21880361f38"
+    },
+    "baseline_normalization_flavor_constraints.py": {
+      "archive": "docs/frontier/2026-09-11/ACS_Frontier_Evidence.zip",
+      "chain": [
+        "acs-parallel-frontier-20260911/Prior_Evidence.zip",
+        "acs-yukawa-certification-20260911/Prior_Evidence.zip",
+        "acs-rg-extension-20260911/Prior_Evidence.zip",
+        "acs-open-continuation-20260911/Baseline_Evidence.zip",
+        "acs-branch-map-20260911/checks/normalization_flavor_constraints.py"
+      ],
+      "sha256": "22e3d6caa5dcff77adec0457bc821f082dbec6d8f9d92557d3bba4053752dec4"
+    },
+    "baseline_result.json": {
+      "archive": "docs/frontier/2026-09-11/ACS_Frontier_Evidence.zip",
+      "chain": [
+        "acs-parallel-frontier-20260911/Prior_Evidence.zip",
+        "acs-yukawa-certification-20260911/Prior_Evidence.zip",
+        "acs-rg-extension-20260911/Prior_Evidence.zip",
+        "acs-open-continuation-20260911/Baseline_Evidence.zip",
+        "acs-branch-map-20260911/attempts/normalization_flavor_constraints_20260911T174552705119Z/result.json"
+      ],
+      "sha256": "3e657b516bf8b724a32e971dba57f0534bf3014f51954d071bfaa3da65b7dc71"
+    }
+  },
+  "scope": "Relevant source families and earlier baseline recovered; no claim of an exhaustive whole-drive or chat search."
+}

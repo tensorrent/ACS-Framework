@@ -1,0 +1,24 @@
+[
+  {
+    "path": "docs/frontier/2026-09-11/ACS_Frontier_Evidence.zip",
+    "sha256": "aa30efed92490592a8fde49970d9573107d1bd0909f076b920190113443e7485"
+  },
+  {
+    "member": "acs-parallel-frontier-20260911/Prior_Evidence.zip",
+    "sha256": "49158f05a0c3f030b6ea02dc88fc9c50185966b18890c8809d8befd4d3f4b8ae"
+  },
+  {
+    "member": "acs-yukawa-certification-20260911/Prior_Evidence.zip",
+    "sha256": "9a2d2c167daaa6d65356cfb6caadd65c4e788478fc4b6469231038e9629e3e2f"
+  },
+  {
+    "member": "acs-rg-extension-20260911/support/scalar_invariant_basis.py",
+    "sha256": "246f4215a2622d73b83424e9c84e5c9fb395fe510867bb4a476d680baa7165fc",
+    "snapshot": "docs/condensate_energy/charge_audit/source-snapshots/scalar_invariant_basis.py"
+  },
+  {
+    "member": "acs-rg-extension-20260911/checks/full_scalar_basis.py",
+    "sha256": "6c08934979e373aad514dd45d45be3496a53b5f57cedb5db40a5e12990c520ed",
+    "snapshot": "docs/condensate_energy/charge_audit/source-snapshots/full_scalar_basis.py"
+  }
+]

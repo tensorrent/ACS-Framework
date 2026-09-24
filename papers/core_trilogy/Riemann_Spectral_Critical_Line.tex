@@ -35,13 +35,15 @@
 \usepackage[labelfont={bf,small,color=acsprimary!90!black},
             textfont={small,it}]{caption}
 \usepackage{hyperref}
+\usepackage{xurl}
 \usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
 
 \geometry{top=1.15in,bottom=1.15in,left=1.2in,right=1.2in,
           headheight=16pt,headsep=0.25in,footskip=0.45in}
 
 \hypersetup{colorlinks=true,linkcolor=acsprimary,citecolor=acssecondary,
-            urlcolor=acsaccent,pdfpagemode=UseOutlines,bookmarksopen=true}
+            urlcolor=acsaccent,pdfpagemode=UseOutlines,bookmarksopen=true,pageanchor=false}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -97,6 +99,9 @@
         \small \texttt{Riemann Spectral ACS}}
 \date{March 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 %% ═══════════════════════════════════════════════════════════════════════════
@@ -121,6 +126,11 @@
   {\large\bfseries Bradley Wallace}\\[0.25em]
   {\small\itshape\color{acsslate} Independent Researcher}
 \end{center}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.5in}
 
@@ -132,49 +142,35 @@
 \end{center}
 \vspace{0.5em}
 \small\noindent
-We apply the Asymmetric Codependent System (ACS) framework~\cite{Wallace2026a}
-to number theory.  The prime sequence $\{p_n\}$ (Form) and Riemann zero
-sequence $\{\gamma_k\}$ (Function) are coupled through the explicit formula
-$\psi(x) = x - \sum_\rho x^\rho/\rho$.  We show (Theorem~\ref{thm:FN-acs})
-that the Riemann Hypothesis implies stationarity of the spectral function
-$F_N(x)$ via the AM--GM inequality, and propose the converse
-(Conjecture~T4$'$; proved in Section~\ref{sec:converse} conditionally
-on an unproved minimum-gap bound) as a new characterisation of RH.  A variance-based
-argument, confirmed numerically with 100 Riemann zeros from the Odlyzko
-tables, shows that off-critical zeros produce unbounded variance growth
-in $F_N$.  The stationarity diagnostic is then empirically validated
-at scale on the full $2{,}001{,}052$ zeros of Odlyzko's \texttt{zeros6}
-reference dataset: the unperturbed scaling exponent satisfies
-$\alpha \approx 0$ across six decades of $N$, off-line injection
-recovers $\alpha = 2\sigma - 1$ to $\sim 1\%$ accuracy, and the
-cross-correlation decay sharpens to $|C_N| \sim N^{-0.95}$,
-approaching the deterministic-cancellation bound.  The Wronskian
-$W[\varphi_k,\varphi_j] \neq 0$ is verified on all 1{,}225 pairs of
-the first 50 zeros, establishing a non-degenerate antisymmetric
-bilinear form on the zero modes.  The explicit formula is mapped
-onto a 2D stress tensor whose flow is purely rotational at
-$\sigma = 1/2$ (closed loops) and spiral elsewhere, identifying the
-critical line as the unique center manifold.  We then extend the analysis
-in three directions.  First, a Tartini-tone characterisation:
-Montgomery's pair correlation $R_2$ is confirmed at $N=5{,}000$;
-the Rudnick--Sarnak 3-level correlation $R_3$ matches GUE to
-RMSE $0.051$ at $N=50{,}000$; and the explicit-formula Fourier dual
-$F_N(\omega) = (1/N)\sum_k\cos(\omega\gamma_k)$ at $N=10^5$ has its top
-$20$ peaks aligning with prime-power positions $\log(p^k)$ to within
-mean distance $5\times 10^{-5}$ (random baseline $4.3\times 10^{-2}$;
-including the prime power $2^6=64$).  Second, an L-function generalisation:
-for $L(s,\chi_4)$, the Dirichlet character is recovered as a $\pm$ sign
-assignment on $F_L(\omega)$ peaks ($19/19=100\%$ sign accuracy at $N=122$
-zeros); cross-correlation combinations $(F_\zeta\pm F_L)/2$ decompose
-primes by residue class mod 4 ($15/15$ accuracy each direction);
-and for the Dedekind zeta $\zeta_K$ of $K=\mathbb{Q}(i)$, the split/inert
-prime-ideal structure of $\mathbb{Z}[i]$ is recovered with a $5.7\times$
-amplitude ratio.  Third, a Hilbert--P\'{o}lya constraint specification:
-we show GUE-matrix eigenvalues match the pair correlation of the Riemann
-zeros to within $0.003$ RMSE but fail the Fourier-dual constraint by
-$40\times$, establishing that GUE statistics alone are necessary but
-not sufficient.  An executable constraint test suite is provided.
-No assumption about the truth of RH is made.
+We study finite spectral diagnostics linking prime and zero descriptions of
+the Riemann zeta function through the classical explicit formula. Fixed
+finite sums built from critical-line coefficients have bounded variance
+for arbitrary real input ordinates. A separate elementary theorem detects
+active positive real exponents in a finite exponential sum after identical
+exponents are combined; it needs no quantitative minimum-gap assumption.
+Neither statement identifies the real parts of actual zeta zeros from
+their imaginary parts.
+
+Historical calculations report variance diagnostics through $2{,}001{,}052$
+supplied ordinates, finite Wronskian tests, prime-power Fourier signatures,
+and character-dependent $L$-function signatures. They characterize the
+specified observations and model families. Some earlier numerical-to-theorem
+inferences are withdrawn: a sampled cross-correlation is not a global
+supremum, a fixed finite bound is not an infinite-sum bound, and a
+self-adjoint diagonal matrix constructed from real ordinates does not
+establish Hilbert--P\'olya identification.
+
+The corrected arithmetic criterion is the classical equivalence between
+RH and $\psi(x)-x=O(\sqrt{x}\log^2x)$. In logarithmic coordinates, the
+full normalized error is $O(u^2)$ under RH, whereas the canonical code
+computes a fixed finite bounded sum. Proving the full bound independently
+of RH, or constructing a natural operator with complete spectral
+identification $z_\rho=-i(\rho-1/2)$, remains open. The critical line is a
+defined one-dimensional locus; a geometric rendering or a proposed
+underlying carrier does not change that statement. This revision applies
+the existing Frontier corrections and preserves the boundary between
+finite evidence, conditional results, and the unsolved RH claim.
+
 \end{minipage}
 \end{center}
 
@@ -184,6 +180,7 @@ No assumption about the truth of RH is made.
 \end{titlepage}
 
 \clearpage
+\hypersetup{pageanchor=true}
 \pagenumbering{roman}
 \setcounter{page}{1}
 \markboth{Contents}{}
@@ -191,6 +188,26 @@ No assumption about the truth of RH is made.
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+
+\section*{Scope correction: 22 September 2026}
+The September Frontier audit already separated finite sums, full arithmetic
+error, and natural-operator identification. This revision incorporates those
+corrections into the live text. The former AM--GM non-cancellation argument,
+gap-dependent converse, zero-valued stability ratio, exclusive pure-cosine
+shear derivative, and constant bound for
+the full normalized arithmetic error are withdrawn in their earlier forms.
+Finite numerical diagnostics remain historical measurements with their stated
+input families; they do not discharge the missing identification or infinite
+limit. The source history and dated Frontier snapshots retain the earlier text.
+Other physical and information-theoretic identifications in this paper require
+their own hypotheses; this scoped revision does not certify them.
+
+For clarity, the critical line is the one-real-dimensional set
+$L=\{s:\Re s=1/2\}$. The vertical reflection is
+$R(s)=1-\overline{s}$, with $\operatorname{Fix}(R)=L$;
+$s\mapsto1-s$ alone fixes only the point $1/2$. A change of coordinates can
+bend the image of $L$ without changing its intrinsic dimension. The completed
+zeta function's symmetries do not force its zeros to lie on this fixed locus.
 
 \section{The ACS Framework (Summary)}
 \label{sec:acs}
@@ -216,8 +233,11 @@ The prime explicit formula (Riemann--von Mangoldt; see~\cite{Davenport2000} for 
   \psi(x) = x - \sum_\rho \frac{x^\rho}{\rho} - \log(2\pi) - \tfrac{1}{2}\log(1-x^{-2}),
 \end{equation}
 where the sum runs over non-trivial zeros $\rho = \sigma + i\gamma$ of $\zeta$.
-Restricting to the first $N$ zeros and stripping the growth envelope $\sqrt{x}$, 
-we define:
+For supplied positive real ordinates, using critical-line coefficients,
+define the finite diagnostic below. Its argument is logarithmic: here
+$x=\log p$, rather than the arithmetic argument in the preceding formula.
+This definition has already fixed the real parts to $1/2$; it is not the
+general zero contribution when the real parts are unknown.
 \begin{equation}
   F_N(x) = \sum_{k=1}^N A_k \varphi_k(x), 
   \quad A_k = \frac{1}{\tfrac{1}{4}+\gamma_k^2}, 
@@ -239,10 +259,11 @@ displayed against $\ln x$.
 \textbf{(C3)} the \emph{general-$\sigma$} form
 $\varphi_k(t) = e^{\sigma t}\left[\sigma\cos(\gamma_k t) + \gamma_k\sin(\gamma_k t)\right]/(\sigma^2+\gamma_k^2)$,
 used in the harmonic-oscillator remark \emph{and in every quoted Wronskian
-magnitude}.  The three agree in what they represent --- a single zero's
-contribution to the explicit formula --- and differ only by normalisation,
-which cancels in every ratio and in every stationarity statement, but not in
-absolute magnitudes.
+magnitude}. These are distinct observables or rescalings and must not be
+substituted for one another in a boundedness, variance, or growth claim.
+A variable-dependent envelope need not cancel in a ratio or a stationarity
+statement. The actual normalized full-zero contribution in logarithmic
+coordinate $u$ is proportional to $e^{(\rho-1/2)u}/\rho$.
 
 \medskip
 \noindent
@@ -257,55 +278,28 @@ $\max |W| = 0.1921$, with no vanishing entry --- reproducing the quoted range.
 The same bracket evaluated under C2 spans $[6.4\times10^{-4},\, 19.2]$, some
 five orders of magnitude higher; the non-vanishing conclusion is identical
 under either, but the magnitudes are not comparable across conventions.
-(Source: \texttt{code/acs\_codebase/extras/riemann\_tensor.py}.)
+(Source: \path{code/acs_codebase/extras/riemann_tensor.py}.)
 \end{remark}
 
-\begin{theorem}[$F_N(x)$ stationarity as ACS consequence]\label{thm:FN-acs}\label{thm:T4}
-The pair $(\mathrm{Form}, \mathrm{Func}) = (\{p_n\}, \{\gamma_k\})$ --- prime 
-distribution and Riemann zero distribution --- constitutes an ACS in which:
-\begin{itemize}[noitemsep]
-  \item Form = $\{p_n\}$ encodes the boundary structure of $\mathbb{Z}$ 
-    (multiplicative skeleton).
-  \item Function = $\{\gamma_k\}$ encodes the spectral dynamics of $\zeta$ 
-    (zeros drive oscillation).
-  \item Coupling: the explicit formula $\psi(x) = \sum_\rho x^\rho/\rho$.
-  \item Asymmetry: spectral weights $A_k = 1/(\tfrac{1}{4}+\gamma_k^2)$ 
-    decay as $\gamma_k^{-2}$ --- the Function modulates Form with a specific 
-    asymmetric weight that is exact only when $\sigma = \tfrac{1}{2}$.
-\end{itemize}
-The Riemann Hypothesis \emph{implies} stationarity of $F_N(x)$: 
-off-critical zeros ($\sigma \neq \tfrac{1}{2}$) break the 
-Form--Function balance, producing a non-stationary $F_N$ via the 
-AM--GM inequality $x^\sigma + x^{1-\sigma} \geq 2x^{1/2}$. 
-The converse (stationarity $\Rightarrow$ RH) is Conjecture~T4$^\prime$
-(Section~\ref{sec:open}); a version conditional on a minimum-gap bound
-is proved as Theorem~\ref{thm:T4prime}.
+\begin{theorem}[Bounded variance of a fixed finite diagnostic]\label{thm:FN-acs}\label{thm:T4}
+For every fixed $N\ge1$ and any real ordinates $\gamma_1,\ldots,\gamma_N$,
+the function $F_N$ defined above satisfies
+\[
+ |F_N(x)|\le B_N:=\sum_{k=1}^N(1/4+\gamma_k^2)^{-1/2}.
+\]
+Consequently its variance under any probability measure is at most $B_N^2$.
+In particular the stationarity measure of Definition~\ref{def:stationarity}
+is bounded for each fixed $N$. No bound uniform in $N$ is asserted.
 \end{theorem}
-
-\begin{proof}[Proof sketch]
-On the critical line $\sigma = \tfrac{1}{2}$, each conjugate zero pair 
-$\tfrac{1}{2} \pm i\gamma$ contributes envelope $2\sqrt{x}$ to $\psi(x)$.  
-After dividing by $\sqrt{x}$ to form $F_N$, the envelope is constant: 
-$F_N$ is stationary in variance.
-
-If $\sigma \neq \tfrac{1}{2}$, the pair $\sigma + i\gamma$ and 
-$(1-\sigma) + i\gamma$ contribute $x^\sigma + x^{1-\sigma}$.  
-By AM--GM, $x^\sigma + x^{1-\sigma} \geq 2x^{1/2}$, with equality 
-iff $\sigma = \tfrac{1}{2}$.  The non-cancellation for the finite sum
-follows from the strict positivity of each excess:
-for each zero pair with $\sigma \neq 1/2$, the contribution
-$x^\sigma + x^{1-\sigma} - 2x^{1/2} > 0$ is strictly positive,
-and a finite sum of strictly positive terms remains strictly positive.
-After dividing by $\sqrt{x}$, the 
-residual $x^{|\sigma - 1/2|} \to \infty$: $F_N$ is non-stationary.
-
-Numerical confirmation: segment-wise regression of $F_{25}(x)$ on 
-$x \in [\ln 2, \ln(10^4)]$ gives slope $p$-value consistent 
-with stationarity, as required by RH
-(see the verification suite for parameters; the verification has
-since been extended to $N = 2{,}000{,}000$, see
-Section~\ref{sec:finite-sample}).
+\begin{proof}
+The amplitude of $\tfrac12\cos(\gamma_k x)+\gamma_k\sin(\gamma_k x)$
+is at most $\sqrt{1/4+\gamma_k^2}$. Multiply by $A_k$, sum by the
+triangle inequality, and use $\operatorname{Var}(F_N)\le\mathbb E[F_N^2]$.
 \end{proof}
+Under RH these coefficients represent critical-line zero contributions.
+The bound itself is also true for synthetic ordinates and cannot test RH.
+The former AM--GM argument bounded unsigned envelopes; it did not establish
+non-cancellation of the complex, signed explicit-formula terms.
 
 \subsection{The Wronskian as a Lie bracket in function space}
 
@@ -318,7 +312,7 @@ so heuristic Hamiltonian readings of the Wronskian-as-bracket structure
 do not transfer.
 
 \begin{proposition}[Wronskian--Lie identification]\label{prop:wronski-lie}
-Define, on the space $\mathcal{C}^1((0,\infty))$ of differentiable functions,
+Define, on the space $\mathcal{C}^{\infty}((0,\infty))$ of smooth functions,
 the bilinear operation
 \[
   [f,g](x) \;=\; f'(x)\,g(x) - g'(x)\,f(x).
@@ -339,7 +333,7 @@ correction term:
   W[f g, h] - \bigl(f\, W[g, h] + g\, W[f, h]\bigr) \;=\; -f g h'.
 \end{equation}
 This identity is verified symbolically in
-\texttt{src/paper\_b/wronskian\_leibniz.py} (returning the exact
+\path{src/paper_b/wronskian_leibniz.py} (returning the exact
 correction $-fgh'$ in SymPy) and numerically with
 $f = \sin x$, $g = \cos 2x$, $h = e^{-x/10}$ at $x = 2$.
 
@@ -371,40 +365,32 @@ Combination frequencies $\gamma_k \pm \gamma_j$ arise as the emergent
 3rd-order terms $[[\varphi_k, \varphi_j], \varphi_\ell]$ --- the
 Tartini tones of the spectral ACS.
 
-\subsection{The spectral stability ratio}
-
-Following the tensegrity atom of the companion structural paper~\cite{Wallace2026c}, define the
-\emph{spectral stability ratio}
+\subsection{The spectral stability ratio: retained counterexample}
+The earlier ratio was
 \begin{equation}\label{eq:rho-spec}
-  \rho_{\mathrm{spec}} = \max_k \frac{|A_k|\,X^{|\sigma_k - 1/2|}}%
-    {\delta_N^{-1}\sum_j |A_j|},
+ \rho_{\mathrm{spec}}=
+ \frac{\delta_N\max_k |A_k|X^{|\sigma_k-1/2|}}{\sum_j|A_j|},
 \end{equation}
-where $A_k$ is the amplitude of zero~$\rho_k = \sigma_k + i\gamma_k$,
-$X$ is the observation scale, and $\delta_N$ is the minimum zero gap.
-\begin{itemize}[noitemsep]
-  \item When $\sigma_k = 1/2$ for all $k$ (RH), $\rho_{\mathrm{spec}} = 0$
-    $\Rightarrow$ stable $\Rightarrow$ stationary $F_N$.
-  \item When $\sigma_0 > 1/2$ for some zero, $\rho_{\mathrm{spec}} \to \infty$
-    as $X \to \infty$ $\Rightarrow$ unstable $\Rightarrow$ non-stationary.
-\end{itemize}
-This is the spectral analogue of the dimensionless ratio
-$\rho = \alpha\gamma/\beta\kappa$ that governs the tensegrity atom
-in~\cite{Wallace2026a}: both systems are stable when $\rho < 1$
-and unstable when $\rho > 1$.
+with positive minimum gap $\delta_N$ and a nonzero finite spectrum.
+On setting every $\sigma_k=1/2$, direct substitution gives
+\[
+ \rho_{\mathrm{spec}}=\frac{\delta_N\max_k|A_k|}{\sum_j|A_j|}>0.
+\]
+The earlier claim that this ratio vanishes on the critical line is false
+(Frontier R03). If a nonzero amplitude has $\sigma_k\ne1/2$, the printed
+ratio grows with $X$, but that fact does not establish an information-balance
+criterion or a universal threshold at one. A replacement observable must
+be defined and justified separately; this revision does not silently change
+the old ratio into an excess-amplitude ratio.
 
 \subsection{RH in ACS language}
-
-\textbf{RH in ACS language (one direction, Theorem~\ref{thm:FN-acs}):}
-\begin{equation}
-  \mathrm{RH} \implies A_k = \frac{1}{\tfrac{1}{4}+\gamma_k^2} \text{ (critical line)}
-             \implies F_N(x) \text{ stationary.}
-\end{equation}
-We \emph{propose} that $F_N$ stationarity corresponds to information balance 
-($\DI = 0$) in the prime--zero ACS.  If this identification holds, then 
-RH implies that the ACS formed by primes (Form) and zeros (Function) 
-is information-balanced.  The converse (information balance implies RH) 
-is Conjecture~T4$^\prime$ (Section~\ref{sec:open}).
-
+The prime and zero descriptions are related by the classical explicit
+formula. Under RH, its normalized finite zero contributions are
+trigonometric sums. Boundedness of the already critical-line-defined $F_N$
+holds independently of RH. Identifying a bounded-variance diagnostic with
+transfer-entropy balance $\DI=0$ additionally requires a specified stochastic
+process, history sigma-algebras, lag, and measure; that identification is not
+proved here. The full arithmetic criterion is given below.
 
 \subsection{The explicit formula as a resolvent susceptibility}
 \label{sec:resolvent}
@@ -423,7 +409,7 @@ $\{\gamma_k\}$,
 \end{equation}
 For the trivial choice $H = \mathrm{diag}(\gamma_k)$ the identity
 holds tautologically; verification in
-\texttt{src/paper\_b/explicit\_formula\_resolvent.py} confirms
+\path{src/paper_b/explicit_formula_resolvent.py} confirms
 the construction at machine precision.  The Hilbert--P\'{o}lya
 problem, in this language, is to construct a \emph{natural}
 self-adjoint operator (e.g., a Schr\"{o}dinger Hamiltonian on a
@@ -439,61 +425,54 @@ discrete-spectrum oscillator system; we treat the plasma-physics
 analogy (the acoustic-structure subsection of \S\ref{sec:comp}) as
 motivational rather than foundational, given Remark~\ref{rem:not-poisson}.
 
-\subsection{Renormalised stability: von Koch's bound in logarithmic time}
+\subsection{Renormalised stability: the corrected classical criterion}
 \label{sec:vonKoch}
-
-The stationarity diagnostic of \S\,\ref{sec:riemann} (the spectral
-stability ratio $\rho_{\mathrm{spec}}$) has a direct restatement as
-a boundedness criterion in logarithmic coordinates.  Setting $u = \log x$, the prime-counting error
-$\psi(x) - x$ rescaled by the natural envelope $e^{u/2} = \sqrt{x}$
-yields
+Put $u=\log x$ and define the full arithmetic quantity
 \begin{equation}\label{eq:Delta-norm}
-  \Delta_{\mathrm{norm}}(u) \;:=\; \frac{\psi(e^u) - e^u}{e^{u/2}}.
+ \Delta_{\mathrm{norm}}(u)=\frac{\psi(e^u)-e^u}{e^{u/2}}.
 \end{equation}
-Substituting the explicit formula (truncated to nontrivial zeros and
-omitting the trivial-zero and constant terms),
-\begin{equation}
-  \Delta_{\mathrm{norm}}(u) \;\sim\; -\sum_{\rho} \frac{e^{(\rho - 1/2)\,u}}{\rho},
-\end{equation}
-each contribution carries the exponent $\rho - 1/2$.  Under the
-Riemann Hypothesis ($\Re\rho = 1/2$), the exponents are purely
-imaginary, $\rho - 1/2 = i\gamma$, so each term oscillates with
-bounded amplitude.  An off-critical zero with $\Re\rho = \sigma > 1/2$
-would contribute a term growing as $e^{(\sigma - 1/2)u}$, exponentially
-unbounded in $u$.
+Here $\psi$ is the Chebyshev function, including all prime powers; it is not
+a fixed finite zero sum.
 
-\begin{theorem}[Renormalised stability under RH]\label{thm:vonKoch-acs}
-Under the Riemann Hypothesis, $\Delta_{\mathrm{norm}}(u)$ is bounded
-on $u \in [u_0, \infty)$ for any $u_0 > 0$.  Conversely, the existence
-of a nontrivial zero $\rho_0$ with $\Re\rho_0 > 1/2$ implies that
-$\Delta_{\mathrm{norm}}(u)$ is unbounded in $u$.
+\begin{theorem}[Classical RH equivalence in logarithmic coordinates]\label{thm:vonKoch-acs}
+For any fixed $u_0>0$, RH is equivalent to
+\[
+ \sup_{u\ge u_0}
+ \frac{|\Delta_{\mathrm{norm}}(u)|}{1+u^2}<\infty.
+\]
+In particular RH implies $\Delta_{\mathrm{norm}}(u)=O(u^2)$, not the
+constant bound asserted in an earlier version of this paper.
 \end{theorem}
+\begin{proof}[Classical reduction]
+Substituting $x=e^u$ in the classical criterion
+$\psi(x)-x=O(\sqrt{x}\log^2x)$ gives the displayed bound, with compact
+intervals absorbed into the constant. The forward implication is the
+classical RH estimate~\cite{vonKoch1901,Schoenfeld1976}.
+For the converse put $E(x)=\psi(x)-x$. Initially for $\Re s>1$,
+\[
+ -\frac{\zeta'(s)}{\zeta(s)}
+ =\frac{s}{s-1}+s\int_1^\infty E(x)x^{-s-1}\,dx.
+\]
+The assumed bound makes the integral holomorphic on $\Re s>1/2$,
+by locally uniform absolute convergence. Analytic continuation excludes
+zeta zeros there, since any zero would give a pole of its logarithmic
+derivative. Functional-equation symmetry excludes nontrivial zeros to
+the left as well. This proves the equivalence, not the needed bound.
+\end{proof}
 
-This is a logarithmic-coordinate restatement of von Koch's classical
-bound $\psi(x) - x = O(\sqrt{x}\,\log^2 x)$ under
-RH~\cite{vonKoch1901}.  It is not a new theorem but a reframing that
-makes the connection to ACS stability-frame language explicit:
-``RH'' becomes the statement that the prime--zero ACS sits at the
-exact boundary between bounded oscillation (sub-critical: would mean
-zeros with $\sigma < 1/2$, ruled out by the functional equation) and
-unbounded divergence (super-critical: $\sigma > 1/2$, the case being
-ruled out by RH itself).  Numerical verification on the first $50$
-Odlyzko zeros over $u \in [5, 20]$ gives $\max|\Delta_{\mathrm{norm}}| \approx 0.5$
-with running-max slope of order $10^{-3}$
-(see \texttt{src/paper\_b/renormalized\_stability.py}).
-
-\begin{remark}[Forward direction only]
-Theorem~\ref{thm:vonKoch-acs} is stated as ``RH implies boundedness''
-and ``off-critical zero implies unboundedness.''  The full equivalence
-``boundedness implies RH'' --- which would be a logarithmic-coordinate
-form of the classical equivalence of RH with $\psi(x) - x = O(\sqrt{x}\,\log^2 x)$ ---
-requires technical hypotheses on truncation and the convergence of
-the explicit formula (see~\cite{Davenport2000}).  The statement
-above is the directly verifiable forward direction; the converse
-remains within the scope of the classical theorem and is not a new
-contribution of this work.
-\end{remark}
-
+The canonical implementation instead computes
+\[
+ D_N(u)=-2\Re\sum_{k=1}^N\frac{e^{i\gamma_k u}}{1/2+i\gamma_k},
+ \qquad |D_N(u)|\le2\sum_{k=1}^N(1/4+\gamma_k^2)^{-1/2}.
+\]
+This fixed finite bound holds for arbitrary real input ordinates. The routine
+omits the other explicit-formula terms and an infinite-tail argument; its
+finite-grid running maximum cannot certify the full arithmetic criterion.
+Schoenfeld's conditional estimate gives
+$|\Delta_{\mathrm{norm}}(u)|<u^2/(8\pi)$ for $e^u\ge73.2$
+\cite[Theorem 10, (6.2)]{Schoenfeld1976}.
+The 12 September source audit already corrected the implementation and
+its interpretation; this revision propagates that distinction into the paper.
 
 \subsection{Exact integer automaton: sign reversal of $\DI$}
 \label{sec:comp}
@@ -510,16 +489,16 @@ floating point).  The results are shown in Table~\ref{tab:integer}.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
-Configuration & $\Delta I = \TE(X{\to}Y)-\TE(Y{\to}X)$ & Direction \\
+Configuration & $\Delta I$ & Direction \\
 \midrule
 Uncoupled ($f,g$ independent)      & $-0.000063$ & $\approx 0$ \\
 Symmetric ($f=g=x^2$)               & $-0.000063$ & $\approx 0$ \\
 Asymmetric ($f=x^2$, $g=|y-8|$)    & $-1.499$    & Function $\to$ Form \\
 Swapped ($f=|x-8|$, $g=y^2$)       & $+1.499$    & Form $\to$ Function \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Exact integer automaton confirms sign reversal.}
 \label{tab:integer}
 \end{table}
@@ -537,7 +516,7 @@ Computed in exact integer arithmetic on $\mathbb{Z}_{16}$.}
 Swapping which function is the polynomial and which is the absolute value
 exactly reverses the sign of $\Delta I$, with magnitude $1.499$ in both cases.
 This matches the prediction of the ACS asymmetry theorem~\cite{Wallace2026a} and provides a
-floating‑point‑free verification of the core ACS mechanism.
+floating-point-free verification of the core ACS mechanism.
 
 \subsection{The Riemann spectral function as ACS: Wronskian analysis}
 
@@ -548,7 +527,7 @@ The Wronskian of mode functions $\varphi_k, \varphi_j$ is:
 which is the 2nd-order ACS bracket $[\mathrm{Func}_k, \mathrm{Func}_j]$ 
 in function space.  Numerical evaluation at $x = \ln 2$:
 \begin{center}
-\begin{tabular}{ccrr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccrr}
 \toprule
 $(k,j)$ & $(\gamma_k, \gamma_j)$ & $W[\varphi_k,\varphi_j]$ & $|W|/(A_k A_j)$ \\
 \midrule
@@ -557,7 +536,7 @@ $(2,3)$ & $(21.022, 25.011)$ & $+3961.1$ & $1.1 \times 10^9$ \\
 $(3,4)$ & $(25.011, 30.425)$ & $-13467.9$ & $7.8 \times 10^9$ \\
 $(4,5)$ & $(30.425, 32.935)$ & $+31347.7$ & $3.1 \times 10^{10}$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 All Wronskians are non-zero: the Riemann zero modes are \emph{non-commuting} 
@@ -634,18 +613,13 @@ vibrations (zeros) $\to$ momentum (bracket coupling) $\to$
 gauge colour (\textsf{su(3)} attractor) $\to$ confinement (lock)
 $\to$ mass (Koide/Higgs) $\to$ gravity (Palatini curvature).
 \end{center}
-The prime--zero ACS is the \emph{arithmetic instance} of the same
-chain: the zeros oscillate, the explicit formula binds them to the
-primes by cancellation, and the Riemann Hypothesis is the stationarity
-condition under which that cancellation is \emph{exact} --- every mode
-carries precisely the amplitude needed to close the balance, none
-amplified and none damped ($\DI = 0$).  The instrument is not ``in
-tune'' in the sense of two spectra resonating; it is \emph{in balance}
-in the sense of Form and Function annihilating to the smooth term.
-Mersenne's 1637 observation that harmonic consonance requires
-prime-indexed string lengths is, in this light, the earliest
-recognition that the primes fix the frame the zeros must cancel
-against --- not that the zeros resonate with the primes.
+This cross-domain chain is an analogy, not a proved identity of generating
+mechanisms. The explicit formula relates primes and zeros without assuming
+RH. RH does not make the arithmetic error vanish or establish $\DI=0$;
+its classical consequence is the error bound stated in
+Theorem~\ref{thm:vonKoch-acs}. Any information-theoretic identification
+requires its own process and measure. Historical acoustic analogies do not
+supply those missing assumptions.
 
 \subsection{The prime--zero ACS as a tensegrity atom}
 
@@ -672,127 +646,88 @@ the total state (the linear term $x$), exactly as in the tensegrity
 atom where compression (Form) and tension (Function) balance.
 
 \medskip
-\noindent\textbf{Stability criterion:}
-Define the spectral stability ratio as in equation~\eqref{eq:rho-spec}.
-\begin{itemize}[noitemsep]
-  \item $\rho_{\mathrm{spec}} = 0$ (RH): Form and Function are in perfect
-    information balance ($\DI = 0$).  Each mode $\varphi_k$ is a pure
-    harmonic oscillator with constant amplitude --- the
-    ``cosmic music'' of the critical line.
-  \item $\rho_{\mathrm{spec}} > 0$ (off-line zero): the corresponding
-    oscillator is either amplified ($\sigma > 1/2$, exponential growth)
-    or damped ($\sigma < 1/2$, decay).  The system is non-stationary.
-\end{itemize}
-The harmonic oscillator reduction is exact: when $\sigma = 1/2$,
-$\varphi_k(x) = \cos(\gamma_k \ln x)/\sqrt{x}$ and the amplitude
-envelope $1/\sqrt{x}$ is the \emph{same} for all modes.  The
-explicit formula then reduces to a sum of stationary oscillators
-with no relative drift --- the arithmetic analogue of normal modes
-in a vibrating string.  Off the critical line, the modes acquire
-individual growth/decay rates $x^{\sigma_k - 1/2}$, destroying the
-stationarity of the superposition.
+\noindent\textbf{Scope of the stability interpretation.}
+Equation~\eqref{eq:rho-spec} is positive on a nonzero critical-line finite
+spectrum, so zero ratio cannot represent information balance. Stripping each
+mode by its own envelope gives a harmonic oscillator for every $\sigma$.
+Using a common envelope $e^{u/2}$ instead retains the relative growth factors
+$e^{(\sigma_k-1/2)u}$. These observations concern the specified mode model;
+the finite diagnostic and the full arithmetic quantity remain distinct.
 
-\section{The Converse: Stationarity Implies RH}
+\section{Finite growth and the unresolved RH identification}
 \label{sec:converse}
-
-Theorem~\ref{thm:FN-acs} establishes RH $\Rightarrow$ ACS stationarity of $F_N$.
-We now argue the converse, stated as a precise limit theorem.
-The proof is rigorous for any fixed $N$; the extension to all $N$
-is conditional on a minimum-gap bound $\delta_N > 0$ that is
-verified numerically to $N = 200$ and known computationally for
-the first $10^{13}$ zeros (Odlyzko), but not proved unconditionally.
-
-\begin{definition}[Stationarity measure]\label{def:stationarity}
-For $N \geq 1$ and $X > 0$, define the stationarity measure
+\begin{definition}[Finite diagnostic stationarity measure]\label{def:stationarity}
+For $N\ge1$ and $X>0$, with uniform probability measure on $[X,2X]$, let
 \[
-  \mathcal{S}(N, X) = \frac{\mathrm{Var}_{x \in [X, 2X]}[F_N(x)]}%
-    {\sum_{k=1}^N |A_k|^2}.
+ \mathcal S(N,X)=\frac{\operatorname{Var}[F_N]}{\sum_{k=1}^N|A_k|^2}.
 \]
-Say $F_N$ is \emph{uniformly stationary} if $\sup_{X > 2} \mathcal{S}(N, X) < \infty$
-for all $N$.
+Theorem~\ref{thm:FN-acs} gives $\sup_{X>2}\mathcal S(N,X)<\infty$
+for each fixed $N$, including synthetic real ordinates. This definition
+does not contain the unknown real parts of the zeta zeros.
 \end{definition}
 
-\begin{theorem}[T4$'$, conditional: stationarity $\Leftrightarrow$ RH]\label{thm:T4prime}
-Assume the minimum-gap bound $\delta_N = \min_{k \neq j \leq N} |\gamma_k - \gamma_j| > 0$
-holds for every $N$ with the induced cross-term constant $C < 1$ of
-Step~3 below (verified numerically to $N = 200$; not proved
-unconditionally).  Then the following are equivalent:
-\begin{enumerate}[label=(\roman*)]
-  \item All non-trivial zeros of $\zeta(s)$ satisfy $\mathrm{Re}(s) = \tfrac{1}{2}$.
-  \item $F_N$ is uniformly stationary for all $N$.
-  \item $\lim_{X \to \infty} \mathcal{S}(N, X) < \infty$ for all $N$.
-\end{enumerate}
-Equivalently: if any zero $\rho_0$ has $\sigma_0 > 1/2$, then
-$\mathcal{S}(N, X) \to \infty$ as $X \to \infty$ for all $N \geq N_0$,
-with $\mathcal{S}(N, X) \geq c\, X^{2(\sigma_0 - 1/2)}$ for an explicit $c > 0$.
+\begin{theorem}[Finite exponential-sum boundedness]\label{thm:T4prime}
+Let $G(u)=\sum_{j=1}^m c_j e^{(a_j+i b_j)u}$ with real $a_j,b_j$.
+Combine identical exponents and discard zero coefficients. The zero sum
+is bounded. Otherwise $G$ is bounded for $u\ge0$ if and only if
+$\max_j a_j\le0$. No quantitative lower bound on frequency gaps is needed.
 \end{theorem}
-
 \begin{proof}
-The forward direction is Theorem~\ref{thm:FN-acs} (AM--GM bound on the envelope).
-For the converse, suppose some zero $\rho_0$ has $\sigma_0 > \tfrac{1}{2}$.
-Write $\mathrm{Var}[F_N] = S_{\mathrm{diag}} + S_{\mathrm{cross}}$ where:
+If all $a_j\le0$, the triangle inequality gives $|G(u)|\le\sum|c_j|$.
+Otherwise let $a=\max a_j>0$ and write $e^{-au}G(u)=P(u)+r(u)$,
+where $P(u)=\sum_{a_j=a}c_j e^{i b_j u}$ and $r(u)\to0$ exponentially.
+The frequencies in $P$ are distinct after combining identical exponents.
+Integrating each cross term explicitly yields
 \[
-  S_{\mathrm{diag}} = \textstyle\sum_k |A_k|^2\,\mathrm{Var}[\varphi_k],
-  \qquad
-  S_{\mathrm{cross}} = \textstyle\sum_{k \neq j} A_k A_j\,\mathrm{Cov}[\varphi_k, \varphi_j].
+ \frac1U\int_0^U|P(u)|^2\,du
+ \longrightarrow \sum_{a_j=a}|c_j|^2=:S>0.
 \]
-\textbf{Step 1 (Sinc bound).}
-$|\mathrm{Cov}[\varphi_k, \varphi_j]| \leq \min\bigl(1,\, 1/(|\gamma_k - \gamma_j|\log 2)\bigr)$
-(the covariance over $[X, 2X]$ is a sinc function of the frequency difference).
-
-\textbf{Step 2 (Near/far split).}
-Split $S_{\mathrm{cross}} = S_{\mathrm{near}} + S_{\mathrm{far}}$ at
-$|\gamma_k - \gamma_j| = 1$.  Each zero has $O(1)$ neighbours within
-distance~$1$ (from the Weyl zero-density law $N(T) \sim T\log T / 2\pi$),
-so $|S_{\mathrm{near}}| \leq C_1\,\sum_k A_k^2$ with $C_1 < 1$.
-
-\textbf{Step 3 (Gallagher's large sieve).}
-For far pairs: $|S_{\mathrm{far}}| \leq (\pi/\delta_N \log 2)\,\sum_k A_k^2$,
-where $\delta_N = \min_{k \neq j} |\gamma_k - \gamma_j| > 0$ is the minimum gap.
-Since $\sum A_k^2$ converges (Weyl law: $\gamma_k \sim 2\pi k / \log k$,
-so $A_k \sim 1/\gamma_k^2$ and $\sum 1/\gamma_k^4 < \infty$), we obtain
-$|S_{\mathrm{cross}}| \leq C\,S_{\mathrm{diag}}$ with $C < 1$
-(numerically $C < 0.29$ for $N \leq 200$, and $C$ converges as $N$ grows).
-
-\textbf{Step 4 (Diagonal dominance).}
-The diagonal term for the off-line zero contributes
-$|A_{k_0}|^2 X^{2(\sigma_0 - 1/2)} \to \infty$ as $X \to \infty$.
-Since $|S_{\mathrm{cross}}| \leq C\,S_{\mathrm{diag}}$ with $C < 1$,
-the growing diagonal term eventually dominates, giving
-$\mathrm{Var}[F_N] \to \infty$.  Contrapositive: bounded variance
-$\Rightarrow$ all $\sigma = \tfrac{1}{2}$ $\Rightarrow$ RH.
-
-Numerical verification: $C = 0.26$ ($N{=}25$), $0.28$ ($N{=}100$),
-$0.29$ ($N{=}200$); the variance ratio scales as $X^{0.2}$ for
-$\sigma = 0.6$, matching the predicted $X^{2(0.6 - 0.5)}$
-to $2\%$ accuracy over three decades ($X = 100$ to $X = 100{,}000$),
-using 100 Riemann zeros from the Odlyzko tables
-(\texttt{t4\_converse.py}, \texttt{fn\_n200.py},
-\texttt{riemann\_scaled\_final.py}).
-
-\medskip
-\noindent\textbf{The harmonic oscillator structure.}
-Define the envelope-stripped mode $y_k(t) = e^{-\sigma t}\varphi_k(t)$
-where $\varphi_k(t) = e^{\sigma t}[\sigma\cos(\gamma_k t) + \gamma_k\sin(\gamma_k t)]/(\sigma^2 + \gamma_k^2)$.
-Then $y_k''(t) + \gamma_k^2\, y_k(t) = 0$ for \emph{all} $\sigma$
-(verified to $9 \times 10^{-14}$ across 100 zeros and 5 values of $\sigma$).
-Each stripped mode is a simple harmonic oscillator with frequency $\gamma_k$.
-The $\sigma$-dependence is entirely in the envelope $e^{\sigma t}$.
-The Riemann Hypothesis ($\sigma = 1/2$ for all zeros) is the statement
-that all modes share the same envelope ($\sqrt{x}$), making their
-superposition \emph{stationary} --- the relative amplitudes are constant.
-An off-line zero at $\sigma_0 \neq 1/2$ would have a different envelope
-($x^{\sigma_0}$), destroying stationarity.
-
-\medskip
-\noindent\textbf{The Wronskian as Lie bracket.}
-The Wronskian $W[\varphi_k, \varphi_j] \neq 0$ for all $k \neq j$:
-verified across all 1{,}225 pairs of the first 50 Riemann zeros
-(minimum $|W| = 8.6 \times 10^{-5}$; \texttt{riemann\_tensor.py}).
-The modes define an infinite-dimensional Lie algebra on the zero space,
-with non-degenerate bracket containing both difference frequencies
-$(\gamma_k - \gamma_j)$ and sum frequencies $(\gamma_k + \gamma_j)$.
+There are therefore arbitrarily large $u$ with $|P(u)|\ge\sqrt{S/2}$;
+otherwise the limiting mean would be at most $S/2$. On a sequence of such
+points, eventually $|G(u)|\ge\tfrac12\sqrt{S/2}\,e^{au}$.
+Thus $G$ is unbounded. This is an unboundedness statement, not a claim
+that its modulus is large at every point.
 \end{proof}
+
+For the complete finite set of actual nontrivial zeros with
+$|\Im\rho|\le T$, counted with
+multiplicity, use
+\[
+ G_T(u)=-\sum_{\substack{\rho\ \mathrm{nontrivial}\\|\Im\rho|\le T}}\frac{e^{(\rho-1/2)u}}{\rho}.
+\]
+At an identical zero the combined coefficient is $-m_\rho/\rho\ne0$.
+RH implies that every such $G_T$ is bounded. Conversely an off-line zero
+has a reflected zero with real part greater than $1/2$; any complete
+truncation containing it is unbounded by the theorem. This is an
+equivalence using the \emph{actual full complex zeros}, not a proof that
+the boundedness premise holds and not an equivalence for $F_N$ built
+only from supplied real ordinates. Bounds depending on $T$ cannot be
+interchanged with an infinite sum or a growing-height limit.
+
+The old sinc/near--far proof is superseded by this finite result (Frontier
+R02). It mixed logarithmic and arithmetic windows and omitted amplitude
+dependence. The zero-density main term does not give a uniform $O(1)$
+number of neighbors in every unit interval at growing height. Neither a
+finite numerical cross-correlation nor a nonzero observed minimum gap
+establishes the formerly asserted global diagonal-dominance constant.
+
+\paragraph{The identification that remains open.}
+Writing $\rho=\sigma+i\gamma$ gives
+\[
+ z_\rho=-i(\rho-1/2)=\gamma-i(\sigma-1/2).
+\]
+If every such parameter is proved to be in the spectrum of a specified
+self-adjoint operator, its reality forces $\sigma=1/2$. Defining instead
+$H=\operatorname{diag}(\gamma_k)$ proves neither that identity nor
+completeness. A central multiset with each $1/2\pm i\gamma$ repeated twice
+and an off-line quartet $1/2\pm\alpha\pm i\gamma$, with
+$0<\alpha<1/2$ and $\gamma>0$, have the same ordinates
+with multiplicity. Every ordinate-only diagnostic agrees for these two
+abstract models. They are not claimed to be alternative zeta zeros; they
+exhibit the information lost before inference (Frontier R04/R06).
+
+The harmonic-oscillator and Wronskian calculations below retain their
+finite scope. They do not change this identification boundary.
 
 \section{Elastodynamic Tensor Structure}
 \label{sec:tensor}
@@ -835,48 +770,54 @@ $\lambda_\pm = x/2 \pm \sqrt{x^2/4 + T_{12}^2}$.
 
 \subsection{Variance scaling and stability}
 
-\begin{theorem}[Variance scaling]\label{thm:variance}
-Define the variance of the shear stress over $[X, 2X]$:
-$\mathrm{Var}_X[T_{12}] = \frac{1}{X}\int_X^{2X} T_{12}(t)^2\,dt$.
-\begin{enumerate}[label=(\roman*),noitemsep]
-  \item If all zeros satisfy $\mathrm{Re}(\rho) = \sigma$, then
-    $\mathrm{Var}_X[T_{12}] = \Order{X^{2\sigma}}\,\sum_k A_k^2$
-    where $A_k = 1/(\sigma^2 + \gamma_k^2)$.
-  \item The ratio $\mathrm{Var}_X[T_{12}]/T_{11}^2 = \Order{X^{2\sigma - 2}} \to 0$
-    for all $\sigma < 1$.  The tensor is asymptotically diagonal.
-  \item Among all values of $\sigma$, $\sigma = 1/2$ gives the
-    \emph{fastest} diagonalisation rate ($\Order{X^{-1}}$).
-  \item An off-line zero at $\sigma_0 > 1/2$ contributes a term
-    $\Order{X^{2\sigma_0}}$ that dominates the on-line variance $\Order{X}$.
-\end{enumerate}
+\begin{theorem}[Finite shear second-moment upper bound]\label{thm:variance}
+For the sum of the first $N$ modes in equation~\eqref{eq:T12-mode}, with
+fixed $0<\sigma<1$, put $B_{N,\sigma}=\sum_{k=1}^N
+(\sigma^2+\gamma_k^2)^{-1/2}$. Then
+\[
+ M_{2,X}:=\frac1X\int_X^{2X}T_{12}(t)^2\,dt
+ \le4 B_{N,\sigma}^2(2X)^{2\sigma}.
+\]
+The centered variance is at most $M_{2,X}$. For fixed $N,\sigma$,
+$M_{2,X}/X^2=O(X^{2\sigma-2})\to0$.
 \end{theorem}
+\begin{proof}
+Each summand has modulus at most $2t^\sigma
+(\sigma^2+\gamma_k^2)^{-1/2}$. Sum this bound, square, and use
+$t\le2X$. Centering subtracts the square of the mean.
+\end{proof}
+The earlier integral was a second moment, not a centered variance. This
+upper bound is not an exact asymptotic or a non-cancellation lower bound.
+The exponent $2\sigma-2$ is increasing in $\sigma$; the former claim that
+$1/2$ gives the fastest rate over all $0<\sigma<1$ is withdrawn.
 
 \noindent
-\textbf{Numerical verification (100 Odlyzko zeros, $X = 100$ to $10^5$):}
+\textbf{Historical numerical table (100 supplied ordinates, $X = 100$ to $10^5$):}
 \begin{center}
-\begin{tabular}{rrrrr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{rrrrr}
 \toprule
-$X$ & $\mathrm{Var}(\sigma{=}0.5)$ & $\mathrm{Var}(\sigma{=}0.6)$ & Ratio & $X^{0.2}$ (pred) \\
+$X$ & Reported $\sigma{=}0.5$ & Reported $\sigma{=}0.6$ & Ratio & Reported comparator \\
 \midrule
 $10^2$ & $5.45$ & $14.9$ & 2.73 & 2.72 \\
 $10^3$ & $72.5$ & $314$ & 4.33 & 4.32 \\
 $10^4$ & $753$ & $5{,}210$ & 6.92 & 6.84 \\
 $10^5$ & $5{,}170$ & $56{,}500$ & 10.93 & 10.84 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
-The ratio $\mathrm{Var}(0.6)/\mathrm{Var}(0.5)$ matches the predicted
-$X^{2(0.6 - 0.5)} = X^{0.2}$ to better than $2\%$ across three decades
-(Figure~\ref{fig:variance}).
-(Script: \texttt{riemann\_scaled\_final.py}.)
+The old comparator column is retained as reported, but is not exactly
+$X^{0.2}$: for example $100^{0.2}\approx2.512$, not $2.72$.
+A fitted prefactor and a precise centered-versus-uncentered observable
+must be specified before asserting the former $2\%$ agreement.
+The historical figure and script reference are retained for that reconciliation
+(\path{riemann_scaled_final.py}).
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.75\textwidth]{fig_variance_scaling}
-\caption{Variance ratio $\mathrm{Var}_X[T_{12}](\sigma{=}0.6) / \mathrm{Var}_X[T_{12}](\sigma{=}0.5)$
-computed with 50 Odlyzko zeros over three decades of $X$.
-The data (circles) match the predicted $X^{0.2}$ scaling (dashed line)
-to better than $2\%$.  An off-line zero would produce a steeper power law.}
+\caption{Historical shear diagnostic with 50 supplied ordinates. The
+observable, prefactor and coordinate convention must be reconciled before
+interpreting the fitted curve as a variance law; it does not locate zeta zeros.}
 \label{fig:variance}
 \end{figure}
 
@@ -904,78 +845,73 @@ With $y_k = [\sigma\cos(\gamma_k t) + \gamma_k\sin(\gamma_k t)]/(\sigma^2 + \gam
 \end{align*}
 Numerically confirmed: $|y_k'' + \gamma_k^2 y_k| < 9 \times 10^{-14}$
 across 100 zeros, 10 values of $t$, and 5 values of $\sigma \in \{0.1, 0.3, 0.5, 0.7, 0.9\}$
-(1{,}000 evaluations; \texttt{riemann\_scaled\_final.py}).
+(1{,}000 evaluations; \path{riemann_scaled_final.py}).
 \end{proof}
 
 The \textbf{non-trivial content} is not the individual-mode ODE (which
 is tautological) but the following:
 
-\begin{proposition}[Stationarity characterises the critical line]\label{prop:stationarity}
-If all non-trivial zeros satisfy $\mathrm{Re}(\rho) = 1/2$, then
-every mode $\varphi_k$ shares the envelope $e^{t/2} = \sqrt{x}$, so
-the relative amplitudes $A_k/A_j$ are constant and the superposition
-$F_N(x) = \sum_k A_k\varphi_k(x)$ is stationary.  If any zero has
-$\mathrm{Re}(\rho) = \sigma_0 \neq 1/2$, its envelope $x^{\sigma_0}$
-differs, and the superposition becomes non-stationary (the relative
-contribution of that mode grows or decays with $x$).
+\begin{proposition}[A common envelope under RH]\label{prop:stationarity}
+If all nontrivial zeros have real part $1/2$, their mode envelopes share
+$e^{u/2}$; dividing by that common factor leaves finite trigonometric sums.
+For a general zero the residual factor is $e^{(\sigma-1/2)u}$.
 \end{proposition}
-
 \begin{remark}[Self-correction from scaling]\label{rem:self-correction}
-An earlier version of this analysis stated that the harmonic-oscillator
-property held only at $\sigma = 1/2$.  The scaled computation with real
-Odlyzko data revealed that $y_k'' + \gamma_k^2 y_k = 0$ holds for
-\emph{all} $\sigma$ (it must, by construction).  The $\sigma$-dependence
-is entirely in the envelope $e^{\sigma t}$.
-The Riemann Hypothesis is therefore the statement:
-\emph{the superposition of all zero modes is stationary} ---
-every mode grows at the same rate.
+Stripping a mode by its \emph{own} envelope makes the harmonic-oscillator
+equation true for every $\sigma$. A common $1/2$ normalization retains
+relative growth information only if the actual $\sigma$ values are still
+present in the input. The finite theorem above and the classical full-error
+criterion state precisely what follows. Oscillator form alone does not
+identify a zero's real part or prove a stationarity-to-information equivalence.
 \end{remark}
 
 \subsection{Geometric vector fields and loop folding}
 
-The tensor~\eqref{eq:stress-tensor} defines a vector field via the
-``curl'' of the shear: $\omega_k = dT_{12}^{(k)}/dt$ where $t = \ln x$.
+The earlier construction called the scalar derivative
+$\omega_k=dT_{12}^{(k)}/dt$, with $t=\ln x$, the ``curl'' of the shear.
+That terminology alone does not define a vector field.
 
-\begin{proposition}[Pure rotation at $\sigma = 1/2$]\label{prop:rotation}
-At $\sigma = 1/2$, the curl of the shear for mode $k$ reduces to:
+\begin{proposition}[Shear derivative at general $\sigma$]\label{prop:rotation}
+For the scalar derivative defined above and the mode in
+equation~\eqref{eq:T12-mode}, for every $0<\sigma<1$,
 \begin{equation}\label{eq:curl-half}
-  \omega_k\big|_{\sigma=1/2} = -2\sqrt{x}\,\cos(\gamma_k \ln x).
+  \omega_k(t)=-2e^{\sigma t}\cos(\gamma_k t).
 \end{equation}
-This is a pure cosine (zero radial component, pure rotation in the
-$(t,\gamma)$ plane).  At $\sigma \neq 1/2$, a $\sin$ component appears
-with coefficient $\gamma_k(\sigma - 1/2)$, producing spiral flow
-(rotation $+$ radial drift).
+At $\sigma=1/2$ this equals $-2\sqrt{x}\cos(\gamma_k\log x)$.
+The sinusoidal coefficient also vanishes for every other $\sigma$.
 \end{proposition}
 
 \begin{proof}
-Differentiate~\eqref{eq:T12-mode} with $\sigma = 1/2$:
-the $\sin$ term's coefficient is $\gamma(1/2 - 1/2) = 0$, leaving
-only the $\cos$ term with amplitude $2e^{t/2} = 2\sqrt{x}$.
-Verified symbolically: \texttt{riemann\_tensor.py}.
+Differentiation of $e^{\sigma t}(\sigma\cos(\gamma_k t)+
+\gamma_k\sin(\gamma_k t))$ yields
+$e^{\sigma t}(\sigma^2+\gamma_k^2)\cos(\gamma_k t)$:
+the sine coefficients cancel as $\sigma\gamma_k-\sigma\gamma_k=0$.
+The denominator cancels. The reconciliation checker independently verifies
+this identity symbolically with $\sigma$ left free.
 \end{proof}
 
-The topology of the flow:
-\begin{itemize}[noitemsep]
-  \item At $\sigma = 1/2$: purely rotational --- closed loops (pinwheel).
-    Fold lines (where the flow reverses) occur at
-    $\gamma_k t = (n + 1/2)\pi$.
-  \item At $\sigma > 1/2$: rotation $+$ outward radial drift (opening spirals).
-  \item At $\sigma < 1/2$: rotation $+$ inward radial drift (closing spirals).
-\end{itemize}
-The critical line $\sigma = 1/2$ is the \emph{unique center manifold}
-of this family of vector fields: the only value of $\sigma$ where the
-flow is purely rotational with no radial component
-(Figure~\ref{fig:flow}).
+The earlier claim of an additional sine coefficient
+$\gamma_k(\sigma-1/2)$ does not follow from the printed derivative.
+A scalar derivative also does not specify a two-component vector field.
+A separate, explicitly chosen illustration is
+\[
+ v(t)=e^{(\sigma-1/2)t}
+       \begin{pmatrix}\cos(\gamma_k t)\\\sin(\gamma_k t)\end{pmatrix},
+ \qquad
+ v'=\begin{pmatrix}\sigma-1/2&-\gamma_k\\
+                    \gamma_k&\sigma-1/2\end{pmatrix}v.
+\]
+For $\gamma_k\ne0$, this model draws a circle at $\sigma=1/2$ and
+spirals away from it. That distinction uses the chosen common normalization;
+it neither follows from an exclusive pure-cosine derivative nor proves
+that actual zeta zeros have that real part.
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{fig_flow_field}
-\caption{Tensor flow in the oscillatory plane for the first Riemann zero
-$\gamma_1 = 14.13$.  Left: at $\sigma = 1/2$ the trajectory is a closed
-loop (pure rotation, no radial drift).  Right: at $\sigma = 0.7$ the
-trajectory spirals outward (rotation plus radial growth from the
-$e^{(\sigma - 1/2)t}$ envelope).  The critical line is the unique value
-of $\sigma$ where the flow is topologically closed.}
+\caption{Historical circle/spiral illustration at ordinate $\gamma_1=14.13$
+under a chosen $1/2$ envelope normalization. The picture does not establish
+an exclusive property of the scalar shear derivative or locate zeta zeros.}
 \label{fig:flow}
 \end{figure}
 
@@ -1003,7 +939,7 @@ $[\varphi_i, [\varphi_j, \varphi_k]] + [\varphi_j, [\varphi_k, \varphi_i]]
 + [\varphi_k, [\varphi_i, \varphi_j]] = 0$,
 verified numerically to relative precision $3 \times 10^{-10}$
 across 10 triples of the first 5 zeros at 4 values of $t$
-(limited by numerical differentiation; \texttt{riemann\_tensor.py}).
+(limited by numerical differentiation; \path{riemann_tensor.py}).
 Combined with antisymmetry and non-degeneracy, this confirms
 that the Wronskian defines a genuine infinite-dimensional Lie algebra
 on the space of Riemann zero modes (Figure~\ref{fig:wronskian}).
@@ -1025,9 +961,9 @@ the zero spectrum.}
 The results of
 Sections~\ref{sec:riemann}--\ref{sec:vonKoch} were originally
 verified using the first $50$ Odlyzko zeros.  We report here an
-extension to $N = 200$ exact zeros (computed via the Riemann--Siegel
-formula to 15-digit precision), which removes small-sample doubt
-from the empirical claims.
+extension to $N = 200$ numerical ordinates (reported at 15-digit
+precision). This increases the finite sample; it does not remove
+model, precision, completeness, or asymptotic uncertainty.
 
 \paragraph{Wronskian non-vanishing.}
 The non-vanishing Wronskian condition
@@ -1039,15 +975,18 @@ were found: the zero-mode functions $\{y_k\}$ remain linearly
 independent over the entire tested range of the critical-line
 spectrum.
 
-\paragraph{Cross-correlation decay.}
-The cross-correlation bound
-$|C_N| = \sup_x \bigl|\frac{2}{N(N{-}1)}
-\sum_{j<k} \cos\bigl((\gamma_j{-}\gamma_k)x\bigr)\bigr|$
-was measured at $|C_{200}| = 0.044$, well below the
-$|C_N| < 0.29$ threshold required for the converse
-(Theorem~\ref{thm:T4prime}).  The bound improves with
-increasing $N$, consistent with cancellation of off-diagonal
-contributions in the pair-correlation sum.
+\paragraph{Cross-correlation scope correction.}
+The previously printed global supremum
+\[
+ C_N=\sup_x\left|\frac{2}{N(N-1)}\sum_{j<k}
+                  \cos((\gamma_j-\gamma_k)x)\right|
+\]
+equals one for $N\ge2$: the triangle inequality gives the upper bound,
+and $x=0$ attains it. Thus the reported $0.044$ at $N=200$ is not this
+supremum. Any interpretation as a restricted-window statistic requires
+the actual window and aggregation convention. It cannot validate the old
+gap-dependent converse. The associated numerical values are retained below
+as historical diagnostics, not certified global bounds.
 
 \paragraph{Arithmetic consequence: prime gap transition statistics.}
 The cross-correlation bound $|C_{200}| = 0.044$ admits a quantitative bridge
@@ -1068,103 +1007,54 @@ context, including the empirical Kernel Law
 $\dim \ker(P_m) = \varphi(m)$ and three documented falsified
 conjectures, appear in~\cite{WallaceN3}.
 
-\paragraph{Stationarity at scale ($N = 2{,}000{,}000$).}
-Extension to the full $N = 2{,}001{,}052$ zeros of Odlyzko's
-\texttt{zeros6} dataset confirms the stationarity prediction of
-Theorem~\ref{thm:FN-acs} directly across six decades of $N$. We
-sample $F_N(x)$ at $M = 10{,}000$ uniformly spaced points on
-$[0, X_{\max}]$ for $X_{\max} \in \{10, 10^2, 10^3, 10^4, 10^5\}$
-and extract the log-log scaling exponent
-$\alpha_N$ from $\log(\mathrm{var}(F_N)) \approx
-\alpha_N \log(X_{\max}) + \text{const}$ by ordinary least squares.
-The unperturbed exponent is tightly bounded near zero across six
-decades of $N$:
-\begin{align*}
-\alpha(50) &= -0.000200 & \alpha(10{,}000) &= +0.001045 \\
-\alpha(100) &= -0.000186 & \alpha(100{,}000) &= +0.001247 \\
-\alpha(200) &= +0.000875 & \alpha(2{,}000{,}000) &= +0.001259
-\end{align*}
-giving $\alpha \approx 0$ with deviation bounded by
-$1.3 \times 10^{-3}$ across the full range tested. The variance of
-$F_N$ is empirically bounded as the window grows, in direct
-agreement with the forward direction of
-Theorem~\ref{thm:FN-acs}. The flatness of $\alpha_N$ across four
-additional orders of magnitude in $N$ beyond previous tests is
-evidence that the diagnostic is measuring a structural property
-of the spectrum rather than a finite-$N$ numerical artefact.
+\paragraph{Historical finite-grid diagnostics at scale.}
+The earlier run on the supplied $2{,}001{,}052$-ordinate table reported
+$\alpha(50)=-0.000200$, $\alpha(100)= -0.000186$,
+$\alpha(200)=0.000875$, $\alpha(10{,}000)=0.001045$,
+$\alpha(100{,}000)=0.001247$, and
+$\alpha(2{,}000{,}000)=0.001259$. These were finite-grid variance
+regressions. The fixed-$N$ boundedness theorem also holds for synthetic
+ordinates, so these slopes do not identify zeta real parts or establish
+an infinite arithmetic bound.
 
-\paragraph{Off-line injection scaling.}
-To verify that the variance observable is sensitive to off-line
-contributions and not merely insensitive to everything, we
-introduce a single synthetic zero at height
-$\gamma_{\mathrm{fake}} = 1000$ with an amplitude that breaks
-critical-line stationarity for $\sigma \neq 1/2$:
-\begin{equation}
-F_N^{\mathrm{perturbed}}(x) = F_N(x) +
-\frac{x^{\sigma - 1/2}}{\frac{1}{4} + \gamma_{\mathrm{fake}}^2}
-\,\varphi_{\mathrm{fake}}(x).
-\end{equation}
-The factor $x^{\sigma - 1/2}$ vanishes at $\sigma = 1/2$
-(consistent with stationarity on the critical line) and grows or
-decays as a power law otherwise. The predicted scaling exponent
-of the perturbed variance is $\alpha = 2\sigma - 1$.
-
+\paragraph{Injection convention requires reconciliation.}
+The historical injection formula was
+\[
+ F_N^{\rm perturbed}(x)=F_N(x)+
+ \frac{x^{\sigma-1/2}}{1/4+\gamma_{\rm fake}^2}\varphi_{\rm fake}(x),
+ \qquad \gamma_{\rm fake}=1000.
+\]
+At $\sigma=1/2$ its envelope factor is one, not zero. Also, if $x$ denotes
+logarithmic coordinate, the actual explicit-formula envelope is
+$e^{(\sigma-1/2)x}$, not $x^{\sigma-1/2}$. The table preserves the reported
+numbers without treating this definition mismatch as resolved.
 \begin{table}[h]
 \centering
-\begin{tabular}{ccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccc}
 \toprule
-$\sigma_{\mathrm{inject}}$ & Predicted $2\sigma - 1$ & Measured $\alpha$ \\
+$\sigma_{\rm inject}$ & Reported target $2\sigma-1$ & Reported slope \\
 \midrule
 0.40 & $-0.200$ & $-0.197$ \\
 0.45 & $-0.100$ & $-0.099$ \\
 0.55 & $+0.100$ & $+0.099$ \\
 0.60 & $+0.200$ & $+0.199$ \\
 \bottomrule
-\end{tabular}
-\caption{Empirical scaling exponent under off-line injection at $N = 2{,}000{,}000$.}
+\end{tabular}\end{adjustbox}
+\caption{Historical injection slopes; the measured observable and coordinate
+must be reconciled before these values support the printed formula.}
 \label{tab:injection-scaling}
 \end{table}
+For $\sigma<1/2$, decay of an added term does not imply decay of the total
+variance when a nonzero bounded baseline remains. The finite regression
+cannot establish that asymptotic claim.
 
-All four off-line cases recover the predicted exponent to within
-$1.5\%$ (best case $0.5\%$ at $\sigma = 0.60$). Combined with the
-unperturbed $\alpha_N \approx 0$ across six decades of $N$, this
-empirically validates the variance observable as a sensitive
-diagnostic for off-line spectral contributions over the
-$\sigma$-range tested. The convergence of measured exponents
-toward the exact predicted values as $N$ grows
-(from $\sim 2\%$ at $N = 100{,}000$ to $\sim 1\%$ at
-$N = 2{,}000{,}000$) is consistent with $\alpha = 2\sigma - 1$
-being an asymptotic identity rather than a finite-$N$ coincidence.
-The scaling result is not a proof of the
-converse of Theorem~\ref{thm:FN-acs}, but it establishes that the
-diagnostic behaves at $N = 2{,}000{,}000$ exactly as the theorem
-predicts.
-
-\paragraph{Cross-correlation at scale.}
-The cross-correlation bound at $N = 2{,}001{,}052$:
-\[
-|C_{2{,}001{,}052}| = 7.00 \times 10^{-6},
-\]
-compared to $|C_{200}| = 0.044$. Under independent random spacings,
-the decay would follow $|C_N| \sim N^{-1/2}$, predicting
-$|C_{2{,}001{,}052}| \approx 4.4 \times 10^{-4}$ from the $N = 200$
-baseline. The observed bound is approximately $63\times$ smaller,
-fitting a power law
-\[
-|C_N| \sim N^{-0.95}.
-\]
-The decay exponent has sharpened from $N^{-0.83}$ at $N = 10^5$
-toward the deterministic-cancellation bound $N^{-1}$ as $N$ grows,
-indicating that the rigidity mechanism strengthens rather than
-saturates at scale. The accelerated decay is qualitatively
-consistent with the Gaussian Unitary Ensemble (GUE) rigidity of
-Riemann zero spacings: the correlated spacing structure produces
-stronger destructive interference in the off-diagonal pair sum
-than independent oscillators would, and the strength of this
-interference is itself a function of $N$ that approaches its
-theoretical maximum at the scale of Odlyzko's full reference
-dataset.
-
+\paragraph{Historical cross-correlation at scale.}
+The reported statistic changed from $0.044$ at $N=200$ to
+$7.00\times10^{-6}$ at $N=2{,}001{,}052$, with fitted exponent
+$-0.95$. These values are not the displayed global supremum, which is
+one. No universal cancellation rate or proof of the converse is inferred
+from this regression. Later interpretations of the same historical number
+must retain this qualification.
 
 \section{Tartini-Tone Characterization of the Spectrum}
 \label{sec:tartini}
@@ -1220,7 +1110,7 @@ where $s(x) = \sin(\pi x)/(\pi x)$~\cite{RudnickSarnak1996}.
 The empirical match is
 
 \begin{center}
-\begin{tabular}{lc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lc}
 \toprule
 Metric & Value \\
 \midrule
@@ -1228,13 +1118,13 @@ RMSE vs theory & $0.051$ \\
 Max $|$residual$|$ & $0.182$ \\
 Pearson correlation & $0.990$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Sample cross-section comparisons confirm the agreement:
 
 \begin{center}
-\begin{tabular}{ccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccccc}
 \toprule
 $(\alpha, \beta)$ & theory & empirical & ratio \\
 \midrule
@@ -1244,7 +1134,7 @@ $(1.5, 0.5)$ & $0.550$ & $0.538$ & $0.98$ \\
 $(2.0, 2.0)$ & $1.000$ & $0.880$ & $0.88$ \\
 $(3.0, 3.0)$ & $1.000$ & $0.948$ & $0.95$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The residual map shows white-noise structure with no systematic
@@ -1279,7 +1169,7 @@ The ratio is $0.0012$ (peaks are 833 times closer), with KS test
 $p < 10^{-4}$. Selected top peaks:
 
 \begin{center}
-\begin{tabular}{cccl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cccl}
 \toprule
 rank & $\omega_{\text{peak}}$ & $|F_N|$ & nearest prime power \\
 \midrule
@@ -1290,7 +1180,7 @@ rank & $\omega_{\text{peak}}$ & $|F_N|$ & nearest prime power \\
 12 & $4.11092$ & $0.0062$ & $61$ (prime) \\
 15 & $3.36748$ & $0.0049$ & $29$ (prime) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The presence of $2^6 = 64$ at rank 10 is critical: it confirms that
@@ -1448,7 +1338,7 @@ predicted ideal-norm positions within $0.05$. The amplitude pattern
 is:
 
 \begin{center}
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Position class & Mean $|F_K|$ & Predicted \\
 \midrule
@@ -1456,7 +1346,7 @@ $\log p$, $p \equiv 1 \pmod{4}$ (split) & $0.323$ & high \\
 $\log p$, $p \equiv 3 \pmod{4}$ (inert) & $0.057$ & near zero \\
 $\log p^2$, $p \equiv 3 \pmod{4}$ (inert) & $0.144$ & restored \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The ratio of split to inert (at $\log p$) is $5.7\times$. The algebraic
@@ -1501,11 +1391,12 @@ character group mod $n$.
 \section{Hilbert--Pólya Constraint Specification}
 \label{sec:hilbert-polya}
 
-The Hilbert--Pólya conjecture posits the existence of a self-adjoint
-operator $H$ on some Hilbert space whose spectrum is exactly the set
-of imaginary parts of non-trivial Riemann zeros, $\{\gamma_k\}$. If
-such $H$ exists, the Riemann Hypothesis follows immediately (real
-eigenvalues of self-adjoint operators).
+The Hilbert--Pólya route seeks a natural self-adjoint operator $H$ on a
+specified Hilbert space, with a proved complete correspondence between its
+spectrum and $-i(\rho-1/2)$ for nontrivial zeta zeros. That correspondence
+would imply RH because the spectrum is real. Merely specifying the
+imaginary parts $\{\gamma_k\}$ as its spectrum is insufficient: a diagonal
+operator can be constructed from any such real list without locating zeros.
 
 The empirical fingerprint of the zeros, characterised in Sections
 \ref{sec:finite-sample}--\ref{sec:lfunctions}, provides a constraint
@@ -1519,7 +1410,7 @@ A candidate spectrum $\{\lambda_k\}$ (claimed to coincide with
 $\{\gamma_k\}$) must satisfy:
 
 \begin{center}
-\begin{tabular}{ll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ll}
 \toprule
 ID & Constraint \\
 \midrule
@@ -1533,7 +1424,7 @@ C7 & Weights: peak heights $\propto \Lambda(p^k)/\sqrt{p^k}$ \\
 C8 & L-function transfer: signs follow $\chi(p^k)$ for arithmetic operators \\
 C9 & Selberg orthogonality: distinct L-function operators give orthogonal $F$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Operationally: $H$ satisfies the constraint specification if
@@ -1554,14 +1445,14 @@ spectrum with empirical pair correlation indistinguishable from the
 actual Riemann zeros:
 
 \begin{center}
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Spectrum & $R_2$ RMSE & Fourier-dual alignment ratio \\
 \midrule
 Riemann zeros (truth) & $0.597$ & $0.012$ \\
 GUE matrix eigenvalues & $0.600$ & $0.495$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The pair correlations are statistically identical. The Fourier-dual
@@ -1649,7 +1540,7 @@ the actual Riemann zero data.
 \paragraph{Scorecard on test spectra.} Four candidate spectra:
 
 \begin{center}
-\begin{tabular}{lcccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccc}
 \toprule
 Spectrum & C1 & C3 ($R_2$) & C5 (Fourier) & C6 (sign) \\
 \midrule
@@ -1658,7 +1549,7 @@ GUE matrix eigenvalues & PASS & PASS & FAIL & FAIL \\
 Random/Poisson with matching density & PASS & FAIL & FAIL & FAIL \\
 Equally spaced points & PASS & FAIL & FAIL & FAIL \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Only the actual Riemann zeros pass all constraints. The Berry--Keating
@@ -1684,189 +1575,84 @@ construction of the operator realising this structure.
 
 \section{Open Problems and Status}
 \label{sec:open}
+\textbf{Closed within finite scope (Frontier R02).}
+The fixed $F_N$ bound and the finite exponential-sum theorem have elementary
+proofs. The latter needs identical exponents combined, not an additional
+quantitative gap hypothesis. These results do not prove boundedness of
+the actual full arithmetic error or justify interchanging limits.
 
-We summarise the epistemic status of all results.
+\medskip\noindent\textbf{Retained obstructions (R03--R06).}
+The printed spectral ratio does not vanish on the critical line.
+Fixed-$N$ boundedness does not imply an infinite bound. A diagonal operator
+constructed from real ordinates is self-adjoint by construction and loses
+the real-part information needed for RH. Finite ensemble comparisons constrain
+the tested model classes; they do not exclude every other operator realization.
+The Wronskian fails the Leibniz rule by $-fgh'$ and is not a Poisson bracket
+on the scalar function algebra. A cotangent lift supplies a different
+Hamiltonian carrier but does not by itself supply prime--zero dynamics.
 
-\medskip
-\noindent\textbf{Proved.}
-RH $\Rightarrow$ stationarity of $F_N$ (Theorem~\ref{thm:FN-acs},
-via the AM--GM envelope bound).
-The Wronskian is a Lie bracket in function space (Proposition~\ref{prop:wronski-lie}).
-The stripped mode satisfies $y_k'' + \gamma_k^2 y_k = 0$ for all
-$\sigma$ (Remark~\ref{thm:sho}).
-The curl of the shear is a pure cosine at $\sigma = 1/2$
-(Proposition~\ref{prop:rotation}).
-Renormalised stability under RH (Theorem~\ref{thm:vonKoch-acs},
-the logarithmic-coordinate restatement of von Koch's
-bound~\cite{vonKoch1901}).
+\medskip\noindent\textbf{Classical equivalence, unresolved premise (R04).}
+Theorem~\ref{thm:vonKoch-acs} gives the corrected RH-equivalent bound.
+Proving that bound independently of RH remains open. Finite-grid slopes,
+additional ordinates, and an envelope chosen with $\sigma=1/2$ do not
+discharge it.
 
-\medskip
-\noindent\textbf{Confirmed (real Odlyzko data; sample sizes per item as stated in the text --- 100 zeros for the converse scaling, $N = 200$ for $\delta_N$, up to $2{,}001{,}052$ zeros for the stationarity diagnostic).}
-The converse (Theorem~\ref{thm:T4prime}: stationarity $\Rightarrow$ RH)
-is rigorous for any fixed $N$; the extension to all $N$ requires
-$\delta_N > 0$, verified to $N = 200$.
-Variance scaling matches $X^{2\sigma}$ to $<2\%$ over three decades
-(Theorem~\ref{thm:variance}).
-Wronskian non-vanishing on all 1{,}225 pairs of 50 zeros.
-The critical line is the unique center manifold of the tensor flow.
-Resolvent identity $\chi(\omega) = \mathrm{Tr}[(\omega - H)^{-1}]$ for
-the trivial diagonal $H$ (verified at machine precision in
-\texttt{src/paper\_b/explicit\_formula\_resolvent.py}).
-Berry--Keating leading semiclassical
-counting~\cite{BerryKeating1999} matches the Riemann--von Mangoldt
-density to within $\sim\!1$ zero through $T = 143$
-(\texttt{src/paper\_b/berry\_keating\_counting.py}).
+\medskip\noindent\textbf{Operator identification (R06).}
+A natural operator needs a Hilbert space, domain, self-adjointness proof,
+and a complete link between its spectrum and $-i(\rho-1/2)$ for actual
+nontrivial zeros. An explicit full trace identity with justified tails could
+supply such a link; matching a finite list or its imaginary parts cannot.
+The constructed-domain and regularized-tail results of R08--R10 remain
+useful scoped results, not a solution of this identification problem.
 
-\medskip
-\noindent\textbf{Disproved (negative results, scope of model space).}
-The Wronskian on scalar zero-mode functions \emph{fails the Leibniz
-axiom} by $W[fg, h] - (f\,W[g,h] + g\,W[f,h]) = -fgh'$
-(Remark~\ref{rem:not-poisson}, verified symbolically).  Therefore
-the Wronskian is not a Poisson bracket on a function algebra;
-plasma-Hamiltonian readings of the Wronskian-as-bracket structure do
-not transfer.  The phenomenological correspondences with discrete
-plasma resonances (dispersion peaks at $\omega \approx \gamma_k$,
-beat-frequency Wronskian zero crossings, neutral-stability framings)
-survive as analogy only; the symplectic-foundation reading does not.
+\medskip\noindent\textbf{Finite evidence and precision (R11--R12).}
+The historical numerical results retain their sample sizes and instrument
+definitions. Later audits establish finite-resolution and endpoint criteria,
+including a failure when rounded input ordinates straddle an endpoint.
+Those criteria, their formal checks, and the finite data applications are
+recorded separately. They do not prove completeness at every height.
+Broader $L$-function use requires certified roots, character conventions,
+input precision, and counting completeness for the stated range.
 
-\medskip
-\noindent\textbf{Self-corrections.}
-The harmonic-oscillator property $y'' + \gamma^2 y = 0$ was initially
-reported as holding ``only at $\sigma = 1/2$''; the scaled computation
-with real data showed it holds for \emph{all} $\sigma$ (Remark~\ref{rem:self-correction}).
-The corrected statement: the critical line is distinguished by
-\emph{stationarity of the superposition}, not by the individual mode ODE.
-An earlier draft proposed a ``plasma Hamiltonian'' framing of the
-prime--zero system as the foundation of the spectral stationarity
-result; subsequent verification of the Wronskian's failure of Leibniz
-(Remark~\ref{rem:not-poisson}) showed this framing is not supported
-by the algebra.  The result has been corrected to use the
-resolvent-trace formulation (Section~\ref{sec:resolvent}) and the
-renormalised-stability formulation (Section~\ref{sec:vonKoch}), both
-of which are rigorous and standard.
-
-\medskip
-\noindent\textbf{Open directions.}
-
-\textit{Extension to $L$-functions.}
-Section~\ref{sec:lfunctions} extends the framework to non-zeta L-functions
-empirically: $L(s, \chi_4)$ recovers the Dirichlet character $\chi_4$ as
-sign assignment on $F_L(\omega)$ peaks ($100\%$ accuracy on $19$ peaks);
-the cross-correlation $(F_\zeta \pm F_L)/2$ decomposes primes by residue
-class mod 4 ($100\%$ on $30$ peaks); and $\zeta_K(\mathbb{Q}(i))$ recovers
-the split/inert prime-ideal structure of $\mathbb{Z}[i]$ ($5.7\times$ amplitude
-ratio).  What remains open is broader generalisation across the Selberg
-class: characters $\chi_q$ for $q \in \{3, 5, 7, 8, \ldots\}$;
-imaginary quadratic fields $\mathbb{Q}(\sqrt{-d})$; real quadratic fields;
-cyclotomic fields $\mathbb{Q}(\zeta_n)$; and higher-degree (modular,
-automorphic) L-functions.  The same methodology applies; only the
-zero-finding step requires adaptation per case.
-
-\textit{Unconditional converse.}
-Removing the $\delta_N > 0$ condition in Theorem~\ref{thm:T4prime}
-would make the equivalence RH $\Leftrightarrow$ stationarity unconditional.
-
-\textit{Higher-$N$ verification.}
-Section~\ref{sec:finite-sample} verifies the stationarity prediction
-at $N = 2{,}000{,}000$ on Odlyzko's \texttt{zeros6} reference dataset
-of $2{,}001{,}052$ zeros: $\alpha_N \approx 0$ for the unperturbed
-spectral function across six decades of $N$, and the
-injection scaling $\alpha = 2\sigma - 1$ is recovered to $1.5\%$
-accuracy across four off-line $\sigma$ values. The diagnostic is
-empirically validated at the largest publicly available scale; what
-remains open is the unconditional converse (above).
-
-\textit{Hilbert--P\'{o}lya operator construction.}
-Find a natural self-adjoint $H$ (Schr\"{o}dinger or otherwise)
-whose spectrum is exactly $\{\gamma_k\}$, not inputted.  This is
-the 100-year-old Hilbert--P\'{o}lya
-problem~\cite{BerryKeating1999, Connes1999}; resolution would
-upgrade the resolvent-trace framing of Section~\ref{sec:resolvent}
-from formal identity to derived theorem.  Section~\ref{sec:hilbert-polya}
-provides the framework's contribution: a precise constraint specification
-(C1--C9) with executable test suite, and the demonstration that GUE
-statistics alone are necessary but not sufficient (Riemann zeros and
-random Hermitian eigenvalues are indistinguishable on $R_2$ but differ by
-$40\times$ on the Fourier-dual peak alignment).  The target is sharpened
-to: \emph{find $H$ such that $\mathrm{Tr}(\cos(\omega H))$ reproduces the
-prime explicit formula and spectral statistics follow GUE.}  Three
-structural hints from the ACS algebra (direct sum with asymmetric coupling,
-tensor product with Lie algebra coupling, graded operator with Koszul
-duality) are documented but await rigorous operator-theoretic realisation.
+\medskip\noindent\textbf{Release boundary.}
+The canonical implementation evaluates a fixed finite normalized sum and
+now avoids intermediate exponential overflow. This revision reconciles
+the paper with that implementation and the existing Frontier evidence.
+It does not claim RH, a hidden dimensional carrier, universal physical
+identification, or completion of the other ACS research branches.
 
 \section{Discussion}
 \label{sec:discussion}
+The surviving result is a separation of observables. A finite trigonometric
+sum, a finite sum retaining unknown complex zero coordinates, and the full
+prime-counting error answer different questions. Their envelopes, sampling
+measures, and limiting operations must be named before comparing them.
+The finite calculations and classical reformulation do not establish the
+missing arithmetic bound or a natural operator.
 
-The elastodynamic tensor analysis reveals a coherent geometric picture
-of the Riemann explicit formula, derived without assuming RH.
+For the Hilbert--P\'olya route, real eigenvalues are useful only after
+identifying them with $-i(\rho-1/2)$ for every nontrivial zero. Assigning
+the supplied imaginary parts to a diagonal operator presupposes real
+spectral data and cannot recover the discarded real parts. Finite ensemble
+statistics and prime-power signatures are candidate constraints, not a
+complete operator construction~\cite{BerryKeating1999,Connes1999}.
 
-The critical line $\sigma = 1/2$ emerges as the \emph{unique center manifold}
-of a well-defined dynamical system.  Each Riemann zero $\gamma_k$ is the
-natural frequency of a harmonic oscillator (Remark~\ref{thm:sho}): the
-envelope-stripped mode $y_k$ satisfies $y_k'' + \gamma_k^2 y_k = 0$
-independently of $\sigma$.  The full mode $\varphi_k = e^{\sigma t} y_k$
-grows with envelope $x^\sigma$.  The Riemann Hypothesis is the statement
-that all modes share the same envelope ($x^{1/2}$), making the superposition
-$F_N = \sum_k A_k \varphi_k$ \emph{stationary} --- the relative amplitudes
-are constant in time.
-
-The tensor field generated by the explicit formula has a purely rotational
-structure at $\sigma = 1/2$ (Proposition~\ref{prop:rotation}): the curl of
-the shear stress is a pure cosine with no radial drift.  Away from the
-critical line, a radial component appears (proportional to $\sigma - 1/2$),
-converting the closed loops into spirals.  The critical line is therefore
-the unique value of $\sigma$ where the tensor flow is topologically
-closed --- a pinwheel rather than a spiral.
-
-The Wronskian of the zero modes is non-vanishing on all 1{,}225 tested
-pairs, establishing an infinite-dimensional Lie algebra on the space of
-modes.  The combination frequencies $\gamma_k \pm \gamma_j$ appearing in
-the Wronskian are the ``Tartini tones'' of the arithmetic instrument:
-objective nonlinear mixing products generated \emph{within} the zero
-spectrum (zero--zero mixing), not by resonance across the prime--zero
-boundary.
-
-\textbf{Relation to the Hilbert--P\'{o}lya programme.}
-The idea that RH is equivalent to the self-adjointness of a specific
-operator dates to Hilbert and P\'{o}lya.  Berry and
-Keating~\cite{BerryKeating1999} proposed the quantisation of $xp$
-as a candidate; Connes~\cite{Connes1999} gave a trace-formula approach
-via noncommutative geometry.  Our stationarity characterisation
-(Theorem~\ref{thm:T4prime}) is in this tradition: it replaces
-``self-adjointness of an operator'' with ``stationarity of a
-superposition,'' but the underlying logic is the same --- a spectral
-condition on the zeros equivalent to RH.  The recent work of
-Baluyot and Pratt~\cite{AltHyp2025} on the Alternative Hypothesis
-(what if zeros are \emph{not} on the critical line but instead
-spaced at half-integers?) provides the natural test case: under the
-AH, the variance diagnostic of Theorem~\ref{thm:variance} would
-exhibit a characteristic signature distinct from the RH prediction,
-offering a potential discriminant between the two hypotheses.
-The pair correlation results of Baluyot
-et al.~\cite{PairCorr2025} provide the rigorous background for
-the Wronskian analysis of Section~\ref{sec:tensor}.
-
-The variance scaling (Theorem~\ref{thm:variance}), confirmed with 100
-Odlyzko zeros to $<\!2\%$ accuracy over three decades, provides
-a quantitative diagnostic: an off-line zero at $\sigma_0 > 1/2$ would
-produce a variance excess scaling as $X^{2\sigma_0 - 1}$ relative to the
-on-line contribution.  This is in principle detectable by high-precision
-numerical computation of $\mathrm{Var}_X[T_{12}]$ at large $X$.
-
-All conclusions follow from the tensor geometry and the real Riemann zero
-data.  The critical line's special role is not assumed but emerges as
-a mathematical consequence of the structure: it is where Form and
-Function fall into exact balance, the flow is closed, and the variance
-is minimised.
+The tensor and oscillator constructions are descriptions chosen by the
+model. They do not establish an intrinsic dimension for a hidden object
+or force zeta zeros onto a geometric center manifold. The critical line's
+symmetry is established independently; RH remains the assertion that all
+nontrivial zeros belong to it. More representations of the same ordinate
+record do not supply the missing information.
 
 \subsection*{Reproducibility}
-All computational claims are backed by the scripts
-\texttt{riemann\_tensor.py} and \texttt{riemann\_scaled\_final.py},
-executable with Python~3.8+ and the standard libraries NumPy, SciPy,
-and SymPy.  The 100 Riemann zeros are from the Odlyzko high-precision
-tables (hardcoded for exact reproducibility).
-See the accompanying \texttt{README\_verification\_suite.md} for a
-complete script inventory.
+The canonical appendix is \path{code/acs_codebase/}; its README identifies
+the supported tests and finite diagnostics. Heritage scripts such as
+\path{riemann_tensor.py} and \path{riemann_scaled_final.py} remain historical
+references, not a declaration that every computational claim was rerun or
+that their inputs are exact. The dated Frontier source audit records
+provenance and declared precision. The scoped reconciliation and check
+receipt are in \path{docs/framework_closure/README.md}. No historical
+large-$N$ slope or physical experiment was recomputed for this revision.
 
 \appendix
 \section{Geometric Vision}
@@ -1878,17 +1664,29 @@ the vibrations.  The explicit formula $\psi(x) = x - \sum_\rho
 x^\rho/\rho - \ldots$ is the coupling equation that ties them
 together: primes (Form) and zeros (Function) in mutual constraint.
 
-When all zeros sit on the critical line ($\sigma = 1/2$), every
-mode has the same amplitude envelope.  The superposition is
-stationary --- Form and Function cancel exactly and the instrument
-sits in perfect balance.  An off-line zero would be an uncancelled
-mode: it grows or decays, and the exact cancellation between the prime
-fluctuations and the zero oscillation --- the balance --- fails.
+Under RH, finite zero modes share the common envelope $x^{1/2}$.
+This does not make the arithmetic error zero or establish information
+balance. The explicit formula holds independently of RH, with its
+appropriate summation convention. The corrected finite and full-error
+statements are given in the main text.
 
-The prime--zero ACS is the arithmetic instance of a nesting that
-runs across all domains: vibrations (zeros) $\to$ momentum
+The proposed cross-domain analogy is: vibrations (zeros) $\to$ momentum
 (bracket coupling) $\to$ gauge colour ($\mathfrak{su}(3)$ attractor)
-$\to$ confinement $\to$ mass $\to$ gravity.
+$\to$ confinement $\to$ mass $\to$ gravity. It is not a proved identification
+of these generating mechanisms.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The finite ordinate experiments test the declared spectral statistics; they neither locate nor exclude all off-line zeta zeros. A diagonal operator assembled only from real ordinates loses the real-part displacement and cannot alone establish the Hilbert--P\'olya identification. The critical line is exactly the locus $\operatorname{Re}s=1/2$ in the standard complex coordinate. Curving its image by a coordinate map changes the representation, not RH. All infinite-sum or long-time conclusions require the relevant convergence and exchange-of-limit argument. The corrected growth bounds and reflection conventions in this version govern older interpretations.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{99}
 \bibitem{Wallace2026a}
@@ -1982,13 +1780,19 @@ B.~Wallace,
 \textit{Tartini-tone characterisation of the Riemann zero spectrum:
 empirical synthesis},
 Technical note, accompanying \textit{Riemann Spectral ACS} extension (2026),
-\texttt{tartini\_synthesis/}.
+\path{tartini_synthesis/}.
 
 \bibitem{HPCode}
 B.~Wallace,
 \textit{Hilbert-P\'{o}lya constraint test suite},
-Reference implementation \texttt{hp\_v3.py} (2026),
-\texttt{hilbert\_polya/}.
+Reference implementation \path{hp_v3.py} (2026),
+\path{hilbert_polya/}.
+
+\bibitem{Schoenfeld1976}
+L.~Schoenfeld,
+\textit{Sharper bounds for the Chebyshev functions $\theta(x)$ and $\psi(x)$. II},
+Mathematics of Computation \textbf{30} (1976), 337--360.
+\href{https://doi.org/10.1090/S0025-5718-1976-0457374-X}{doi:10.1090/S0025-5718-1976-0457374-X}.
 
 \end{thebibliography}
 \end{document}

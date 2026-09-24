@@ -1,0 +1,7 @@
+[]-all-independent-retries-successful PASS
+[]-no-retry-undercuts-selected-candidate PASS
+[]-all-retries-return-neutral-energy PASS
+[0.3]-all-independent-retries-successful PASS
+[0.3]-no-retry-undercuts-selected-candidate PASS
+[0.3]-all-retries-return-neutral-energy PASS
+{"checks_passed": 6, "retries_total": 47}

@@ -1,0 +1,7 @@
+{
+  "reviewed": true,
+  "legible": true,
+  "artifact": "selection-energy.png",
+  "method": "Opened the rendered PNG with view_image; checked all three panels, axes, bounds, labels and the scope caption.",
+  "qualification": "The figure visualizes exact diagnostic formulas, not measured physical predictions."
+}

@@ -41,6 +41,9 @@ $P_\alpha$ from Confined Flag Mode and Gaussian Cluster Trial}
 
 \date{July 22, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \maketitle
@@ -64,6 +67,11 @@ reduces RMS residual to $0.8220$ without changing the correlation
 (affine shift).  Absolute scale may require such a global $S$; this is
 not a many-body uniqueness claim.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.1em}
 \hrule
@@ -123,8 +131,8 @@ $\langle\log_{10} P_S\rangle=\langle\log_{10} P_\alpha^{\mathrm{ext}}\rangle$.
 Integrals use Simpson quadrature on a uniform grid of $N=4096$ points on
 $[0,R]$.  Throat radii $R$ and extracted $\log_{10} P_\alpha$ are taken from
 the 14-row table in~\cite{NuclearDecay2026}.  Implementation path (repo):
-\texttt{code/palpha\_overlap/palpha\_overlap.py}; results JSON:
-\texttt{docs/palpha\_overlap/palpha\_overlap\_results.json}.
+\nolinkurl{code/palpha_overlap/palpha_overlap.py}; results JSON:
+\nolinkurl{docs/palpha_overlap/palpha_overlap_results.json}.
 
 \section{Results on the stated set}
 
@@ -137,7 +145,7 @@ $P_{\mathrm{model}}$ from $\ell=0$ overlap; $S$ is one global factor.}
 \scriptsize
 \renewcommand{\arraystretch}{0.75}
 \setlength{\tabcolsep}{5pt}
-\begin{tabular}{lcccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccccc}
 \toprule
 \textbf{Isotope} & \textbf{$R$ (fm)} & \textbf{$\log_{10} P_{\mathrm{model}}$}
  & \textbf{$\log_{10} P_\alpha^{\mathrm{ext}}$}
@@ -160,7 +168,7 @@ $^{238}\mathrm{Pu}$ & 9.34 & $-0.4048$ & $-3.28$ & $+2.8752$ & $-1.9729$ & $+1.3
 $^{240}\mathrm{Pu}$ & 9.36 & $-0.4068$ & $-2.91$ & $+2.5032$ & $-1.9749$ & $+0.9351$ \\
 $^{244}\mathrm{Cm}$ & 9.42 & $-0.4129$ & $-3.61$ & $+3.1971$ & $-1.9810$ & $+1.6290$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{table}
 
 \subsection{Summary statistics}
@@ -206,17 +214,30 @@ alpha trial~\cite{PalphaThroatOverlap2026}; baseline artifacts here are
 retained for comparison.
 \end{remark}
 
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The overlap is a normalized proxy relative to the selected interior and cluster trial states. The fitted global spectroscopic factor fixes an absolute scale from data; correlation is unaffected by that log shift. Isospectral alternatives can change channel overlap, so the spectrum alone does not identify preformation. A microscopic prediction would additionally require the many-body channel, interaction and matching prescription. This release retains the negative absolute-scale result and does not interpret the fit as a unique origin.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{99}
 \bibitem{NuclearDecay2026}
   ACS Theoretical Physics Working Group,
   \emph{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Nuclear_Decay.tex}.
 \bibitem{PalphaThroatOverlap2026}
   ACS Theoretical Physics Working Group,
   \emph{Throat-Geometry Overlap for Alpha Preformation},
   ACS Framework note (2026),
-  \texttt{papers/notes/Flag\_Condensate\_Palpha\_Throat\_Overlap.tex}.
+  \nolinkurl{papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex}.
 \bibitem{gamow1928}
   G. Gamow, \emph{Zur Quantentheorie des Atomkernes},
   Z. Phys. \textbf{51}, 204 (1928).

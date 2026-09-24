@@ -1,0 +1,15 @@
+[]-all-independent-retries-successful PASS
+[]-no-retry-undercuts-selected-candidate PASS
+[]-all-retries-return-neutral-energy PASS
+[0.3]-all-independent-retries-successful PASS
+[0.3]-no-retry-undercuts-selected-candidate PASS
+[0.3]-all-retries-return-neutral-energy FAIL
+{"checks_passed": 5, "retries_total": 47}
+Traceback (most recent call last):
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/radiative_search_audit.py", line 55, in <module>
+    main()
+    ~~~~^^
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/radiative_search_audit.py", line 51, in main
+    assert all(c['passed'] for c in checks), 'Failures retained in search-audit.json'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Failures retained in search-audit.json

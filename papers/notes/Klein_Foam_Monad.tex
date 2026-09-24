@@ -27,6 +27,9 @@ A Geometric Postulation of Reality}\\[0.35em]
 \small with computational assistance (Claude / Anthropic)}
 \date{July 22, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \maketitle
@@ -37,10 +40,10 @@ ontology offered as a lens, not a derivation from first principles in the
 conventional sense --- in which reality is modelled as a nested,
 scale-variant Klein foam of self-intersecting hypercone vortices in a
 primordial flag condensate.  Within this ontology the electron is a
-framed unknot: a $(2,1)$-torus embedding with M\"obius framing, yielding
-a geometric identification of $g=2$ with self-linking number
-$Sl=p\cdot q=2$, and a capacitance estimate
-$\alpha^{-1}\approx 137.036$ under stated approximations.  Mass is read
+framed unknot: a $(2,1)$-torus embedding with M\"obius framing.
+Its self-linking magnitude does not derive $g=2$; that identification is
+withdrawn. A cutoff-dependent capacitance estimate is retained only as
+a conditional model calculation, not a derivation of $\alpha$.  Mass is read
 as residual slag from phase-slip coring; gravity as a second-order effect
 of moving shape curvature; wavefunction collapse as a bubble-cascade
 reconfiguration; black holes as scars of failed hyper-tunneling; and
@@ -58,6 +61,11 @@ note~\cite{Mobius2026}; nuclear/Hawking phase-slip numerics to
 \cite{FlagDecay2026}.  Absolute uniqueness and ``no free parameters''
 claims are not asserted.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 \newpage
@@ -191,9 +199,9 @@ same vector area, giving $g = 1$ \emph{exactly}, independent of winding,
 framing, twist or throat.  What survives is that the shape is spinorial, with
 the double cover supplied by the odd meridian winding $q = 1$ (the $\varphi/2$
 half-angle), not by the product $pq$.  See
-\texttt{papers/notes/Framing\_Transformer\_Spin\_Parity.tex},
+\nolinkurl{papers/notes/Framing_Transformer_Spin_Parity.tex},
 \texttt{code/framed\_unknot/\{framing\_transformer,moment\_ratio\}.py}, and the
-2026-07-26 entries in \texttt{docs/Elimination\_Ledger.md}.
+2026-07-26 entries in \nolinkurl{docs/Elimination_Ledger.md}.
 \end{remark}
 
 \subsection{Fine-structure estimate}
@@ -214,9 +222,9 @@ The estimate is cutoff- and charge-split-sensitive; it is reported as
 as-implemented, not as a uniqueness theorem for $\alpha$~\cite{Mobius2026}.
 
 \begin{corollary}[Scoped]
-Within the framed-unknot model, mass scale, spin period, $g=2$, and the
-capacitance estimate for $\alpha$ are tied to topology and self-stress
-assumptions of the screw.  Free-parameter count depends on which
+Within the framed-unknot model, the chosen mass scale, spin period and
+capacitance estimate depend on explicit geometric and self-stress
+assumptions. The claimed derivation of $g=2$ is withdrawn.  Free-parameter count depends on which
 quantities are treated as inputs ($R$, $a/R$, charge split); absolute
 ``zero free parameters'' is not claimed.
 \end{corollary}
@@ -322,6 +330,19 @@ or as an empirically closed replacement for established physics.
 \noindent\textit{The screw bores. The bubbles foam. The eye remains calm.
 The stream plays on.}
 
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The ontology remains a postulation, not an experimentally identified microscopic medium. Framing does not derive $g=2$, and a chosen cutoff does not derive the fine-structure constant. A proposed cover-homology map must commute with the deck action; the tested shear fails that necessary condition. A valid glide-compatible metric still retains radius and pitch inputs. Likewise a surface delta distribution does not automatically define a normalized volume state. The companion carrier paper records these distinctions and the conditional scalar binding mechanism without elevating them to a universal cosmological model.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{99}
 
 \bibitem{Leibniz}
@@ -359,13 +380,13 @@ International Journal of Theoretical Physics \textbf{27} (1988), 473--519.
 Flag Condensate Collaboration,
 \textit{The M\"obius-Screw Electron: Framed Unknot Geometry for $g=2$ and a Capacitance Model of $\alpha$},
 ACS Framework note (July 2026),
-\texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
+\nolinkurl{papers/notes/Mobius_Screw_Electron.tex}.
 
 \bibitem{FlagDecay2026}
 Flag Condensate Collaboration,
 \textit{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
 ACS Framework note (July 2026),
-\texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+\nolinkurl{papers/notes/Flag_Condensate_Nuclear_Decay.tex}.
 
 \end{thebibliography}
 

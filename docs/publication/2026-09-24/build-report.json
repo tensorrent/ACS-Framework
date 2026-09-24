@@ -1,0 +1,290 @@
+{
+  "total": 35,
+  "passed": 35,
+  "papers": [
+    {
+      "source": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [
+        "1.37373pt too wide"
+      ],
+      "pdf": "papers/ACS_Deterministic_AI_Stack_PDR.pdf"
+    },
+    {
+      "source": "papers/Form_Function_and_Asymmetry.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [
+        "0.38556pt too wide"
+      ],
+      "pdf": "papers/Form_Function_and_Asymmetry.pdf"
+    },
+    {
+      "source": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf"
+    },
+    {
+      "source": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf"
+    },
+    {
+      "source": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf"
+    },
+    {
+      "source": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/core_trilogy/Spectral_Witness_Refinement.pdf"
+    },
+    {
+      "source": "papers/discrete_geometry_formalism.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/discrete_geometry_formalism.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/The_Geometry_Engine.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/The_Geometry_Engine.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/Three_Layer_Decomposition.pdf"
+    },
+    {
+      "source": "papers/later_FF06_series/When_a_Number_Lies.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/later_FF06_series/When_a_Number_Lies.pdf"
+    },
+    {
+      "source": "papers/methodology/Form_Function_Relativity.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/methodology/Form_Function_Relativity.pdf"
+    },
+    {
+      "source": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/methodology/Prime_Carrier_Position_Form_Factor.pdf"
+    },
+    {
+      "source": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.pdf"
+    },
+    {
+      "source": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf"
+    },
+    {
+      "source": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.pdf"
+    },
+    {
+      "source": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Adjoint_Clifford_Signature_Selection.pdf"
+    },
+    {
+      "source": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf"
+    },
+    {
+      "source": "papers/notes/Density_Engine_Many_Worlds.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Density_Engine_Many_Worlds.pdf"
+    },
+    {
+      "source": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Flag_Condensate_Nuclear_Decay.pdf"
+    },
+    {
+      "source": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Overlap.pdf"
+    },
+    {
+      "source": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Refined.pdf"
+    },
+    {
+      "source": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.pdf"
+    },
+    {
+      "source": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf"
+    },
+    {
+      "source": "papers/notes/Klein_Foam_Monad.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Klein_Foam_Monad.pdf"
+    },
+    {
+      "source": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Mobius_Ribbon_Capacitance.pdf"
+    },
+    {
+      "source": "papers/notes/Mobius_Screw_Electron.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Mobius_Screw_Electron.pdf"
+    },
+    {
+      "source": "papers/notes/Prime_Gap_Transition_Operator.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Prime_Gap_Transition_Operator.pdf"
+    },
+    {
+      "source": "papers/notes/Pythagorean_Lattice_Limits.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/notes/Pythagorean_Lattice_Limits.pdf"
+    },
+    {
+      "source": "papers/updates/ACS_Action_Identifiability.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf"
+    },
+    {
+      "source": "papers/updates/ACS_Condensate_Carrier_Boundary.tex",
+      "passed": true,
+      "returncode": 0,
+      "fatal_diagnostics": [],
+      "overfull_boxes": [],
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf"
+    }
+  ]
+}

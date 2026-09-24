@@ -1,0 +1,6 @@
+{
+  "source": "seven_tests_kinetic",
+  "scope": "only normalization section: source lines 358-472",
+  "returncode": 0,
+  "replay_sha256": "31b1995c0b448b6e0e3a9553bfbdfdd87a46b7ff2bcad4cc4329a276d9b1ca22"
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/symmetry_selection_audit.py", line 142, in <module>
+    if __name__=='__main__':audit_symmetry_selection()
+                            ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/symmetry_selection_audit.py", line 84, in audit_symmetry_selection
+    check('antisymmetric projector idempotent',pa*pa==pa)
+                                               ~~^~~
+  File "/Users/coo-koba42/Library/Python/3.14/lib/python/site-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+  File "/Users/coo-koba42/Library/Python/3.14/lib/python/site-packages/sympy/matrices/matrixbase.py", line 2819, in __mul__
+    return self.multiply(other)
+           ~~~~~~~~~~~~~^^^^^^^
+  File "/Users/coo-koba42/Library/Python/3.14/lib/python/site-packages/sympy/matrices/matrixbase.py", line 2846, in multiply
+    raise ShapeError(f"Matrix size mismatch: {self.shape} * {other.shape}.")
+sympy.matrices.exceptions.ShapeError: Matrix size mismatch: (4, 64) * (4, 64).

@@ -42,6 +42,9 @@
 
 \date{July 21, 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \maketitle
@@ -49,6 +52,11 @@
 \begin{abstract}
 We present a particle-free formulation of nuclear decay and quantum tunneling within the Algebraic Conductance State (ACS) flag-condensate ontology. By representing the nucleus as a confined standing-wave phase lock of canonically conjugate real field components $\phi$ (cosine mode) and $\pi$ (sine mode), decay is reinterpreted as a spectral bifurcation into a travelling wave driven by geometric phase slips across the colour-confining throat. We derive the WKB Gamow transmission factor $T = \ee^{-2W}$ from the Euclidean deformation of the BPST instanton action $\delta S(R)$ on the curved throat metric. Utilizing a numerically stable $2\times 2$ transfer matrix framework, we verify the Bogoliubov mode-mixing relation $|\beta/\alpha|^2 = \ee^{-2W}$ across 14 alpha-emitting isotopes ($^{212}\text{Po}$ to $^{244}\text{Cm}$) spanning many orders of magnitude in half-life. This yields a Geiger--Nuttall linearity of $R^2 = 0.9939$ with a predicted-to-measured slope ratio of $1.0000$ on the stated set, documenting that the decay \emph{slope} is geometric while the intercept encodes the alpha-cluster preformation amplitude extracted from data ($P_\alpha$ not predicted from first principles in this note). Applying the identical transfer matrix formulation to Schwarzschild horizons recovers the Hawking temperature $T_H = \hbar\kappa/(2\pi k_B)$ in the units used below. Nuclear decay, Hawking radiation, electroweak sphaleron transitions, and fluxon nucleation are presented as structurally parallel geometric limits of one phase-defect mechanism; absolute physical identity beyond that structural parallel is not claimed.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.1em}
 \hrule
@@ -168,7 +176,7 @@ where $P_\alpha$ is the standing-wave mode overlap fraction for the alpha config
 \scriptsize
 \renewcommand{\arraystretch}{0.75}
 \setlength{\tabcolsep}{6pt}
-\begin{tabular}{lccccccr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lccccccr}
 \toprule
 \textbf{Isotope} & \textbf{$Q_\alpha$ (MeV)} & \textbf{$R$ (fm)} & \textbf{$b$ (fm)} & \textbf{$W_{\text{ana}}$} & \textbf{$t_{1/2}^{\text{Gamow}}$} & \textbf{$t_{1/2}^{\text{meas}}$} & \textbf{$\log_{10} P_\alpha$} \\
 \midrule
@@ -187,7 +195,7 @@ $^{238}\text{Pu}$ & 5.593 & 9.34 & 45.98 & 31.066 & $1.44 \times 10^6$ s & $2.77
 $^{240}\text{Pu}$ & 5.256 & 9.36 & 48.93 & 33.626 & $2.55 \times 10^8$ s & $2.07 \times 10^{11}$ s & $-2.91$ \\
 $^{244}\text{Cm}$ & 5.902 & 9.42 & 44.47 & 29.832 & $1.39 \times 10^5$ s & $5.72 \times 10^8$ s & $-3.61$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{table}
 
 \subsection{Geiger-Nuttall Law Linearity}
@@ -249,7 +257,7 @@ when $c$ is restored.
 \vspace{0.2em}
 \small
 \setlength{\tabcolsep}{18pt}
-\begin{tabular}{lcr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcr}
 \toprule
 \textbf{Domain} & \textbf{Phase Defect $W$} & \textbf{Observable} \\
 \midrule
@@ -258,7 +266,7 @@ Black Hole ($1 M_\odot$) & 0.000 & $T_H = 6.17 \times 10^{-8}$ K \\
 Sphaleron (Electroweak)$^{\dagger}$ & $\sim 90$ & $B+L$ Violation Rate \\
 Superconductor (NbTi)$^{\dagger}$ & $\sim 17.4$ & Fluxon Nucleation Rate \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 
 \vspace{0.3em}
 {\footnotesize $^{\dagger}$Illustrative order-of-magnitude entries from standard
@@ -280,15 +288,28 @@ Hawking radiation, electroweak sphalerons, and superconducting fluxons
 supports a shared phase-defect pattern; companion electron geometry is
 developed in~\cite{Mobius2026}, and the broader ontology in~\cite{KFM2026}.
 
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The reported 14-isotope slope comparison uses measured decay inputs and does not predict preformation from first principles. A barrier factor, an assault rate and an interior channel overlap are separate ingredients. The later physical frontier retains counterexamples in which spectral information does not fix the overlap. The scalar binding study likewise has a specified charge and free-wave threshold, not a derivation of nuclear isotope lifetimes. Structural parallels to other tunneling problems must preserve these distinct physical inputs.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{99}
 \bibitem{gamow1928} G. Gamow, \emph{Zur Quantentheorie des Atomkernes}, Z. Phys. \textbf{51}, 204 (1928).
 \bibitem{gurney1928} R. W. Gurney and E. U. Condon, \emph{Wave Mechanics and Radioactive Disintegration}, Nature \textbf{122}, 439 (1928).
 \bibitem{bpst1975} A. A. Belavin, A. M. Polyakov, A. S. Schwartz and Yu. S. Tyupkin, \emph{Pseudoparticle solutions of the Yang-Mills equations}, Phys. Lett. B \textbf{59}, 85 (1975).
 \bibitem{hawking1975} S. W. Hawking, \emph{Particle creation by black holes}, Commun. Math. Phys. \textbf{43}, 199 (1975).
 \bibitem{geiger1911} H. Geiger and J. M. Nuttall, \emph{The ranges of the $\alpha$ particles from uranium}, Phil. Mag. \textbf{22}, 613 (1911).
-\bibitem{Mobius2026} Flag Condensate Collaboration, \emph{The M\"obius-Screw Electron}, ACS Framework note (2026), \texttt{papers/notes/Mobius\_Screw\_Electron.tex}.
-\bibitem{KFM2026} B. Wallace, \emph{The Klein-Foam Monad}, ACS Framework note (2026), \texttt{papers/notes/Klein\_Foam\_Monad.tex}.
-\bibitem{PalphaOverlap2026} ACS Theoretical Physics Working Group, \emph{Standing-Wave Overlap Proxy for Alpha Preformation}, ACS Framework note (2026), \texttt{papers/notes/Flag\_Condensate\_Palpha\_Overlap.tex}.
+\bibitem{Mobius2026} Flag Condensate Collaboration, \emph{The M\"obius-Screw Electron}, ACS Framework note (2026), \nolinkurl{papers/notes/Mobius_Screw_Electron.tex}.
+\bibitem{KFM2026} B. Wallace, \emph{The Klein-Foam Monad}, ACS Framework note (2026), \nolinkurl{papers/notes/Klein_Foam_Monad.tex}.
+\bibitem{PalphaOverlap2026} ACS Theoretical Physics Working Group, \emph{Standing-Wave Overlap Proxy for Alpha Preformation}, ACS Framework note (2026), \nolinkurl{papers/notes/Flag_Condensate_Palpha_Overlap.tex}.
 \end{thebibliography}
 
 \end{document}

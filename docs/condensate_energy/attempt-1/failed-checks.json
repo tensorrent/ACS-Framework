@@ -1,0 +1,70 @@
+[
+  {
+    "name": "180 independent ODE/analytic stationary transmissions agree",
+    "passed": true,
+    "cases": 180,
+    "max_absolute_error": 3.596012376760882e-13
+  },
+  {
+    "name": "stationary reflected plus transmitted flux equals incoming flux",
+    "passed": true,
+    "max_absolute_error": 6.661338147750939e-16
+  },
+  {
+    "name": "explicit spatial convention gives T=1/|alpha|\u00b2 and R=|beta/alpha|\u00b2",
+    "passed": true,
+    "max_absolute_error": 8.881784197001252e-16
+  },
+  {
+    "name": "free, zero-width and threshold cases have their exact transmissions",
+    "passed": true,
+    "controls": [
+      {
+        "omega": 1.0,
+        "height": 0.0,
+        "width": 2.0,
+        "T": 1.0,
+        "R": 0.0,
+        "alpha_T": 1.0,
+        "beta_ratio": 0.0,
+        "printed_transfer_T": 1.0,
+        "W": 0.0,
+        "exponential": 1.0,
+        "forbidden": false
+      },
+      {
+        "omega": 1.0,
+        "height": 4.0,
+        "width": 0.0,
+        "T": 1.0,
+        "R": 0.0,
+        "alpha_T": 1.0,
+        "beta_ratio": 0.0,
+        "printed_transfer_T": 1.0,
+        "W": 0.0,
+        "exponential": 1.0,
+        "forbidden": true
+      },
+      {
+        "omega": 1.0,
+        "height": 1.0,
+        "width": 2.0,
+        "T": 0.5000000000000001,
+        "R": 0.5000000000000001,
+        "alpha_T": 0.4999999999999999,
+        "beta_ratio": 0.5000000000000001,
+        "printed_transfer_T": 0.5,
+        "W": 0.0,
+        "exponential": 1.0,
+        "forbidden": false
+      }
+    ]
+  },
+  {
+    "name": "independent DOP853 dynamics and midpoint converge in energy norm",
+    "passed": false,
+    "coarse_error": 0.12287755580352465,
+    "fine_error": 0.0715981975245251,
+    "ode_nfev": 2678
+  }
+]

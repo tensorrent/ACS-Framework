@@ -1,0 +1,63 @@
+{
+  "checks_total": 9,
+  "checks_passed": 9,
+  "checks": [
+    {
+      "name": "eight normalized traceless Hermitian generators",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source equal-superposition state has unit norm",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source state is not a singlet",
+      "passed": true,
+      "evidence": {
+        "T3_state": [
+          "sqrt(3)/6",
+          "-sqrt(3)/6",
+          "0"
+        ]
+      }
+    },
+    {
+      "name": "both Cartan expectations nevertheless vanish",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero mean charges still have nonzero variance",
+      "passed": true,
+      "evidence": "1/3"
+    },
+    {
+      "name": "fundamental quadratic Casimir is four thirds",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "no nonzero fundamental vector is invariant",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "triplet times antitriplet has the expected singlet",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "three triplets have the expected antisymmetric singlet",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "conclusion": "The equal superposition is a triplet, not a singlet. Zero Cartan means do not establish invariance.",
+  "limits": [
+    "No physical color/optical equivalence is assumed",
+    "No claim about Newton historical attribution or biological color response is tested",
+    "Tensor singlets require a composite representation, not a coordinate relabeling"
+  ]
+}

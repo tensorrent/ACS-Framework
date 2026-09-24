@@ -26,6 +26,9 @@ Koba42 Research / TensorRent\\
 
 \date{May 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -40,6 +43,11 @@ We document three conjectures tested and falsified during the investigation: uni
 
 Computational data covers $5.08 \times 10^7$ primes up to $10^9$ for low-modulus statistics and $1.27 \times 10^6$ primes up to $2 \times 10^7$ for the full operator-theoretic analysis.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{Introduction}
 \label{sec:intro}
@@ -85,7 +93,7 @@ By construction, the column sums of $P_m$ are zero, and $P_m$ is supported on th
 
 \begin{emplaw}[Kernel Law]
 \label{thm:kernel}
-For all tested moduli $m \in \{6, 10, 12, 14, 15, 18, 20, 24, 30, 42, 60, 66, 84, 90\}$:
+For the tested moduli $m=6,10,12,14,15,18,20$ and $24,30,42,60,66,84,90$:
 \begin{equation}
 \dim \ker(P_m) = \varphi(m).
 \end{equation}
@@ -153,7 +161,7 @@ where the sum runs over the nonzero eigenvalues of $P_m$.
 Across the tested range:
 
 \begin{center}
-\begin{tabular}{cccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cccccc}
 \toprule
 $m$ & $\varphi(m)$ & $r_{\text{alg}}$ & $r_{\text{eff}}$ & $r_{\text{eff}}/r_{\text{alg}}$ \\
 \midrule
@@ -164,7 +172,7 @@ $m$ & $\varphi(m)$ & $r_{\text{alg}}$ & $r_{\text{eff}}$ & $r_{\text{eff}}/r_{\t
 60 & 16 & 240 & 42.98 & 0.179 \\
 90 & 24 & 552 & 100.48 & 0.182 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Log-log fits over the tested range $\varphi(m) \in \{2, 4, 8, 12, 16, 24\}$ yield:
@@ -184,7 +192,7 @@ The qualitative content of the observation is that the active sector exhibits a 
 The distribution of nonzero eigenvalue magnitudes $|\lambda|$ of $P_m$ is concentrated on a small number of dominant modes. Combining data from $m \in \{42, 60, 90\}$ yields 924 nonzero eigenvalues. The quantiles are summarized below.
 
 \begin{center}
-\begin{tabular}{cc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cc}
 \toprule
 Quantile & $|\lambda|$ \\
 \midrule
@@ -194,7 +202,7 @@ Quantile & $|\lambda|$ \\
 95\% & 0.124 \\
 99\% & 0.323 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The 99th percentile is approximately $20\times$ the median; the top 1\% of eigenvalues span a range larger than the entire bulk distribution. A small number of dominant modes carry most of the dynamical mass.
@@ -240,7 +248,7 @@ The investigation proposed and explicitly tested three conjectures that did not 
 
 \textbf{Falsification:}
 \begin{center}
-\begin{tabular}{ccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccc}
 \toprule
 $m$ & $\varphi(m)$ & $\rho(P_m)$ \\
 \midrule
@@ -249,7 +257,7 @@ $m$ & $\varphi(m)$ & $\rho(P_m)$ \\
 60 & 16 & 0.586 \\
 90 & 24 & 0.745 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 Power-law fit: $\rho(P_m) \approx 0.07 \cdot \varphi(m)^{0.75}$, predicting $\rho = 1$ near $\varphi(m) \approx 35$ (i.e.\ $(1/0.07)^{4/3} \approx 34.7$). The contraction principle holds in the low-modulus regime but does not extrapolate.
 
@@ -260,7 +268,7 @@ Power-law fit: $\rho(P_m) \approx 0.07 \cdot \varphi(m)^{0.75}$, predicting $\rh
 \textbf{Falsification:} Define the \emph{left-preserved norm fraction} as the ratio of $\|P_m\|_F$ contributions from entries respecting left-character labels to the total $\|P_m\|_F$.
 
 \begin{center}
-\begin{tabular}{cc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{cc}
 \toprule
 $m$ & Left-preserved fraction \\
 \midrule
@@ -269,7 +277,7 @@ $m$ & Left-preserved fraction \\
 30 & 36\% \\
 42 & 29\% \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 The fraction \emph{decreases} with $\varphi(m)$. At $m = 42$, only 29\% of the perturbation norm respects left-character blocks. Character structure is exact at the kernel boundary (the Kernel Law) but does not extend to global block-diagonalization.
 
@@ -279,7 +287,7 @@ The fraction \emph{decreases} with $\varphi(m)$. At $m = 42$, only 29\% of the p
 
 \textbf{Falsification:} The mean of $|\lambda|/\rho(P_m)$ over the nonzero spectrum:
 \begin{center}
-\begin{tabular}{ccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{ccc}
 \toprule
 $m$ & $\varphi(m)$ & Mean $|\lambda|/\rho$ \\
 \midrule
@@ -289,7 +297,7 @@ $m$ & $\varphi(m)$ & Mean $|\lambda|/\rho$ \\
 60 & 16 & 0.054 \\
 90 & 24 & 0.040 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 The normalized mean decreases monotonically by a factor of 16. No universal renormalized law exists in this normalization. The spectrum becomes more concentrated on dominant modes as $\varphi(m)$ grows.
 
@@ -301,7 +309,7 @@ The normalized mean decreases monotonically by a factor of 16. No universal reno
 To make the epistemic status of the various claims in this paper explicit, we record the tier classification used throughout:
 
 \begin{center}
-\begin{tabular}{p{0.42\textwidth}p{0.5\textwidth}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{p{0.42\textwidth}p{0.5\textwidth}}
 \toprule
 \textbf{Result} & \textbf{Status} \\
 \midrule
@@ -314,7 +322,7 @@ Uniform contraction $\rho(P_m) < 1$ & Falsified --- $\rho(P_m)$ grows with $\var
 Character-product block-diagonalization & Falsified --- character separation holds only at kernel level \\
 Universal renormalized spectral law & Falsified --- distribution concentrates with $\varphi(m)$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \subsection{The structural mystery}
@@ -345,7 +353,7 @@ This suggests $P_m$ may be best understood as a non-normal operator with arithme
 
 This note establishes empirical regularities of an operator constructed from prime-gap data. It does not constitute a proof of any number-theoretic theorem about primes. The Kernel Law is verified across 14 moduli and explicitly mechanism-tested at $m = 42$; it is presented as an empirical theorem awaiting rigorous proof. The Compression Law is a fitted scaling law; the underlying mechanism is open.
 
-The conjectures that did not survive — uniform contraction, character-product block-diagonalization, and universal renormalized law — were tested and explicitly rejected by the data. Their failure modes are documented because negative results constrain the theoretical interpretation of the positive results.
+The conjectures that did not survive --- uniform contraction, character-product block-diagonalization, and universal renormalized law --- were tested and explicitly rejected by the data. Their failure modes are documented because negative results constrain the theoretical interpretation of the positive results.
 
 \section{Data and Reproducibility}
 
@@ -366,6 +374,19 @@ The empirical prime-gap transition operator $P_m = T_m - T_0$ on the multiplicat
 \emph{Phenomenological ansatz (Section~\ref{sec:bridge}, quarantined):} A mean-field closure relation matches the empirical variance floor of cross-class transitions to the cross-correlation bound from \cite{WallaceB}. This is recorded as a numerical match worth investigating, not as a derived relation.
 
 The structural content of the paper is the Kernel Law combined with Proposition~\ref{prop:structural}; the empirical scaling and concentration phenomena complement this with information about how $P_m$ behaves outside its kernel.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The source-only kernel inclusion follows from the stated stochastic and continuity assumptions; exact saturation is an observation on the tested moduli. The effective-rank exponent is pre-asymptotic and depends on the rank convention. Neither the transition kernel nor an octave or geometric representation establishes a universal physical prime generator. The variance-floor connection remains a phenomenological comparison. Verification of finite primes and transition counts must not be promoted to an exclusion of off-line zeta zeros.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{99}
 

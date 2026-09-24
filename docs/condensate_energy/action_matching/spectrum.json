@@ -1,0 +1,801 @@
+{
+  "checks": [
+    {
+      "name": "holomorphic-pair-has-no-quadratic-term",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "stationarity-mDelta-equals-minus-two-lambda7-d2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-minus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-minus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-zero-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-zero-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-plus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar6-plus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-minus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-minus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-zero-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-zero-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-plus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-bar3-plus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-minus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-minus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-zero-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-zero-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-plus-real",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "eigenvectors-singlet-plus-imaginary",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sixty-complete-independent-Delta-eigenvectors",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nine-Goldstones-fifty-one-other-modes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "radial-mass-four-lambda7-d2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "isotropic-shift-leaves-all-transverse-masses-invariant",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-gauge-spectrum",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "all-gauge-orbit-directions-are-Hessian-zeros",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "nine-broken-generators",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "independent-numerical-spectrum",
+      "passed": true,
+      "evidence": 1.9984014443252818e-15
+    },
+    {
+      "name": "explicit-positive-physical-Delta-example",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-no-claimed-scalar-mass-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "color_gram-old-positive-rho2-range-has-instability",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-no-claimed-scalar-mass-identity",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "spin_gram-old-positive-rho2-range-has-instability",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 33,
+  "checks_total": 33,
+  "convention": "Phi=0; Delta=(1,-i,0)d E44/sqrt(2), NDelta=d^2; reported masses divided by d^2; zero-based invariant indices.",
+  "stationarity": "mDelta=-2 lambda7 d^2",
+  "sectors": [
+    {
+      "color": "bar6",
+      "hypercharge": "-4/3",
+      "spin": "minus",
+      "phase": "real",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "-4*(l7 - l9)/3",
+      "coefficients": [
+        "0",
+        "-4/3",
+        "0",
+        "4/3",
+        "0"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar6",
+      "hypercharge": "-4/3",
+      "spin": "minus",
+      "phase": "imaginary",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "-4*(l7 - l9)/3",
+      "coefficients": [
+        "0",
+        "-4/3",
+        "0",
+        "4/3",
+        "0"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar6",
+      "hypercharge": "-1/3",
+      "spin": "zero",
+      "phase": "real",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "-(-3*l10 + 5*l7 - 2*l9)/3",
+      "coefficients": [
+        "0",
+        "-5/3",
+        "0",
+        "2/3",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar6",
+      "hypercharge": "-1/3",
+      "spin": "zero",
+      "phase": "imaginary",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "-(-3*l10 + 5*l7 - 2*l9)/3",
+      "coefficients": [
+        "0",
+        "-5/3",
+        "0",
+        "2/3",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar6",
+      "hypercharge": "2/3",
+      "spin": "plus",
+      "phase": "real",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "(9*l10 + 2*l6 - 17*l7 + 4*l8 + 2*l9)/9",
+      "coefficients": [
+        "2/9",
+        "-17/9",
+        "4/9",
+        "2/9",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar6",
+      "hypercharge": "2/3",
+      "spin": "plus",
+      "phase": "imaginary",
+      "real_multiplicity": 6,
+      "mass_squared_over_d2": "(9*l10 + 2*l6 - 17*l7 + 4*l8 + 2*l9)/9",
+      "coefficients": [
+        "2/9",
+        "-17/9",
+        "4/9",
+        "2/9",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "-2/3",
+      "spin": "minus",
+      "phase": "real",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "0",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": true
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "-2/3",
+      "spin": "minus",
+      "phase": "imaginary",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "0",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": true
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "1/3",
+      "spin": "zero",
+      "phase": "real",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "l10 - l7",
+      "coefficients": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "1/3",
+      "spin": "zero",
+      "phase": "imaginary",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "l10 - l7",
+      "coefficients": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "4/3",
+      "spin": "plus",
+      "phase": "real",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "(3*l10 + 2*l6 - 5*l7)/3",
+      "coefficients": [
+        "2/3",
+        "-5/3",
+        "0",
+        "0",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "bar3",
+      "hypercharge": "4/3",
+      "spin": "plus",
+      "phase": "imaginary",
+      "real_multiplicity": 3,
+      "mass_squared_over_d2": "(3*l10 + 2*l6 - 5*l7)/3",
+      "coefficients": [
+        "2/3",
+        "-5/3",
+        "0",
+        "0",
+        "1"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "0",
+      "spin": "minus",
+      "phase": "real",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "4*l7",
+      "coefficients": [
+        "0",
+        "4",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "0",
+      "spin": "minus",
+      "phase": "imaginary",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "0",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": true
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "1",
+      "spin": "zero",
+      "phase": "real",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "0",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": true
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "1",
+      "spin": "zero",
+      "phase": "imaginary",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "0",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": true
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "2",
+      "spin": "plus",
+      "phase": "real",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "4*(l6 - l7)/3",
+      "coefficients": [
+        "4/3",
+        "-4/3",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": false
+    },
+    {
+      "color": "singlet",
+      "hypercharge": "2",
+      "spin": "plus",
+      "phase": "imaginary",
+      "real_multiplicity": 1,
+      "mass_squared_over_d2": "4*(l6 - l7)/3",
+      "coefficients": [
+        "4/3",
+        "-4/3",
+        "0",
+        "0",
+        "0"
+      ],
+      "zero_identically": false
+    }
+  ],
+  "gauge_spectrum_over_d2": [
+    {
+      "mass": "0",
+      "multiplicity": 12
+    },
+    {
+      "mass": "g4^2",
+      "multiplicity": 6
+    },
+    {
+      "mass": "gR^2",
+      "multiplicity": 2
+    },
+    {
+      "mass": "3g4^2+2gR^2",
+      "multiplicity": 1
+    }
+  ],
+  "generic_stable_example": {
+    "lambda6_to_lambda10": [
+      "6/5",
+      "1",
+      "6/5",
+      "6/5",
+      "6/5"
+    ],
+    "positive_physical_modes": 51,
+    "boundedness": "V = (NDelta-d^2)^2 + (1/5)(I6+I8+I9+I10), up to a constant; all summands nonnegative; holomorphic pair zero."
+  },
+  "historical_trace_models": {
+    "color_gram": {
+      "sectors": [
+        {
+          "color": "bar6",
+          "hypercharge": "-4/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-4/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-1/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-1/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "2/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "2/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "-2/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "-2/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "1/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-rho2",
+          "on_claimed_relation": "2*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "1/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-rho2",
+          "on_claimed_relation": "2*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "4/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-rho2",
+          "on_claimed_relation": "2*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "4/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-rho2",
+          "on_claimed_relation": "2*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "0",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "4*(rho1 + rho2)",
+          "on_claimed_relation": "-4*(9*rho1 - 16)/9"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "0",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "1",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "1",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "2",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "2",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        }
+      ],
+      "at_rho1_half": {
+        "negative": 48,
+        "zero": 11,
+        "positive": 1
+      }
+    },
+    "spin_gram": {
+      "sectors": [
+        {
+          "color": "bar6",
+          "hypercharge": "-4/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-4/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-1/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "-1/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "2/3",
+          "phase": "real",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar6",
+          "hypercharge": "2/3",
+          "phase": "imaginary",
+          "real_multiplicity": 6,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "-2/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "-2/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "1/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "1/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "4/3",
+          "phase": "real",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "bar3",
+          "hypercharge": "4/3",
+          "phase": "imaginary",
+          "real_multiplicity": 3,
+          "mass_squared_over_d2": "-2*rho2",
+          "on_claimed_relation": "4*(9*rho1 - 8)/9"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "0",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "4*(rho1 + rho2)",
+          "on_claimed_relation": "-4*(9*rho1 - 16)/9"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "0",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "1",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "1",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "2",
+          "phase": "real",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        },
+        {
+          "color": "singlet",
+          "hypercharge": "2",
+          "phase": "imaginary",
+          "real_multiplicity": 1,
+          "mass_squared_over_d2": "0",
+          "on_claimed_relation": "0"
+        }
+      ],
+      "at_rho1_half": {
+        "negative": 36,
+        "zero": 23,
+        "positive": 1
+      }
+    }
+  },
+  "scope": "Exact tree-level first-stage Delta and gauge spectrum. Phi masses and later electroweak breaking are not included in the count of 51 physical Delta modes."
+}

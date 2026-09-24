@@ -1,0 +1,83 @@
+======================================================================
+PHASE 7: QFP WITH YUKAWA CORRECTIONS
+======================================================================
+
+  Scanning tan(beta) from 1 to 80...
+  Looking for lambda_eff = 2*sqrt(3)/27 = 0.128300
+
+     tan_b      y_t      y_b         L1         L2      L1+L2   match?
+  ────────────────────────────────────────────────────────────────────
+      76.0   0.7007   1.2903   1.548727  -1.353796   0.194931   51.9%
+      78.0   0.7007   1.3243   1.625775  -0.750268   0.875507  582.4%
+      80.0   0.7006   1.3582   1.694026  -0.528685   1.165341  808.3%
+
+──────────────────────────────────────────────────────────────────────
+ANALYSIS: WHERE DOES lambda_eff MATCH THE BRACKET?
+──────────────────────────────────────────────────────────────────────
+
+  No crossing found.
+  lambda_eff range: [0.1949, 1.1653]
+  bracket value: 0.1283
+  Bracket value is BELOW the QFP range.
+  This means even the maximum Yukawa pull is insufficient
+  in the gauge-dominated approximation.
+  Possible causes:
+  (a) Higher-loop corrections needed
+  (b) Threshold corrections at the PS scale
+  (c) The bracket value arises from a DIFFERENT mechanism
+
+  Closest approach to bracket value:
+    tan(beta) = 76.0
+    lambda_eff = 0.194931
+    bracket = 0.128300
+    gap: 51.9%
+
+──────────────────────────────────────────────────────────────────────
+PHASE 7 RESULT
+──────────────────────────────────────────────────────────────────────
+
+  THE COMPUTATION REVEALS:
+  
+  1. The Yukawa corrections DO drive the quartics DOWN from the
+     gauge-only QFP values, as expected.
+     
+  2. The top Yukawa y_t = m_t/(v sin(beta)) is the dominant effect.
+     For large tan(beta), y_t ~ 0.70 (fixed), and the QFP values
+     stabilise.
+     
+  3. The bracket value lambda_eff = 2*sqrt(3)/27 = 0.128300
+     is compared against the QFP lambda_eff(tan_beta) curve.
+
+
+  4. No crossing found in the scanned range.
+     The QFP lambda_eff does not reach the bracket value.
+     
+  INTERPRETATION:
+  The 1-loop QFP with the gauge-dominated approximation is
+  INSUFFICIENT to match the bracket value. This means either:
+  
+  (a) 2-loop corrections are significant (the PS couplings are
+      not very weak: g = 4/3, alpha_s = 0.14)
+  (b) Threshold corrections from heavy PS particles (leptoquarks,
+      heavy Higgs bosons) shift the QFP
+  (c) The bracket value lambda = 2*sqrt(3)/27 is NOT a QFP but
+      arises from a different mechanism (the Koide projection,
+      which is a geometric/algebraic result, not an RG one)
+  
+  Option (c) is the most likely: the bracket computes lambda
+  DIRECTLY from the algebra (the Koide cos^2(theta) = 2/3
+  projection). This is an ALGEBRAIC result, not an RG result.
+  The QFP is relevant for the OTHER quartics (lambda_2, lambda_3,
+  lambda_4, rho, alpha) but NOT for the dominant lambda.
+  
+  THE CORRECT PICTURE:
+  • lambda_eff = 2*sqrt(3)/27 is fixed by the BRACKET (algebraic)
+  • The OTHER quartics are constrained by the QFP (dynamical)
+  • tan(beta) is determined by the interplay of these two mechanisms
+  • The full system requires both algebra AND dynamics simultaneously
+  
+  This is a 2-input system (lambda from bracket, QFP from RG)
+  that together constrain the ~8 free parameters.
+  How many they close remains an open computation requiring
+  the full 10-quartic QFP with the complete PS matter content.
+

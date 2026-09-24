@@ -1,0 +1,34 @@
+{
+  "status": "Scoped radiative-closure audit complete; ACS boundary-value derivation unresolved",
+  "checks_passed": 61,
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa",
+    "docs/condensate_energy/gauge_completion/receipt.json": "e0c9ad942c072c042bd0ab0ef650b54836b6c66fbccdd8deb592b3ff8714b3a7",
+    "docs/condensate_energy/canonical_vacuum/receipt.json": "5f07db81d4ce65a01825e61d8f8cd922d7c93933608071edbf90f2c9c7794614"
+  },
+  "artifact_sha256": {
+    "code/condensate_energy/hidden_coupling_audit.py": "59e4dbb64c647ccc9d29848b4e25f1b8a2094e3fd2451a9c730dbd091642cf09",
+    "code/condensate_energy/hidden_coupling_witnesses.py": "b7671f18fe315706d6abcc21348714d6c8b551e1e12c46150559361219b3bc30",
+    "code/condensate_energy/summarize_hidden_couplings.py": "228e57a7f2f87804d1827a0d10bd1d10fa2ba4fbb015e96af70caa9f95d997b4",
+    "docs/condensate_energy/hidden_couplings/README.md": "ff5dfa3bdfcd2305fc1719b3cec718b04114f25618dad0191f1bfe0f573567a3",
+    "docs/condensate_energy/hidden_couplings/assessment.json": "59013d1586db68c9855b81309545d1d49080f4c092b74236329ccddc09fe507f",
+    "docs/condensate_energy/hidden_couplings/attempts/audit.log": "784afce286384f7ff98188829c2a5258e59a1033d633a96ccc3347268d11fd02",
+    "docs/condensate_energy/hidden_couplings/attempts/exact-witnesses.log": "1ab40877e4889fca8d3819d95735c6254feab7b57cd56a4173f9e46c4806e23e",
+    "docs/condensate_energy/hidden_couplings/attempts/verification.json": "d92882d862e8f266f0008a58b6f0634fc985dd6af6c625bfd497f67929f45d12",
+    "docs/condensate_energy/hidden_couplings/exact-witnesses.json": "6677d958596a4634b1068c43d828b17c93f883a57844312cd49cc0712ceab1a6",
+    "docs/condensate_energy/hidden_couplings/protocol.md": "60c6622ae081a8ffad4a61e2acbe54c2f76594d422ee6dd24f65d381925843c5",
+    "docs/condensate_energy/hidden_couplings/radiative-closure.png": "0dc8c5fd0196cf14a8e29005bedacc7d6bb64363000a4f17e6561e267cd017e4",
+    "docs/condensate_energy/hidden_couplings/radiative-closure.svg": "120349c1d7014caa589b61984a21564b5f55bc87a8f3faeae991b1087446cef9",
+    "docs/condensate_energy/hidden_couplings/results.json": "8b0ffd65c14f1dcdaec4b84dfba23ca0af98989081b652faf66b1090c9159780",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/full_one_loop_rg.py": "b900bcc1c3554e541feec3c98ed2cf7365f46ba9dfe3b170e8ddde9a7e46d1c0",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/gauge_coefficients.json": "61842d21acd79205469a581ccf51037f7eb9aa5a727687327d7b938deb7e30eb",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/mass_coefficients.json": "5e64502bb61ee13e8bbf4d9858be59db3f9cf5e949405fc326e46f2588166714",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/provenance.json": "10230bbe4f2b72f54afd79268d88fda0933022700cfc84a146defed977da3d07",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/quartics.json": "3d66e7c4bffb4436c6c1c0bbf21b80c95d31dfb01e7a8a38ebe7083ede9c87c2",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/scalar_coefficients.json": "c37bc5ff77da7bd2d8b72afb098fd473dc52798a0bdf191d4fb4510b418bcc78",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/yukawa_model.py": "fce8ca5b2a4e7bd2e9e879f82d1efd58ffe3f4d9776c3d045aaac6b8bcca5cf8",
+    "docs/condensate_energy/hidden_couplings/source-snapshots/yukawa_scalar_coefficients.json": "6c43f2665d573696bd09977867f3456e26ba518f0198e17de8368ee49f61c89f"
+  }
+}

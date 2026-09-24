@@ -1,0 +1,17 @@
+ = \pi\sqrt{3}/24$ conflicts with the pre-registered V4 result which maps the CKM angle to the Gatto–Sartori–Tonin (GST) relation $\sqrt{m_d/m_s} \approx 0.2236$ (1.3% residual).
+*   **M1 Dynamics**: The Palatini action is strictly linear in $\Sigma$, so no potential term exists to drive the VEV dynamically; the VEV is a flat direction and must be put in by hand (**Null**).
+*   **M2 Soldering**: Constructing the soldering form yields a non-degenerate Lorentzian metric with signature $(+1, -1, -1, -1)$ (**Pass**), realizing the weak/soldered MacDowell–Mansouri reading.
+
+---
+
+### 4. Active Context
+*   **Environment**: Mac Host (`/Users/coo-koba42/dev/rh_papers_may21/acs-framework/`).
+*   **Compilation Status**: No LaTeX compilers (`pdflatex`, `xelatex`, `lualatex`) are available on this system. Direct compilation of the `.tex` drafts is blocked, but files are verified syntax-clean.
+*   **Dependencies**: `walkthrough.md` updates must exactly match the state of `zero_tuning_audit.py` and `elimination_ledger.md` to prevent contradiction.
+
+---
+
+### 5. Next Steps
+1.  **Update `walkthrough.md`**:
+    *   Locate references to `\lambda_W` in `walkthrough.md`.
+    *   Modify the OOS01 section

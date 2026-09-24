@@ -2,6 +2,8 @@
 
 This repository contains the canonical manuscripts, mathematical notes, verification suites, and reproduction harnesses for the Asymmetric Codependent Systems (ACS) theoretical framework.
 
+**Publication update (24 September 2026):** [35-paper release and verification record](docs/publication/2026-09-24/README.md) — all 33 existing manuscripts amended, two new action/carrier papers, compiled PDFs, preserved evidence, and GitHub Actions. The review establishes conditional mechanisms and explicit identification limits; it does not prove RH or select a complete physical theory.
+
 **Orientation:** [MANIFEST.md](MANIFEST.md) — claim-to-code mapping and verification tiers · [GLOSSARY.md](GLOSSARY.md) — glossary and index of key terms · [Elimination Ledger](docs/Elimination_Ledger.md) — falsifications, logged openly · [Technical Whitepaper](docs/ACS_Technical_Whitepaper.md) — consolidated overview.
 
 **Frontier continuation (11 September 2026):** [Report, checklist, and evidence package](docs/frontier/2026-09-11/README.md) — 50 scoped investigations with current dispositions, evidence, and remaining gates; includes the original PDF and ZIP, machine-readable task and branch records, and seven workstream reports. Import integrity is checked; the research programs were not rerun during the import.
@@ -114,7 +116,7 @@ Every mathematical or numerical claim in the papers is tracked under a strict fo
 ### Core Theoretical Focus
 
 1. **Gauge Group Selection (Paper A):** Derivation of Pati-Salam $\mathfrak{su}(4) \times \mathfrak{su}(2)_L \times \mathfrak{su}(2)_R$ and the emergence of the compact real form $\mathfrak{su}(3)$ of the strong force as a geometric closure attractor.
-2. **Spectral Positional Duality (Paper B):** Numerical proof that the arithmetic information of the Riemann zeros is encoded strictly in their level locations (governed by the explicit formula) rather than their local spacing distributions (which are universally GUE and arithmetic-blind).
+2. **Spectral Positional Duality (Paper B):** Finite numerical evidence for arithmetic sensitivity of the tested position statistics, with tested local spacing statistics consistent with GUE. This is neither a universal arithmetic-blindness theorem nor a proof of RH.
 3. **Algebraic Holography (Paper C):** Formalization of Killing-orthogonality and three-class spectral taxonomies mapping algebraic structures to holographic boundary conditions.
 
 ---

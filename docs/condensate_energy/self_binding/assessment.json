@@ -1,0 +1,145 @@
+{
+  "status": "qualified_reduced_model_binding_mechanism",
+  "stationary_survey_starts": 32,
+  "dynamic_runs": 15,
+  "numerical_checks": 23,
+  "symbolic_checks": 5,
+  "original_failures": [
+    {
+      "name": "reference optimizations meet stationarity tolerance",
+      "passed": false,
+      "gradient_norms": {
+        "coarse": 1.7311518133645822e-05,
+        "fine": 2.083597232735582e-05,
+        "domain": 6.9483082647052874e-06
+      }
+    }
+  ],
+  "numerical_correction": "original gradient stop preserved; unchanged-tolerance Newton refinement passed",
+  "reference": {
+    "charge": 1000.0,
+    "energy": 838.1630963692498,
+    "omega": 0.754888212055094,
+    "free_wave_energy_threshold": 1000.0,
+    "binding_margin_fraction": 0.1618369036307502,
+    "predicted_tail_exponent": 0.6558534800550069,
+    "fitted_tail_exponent": 0.6558536486530292
+  },
+  "dynamics": {
+    "unperturbed": {
+      "initial_energy": 838.1313203762504,
+      "initial_charge": 1000.0000000000001,
+      "final_local_energy_fraction": 0.9999990353671995,
+      "final_local_charge_fraction": 0.9999994156490358
+    },
+    "perturb2": {
+      "initial_energy": 838.5275638125755,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.9997566891033902,
+      "final_local_charge_fraction": 0.9999966390287557
+    },
+    "perturb5": {
+      "initial_energy": 840.5884828251611,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.9985145324941426,
+      "final_local_charge_fraction": 0.9999932039531572
+    },
+    "refined": {
+      "initial_energy": 838.1551539508891,
+      "initial_charge": 999.9999999999997,
+      "final_local_energy_fraction": 0.9999990354611833,
+      "final_local_charge_fraction": 0.9999994153925125
+    },
+    "refined-perturb2": {
+      "initial_energy": 838.5514007437521,
+      "initial_charge": 1000.0000000000002,
+      "final_local_energy_fraction": 0.9997563589667512,
+      "final_local_charge_fraction": 0.9999965528354945
+    },
+    "opposite-charge": {
+      "initial_energy": 838.1313203762504,
+      "initial_charge": -1000.0000000000001,
+      "final_local_energy_fraction": 0.9999990353671995,
+      "final_local_charge_fraction": 0.9999994156490358
+    },
+    "phase": {
+      "initial_energy": 838.1313203762503,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.9999990353671983,
+      "final_local_charge_fraction": 0.9999994156490346
+    },
+    "vacuum": {
+      "initial_energy": 0.0,
+      "initial_charge": 0.0,
+      "final_local_energy_fraction": 0.0,
+      "final_local_charge_fraction": null
+    },
+    "zero-charge": {
+      "initial_energy": 460.69506683964426,
+      "initial_charge": 0.0,
+      "final_local_energy_fraction": 0.5382063956411078,
+      "final_local_charge_fraction": null
+    },
+    "frozen-vacuum": {
+      "initial_energy": 1218.7805773891837,
+      "initial_charge": 1000.0000000000001,
+      "final_local_energy_fraction": 0.055024130069756545,
+      "final_local_charge_fraction": 0.06509687676619005
+    }
+  },
+  "formation": {
+    "sigma3": {
+      "initial_energy": 1158.7421675949563,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.6748826008258967,
+      "final_local_charge_fraction": 0.8535317896817882
+    },
+    "sigma6": {
+      "initial_energy": 1030.2606431220686,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.738352228447137,
+      "final_local_charge_fraction": 0.7959183918621513
+    },
+    "sigma9": {
+      "initial_energy": 1012.0526553005388,
+      "initial_charge": 999.9999999999993,
+      "final_local_energy_fraction": 0.8608262482117334,
+      "final_local_charge_fraction": 0.8742904188080611
+    },
+    "refined-sigma6": {
+      "initial_energy": 1030.2615473079913,
+      "initial_charge": 999.9999999999999,
+      "final_local_energy_fraction": 0.7384046476191742,
+      "final_local_charge_fraction": 0.795934075219556
+    },
+    "frozen-sigma6": {
+      "initial_energy": 1030.2606431220686,
+      "initial_charge": 1000.0,
+      "final_local_energy_fraction": 0.30618423246547755,
+      "final_local_charge_fraction": 0.3128111008936146
+    }
+  },
+  "conclusions": {
+    "mechanism": "Condensate deformation creates exterior gap and interior well; conserved charge supports a localized rotating field",
+    "known_theory": "Friedberg-Lee-Sirlin-type scalar soliton with an added positive complex-field quartic",
+    "binding": "Reference energy lies below free waves of the same conserved charge; all field energies included",
+    "stability": "No negative modes found in tested amplitude/phase sectors; small radial perturbations remain localized through t80",
+    "formation": "Charged Gaussian packets displace an initially uniform condensate and retain localized charge through t80",
+    "not_established": [
+      "asymptotic formation from arbitrary input",
+      "nonlinear stability against all finite perturbations",
+      "quantum stability or elementary-particle mass",
+      "complete ACS field/gauge/charge embedding"
+    ]
+  },
+  "ACS_embedding": {
+    "polynomial_ingredients": "present in source scalar sector",
+    "reduced_field_identification": "not established",
+    "conserved_charge": "required; not automatically supplied by scalar norm terms",
+    "direct_overall_bidoublet_phase": "obstructed if both displayed Yukawa couplings are nonzero",
+    "gauge_fields_and_other_scalar_directions": "not included in reduced-model tests",
+    "dimensionful_scale": "input, not predicted",
+    "generic_formation_from_zero_charge": "not demonstrated or implied"
+  },
+  "source_and_parent_hashes_verified": true
+}

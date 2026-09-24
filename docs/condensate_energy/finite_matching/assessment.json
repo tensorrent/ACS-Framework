@@ -1,0 +1,24 @@
+{
+  "status": "Conditional dimension-four finite-matching stage complete; full ACS investigation active",
+  "previous_turn_classification": "progress",
+  "checks_passed": 178,
+  "established": [
+    "Heavy scalar/vector/Weyl spectra and eigenvalue jets on the declared stable branch",
+    "Finite mass, quartic and kinetic thresholds with mixed heavy/light effects",
+    "80-digit light-field subtraction limits and independent component checks",
+    "Exact symbolic mass and canonical-quartic RG matching identities",
+    "Archived vacuum-selection operator has rank at most two; third eigvalsh magnitude is spurious",
+    "Archived Majorana scale is inverse inference from an inserted target, with a separate factor-1000 unit inconsistency"
+  ],
+  "remaining": [
+    "General mixed-quartic and noncommuting-flavor matching if required by a surviving proposed action",
+    "Source construction selecting normalized action coefficients, vacuum/matching scale and flavor inputs",
+    "Original-scope recovery/completion audit; no exhaustive whole-drive/chat claim yet"
+  ],
+  "physical_limits": [
+    "No selected physical scale or pole mass",
+    "No complete dimension-six EFT",
+    "Stable tree branch does not itself select the boundary parameters",
+    "Source-specific failed proposals do not falsify unrelated constructions"
+  ]
+}

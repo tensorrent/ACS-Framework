@@ -1,0 +1,309 @@
+{
+  "scope": "Fresh portable action, normalization, RG, exact-root and carrier-obstruction checks; archived PDE runs are integrity-checked, not rerun.",
+  "total": 58,
+  "passed": 58,
+  "checks": [
+    {
+      "name": "17 homogeneous quartics",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "4 homogeneous quadratics",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: bracket_is_symmetric_not_original_antisymmetric_generator",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: third_order_symmetric_piece_nonzero",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: projection_two_thirds_exact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: projected_norm_256_over_27",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: canonical_quartic_invariant_under_consistent_coordinate_change",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "normalization: adjoint_commutator_drops_real_Delta_charge",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: all_21_restrictions_match_independent_formula",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: neutral_quartic_map_rank_11",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: six_coordinate_invariants_invisible",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: phase_tadpole_includes_CP_odd_coefficients",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: four_invisible_norms_change_transverse_hessian",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "neutral: holomorphic_terms_invisible_through_Hessian",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full stationary spectrum k=0.2",
+      "passed": true,
+      "evidence": [
+        56,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "tadpoles and Goldstones k=0.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "coordinate invariance k=0.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full stationary spectrum k=0",
+      "passed": true,
+      "evidence": [
+        44,
+        12,
+        0
+      ]
+    },
+    {
+      "name": "tadpoles and Goldstones k=0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "coordinate invariance k=0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full stationary spectrum k=-0.2",
+      "passed": true,
+      "evidence": [
+        6,
+        0,
+        50
+      ]
+    },
+    {
+      "name": "tadpoles and Goldstones k=-0.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "coordinate invariance k=-0.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "identical neutral Hessians across stability counterfamily",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "independent finite-difference derivatives",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "complex noncommuting flavor witness",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "action dilation V, gradient, Hessian a=0.4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "gauge mass Gram dilation a=0.4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "48-Weyl complex flavor dilation a=0.4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "action dilation V, gradient, Hessian a=2.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "gauge mass Gram dilation a=2.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "48-Weyl complex flavor dilation a=2.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one-loop logarithm invariant under simultaneous scale change",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "conditional source RG reaches UV",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "perturbed boundary reaches IR -1e-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "perturbed boundary reaches IR 1e-05",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "finite running retains sensitivity",
+      "passed": true,
+      "evidence": 0.20888981972361217
+    },
+    {
+      "name": "phase6: source beta4 factorization",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: nonzero w branch impossible over reals",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: remaining beta3 factorization",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: zero elimination reconstructs both original equations exactly",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: zero all real roots isolated by exact Sturm count",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: zero original residual 0",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "phase6: zero independent numerical root 0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: zero original residual 1",
+      "passed": true,
+      "evidence": 1.1102230246251565e-16
+    },
+    {
+      "name": "phase6: zero independent numerical root 1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: zero proposed Higgs number is not a proxy root",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: nonzero elimination reconstructs both original equations exactly",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: nonzero all real roots isolated by exact Sturm count",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "phase6: nonzero proposed Higgs number is not a proxy root",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exactly two real proxy roots",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "cover shear fails necessary deck commutation",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "capacitor factor of two",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "CPF curvature summand is nonzero on the critical line",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "balanced triplet has zero means but nonzero variance",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "triplet Casimir and no invariant vector",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "tensor-product singlet positive control",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "FLS negative control exact square completion",
+      "passed": true,
+      "evidence": null
+    }
+  ]
+}

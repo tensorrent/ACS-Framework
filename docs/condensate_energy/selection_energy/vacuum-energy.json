@@ -1,0 +1,300 @@
+{
+  "checks_total": 45,
+  "checks_passed": 45,
+  "checks": [
+    {
+      "name": "original displayed cancellation exact",
+      "passed": true
+    },
+    {
+      "name": "full bilinear contraction also zero for this symmetric T",
+      "passed": true
+    },
+    {
+      "name": "diagnostic basis Frobenius orthonormal",
+      "passed": true
+    },
+    {
+      "name": "diagonal-product sum changes under basis rescaling",
+      "passed": true,
+      "evidence": {
+        "before": "0",
+        "after": "640/3"
+      }
+    },
+    {
+      "name": "full tensor contraction invariant under basis rescaling",
+      "passed": true
+    },
+    {
+      "name": "counterexample rotation keeps Frobenius orthonormality",
+      "passed": true
+    },
+    {
+      "name": "diagonal-product sum changes even under orthogonal rotation",
+      "passed": true,
+      "evidence": {
+        "before": "0",
+        "after": "-128/9"
+      }
+    },
+    {
+      "name": "full tensor contraction retains cancellation after orthogonal rotation",
+      "passed": true
+    },
+    {
+      "name": "off-diagonal contraction supplies missing rotated contribution",
+      "passed": true
+    },
+    {
+      "name": "canonical positive commutator operator has six active modes",
+      "passed": true
+    },
+    {
+      "name": "positive operator has no signed-energy cancellation",
+      "passed": true
+    },
+    {
+      "name": "six canonical oscillator zero-point energies add",
+      "passed": true
+    },
+    {
+      "name": "opposite-kinetic oscillator has no lower-bound ground energy",
+      "passed": true
+    },
+    {
+      "name": "two positive bosonic loop determinants add rather than Killing-cancel",
+      "passed": true
+    },
+    {
+      "name": "small splitting has the additional mass-squared factor",
+      "passed": true
+    },
+    {
+      "name": "source residual scales as mass squared not energy density",
+      "passed": true
+    },
+    {
+      "name": "source neutrino-scale comparison not within two orders",
+      "passed": true,
+      "evidence": {
+        "ratio": 223341.1115597786
+      }
+    },
+    {
+      "name": "full scalar origin mass-fourth trace",
+      "passed": true
+    },
+    {
+      "name": "vacuum beta generically nonzero with nonzero quadratic masses",
+      "passed": true
+    },
+    {
+      "name": "independent component origin spectrum 0",
+      "passed": true
+    },
+    {
+      "name": "matches already implemented archive vacuum beta 0",
+      "passed": true
+    },
+    {
+      "name": "running constant cancels origin one-loop scale derivative 0",
+      "passed": true
+    },
+    {
+      "name": "independent component origin spectrum 1",
+      "passed": true
+    },
+    {
+      "name": "matches already implemented archive vacuum beta 1",
+      "passed": true
+    },
+    {
+      "name": "running constant cancels origin one-loop scale derivative 1",
+      "passed": true
+    },
+    {
+      "name": "independent component origin spectrum 2",
+      "passed": true
+    },
+    {
+      "name": "matches already implemented archive vacuum beta 2",
+      "passed": true
+    },
+    {
+      "name": "running constant cancels origin one-loop scale derivative 2",
+      "passed": true
+    },
+    {
+      "name": "independent component origin spectrum 3",
+      "passed": true
+    },
+    {
+      "name": "matches already implemented archive vacuum beta 3",
+      "passed": true
+    },
+    {
+      "name": "running constant cancels origin one-loop scale derivative 3",
+      "passed": true
+    },
+    {
+      "name": "independent component origin spectrum 4",
+      "passed": true
+    },
+    {
+      "name": "matches already implemented archive vacuum beta 4",
+      "passed": true
+    },
+    {
+      "name": "running constant cancels origin one-loop scale derivative 4",
+      "passed": true
+    },
+    {
+      "name": "arbitrary additive constant leaves stationarity unchanged",
+      "passed": true
+    },
+    {
+      "name": "arbitrary additive constant leaves mass Hessian unchanged",
+      "passed": true
+    },
+    {
+      "name": "vacuum value retains undetermined additive constant",
+      "passed": true
+    },
+    {
+      "name": "TBL commutes with itself but breaks the actual Delta VEV",
+      "passed": true,
+      "evidence": {
+        "TBL_action_canonical_norm": 2.8284271247461903
+      }
+    },
+    {
+      "name": "combined electromagnetic generator annihilates this neutral vacuum",
+      "passed": true
+    },
+    {
+      "name": "charged mass block follows complete inherited kinetic term",
+      "passed": true
+    },
+    {
+      "name": "no extra independent torsion W term occurs in this inherited kinetic action",
+      "passed": true
+    },
+    {
+      "name": "source torsion/Higgs ratio is 2/5",
+      "passed": true
+    },
+    {
+      "name": "source torsion fraction of its total is 2/7, not 40 percent",
+      "passed": true
+    },
+    {
+      "name": "source replay torsion_higgs_vacuum.py",
+      "passed": true
+    },
+    {
+      "name": "source replay acs_vacuum.py",
+      "passed": true
+    }
+  ],
+  "algebraic_pairing": {
+    "original_raw_sum": "0",
+    "orthonormal_raw_sum": "0",
+    "rescaled_raw_sum": "640/3",
+    "rotated_raw_sum": "-128/9",
+    "full_contraction": "0",
+    "positive_operator_trace": "32/3",
+    "positive_oscillator_energy": 4,
+    "qualification": "Oscillator example is a diagnostic, not an identification of ACS particle modes."
+  },
+  "vacuum_constant": {
+    "mass_coefficients": "m0,m1,m2,md all have mass dimension two",
+    "trace_mass_fourth": "8*m0**2 + 2*m1**2 + 2*m2**2 + 60*md**2",
+    "beta_Omega": "(8*m0**2 + 2*m1**2 + 2*m2**2 + 60*md**2)/(32*pi**2)",
+    "origin_examples": [
+      {
+        "mass_coefficients": [
+          1.96934820321695,
+          0.24103434945436983,
+          0.3011856149139776,
+          0.8858601439163674
+        ],
+        "vacuum_beta": 0.24826593826902732,
+        "loop_log_mu_derivative": -0.24826593826901555
+      },
+      {
+        "mass_coefficients": [
+          1.6778337383238449,
+          0.2710878703756258,
+          0.31836002339264174,
+          0.7609206397892325
+        ],
+        "vacuum_beta": 0.18241202599726722,
+        "loop_log_mu_derivative": -0.18241202599729445
+      },
+      {
+        "mass_coefficients": [
+          1.86888360241263,
+          0.22086328038023423,
+          0.3574931727743759,
+          0.7070721007449132
+        ],
+        "vacuum_beta": 0.1845692917350213,
+        "loop_log_mu_derivative": -0.18456929173497894
+      },
+      {
+        "mass_coefficients": [
+          2.022037027270245,
+          0.20152596309823154,
+          0.4366255820591204,
+          0.7218856491315195
+        ],
+        "vacuum_beta": 0.20403145718043886,
+        "loop_log_mu_derivative": -0.2040314571804258
+      },
+      {
+        "mass_coefficients": [
+          1.9812908644673501,
+          0.2756883792694415,
+          0.36084008309295246,
+          0.7542500545022666
+        ],
+        "vacuum_beta": 0.20881699387299146,
+        "loop_log_mu_derivative": -0.2088169938729567
+      }
+    ],
+    "archive_status": "This vacuum_constant beta was already implemented in the inherited full_one_loop_rg.py; here it is independently reconstructed.",
+    "undetermined": "An additive integration constant remains even when its RG running is fixed."
+  },
+  "gauge_check": {
+    "charged_mass_block": [
+      [
+        0.015624999999999998,
+        -0.017499999999999998
+      ],
+      [
+        -0.017499999999999998,
+        0.15312499999999998
+      ]
+    ],
+    "expected_charged_mass_block": [
+      [
+        0.015624999999999998,
+        -0.017499999999999998
+      ],
+      [
+        -0.017499999999999998,
+        0.15312499999999998
+      ]
+    ],
+    "TBL_unbroken": false,
+    "Q_unbroken": true,
+    "source_torsion_fraction_of_total": "2/7"
+  },
+  "physical_limits": [
+    "No absolute vacuum-energy prediction",
+    "No assertion that all indefinite theories have identical dynamics; the displayed ghost oscillator simply lacks a lower-bound ground state.",
+    "An additional torsion field/kinetic term is a different action and requires its own gauge-consistent spectrum.",
+    "The algebraic full-contraction zero is retained; its identification with physical vacuum energy is unsupported."
+  ]
+}

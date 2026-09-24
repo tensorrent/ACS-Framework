@@ -1,0 +1,410 @@
+{
+  "status": "Targeted 36-entry source inventory reconciled; broader coverage remains qualified",
+  "inventory_count": 36,
+  "snapshot_matches": 36,
+  "pending_count": 0,
+  "rows": [
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/electroweak_vacuum_selection.py",
+      "sha256": "284bfeb0c4d0ea0f3580b6266aa197338c7f730d1c438b82eec57791203a9a30",
+      "snapshots": [
+        "docs/condensate_energy/finite_matching/source-snapshots/electroweak_vacuum_selection.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/finite_matching/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/higgs_from_acs.py",
+      "sha256": "d03c877defa00efc01bede9e6df8167edd0e74b4e86ec0d6b27e981c0129db3e",
+      "snapshots": [
+        "docs/condensate_energy/action_matching/source-snapshots/seagate_higgs_from_acs.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/action_matching/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/koide_from_vev.py",
+      "sha256": "5fc937e4c27b1b14e25c775df47c64aaf5926037a39bcd0d8377dd32695ef836",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/koide_from_vev.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_geometric_seesaw.py",
+      "sha256": "901b3c681e6c904f5cee778ce11117cfdaae0073812f9acb845506b8ebc9fa65",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/neutrino_geometric_seesaw.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_mass_derivation.py",
+      "sha256": "578fa27b1f2abc6b003b0bf7aae39c88f14120328f50f43f8b1a1beed7f7aa8f",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/neutrino_mass_derivation.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/quark_koide_gut.py",
+      "sha256": "665398e6727bcafcae5da031664e012d984a304a16780d60f80baf858f982806",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/seagate-quark_koide_gut.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/vacuum_theta0.py",
+      "sha256": "94a5f46aa79a836e7c71755009d115e29da4460f9cd83c5a919bb8764396fce1",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/vacuum_theta0.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_higgs_wall.py",
+      "sha256": "ddccf4e7a7c91723105c8f116bdc76c3124be0c25b86440262cf20c193d2398c",
+      "snapshots": [
+        "docs/condensate_energy/selection_energy/source-snapshots/acs_higgs_wall.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/selection_energy/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_vacuum.py",
+      "sha256": "6290ef93e158976420d08f7c9f1aaf5819809836ce44648fef72b0093dfd318b",
+      "snapshots": [
+        "docs/condensate_energy/selection_energy/source-snapshots/acs_vacuum.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/selection_energy/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_derivation.py",
+      "sha256": "695b0cda7430a402d3a67679978686e09e6b60ad1c6fbf291257fd561900235f",
+      "snapshots": [
+        "docs/condensate_energy/action_matching/source-snapshots/higgs_derivation.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/action_matching/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_mass_ratio.py",
+      "sha256": "d7cdf5e658c8686500eb99ed6b6e749c9a699b3132efc0ad4130f7c1058363a3",
+      "snapshots": [
+        "docs/condensate_energy/action_matching/source-snapshots/higgs_mass_ratio.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/action_matching/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_potential.py",
+      "sha256": "6fdfd08df0ab47a5c0de44247d6a6fb74f773da0d794b0aa966d627a81091015",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/higgs_potential.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_clebsch_gordan.py",
+      "sha256": "e612c8095adc1f883296b4012017535512ff2d5189903f8dafd009fabc1186f8",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/koide_clebsch_gordan.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_rg_flow.py",
+      "sha256": "8e4e662d1dcbef5908b81f9d712aea4b18c1b7d82dbd7acb2113d62dfb44527e",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/koide_rg_flow.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_exact.py",
+      "sha256": "03eb9eeafe1b5b0dfc3e965900e368a14607abd0b6294b56c39ff542b06a78bd",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_exact.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_honest.py",
+      "sha256": "fe1f7ad9e49379a2b218e23d8f20b940262e3b240093aff1dce9665c8940501c",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_honest.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw.py",
+      "sha256": "8ad18c7a07e965b70d0584069966700036fef05e63d7c4b0eafe9abc7edfd9c3",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_seesaw.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw_v2.py",
+      "sha256": "72bb4a70505f3c309807f7171a2e6d9c069fbfb26c40fa9582438ac163a9e634",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/neutrino_seesaw_v2.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase50_vacuum.py",
+      "sha256": "6b11a290e38be834f9369af4824999db398c3e1ca5ec712c69c30adf47daa0eb",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/phase50_vacuum.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase51_tanbeta.py",
+      "sha256": "99f5b7b86996c6ed3ddbf7c8e3e21314e91ae00496a7b182e9c4a18a9499004d",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/phase51_tanbeta.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase52_yukawa.py",
+      "sha256": "435190b8864551ef76a67df6c81ef53056561640d5f97ff0b365a27fcfbdb4bd",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/phase52_yukawa.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase7_qfp_yukawa.py",
+      "sha256": "1e6b31b9db5460611ac6f21c35507139b25d94c530a358fa593489c11abc8549",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/phase7_qfp_yukawa.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/ps_yukawa_full.py",
+      "sha256": "f6921bc2f7621da39f676ce59b9da52661489fe29cefc82fcc217bf61dcbb918",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/ps_yukawa_full.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/quark_koide_gut.py",
+      "sha256": "b4d186ebfa4e9ae017eb584db4b3a182e0da166bae00f43b5cb90e8d7e94c04b",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/quark_koide_gut.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_full.py",
+      "sha256": "614c2372305188f32c3bc7b741fe564c5631e36b83e1eaf2455cf0a09df6fccf",
+      "snapshots": [
+        "docs/condensate_energy/selection_energy/source-snapshots/selection_full.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/selection_energy/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_principle.py",
+      "sha256": "15938b79184c388286c46c0cd96b95c18a732649526da08b6eae8253507c7d28",
+      "snapshots": [
+        "docs/condensate_energy/selection_energy/source-snapshots/selection_principle.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/selection_energy/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task2_lagrangian.py",
+      "sha256": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/task2_lagrangian.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_A_parameters.py",
+      "sha256": "4952747c729ec3439617a70a90f43861f369009f1ccc60668fb2d6850d2e518d",
+      "snapshots": [
+        "docs/condensate_energy/action_matching/source-snapshots/task_A_parameters.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/action_matching/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_D_lagrangian.py",
+      "sha256": "3ef5945ec563542c10db7e80a52a8a314d9f4bf8ea567fbbd6a5dbd85810a0c0",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/task_D_lagrangian.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_cabibbo.py",
+      "sha256": "f44dcd49db9f194bf51362c005704b3443c554dfeb6ee4a68157578de0f246a0",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/theta0_cabibbo.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_derivation_suite.py",
+      "sha256": "4f7fc9af7bd5eafe43cefcd104ac3364ea276c39254294254053463036929d6d",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/current-theta0_derivation_suite.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/torsion_higgs_vacuum.py",
+      "sha256": "f11fa20c9b5a8923e0ba77e661dd03c571fff95b3ac00ed5e12c316b700cb158",
+      "snapshots": [
+        "docs/condensate_energy/selection_energy/source-snapshots/torsion_higgs_vacuum.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/selection_energy/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/vacuum_theta0.py",
+      "sha256": "5bf683ecf153e79cdd7e5b936af702281f909dc8e630ccb971fb24210370b157",
+      "snapshots": [
+        "docs/condensate_energy/input_closure/source-snapshots/current-vacuum_theta0.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/input_closure/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_parameters.py",
+      "sha256": "1c6bf9966e56eed3df7e368a69b569922de36d1d17c2016e2c62cbaa483bc245",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/branch_a_parameters.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_vacuum.py",
+      "sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f",
+      "snapshots": [
+        "docs/condensate_energy/source_endpoint/source-snapshots/branch_a_vacuum.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/source_endpoint/README.md"
+      ]
+    },
+    {
+      "source": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/yukawa_no_go.py",
+      "sha256": "77b2cabc645e19613b205ea9b1ac5ebb5235385472cc791985a7c9d0d8167233",
+      "snapshots": [
+        "docs/condensate_energy/family_boundary/source-snapshots/yukawa_no_go.py"
+      ],
+      "status": "Preserved source matched to scoped scientific audit; not every printed assertion is validated",
+      "evidence_reports": [
+        "docs/condensate_energy/family_boundary/README.md"
+      ]
+    }
+  ],
+  "exclusions": [
+    "A matching snapshot hash proves preservation, not that every claim in that file has been audited.",
+    "The starting inventory is a filename-filtered four-root inventory and excludes any claim of exhaustive live-chat or whole-drive mathematical review.",
+    "Existing sealed reports and source files are unchanged."
+  ],
+  "original_goal_complete": false
+}

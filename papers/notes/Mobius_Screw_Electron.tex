@@ -31,6 +31,9 @@ Framed Unknot Geometry for $g=2$ and a Capacitance Model of $\alpha$}\\[0.35em]
 \small\textit{Sovereign-Stack ACS Research Program}}
 \date{July 22, 2026 \ (revised July 26, 2026: post-falsification remark added)}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -38,9 +41,9 @@ Framed Unknot Geometry for $g=2$ and a Capacitance Model of $\alpha$}\\[0.35em]
 We present a geometric model of the electron as a \emph{framed unknot}:
 the centerline of a $(2,1)$-torus embedding on a torus of major radius $R$
 and minor radius $a$.  Reparameterisation shows that the knot type is
-trivial (an unknot); the spin-$1/2$ and $g=2$ content is attributed to
-the framing induced by the torus embedding, whose natural self-linking
-number is $Sl = p\cdot q = 2$.  A separate capacitance estimate on the
+trivial (an unknot). The torus framing has self-linking magnitude
+$|Sl|=pq=2$ and a spinorial lift. The earlier identification of this
+magnitude with $g=2$ is withdrawn: parity does not determine a magnetic moment.  A separate capacitance estimate on the
 double-cover (M\"obius) annulus, with self-stress matched to $m_e c^2$,
 returns a numerical value $\alpha^{-1}\approx 137.036$ under stated
 approximations.  The phase-slip / Bogoliubov channel that links interior
@@ -50,8 +53,13 @@ claims with explicit scope; this note does not claim a derivation of QED
 or a proof of the measured $g$-factor beyond the stated geometric
 identification.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
 
-\tableofcontents
+
+\begingroup\small\tableofcontents\endgroup
 \newpage
 
 \section{Scope and claim discipline}
@@ -63,8 +71,8 @@ and not a uniqueness claim.
 
 \begin{itemize}[leftmargin=1.3em,itemsep=2pt]
   \item \textbf{In scope:} centerline geometry; torus-knot winding numbers;
-        framing / self-linking as a candidate topological origin of
-        $g=2$; a capacitance estimate for $\alpha^{-1}$; the link to
+        framing and self-linking, with the proposed origin of
+        $g=2$ withdrawn; a capacitance estimate for $\alpha^{-1}$; the link to
         the phase-slip transfer-matrix picture.
   \item \textbf{Out of scope:} radiative corrections to $g-2$; full QED
         renormalisation; a first-principles derivation of $R$ and $a$
@@ -304,7 +312,7 @@ identification is structural.
 \section{Summary of formal content}
 
 \begin{center}
-\begin{tabular}{@{}llp{0.48\textwidth}@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}llp{0.48\textwidth}@{}}
 \toprule
 Object & Status in this note & Scope \\
 \midrule
@@ -317,13 +325,26 @@ $C$ estimate~\eqref{eq:C} & approximate formula & capacitance model \\
 $\alpha^{-1}\approx 137.036$ & numerical estimate & under~\eqref{eq:Ecap} \\
 phase-slip / Bogoliubov & structural link & see~\cite{flagdecay2026} \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \section*{Acknowledgments}
 This note consolidates the framed-unknot correction (twist, not knotting)
 with the capacitance and phase-slip sketches of the Flag Condensate
 Collaboration draft.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The framed-curve geometry survives, but the inference from self-linking to $g=2$ is withdrawn. The spin-cover class is a parity datum, whereas the gyromagnetic ratio depends on charge/current and mass distributions. For uniform charge-to-mass ratio on the same classical closed curve, the conventional ratio is $g=1$. The capacitor model also retains a cutoff and charge split. For $C=2\pi\epsilon_0R/L$, charge $e/2$ and $R=\hbar/(2mc)$, energy matching gives $\alpha^{-1}=L/2$, not $L$. These findings preclude treating either estimate as a parameter-free particle derivation.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{9}
 
@@ -346,21 +367,21 @@ Proceedings of the National Academy of Sciences \textbf{68} (1971), 815--819.
 Flag Condensate Collaboration,
 \textit{Nuclear Decay as a Spectral Bifurcation of the Flag Condensate},
 preprint (July 2026),
-\texttt{papers/notes/Flag\_Condensate\_Nuclear\_Decay.tex}.
+\nolinkurl{papers/notes/Flag_Condensate_Nuclear_Decay.tex}.
 
 \bibitem{framingtransformer2026}
 Flag Condensate Collaboration,
 \textit{The Framing Transformer: Where the Spin-$1/2$ Content of the
 M\"obius-Screw Actually Lives},
 preprint (July 2026),
-\texttt{papers/notes/Framing\_Transformer\_Spin\_Parity.tex}.
+\nolinkurl{papers/notes/Framing_Transformer_Spin_Parity.tex}.
 
 \bibitem{ribboncap2026}
 Flag Condensate Collaboration,
 \textit{M\"obius-Ribbon Capacitance: Annulus, Conformal Modulus, and BIE
 Revisions of the $\alpha$ Estimate},
 preprint (July 2026),
-\texttt{papers/notes/Mobius\_Ribbon\_Capacitance.tex}.
+\nolinkurl{papers/notes/Mobius_Ribbon_Capacitance.tex}.
 
 \end{thebibliography}
 

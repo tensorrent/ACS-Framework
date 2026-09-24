@@ -1,0 +1,2162 @@
+{
+  "examples": [
+    {
+      "label": "full_three_family",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.2,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.3,
+          0.25,
+          0.35
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.07,
+          0.11,
+          0.16
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0004072980568109355,
+            "potential_quartic_threshold": -2.7220314528781845e-05
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.016666666666666663,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0005893007788893565,
+            "potential_quartic_threshold": -3.782149796344862e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.018888888888888886,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0007229888811620413,
+            "potential_quartic_threshold": -4.5186089900800804e-05
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.009999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00012548318651313628,
+            "potential_quartic_threshold": -8.748774264725965e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.016666666666666666,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0002946503894446783,
+            "potential_quartic_threshold": -1.8910748981724315e-05
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 6.788300946848924e-05,
+            "potential_quartic_threshold": -4.5367190881303075e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": -0.16,
+            "b": 0.010800000000000002,
+            "constant": 1.5,
+            "mass_threshold": 0.000621813817393098,
+            "potential_quartic_threshold": 2.8423923088224353e-05
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.18,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004329987200839901,
+            "potential_quartic_threshold": -0.0002927236927130384
+          },
+          {
+            "label": "color_vectors",
+            "sector": "vector",
+            "multiplicity": 18,
+            "M2": 0.09,
+            "a": -0.009,
+            "b": 0.0,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.000253099347691008,
+            "potential_quartic_threshold": -1.6077041909692773e-05
+          },
+          {
+            "label": "right_vectors",
+            "sector": "vector",
+            "multiplicity": 6,
+            "M2": 0.12249999999999998,
+            "a": 0.018374999999999996,
+            "b": 0.00390625,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.0002080813065360686,
+            "potential_quartic_threshold": -0.00010685333382151451
+          },
+          {
+            "label": "neutral_vector",
+            "sector": "vector",
+            "multiplicity": 3,
+            "M2": 0.515,
+            "a": -0.03693082524271846,
+            "b": 0.0008962397658564307,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.0003602125356739237,
+            "potential_quartic_threshold": -1.7403563697541928e-05
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.08000000000000002,
+            "a": -0.003100000000000001,
+            "b": -7.503125000000001e-05,
+            "constant": 1.5,
+            "mass_threshold": -1.1074160982733233e-05,
+            "potential_quartic_threshold": -2.2865810230860857e-07
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.18,
+            "a": -0.005899999999999999,
+            "b": -0.00020334722222222222,
+            "constant": 1.5,
+            "mass_threshold": -3.651508983373489e-05,
+            "potential_quartic_threshold": -1.7610215161111532e-06
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.32000000000000006,
+            "a": -0.006400000000000006,
+            "b": -0.0005119999999999999,
+            "constant": 1.5,
+            "mass_threshold": -5.5493123557796324e-05,
+            "potential_quartic_threshold": -8.287801758340242e-06
+          }
+        ],
+        "tree_quartic": 0.18,
+        "mass_threshold": -0.001198420878703567,
+        "potential_quartic_threshold": -0.0005573353351579351,
+        "kinetic": {
+          "scalar": 0.00012665147955292225,
+          "vector": -0.0038271631024772066,
+          "fermion": 0.0005293692988432884,
+          "total": -0.003171142324080996
+        },
+        "kinetic_quartic_threshold": 0.0011416112366691585,
+        "canonical_quartic": 0.18058427590151124,
+        "total_quartic_threshold": 0.0005842759015112234
+      },
+      "RG": {
+        "tree_derivative": 0.007445154891485405,
+        "threshold_derivative": -0.002038629725885691,
+        "low_beta": 0.005406525165599925,
+        "quartic_residual": -2.1076890233118206e-16,
+        "mass_tree_derivative": 0.00011246393390546006,
+        "mass_threshold_derivative": -0.00011246393390553552,
+        "mass_residual": -7.546047120499111e-17
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          1.1102230246251565e-16,
+          5.551115123125783e-17
+        ],
+        [
+          4.718447854656915e-16,
+          2.220446049250313e-16,
+          1.1102230246251565e-16
+        ],
+        [
+          1.1102230246251565e-15,
+          8.326672684688674e-17,
+          1.1102230246251565e-16
+        ]
+      ]
+    },
+    {
+      "label": "one_family",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.12,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.3,
+          0.25,
+          0.35
+        ],
+        "majorana": [
+          0.31
+        ],
+        "dirac": [
+          0.14
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.007999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0002443788340865613,
+            "potential_quartic_threshold": -9.799313230361464e-06
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.009999999999999997,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00035358046733361385,
+            "potential_quartic_threshold": -1.36157392668415e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.011333333333333329,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0004337933286972247,
+            "potential_quartic_threshold": -1.626699236428828e-05
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.005999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 7.528991190788177e-05,
+            "potential_quartic_threshold": -3.1495587353013466e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.009999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00017679023366680698,
+            "potential_quartic_threshold": -6.807869633420752e-06
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.007999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 4.0729805681093546e-05,
+            "potential_quartic_threshold": -1.6332188717269106e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": -0.1056,
+            "b": 0.00416448,
+            "constant": 1.5,
+            "mass_threshold": 0.00041039711947944463,
+            "potential_quartic_threshold": 1.6578704164633947e-05
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.1928,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004637897401788516,
+            "potential_quartic_threshold": -0.00033583574906599476
+          },
+          {
+            "label": "color_vectors",
+            "sector": "vector",
+            "multiplicity": 18,
+            "M2": 0.09,
+            "a": -0.005399999999999999,
+            "b": 0.0,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.0001518596086146048,
+            "potential_quartic_threshold": -5.787735087489397e-06
+          },
+          {
+            "label": "right_vectors",
+            "sector": "vector",
+            "multiplicity": 6,
+            "M2": 0.12249999999999998,
+            "a": 0.023274999999999997,
+            "b": 0.00390625,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.0002635696549456869,
+            "potential_quartic_threshold": -0.00011796507211941729
+          },
+          {
+            "label": "neutral_vector",
+            "sector": "vector",
+            "multiplicity": 3,
+            "M2": 0.515,
+            "a": -0.01633082524271845,
+            "b": 0.0008962397658564307,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.00015928612295191484,
+            "potential_quartic_threshold": -1.7467727880109e-05
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.1922,
+            "a": 0.008068000000000002,
+            "b": -0.0004996878251821022,
+            "constant": 1.5,
+            "mass_threshold": 5.2029226080663806e-05,
+            "potential_quartic_threshold": -5.0851831202627655e-06
+          }
+        ],
+        "tree_quartic": 0.1928,
+        "mass_threshold": -0.0028033323982343925,
+        "potential_quartic_threshold": -0.0005168354552105795,
+        "kinetic": {
+          "scalar": 4.5594532639051996e-05,
+          "vector": -0.0038271631024772066,
+          "fermion": 0.00026675770390611483,
+          "total": -0.0035148108659320398
+        },
+        "kinetic_quartic_threshold": 0.0013553110699033946,
+        "canonical_quartic": 0.1936384756146928,
+        "total_quartic_threshold": 0.0008384756146928151
+      },
+      "RG": {
+        "tree_derivative": 0.0068657228237727005,
+        "threshold_derivative": -0.0014456123540187125,
+        "low_beta": 0.005420110469754071,
+        "quartic_residual": -8.326672684688674e-17,
+        "mass_tree_derivative": 0.0029692735018829654,
+        "mass_threshold_derivative": -0.002969273501883486,
+        "mass_residual": -5.204170427930421e-16
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          1.1102230246251565e-16,
+          5.551115123125783e-17
+        ],
+        [
+          4.440892098500626e-16,
+          1.1102230246251565e-16,
+          1.1102230246251565e-16
+        ],
+        [
+          6.661338147750939e-16,
+          1.1102230246251565e-16,
+          2.7755575615628914e-17
+        ]
+      ]
+    },
+    {
+      "label": "zero_portal",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.0,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.3,
+          0.25,
+          0.35
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.07,
+          0.11,
+          0.16
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": 0.0,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.0,
+            "potential_quartic_threshold": 0.0
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.2,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004811096889822111,
+            "potential_quartic_threshold": -0.0003613872749543685
+          },
+          {
+            "label": "color_vectors",
+            "sector": "vector",
+            "multiplicity": 18,
+            "M2": 0.09,
+            "a": -0.0,
+            "b": 0.0,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.0,
+            "potential_quartic_threshold": -0.0
+          },
+          {
+            "label": "right_vectors",
+            "sector": "vector",
+            "multiplicity": 6,
+            "M2": 0.12249999999999998,
+            "a": 0.030624999999999996,
+            "b": 0.00390625,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.00034680217756011435,
+            "potential_quartic_threshold": -0.00013953491705064034
+          },
+          {
+            "label": "neutral_vector",
+            "sector": "vector",
+            "multiplicity": 3,
+            "M2": 0.515,
+            "a": 0.01456917475728155,
+            "b": 0.0008962397658564307,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.00014210349613109826,
+            "potential_quartic_threshold": -1.7470911264279507e-05
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.08000000000000002,
+            "a": 0.004900000000000001,
+            "b": -7.503125000000001e-05,
+            "constant": 1.5,
+            "mass_threshold": 1.7504318972707368e-05,
+            "potential_quartic_threshold": 2.3197956613259663e-07
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.18,
+            "a": 0.0121,
+            "b": -0.00020334722222222222,
+            "constant": 1.5,
+            "mass_threshold": 7.488687915054105e-05,
+            "potential_quartic_threshold": 6.627269037588518e-07
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.32000000000000006,
+            "a": 0.0256,
+            "b": -0.0005119999999999999,
+            "constant": 1.5,
+            "mass_threshold": 0.00022197249423118503,
+            "potential_quartic_threshold": 5.786684052670896e-07
+          }
+        ],
+        "tree_quartic": 0.2,
+        "mass_threshold": -0.00498563887115889,
+        "potential_quartic_threshold": -0.0005169197283941297,
+        "kinetic": {
+          "scalar": 0.0,
+          "vector": -0.0038271631024772066,
+          "fermion": 0.0005293692988432884,
+          "total": -0.0032977938036339183
+        },
+        "kinetic_quartic_threshold": 0.0013191175214535675,
+        "canonical_quartic": 0.20080219779305944,
+        "total_quartic_threshold": 0.0008021977930594377
+      },
+      "RG": {
+        "tree_derivative": 0.00788361540650119,
+        "threshold_derivative": -0.0012666022480857498,
+        "low_beta": 0.0066170131584155824,
+        "quartic_residual": -1.4224732503009818e-16,
+        "mass_tree_derivative": 0.007390047339886246,
+        "mass_threshold_derivative": -0.007390047339886699,
+        "mass_residual": -4.527628272299467e-16
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          1.1102230246251565e-16,
+          5.551115123125783e-17
+        ],
+        [
+          8.881784197001252e-16,
+          1.1102230246251565e-16,
+          5.551115123125783e-17
+        ],
+        [
+          8.881784197001252e-16,
+          5.551115123125783e-17,
+          8.326672684688674e-17
+        ]
+      ]
+    },
+    {
+      "label": "scalar_only",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.2,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0004072980568109355,
+            "potential_quartic_threshold": -2.7220314528781845e-05
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.016666666666666663,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0005893007788893565,
+            "potential_quartic_threshold": -3.782149796344862e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.018888888888888886,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0007229888811620413,
+            "potential_quartic_threshold": -4.5186089900800804e-05
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.009999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00012548318651313628,
+            "potential_quartic_threshold": -8.748774264725965e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.016666666666666666,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0002946503894446783,
+            "potential_quartic_threshold": -1.8910748981724315e-05
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 6.788300946848924e-05,
+            "potential_quartic_threshold": -4.5367190881303075e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": -0.16,
+            "b": 0.010800000000000002,
+            "constant": 1.5,
+            "mass_threshold": 0.000621813817393098,
+            "potential_quartic_threshold": 2.8423923088224353e-05
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.18,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004329987200839901,
+            "potential_quartic_threshold": -0.0002927236927130384
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.08000000000000002,
+            "a": -0.008000000000000002,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -2.85784799554406e-05,
+            "potential_quartic_threshold": 2.0472785264053575e-06
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.18,
+            "a": -0.018,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.00011140196898427597,
+            "potential_quartic_threshold": 7.036688960912915e-06
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.32000000000000006,
+            "a": -0.03200000000000001,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.00027746561778898134,
+            "potential_quartic_threshold": 1.4777450272678895e-05
+          }
+        ],
+        "tree_quartic": 0.18,
+        "mass_threshold": -0.0019180151478868635,
+        "potential_quartic_threshold": -0.0003828624965924287,
+        "kinetic": {
+          "scalar": 0.00012665147955292225,
+          "vector": 0.0,
+          "fermion": 0.0,
+          "total": 0.00012665147955292225
+        },
+        "kinetic_quartic_threshold": -4.559453263905201e-05,
+        "canonical_quartic": 0.17957154297076852,
+        "total_quartic_threshold": -0.0004284570292314807
+      },
+      "RG": {
+        "tree_derivative": 0.00755788107252435,
+        "threshold_derivative": -0.00263367154750688,
+        "low_beta": 0.004924209525017616,
+        "quartic_residual": -1.457167719820518e-16,
+        "mass_tree_derivative": 0.0011213252920062068,
+        "mass_threshold_derivative": -0.0011213252920063083,
+        "mass_residual": -1.0148132334464322e-16
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          0.0,
+          5.551115123125783e-17
+        ],
+        [
+          4.718447854656915e-16,
+          0.0,
+          8.326672684688674e-17
+        ],
+        [
+          1.1102230246251565e-15,
+          0.0,
+          5.551115123125783e-17
+        ]
+      ]
+    },
+    {
+      "label": "scalar_gauge",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.2,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.3,
+          0.25,
+          0.35
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0004072980568109355,
+            "potential_quartic_threshold": -2.7220314528781845e-05
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.016666666666666663,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0005893007788893565,
+            "potential_quartic_threshold": -3.782149796344862e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.018888888888888886,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0007229888811620413,
+            "potential_quartic_threshold": -4.5186089900800804e-05
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.009999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00012548318651313628,
+            "potential_quartic_threshold": -8.748774264725965e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.016666666666666666,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0002946503894446783,
+            "potential_quartic_threshold": -1.8910748981724315e-05
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 6.788300946848924e-05,
+            "potential_quartic_threshold": -4.5367190881303075e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": -0.16,
+            "b": 0.010800000000000002,
+            "constant": 1.5,
+            "mass_threshold": 0.000621813817393098,
+            "potential_quartic_threshold": 2.8423923088224353e-05
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.18,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004329987200839901,
+            "potential_quartic_threshold": -0.0002927236927130384
+          },
+          {
+            "label": "color_vectors",
+            "sector": "vector",
+            "multiplicity": 18,
+            "M2": 0.09,
+            "a": -0.009,
+            "b": 0.0,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.000253099347691008,
+            "potential_quartic_threshold": -1.6077041909692773e-05
+          },
+          {
+            "label": "right_vectors",
+            "sector": "vector",
+            "multiplicity": 6,
+            "M2": 0.12249999999999998,
+            "a": 0.018374999999999996,
+            "b": 0.00390625,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.0002080813065360686,
+            "potential_quartic_threshold": -0.00010685333382151451
+          },
+          {
+            "label": "neutral_vector",
+            "sector": "vector",
+            "multiplicity": 3,
+            "M2": 0.515,
+            "a": -0.03693082524271846,
+            "b": 0.0008962397658564307,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.0003602125356739237,
+            "potential_quartic_threshold": -1.7403563697541928e-05
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.08000000000000002,
+            "a": -0.008000000000000002,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -2.85784799554406e-05,
+            "potential_quartic_threshold": 2.0472785264053575e-06
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.18,
+            "a": -0.018,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.00011140196898427597,
+            "potential_quartic_threshold": 7.036688960912915e-06
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.32000000000000006,
+            "a": -0.03200000000000001,
+            "b": -0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.00027746561778898134,
+            "potential_quartic_threshold": 1.4777450272678895e-05
+          }
+        ],
+        "tree_quartic": 0.18,
+        "mass_threshold": -0.0015127845710580005,
+        "potential_quartic_threshold": -0.000523196436021178,
+        "kinetic": {
+          "scalar": 0.00012665147955292225,
+          "vector": -0.0038271631024772066,
+          "fermion": 0.0,
+          "total": -0.0037005116229242843
+        },
+        "kinetic_quartic_threshold": 0.0013321841842527423,
+        "canonical_quartic": 0.18080898774823156,
+        "total_quartic_threshold": 0.0008089877482315643
+      },
+      "RG": {
+        "tree_derivative": 0.005920441297256739,
+        "threshold_derivative": -0.0018003347138038635,
+        "low_beta": 0.004120106583453043,
+        "quartic_residual": -1.682681771697503e-16,
+        "mass_tree_derivative": 0.00038506857849517073,
+        "mass_threshold_derivative": -0.00038506857849530344,
+        "mass_residual": -1.3270634591222574e-16
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          1.1102230246251565e-16,
+          5.551115123125783e-17
+        ],
+        [
+          4.718447854656915e-16,
+          2.220446049250313e-16,
+          8.326672684688674e-17
+        ],
+        [
+          1.1102230246251565e-15,
+          8.326672684688674e-17,
+          5.551115123125783e-17
+        ]
+      ]
+    },
+    {
+      "label": "scalar_Yukawa",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.6,
+          0.5,
+          0.6,
+          0.6,
+          0.6
+        ],
+        "portal": 0.2,
+        "d": 1.0,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.07,
+          0.11,
+          0.16
+        ],
+        "mu": 1.0
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0004072980568109355,
+            "potential_quartic_threshold": -2.7220314528781845e-05
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.16666666666666663,
+            "a": -0.016666666666666663,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0005893007788893565,
+            "potential_quartic_threshold": -3.782149796344862e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.18888888888888883,
+            "a": -0.018888888888888886,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0007229888811620413,
+            "potential_quartic_threshold": -4.5186089900800804e-05
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.09999999999999998,
+            "a": -0.009999999999999998,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.00012548318651313628,
+            "potential_quartic_threshold": -8.748774264725965e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.16666666666666666,
+            "a": -0.016666666666666666,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0002946503894446783,
+            "potential_quartic_threshold": -1.8910748981724315e-05
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.1333333333333333,
+            "a": -0.01333333333333333,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 6.788300946848924e-05,
+            "potential_quartic_threshold": -4.5367190881303075e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.0,
+            "a": -0.16,
+            "b": 0.010800000000000002,
+            "constant": 1.5,
+            "mass_threshold": 0.000621813817393098,
+            "potential_quartic_threshold": 2.8423923088224353e-05
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.18,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.004329987200839901,
+            "potential_quartic_threshold": -0.0002927236927130384
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.08000000000000002,
+            "a": -0.003100000000000001,
+            "b": -7.503125000000001e-05,
+            "constant": 1.5,
+            "mass_threshold": -1.1074160982733233e-05,
+            "potential_quartic_threshold": -2.2865810230860857e-07
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.18,
+            "a": -0.005899999999999999,
+            "b": -0.00020334722222222222,
+            "constant": 1.5,
+            "mass_threshold": -3.651508983373489e-05,
+            "potential_quartic_threshold": -1.7610215161111532e-06
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.32000000000000006,
+            "a": -0.006400000000000006,
+            "b": -0.0005119999999999999,
+            "constant": 1.5,
+            "mass_threshold": -5.5493123557796324e-05,
+            "potential_quartic_threshold": -8.287801758340242e-06
+          }
+        ],
+        "tree_quartic": 0.18,
+        "mass_threshold": -0.00160365145553243,
+        "potential_quartic_threshold": -0.0004170013957291859,
+        "kinetic": {
+          "scalar": 0.00012665147955292225,
+          "vector": 0.0,
+          "fermion": 0.0005293692988432884,
+          "total": 0.0006560207783962105
+        },
+        "kinetic_quartic_threshold": -0.0002361674802226358,
+        "canonical_quartic": 0.17934683112404814,
+        "total_quartic_threshold": -0.0006531688759518217
+      },
+      "RG": {
+        "tree_derivative": 0.009082594666753013,
+        "threshold_derivative": -0.0028719665595887075,
+        "low_beta": 0.006210628107164498,
+        "quartic_residual": -1.9168694409543718e-16,
+        "mass_tree_derivative": 0.00084872064741651,
+        "mass_threshold_derivative": -0.0008487206474165404,
+        "mass_residual": -3.0357660829594124e-17
+      },
+      "component_errors": [
+        [
+          8.881784197001252e-16,
+          0.0,
+          5.551115123125783e-17
+        ],
+        [
+          4.718447854656915e-16,
+          0.0,
+          1.1102230246251565e-16
+        ],
+        [
+          1.1102230246251565e-15,
+          0.0,
+          1.1102230246251565e-16
+        ]
+      ]
+    },
+    {
+      "label": "different_full_basis",
+      "parameters": {
+        "lambda0": 0.2,
+        "delta": [
+          0.71,
+          0.43,
+          0.82,
+          0.64,
+          0.79
+        ],
+        "portal": 0.17,
+        "d": 1.27,
+        "second_doublet_mass2": 0.7,
+        "gauges": [
+          0.3,
+          0.25,
+          0.35
+        ],
+        "majorana": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "dirac": [
+          0.07,
+          0.11,
+          0.16
+        ],
+        "mu": 0.83
+      },
+      "threshold": {
+        "rows": [
+          {
+            "label": "bar6_minus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.45161200000000007,
+            "a": -0.02767441860465117,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0013507916791068604,
+            "potential_quartic_threshold": -2.4576020112375076e-05
+          },
+          {
+            "label": "bar6_zero",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 0.8064500000000002,
+            "a": -0.04941860465116281,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0025513835718524998,
+            "potential_quartic_threshold": 2.9238106346546146e-05
+          },
+          {
+            "label": "bar6_plus",
+            "sector": "scalar",
+            "multiplicity": 12,
+            "M2": 1.0358402222222227,
+            "a": -0.06347545219638245,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0029585277315749645,
+            "potential_quartic_threshold": 0.0001248812059912195
+          },
+          {
+            "label": "bar3_zero",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.580644,
+            "a": -0.03558139534883722,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0009191912169654402,
+            "potential_quartic_threshold": -8.223707188197263e-06
+          },
+          {
+            "label": "bar3_plus",
+            "sector": "scalar",
+            "multiplicity": 6,
+            "M2": 0.8817186666666668,
+            "a": -0.054031007751938,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.0013634155720133108,
+            "potential_quartic_threshold": 2.737298634355317e-05
+          },
+          {
+            "label": "singlet_plus",
+            "sector": "scalar",
+            "multiplicity": 2,
+            "M2": 0.6021493333333333,
+            "a": -0.03689922480620155,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": 0.000319279414728558,
+            "potential_quartic_threshold": -2.3209171100907525e-06
+          },
+          {
+            "label": "radial_mixed",
+            "sector": "scalar",
+            "multiplicity": 1,
+            "M2": 2.774188,
+            "a": -0.1363953488372093,
+            "b": 0.006657400950481779,
+            "constant": 1.5,
+            "mass_threshold": -0.0009417320089577853,
+            "potential_quartic_threshold": 0.00025604142324823034
+          },
+          {
+            "label": "second_doublet",
+            "sector": "scalar",
+            "multiplicity": 4,
+            "M2": 0.7,
+            "a": 0.18319767441860466,
+            "b": 0.0,
+            "constant": 1.5,
+            "mass_threshold": -0.0031963941405811287,
+            "potential_quartic_threshold": 1.3588496876743901e-05
+          },
+          {
+            "label": "color_vectors",
+            "sector": "vector",
+            "multiplicity": 18,
+            "M2": 0.14516099999999998,
+            "a": -0.008895348837209303,
+            "b": 0.0,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 0.00027826728221515035,
+            "potential_quartic_threshold": -8.032571521015037e-06
+          },
+          {
+            "label": "right_vectors",
+            "sector": "vector",
+            "multiplicity": 6,
+            "M2": 0.19758024999999999,
+            "a": 0.01851744186046511,
+            "b": 0.0024218798437596876,
+            "constant": 0.8333333333333334,
+            "mass_threshold": -0.00021995845007941078,
+            "potential_quartic_threshold": -6.512262154699698e-05
+          },
+          {
+            "label": "neutral_vector",
+            "sector": "vector",
+            "multiplicity": 3,
+            "M2": 0.8306435,
+            "a": -0.03633198803341613,
+            "b": 0.0005556697661705195,
+            "constant": 0.8333333333333334,
+            "mass_threshold": 8.383746547606313e-05,
+            "potential_quartic_threshold": 1.8845773226148067e-05
+          },
+          {
+            "label": "Majorana_0",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.12903200000000004,
+            "a": -0.0030069767441860485,
+            "b": -4.6519468038936085e-05,
+            "constant": 1.5,
+            "mass_threshold": -1.3145204476354953e-05,
+            "potential_quartic_threshold": -2.149058139082707e-07
+          },
+          {
+            "label": "Majorana_1",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.29032199999999997,
+            "a": -0.005690697674418606,
+            "b": -0.00012607552992883764,
+            "constant": 1.5,
+            "mass_threshold": -3.90055323384124e-05,
+            "potential_quartic_threshold": -1.3738977069249661e-06
+          },
+          {
+            "label": "Majorana_2",
+            "sector": "fermion",
+            "multiplicity": -2,
+            "M2": 0.5161280000000001,
+            "a": -0.0060279069767441955,
+            "b": -0.0003174406348812697,
+            "constant": 1.5,
+            "mass_threshold": -5.0780852173368036e-05,
+            "potential_quartic_threshold": -5.215547826839947e-06
+          }
+        ],
+        "tree_quartic": 0.18319767441860466,
+        "mass_threshold": 0.005363677745326387,
+        "potential_quartic_threshold": 0.0003548878032060928,
+        "kinetic": {
+          "scalar": 0.00010640196974068177,
+          "vector": -0.002601832113228977,
+          "fermion": 0.0002998798576428772,
+          "total": -0.002195550285845418
+        },
+        "kinetic_quartic_threshold": 0.0008044394128719667,
+        "canonical_quartic": 0.18435700163468272,
+        "total_quartic_threshold": 0.0011593272160780595
+      },
+      "RG": {
+        "tree_derivative": 0.00880075734710149,
+        "threshold_derivative": -0.0032088605896304695,
+        "low_beta": 0.005591896757471167,
+        "quartic_residual": -1.474514954580286e-16,
+        "mass_tree_derivative": -0.0230305941306653,
+        "mass_threshold_derivative": 0.02303059413066638,
+        "mass_residual": 1.078998002057574e-15
+      },
+      "component_errors": [
+        [
+          6.661338147750939e-16,
+          1.1102230246251565e-16,
+          1.1102230246251565e-16
+        ],
+        [
+          2.6645352591003757e-15,
+          3.3306690738754696e-16,
+          2.220446049250313e-16
+        ],
+        [
+          1.7763568394002505e-15,
+          1.1102230246251565e-16,
+          2.220446049250313e-16
+        ]
+      ]
+    }
+  ],
+  "formulas": {
+    "jet": "x(h)=M2+a*h^2+b*h^4",
+    "mass": "sum n M2 a [log(M2/mu^2)-c+1/2]/(16pi^2)",
+    "potential_quartic": "sum n {2 M2 b [log(M2/mu^2)-c+1/2]+a^2[log(M2/mu^2)-c+3/2]}/(16pi^2)",
+    "canonical": "lambda_EFT=lambda_tree+delta_lambda_potential-2 lambda_tree delta_Z",
+    "Z_scalar": "k^2/(64pi^2 lambda7)",
+    "Z_vector": "{gR^2/2 [3log(MWR2/mu^2)-5/2]+gR^4/(2T)[3log(MZR2/mu^2)-5/2]}/(16pi^2)",
+    "Z_fermion": "sum y_i^2 [1/2-log(MNi2/mu^2)]/(16pi^2)"
+  },
+  "checks": [
+    {
+      "name": "exact-mixed-radial-heavy-jet",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-charged-vector-heavy-jet",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-Majorana-heavy-jet",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "hypercharge-matching",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-neutral-vector-heavy-jet",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "vector-kinetic-evanescent-finite-term",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar-heavy-light-two-point-integral",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Majorana-two-point-finite-term",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "heavy-vector-generator-weight",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "full_three_family-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        4.718447854656915e-16,
+        2.220446049250313e-16,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "full_three_family-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        1.1102230246251565e-15,
+        8.326672684688674e-17,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "full_three_family-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "full_three_family-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.007445154891485405,
+        "threshold_derivative": -0.002038629725885691,
+        "low_beta": 0.005406525165599925,
+        "quartic_residual": -2.1076890233118206e-16,
+        "mass_tree_derivative": 0.00011246393390546006,
+        "mass_threshold_derivative": -0.00011246393390553552,
+        "mass_residual": -7.546047120499111e-17
+      }
+    },
+    {
+      "name": "full_three_family-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -7.546047120499111e-17
+    },
+    {
+      "name": "full_three_family-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "one_family-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        4.440892098500626e-16,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "one_family-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        6.661338147750939e-16,
+        1.1102230246251565e-16,
+        2.7755575615628914e-17
+      ]
+    },
+    {
+      "name": "one_family-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "one_family-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.0068657228237727005,
+        "threshold_derivative": -0.0014456123540187125,
+        "low_beta": 0.005420110469754071,
+        "quartic_residual": -8.326672684688674e-17,
+        "mass_tree_derivative": 0.0029692735018829654,
+        "mass_threshold_derivative": -0.002969273501883486,
+        "mass_residual": -5.204170427930421e-16
+      }
+    },
+    {
+      "name": "one_family-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -5.204170427930421e-16
+    },
+    {
+      "name": "one_family-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "zero_portal-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "zero_portal-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        5.551115123125783e-17,
+        8.326672684688674e-17
+      ]
+    },
+    {
+      "name": "zero_portal-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "zero_portal-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.00788361540650119,
+        "threshold_derivative": -0.0012666022480857498,
+        "low_beta": 0.0066170131584155824,
+        "quartic_residual": -1.4224732503009818e-16,
+        "mass_tree_derivative": 0.007390047339886246,
+        "mass_threshold_derivative": -0.007390047339886699,
+        "mass_residual": -4.527628272299467e-16
+      }
+    },
+    {
+      "name": "zero_portal-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -4.527628272299467e-16
+    },
+    {
+      "name": "zero_portal-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        0.0,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "scalar_only-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        4.718447854656915e-16,
+        0.0,
+        8.326672684688674e-17
+      ]
+    },
+    {
+      "name": "scalar_only-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        1.1102230246251565e-15,
+        0.0,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "scalar_only-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_only-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.00755788107252435,
+        "threshold_derivative": -0.00263367154750688,
+        "low_beta": 0.004924209525017616,
+        "quartic_residual": -1.457167719820518e-16,
+        "mass_tree_derivative": 0.0011213252920062068,
+        "mass_threshold_derivative": -0.0011213252920063083,
+        "mass_residual": -1.0148132334464322e-16
+      }
+    },
+    {
+      "name": "scalar_only-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -1.0148132334464322e-16
+    },
+    {
+      "name": "scalar_only-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "scalar_gauge-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        4.718447854656915e-16,
+        2.220446049250313e-16,
+        8.326672684688674e-17
+      ]
+    },
+    {
+      "name": "scalar_gauge-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        1.1102230246251565e-15,
+        8.326672684688674e-17,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "scalar_gauge-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_gauge-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.005920441297256739,
+        "threshold_derivative": -0.0018003347138038635,
+        "low_beta": 0.004120106583453043,
+        "quartic_residual": -1.682681771697503e-16,
+        "mass_tree_derivative": 0.00038506857849517073,
+        "mass_threshold_derivative": -0.00038506857849530344,
+        "mass_residual": -1.3270634591222574e-16
+      }
+    },
+    {
+      "name": "scalar_gauge-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -1.3270634591222574e-16
+    },
+    {
+      "name": "scalar_gauge-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        8.881784197001252e-16,
+        0.0,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "name": "scalar_Yukawa-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        4.718447854656915e-16,
+        0.0,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "scalar_Yukawa-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        1.1102230246251565e-15,
+        0.0,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "scalar_Yukawa-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "scalar_Yukawa-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.009082594666753013,
+        "threshold_derivative": -0.0028719665595887075,
+        "low_beta": 0.006210628107164498,
+        "quartic_residual": -1.9168694409543718e-16,
+        "mass_tree_derivative": 0.00084872064741651,
+        "mass_threshold_derivative": -0.0008487206474165404,
+        "mass_residual": -3.0357660829594124e-17
+      }
+    },
+    {
+      "name": "scalar_Yukawa-mass-RG-cancellation",
+      "passed": true,
+      "evidence": -3.0357660829594124e-17
+    },
+    {
+      "name": "scalar_Yukawa-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-tree-gaps-and-positive-light-quartic",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-full-component-spectra-h-0.0",
+      "passed": true,
+      "evidence": [
+        6.661338147750939e-16,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "different_full_basis-heavy-radial-EOM-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-tree-potential-h-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-full-component-spectra-h-0.03",
+      "passed": true,
+      "evidence": [
+        2.6645352591003757e-15,
+        3.3306690738754696e-16,
+        2.220446049250313e-16
+      ]
+    },
+    {
+      "name": "different_full_basis-heavy-radial-EOM-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-tree-potential-h-0.03",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-full-component-spectra-h-0.09",
+      "passed": true,
+      "evidence": [
+        1.7763568394002505e-15,
+        1.1102230246251565e-16,
+        2.220446049250313e-16
+      ]
+    },
+    {
+      "name": "different_full_basis-heavy-radial-EOM-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-tree-potential-h-0.09",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "different_full_basis-quartic-RG-cancellation",
+      "passed": true,
+      "evidence": {
+        "tree_derivative": 0.00880075734710149,
+        "threshold_derivative": -0.0032088605896304695,
+        "low_beta": 0.005591896757471167,
+        "quartic_residual": -1.474514954580286e-16,
+        "mass_tree_derivative": -0.0230305941306653,
+        "mass_threshold_derivative": 0.02303059413066638,
+        "mass_residual": 1.078998002057574e-15
+      }
+    },
+    {
+      "name": "different_full_basis-mass-RG-cancellation",
+      "passed": true,
+      "evidence": 1.078998002057574e-15
+    },
+    {
+      "name": "different_full_basis-scalar-kinetic-quadrature",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 100,
+  "checks_total": 100,
+  "scope": "Stable full-basis Delta branch, norm portal, one real selected light doublet, diagonal real flavor. Dimension-four mass/quartic and finite light kinetic matching in Landau gauge/MS-bar, at zero tree light mass. No observed mass prediction, arbitrary-boundary/flavor extension or full dimension-six matching."
+}

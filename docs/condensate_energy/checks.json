@@ -1,0 +1,157 @@
+{
+  "checks": [
+    {
+      "name": "180 independent ODE/analytic stationary transmissions agree",
+      "passed": true,
+      "cases": 180,
+      "max_absolute_error": 3.596012376760882e-13
+    },
+    {
+      "name": "stationary reflected plus transmitted flux equals incoming flux",
+      "passed": true,
+      "max_absolute_error": 6.661338147750939e-16
+    },
+    {
+      "name": "explicit spatial convention gives T=1/|alpha|\u00b2 and R=|beta/alpha|\u00b2",
+      "passed": true,
+      "max_absolute_error": 8.881784197001252e-16
+    },
+    {
+      "name": "free, zero-width and threshold cases have their exact transmissions",
+      "passed": true,
+      "controls": [
+        {
+          "omega": 1.0,
+          "height": 0.0,
+          "width": 2.0,
+          "T": 1.0,
+          "R": 0.0,
+          "alpha_T": 1.0,
+          "beta_ratio": 0.0,
+          "printed_transfer_T": 1.0,
+          "W": 0.0,
+          "exponential": 1.0,
+          "forbidden": false
+        },
+        {
+          "omega": 1.0,
+          "height": 4.0,
+          "width": 0.0,
+          "T": 1.0,
+          "R": 0.0,
+          "alpha_T": 1.0,
+          "beta_ratio": 0.0,
+          "printed_transfer_T": 1.0,
+          "W": 0.0,
+          "exponential": 1.0,
+          "forbidden": true
+        },
+        {
+          "omega": 1.0,
+          "height": 1.0,
+          "width": 2.0,
+          "T": 0.5000000000000001,
+          "R": 0.5000000000000001,
+          "alpha_T": 0.4999999999999999,
+          "beta_ratio": 0.5000000000000001,
+          "printed_transfer_T": 0.5,
+          "W": 0.0,
+          "exponential": 1.0,
+          "forbidden": false
+        }
+      ]
+    },
+    {
+      "name": "independent DOP853 dynamics and midpoint converge in energy norm",
+      "passed": true,
+      "coarse_error": 0.00487672357057251,
+      "fine_error": 0.0012206421765157656,
+      "ode_nfev": 2678
+    },
+    {
+      "name": "sealed cavity retains energy and matches independent discrete eigenmode phase",
+      "passed": true,
+      "energy_drift": 6.861178292183467e-14,
+      "phase_error": 5.013231770925398e-12
+    },
+    {
+      "name": "selected spatial/time refinements meet retained-energy tolerance",
+      "passed": true,
+      "comparisons": [
+        {
+          "case": "refined-h1-b0.5",
+          "max_curve_difference": 0.0036039012600759257
+        },
+        {
+          "case": "refined-h4-b1",
+          "max_curve_difference": 0.00884113642090878
+        },
+        {
+          "case": "refined-h9-b2",
+          "max_curve_difference": 0.006325687176608308
+        }
+      ]
+    },
+    {
+      "name": "separated central space/time refinements meet tolerance",
+      "passed": true,
+      "spatial_change": 0.008763692995728545,
+      "time_change": 7.744342518023473e-05
+    },
+    {
+      "name": "larger exterior domain does not change measured retention",
+      "passed": true,
+      "max_curve_difference": 0.0
+    },
+    {
+      "name": "global phase rotation leaves energy observations invariant",
+      "passed": true,
+      "max_curve_difference": 7.216449660063518e-15
+    },
+    {
+      "name": "small initial difference has conserved positive energy",
+      "passed": true,
+      "initial_difference_energy": 0.00024960652214622896,
+      "relative_drift": 2.506283281963461e-13
+    },
+    {
+      "name": "all runs conserve total field energy",
+      "passed": true,
+      "max_relative_drift": 6.324496482079668e-12
+    },
+    {
+      "name": "regional energy loss matches independently integrated net edge flux",
+      "passed": true,
+      "max_relative_residual": 4.7561954374941714e-12
+    },
+    {
+      "name": "distant endpoint remains energetically unvisited during measurement",
+      "passed": true,
+      "max_tail_fraction": 1.1009973439440875e-245
+    },
+    {
+      "name": "existing exact projective-alignment script completes",
+      "passed": true,
+      "exit_code": 0,
+      "interpretation": "Algebraic projective alignment, not finite-energy localization."
+    }
+  ],
+  "source_hashes": {
+    "papers/notes/Klein_Foam_Monad.tex": "89edb252fb55b68d78e499b51d8e29ddb2adee7fde6aeebdef78fa1f43cfff90",
+    "papers/notes/Flag_Condensate_Nuclear_Decay.tex": "c39f21aac11ea473dc22b89f4b22e5317303c57c6984eb7f9261e51f4b0de0eb",
+    "papers/notes/Density_Engine_Many_Worlds.tex": "a7a87054cd585dc8424588b5c40dfdee885a9432c2ab7d4371e83609a68cf224",
+    "docs/Torsion_Topological_Condensation_Analysis.md": "b93883352a19e1cb9e63ffe0eb1c0eaefe540f0f5c62c013a850b54156f94066",
+    "docs/frontier/2026-09-11/Branch_Catalog.json": "828e9d567a7ffb158a7c235b0ca775f8867e449b148683bc195328f790361da5",
+    "docs/frontier/2026-09-11/workstreams/physical/report.md": "9293de24f78e501f99b2a99f267ac578082b53d64f6da24ad0e181c90a38eb70",
+    "code/palpha_overlap/palpha_overlap_gamow.py": "1c37bcd057401aeb9005d08106c097361e16eec6bc40a59a8b90965bcd587894",
+    "code/acs_codebase/extras/test_conjecture_condensate_collapse.py": "f22eef9a7d3dd5bf55a2cba95b24d9f825dc61c27164fc7b7016400784750eeb",
+    "docs/condensate_energy/protocol.md": "470c6f00b39d5818db6892001da1dccd5fc70328216052e4af439351a4eff551",
+    "code/condensate_energy/run.py": "7a78920341b97c2fd2f6b5a03c5c6b0099921d277b4a5254f66d9d565b6ce7ba"
+  },
+  "artifact_hashes": {
+    "results.json": "c2bb3bcf581e29c50b26f493ff94f177eb537342cd6fb9c310d9c9a7695011d3",
+    "energy-comparison.png": "a77740716ba600a47ccdd0aac3b2380da465d57b2230103ff008dce81cfcd3e0",
+    "energy-comparison.svg": "df82545d92a63ea2d21bc90c21e77b38db6e4aa94db692b87303322b1e14ef81",
+    "projective-alignment.log": "380f25d405ec2c914d4446a228064ec14941fbeaa289284e6b0fb4afd6be2680"
+  }
+}

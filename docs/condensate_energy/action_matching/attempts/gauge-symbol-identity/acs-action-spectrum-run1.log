@@ -1,0 +1,41 @@
+holomorphic-pair-has-no-quadratic-term PASS
+stationarity-mDelta-equals-minus-two-lambda7-d2 PASS
+eigenvectors-bar6-minus-real PASS
+eigenvectors-bar6-minus-imaginary PASS
+eigenvectors-bar6-zero-real PASS
+eigenvectors-bar6-zero-imaginary PASS
+eigenvectors-bar6-plus-real PASS
+eigenvectors-bar6-plus-imaginary PASS
+eigenvectors-bar3-minus-real PASS
+eigenvectors-bar3-minus-imaginary PASS
+eigenvectors-bar3-zero-real PASS
+eigenvectors-bar3-zero-imaginary PASS
+eigenvectors-bar3-plus-real PASS
+eigenvectors-bar3-plus-imaginary PASS
+eigenvectors-singlet-minus-real PASS
+eigenvectors-singlet-minus-imaginary PASS
+eigenvectors-singlet-zero-real PASS
+eigenvectors-singlet-zero-imaginary PASS
+eigenvectors-singlet-plus-real PASS
+eigenvectors-singlet-plus-imaginary PASS
+sixty-complete-independent-Delta-eigenvectors PASS
+nine-Goldstones-fifty-one-other-modes PASS
+radial-mass-four-lambda7-d2 PASS
+isotropic-shift-leaves-all-transverse-masses-invariant PASS
+exact-gauge-spectrum FAIL
+all-gauge-orbit-directions-are-Hessian-zeros PASS
+nine-broken-generators PASS
+independent-numerical-spectrum PASS
+explicit-positive-physical-Delta-example PASS
+color_gram-no-claimed-scalar-mass-identity PASS
+color_gram-old-positive-rho2-range-has-instability PASS
+spin_gram-no-claimed-scalar-mass-identity PASS
+spin_gram-old-positive-rho2-range-has-instability PASS
+Traceback (most recent call last):
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/action_matching_spectrum.py", line 161, in <module>
+    main()
+    ~~~~^^
+  File "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/condensate_energy/action_matching_spectrum.py", line 157, in main
+    assert all(c['passed'] for c in checks), 'Failed checks preserved in spectrum.json'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Failed checks preserved in spectrum.json

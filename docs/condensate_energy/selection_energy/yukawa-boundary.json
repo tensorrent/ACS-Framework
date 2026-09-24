@@ -1,0 +1,148 @@
+{
+  "checks_total": 21,
+  "checks_passed": 21,
+  "checks": [
+    {
+      "name": "positive tan-beta ratio derivative positive",
+      "passed": true
+    },
+    {
+      "name": "exact lower endpoint two thirds",
+      "passed": true
+    },
+    {
+      "name": "exact upper endpoint three halves",
+      "passed": true
+    },
+    {
+      "name": "all positive tan beta below three halves",
+      "passed": true
+    },
+    {
+      "name": "tan-beta fifty still near 1.5 not forty",
+      "passed": true
+    },
+    {
+      "name": "ratio forty requires a negative relative VEV in this formula",
+      "passed": true
+    },
+    {
+      "name": "negative-VEV scalar solution exists but changes source domain",
+      "passed": true
+    },
+    {
+      "name": "matrix proportionality yields an exact common-flavor factor",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices commute in left mass squares 0",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices give same mass ratio for every generation 0",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices commute in left mass squares 1",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices give same mass ratio for every generation 1",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices commute in left mass squares 2",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices give same mass ratio for every generation 2",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices commute in left mass squares 3",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices give same mass ratio for every generation 3",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices commute in left mass squares 4",
+      "passed": true
+    },
+    {
+      "name": "proportional matrices give same mass ratio for every generation 4",
+      "passed": true
+    },
+    {
+      "name": "independent matrices can obey same norm ratio",
+      "passed": true
+    },
+    {
+      "name": "norm-only ratio does not force aligned flavor",
+      "passed": true,
+      "evidence": {
+        "commutator_norm": 30.71478734475015
+      }
+    },
+    {
+      "name": "original Higgs-wall source replays",
+      "passed": true
+    }
+  ],
+  "positive_tan_beta_ratio_range": [
+    "2/3",
+    "3/2"
+  ],
+  "source_tan_beta_50_result": "152/103",
+  "negative_relative_vev_for_source_ratio_40": "-118/77",
+  "proportional_matrix_controls": [
+    {
+      "relative_commutator": 1.0841992351054536e-16,
+      "generation_ratios": [
+        0.8434641323188111,
+        0.8434641323188107,
+        0.8434641323188103
+      ]
+    },
+    {
+      "relative_commutator": 4.713014370699332e-17,
+      "generation_ratios": [
+        0.8434641323188105,
+        0.8434641323188103,
+        0.8434641323188109
+      ]
+    },
+    {
+      "relative_commutator": 1.2089872081418956e-16,
+      "generation_ratios": [
+        0.8434641323188108,
+        0.8434641323188106,
+        0.8434641323188097
+      ]
+    },
+    {
+      "relative_commutator": 1.2381588262428263e-16,
+      "generation_ratios": [
+        0.8434641323188106,
+        0.8434641323188115,
+        0.8434641323188099
+      ]
+    },
+    {
+      "relative_commutator": 8.130998023983413e-17,
+      "generation_ratios": [
+        0.8434641323188108,
+        0.8434641323188105,
+        0.8434641323188106
+      ]
+    }
+  ],
+  "status": "Large positive tan beta cannot repair the stated proportional Yukawa hierarchy. Norm-only Yukawa constraints remain a distinct, underdetermined branch.",
+  "limitations": [
+    "The matrix result assumes both Dirac matrices are scalar combinations of the same H.",
+    "Degenerate singular-value subspaces admit arbitrary basis choices; that does not supply physical mixing among distinct masses.",
+    "A norm constraint on independent matrices is not the proportionality hypothesis.",
+    "No new fit to measured quark masses or mixing is performed."
+  ]
+}

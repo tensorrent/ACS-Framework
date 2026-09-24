@@ -180,6 +180,9 @@
 \widowpenalty=10000
 \clubpenalty=10000
 \displaywidowpenalty=10000
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \begin{titlepage}
 \thispagestyle{empty}
@@ -198,6 +201,11 @@
   {\large\bfseries Bradley Wallace}\\[0.25em]
   {\small\itshape\color{acsslate} Independent Researcher}
 \end{center}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 \vspace{0.4in}
 \begin{center}
 \begin{minipage}{0.88\textwidth}
@@ -226,7 +234,7 @@ under the new governance within a six-month horizon.
 \pagenumbering{roman}
 \setcounter{page}{1}
 \markboth{Contents}{}
-\tableofcontents
+\begingroup\small\tableofcontents\endgroup
 \clearpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
@@ -242,6 +250,7 @@ system, physical or computational; the physics results they map from carry
 their own tiers (proved, numerical, or conjectural) as recorded in the
 traceability section and MANIFEST.md.
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5652}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4348}}@{}}
@@ -290,7 +299,7 @@ itself, whose structure is determined once the two fields are fixed.
 \hypertarget{high-level-topology}{%
 \subsection{High-Level Topology}\label{high-level-topology}}
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 +-------------------------------------------------------------------+
 |                    CLIENT / USER INTERFACE                         |
 |           (CLI · REST API · Jupyter · Verification Report)         |
@@ -313,7 +322,7 @@ itself, whose structure is determined once the two fields are fixed.
    +-----------+----------+   +----------+-----------+
                |                          |
 +--------------v--------------------------v-------------------------+
-|                    KERNEL — Symbolic + Numerical                  |
+|                    KERNEL --- Symbolic + Numerical                  |
 |   SymPy (exact Q) · mpmath (arbitrary precision) · NumPy (fp64)   |
 +-----------------------------+-------------------------------------+
                               |
@@ -321,7 +330,7 @@ itself, whose structure is determined once the two fields are fixed.
 |                    PERSISTENCE & PROVENANCE                        |
 |   Content-addressed store (SHA-256) · DAG journal · Immutable log |
 +-------------------------------------------------------------------+
-\end{verbatim}
+\end{Verbatim}
 
 \hypertarget{the-five-architectural-layers}{%
 \subsection{The Five Architectural
@@ -483,7 +492,7 @@ to the spin connection \texttt{ω}: the field that generates change.
 
     \AttributeTok{@abstractmethod}
     \KeywordTok{def}\NormalTok{ killing\_form(}\VariableTok{self}\NormalTok{, other: }\StringTok{\textquotesingle{}Function\textquotesingle{}}\NormalTok{) }\OperatorTok{{-}\textgreater{}}\NormalTok{ Rational:}
-        \CommentTok{"""K(self, other) — the Killing form value. Exact rational."""}
+        \CommentTok{"""K(self, other) --- the Killing form value. Exact rational."""}
 \end{Highlighting}
 \end{Shaded}
 
@@ -554,7 +563,7 @@ order.
 \CommentTok{        BCH truncation order. Default 3.}
 \CommentTok{        Order 1: direct coupling (Φ.apply(F)).}
 \CommentTok{        Order 2: Lie bracket (curvature).}
-\CommentTok{        Order 3: holonomy — double bracket.}
+\CommentTok{        Order 3: holonomy --- double bracket.}
 \CommentTok{    validate\_closure : bool}
 \CommentTok{        If True, run the Closure Validator on the result.}
 
@@ -825,13 +834,13 @@ computation history a Merkle DAG.
 \hypertarget{execution-phases}{%
 \subsection{Execution Phases}\label{execution-phases}}
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 PHASE 1: INGEST
   input bytes → Pydantic validation → Form(provenance="initial")
 
 PHASE 2: PLAN
   target specification → DAG of Form nodes and Function edges
-  (this is a pure symbolic phase — no computation yet)
+  (this is a pure symbolic phase --- no computation yet)
 
 PHASE 3: EXECUTE
   topological walk of the DAG, dispatching each edge to the Bracket
@@ -848,7 +857,7 @@ PHASE 5: CONVERGE
 PHASE 6: COMMIT
   results and full DAG journal written to persistent store.
   Returned to caller with cryptographic receipt.
-\end{verbatim}
+\end{Verbatim}
 
 Phases 1--5 are deterministic and pure. Only Phase 6 has external side
 effects.
@@ -859,6 +868,7 @@ effects.
 Determinism is not a property of the Bracket Engine alone; it must be
 preserved across the entire stack. The guarantees decompose as:
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2414}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7586}}@{}}
@@ -941,7 +951,7 @@ scripts before a release is cut.
 
 The CI pipeline is layered:
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 +-----------------------------------------------------------------+
 | TIER 0 (seconds)                                                |
 |  mypy · pydantic schema check · invariant assertions            |
@@ -955,7 +965,7 @@ The CI pipeline is layered:
 | RELEASE GATE                                                    |
 |  All three tiers green · receipt hash matches previous release |
 +-----------------------------------------------------------------+
-\end{verbatim}
+\end{Verbatim}
 
 \hypertarget{two-phase-commit-protocol-for-the-dag-journal}{%
 \subsection{Two-Phase Commit Protocol (for the DAG
@@ -997,20 +1007,21 @@ information-balance criteria, is promoted to become a constraint for
 subsequent computations. This prevents drift and enforces cumulative
 consistency.
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
    +----------+   solve    +------------+  promote   +----------+
    | CONSTRAINT| --------→ |  ATTRACTOR | ---------→ |CONSTRAINT|
    |   set k   |           |   state    |            |  set k+1 |
    +----------+            +------------+            +----------+
          ^                                                  |
          +---------------- feedback ------------------------+
-\end{verbatim}
+\end{Verbatim}
 
 \hypertarget{grade-hierarchy}{%
 \subsection{Grade Hierarchy}\label{grade-hierarchy}}
 
 Outputs are tagged with a grade that determines their usage rights:
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2143}}
@@ -1049,7 +1060,7 @@ explicit governance action with audit trail.
 Every state transition in the governance layer is logged to an
 append-only audit store. The log schema:
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 {
   "timestamp": "ISO-8601",
   "actor": "string (user or service identity)",
@@ -1060,7 +1071,7 @@ append-only audit store. The log schema:
   "policy_version": "semver",
   "witness": "string (reproduction instructions)"
 }
-\end{verbatim}
+\end{Verbatim}
 
 Logs are cryptographically linked via a hash chain; any tampering breaks
 the chain and is detectable in O(N) verification.
@@ -1106,18 +1117,18 @@ regressions.
 \hypertarget{deployment-topology}{%
 \subsection{Deployment Topology}\label{deployment-topology}}
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 +-----------------------------------------------------------------+
-|  EDGE — Jupyter kernels · CLI · REST clients                    |
+|  EDGE --- Jupyter kernels · CLI · REST clients                    |
 +-----------------------------+-----------------------------------+
                               | TLS 1.3, mTLS for service calls
 +-----------------------------v-----------------------------------+
-|  API GATEWAY — auth, rate limits, grade routing                 |
+|  API GATEWAY --- auth, rate limits, grade routing                 |
 +-----------------------------+-----------------------------------+
                               |
 +-----------------------------v-----------------------------------+
 |  APPLICATION TIER                                               |
-|  Bracket Engine workers (stateless) — horizontal scale          |
+|  Bracket Engine workers (stateless) --- horizontal scale          |
 |  Governance Policy Engine (stateful, replicated 3-way)          |
 +--------------+--------------------------+-----------------------+
                |                          |
@@ -1126,7 +1137,7 @@ regressions.
       |  (S3-compatible,|         | (append-only,|
       |  content-addr.) |         | hash-chained)|
       +-----------------+         +--------------+
-\end{verbatim}
+\end{Verbatim}
 
 \hypertarget{service-decomposition}{%
 \subsection{Service Decomposition}\label{service-decomposition}}
@@ -1158,6 +1169,7 @@ communicates only through explicit message contracts (protobuf).
 \subsection{Resource Envelope (Phase 1
 Target)}\label{resource-envelope-phase-1-target}}
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}ll@{}}
 \toprule\noalign{}
 Resource & Sizing \\
@@ -1205,7 +1217,7 @@ Contracts}\label{api-and-integration-contracts}}
 \hypertarget{rest-api-minimal-surface}{%
 \subsection{REST API (Minimal Surface)}\label{rest-api-minimal-surface}}
 
-\begin{verbatim}
+\begin{Verbatim}[breaklines=true,breakanywhere=true]
 POST /v1/bracket
   Body: { form: FormRef, function: FunctionRef, order: 1|2|3, grade: string }
   Returns: { output: FormRef, receipt: string, grade_achieved: string }
@@ -1223,7 +1235,7 @@ POST /v1/verify/{theorem_id}
 
 GET /v1/audit/{receipt}
   Returns the complete audit trail for a given receipt.
-\end{verbatim}
+\end{Verbatim}
 
 All endpoints are idempotent on the content-hash identity. No session
 state. No conversational memory.
@@ -1243,7 +1255,7 @@ state. No conversational memory.
 \CommentTok{\# Apply a Function}
 \NormalTok{phi }\OperatorTok{=}\NormalTok{ stack.functions.get(}\StringTok{"bracket.T\_BL.sl4"}\NormalTok{)}
 
-\CommentTok{\# Compose — uses the | operator for bracket}
+\CommentTok{\# Compose --- uses the | operator for bracket}
 \NormalTok{result }\OperatorTok{=}\NormalTok{ f }\OperatorTok{|}\NormalTok{ phi  }\CommentTok{\# implicit order 3, Verification grade}
 
 \CommentTok{\# Explicit version with full control}
@@ -1395,6 +1407,7 @@ from Paper A's Appendix E maps to a service integration milestone.
 \hypertarget{risks-and-mitigations}{%
 \section{Risks and Mitigations}\label{risks-and-mitigations}}
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3000}}
@@ -1447,15 +1460,16 @@ tools ship with the receipt format spec \\
 \section{Traceability to the ACS
 Trilogy}\label{traceability-to-the-acs-trilogy}}
 
-\textbf{Paper key.} Paper A = \texttt{papers/core\_trilogy/Palatini\_Gauge\_Attractor.tex}
-(\emph{Colour from Gravity}); Paper B = \texttt{papers/core\_trilogy/Riemann\_Spectral\_Critical\_Line.tex};
-Paper B$'$ = \texttt{papers/core\_trilogy/Spectral\_Witness\_Refinement.tex};
-Paper C = \texttt{papers/core\_trilogy/Holographic\_Spectral\_Inversion.tex}
+\textbf{Paper key.} Paper A = \nolinkurl{papers/core_trilogy/Palatini_Gauge_Attractor.tex}
+(\emph{Colour from Gravity}); Paper B = \nolinkurl{papers/core_trilogy/Riemann_Spectral_Critical_Line.tex};
+Paper B$'$ = \nolinkurl{papers/core_trilogy/Spectral_Witness_Refinement.tex};
+Paper C = \nolinkurl{papers/core_trilogy/Holographic_Spectral_Inversion.tex}
 (\emph{The Inversion Arc}); Paper D = this document.
 
 Every architectural decision in this document traces back to a specific
 result in the ACS trilogy. This section is the cross-reference index.
 
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4250}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}
@@ -1583,7 +1597,7 @@ Python form, demonstrating determinism and provenance.
 \NormalTok{    policy\_version: }\BuiltInTok{str}
 \NormalTok{    grade: }\BuiltInTok{str}
 
-\NormalTok{\_JOURNAL: }\BuiltInTok{list}\NormalTok{[Receipt] }\OperatorTok{=}\NormalTok{ []  }\CommentTok{\# Prototype — real impl uses append{-}only store}
+\NormalTok{\_JOURNAL: }\BuiltInTok{list}\NormalTok{[Receipt] }\OperatorTok{=}\NormalTok{ []  }\CommentTok{\# Prototype --- real impl uses append{-}only store}
 
 \KeywordTok{def}\NormalTok{ bracket(}
 \NormalTok{    f: FormProto,}
@@ -1663,5 +1677,18 @@ store and adds the 2PC protocol from §5.3.
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \emph{End of document.}
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Deterministic replay and provenance are engineering properties of a specified implementation. They do not establish that its geometric features identify a unique physical source. The action audit supplies a concrete counterexample: different complete actions can share neutral observations while differing in transverse stability. A deployed witness must therefore retain its measurement convention, uncertainty and alternate-model controls. The release checks verify manuscript integrity and selected calculations; they do not certify production security or benchmark generalization.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

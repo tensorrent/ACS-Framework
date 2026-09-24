@@ -1,0 +1,1 @@
+The initial verification attempted to multiply a 4x64 block concatenation instead of a flattened 16x16 projector. The failure precedes the projector check; no scientific result was accepted from this attempt. The correction flattens each 4x4 image into a 16-entry column.

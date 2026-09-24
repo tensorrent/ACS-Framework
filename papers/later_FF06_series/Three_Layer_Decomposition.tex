@@ -23,12 +23,20 @@ and the Operator-Side Confirmation of Form vs.\ Function}}
 \author{B.\ Wallace \quad (TensorRent)\\ \small with computational verification by Claude (Anthropic)}
 \date{\small Companion to \textit{Spectral Witness Survival} and \textit{Spectral Rigidity and Shuffled Spacing Discriminant} \ ---\ SIP License v1.1}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
 \begin{abstract}
 We decompose the first $10^5$ Riemann zeros into three structurally independent layers and identify the governor of each: the \emph{average density} is the smooth Riemann--von Mangoldt term (analysis, no arithmetic); the \emph{positions} (the fluctuation of the counting function about its mean) are owned by the primes via the explicit formula; and the \emph{local spacings} are pure GUE (the universality class, arithmetic-blind). The separation is sharp and scale-stable. On the full $10^5$ zeros with prime-powers to $3000$, the prime sum reconstructs the counting fluctuation at correlation $0.84$ and explained variance $0.71$, beating an amplitude-matched random-frequency control by $\mathbf{122\sigma}$; extending the prime-power sum drives explained variance monotonically from $0.64$ to $0.82$ with a white residual (lag-1 autocorrelation $0.057$), indicating the primes own the positions entirely in the limit, the residual being truncation and Gibbs ringing at the staircase steps. Independently, no arithmetic perturbation of a self-adjoint (GUE) operator moves its \emph{spacing} statistics toward the zeros at any strength: weak arithmetic is cosmetic, strong arithmetic breaks GUE toward Poisson, and there is no selection regime. The two findings are the same statement from opposite directions: the arithmetic is exclusively positional and invisible to the spacing law. This reproduces, from the operator/explicit-formula side and at the same $10^5$ scale, the \emph{form vs.\ function} categorisation obtained empirically in \textit{Spectral Rigidity and Shuffled Spacing Discriminant} (spacing/counting/shape are form; the arithmetic witness is function), and it sharpens the Hilbert--P\'olya target accordingly.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \section{The decomposition}
 
@@ -39,7 +47,7 @@ Write the exact zero-counting function as $N(T) = \langle N(T)\rangle + S(T)$, w
 and $S(T)$ is the fluctuation. The local level-spacing law is a separate object, obtained after unfolding by $\langle N\rangle$. These three --- mean density, fluctuation $S(T)$, and spacing law --- are structurally independent, and we find each has a different governor.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 layer & quantity & governor \\
 \midrule
@@ -47,7 +55,7 @@ density & $\langle N(T)\rangle$ & smooth analysis (no arithmetic) \\
 \textbf{positions} & $S(T)$ fluctuation & \textbf{the primes} (explicit formula) \\
 \textbf{spacings} & unfolded gap law & \textbf{pure GUE} (universality class) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The two load-bearing claims are that the positions are prime-governed and the spacings are not. We establish both, and then note they are the same statement.
@@ -65,7 +73,7 @@ We evaluate the true fluctuation $S_{\mathrm{true}}(T)=N(T)-\langle N(T)\rangle$
 \textbf{Scaling on real data.} The reconstruction is flat in quality across a $50\times$ range in the number of zeros, while the significance against control grows with scale:
 
 \begin{center}
-\begin{tabular}{rrrrr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{rrrrr}
 \toprule
 zeros $M$ & primes $<P$ & corr & expl.\ var & vs.\ random \\
 \midrule
@@ -74,7 +82,7 @@ $10{,}000$ & $1000$ & $0.848$ & $0.719$ & $+106\sigma$ \\
 $50{,}000$ & $2000$ & $0.838$ & $0.702$ & $+95\sigma$ \\
 $100{,}000$ & $3000$ & $0.840$ & $0.706$ & $\mathbf{+122\sigma}$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \textbf{The control is decisive.} Replacing the log-prime frequencies $\log p$ with amplitude-matched random incommensurable frequencies gives correlation $0.004\pm0.019$ --- nothing. It is not that any oscillatory sum fits $S(T)$; it is specifically the prime frequencies, at $122\sigma$ over the matched null at full scale. The arithmetic does real, large selection work on the positions.
@@ -90,7 +98,7 @@ $100{,}000$ & $3000$ & $0.840$ & $0.706$ & $\mathbf{+122\sigma}$ \\
 We test whether arithmetic, imposed on a self-adjoint operator, can move its \emph{spacing} statistics toward the zeros. Take a GUE core $H_0=(A+A^\dagger)/2$ and add a prime-log diagonal at strength $\varepsilon$, comparing the spacing-histogram distance to the true zeros against the noise band of pure-GUE draws.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 $\varepsilon$ & distance to zeros & verdict \\
 \midrule
@@ -99,7 +107,7 @@ $0.05$--$0.2$ & $0.044$--$0.047$ & same as GUE (cosmetic) \\
 $0.4$ & $0.073$ ($+2.1\sigma$) & breaks toward Poisson \\
 $0.8$ & $0.312$ ($+18.7\sigma$) & breaks \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 There is \textbf{no selection regime}. Weak arithmetic leaves the spacing law indistinguishable from generic GUE; strong arithmetic destroys GUE toward clumping. The zeros' spacing statistics are reproduced by \emph{any} self-adjoint operator (GUE is generic) and carry no detectable arithmetic content. Two further controls corroborate the picture: (i) symmetrising a duality does not build the spacing law --- four natural finite encodings of the zeros--primes coupling all miss the GUE band, and balanced involutions imposed on a GUE core push it toward Poisson, so an externally imposed self-duality \emph{breaks} repulsion unless the involution already commutes with $H$; (ii) self-adjointness alone already yields the GUE band. The arithmetic is not in the spacings.
@@ -109,14 +117,14 @@ There is \textbf{no selection regime}. Weak arithmetic leaves the spacing law in
 Positions are prime-governed; spacings are arithmetic-blind GUE. Equivalently: \emph{the arithmetic content of the zeros lives entirely in where the levels sit, not in how they are spaced.} This is exactly the \textbf{form/function} split of \textit{Spectral Rigidity and Shuffled Spacing Discriminant}, now derived from the operator/explicit-formula side at the same $10^5$ scale:
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 & empirical (\textit{Spectral Rigidity and Shuffled Spacing Discriminant}) & operator side (this note) \\
 \midrule
 \textbf{form} & spacing, counting, shape: $0.4$--$1.0\sigma$ & spacing law: pure GUE, arithmetic-blind \\
 \textbf{function} & arithmetic witness: $\sim\!11{,}500\sigma$ & positions: prime-governed, $122\sigma$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 Two independent routes --- the marginal-matched surrogate battery and the explicit-formula position reconstruction --- land on identical structure: the spacing distribution is the universality class (form, shared by every GUE sequence), and the primes are the object-specific content (function), located in the positions. The agreement across methods at full scale is the principal evidence that the form/function cut is structural rather than an artifact of either method.
@@ -143,5 +151,18 @@ The position reconstruction verifies the \emph{known} Riemann--von Mangoldt expl
 \vspace{1em}
 \noindent\rule{\linewidth}{0.4pt}\\
 \small Accompanies \textit{Spectral Witness Survival} and \textit{Spectral Rigidity and Shuffled Spacing Discriminant}. SIP License v1.1.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The decomposition distinguishes features of the finite zero data under the chosen unfolding and spectral tests. Its layers do not identify a unique physical source or certify the full zeta zero set. Ensemble dependence, finite-size uncertainty and negative controls remain part of the result. Neither octave-scaled prime labels nor a change of geometric display can substitute for a convergence argument or the exact real-part condition in RH.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \end{document}

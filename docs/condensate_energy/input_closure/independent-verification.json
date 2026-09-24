@@ -1,0 +1,139 @@
+{
+  "checks_total": 26,
+  "checks_passed": 26,
+  "checks": [
+    {
+      "name": "independent 85-digit invariant matches rational",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 0",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 1",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 2",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 3",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 4",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 5",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 6",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 7",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 8",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 9",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 10",
+      "passed": true
+    },
+    {
+      "name": "independent directional derivatives 11",
+      "passed": true
+    },
+    {
+      "name": "primary wave-direction selector vanishes for stated TT matrices",
+      "passed": true
+    },
+    {
+      "name": "source fallback selector does not vanish identically",
+      "passed": true
+    },
+    {
+      "name": "fallback exact BCH squared norm 1",
+      "passed": true
+    },
+    {
+      "name": "fallback exact BCH squared norm 2",
+      "passed": true
+    },
+    {
+      "name": "fallback exact BCH squared norm 3",
+      "passed": true
+    },
+    {
+      "name": "nondegenerate normalized fallback example",
+      "passed": true
+    },
+    {
+      "name": "recovered JS quantum section runs",
+      "passed": true
+    },
+    {
+      "name": "independent NumPy reproduces source JS correlation",
+      "passed": true
+    },
+    {
+      "name": "fine structure value already appears as source input",
+      "passed": true
+    },
+    {
+      "name": "summary Kepler score is hardcoded",
+      "passed": true
+    },
+    {
+      "name": "source correlation is not unit invariant",
+      "passed": true,
+      "evidence": {
+        "original": -0.6408455292095048,
+        "consistent_g_cm_s_C": -0.6570781124871166
+      }
+    },
+    {
+      "name": "unspecified-kernel formula permits positive first derivative at phi",
+      "passed": true
+    },
+    {
+      "name": "same allowed kernel contradicts asserted negative second derivative",
+      "passed": true
+    }
+  ],
+  "independent_derivative_max_error": 9.883310571778616e-83,
+  "fallback_selector": {
+    "squared_norms": [
+      "2*a**2 + 2*b**2",
+      "8*b**2*(a**2 + b**2)",
+      "32*b**2*(a**2 + b**2)*(a**2 + 2*b**2)"
+    ],
+    "normalized_example_squared_norms": [
+      2.0,
+      5.12,
+      33.5872
+    ],
+    "verdict": "Primary projector vanishes; implemented fallback does not. Historical blanket annihilation claim is too strong. This does not make the remaining target-fit a prediction."
+  },
+  "export_quantum": {
+    "source_correlation": -0.6408455292095048,
+    "converted_units_correlation": -0.6570781124871166,
+    "inputs": "The source inserts both the dimensional constants and fine-structure value; no parameter-selection equation appears in this test."
+  },
+  "unspecified_kernel": {
+    "first_derivative_at_phi": 57.00263777268692,
+    "second_derivative_at_phi": 55.4939186811949,
+    "domain": "u=log(lambda+epsilon) in [2,3], gamma in [0,1], K=1",
+    "limitation": "Counterexample to an inference without kernel/domain hypotheses; not a theorem about every specified spectral-correlation kernel."
+  }
+}

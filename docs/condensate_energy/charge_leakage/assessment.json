@@ -1,0 +1,208 @@
+{
+  "status": "qualified_scoped_charge_breaking_experiment",
+  "nonlinear_runs": 20,
+  "exact_embedding_checks": 8,
+  "preserved_failures": [
+    {
+      "name": "refinement-0.5",
+      "energy_error": 0.020090372910114174,
+      "charge_error": 0.043558615879899884,
+      "tolerance": 0.02,
+      "passed": false
+    },
+    {
+      "name": "continuum-solver-residual",
+      "passed": false
+    }
+  ],
+  "targeted_refinement_checks": [
+    {
+      "name": "energy_drift",
+      "maximum": 2.6965462767781116e-07,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "charge_balance_residual",
+      "maximum": 8.185452315956356e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy_flux_balance_residual",
+      "maximum": 6.311596862022917e-07,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "distant_tail",
+      "maximum": 1.7287991167184365e-122,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "space-0.025",
+      "errors": {
+        "energy": 0.004924483921030065,
+        "charge": 0.010717194667861975
+      },
+      "tolerance": 0.02,
+      "passed": true
+    },
+    {
+      "name": "time-0.00125",
+      "errors": {
+        "energy": 3.645299530430357e-05,
+        "charge": 8.310780421436448e-05
+      },
+      "tolerance": 0.02,
+      "passed": true
+    }
+  ],
+  "linear_response_checks": [
+    {
+      "name": "real-continuum-solver-residual",
+      "passed": true
+    },
+    {
+      "name": "independent-finite-difference-power",
+      "errors": [
+        0.023870289623360907,
+        0.005934261502591687,
+        0.0014814393063533604
+      ],
+      "passed": true
+    },
+    {
+      "name": "finite-difference-errors-decrease",
+      "passed": true
+    },
+    {
+      "name": "domain-enlargement",
+      "error": 4.2681658207754936e-10,
+      "passed": true
+    },
+    {
+      "name": "source-flux-identity",
+      "error": 7.875413777224325e-11,
+      "passed": true
+    }
+  ],
+  "finest_strong_case": {
+    "parameters": {
+      "name": "space-0.025",
+      "ratio": 0.5,
+      "dr": 0.025,
+      "dt": 0.00125,
+      "reference": "finer"
+    },
+    "initial_energy": 880.4386992192256,
+    "final_local_energy_fraction": 0.27128633729980367,
+    "final_total_charge_fraction": -0.17344720858895857,
+    "half_energy_exit": 133.2
+  },
+  "half_energy_exit_sequence": [
+    139.9,
+    134.8,
+    133.2
+  ],
+  "harmonic_comparison": {
+    "flux-0.001": {
+      "measured_mode_amplitudes_per_epsilon": [
+        0.003361178998868296,
+        7.031384875227112e-05,
+        0.0005810223389946603
+      ],
+      "predicted_mode_amplitudes_per_epsilon": [
+        0.0032436087473574175,
+        7.129954972953878e-05,
+        0.0005643615732373552
+      ],
+      "measured_over_predicted": [
+        1.036246742646339,
+        0.9861752145559581,
+        1.0295214389982892
+      ],
+      "mean_total_power_per_epsilon_squared": 2.8126967265995675,
+      "predicted_steady_power_per_epsilon_squared": 1.077996267128142,
+      "block_total_power_per_epsilon_squared": [
+        3.795977686184294,
+        2.9890073241239627,
+        2.397371122894677,
+        2.068430773195337
+      ],
+      "method": "Hann-weighted complex projection at fixed reference frequencies over t200\u2013400; no fitted frequencies"
+    },
+    "flux-0.01": {
+      "measured_mode_amplitudes_per_epsilon": [
+        0.0033863472779901878,
+        7.04936109882887e-05,
+        0.00058495568748599
+      ],
+      "predicted_mode_amplitudes_per_epsilon": [
+        0.0032436087473574175,
+        7.129954972953878e-05,
+        0.0005643615732373552
+      ],
+      "measured_over_predicted": [
+        1.0440060875865684,
+        0.9886964399591966,
+        1.0364909930534434
+      ],
+      "mean_total_power_per_epsilon_squared": 2.8279878233300866,
+      "predicted_steady_power_per_epsilon_squared": 1.077996267128142,
+      "block_total_power_per_epsilon_squared": [
+        3.8111291230343816,
+        3.0032255174512397,
+        2.4143089252518704,
+        2.083287727582855
+      ],
+      "method": "Hann-weighted complex projection at fixed reference frequencies over t200\u2013400; no fitted frequencies"
+    },
+    "flux-0.05": {
+      "measured_mode_amplitudes_per_epsilon": [
+        0.0035157112346428146,
+        7.152935314766843e-05,
+        0.000605015562714367
+      ],
+      "predicted_mode_amplitudes_per_epsilon": [
+        0.0032436087473574175,
+        7.129954972953878e-05,
+        0.0005643615732373552
+      ],
+      "measured_over_predicted": [
+        1.0838888128869058,
+        1.0032230696968125,
+        1.0720353606710105
+      ],
+      "mean_total_power_per_epsilon_squared": 3.029203956481536,
+      "predicted_steady_power_per_epsilon_squared": 1.077996267128142,
+      "block_total_power_per_epsilon_squared": [
+        4.087617144235052,
+        3.2028653068239636,
+        2.5996793108427987,
+        2.2266540640243284
+      ],
+      "method": "Hann-weighted complex projection at fixed reference frequencies over t200\u2013400; no fitted frequencies"
+    }
+  },
+  "steady_response": {
+    "power_per_epsilon_squared": 1.077996267128142,
+    "power_channels": {
+      "q_minus3": 0.9734141290323989,
+      "q_plus5": 0.001404122791896456,
+      "chi_4": 0.1031780153038466
+    },
+    "charge_flux_per_epsilon_squared": -0.4294550459374417,
+    "charge_source_per_epsilon_squared": -1.8574761092202454,
+    "source_flux_identity_relative": 7.875413777224325e-11
+  },
+  "initial_E_over_P_coefficient": 777.5194793597713,
+  "limitations": [
+    "dimensionless selected classical action, not fixed by ACS",
+    "no universal physical half-life",
+    "steady harmonic power does not equal full transient flux",
+    "unrestricted gauge/scalar perturbations and quantum emission remain untested",
+    "gauge-compatible ansatz uses a different vacuum and field orientation from the neutral Delta identification"
+  ]
+}

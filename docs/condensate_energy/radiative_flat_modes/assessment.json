@@ -1,0 +1,28 @@
+{
+  "status": "Conditional one-loop flat-direction stage complete; broader ACS goal remains active",
+  "checks_passed": 178,
+  "search_attempts": 768,
+  "abnormal_search_stops": 47,
+  "independent_retries": 47,
+  "established": [
+    "Exact gauge spectra on the two diagnostic orbits",
+    "Scalar symmetry and stationary-orbit invariance",
+    "Analytic finite one-loop curvatures for all fourteen physical tree-flat modes",
+    "Exact one-loop cancellation of renormalization-scale dependence at fixed matching boundary",
+    "Full tree-minimum family parameterization and component-verified mass spectra",
+    "Explicit locally positive but lower competing configuration at the stated three-family boundary"
+  ],
+  "numerical_evidence": [
+    "Multistart candidate minima across all four color support caps",
+    "Independent Powell qualification of all abnormal L-BFGS-B stops"
+  ],
+  "not_established": [
+    "A uniquely selected ACS boundary, scale or vacuum",
+    "A rigorous global-minimum certificate from numerical searches",
+    "Full one-loop light-doublet matching, pole masses, tunneling lifetimes or higher-loop robustness"
+  ],
+  "next_calculable_work": [
+    "Finite one-loop matching on stable full-basis potentials with a declared light doublet",
+    "Continue targeted action/kinetic-source recovery and complete the derivability/underdetermination audit"
+  ]
+}

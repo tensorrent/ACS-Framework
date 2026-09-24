@@ -1,0 +1,270 @@
+{
+  "status": "partial source coverage; full goal remains active",
+  "inventory_roots": [
+    "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted",
+    "/Volumes/Seagate 4tb/acs_extracted",
+    "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras",
+    "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a"
+  ],
+  "filename_filter": "higgs|vacuum|yukawa|neutrino|lagrang|selection|theta0|normaliz|parameter|koide|tanbeta",
+  "files": [
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/electroweak_vacuum_selection.py",
+      "bytes": 7585,
+      "sha256": "284bfeb0c4d0ea0f3580b6266aa197338c7f730d1c438b82eec57791203a9a30",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/higgs_from_acs.py",
+      "bytes": 19546,
+      "sha256": "d03c877defa00efc01bede9e6df8167edd0e74b4e86ec0d6b27e981c0129db3e",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/koide_from_vev.py",
+      "bytes": 17308,
+      "sha256": "5fc937e4c27b1b14e25c775df47c64aaf5926037a39bcd0d8377dd32695ef836",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_geometric_seesaw.py",
+      "bytes": 16141,
+      "sha256": "901b3c681e6c904f5cee778ce11117cfdaae0073812f9acb845506b8ebc9fa65",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/neutrino_mass_derivation.py",
+      "bytes": 9516,
+      "sha256": "578fa27b1f2abc6b003b0bf7aae39c88f14120328f50f43f8b1a1beed7f7aa8f",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/quark_koide_gut.py",
+      "bytes": 12549,
+      "sha256": "665398e6727bcafcae5da031664e012d984a304a16780d60f80baf858f982806",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Volumes/Seagate 4tb/acs_dimensional_projection_extracted/vacuum_theta0.py",
+      "bytes": 14794,
+      "sha256": "94a5f46aa79a836e7c71755009d115e29da4460f9cd83c5a919bb8764396fce1",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_higgs_wall.py",
+      "bytes": 3550,
+      "sha256": "ddccf4e7a7c91723105c8f116bdc76c3124be0c25b86440262cf20c193d2398c",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/acs_vacuum.py",
+      "bytes": 15407,
+      "sha256": "6290ef93e158976420d08f7c9f1aaf5819809836ce44648fef72b0093dfd318b",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_derivation.py",
+      "bytes": 12576,
+      "sha256": "695b0cda7430a402d3a67679978686e09e6b60ad1c6fbf291257fd561900235f",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_mass_ratio.py",
+      "bytes": 16023,
+      "sha256": "d7cdf5e658c8686500eb99ed6b6e749c9a699b3132efc0ad4130f7c1058363a3",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/higgs_potential.py",
+      "bytes": 16065,
+      "sha256": "6fdfd08df0ab47a5c0de44247d6a6fb74f773da0d794b0aa966d627a81091015",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_clebsch_gordan.py",
+      "bytes": 13464,
+      "sha256": "e612c8095adc1f883296b4012017535512ff2d5189903f8dafd009fabc1186f8",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/koide_rg_flow.py",
+      "bytes": 17754,
+      "sha256": "8e4e662d1dcbef5908b81f9d712aea4b18c1b7d82dbd7acb2113d62dfb44527e",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_exact.py",
+      "bytes": 16291,
+      "sha256": "03eb9eeafe1b5b0dfc3e965900e368a14607abd0b6294b56c39ff542b06a78bd",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_honest.py",
+      "bytes": 4914,
+      "sha256": "fe1f7ad9e49379a2b218e23d8f20b940262e3b240093aff1dce9665c8940501c",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw.py",
+      "bytes": 13030,
+      "sha256": "8ad18c7a07e965b70d0584069966700036fef05e63d7c4b0eafe9abc7edfd9c3",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/neutrino_seesaw_v2.py",
+      "bytes": 8679,
+      "sha256": "72bb4a70505f3c309807f7171a2e6d9c069fbfb26c40fa9582438ac163a9e634",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase50_vacuum.py",
+      "bytes": 3978,
+      "sha256": "6b11a290e38be834f9369af4824999db398c3e1ca5ec712c69c30adf47daa0eb",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase51_tanbeta.py",
+      "bytes": 13558,
+      "sha256": "99f5b7b86996c6ed3ddbf7c8e3e21314e91ae00496a7b182e9c4a18a9499004d",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase52_yukawa.py",
+      "bytes": 12938,
+      "sha256": "435190b8864551ef76a67df6c81ef53056561640d5f97ff0b365a27fcfbdb4bd",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/phase7_qfp_yukawa.py",
+      "bytes": 12638,
+      "sha256": "1e6b31b9db5460611ac6f21c35507139b25d94c530a358fa593489c11abc8549",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/ps_yukawa_full.py",
+      "bytes": 19458,
+      "sha256": "f6921bc2f7621da39f676ce59b9da52661489fe29cefc82fcc217bf61dcbb918",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/quark_koide_gut.py",
+      "bytes": 12708,
+      "sha256": "b4d186ebfa4e9ae017eb584db4b3a182e0da166bae00f43b5cb90e8d7e94c04b",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_full.py",
+      "bytes": 10186,
+      "sha256": "614c2372305188f32c3bc7b741fe564c5631e36b83e1eaf2455cf0a09df6fccf",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/selection_principle.py",
+      "bytes": 10007,
+      "sha256": "15938b79184c388286c46c0cd96b95c18a732649526da08b6eae8253507c7d28",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task2_lagrangian.py",
+      "bytes": 12539,
+      "sha256": "71b2c11dc8c1c921394b3c5e18b07ba2d7ac915581a702453fc79859dbc53da7",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_A_parameters.py",
+      "bytes": 12602,
+      "sha256": "4952747c729ec3439617a70a90f43861f369009f1ccc60668fb2d6850d2e518d",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/task_D_lagrangian.py",
+      "bytes": 13918,
+      "sha256": "3ef5945ec563542c10db7e80a52a8a314d9f4bf8ea567fbbd6a5dbd85810a0c0",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_cabibbo.py",
+      "bytes": 12877,
+      "sha256": "f44dcd49db9f194bf51362c005704b3443c554dfeb6ee4a68157578de0f246a0",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/theta0_derivation_suite.py",
+      "bytes": 13029,
+      "sha256": "4f7fc9af7bd5eafe43cefcd104ac3364ea276c39254294254053463036929d6d",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/torsion_higgs_vacuum.py",
+      "bytes": 14999,
+      "sha256": "f11fa20c9b5a8923e0ba77e661dd03c571fff95b3ac00ed5e12c316b700cb158",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/extras/vacuum_theta0.py",
+      "bytes": 16215,
+      "sha256": "5bf683ecf153e79cdd7e5b936af702281f909dc8e630ccb971fb24210370b157",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_parameters.py",
+      "bytes": 4558,
+      "sha256": "1c6bf9966e56eed3df7e368a69b569922de36d1d17c2016e2c62cbaa483bc245",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/branch_a_vacuum.py",
+      "bytes": 6300,
+      "sha256": "42867937b38e4d7dfa27db229cb58a30c6e2862482e21aa59c8eac4945d48b5f",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    },
+    {
+      "path": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/code/acs_codebase/src/paper_a/yukawa_no_go.py",
+      "bytes": 4732,
+      "sha256": "77b2cabc645e19613b205ea9b1ac5ebb5235385472cc791985a7c9d0d8167233",
+      "content_audit_status": "inventory only; consult dated evidence for tested claims"
+    }
+  ],
+  "unique_file_hashes": 36,
+  "errors": [],
+  "claude_project_export": {
+    "path": "/Volumes/Seagate 4tb/Claude data dump -8-29-25/projects.json",
+    "sha256": "4a2644e3cbfe3c7e1ac03549a3265bff22ff8a02ee1b94fae4d9c3c09df2a425",
+    "project_count": 2,
+    "documents": 52,
+    "unique_content_hashes": 48,
+    "nonempty_contents": 52,
+    "characters": 1259321,
+    "keyword_document_counts": {
+      "klein": 0,
+      "condensat": 0,
+      "GQRE": 0,
+      "cutoff": 0,
+      "fine.structure": 1,
+      "Palatini": 0,
+      "quartic": 0,
+      "Pati.Salam": 0
+    },
+    "audited_selections": "Two research documents snapshotted with export-provenance.json; other docs only schema/content screening, not full mathematical review"
+  },
+  "claude_imported_conversations": {
+    "root": "/Volumes/Seagate 4tb/claude_imported_data/conversations",
+    "json_files": 69,
+    "records_with_messages_field": 68,
+    "message_total": 0,
+    "other_json_files": 1,
+    "limitation": "The failed importer is not a substitute for the original chats"
+  },
+  "live_claude": {
+    "recovered_attachment": "gfe-cutoff-attachment.txt",
+    "lines": 195,
+    "conversation": "Asymmetric codependent systems and free parameters",
+    "scope": "One full attachment recovered. No claim that every chat/project attachment has been read."
+  },
+  "remaining": [
+    "Reconcile this inventory with previous detailed audits before treating any source family as exhausted.",
+    "Inspect source routes that could actually supply kinetic/action normalization, a vacuum selector or an independent physical scale; prioritize duplicate-free action derivations.",
+    "Complete the original-scope audit, including the relation of the full scalar action and protected sectors to the claimed microscopic condensate carrier.",
+    "General mixed-quartic/complex-flavor matching is not completed by the restricted finite-matching branch; first identify whether a surviving source action requires it."
+  ]
+}

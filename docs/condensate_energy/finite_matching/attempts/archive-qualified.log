@@ -1,0 +1,25 @@
+recovered-source-hashes PASS
+electroweak_vacuum_selection.py-source-replay-completes PASS
+neutrino_honest.py-source-replay-completes PASS
+source-effective-matrix-is-exactly-skew-symmetric PASS
+exact-characteristic-has-two-zero-modes PASS
+correct-Hermitian-conversion-has-paired-nonzero-spectrum PASS
+source-fourth-direction-is-inactive PASS
+exact-transcription-matches-recovered-generators PASS
+correct-spectral-instruments-agree-phi-0.0 PASS
+at-most-two-nonzero-magnitudes-phi-0.0 PASS
+correct-spectral-instruments-agree-phi-0.5 PASS
+at-most-two-nonzero-magnitudes-phi-0.5 PASS
+correct-spectral-instruments-agree-phi-1.1 PASS
+at-most-two-nonzero-magnitudes-phi-1.1 PASS
+correct-spectral-instruments-agree-phi-1.2 PASS
+at-most-two-nonzero-magnitudes-phi-1.2 PASS
+correct-spectral-instruments-agree-phi-1.3 PASS
+at-most-two-nonzero-magnitudes-phi-1.3 PASS
+correct-spectral-instruments-agree-phi-2.0 PASS
+at-most-two-nonzero-magnitudes-phi-2.0 PASS
+claimed-third-magnitude-is-an-eigensolver-artifact PASS
+archived-neutrino-MeV-literal-has-factor-1000-error PASS
+two-archived-Majorana-calculations-differ-by-factor-1000 PASS
+Majorana-value-is-inferred-from-input-neutrino-target PASS
+{"checks_passed": 24, "checks_total": 24}

@@ -1,0 +1,66 @@
+{
+  "scope": "Supplement replaces failed D20 versus D40 boundary qualification only",
+  "source_sha256": {
+    "code/condensate_energy/bound_domain_check.py": "9e03c64f4faf28c80e204869da7b24dcd268c99528924f407c2f45ea355504a0",
+    "docs/condensate_energy/capture_stability/domain-amendment.md": "c92bb5b7572bc882ac2b1dbd20c04c26aafb8d8faba14abeadaefe15f1a4228a"
+  },
+  "omega": [
+    0.6964755285194697,
+    1.3803616074940754,
+    1.989330373550987
+  ],
+  "eigenvalues": [
+    0.4850781618264747,
+    1.905398167443628,
+    3.9574353351325096
+  ],
+  "finite_grid_eigenvalues": {
+    "D40-dx0.1": [
+      0.48540376621648995,
+      1.9042843092865067,
+      3.9516704018790243
+    ],
+    "D40-dx0.05": [
+      0.4851601059773961,
+      1.9051203957002043,
+      3.9560117664989844
+    ],
+    "D60-dx0.1": [
+      0.48540376621648396,
+      1.9042843092865382,
+      3.951670388301375
+    ],
+    "D60-dx0.05": [
+      0.48516010597748527,
+      1.9051203957003722,
+      3.956011740332367
+    ]
+  },
+  "decay_rates": [
+    1.874812480802687,
+    1.4472739314160163,
+    0.20631205700949823
+  ],
+  "checks": [
+    {
+      "name": "analytic bound-mode matching",
+      "passed": true,
+      "residual": 2.7255975254547593e-14
+    },
+    {
+      "name": "expanded-domain bound-mode spatial convergence",
+      "passed": true,
+      "coarse_error": 0.005764946831134488,
+      "fine_error": 0.0014235948001424248
+    },
+    {
+      "name": "expanded-domain bound-mode remote wall independence",
+      "passed": true,
+      "domain_errors": [
+        1.3577649227158872e-08,
+        2.6166617317358032e-08
+      ]
+    }
+  ],
+  "all_checks_passed": true
+}

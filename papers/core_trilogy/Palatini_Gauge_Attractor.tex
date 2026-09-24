@@ -3,7 +3,7 @@
 \documentclass[11pt,a4paper]{article}
 
 %% ═══════════════════════════════════════════════════════════════════════════
-%% VISUAL STYLE — presentation-grade typography for ACS Trilogy
+%% VISUAL STYLE --- presentation-grade typography for ACS Trilogy
 %% ═══════════════════════════════════════════════════════════════════════════
 
 %% ── Core packages ──────────────────────────────────────────────────────────
@@ -27,7 +27,7 @@
 \usepackage{placeins}
 \usepackage{etoolbox}
 
-%% ── Color palette — refined indigo/gold ────────────────────────────────────
+%% ── Color palette --- refined indigo/gold ────────────────────────────────────
 \definecolor{acsprimary}{HTML}{1a237e}
 \definecolor{acssecondary}{HTML}{3949ab}
 \definecolor{acsaccent}{HTML}{c62828}
@@ -42,7 +42,7 @@
 \usepackage{hyperref}
 \usepackage{bookmark}
 
-%% ── Color palette — refined indigo/gold ────────────────────────────────────
+%% ── Color palette --- refined indigo/gold ────────────────────────────────────
 \definecolor{ACSPRIMARYOLD}{HTML}{1a237e}  % placeholder, not used
 
 %% ── Generous but not wasteful margins ──────────────────────────────────────
@@ -159,10 +159,13 @@
 
 \date{March 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 %% ═══════════════════════════════════════════════════════════════════════════
-%% COVER PAGE — title + abstract unified, vertically centered
+%% COVER PAGE --- title + abstract unified, vertically centered
 %% ═══════════════════════════════════════════════════════════════════════════
 \begin{titlepage}
 \thispagestyle{empty}
@@ -175,7 +178,7 @@
 
 \vfill
 
-% Title block — centered
+% Title block --- centered
 \begin{center}
   {\Huge\bfseries\color{acsprimary} Colour from Gravity}\\[0.4em]
   {\Large\color{acsslate} SU(3) as a Closure Attractor in the Palatini Bracket}\\[1.2em]
@@ -184,10 +187,15 @@
   {\large\bfseries Bradley Wallace}\\[0.25em]
   {\small\itshape\color{acsslate} Independent Researcher}
 \end{center}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.4in}
 
-% Abstract — centered on the page
+% Abstract --- centered on the page
 \begin{center}
 \begin{minipage}{0.88\textwidth}
 \begin{center}
@@ -686,13 +694,13 @@ $X,Y \subset \mathbb{Z}_{16}$ with deterministic update rules:
   Y_{t+1} &= g(Y_t, X_t) \mod 16,
 \end{align}
 where $f$ and $g$ are chosen to be either the polynomial $x^2$ or the
-absolute‑value function $|x-8|$.  Transfer entropies are computed exactly
+absolute-value function $|x-8|$.  Transfer entropies are computed exactly
 from the empirical distributions (no binning, no floating point).
 
 Results (coupling strength implicitly fixed by the deterministic map):
 
 \begin{center}
-\begin{tabular}{lcc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcc}
 \toprule
 Configuration & $\Delta I = \TE(X{\to}Y)-\TE(Y{\to}X)$ & Direction \\
 \midrule
@@ -701,7 +709,7 @@ Symmetric ($f=g=x^2$)               & $-0.000063$ & $\approx 0$ \\
 Asymmetric ($f=x^2$, $g=|y-8|$)    & $-1.499$    & Function $\to$ Form \\
 Swapped ($f=|x-8|$, $g=y^2$)       & $+1.499$    & Form $\to$ Function \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 The sign reversal is exact: swapping which function is the polynomial flips
@@ -825,11 +833,12 @@ to be postulated in advance:
     (\cite{BKR1955}).  This route requires no
     modification of the gravitational action.
   \item \textbf{Poincar\'{e} gauge gravity (PGT)}: augmenting the Palatini action
-    with the parity-preserving quadratic torsion kinetic term
+    with the parity-preserving quadratic torsion term
     $\beta\,T^a\wedge{*T_a}$ (\cite{Kibble1961,Sciama1964,Hehl1976})
-    yields a propagating torsion field as a purely geometric degree of freedom.
-    The ACS framework is compatible with PGT; the Palatini case ($\beta=0$)
-    is the degenerate ACS limit.
+    changes the algebraic contortion equation. It does not, in this smooth
+    metric-compatible action, supply a propagating torsion mode. A dynamical
+    torsion extension requires additional terms and a separate mode analysis.
+    The earlier description of this term as kinetic is withdrawn.
 \end{enumerate}
 Case (b) establishes that torsion can precede any spinor field; the
 chiral zero-modes indicated by the torsion-lattice computation
@@ -969,7 +978,7 @@ Let $\mathrm{Sym}_0(4)$ denote the space of traceless symmetric $4\times 4$ matr
 dimension $9$) and $\mathfrak{o}(4)$ the antisymmetric matrices (the Lorentz sector, dimension $6$). Then:
 \begin{enumerate}[label=(\roman*)]
   \item $[\mathfrak{o}(4),\mathfrak{o}(4)] = \mathfrak{o}(4)$ (dimension $6$: connection self-bracket = curvature).
-  \item $[\mathrm{Sym}_0(4),\mathfrak{o}(4)]$ spans a $9$-dimensional subspace of $\mathfrak{sl}(4)$ (metric–connection bracket = torsion sector).
+  \item $[\mathrm{Sym}_0(4),\mathfrak{o}(4)]$ spans a $9$-dimensional subspace of $\mathfrak{sl}(4)$ (metric--connection bracket = torsion sector).
   \item $[\mathfrak{gl}(4),\mathfrak{o}(4)] = \mathfrak{sl}(4)$ (combined: $6+9=15$, all of $\mathfrak{sl}(4)$).
   \item The split real form $\mathfrak{sl}(3,\mathbb{R})$ (dimension $8$)
     embeds in $\mathfrak{sl}(4,\mathbb{R})$, distributed across both sectors:
@@ -1034,7 +1043,7 @@ The bracket operation generates \emph{all} of $\mathfrak{sl}(4)$;
 additional structure (vacuum selection, symmetry breaking) is required 
 to reduce to the SM gauge group.  However, the appearance of $\mathfrak{sl}(3,\mathbb{R})$
 as a subalgebra shows that the algebraic skeleton of colour is already present in the
-real geometry, waiting only for the complex structure provided by the torsion‑induced
+real geometry, waiting only for the complex structure provided by the torsion-induced
 spinor bundle.
 \end{corollary}
 
@@ -1182,7 +1191,7 @@ $H_2 = \mathrm{diag}(0,1,-1,0)$ sit in the torsion sector
 Their eigenvalues on the fundamental $\mathbf{3}$ representation
 define the three colour charges:
 \begin{center}
-\begin{tabular}{lrrl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lrrl}
 \toprule
 State & $h_1$ & $h_2$ & Colour \\
 \midrule
@@ -1191,7 +1200,7 @@ $|1\rangle$ & $-1$ & $+1$ & Blue \\
 $|2\rangle$ & $0$ & $-1$ & Green \\
 $|3\rangle$ & $0$ & $0$ & White (colourless/lepton) \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 The three colour weights form a triangle in $(h_1, h_2)$-space.
 The colour quantum numbers are \emph{geometric}: they measure
@@ -1235,19 +1244,15 @@ torsion--Lorentz pairs.
 A physical gluon exchange requires both sectors simultaneously.
 \end{remark}
 
-\begin{remark}[Confinement as ACS attractor]
-The colour singlet $|\psi\rangle = (|R\rangle + |B\rangle + |G\rangle)/\sqrt{3}$
-has $\langle H_1\rangle = \langle H_2 \rangle = 0$: zero eigenvalue
-under both Cartan generators, zero information asymmetry in both
-torsion directions.
-In ACS language, confinement is the statement that the only
-long-distance-observable states are at the attractor $\DI = 0$
-in the colour sector.
-The QCD vacuum screens unconfined colour charge ($\DI \neq 0$)
-by creating quark--antiquark pairs until a colour singlet
-($\DI = 0$) is formed.  This is the constraint--attractor
-cycle of the companion paper~\cite{Wallace2026c}: the colour-charged state
-is the constraint; the singlet is the attractor.
+\begin{remark}[Color balance is not a singlet: corrected 24 September 2026]
+The vector $|\psi\rangle=(|R\rangle+|B\rangle+|G\rangle)/\sqrt3$
+belongs to the fundamental triplet. Its Cartan expectations vanish, but
+it is not annihilated by the generators. With $T_a=\lambda_a/2$, its
+quadratic Casimir is $4/3$, and the sum of the two Cartan variances is
+$1/3$. A vanishing expectation is not a zero eigenvalue or a singlet.
+Actual singlets require the appropriate tensor-product state space,
+such as $3\otimes\overline3$ or the antisymmetric sector of $3^{\otimes3}$.
+The earlier inference of confinement from this balanced vector is withdrawn.
 \end{remark}
 
 \begin{figure}[!htbp]
@@ -1464,7 +1469,7 @@ $\mathrm{SU}(2)_R \to \mathrm{U}(1)_Y$ via $Y = T_{3R} + (B{-}L)/2$,
 one obtains \emph{one full Standard Model generation} with correct
 quantum numbers:
 \begin{center}
-\begin{tabular}{lccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lccccc}
 \toprule
 Fermion & $\mathrm{SU}(3)$ & $\mathrm{SU}(2)_L$ & $Y$ & $Q$ & Match \\
 \midrule
@@ -1475,7 +1480,7 @@ $d_R$ & $\mathbf{3}$ & $\mathbf{1}$ & $-1/3$ & $-1/3$ & $\checkmark$ \\
 $\nu_R$ & $\mathbf{1}$ & $\mathbf{1}$ & $0$ & $0$ & $\checkmark$ \\
 $e_R$ & $\mathbf{1}$ & $\mathbf{1}$ & $-1$ & $-1$ & $\checkmark$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 All 8~electric charges and all 8~hypercharges match the SM exactly
 (verified: \texttt{fermion\_reps.py}).  The structure naturally includes
@@ -1912,7 +1917,7 @@ candidates searched for in X-ray observations.
 
 Three of the four suppression factors are derived from the ACS:
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Mechanism & Factor & Running total \\
 \midrule
@@ -1921,10 +1926,10 @@ Extra BCH order (proved) & $\times\,\varepsilon = m_e/m_\tau$ & 147~eV \\
 B--L colour-singlet trace & $\times\,1/3$ & 49~eV \\
 Majorana see-saw (prediction) & $\times\,m_D/M_R$ & 0.049~eV \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 The fourth factor ($M_R \sim 49$~keV) is a falsifiable prediction.
-(Verified: \texttt{neutrino\_seesaw\_v2.py}, \texttt{neutrino\_honest.py}.)
+(Verified: \nolinkurl{neutrino_seesaw_v2.py}, \nolinkurl{neutrino_honest.py}.)
 
 \subsection{Quark Koide and QCD corrections}
 
@@ -2141,7 +2146,7 @@ simultaneously, because all three rely on the same
 Higgs sector (Branch~B with $\Sigma \sim (15,1,1)$) would reopen
 all three exclusions but at the cost of an additional parameter.
 The independence is mathematical, not architectural.
-(Verified: \texttt{src/paper\_a/branch\_a\_vacuum.py},
+(Verified: \nolinkurl{src/paper_a/branch_a_vacuum.py},
 \texttt{betac\_tan\_beta.py}, \texttt{yukawa\_no\_go.py}.)
 
 \paragraph{Branch A parameter ledger.}
@@ -2153,7 +2158,7 @@ approximately $3.2\times$.
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}lll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lll@{}}
 \toprule
 Quantity & Value/range & Source \\
 \midrule
@@ -2172,7 +2177,7 @@ $v$, $v_R$ & calibrations & calibrations \\
 \midrule
 \textbf{Total inputs} & \textbf{6} (= 4 free + 2 calib.) & \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Branch~A parameter ledger after Phases 50/51/52.  Five
 quantities are locked by the bracket algebra; two are forbidden or
 excluded by consistency filters; three remain free at tree level
@@ -2311,7 +2316,7 @@ A detailed comparison is given in Paper~C~\cite{Wallace2026c}.
 \label{sec:pdg-comparison}
 
 \begin{center}
-\begin{tabular}{lcccrl}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccrl}
 \toprule
 Observable & ACS & PDG & $\sigma_{\mathrm{PDG}}$ & Pull & Mechanism \\
 \midrule
@@ -2327,7 +2332,7 @@ $m_\nu M_R$ (eV$^2$)         & 2400      & 2401       & 50       & 0.0$\sigma$ &
 $\gamma_{\mathrm{BI}}$       & 0.274     & 0.274$^{\dagger}$ & 0.003 & --- & TE balance \\
 $\theta_{\mathrm{QCD}}$      & 0         & $<10^{-10}\,^{\ddagger}$ & --- & consistent & real $\mathfrak{sl}(4)$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent
@@ -2358,7 +2363,7 @@ PDG observables; they are not, and the corrected count is stated above.
 
 These limitations span the trilogy's shared verification suite; the
 Riemann-zero and Wronskian items pertain to the spectral analysis of
-Paper~B~\cite{Wallace2026b} and are recorded in its reproducibility notes
+Paper~B~\cite{WallaceB} and are recorded in its reproducibility notes
 as well.  The suite uses 100 Riemann zeros (Odlyzko tables) and
 50{,}000 random subspaces (Grassmannian sampling).  Extension to
 $10{,}000$ zeros or $10^6$ subspaces would strengthen confidence bounds
@@ -2484,7 +2489,7 @@ not contribute to $\theta$.  No axion is required.
 
 \medskip
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Computation & Result & Status \\
 \midrule
@@ -2497,7 +2502,7 @@ PMNS $\theta_{12}$ & $\arctan(1/\!\sqrt{2}) - \sqrt{m_e/m_\mu}/\!\sqrt{2} = 32.4
 PMNS $\theta_{13}$ & $\arcsin(\lambda_W/\!\sqrt{2}) = 9.2^\circ$ vs $8.6^\circ$ & Derived (0.65$^\circ$) \\
 49~keV $\nu_s$ abundance & DW overproduces by $\sim 10^5$ & Requires subdominant DM \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \subsection*{Weinberg angle}
@@ -2665,9 +2670,9 @@ and the three physically-named sectors --- unbroken, electroweak, colour-lepton
 real statement about the electroweak-adapted generators, not a third eigenvalue;
 it is reported as such in the Predictions section, where it governs the
 GW-matter coupling hierarchy.  Both readings are verified in exact rational
-arithmetic by \texttt{scripts/generate\_paper\_figures.py} (function
+arithmetic by \nolinkurl{scripts/generate_paper_figures.py} (function
 \texttt{torsion\_couplings}) and by
-\texttt{code/acs\_codebase/extras/torsion\_hierarchy.py}.
+\nolinkurl{code/acs_codebase/extras/torsion_hierarchy.py}.
 
 \medskip
 \noindent
@@ -2961,6 +2966,19 @@ $(v_R/M_{\mathrm{Pl}})^2 \lesssim 10^{-6}$, below the sensitivity of
 current and near-future detectors.  This prediction requires
 3rd-generation instruments (Einstein Telescope, Cosmic Explorer, $\sim$2035+)
 and is currently untestable in practice.
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The algebraic closure calculations do not establish a unique microscopic dynamics. For the stated smooth, metric-compatible Palatini action, writing the connection as its Levi--Civita part plus contortion leaves the added torsion-squared term algebraic in contortion. It supplies no independent contortion wave operator. Also, a balanced vector in the fundamental color triplet is not a singlet: vanishing Cartan expectations do not imply that the generators annihilate the state. These two inferences are withdrawn. The complete scalar action and physical vacuum still require coefficients, kinetic normalization and a selection rule.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{99}
 

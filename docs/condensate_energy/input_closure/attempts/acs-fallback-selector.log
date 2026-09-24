@@ -1,0 +1,75 @@
+{
+  "checks_total": 8,
+  "checks_passed": 8,
+  "checks": [
+    {
+      "name": "exact pair ratio bound expression",
+      "passed": true
+    },
+    {
+      "name": "upper pair bound for b squared in [0,1]",
+      "passed": true
+    },
+    {
+      "name": "both comparison lepton amplitude gaps exceed source pair bound",
+      "passed": true,
+      "evidence": {
+        "comparison_adjacent_ratios": [
+          14.379439592267344,
+          4.100857146064245
+        ],
+        "source_uniform_bound": 2.8284271247461903
+      }
+    },
+    {
+      "name": "finite grid independently checks uniform adjacent-ratio obstruction",
+      "passed": true,
+      "evidence": {
+        "samples": 2001,
+        "largest_minimum_gap_sample": 2.0149410396882823
+      }
+    },
+    {
+      "name": "zero b has two zero amplitudes",
+      "passed": true
+    },
+    {
+      "name": "one source-family Koide root exists",
+      "passed": true
+    },
+    {
+      "name": "Koide root does not match the two comparison ratios",
+      "passed": true
+    },
+    {
+      "name": "70-digit root confirms numerical root",
+      "passed": true
+    }
+  ],
+  "exact_amplitudes": [
+    "1",
+    "2*b",
+    "4*b*sqrt(b**2 + 1)"
+  ],
+  "comparison_masses_MeV": [
+    0.51099895,
+    105.6583755,
+    1776.86
+  ],
+  "comparison_adjacent_amplitude_ratios": [
+    14.379439592267344,
+    4.100857146064245
+  ],
+  "uniform_minimum_gap_upper_bound": 2.8284271247461903,
+  "koide_root": "0.04081124037203696910580234851046320228850357451142629576850111663147423",
+  "koide_root_adjacent_ratios": [
+    2.001664864397339,
+    6.120668295424783
+  ],
+  "status": "Normalized source fallback is nonzero but cannot yield the charged-lepton hierarchy under its stated mass~y^2 rule.",
+  "limits": [
+    "The chosen TT field family and fallback momentum projector are fixed source inputs.",
+    "Other field families or an independent relative field scale are different hypotheses.",
+    "This is not a no-go theorem for all ACS flavor models."
+  ]
+}

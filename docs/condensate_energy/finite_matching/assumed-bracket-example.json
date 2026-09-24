@@ -1,0 +1,202 @@
+{
+  "parameters": {
+    "lambda0": 0.12830005981991682,
+    "delta": [
+      0.6,
+      0.5,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "portal": 0.2,
+    "d": 1.0,
+    "second_doublet_mass2": 0.7,
+    "gauges": [
+      0.3,
+      0.25,
+      0.35
+    ],
+    "majorana": [
+      0.2,
+      0.3,
+      0.4
+    ],
+    "dirac": [
+      0.07,
+      0.11,
+      0.16
+    ],
+    "mu": 1.0
+  },
+  "threshold": {
+    "rows": [
+      {
+        "label": "bar6_minus",
+        "sector": "scalar",
+        "multiplicity": 12,
+        "M2": 0.1333333333333333,
+        "a": -0.01333333333333333,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 0.0004072980568109355,
+        "potential_quartic_threshold": -2.7220314528781845e-05
+      },
+      {
+        "label": "bar6_zero",
+        "sector": "scalar",
+        "multiplicity": 12,
+        "M2": 0.16666666666666663,
+        "a": -0.016666666666666663,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 0.0005893007788893565,
+        "potential_quartic_threshold": -3.782149796344862e-05
+      },
+      {
+        "label": "bar6_plus",
+        "sector": "scalar",
+        "multiplicity": 12,
+        "M2": 0.18888888888888883,
+        "a": -0.018888888888888886,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 0.0007229888811620413,
+        "potential_quartic_threshold": -4.5186089900800804e-05
+      },
+      {
+        "label": "bar3_zero",
+        "sector": "scalar",
+        "multiplicity": 6,
+        "M2": 0.09999999999999998,
+        "a": -0.009999999999999998,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 0.00012548318651313628,
+        "potential_quartic_threshold": -8.748774264725965e-06
+      },
+      {
+        "label": "bar3_plus",
+        "sector": "scalar",
+        "multiplicity": 6,
+        "M2": 0.16666666666666666,
+        "a": -0.016666666666666666,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 0.0002946503894446783,
+        "potential_quartic_threshold": -1.8910748981724315e-05
+      },
+      {
+        "label": "singlet_plus",
+        "sector": "scalar",
+        "multiplicity": 2,
+        "M2": 0.1333333333333333,
+        "a": -0.01333333333333333,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": 6.788300946848924e-05,
+        "potential_quartic_threshold": -4.5367190881303075e-06
+      },
+      {
+        "label": "radial_mixed",
+        "sector": "scalar",
+        "multiplicity": 1,
+        "M2": 2.0,
+        "a": -0.16,
+        "b": 0.00649800358919501,
+        "constant": 1.5,
+        "mass_threshold": 0.000621813817393098,
+        "potential_quartic_threshold": 6.186193322090009e-05
+      },
+      {
+        "label": "second_doublet",
+        "sector": "scalar",
+        "multiplicity": 4,
+        "M2": 0.7,
+        "a": 0.10830005981991682,
+        "b": 0.0,
+        "constant": 1.5,
+        "mass_threshold": -0.0026052104048357523,
+        "potential_quartic_threshold": -0.00010596690694583958
+      },
+      {
+        "label": "color_vectors",
+        "sector": "vector",
+        "multiplicity": 18,
+        "M2": 0.09,
+        "a": -0.009,
+        "b": 0.0,
+        "constant": 0.8333333333333334,
+        "mass_threshold": 0.000253099347691008,
+        "potential_quartic_threshold": -1.6077041909692773e-05
+      },
+      {
+        "label": "right_vectors",
+        "sector": "vector",
+        "multiplicity": 6,
+        "M2": 0.12249999999999998,
+        "a": 0.018374999999999996,
+        "b": 0.00390625,
+        "constant": 0.8333333333333334,
+        "mass_threshold": -0.0002080813065360686,
+        "potential_quartic_threshold": -0.00010685333382151451
+      },
+      {
+        "label": "neutral_vector",
+        "sector": "vector",
+        "multiplicity": 3,
+        "M2": 0.515,
+        "a": -0.03693082524271846,
+        "b": 0.0008962397658564307,
+        "constant": 0.8333333333333334,
+        "mass_threshold": 0.0003602125356739237,
+        "potential_quartic_threshold": -1.7403563697541928e-05
+      },
+      {
+        "label": "Majorana_0",
+        "sector": "fermion",
+        "multiplicity": -2,
+        "M2": 0.08000000000000002,
+        "a": -0.003100000000000001,
+        "b": -7.503125000000001e-05,
+        "constant": 1.5,
+        "mass_threshold": -1.1074160982733233e-05,
+        "potential_quartic_threshold": -2.2865810230860857e-07
+      },
+      {
+        "label": "Majorana_1",
+        "sector": "fermion",
+        "multiplicity": -2,
+        "M2": 0.18,
+        "a": -0.005899999999999999,
+        "b": -0.00020334722222222222,
+        "constant": 1.5,
+        "mass_threshold": -3.651508983373489e-05,
+        "potential_quartic_threshold": -1.7610215161111532e-06
+      },
+      {
+        "label": "Majorana_2",
+        "sector": "fermion",
+        "multiplicity": -2,
+        "M2": 0.32000000000000006,
+        "a": -0.006400000000000006,
+        "b": -0.0005119999999999999,
+        "constant": 1.5,
+        "mass_threshold": -5.5493123557796324e-05,
+        "potential_quartic_threshold": -8.287801758340242e-06
+      }
+    ],
+    "tree_quartic": 0.10830005981991682,
+    "mass_threshold": 0.0005263559173005815,
+    "potential_quartic_threshold": -0.0003371405392580605,
+    "kinetic": {
+      "scalar": 0.00012665147955292225,
+      "vector": -0.0038271631024772066,
+      "fermion": 0.0005293692988432884,
+      "total": -0.003171142324080996
+    },
+    "kinetic_quartic_threshold": 0.0006868698067908839,
+    "canonical_quartic": 0.10864978908744966,
+    "total_quartic_threshold": 0.0003497292675328234
+  },
+  "qualification": "The proposed bracket value is inserted as an assumption. It is not selected or fitted by this calculation."
+}

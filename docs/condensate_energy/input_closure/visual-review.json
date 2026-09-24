@@ -1,0 +1,7 @@
+{
+  "artifact": "input-selection.png",
+  "review": "Rendered and inspected through view_image: both panels, legends, axis labels and qualifications are visible; no clipping or overlaps seen.",
+  "format": "2232x936 PNG plus SVG",
+  "scope": "Scientific static figure, not an interactive canvas",
+  "reviewed_png_sha256": "c30eeb4e1e846082b954335ddb0d7de9a5282dc84c07bb95ddb683cf66ea6314"
+}

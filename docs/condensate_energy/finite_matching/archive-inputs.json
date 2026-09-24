@@ -1,0 +1,417 @@
+{
+  "original_scan": {
+    "target_theta0": 12.73,
+    "matching_coupling_phi": 1.22,
+    "scan_results": [
+      {
+        "phi": 1.1,
+        "theta0": 12.046117352903458,
+        "m_ratio": 19.87261073267865
+      },
+      {
+        "phi": 1.11,
+        "theta0": 12.106613360372311,
+        "m_ratio": 20.361500857652217
+      },
+      {
+        "phi": 1.12,
+        "theta0": 12.165980770314063,
+        "m_ratio": 20.86735348658066
+      },
+      {
+        "phi": 1.1300000000000001,
+        "theta0": 12.225350291907771,
+        "m_ratio": 21.39101831864054
+      },
+      {
+        "phi": 1.1400000000000001,
+        "theta0": 12.283945376720515,
+        "m_ratio": 21.933403442016417
+      },
+      {
+        "phi": 1.1500000000000001,
+        "theta0": 12.342449277010719,
+        "m_ratio": 22.49548039583941
+      },
+      {
+        "phi": 1.1600000000000001,
+        "theta0": 12.400560148698121,
+        "m_ratio": 23.07828977070793
+      },
+      {
+        "phi": 1.1700000000000002,
+        "theta0": 12.457763351634298,
+        "m_ratio": 23.682947415656415
+      },
+      {
+        "phi": 1.1800000000000002,
+        "theta0": 12.51466687058857,
+        "m_ratio": 24.310651329406806
+      },
+      {
+        "phi": 1.1900000000000002,
+        "theta0": 12.571134890501781,
+        "m_ratio": 24.962689325379838
+      },
+      {
+        "phi": 1.2000000000000002,
+        "theta0": 12.62735830043307,
+        "m_ratio": 25.640447573586638
+      },
+      {
+        "phi": 1.21,
+        "theta0": 12.682704471186783,
+        "m_ratio": 26.345420138544497
+      },
+      {
+        "phi": 1.22,
+        "theta0": 12.73808506298589,
+        "m_ratio": 27.079219651240063
+      },
+      {
+        "phi": 1.23,
+        "theta0": 12.792589111696229,
+        "m_ratio": 27.84358927547782
+      },
+      {
+        "phi": 1.24,
+        "theta0": 12.84692600293326,
+        "m_ratio": 28.640416155404754
+      },
+      {
+        "phi": 1.25,
+        "theta0": 12.901042512508102,
+        "m_ratio": 29.47174656246532
+      },
+      {
+        "phi": 1.26,
+        "theta0": 12.954164600865942,
+        "m_ratio": 30.33980299760422
+      },
+      {
+        "phi": 1.27,
+        "theta0": 13.007118802463868,
+        "m_ratio": 31.247003549510975
+      },
+      {
+        "phi": 1.28,
+        "theta0": 13.0598401552237,
+        "m_ratio": 32.19598386379355
+      },
+      {
+        "phi": 1.29,
+        "theta0": 13.111745119778668,
+        "m_ratio": 33.1896221432393
+      },
+      {
+        "phi": 1.3,
+        "theta0": 13.163518464889599,
+        "m_ratio": 34.2310676784222
+      }
+    ]
+  },
+  "vacuum_selection": {
+    "exact_effective_matrix": "Matrix([[0, -153*phi**2/2000 + 9*phi/200 + 3/20, 3*phi/20, 0], [153*phi**2/2000 - 9*phi/200 - 3/20, 0, -phi**2/5 - phi/2, 0], [-3*phi/20, phi**2/5 + phi/2, 0, 0], [0, 0, 0, 0]])",
+    "omega_squared": "(183409*phi**4 + 772460*phi**3 + 1006300*phi**2 + 54000*phi + 90000)/4000000",
+    "samples": [
+      {
+        "phi": 0.0,
+        "source_eigvalsh_magnitudes": [
+          0.15,
+          0.15,
+          0.0,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          0.15000000000000002,
+          0.15000000000000002,
+          0.0,
+          0.0
+        ],
+        "singular_values": [
+          0.15,
+          0.15,
+          0.0,
+          0.0
+        ],
+        "non_Hermitian_residual": 0.4242640687119285
+      },
+      {
+        "phi": 0.5,
+        "source_eigvalsh_magnitudes": [
+          0.37114051763368355,
+          0.3114270335766896,
+          0.05971348405699393,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          0.3451795049318541,
+          0.3451795049318541,
+          6.21813790675127e-18,
+          0.0
+        ],
+        "singular_values": [
+          0.34517950493185423,
+          0.34517950493185423,
+          8.558858937863416e-18,
+          0.0
+        ],
+        "non_Hermitian_residual": 0.9763150746557179
+      },
+      {
+        "phi": 1.1,
+        "source_eigvalsh_magnitudes": [
+          0.8362682747636416,
+          0.7941868247713428,
+          0.042081449992299035,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          0.8160417233358843,
+          0.8160417233358843,
+          3.2765942009656604e-18,
+          0.0
+        ],
+        "singular_values": [
+          0.8160417233358844,
+          0.8160417233358842,
+          4.7574462940417376e-17,
+          0.0
+        ],
+        "non_Hermitian_residual": 2.3081145452078413
+      },
+      {
+        "phi": 1.2,
+        "source_eigvalsh_magnitudes": [
+          0.928471745968437,
+          0.8922605315072313,
+          0.03621121446120526,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          0.9109061123957838,
+          0.9109061123957838,
+          1.410096031037843e-17,
+          0.0
+        ],
+        "singular_values": [
+          0.9109061123957835,
+          0.9109061123957835,
+          1.8838159276119478e-17,
+          0.0
+        ],
+        "non_Hermitian_residual": 2.5764315563973357
+      },
+      {
+        "phi": 1.3,
+        "source_eigvalsh_magnitudes": [
+          1.024806468171823,
+          0.9948685627053849,
+          0.02993790546643735,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          1.0101702907059786,
+          1.0101702907059786,
+          5.354161877507468e-18,
+          0.0
+        ],
+        "singular_values": [
+          1.0101702907059782,
+          1.010170290705978,
+          0.0,
+          0.0
+        ],
+        "non_Hermitian_residual": 2.8571930508455328
+      },
+      {
+        "phi": 2.0,
+        "source_eigvalsh_magnitudes": [
+          1.8366182132528004,
+          1.8152378407302125,
+          0.021380372522587895,
+          0.0
+        ],
+        "true_eigenvalue_magnitudes": [
+          1.826021905673642,
+          1.826021905673642,
+          1.6535611735266724e-17,
+          0.0
+        ],
+        "singular_values": [
+          1.8260219056736429,
+          1.8260219056736426,
+          8.744593473972027e-18,
+          0.0
+        ],
+        "non_Hermitian_residual": 5.164769888388059
+      }
+    ],
+    "finding": "The Re chirality-map matrix is skew-symmetric. Its true nonzero eigenvalue magnitudes are paired and its rank is at most two. eigvalsh treats a triangle as a Hermitian matrix and creates a spurious third magnitude. No three positive generation masses emerge from this operator.",
+    "independent_input": "The script inserts target theta0=12.73 and arbitrary generator admixtures .3, then scans phi; it contains no normalized action or energy minimization selecting phi."
+  },
+  "Majorana_input": {
+    "source_literals": {
+      "m_e": 0.51099895,
+      "m_tau": 1776.86,
+      "m_nu_obs": 4.9e-05
+    },
+    "target_eV": 0.049,
+    "correct_target_MeV": 4.9e-08,
+    "inferred_Dirac_eV": 48.9852749421456,
+    "consistent_inferred_Majorana_eV": 48970.55430933873,
+    "inconsistent_inferred_Majorana_eV": 48.97055430933873,
+    "target_variation": [
+      {
+        "target_eV": 0.0245,
+        "inferred_MR_eV": 97941.10861867746
+      },
+      {
+        "target_eV": 0.049,
+        "inferred_MR_eV": 48970.55430933873
+      },
+      {
+        "target_eV": 0.098,
+        "inferred_MR_eV": 24485.277154669366
+      }
+    ],
+    "finding": "The later eV calculation gives about 49 keV after inserting the target .049 eV. This is inverse parameter inference, not an independent prediction of F or d. The earlier MeV literal describes 49 eV instead and is inconsistent by 1000. The target is treated here as an archived numerical input, not an absolute neutrino-mass measurement."
+  },
+  "replays": [
+    {
+      "filename": "electroweak_vacuum_selection.py",
+      "returncode": 0,
+      "directory": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/docs/condensate_energy/finite_matching/attempts/source-replays/electroweak_vacuum_selection"
+    },
+    {
+      "filename": "neutrino_honest.py",
+      "returncode": 0,
+      "directory": "/Users/coo-koba42/dev/ACS-Framework-threshold-audit/docs/condensate_energy/finite_matching/attempts/source-replays/neutrino_honest"
+    }
+  ],
+  "checks": [
+    {
+      "name": "recovered-source-hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "electroweak_vacuum_selection.py-source-replay-completes",
+      "passed": true,
+      "evidence": 0
+    },
+    {
+      "name": "neutrino_honest.py-source-replay-completes",
+      "passed": true,
+      "evidence": 0
+    },
+    {
+      "name": "source-effective-matrix-is-exactly-skew-symmetric",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-characteristic-has-two-zero-modes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-Hermitian-conversion-has-paired-nonzero-spectrum",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "source-fourth-direction-is-inactive",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact-transcription-matches-recovered-generators",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-0.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-0.5",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-0.5",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-1.1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-1.1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-1.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-1.2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-1.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-1.3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "correct-spectral-instruments-agree-phi-2.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "at-most-two-nonzero-magnitudes-phi-2.0",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "claimed-third-magnitude-is-an-eigensolver-artifact",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "archived-neutrino-MeV-literal-has-factor-1000-error",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "two-archived-Majorana-calculations-differ-by-factor-1000",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Majorana-value-is-inferred-from-input-neutrino-target",
+      "passed": true,
+      "evidence": null
+    }
+  ],
+  "checks_passed": 24,
+  "checks_total": 24,
+  "scope": "Two newly recovered source proposals relevant to the missing vacuum/scale inputs; not an exhaustive drive or chat search."
+}

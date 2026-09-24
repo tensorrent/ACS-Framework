@@ -1,0 +1,324 @@
+{
+  "status": "all_registered_and_targeted_numerical_checks_passed",
+  "original_variants": 76,
+  "targeted_variants": 4,
+  "additional_short_calibration_trajectories": 3,
+  "original_checks": 15,
+  "targeted_checks": 9,
+  "symbolic_checks": 4,
+  "source_and_parent_hashes_verified": true,
+  "selected": {
+    "low": {
+      "parameters": {
+        "g": 4.0,
+        "mass": 1.0,
+        "spring": 1.0,
+        "carrier": 0.39269908169872414,
+        "coupled": true,
+        "energy": 1.0,
+        "dx": 0.1,
+        "dt": 0.005,
+        "domain": 240.0,
+        "end": 160.0,
+        "center": 30.0,
+        "sigma": 4.0,
+        "phase": 0.0
+      },
+      "coarse_at160": {
+        "t": 160.0,
+        "trapped": 0.07514378924202325,
+        "core": 0.06560015247867433,
+        "barrier": 0.00954363676334892,
+        "field": 0.9984613239088584,
+        "gate": 0.0015386440811817794,
+        "total": 0.9999999679900402,
+        "height": 3.907176741115135,
+        "a": 0.9883289863596958,
+        "work_on_field": -0.0015386440725513207
+      },
+      "refined_at160": {
+        "t": 160.0,
+        "trapped": 0.07490862069343585,
+        "core": 0.06519312218880174,
+        "barrier": 0.009715498504634101,
+        "field": 0.9984794279386081,
+        "gate": 0.0015205641498429057,
+        "total": 0.999999992088451,
+        "height": 3.9201804306364045,
+        "a": 0.9899722762073194,
+        "work_on_field": -0.0015205641733621925
+      },
+      "fixed_same_g_at160": {
+        "t": 160.0,
+        "trapped": 0.021175738751712546,
+        "core": 0.018716256052063507,
+        "barrier": 0.002459482699649039,
+        "field": 1.0000000001531095,
+        "gate": 0.0,
+        "total": 1.0000000001531095,
+        "height": 4.0,
+        "a": 1.0,
+        "work_on_field": 0.0
+      },
+      "coarse_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.016674959399145435,
+          "core": 0.014640951390792818,
+          "barrier": 0.0020340080083526176,
+          "field": 0.9994243229955095,
+          "gate": 0.0005756519570653308,
+          "total": 0.9999999749525749,
+          "height": 3.7787491173505057,
+          "a": 0.9719502452994322,
+          "work_on_field": -0.0005756495175859771
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.016674959399145435,
+        "late_trapped_max": 0.02017200383257257,
+        "late_trapped_sample_mean": 0.018356537846251922,
+        "late_gate_sample_mean": 0.0005327108563208336,
+        "min_height": 1.793280772105649,
+        "max_height": 4.691880397011955
+      },
+      "refined_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.016603350093965952,
+          "core": 0.01452272327976565,
+          "barrier": 0.002080626814200303,
+          "field": 0.9994200209241386,
+          "gate": 0.0005799729498291458,
+          "total": 0.9999999938739678,
+          "height": 3.772798478079565,
+          "a": 0.9711846474898022,
+          "work_on_field": -0.000579972305919934
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.016603350093965952,
+        "late_trapped_max": 0.020088365185260932,
+        "late_trapped_sample_mean": 0.018280317148430113,
+        "late_gate_sample_mean": 0.0005362256427172265,
+        "min_height": 1.7997295812042153,
+        "max_height": 4.6870397807358195
+      }
+    },
+    "middle": {
+      "parameters": {
+        "g": 4.0,
+        "mass": 1.0,
+        "spring": 1.0,
+        "carrier": 0.7853981633974483,
+        "coupled": true,
+        "energy": 1.0,
+        "dx": 0.1,
+        "dt": 0.005,
+        "domain": 240.0,
+        "end": 160.0,
+        "center": 30.0,
+        "sigma": 4.0,
+        "phase": 0.0
+      },
+      "coarse_at160": {
+        "t": 160.0,
+        "trapped": 0.06411400176248763,
+        "core": 0.05830650653662387,
+        "barrier": 0.005807495225863761,
+        "field": 0.9989987986140758,
+        "gate": 0.0010011338854825358,
+        "total": 0.9999999324995583,
+        "height": 4.32794095482077,
+        "a": 1.0401851944270273,
+        "work_on_field": -0.0010011289711501956
+      },
+      "refined_at160": {
+        "t": 160.0,
+        "trapped": 0.06386125300003209,
+        "core": 0.05805677397302766,
+        "barrier": 0.005804479027004435,
+        "field": 0.9989646248296047,
+        "gate": 0.0010353582581384033,
+        "total": 0.9999999830877431,
+        "height": 4.327200771721169,
+        "a": 1.0400962421479525,
+        "work_on_field": -0.0010353570331975786
+      },
+      "fixed_same_g_at160": {
+        "t": 160.0,
+        "trapped": 0.02290340642652066,
+        "core": 0.020540768919007083,
+        "barrier": 0.002362637507513577,
+        "field": 1.000000000891174,
+        "gate": 0.0,
+        "total": 1.000000000891174,
+        "height": 4.0,
+        "a": 1.0,
+        "work_on_field": 0.0
+      },
+      "coarse_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.014176755955135548,
+          "core": 0.012495241852645814,
+          "barrier": 0.001681514102489734,
+          "field": 0.9994809681485698,
+          "gate": 0.0005189584253431876,
+          "total": 0.999999926573913,
+          "height": 3.998004107412685,
+          "a": 0.9997504822970436,
+          "work_on_field": -0.0005189584377122861
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.014176755955135548,
+        "late_trapped_max": 0.01699389350214927,
+        "late_trapped_sample_mean": 0.015566563997337014,
+        "late_gate_sample_mean": 0.0005393643837025316,
+        "min_height": 1.892658647882354,
+        "max_height": 4.999501546670578
+      },
+      "refined_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.014103253089189355,
+          "core": 0.012395600258630672,
+          "barrier": 0.001707652830558683,
+          "field": 0.9994709889255952,
+          "gate": 0.0005289927167601519,
+          "total": 0.9999999816423553,
+          "height": 4.00926545297446,
+          "a": 1.0011575117051337,
+          "work_on_field": -0.0005289927187723053
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.014103253089189355,
+        "late_trapped_max": 0.016903922467867257,
+        "late_trapped_sample_mean": 0.015484999178077923,
+        "late_gate_sample_mean": 0.0005520862987754918,
+        "min_height": 1.896127106331196,
+        "max_height": 4.998013165354959
+      }
+    },
+    "high": {
+      "parameters": {
+        "g": 4.0,
+        "mass": 1.0,
+        "spring": 1.0,
+        "carrier": 1.5707963267948966,
+        "coupled": true,
+        "energy": 1.0,
+        "dx": 0.1,
+        "dt": 0.005,
+        "domain": 240.0,
+        "end": 160.0,
+        "center": 30.0,
+        "sigma": 4.0,
+        "phase": 0.0
+      },
+      "coarse_at160": {
+        "t": 160.0,
+        "trapped": 0.008825018407487948,
+        "core": 0.00762459817948919,
+        "barrier": 0.0012004202279987585,
+        "field": 0.9998466513695917,
+        "gate": 0.00015329617020691557,
+        "total": 0.9999999475397986,
+        "height": 3.9607759443850927,
+        "a": 0.9950849140130068,
+        "work_on_field": -0.00015329609954986702
+      },
+      "refined_at160": {
+        "t": 160.0,
+        "trapped": 0.008771397227010572,
+        "core": 0.0074756144342840464,
+        "barrier": 0.0012957827927265256,
+        "field": 0.9998558621147655,
+        "gate": 0.00014412299223289058,
+        "total": 0.9999999851069984,
+        "height": 3.9742398733040476,
+        "a": 0.9967747831511449,
+        "work_on_field": -0.00014412298547644193
+      },
+      "fixed_same_g_at160": {
+        "t": 160.0,
+        "trapped": 0.005985206132876362,
+        "core": 0.0051270455770160775,
+        "barrier": 0.0008581605558602842,
+        "field": 1.000000009420908,
+        "gate": 0.0,
+        "total": 1.000000009420908,
+        "height": 4.0,
+        "a": 1.0,
+        "work_on_field": 0.0
+      },
+      "coarse_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.0002584788930499231,
+          "core": 0.00023343312215451219,
+          "barrier": 2.5045770895410917e-05,
+          "field": 0.9998419636197851,
+          "gate": 0.00015798422181508584,
+          "total": 0.9999999478416002,
+          "height": 3.9066493958182043,
+          "a": 0.9882622875302645,
+          "work_on_field": -0.0001579837912752162
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.0002584788930499231,
+        "late_trapped_max": 0.00031320347049923486,
+        "late_trapped_sample_mean": 0.00028509836605124033,
+        "late_gate_sample_mean": 0.0001579171546271941,
+        "min_height": 2.3948636185121166,
+        "max_height": 4.287610542973193
+      },
+      "refined_at480": {
+        "final": {
+          "t": 480.0,
+          "trapped": 0.00025512091868863066,
+          "core": 0.0002281643690902472,
+          "barrier": 2.695654959838345e-05,
+          "field": 0.9998492477945592,
+          "gate": 0.00015073737244248196,
+          "total": 0.9999999851670017,
+          "height": 3.9196425276528535,
+          "a": 0.9899043549319365,
+          "work_on_field": -0.0001507372928168879
+        },
+        "late_window": [
+          440.0,
+          480.0
+        ],
+        "late_trapped_min": 0.00025512091868863066,
+        "late_trapped_max": 0.0003087629681215443,
+        "late_trapped_sample_mean": 0.00028120416649234873,
+        "late_gate_sample_mean": 0.0001507034434897,
+        "min_height": 2.3962633442265617,
+        "max_height": 4.284267711228317
+      }
+    }
+  },
+  "conclusions": {
+    "autonomous_field_gate_exchange": "demonstrated for this candidate Hamiltonian",
+    "finite_time_residence": "can improve or worsen; all 54 parameter cases reported",
+    "permanent_field_capture": "not established; selected long trajectories continue leaking",
+    "stationary_gate_localized_harmonic_field": "analytically excluded for all positive g,M,K under stated half-line assumptions",
+    "general_time_dependent_bound_solution": "not settled by the stationary exclusion or finite simulations",
+    "physical_gate_and_coupling": "supplied model inputs; not derived from source foam",
+    "particle_mass": "not derived"
+  }
+}

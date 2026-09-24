@@ -1,0 +1,720 @@
+{
+  "entries": [
+    {
+      "quartic": 0,
+      "mass": 0,
+      "output": [
+        "40",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 0,
+      "mass": 1,
+      "output": [
+        "0",
+        "8",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 0,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "8",
+        "0"
+      ]
+    },
+    {
+      "quartic": 0,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 1,
+      "mass": 0,
+      "output": [
+        "4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 1,
+      "mass": 1,
+      "output": [
+        "0",
+        "8",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 1,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "8",
+        "0"
+      ]
+    },
+    {
+      "quartic": 1,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 2,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 2,
+      "mass": 1,
+      "output": [
+        "0",
+        "12",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 2,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "-12",
+        "0"
+      ]
+    },
+    {
+      "quartic": 2,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 3,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 3,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "12",
+        "0"
+      ]
+    },
+    {
+      "quartic": 3,
+      "mass": 2,
+      "output": [
+        "0",
+        "12",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 3,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 4,
+      "mass": 0,
+      "output": [
+        "0",
+        "24",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 4,
+      "mass": 1,
+      "output": [
+        "6",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 4,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 4,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 5,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "24",
+        "0"
+      ]
+    },
+    {
+      "quartic": 5,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 5,
+      "mass": 2,
+      "output": [
+        "6",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 5,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 6,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 6,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 6,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 6,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "56/3"
+      ]
+    },
+    {
+      "quartic": 7,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 7,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 7,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 7,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "280/3"
+      ]
+    },
+    {
+      "quartic": 8,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 8,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 8,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 8,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "32/3"
+      ]
+    },
+    {
+      "quartic": 9,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 9,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 9,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 9,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "160/3"
+      ]
+    },
+    {
+      "quartic": 10,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 10,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 10,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 10,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "72"
+      ]
+    },
+    {
+      "quartic": 11,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 11,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 11,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 11,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 12,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 12,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 12,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 12,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 13,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "16"
+      ]
+    },
+    {
+      "quartic": 13,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 13,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 13,
+      "mass": 3,
+      "output": [
+        "120",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 14,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 14,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "4"
+      ]
+    },
+    {
+      "quartic": 14,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 14,
+      "mass": 3,
+      "output": [
+        "0",
+        "120",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 15,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 15,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 15,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "4"
+      ]
+    },
+    {
+      "quartic": 15,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "120",
+        "0"
+      ]
+    },
+    {
+      "quartic": 16,
+      "mass": 0,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 16,
+      "mass": 1,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 16,
+      "mass": 2,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "quartic": 16,
+      "mass": 3,
+      "output": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "summary": {
+    "mass_convention": "V2=mu0 Nphi+mu1 Re(detPhi)+mu2 Im(detPhi)+mu3 NDelta; 32*pi^2 beta(mu)=listed scalar polynomial plus gauge-linear mass terms",
+    "mass_scalar_polynomials": [
+      "40*l0*mu0 + 4*l1*mu0 + 120*l13*mu3 + 6*l4*mu1 + 6*l5*mu2",
+      "8*l0*mu1 + 8*l1*mu1 + 120*l14*mu3 + 12*l2*mu1 + 12*l3*mu2 + 24*l4*mu0",
+      "8*l0*mu2 + 8*l1*mu2 + 120*l15*mu3 - 12*l2*mu2 + 12*l3*mu1 + 24*l5*mu0",
+      "72*l10*mu3 + 16*l13*mu0 + 4*l14*mu1 + 4*l15*mu2 + 56*l6*mu3/3 + 280*l7*mu3/3 + 32*l8*mu3/3 + 160*l9*mu3/3"
+    ],
+    "mass_gauge_linear_terms": [
+      "-9*(gL^2+gR^2)*mu0",
+      "-9*(gL^2+gR^2)*mu1",
+      "-9*(gL^2+gR^2)*mu2",
+      "-(54*g4^2+24*gR^2)*mu3"
+    ],
+    "all_68_mixed_Hessian_and_tadpole_identities": 68,
+    "vacuum_32pi2_beta": "8*mu0**2 + 2*mu1**2 + 2*mu2**2 + 60*mu3**2",
+    "vacuum_two_routes": "mass Hessian trace and independent exact eigenvalue degeneracies",
+    "gauge_convention": "16*pi^2 beta(g_a)=-b_a*g_a^3; n_f identical chiral families (4,2,1)+(bar4,1,2); full complex Phi and Delta active, no extra particles or thresholds",
+    "b_a": [
+      "35/3 - 4*n_f/3",
+      "7 - 4*n_f/3",
+      "1/3 - 4*n_f/3"
+    ],
+    "n_f_0": [
+      "35/3",
+      "7",
+      "1/3"
+    ],
+    "n_f_3": [
+      "23/3",
+      "3",
+      "-11/3"
+    ],
+    "three_family_UV_result": "gR nonzero has a one-loop Landau pole at log(mu_pole/mu0)=24*pi^2/(11*gR(mu0)^2). This is a perturbative model obstruction, not a claim about UV completion or threshold-corrected ACS.",
+    "scope": "One-loop unbroken-phase scalar/gauge model. Quartic and mass Yukawa corrections and Yukawa running remain absent."
+  }
+}

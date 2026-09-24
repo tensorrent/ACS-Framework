@@ -1,0 +1,17 @@
+[
+  {
+    "name": "incoming preparation conserves field energy",
+    "passed": true,
+    "max_drift": 5.242473122279988e-13
+  },
+  {
+    "name": "signed flux resolves energy entering and leaving the cavity",
+    "passed": true,
+    "max_residual": 6.618317005546713e-14
+  },
+  {
+    "name": "incoming domain endpoint remains unvisited",
+    "passed": false,
+    "max_tail_fraction": 1.4185669081842885e-08
+  }
+]

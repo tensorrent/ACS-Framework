@@ -1,0 +1,91 @@
+{
+  "status": "qualified selected gauge branch; ACS particle identification remains underdetermined",
+  "checks_passed": 45,
+  "continuum_runs": 60,
+  "independent_finite_volume_runs": 6,
+  "preserved_solver_failures": {
+    "Q1000-e0.2": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 1.2751608621025174,
+      "energy_per_charge": 1.2825448397324608
+    },
+    "Q1000-e0.25": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 1.5406416816477704,
+      "energy_per_charge": 3.6921714655210556
+    },
+    "Q300-e0.18": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 1.0526541978886934,
+      "energy_per_charge": 1.1924278973440514
+    },
+    "Q300-e0.2": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 1.0969810538777127,
+      "energy_per_charge": 1.2960919173331809
+    },
+    "Q3000-e0.2": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 1.9520151773726926,
+      "energy_per_charge": 20.386338619138144
+    },
+    "Q3000-e0.25": {
+      "message": "The maximum number of mesh nodes is exceeded.",
+      "omega": 3.6883541699941285,
+      "energy_per_charge": 206.916843509265
+    }
+  },
+  "references": {
+    "e0": {
+      "energy": 838.1630964412382,
+      "energy_per_charge": 0.8381630964412382,
+      "omega": 0.7548882119351492,
+      "electric_inside": 0.0,
+      "electric_outside": 0.0,
+      "radius90": 5.679470911973243
+    },
+    "e0.04": {
+      "energy": 852.8736138992066,
+      "energy_per_charge": 0.8528736138992066,
+      "omega": 0.7802624868850548,
+      "electric_inside": 13.023358837827118,
+      "electric_outside": 1.5915494315890566,
+      "radius90": 5.749594653307077
+    },
+    "e0.08": {
+      "energy": 895.895737139069,
+      "energy_per_charge": 0.895895737139069,
+      "omega": 0.8538913226848815,
+      "electric_inside": 49.93407088502096,
+      "electric_outside": 6.3661977258709,
+      "radius90": 5.9608619782242895
+    },
+    "e0.12": {
+      "energy": 964.2094791928479,
+      "energy_per_charge": 0.9642094791928478,
+      "omega": 0.9693200019511836,
+      "electric_inside": 105.05780612933958,
+      "electric_outside": 14.323944881797274,
+      "radius90": 6.330605843795822
+    }
+  },
+  "full_field_boundary": {
+    "selected_vacuum_massless_gauge_modes": 18,
+    "charged_vector_charge_per_q": "2/3",
+    "physical_flat_scalar_modes": 4,
+    "conventional_vacuum_massless_modes": 9,
+    "neutral_Delta_electric_charge": 0
+  },
+  "parameter_nonuniqueness": "Same 2/3 Yukawa ratio yields opposite pair thresholds; permitted norm potentials have binding and no-binding regions; dimensional rescaling leaves Q fixed.",
+  "limitations": [
+    "Not a full non-Abelian decay trajectory or quantum lifetime.",
+    "No physical ACS vacuum, complete coefficient map or carrier spectrum selected.",
+    "No all-branches nonexistence or all-partitions fission proof.",
+    "No source manuscripts or previous evidence edited."
+  ],
+  "prior_receipts_verified": {
+    "docs/condensate_energy/self_binding/receipt.json": "23f019259773605e813eef33b9d5bbc5c688e1f15ffd59d046a46acd44654df6",
+    "docs/condensate_energy/charge_audit/receipt.json": "08d4c3c284984258861068283c51990fed37126ef3835c14d521ead835a12859",
+    "docs/condensate_energy/charge_leakage/receipt.json": "e2737e80d472177d3c90597680f682128d486081d30b57ca59b4dc15ed57f7aa"
+  }
+}

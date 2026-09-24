@@ -1,0 +1,30 @@
+{
+  "checks_total": 58,
+  "checks_passed": 58,
+  "failures": [],
+  "I": 0.59467989793424,
+  "source_replay": {
+    "kappa_max": 95.7417172399921,
+    "kappa_min": 0.3660581085592495,
+    "mass_ratio_Lambda_v": 16.172441569296556,
+    "Lambda_PS_GeV": 3978.4206260469527,
+    "m_nu_eV": 0.06563433697543833
+  },
+  "basis_variations": [
+    {
+      "basis_scale_bound": 2.0,
+      "raw_abs_curvature_mass_ratio": 23.397022379192006,
+      "generalized_eigenvalue_error": 1.4210854715202004e-14
+    },
+    {
+      "basis_scale_bound": 5.0,
+      "raw_abs_curvature_mass_ratio": 87.08503800163456,
+      "generalized_eigenvalue_error": 5.684341886080802e-14
+    },
+    {
+      "basis_scale_bound": 10.0,
+      "raw_abs_curvature_mass_ratio": 318.7473035633226,
+      "generalized_eigenvalue_error": 1.7763568394002505e-14
+    }
+  ]
+}

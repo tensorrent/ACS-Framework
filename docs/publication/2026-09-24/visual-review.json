@@ -1,0 +1,9 @@
+{
+  "manuscripts": 35,
+  "rendered_pages": 348,
+  "visual_review": "All pages inspected in contact sheets; new papers and affected equations/tables inspected at larger scale. Changed papers rerendered after final fixes.",
+  "outside_page_characters": 0,
+  "build": "35/35; no missing glyphs or unresolved references/citations",
+  "remaining_typographic_diagnostic": "One 0.386pt horizontal overfull box in the historical monograph; visually contained and no clipping.",
+  "scope": "Layout and targeted mathematical consistency review, not independent peer review of the entire corpus."
+}

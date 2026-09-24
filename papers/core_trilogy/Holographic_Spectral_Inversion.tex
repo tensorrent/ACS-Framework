@@ -3,7 +3,7 @@
 \documentclass[11pt,a4paper]{article}
 
 %% ═══════════════════════════════════════════════════════════════════════════
-%% VISUAL STYLE — ACS Trilogy, presentation-grade typography
+%% VISUAL STYLE --- ACS Trilogy, presentation-grade typography
 %% ═══════════════════════════════════════════════════════════════════════════
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
@@ -102,6 +102,9 @@
         \small \texttt{The Inversion Arc}}
 \date{March 2026}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 
 \begin{titlepage}
@@ -123,6 +126,11 @@
   {\large\bfseries Bradley Wallace}\\[0.25em]
   {\small\itshape\color{acsslate} Independent Researcher}
 \end{center}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \vspace{0.5in}
 
@@ -376,7 +384,7 @@ Historical instances (Table~\ref{tab:acs-instances}):
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Domain & ACS Form & ACS Function \\
 \midrule
@@ -386,7 +394,7 @@ Gauge theory & vierbein $e$ & connection $\omega$ \\
 Quantum gravity & triad $\tilde{E}$ & Ashtekar $A$ \\
 Number theory & primes $\{p_n\}$ & Riemann zeros $\{\gamma_k\}$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{ACS instances across domains.  The RG examples (top two rows) provide
 established instances of monotone information flow (Zamolodchikov $c$-theorem~\cite{Zamolodchikov1986} and the
 Komargodski--Schwimmer $a$-theorem~\cite{KomargodskiSchwimmer2011}), anchoring the framework in known results.}
@@ -417,11 +425,12 @@ the new attractor.
 
 The cycle is:
 \[
-  T^a = 0 \;\;\xrightarrow{\;\text{torsion activates}\;}\;\;
-  T^a \neq 0 \;\;\xrightarrow{\;\text{chiral modes}\;}\;\;
-  \text{spinor bundle} \;\;\xrightarrow{\;\text{complexify}\;}\;\;
-  \mathfrak{su}(3) \;\;\xrightarrow{\;\text{confine}\;}\;\;
-  \text{new constraint}
+\begin{gathered}
+  T^a=0 \xrightarrow{\text{torsion activates}} T^a\ne0
+  \xrightarrow{\text{chiral modes}} \text{spinor bundle},\\
+  \text{spinor bundle}\xrightarrow{\text{complexify}}\mathfrak{su}(3)
+  \xrightarrow{\text{confine}}\text{new constraint}.
+\end{gathered}
 \]
 Each stage is one step of the inversion arc.
 The Lie bracket $[f,g]$ at each stage measures the asymmetry
@@ -492,7 +501,7 @@ The second identity follows by symmetric exchange.
 
 \noindent
 This identity is verified symbolically in
-\texttt{src/paper\_c/killing\_orthogonality.py} (returning
+\nolinkurl{src/paper_c/killing_orthogonality.py} (returning
 $0$ in SymPy) and numerically across $1{,}000$ random pairs in each
 of $\mathfrak{sl}(3,\mathbb{R})$ and $\mathfrak{sl}(4,\mathbb{R})$
 with maximum residual $\sim 10^{-15}$.
@@ -536,7 +545,7 @@ recovery.
     At a generic point $(X, Y)$, $\mathrm{rank}\,d\mu = n^2 - 1 = 15$
     and $\dim \ker\,d\mu = 15$ --- the locally surjective regime.
     Verified across $20$ random pairs in
-    \texttt{src/paper\_c/orthogonal\_complement\_probe.py}.
+    \nolinkurl{src/paper_c/orthogonal_complement_probe.py}.
   \item \textbf{Degenerate active ambiguity at $(H_1, A_{01})$.}
     At the specific Cartan-antisymmetric pair, where the bracket lands
     in a $1$-dimensional subspace, the differential degenerates to
@@ -588,7 +597,7 @@ only in the elliptic case.
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}llll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}llll@{}}
 \toprule
 ACS instance & Spectrum of $\mathrm{ad}_X$ & Class & Geometric content \\
 \midrule
@@ -597,7 +606,7 @@ Frenet--Serret operator & $\{0, \pm i\sqrt{\kappa^2{+}\chi^2}\}$ & Elliptic & cu
 $\mathfrak{sl}(4,\mathbb{R})$ Palatini ($T_{B-L}$) & $\{0, \pm 4/3\}$ & Hyperbolic & boost-like, no $2\pi$ closure \\
 Core rope ring ($R^3 = R$) & $\{-1, 0, +1\}$ & Hyperbolic & $\mathbb{Z}/3$ permutation \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Four ACS instances classified by spectral type.  Elliptic
 systems exhibit literal $2\pi$ inversion under three-step
 composition; hyperbolic systems exhibit only algebraic Cayley--Hamilton
@@ -605,7 +614,7 @@ saturation, with no rotational closure.  The Frenet--Serret operator
 $A$ satisfies $A^3 = -(\kappa^2 + \chi^2)\,A$, an elliptic-class
 saturation; the Palatini adjoint satisfies $\mathrm{ad}_{T_{B-L}}^3 =
 (16/9)\,\mathrm{ad}_{T_{B-L}}$, a hyperbolic-class saturation.  Each
-identity is verified in \texttt{src/paper\_c/spectral\_taxonomy.py}.}
+identity is verified in \nolinkurl{src/paper_c/spectral_taxonomy.py}.}
 \label{tab:spectral-classes}
 \end{table}
 
@@ -668,7 +677,7 @@ projection coefficient is zero.
 
 \noindent
 This is verified at machine precision in
-\texttt{src/paper\_c/er\_epr\_algebraic.py} (projection coefficient
+\nolinkurl{src/paper_c/er_epr_algebraic.py} (projection coefficient
 $|c| < 10^{-16}$ for random $(X, Y)$ pairs in $\mathfrak{sl}(4,\mathbb{R})$).
 Combined with the standard quantum-mechanical fact that local Alice
 and Bob operators on a Bell state commute (verified in the same module),
@@ -701,7 +710,7 @@ being the emergent pattern.
 
 \begin{table}[h]
 \centering
-\begin{tabular}{lllll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lllll}
 \toprule
 Domain & Form $\Form$ & Function $\Func$ & Bracket $[f,g]$ & Pattern \\
 \midrule
@@ -712,7 +721,7 @@ Tensegrity & Cables & Struts & Equilibrium & Zero modes \\
 RG flow & UV couplings & IR couplings & $\beta$-function & $c$-theorem \\
 Quantum gravity & $\tilde{E}^a_i$ & $A^i_a$ & LQG constraints & Spin foam \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{All six domains as projections of the ACS framework.}
 \end{table}
 
@@ -875,7 +884,7 @@ from~\cite{Wallace2026a} indicated where available.
 
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}lllll@{}}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lllll@{}}
 \toprule
 Domain & Constraint & Solution & Inversion & New constraint \\
 \midrule
@@ -890,7 +899,7 @@ Riemann zeros & $\sigma = \tfrac{1}{2}$ (RH) & Off-critical zeros &
 Higgs sector & $V'(\phi) = 0$ & Radial perturbation &
   Sombrero trough & VEV $= v$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{The inversion arc across domains.  Each row instantiates the
 same cycle: a constraint generates a solution; the solution becomes
 dominant; dominance inverts the information asymmetry; the inverted
@@ -914,25 +923,17 @@ theory, the VEV in the Higgs sector.
 \label{sec:history}
 
 The ACS framework has unexpected antecedents in three historical
-observations, each of which maps precisely onto the mathematical structure.
+observations used as interpretive comparisons; they do not establish physical identity.
 
-\subsection{Newton's colour wheel and the su(3) singlet}
-
-In the \textit{Opticks} (1704), Newton arranged the visible spectrum on a
-circle and observed that combining three primary colours (red, green, blue)
-produces white light.  In the ACS framework:
-\begin{itemize}[noitemsep]
-  \item The three primary colours $\leftrightarrow$ the three weights of the
-    fundamental representation of $\mathfrak{su}(3)$, separated by $120^\circ$
-    in the Cartan weight diagram;
-  \item White $=$ R $+$ G $+$ B $\leftrightarrow$ the colour singlet
-    ($\DI = 0$, confinement);
-  \item Newton's colour wheel IS the $\mathfrak{su}(3)$ weight diagram,
-    topologically.
-\end{itemize}
-The identification is not metaphorical: QCD colour charge is named after
-optical colour precisely because the combinatorics match.  The ACS recovers
-both from the same structure --- the Palatini bracket on GL(4).
+\subsection{Optical color and internal color: corrected distinction}
+Optical color mixing and internal SU(3) charge refer to different state
+spaces. The three fundamental weights form a triangle in a Cartan weight
+diagram, but the balanced superposition of their basis states remains a
+triplet. Zero Cartan expectation does not make it an invariant vector.
+The singlet occurs in appropriate tensor products, not as the sum of the
+three fundamental basis states. The earlier optical-wheel identification
+and the inference of confinement from it are withdrawn. A visual analogy
+may motivate a calculation; it cannot replace that representation test.
 
 \subsection{The element spiral and atomic octaves (de Chancourtois, Newlands)}
 
@@ -966,13 +967,12 @@ particles are \emph{projections} onto our $3{+}1$D observation space.
 The compression sequence
 \[
   \mathfrak{sl}(4)\,[15\mathrm{D}] \to \mathfrak{su}(3)\,[8\mathrm{D}]
-  \to \mathrm{Cartan}\,[2\mathrm{D}] \to \mathrm{singlet}\,[0\mathrm{D}]
+  \to \mathrm{Cartan}\,[2\mathrm{D}]
 \]
-has been verified computationally: the Cartan projection kills all
+contains a computationally checked projection, not a singlet construction: the Cartan projection kills all
 off-diagonal structure exactly ($\max|M_{ij}| = 0.000000$ for $i \neq j$).
 A perfectly ordered geodesic on $T^{15}$ has autocorrelation $0.95$ in 15D
-but only $0.23$ when projected to 3D.  What we perceive as quantum
-randomness is the resolution bias of low-dimensional sampling.
+but only $0.23$ when projected to 3D.  This example demonstrates loss of a chosen correlation under projection; it does not derive quantum randomness.
 
 %% ─────────────────────────────────────────────────────────────────────────────
 
@@ -980,7 +980,7 @@ randomness is the resolution bias of low-dimensional sampling.
 \section{The Banach--Tarski Paradox as a Geometric ACS}
 \label{sec:BT}
 
-The Banach–Tarski paradox is the ultimate mathematical manifestation of a non‑commutative
+The Banach--Tarski paradox is the ultimate mathematical manifestation of a non-commutative
 system generating emergent volume.  One takes a solid ball in $\mathbb{R}^3$, partitions it
 into five pieces, and reassembles them using rotations and translations to obtain two
 identical copies of the original ball.  The mechanism relies entirely on the fact that
@@ -988,18 +988,18 @@ the rotation group $SO(3)$ contains a free subgroup on two generators $a$ and $b
 These generators do not commute: $ab \neq ba$.  The set of all words in $a$ and $b$ forms
 an infinite binary tree; each distinct sequence gives a distinct orientation.
 The exponential growth of words ($2^n$ words of length $n$) is what allows a single piece
-to be “unrolled” to cover the whole ball.
+to be ``unrolled'' to cover the whole ball.
 
 Mapping this to the ACS:
 \begin{itemize}[noitemsep]
   \item \textbf{Form} and \textbf{Function} are the two rotation generators $a$ and $b$.
-  \item The \textbf{2nd‑order bracket} $[a,b] \neq 0$ is exactly the non‑commutativity that
+  \item The \textbf{2nd-order bracket} $[a,b] \neq 0$ is exactly the non-commutativity that
     creates the free group.
-  \item The \textbf{3rd‑order holonomy} is the irreducible residue of the closed loop
-    $a b a^{-1} b^{-1}$ etc. — the fact that no finite combination of generators returns
+  \item The \textbf{3rd-order holonomy} is the irreducible residue of the closed loop
+    $a b a^{-1} b^{-1}$ etc. --- the fact that no finite combination of generators returns
     to the identity unless it is trivial.  This is the source of the paradoxical decomposition.
   \item The \textbf{emergent volume} is the extra measure (the second ball) generated by
-    the non‑commutative operations.  In ACS language, the information asymmetry $\DI$
+    the non-commutative operations.  In ACS language, the information asymmetry $\DI$
     measures precisely this geometric defect: the failure of the flow to close under
     composition of the two generators.
 \end{itemize}
@@ -1011,6 +1011,19 @@ create new phase-space volume, and $\DI$ provides a quantitative measure of this
 non-closure across the other domains considered here.
 
 %% ─────────────────────────────────────────────────────────────────────────────
+
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+Killing-form identities and algebraic projections retain their stated mathematical scope. A Cartan projection is not a singlet projection, and optical color addition does not construct an invariant vector of the fundamental SU(3) representation. The optical identification is withdrawn below. Physical holography, confinement and particle identification require a state space and dynamics in addition to these algebraic maps. Reduced scalar-potential formulas apply only to their restricted ansatz: the complete invariant audit has 17 quartics, hidden transverse directions and nontrivial running.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
 
 \begin{thebibliography}{99}
 \bibitem{Wallace2026a}

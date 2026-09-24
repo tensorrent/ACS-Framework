@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "scope": "Full unchanged source replay; validates inserted metric signature and prints action expansion, not a derived scale",
+  "source_sha256": "a10ea31810a84b3579f980ff07fd48411f8b3133ae109eeb0687351f837c2285"
+}

@@ -1,0 +1,1 @@
+All 100 initial checks passed, but the scalar_only and scalar_gauge labels were too broad: setting Dirac Yukawas to zero retained Majorana loops through the radial portal. The qualified version explicitly sets F=0 in those two controls, treats uncoupled zero-mass fermions as light, and retains the original outputs here. Mathematical formulas for the gapped examples are unchanged.

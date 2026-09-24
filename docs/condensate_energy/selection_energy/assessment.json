@@ -1,0 +1,27 @@
+{
+  "status": "Selection and energy stage complete; full ACS goal active",
+  "checks_passed": 123,
+  "established": [
+    "Real eight-frame search excludes its compactness target",
+    "Eight-dimensional closure does not uniquely select split sl3",
+    "Source diagonal Killing pairing depends on the basis",
+    "Correct full contraction still vanishes but is not a determinant calculation",
+    "The inherited vacuum beta is independently confirmed; its integration constant remains free",
+    "The full gauge action preserves Q rather than TBL alone",
+    "Positive tan beta cannot repair the stated proportional Yukawa formula"
+  ],
+  "retained": [
+    "Valid compact su3 forward construction with the appropriate real form",
+    "Prior conditional spectra and finite matching",
+    "Independent norm-constrained Yukawa matrices are not excluded"
+  ],
+  "remaining": [
+    "Reconcile source inventory and original goal scope",
+    "Inspect surviving action-level input and scale derivations before closure"
+  ],
+  "limits": [
+    "No absolute vacuum-energy or new particle-mass prediction",
+    "No universal no-go theorem for independently specified ACS actions",
+    "Short selector flows do not classify all attractors"
+  ]
+}

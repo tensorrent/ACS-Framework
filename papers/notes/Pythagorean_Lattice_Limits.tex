@@ -29,6 +29,9 @@ Bracket Algebra}
 \date{April 2026 \\ \textit{Pythagorean Structure} \\
 Companion to \textit{Colour from Gravity}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -58,6 +61,11 @@ phenomenological consequence.  The note is intended as a
 structural record, not a derivation of physics from music or
 vice versa.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 %-----------------------------------------------------------------
 \section{Statement}
@@ -73,7 +81,7 @@ enumerated in Table~\ref{tab:ps-ratios}.
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Quantity & Value & Prime structure \\
 \midrule
@@ -86,7 +94,7 @@ Color multiplicity & $3$ & $3^1$ \\
 Dimension of zero eigenspace of $\ad_{\TBL}$ & $9$ & $3^2$ \\
 BCH--Jacobi generation count & $3$ & $3^1$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Native dimensionless quantities of the minimal Pati--Salam
 bracket algebra and their prime factorizations.}
 \label{tab:ps-ratios}
@@ -156,7 +164,7 @@ inherits the $5/3$ gap of SU(5).
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 Construction & Native lattice & Reason for primes \\
 \midrule
@@ -167,7 +175,7 @@ SU(5) (Georgi--Glashow) & $\langle 2, 3, 5 \rangle$
 SO(10) (spinor embedding) & $\langle 2, 3, 5 \rangle$
   & rank $5$, inherits SU(5) gap $5/3$ \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Native arithmetic lattices of three standard unification
 embeddings.  Only the minimal Pati--Salam case lies entirely in
 $\langle 2, 3 \rangle$.}
@@ -277,7 +285,7 @@ $N = 5$, alongside the corresponding null-distribution means.
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{lcccccc}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lcccccc}
 \toprule
 & \multicolumn{2}{c}{$\langle 2, 3 \rangle$}
 & \multicolumn{2}{c}{$\langle 2, 3, 5 \rangle$}
@@ -297,7 +305,7 @@ CKM-derived      & $0.035$ & $0.049$
 & --- & ---
 & --- & --- \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \caption{Mean lattice distance $\langle \varepsilon \rangle$ in
 $\log_2$ units for measured Standard Model ratios versus
 null distribution (uniform random in same log range).  All
@@ -364,6 +372,19 @@ structural observation contrasted against SU(5) and SO(10).  The
 final form is what survives that process.
 
 %-----------------------------------------------------------------
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The factors of two and three describe the stated representation and normalization. They are not a measured mass-selection rule. The complete-action scale family and residual sensitivity of finite running preserve dimensional and boundary freedom. Any tree-level relation quoted here is conditional on its restricted matching assumptions; the later full-potential audit does not derive arbitrary flavor or a physical pole mass. The reported negative phenomenological result remains a negative result. Musical octave equivalence identifies frequencies only after a chosen quotient and does not make their dimensional frequencies equal.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \begin{thebibliography}{9}
 
 \bibitem{Barker1989}

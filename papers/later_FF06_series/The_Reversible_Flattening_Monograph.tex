@@ -41,6 +41,9 @@ the Homomorphism Criterion, the Convolution Seam, and a Verified Computational R
 \small with computational verification by Claude (Anthropic)}
 \date{\small Consolidates \textit{The Geometry Engine} / \textit{When a Number Lies} / \textit{The Reversible Flattening} \ ---\ SIP License v1.1 \ ---\ Seed \texttt{20260423}}
 
+% Publication typography: portable paths, bounded tables, paragraph flexibility.
+\usepackage{xurl,adjustbox}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -63,6 +66,11 @@ presented as a falsifiable research program: every load-bearing claim is anchore
 language is matched to the evidence by a four-tier scheme, and the failures are documented as carefully as
 the successes because, in a study of limits, the failures are the result.
 \end{abstract}
+\par\smallskip\noindent\textbf{Publication status (24 September 2026).}
+This version includes a claim-specific amendment at the end of the main text.
+That amendment governs earlier physical interpretations and distinguishes
+retained calculations from withdrawn or unresolved inferences.\par\smallskip
+
 
 \tableofcontents
 \newpage
@@ -227,7 +235,7 @@ in the commutative-and-structured cell, which is why its canonical fingerprint i
 (commutativity) yet information-complete (structure).
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 operation & order-dependent structure & order-independent structure \\
 \midrule
@@ -236,7 +244,7 @@ $\gcd,\mathrm{lcm}$, symmetric functions & none & full \\
 cross product / determinant sign & one bit (orientation) & --- \\
 matrix product, rotational path & full arrangement & --- \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \section{The verified ledger}\label{sec:ledger}
@@ -245,7 +253,7 @@ Every operation in the homomorphic class was computed in the relational form and
 standard-library ground truth (seed \texttt{20260423}); $14/14$ exact, $0$ failures.
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 domain & operations & verification \\
 \midrule
@@ -259,7 +267,7 @@ radical / perfect power & squarefree kernel, exponent $\gcd$ & exact, $200$ valu
 \midrule
 seam keystone & Euler product $=p(n)$; convolution & exact, $n\le 30$; coefficient identity \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent A clarifying correction (adversarial audit, second pass): the relational form answers
@@ -287,7 +295,7 @@ branch-and-bound with a \emph{provably admissible} bound (budget all remaining l
 prime; each unit buys at most a factor of two) computes the true maximum.
 
 \begin{center}
-\begin{tabular}{lrr}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lrr}
 \toprule
 $N$ & max $d(n)$ & time \\
 \midrule
@@ -295,7 +303,7 @@ $10^{18}$ & $103{,}680$ & $7$\,ms \\
 $10^{50}$ & $1.81\times10^{10}$ & $1.4$\,s \\
 $10^{80}$ & $3.01\times10^{14}$ & $33$\,s \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent Anchored exact against brute force at $N \in \{60,\ 840,\ 720720,\ 2162160\}$ ($d=12,\ 32,\ 240,\ 320$). This reaches $N=10^{80}$
@@ -348,7 +356,7 @@ is noise management, a different mechanism. The earlier identification was an ov
 \section{The negative ledger (retained in full)}
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}
 \toprule
 hypothesis & grade & how falsified \\
 \midrule
@@ -367,7 +375,7 @@ Merkle composition as multiplicative & T4 & hashing destroys structure by design
 $\varphi$+inverse-silver ``structures noise'' & T4 & $25\times$ worse than $\varphi$ alone (discrepancy) \\
 FHT ``consciousness score'' detects structure & T4 & saturates to $1.0$ on noise and structure alike \\
 \bottomrule
-\end{tabular}
+\end{tabular}\end{adjustbox}
 \end{center}
 
 \noindent Four of these were architecture-integration hypotheses falsified against live OmniForge/AISO source
@@ -409,4 +417,17 @@ and record what does not.
 \small Consolidates \textit{The Geometry Engine}, \textit{When a Number Lies} (the relational principle and limits), and \textit{The Reversible Flattening} (the
 homomorphism criterion and convolution seam). All source listings are the verified reference implementations.
 SIP License v1.1. Seed \texttt{20260423}.
+
+% Publication amendment: 2026-09-24
+\section*{Amendment: scope and evidence, 24 September 2026}
+The injectivity and inverse-domain requirements remain essential. The subsequent physical audit illustrates a separate identification limit: different complete scalar actions can share the same neutral restriction. Reversible internal bookkeeping cannot recover coefficients that never entered the observation. A physical inverse problem therefore needs the forward map, admissible model class and additional measurements, alongside the monograph's formal reconstruction conditions.
+
+For the complete-action and microscopic-carrier audit, see the companion
+papers \emph{Complete Scalar Actions and Identifiability Boundaries in the ACS
+Framework} and \emph{Condensate Binding, Charge Protection, and the Boundary
+of Particle Identification} in this repository's \texttt{papers/updates/}
+directory. The dated publication record separates fresh portable checks
+from preserved archival results; it does not claim a complete rerun of every
+historical experiment or a proof of RH.
+
 \end{document}

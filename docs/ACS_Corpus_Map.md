@@ -1,3 +1,5 @@
+> **Current navigation:** [all 35 papers](../papers/README.md), [documentation index](README.md), and [24 September publication](publication/2026-09-24/README.md). The historical counts, page references, and claim labels below are retained for traceability; they are not the current inventory or verification verdict.
+
 > **Co-governed and enforced under the [Sovereign Integrity Protocol License (SIP License v1.1)](https://github.com/tensorrent/ACS-Framework/blob/main/LICENSE)**
 
 # The ACS Corpus — Variables, Invariables, Tests, Results, Failures

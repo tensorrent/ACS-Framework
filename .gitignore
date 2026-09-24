@@ -30,6 +30,10 @@ build/
 .env
 .env.*
 *.pem
+.venv/
+
+# Local code-navigation database
+.gitnexus/
 
 # Telemetry & raw logs (privacy / size)
 *.ndjson

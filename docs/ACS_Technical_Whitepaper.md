@@ -115,3 +115,28 @@ The ACS Deterministic AI Stack is governed by a closed constraint-attractor loop
 1. **Solve:** The system solves the current constraint set $C_k$ to locate a stable attractor state.
 2. **Promote:** The properties of this attractor state are algebraically locked and promoted to become part of the constraint set $C_{k+1}$ for the next cycle.
 3. **Feedback:** Any deviation triggers information-balance corrections ($\Delta I \neq 0$), returning the system to the attractor basin.
+
+---
+
+## 6. Author Provenance, Neurodiversity Context & Analog MoE Assistive Methodology
+
+All novel theories, geometric architectures, physical intuitions, and mathematical hypotheses across the ACS Framework are the independent intellectual creation of the human author, **Bradley Wallace**, developed over approximately **5,000–6,000 hours** of focused solo research.
+
+### Neurodiversity Accommodation & The Human-in-the-Loop "Analog MoE"
+The author lives and works with **dyslexia and ADHD**. To overcome the severe cognitive and mechanical friction of conventional linear reading and keyboard text composition, the author developed and directed a **human-in-the-loop "Analog Mixture-of-Experts" (MoE)** ensemble comprising:
+- **OpenAI GPT**
+- **Anthropic Claude**
+- **xAI Grok**
+- **DeepSeek**
+- **Google Gemini**
+- **Cursor**
+- **Google DeepMind Antigravity**
+
+The author interacted with these models primarily through **high-bandwidth voice-to-text / speech interfaces** to:
+1. Dictate raw conceptual insights, geometric visions, and physical hypotheses in real-time.
+2. Intake, audio-synthesize, and analyze dense external mathematical and physical literature.
+3. Rapidly iterate, structure, and transcribe spoken formulations into rigorous LaTeX and Markdown manuscripts.
+4. Orchestrate **adversarial cross-examination**, where models were pitted against each other to critique derivations, audit code, stress-test conjectures, and eliminate errors.
+5. Scaffold, execute, and verify automated numerical and exact symbolic test harnesses.
+
+The AI ensemble did not generate the underlying physical theories or mathematical hypotheses; they functioned as an assistive cognitive prosthesis for transcription, intake, and multi-model cross-examination under the author's direct guidance. The recorded chat histories and session archives serve as the timestamped auditable ledger tracing every core concept to the author's spoken ideation.

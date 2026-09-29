@@ -72,4 +72,19 @@ Markdown mirrors and `*_disp.py` files are historical reading/display copies. La
 
 The [machine-readable catalog](catalog.json) is checked against every canonical LaTeX document by CI. The [supporting Yang–Mills comparison paper](../docs/ym_comparison_methodology_paper.pdf) and [source](../docs/ym_comparison_methodology_paper.tex) live under `docs/` and are outside this 35-paper publication inventory.
 
+## Author Statement, Neurodiversity Context & Analog MoE Assistive Methodology
+
+All novel theories, geometric architectures, physical intuitions, and mathematical hypotheses across this 35-paper corpus are the independent intellectual creation of the human author, **Bradley Wallace**, developed over approximately **5,000–6,000 hours** of focused solo research.
+
+The author navigates dyslexia and ADHD. To bridge the friction of traditional linear reading and keyboard composition, the author designed and directed a **human-in-the-loop "Analog Mixture-of-Experts" (MoE)** workflow combining:
+- **OpenAI GPT**
+- **Anthropic Claude**
+- **xAI Grok**
+- **DeepSeek**
+- **Google Gemini**
+- **Cursor**
+- **Google DeepMind Antigravity**
+
+The author interacted with this multi-model ensemble primarily through **voice-to-text / speech interfaces** for conversational intake of literature, real-time transcription, and iterative formulation of his own ideas. Crucially, the models were deployed in structured adversarial combination, cross-examining each other's derivations, code implementations, and mathematical proofs. All conceptual origins reside exclusively with the human author; the AI ensemble acted strictly as a cognitive prosthesis, transcription engine, and verification harness.
+
 Authorship and [paper licensing](LICENSE-PAPERS.md) remain unchanged.

@@ -4,10 +4,13 @@ title: "ACS Framework (Asymmetric Codependent Systems)"
 abstract: >-
   Canonical manuscripts, mathematical notes, verification suites, and
   reproduction harnesses for the Asymmetric Codependent Systems (ACS)
-  theoretical framework. All claims are tracked under a four-tier
-  verification hierarchy (machine-verified / proved / numerically
-  verified / falsified), with falsifications logged openly in an
-  elimination ledger.
+  theoretical framework, representing approximately 5,000-6,000 hours of
+  novel independent research by Bradley Wallace. All novel theories and
+  hypotheses originated solely with the author, who navigates dyslexia
+  and ADHD and utilized a human-in-the-loop Analog Mixture-of-Experts
+  AI ensemble (GPT, Claude, Grok, DeepSeek, Gemini, Cursor, Antigravity)
+  for voice-driven intake, transcription, and multi-model cross-examination.
+  All claims are tracked under a four-tier verification hierarchy.
 type: software
 authors:
   - family-names: Wallace

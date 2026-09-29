@@ -7,6 +7,7 @@
 - **Name:** acs-framework
 - **Author:** Bradley Wallace
 - **Version:** 1.0 (May 2026)
+- **Provenance & Neurodiversity:** Bradley Wallace (5,000–6,000 hours of independent research; dyslexia and ADHD accommodation). Directed an "Analog Mixture-of-Experts" (MoE) ensemble of GPT, Claude, Grok, DeepSeek, Gemini, Cursor, and Antigravity via voice-to-text intake, rapid spoken iteration, and multi-model adversarial cross-examination. All physical and mathematical hypotheses originate solely with the author.
 - **Trigger:** ACS, Palatini bracket, Pati-Salam, grading selection, sl(4), Lie bracket, adjoint representation, Barbero-Immirzi, Coleman-Weinberg, signature selection, "work on the papers", "what's still open", "test this idea"
 
 ---

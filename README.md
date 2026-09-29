@@ -49,6 +49,29 @@ python -m pytest -q code/acs_codebase/tests
 
 To rebuild the papers, install Tectonic 0.17.0 and run `python scripts/build_papers.py --jobs 2`. See the [reproduction guide](docs/REPRODUCTION.md) for outputs, archived experiments, and optional suites.
 
+## Author Statement, Neurodiversity Context & Analog MoE Assistive Methodology
+
+All novel theories, geometric architectures, physical intuitions, and mathematical hypotheses across the ACS Framework are the independent intellectual creation of the human author, **Bradley Wallace**, developed over approximately **5,000–6,000 hours** of focused solo research.
+
+### Neurodiversity Accommodation & The Human-in-the-Loop "Analog MoE"
+The author lives and works with **dyslexia and ADHD**. To overcome the severe cognitive and mechanical friction of conventional linear reading and keyboard text composition, the author developed and directed a **human-in-the-loop "Analog Mixture-of-Experts" (MoE)** ensemble comprising:
+- **OpenAI GPT**
+- **Anthropic Claude**
+- **xAI Grok**
+- **DeepSeek**
+- **Google Gemini**
+- **Cursor**
+- **Google DeepMind Antigravity**
+
+The author interacted with these models primarily through **high-bandwidth voice-to-text / speech interfaces** to:
+1. Dictate raw conceptual insights, geometric visions, and physical hypotheses in real-time.
+2. Intake, audio-synthesize, and analyze dense external mathematical and physical literature.
+3. Rapidly iterate, structure, and transcribe spoken formulations into rigorous LaTeX and Markdown manuscripts.
+4. Orchestrate **adversarial cross-examination**, where models were pitted against each other to critique derivations, audit code, stress-test conjectures, and eliminate errors.
+5. Scaffold, execute, and verify automated numerical and exact symbolic test harnesses.
+
+The AI ensemble did not generate the underlying physical theories or mathematical hypotheses; they functioned as an assistive cognitive prosthesis for transcription, intake, and multi-model cross-examination under the author's direct guidance. The recorded chat histories and session archives serve as the timestamped auditable ledger tracing every core concept to the author's spoken ideation.
+
 ## Citation and license
 
-Authorship and citation metadata are in [CITATION.cff](CITATION.cff). The repository uses the [Sovereign Integrity Protocol License v1.1](LICENSE); see also the [paper licensing note](papers/LICENSE-PAPERS.md). The new consolidations disclose AI-assisted drafting and checking. Publication here does not imply external peer review.
+Authorship and citation metadata are in [CITATION.cff](CITATION.cff). The repository uses the [Sovereign Integrity Protocol License v1.1](LICENSE); see also the [paper licensing note](papers/LICENSE-PAPERS.md). All AI assistance is fully disclosed under the Analog MoE methodology above. Publication here does not imply external peer review.

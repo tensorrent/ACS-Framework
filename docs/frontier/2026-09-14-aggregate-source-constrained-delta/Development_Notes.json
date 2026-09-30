@@ -1,0 +1,21 @@
+{
+  "recorded_commands": 12,
+  "successful_commands": 11,
+  "failed_commands": 1,
+  "failures": [
+    {
+      "receipt": "corner-pair-exploration",
+      "result": "The original naive near-corner search asserts source and cube feasibility; it fails before writing a proposal JSON. Separate v2 records all three outcomes. They converge and pass source-center checks, but leave Q by approximately0.000287\u20130.000288. Their smaller numerical tau values are rejected."
+    }
+  ],
+  "receipt_hash_limitations": [
+    {
+      "receipt": "corner-pair-diagnostic",
+      "result": "The original runner hashes relative script arguments from its launch cwd, while the child uses an explicit repository cwd. This launch left its automatic source-hash map empty. The actual receipt is retained unchanged. The diagnostic JSON records the exact script hash; Source_Snapshot.zip preserves the version and the full verifier replays its output byte for byte."
+    }
+  ],
+  "source_policy": "All executed scientific sources and reports remain immutable; corrections use separate versions. Four successful exploratory calculations, a successful rejection diagnostic and one failed naive search precede six successful canonical/source/formal commands. The final recursive verifier has a separate external receipt and supplies exact stdout bytes to Verification.json.",
+  "critical_margin": "The new exact pairs fix epsilon=1e-8+1e-24, reducing the earlier safety increment without changing r or assigning any uncertainty to fixed critical coordinates. Direct source inequalities certify this choice.",
+  "runtime": "No package acquisition, runtime version change or new source roots.",
+  "audit_scope": "The written Proof_Audit.md is an implementing-investigator audit, not a separate agent or human review. Numerical methods differ while sharing FLINT and inherited premises. Seven generic Lean lemmas compile; the full concrete theorem remains partly written."
+}

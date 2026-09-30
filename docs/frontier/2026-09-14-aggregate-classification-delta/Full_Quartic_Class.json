@@ -1,0 +1,930 @@
+{
+  "status": "passed",
+  "source_sha256": "180184e946f79296ff637719afc9aecf3188496a967f792dafa69718943d6077",
+  "inputs_sha256": {
+    "Metadata.json": "138e4f57181d0878c456fea76dac5780487b40ba96345e0f5663c53116472c88"
+  },
+  "metadata": {
+    "degree": 4,
+    "discriminant": 576,
+    "real_places": 0,
+    "complex_places": 2
+  },
+  "metadata_deductions": {
+    "signed_discriminant": 576,
+    "signed_discriminant_square": true,
+    "prime_factorization": [
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "A4_excluded_by_cubic_quotient_obstruction": true
+  },
+  "group_certificate": {
+    "permutations": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        3,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3,
+        1
+      ],
+      [
+        0,
+        3,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        1,
+        3,
+        0,
+        2
+      ],
+      [
+        1,
+        3,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        3
+      ],
+      [
+        2,
+        0,
+        3,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        1,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        0,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        0,
+        2
+      ],
+      [
+        3,
+        1,
+        2,
+        0
+      ],
+      [
+        3,
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        2,
+        1,
+        0
+      ]
+    ],
+    "even_indices": [
+      0,
+      3,
+      4,
+      7,
+      8,
+      11,
+      12,
+      15,
+      16,
+      19,
+      20,
+      23
+    ],
+    "subgroups": [
+      [
+        0
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        8,
+        12
+      ],
+      [
+        0,
+        11,
+        19
+      ],
+      [
+        0,
+        15,
+        20
+      ],
+      [
+        0,
+        7,
+        16,
+        23
+      ],
+      [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16,
+        19,
+        20,
+        23
+      ]
+    ],
+    "transitive_subgroups": [
+      [
+        0,
+        7,
+        16,
+        23
+      ],
+      [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16,
+        19,
+        20,
+        23
+      ]
+    ],
+    "klein_subgroup": [
+      0,
+      7,
+      16,
+      23
+    ],
+    "quotient_cosets": [
+      [
+        0,
+        7,
+        16,
+        23
+      ],
+      [
+        3,
+        11,
+        12,
+        20
+      ],
+      [
+        4,
+        8,
+        15,
+        19
+      ]
+    ],
+    "quotient_action": [
+      [
+        0,
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      [
+        11,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        12,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        15,
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      [
+        16,
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        19,
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      [
+        20,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        23,
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    ],
+    "cubic_quotient_ramified_at_3_candidates": [
+      {
+        "inertia": [
+          0,
+          3,
+          4
+        ],
+        "inertia_order": 3,
+        "normal_wild_3_subgroups": [
+          [
+            0,
+            3,
+            4
+          ]
+        ],
+        "normalizer": [
+          0,
+          3,
+          4
+        ],
+        "embedding_orbits": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "local_factors_ef": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "minimum_discriminant_exponent": 3,
+        "minimum_even_discriminant_exponent": 4
+      },
+      {
+        "inertia": [
+          0,
+          8,
+          12
+        ],
+        "inertia_order": 3,
+        "normal_wild_3_subgroups": [
+          [
+            0,
+            8,
+            12
+          ]
+        ],
+        "normalizer": [
+          0,
+          8,
+          12
+        ],
+        "embedding_orbits": [
+          [
+            3
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "local_factors_ef": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "minimum_discriminant_exponent": 3,
+        "minimum_even_discriminant_exponent": 4
+      },
+      {
+        "inertia": [
+          0,
+          11,
+          19
+        ],
+        "inertia_order": 3,
+        "normal_wild_3_subgroups": [
+          [
+            0,
+            11,
+            19
+          ]
+        ],
+        "normalizer": [
+          0,
+          11,
+          19
+        ],
+        "embedding_orbits": [
+          [
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "local_factors_ef": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "minimum_discriminant_exponent": 3,
+        "minimum_even_discriminant_exponent": 4
+      },
+      {
+        "inertia": [
+          0,
+          15,
+          20
+        ],
+        "inertia_order": 3,
+        "normal_wild_3_subgroups": [
+          [
+            0,
+            15,
+            20
+          ]
+        ],
+        "normalizer": [
+          0,
+          15,
+          20
+        ],
+        "embedding_orbits": [
+          [
+            1
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "local_factors_ef": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "minimum_discriminant_exponent": 3,
+        "minimum_even_discriminant_exponent": 4
+      },
+      {
+        "inertia": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          15,
+          16,
+          19,
+          20,
+          23
+        ],
+        "inertia_order": 12,
+        "normal_wild_3_subgroups": [],
+        "normalizer": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11,
+          12,
+          15,
+          16,
+          19,
+          20,
+          23
+        ],
+        "embedding_orbits": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ]
+      }
+    ],
+    "cyclic_cubic_local_2_ramified_case": {
+      "e": 3,
+      "f": 1,
+      "wild_order": 1,
+      "residue_unit_order": 1,
+      "tame_injection_possible": false
+    },
+    "unramified_cubic_minkowski_bound": {
+      "degree": 3,
+      "real_places": 3,
+      "complex_places": 0,
+      "absolute_discriminant": 1,
+      "ideal_norm_upper": "2/9",
+      "contradicts_positive_integer_ideal_norm": true
+    }
+  },
+  "all_biquadratic_models": [
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "radicands": [
+        -6,
+        -3,
+        2
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -3,
+        8
+      ],
+      "field_discriminant": 576,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-24_-3_8"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "radicands": [
+        -6,
+        -2,
+        3
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -8,
+        12
+      ],
+      "field_discriminant": 2304,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-24_-8_12"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "radicands": [
+        -6,
+        -1,
+        6
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -4,
+        24
+      ],
+      "field_discriminant": 2304,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-24_-4_24"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "radicands": [
+        -3,
+        -2,
+        6
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -3,
+        24
+      ],
+      "field_discriminant": 576,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-8_-3_24"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "radicands": [
+        -3,
+        -1,
+        3
+      ],
+      "quadratic_discriminants": [
+        -4,
+        -3,
+        12
+      ],
+      "field_discriminant": 144,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-4_-3_12"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "radicands": [
+        -2,
+        -1,
+        2
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -4,
+        8
+      ],
+      "field_discriminant": 256,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-8_-4_8"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "radicands": [
+        2,
+        3,
+        6
+      ],
+      "quadratic_discriminants": [
+        8,
+        12,
+        24
+      ],
+      "field_discriminant": 2304,
+      "real_places": 4,
+      "complex_places": 0,
+      "class_id": "quadratic_discriminants_8_12_24"
+    }
+  ],
+  "retained_models": [
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "radicands": [
+        -6,
+        -3,
+        2
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -3,
+        8
+      ],
+      "field_discriminant": 576,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-24_-3_8"
+    },
+    {
+      "squareclass_vectors": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "radicands": [
+        -3,
+        -2,
+        6
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -3,
+        24
+      ],
+      "field_discriminant": 576,
+      "real_places": 0,
+      "complex_places": 2,
+      "class_id": "quadratic_discriminants_-8_-3_24"
+    }
+  ],
+  "complete_quartic_candidate_count": 2,
+  "Galois_group_derived": "V4",
+  "proof_dependencies": [
+    "Signed square discriminant forces the Galois closure permutation group into A4; irreducibility gives transitivity.",
+    "A4 has normal V4 quotient C3; unramified local extensions are closed under compositum, so no new finite ramified primes enter the normal closure.",
+    "A ramified cyclic cubic extension of Q2 would have e=3,f=1 and tame inertia injecting into F2 multiplicative group, impossible.",
+    "At3, a ramified cubic quotient forces inertia C3; its normalizer is C3, giving a wild cubic local factor in the quartic and discriminant exponent at least3.",
+    "The supplied exponent at3 is2. The cubic quotient would therefore be everywhere finitely unramified, contradicting Minkowski.",
+    "Quadratic subfields ramify only at2,3; enumerate their square classes. Conductor-discriminant multiplication identifies exactly two biquadratic fields."
+  ],
+  "scope": "Complete isomorphism class for degree4, signature(0,2), absolute field discriminant576, using the accompanying source-backed number-theoretic proof. No Galois group, field catalogue, polynomial, coefficient vector or spectral observation is supplied. Computational checks certify the finite group and square-class portions; the general arithmetic bridge is not formalized in Lean."
+}

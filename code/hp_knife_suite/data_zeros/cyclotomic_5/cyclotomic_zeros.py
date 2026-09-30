@@ -15,7 +15,10 @@ For complex chi, Lambda(s, chi) is not real on critical line. We find zeros via
 either: (1) sign changes of Re and Im separately, requiring both to vanish, or
 (2) minima of |Lambda|^2 = Lambda · Lambda_bar = |L|^2 × gamma factor product.
 
-L(s, chi̅) = conjugate of L(s, chi) for real s+it. So |L(1/2+it, chi)|^2 is real.
+Correction (2026-09-13): L(s, chi̅) = conjugate(L(conjugate(s), chi)).
+Positive zeros of chi and chi̅ differ. This historical generator is superseded
+by ../generate_more_lzeros.py and the finite certificates in Frontier.
+The squared absolute value is real by definition, independently of conjugation.
 """
 import math, os, time
 import numpy as np

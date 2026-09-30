@@ -1,0 +1,25 @@
+# Source constraints narrow the local feature-noise bracket — 14 September 2026
+
+**The strict lower guarantee increases to approximately 1.8196470598929473e-10, while the actual ambiguity upper endpoint improves to approximately 1.8313917311990002e-10.** Their ratio is 1.0064543677534608, leaving about 0.65%. The source-feasible threshold remains open.
+
+The [proof and reproduction guide](../../../code/frontier_verification/SOURCE_CONSTRAINED_README.md) derives the source-critical strip bootstrap and mixed A/B construction. The [written proof audit](Proof_Audit.md) checks quantifiers, endpoint directions and scope. The [preceding checkpoint](../2026-09-14-aggregate-signed-corner-delta/README.md) supplies the full convex column-family theorem.
+
+- [Results and continuation gates](Source_Constrained_Summary.json).
+- [Canonical source-strip certificate](Source_Strip_Certificate.json), [two mixed A/B noise certificates](Mixed_Noise_Certificate.json) and [independent analytic/source/arithmetic audit](Independent_Source_Constrained_Audit.json).
+- Preserved exploratory [critical strip](Critical_Strip_Exploration.json), [independent strip audit](Independent_Critical_Strip_Audit.json), [rejected near-corner diagnostics](Corner_Pair_Diagnostic.json), [mixed proposals](Complementary_Pair_Proposals.json) and [mixed interval checks](Complementary_Pair_Checks.json).
+- [46 adversarial mutations and five exact controls](Adversary_Audit.json), [seven compiled Lean lemmas](Lean_Check.json) and [source/compiled artifact](Lean_Artifacts.zip).
+- [Twelve command receipts](Execution_Receipts.json), [full logs](Execution_Artifacts.zip), [failed attempt and receipt limitation](Development_Notes.json), [source inventory](Source_Inventory.json), [source snapshot](Source_Snapshot.zip), [manifest](Manifest.json) and [fresh full verification](Verification.json).
+- [Primary source acquisition](Source_Acquisition.json), [inherited sources](Primary_Sources.json), [runtime](Runtime.json) and [inherited inputs](Inherited_Inputs.json).
+- [All 117 research branches](Research_Queue.json) and the [463-event ledger](Branch_Events.jsonl), preserving the 458-event prefix byte for byte.
+
+Any common report within the inherited feature budget cap has a bounded critical root difference. Opposite source constraints then confine the critical roots to a strip of half-width about 1.0342810350341335e-8. Its derivative-column family is a subset of the previously certified nonsingular family. The inherited endpoint signs and a newly verified coordinate 12 face sign give a conditional inverse bound approximately 54.955712129078016. Since the improved lower guarantee lies below the original budget cap, the bootstrap applies under the original observation contract. It does not impose a new external root restriction.
+
+The successful upper constructions choose one free A or B root per noncritical coordinate and pin the opposite observation inside the selected cube endpoint. The21 mixed root variables and alpha=tau/1e-10 form a 22-dimensional system. Free B derivative columns carry a minus sign; the final noise column is the exact constant -2e-10*v. Real interval checks at 768/1024 bits and independent complex scalar checks at 896/1152 bits prove self-mapping contractions on variable cubes of radius 1e-120. All 352 direct source inequalities, positivity/order and cube checks pass. The fixed critical safety increment is explicitly reduced to 1e-24 without changing the root-error radius.
+
+The naive all-free-A corner search produced converged source-feasible centers outside the cube by about 0.000287–0.000288. The failed source and a separate diagnostic retaining all three rejected trials are replayed. Their lower numerical tau values do not certify admissible pairs. One diagnostic receipt omitted its automatic source-hash map because launch and child directories differed; the unchanged receipt, report source hash, archived script and exact replay expose and address that provenance limitation.
+
+Independent real-polynomial Cramer ratios confirm the lower corner. Independent polynomial arithmetic repeats 1128 factorizations and 1208 comparisons; the inherited finite class and 604-column map yield 456 fixed and 148 ambiguous domains at both new common reports. The22-entry source populations below 39/2, selection before root noise, original radius .01 coordinate cube, root error r=U-1e-8<L and 22 finite feature definitions are unchanged.
+
+Seven generic Lean lemmas compile without proof placeholders. The complete concrete secant/contraction and spectral/arithmetic assembly remains partly written or computational. Numerical routes share FLINT and inherited premises. No runtime version changed and no new source roots were computed.
+
+Next: tighter source-feasible bounds and actual pairs, validated parameter families, arbitrary-report bounded-error decoding, larger/global regions or counterexamples and full analytic formalization. All wider natural-operator, infinite-arithmetic, real-part, topology, physical-acquisition and private-input branches remain active. No global completion or exhaustion is claimed.

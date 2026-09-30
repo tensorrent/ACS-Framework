@@ -1,0 +1,367 @@
+{
+  "status": "passed",
+  "source_sha256": "68d6223adfc5a3bf01e095f893d2c7a667124758de1769e493bedd3c685e4e6a",
+  "inputs_sha256": {
+    "Boundary_Pair_Proposals.json": "541869fc94ab6b7c7d5b2bcca13d795fa032a6a25044cbb30fafefe500aee864",
+    "Shifted_Pair_Proposals.json": "95ab1f9c70fe96a97b16450d15763945ffffc95b2190701682303ade7c190e88",
+    "Variable_Noise_Certificate.json": "c3461e37ae38bcc16f35d8155a556c3987c4fae5cdb20ce172c4de6af38198b5",
+    "Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c"
+  },
+  "mutations_rejected": 64,
+  "mutations": [
+    {
+      "name": "post-noise population selection",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "relative feature errors",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "raw roots released",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unknown tail introduced",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "weighted ball substituted for coordinate cube",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "expanded region without certificate",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "fixed feature report contract",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong source discriminant",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing source root",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing source precision",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong source cutoff",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong feature kernel",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "infinite moment substituted",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong midpoint root center",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong root noise radius",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "removed critical safety margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing boundary pair",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing shifted pair",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong pair count",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero direction component",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong signed direction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "critical root included as variable",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "boolean root index",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing root correction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "numerical failure relabeled a solution",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "22 root unknowns claimed",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong system dimension",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong noise variable index",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unscaled noise variable definition",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing tau scale",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative tau scale",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "nonpositive alpha",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "incorrect constant noise column",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "invented noise-column variation",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed variable center",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong variable box radius",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "fixed A critical coordinate erased",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "fixed B critical coordinate erased",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "altered shifted B root",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero inverse row",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "missing inverse row",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "off-equation A correction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "source observation box changed",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "inflated cube margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "erased critical gap",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "undersized tau upper endpoint",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "undersized pair budget",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong exact feature difference factor",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "midpoint reported as Phi(c)",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "midpoint-equality flag reversed",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero feature error falsely claimed",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing direct precision",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "noncontractive direct bound",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero strict self-map margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "corrupt serialized equation residual",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false midpoint enclosure",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false midpoint displacement enclosure",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative serialized radius",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing source inequality",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "inflated source margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false best upper bound",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "undersized convenient budget",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "inflated uniform guarantee",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false threshold ratio",
+      "status": "rejected",
+      "exception": "AssertionError"
+    }
+  ],
+  "fixed_report_scope_control": {
+    "feature_values": [
+      "2",
+      "4"
+    ],
+    "rejected_report": "0",
+    "feasible_midpoint_report": "3",
+    "component_budget": "1",
+    "conclusion": "Failure at one fixed report does not exclude another common report."
+  },
+  "Newton_failure_control": {
+    "polynomial": "x^2-1",
+    "failed_start": "0",
+    "derivative_at_start": "0",
+    "actual_roots": [
+      "-1",
+      "1"
+    ],
+    "conclusion": "A singular Newton step is compatible with exact roots elsewhere."
+  },
+  "scaled_noise_control": {
+    "scale": "1/10",
+    "alpha": "2",
+    "variable_radius": "1/100",
+    "tau_interval": [
+      "199/1000",
+      "201/1000"
+    ],
+    "constant_noise_column": "-1/5",
+    "noise_column_variation": "0"
+  },
+  "scope": "Independent-auditor mutation paths and exact arithmetic controls test scaling, root/noise dimensions, fixed coordinates, source constraints, moving midpoints and the distinction between search failures and impossibility. They do not certify global optimality."
+}

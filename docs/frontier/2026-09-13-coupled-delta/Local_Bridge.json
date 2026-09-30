@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "source_sha256": "acb772740656a79daa8295af788b16ffc18057ccb9d9dca31ef49870d4b063de",
+  "inputs_sha256": {
+    "refined": "c00165764cb584674d849e0244e6c52adad21c8cd62ac91edf4089c1e4c2d04e",
+    "branches": "5477b76414a7bb50491f81dd2e8e231184739501f9a8937c08b28c13fbc8eb46"
+  },
+  "height": 220,
+  "prime": 19,
+  "c19_candidates": [
+    0
+  ],
+  "c361_prior_candidates": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "unramified_partitions": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4
+    ]
+  ],
+  "retained_partitions": [
+    [
+      2,
+      2
+    ]
+  ],
+  "c361_after_local_relation": [
+    4
+  ],
+  "surviving_target_pairs": [
+    {
+      "359": 0,
+      "361": 4
+    }
+  ],
+  "unique_target_coefficients_with_added_local_information": 91,
+  "scope": "Additional local Euler degree relation is explicit and separate from the spectrum-only coefficient-box model. Together with the checked pair separations, it resolves all 91 targets at height 220."
+}

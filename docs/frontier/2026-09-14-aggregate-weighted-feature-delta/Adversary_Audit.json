@@ -1,0 +1,367 @@
+{
+  "status": "passed",
+  "source_sha256": "6056d796bb7c6aca8d51753f42361a3d91b1527f7b9a4be20b6fbf0d5c6e9c65",
+  "inputs_sha256": {
+    "Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "Weighted_Taylor_Exploration.json": "6def5391134d2398f5162b5dcc4eecbc66c54b620a60ee75c6af6df4b9c22543",
+    "Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "Feature_Space_Proposals.json": "419ffb641f73a9efbb8100786671ab6196a073a82c59ff581def6d98249028e1",
+    "Feature_Space_Certificate.json": "8a7185dcd9132f3407652eb6cd5da437b5196b95706541f9ee9f70f1fb1750e9",
+    "Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "Serialized_Endpoint_Diagnosis.json": "985a8706e69838e8da927ffd2cd9075f309da25076204341f9ecdb4010ceb5be",
+    "Augmented_Certificate_Enlarged_v2.json": "226061491ded83386c102c47daaebf544224d251020950be345ff541e3dc73f8",
+    "Augmented_Certificate_Small_v2.json": "37c428f6122f70cdf964ad6126edc2418ab3a141508a0e32324b4492b27c7dc5",
+    "Augmented_Certificate_Local_v2.json": "b443e85ec1be0b6777d26d5fd3be3fb5a971b6e29939ecb3f6e7e60bd1db9086"
+  },
+  "mutations_rejected": 52,
+  "mutations": [
+    {
+      "name": "zero weight",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative weight",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing weight",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong domain geometry",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unsupported larger radius",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong feature dimension",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "moment removed",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed kernel center",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed center vector",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing full inverse row",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong Taylor order",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing point derivative term",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong remainder derivative",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong remainder factorial",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "nonpositive majorant entry",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "truncated majorant",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong exact weighted sum",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false row norm",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "undersized critical supersolution",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false critical bound",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong critical index",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "inflated uniform noise guarantee",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong root noise radius",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false source gap",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "incorrect rounding metadata",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong precision coverage",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false serialized upper enclosure",
+      "surface": "region",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "root versus feature error contract changed",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "raw observations released",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unknown tail introduced",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "post-noise population selection",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero feature direction",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "incorrect direction sign",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "field signs swapped",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative feature budget",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong root error radius",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing inverse target",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero inverse matrix row",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "off-target root correction",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unjustified observation box",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong correction box size",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false local membership",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing scalar source check",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "source margin inflated",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "excluded target relabeled feasible",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing uniform exclusion",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong signed feature difference",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong pair distance",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false ambiguity upper bound",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false guarantee ratio",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "truncated source population",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong source discriminant",
+      "surface": "feature_space",
+      "status": "rejected",
+      "exception": "AssertionError"
+    }
+  ],
+  "exact_Taylor_remainder_counterexample": {
+    "map": "x - (4096/14197)*x^7",
+    "center": "0",
+    "region": [
+      "-1",
+      "1"
+    ],
+    "distinct_equal_image_points": [
+      "3/4",
+      "1"
+    ],
+    "common_image": "10101/14197",
+    "correct_derivative_remainder_bound": "28672/14197",
+    "bound_if_remainder_omitted": "0",
+    "bound_if_divided_by_7_factorial_instead_of_6_factorial": "4096/14197",
+    "conclusion": "The omitted or wrong-factorial bound would falsely imply injectivity; the full order-6 remainder prevents that inference."
+  },
+  "domain_geometry_control": {
+    "eta": "3/100",
+    "weights": [
+      "1/100",
+      "1"
+    ],
+    "point": [
+      "3/200",
+      "0"
+    ],
+    "in_standard_cube": true,
+    "in_weighted_ball": false
+  },
+  "serialization_control": {
+    "exact_endpoint_checks": 1936,
+    "exact_failures": 0,
+    "constructor_inflation_false_rejections": 108
+  },
+  "scope": "Semantic auditor rejection paths and exact mathematical counterexamples test Taylor remainders, weighted geometry, componentwise stability, source feasibility and the distinction between a rejected signed construction and a global impossibility claim."
+}

@@ -1,0 +1,184 @@
+{
+  "actual-A4-field-controls": {
+    "started_utc": "2026-09-14T00:56:33.168499+00:00",
+    "elapsed_seconds": 0.603729,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_quartic_class_controls.py",
+      "--output",
+      "../acs-research/aggregate-classification-audit/A4_Field_Controls.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quartic_class_controls.py": "3ce404d1c48d74c148b64396e74a9e000a80b27107eb55b8a7ae377d2a7def5f"
+    },
+    "stdout_sha256": "9813723f13fe7ba88fd0a19365cf7a5b4b34f4c273b29d23dfdc8a4a4b7c4383",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "classification-input-acquisition": {
+    "started_utc": "2026-09-14T00:50:17.824521+00:00",
+    "elapsed_seconds": 0.647945,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/aggregate-classification-audit/acquire_classification_inputs.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-classification-audit/acquire_classification_inputs.py": "e397786eb3791f293e5d152b2c9796b70ec71d2a7f7ed85c5f1dbb517cffc5c5"
+    },
+    "stdout_sha256": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "complete-class-count-decoding": {
+    "started_utc": "2026-09-14T00:59:25.080846+00:00",
+    "elapsed_seconds": 0.254052,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_class_count_decode.py",
+      "--classification",
+      "../acs-research/aggregate-classification-audit/Full_Quartic_Class.json",
+      "--audit",
+      "../acs-research/aggregate-classification-audit/Full_Class_Audit.json",
+      "--spectra",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum160.json",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum224.json",
+      "--observations",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--output",
+      "../acs-research/aggregate-classification-audit/Complete_Class_Count_Decode.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_class_count_decode.py": "3d910cf101c0464fdff0de566a574bcd3c134767a13182cfe5c6c47b6a6568c3"
+    },
+    "stdout_sha256": "137eab1d57753ffae883963dabcfd966f91b7eefcaf99be785991fbc4aa9f644",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "full-class-and-count-adversary": {
+    "started_utc": "2026-09-14T01:03:53.591587+00:00",
+    "elapsed_seconds": 1.014264,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_full_class_adversary.py",
+      "--classification",
+      "../acs-research/aggregate-classification-audit/Full_Quartic_Class.json",
+      "--metadata",
+      "../acs-research/aggregate-classification-audit/Metadata.json",
+      "--controls",
+      "../acs-research/aggregate-classification-audit/A4_Field_Controls.json",
+      "--decoded",
+      "../acs-research/aggregate-classification-audit/Complete_Class_Count_Decode.json",
+      "--class-audit",
+      "../acs-research/aggregate-classification-audit/Full_Class_Audit.json",
+      "--spectra",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum160.json",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum224.json",
+      "--observations",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--arithmetic",
+      "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json",
+      "--old-decoding",
+      "docs/frontier/2026-09-13-biquadratic-delta/Pair_Decoding.json",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--output",
+      "../acs-research/aggregate-classification-audit/Adversary_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_full_class_adversary.py": "7e64d2eba245bafbf2ebb0a135495d1d592c878962d786db813d771c5129f76f"
+    },
+    "stdout_sha256": "0154a1c03c55fab0f4d971c69cdda0959e3f0555e78d95f6804802deef9939a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "full-quartic-classification": {
+    "started_utc": "2026-09-14T00:52:02.198871+00:00",
+    "elapsed_seconds": 0.045926,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_full_quartic_class.py",
+      "--metadata",
+      "../acs-research/aggregate-classification-audit/Metadata.json",
+      "--output",
+      "../acs-research/aggregate-classification-audit/Full_Quartic_Class.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_full_quartic_class.py": "180184e946f79296ff637719afc9aecf3188496a967f792dafa69718943d6077"
+    },
+    "stdout_sha256": "4272dfad32a6c6cb543904db3d9237065c2be77b283baa70bb9383906e533e47",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-complete-count-audit": {
+    "started_utc": "2026-09-14T01:02:04.958624+00:00",
+    "elapsed_seconds": 0.533345,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_class_count_audit.py",
+      "--decoded",
+      "../acs-research/aggregate-classification-audit/Complete_Class_Count_Decode.json",
+      "--classification",
+      "../acs-research/aggregate-classification-audit/Full_Quartic_Class.json",
+      "--class-audit",
+      "../acs-research/aggregate-classification-audit/Full_Class_Audit.json",
+      "--spectra",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum160.json",
+      "../acs-research/aggregate-classification-audit/Pair_Spectrum224.json",
+      "--observations",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--arithmetic",
+      "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json",
+      "--old-decoding",
+      "docs/frontier/2026-09-13-biquadratic-delta/Pair_Decoding.json",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--output",
+      "../acs-research/aggregate-classification-audit/Complete_Count_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_class_count_audit.py": "bb478b52511f4cb5316d9831a0a9cdb7243f69b99cc1ddef3f179c9f77ff95cb"
+    },
+    "stdout_sha256": "f0fda3b32ad3c596923ae393a12ea21792391744fb5c0566e93c38466e957e60",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-quartic-classification": {
+    "started_utc": "2026-09-14T00:54:16.176716+00:00",
+    "elapsed_seconds": 0.201111,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_full_quartic_audit.py",
+      "--classification",
+      "../acs-research/aggregate-classification-audit/Full_Quartic_Class.json",
+      "--metadata",
+      "../acs-research/aggregate-classification-audit/Metadata.json",
+      "--old-class",
+      "docs/frontier/2026-09-13-biquadratic-delta/Pair_Candidate_Class.json",
+      "--output",
+      "../acs-research/aggregate-classification-audit/Full_Class_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_full_quartic_audit.py": "438051faed4b796173485984f1113ad06b25d4a5e17c746177734dcd6349db07"
+    },
+    "stdout_sha256": "c3aa857fd99b920eedb129c3aed264d5465672b3c2c52d4b0c0f0b875aae68fb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

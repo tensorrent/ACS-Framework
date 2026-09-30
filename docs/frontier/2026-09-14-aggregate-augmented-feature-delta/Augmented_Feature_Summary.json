@@ -1,0 +1,66 @@
+{
+  "recorded_utc": "2026-09-14T04:43:14.823826+00:00",
+  "result": "Actual-source collisions survive joint observables through dimension 21; a certified local 22-feature map is injective, yet bounded feature measurement error restores ambiguity in the same neighborhood.",
+  "derived_results": {
+    "collision_dimensions": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "critical_splits": [
+      "1e-8",
+      "1e-12",
+      "1e-18"
+    ],
+    "certified_collision_count": 12,
+    "complete_source_population": 22,
+    "source_cutoff": "39/2",
+    "largest_split_root_error_radius": "90839418064418614701455025847221831488999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+    "largest_split_strict_improvement_below_L": "4999999999999999999999/500000000000000000000000000000",
+    "correction_box_radius": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "uniform_source_root_box_checks": 1056,
+    "independent_scalar_coordinate_inequalities": 2112,
+    "direct_interval_precisions": [
+      640,
+      896
+    ],
+    "independent_complex_Taylor_precision": 768,
+    "local_injective_feature_dimension": 22,
+    "local_neighborhood_radius": "1/10000000000",
+    "local_derivative_defect_bound": "1/2",
+    "inverse_Lipschitz_bound": "1641498175293314952578508115624454094780665817735571572336319385362409359358503660495093829597621321581081219321910632682258623245341666985508858461085819932848221068504549913/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "local_collision_membership": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "full_preconditioner_modular_determinant": 62994,
+    "center_43_feature_differences_display": {
+      "Enlarged": -9.090178056650613e-08,
+      "Small": -9.019270289808756e-12,
+      "Local": -9.019263211683786e-18
+    },
+    "noisy_22_feature_error_bound": "1/200000000000000000",
+    "explicit_last_feature_offset": "-9/2000000000000000000",
+    "independent_polynomial_factorizations": 1128,
+    "coefficient_comparisons": 1208,
+    "fixed_arithmetic_coefficients": 456,
+    "ambiguous_arithmetic_coefficients": 148,
+    "mutations_rejected": 45,
+    "exact_zero_margin_controls": 16,
+    "binary64_false_negative_margins": 8,
+    "Lean_lemmas": 6,
+    "new_source_roots_computed": 0,
+    "global_injectivity_established": false,
+    "optimal_measurement_noise_threshold_established": false
+  },
+  "source_premises": "Inherited complete discriminant-576 two-field metadata class and complete 22-entry positive source prefixes below 39/2. Source selection precedes coordinate errors; every entry and multiplicity remains.",
+  "joint_features": "Seventeen original finite Gaussians, then the finite rational moment, center 37, changed-width center 2, center 41 and center 43. No raw roots, counts or unknown tails are implicitly included.",
+  "existence_proof": "Twelve rational correction boxes are strict self-mapping contractions by real interval Jacobians and independent complex Taylor bounds. Modular preconditioner nonsingularity and exact source inclusions make the exact feature equalities feasible for both actual fields.",
+  "local_result": "The selected 22-feature map is injective on the closed infinity-norm box of radius 1e-10 about the rational midpoint list. All epsilon=1e-18 collisions are inside it; the 21-feature witness is distinguished by the final feature.",
+  "measurement_noise": "At tau=5e-18, use the exact first 21 B features and the last B feature minus 4.5e-18. Both actual fields realize this noisy 22-feature release inside the local neighborhood. Root-coordinate and feature-measurement errors are distinct stages.",
+  "formal_scope": "Six new Lean lemmas check the local defect-to-injectivity/stability logic and scope controls. The vector mean-value/row-norm, interval, modular matrix, field and spectral bridges remain written/computational.",
+  "open_gates": "Global injectivity over admissible observation sets, sharp root/feature noise tradeoffs, validated parameter families, stronger neighborhoods and conditioning, physical precision and acquisition contracts, and broader ACS branches remain open."
+}

@@ -1,0 +1,2447 @@
+{
+  "recorded_utc": "2026-09-13T21:58:19.977316+00:00",
+  "result": "Noise-adapted rational multipliers and one-sided continuum error bounds recover coefficient seven through tested radii 0.06 and 0.13 in the two aggregate spectra.",
+  "input_contract": [
+    "degree four",
+    "signature (0,2)",
+    "discriminant 576",
+    "complete aggregate finite critical-line root intervals through 20",
+    "generic coefficient boxes 0..4"
+  ],
+  "not_optimizer_inputs": [
+    "local models",
+    "Galois group",
+    "field candidate catalogue",
+    "defining polynomial",
+    "subfields",
+    "conductor-parity assignment",
+    "held-out arithmetic"
+  ],
+  "coefficient_target": 7,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "new_roots_computed": 0,
+  "derived_results": {
+    "producer_radius_results": {
+      "224": [
+        {
+          "observation_index": 0,
+          "radius": "0",
+          "methods": {
+            "frozen_direct_one_sided": [
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/500",
+          "methods": {
+            "frozen_direct_one_sided": [
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/200",
+          "methods": {
+            "frozen_direct_one_sided": [
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/20",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "3/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "7/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/10",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "13/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "7/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/5",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "0",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/500",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/200",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/20",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "3/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "7/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/10",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "13/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "7/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2
+            ],
+            "noise_adapted_direct_one_sided": [
+              0,
+              1
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/5",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "noise_adapted_direct_one_sided": [
+              0,
+              1
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      "320": [
+        {
+          "observation_index": 0,
+          "radius": "0",
+          "methods": {
+            "frozen_direct_one_sided": [
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/500",
+          "methods": {
+            "frozen_direct_one_sided": [
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/200",
+          "methods": {
+            "frozen_direct_one_sided": [
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/20",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "3/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "7/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/10",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "13/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "7/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 0,
+          "radius": "1/5",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_direct_one_sided": [
+              2,
+              3,
+              4
+            ],
+            "noise_adapted_symmetric_derivative": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "0",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/500",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/200",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/20",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "3/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "7/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0
+            ],
+            "frozen_symmetric_derivative": [
+              0
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/10",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "13/100",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1
+            ],
+            "noise_adapted_direct_one_sided": [
+              0
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "7/50",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2
+            ],
+            "noise_adapted_direct_one_sided": [
+              0,
+              1
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "observation_index": 1,
+          "radius": "1/5",
+          "methods": {
+            "frozen_direct_one_sided": [
+              0,
+              1,
+              2
+            ],
+            "frozen_symmetric_derivative": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "noise_adapted_direct_one_sided": [
+              0,
+              1
+            ],
+            "noise_adapted_symmetric_derivative": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "independently_audited_radius_results": [
+      {
+        "observation_index": 0,
+        "radius": "0",
+        "methods": {
+          "frozen_direct_one_sided": [
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/500",
+        "methods": {
+          "frozen_direct_one_sided": [
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/200",
+        "methods": {
+          "frozen_direct_one_sided": [
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/20",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "13/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/5",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "0",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/500",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/200",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/20",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "13/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2
+          ],
+          "noise_adapted_direct_one_sided": [
+            0,
+            1
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/5",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "noise_adapted_direct_one_sided": [
+            0,
+            1
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "supported_radius_results": [
+      {
+        "observation_index": 0,
+        "radius": "0",
+        "methods": {
+          "frozen_direct_one_sided": [
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/500",
+        "methods": {
+          "frozen_direct_one_sided": [
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/200",
+        "methods": {
+          "frozen_direct_one_sided": [
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/20",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "13/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/5",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_direct_one_sided": [
+            2,
+            3,
+            4
+          ],
+          "noise_adapted_symmetric_derivative": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "0",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/500",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/200",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/20",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0
+          ],
+          "frozen_symmetric_derivative": [
+            0
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "13/100",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1
+          ],
+          "noise_adapted_direct_one_sided": [
+            0
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/50",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2
+          ],
+          "noise_adapted_direct_one_sided": [
+            0,
+            1
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/5",
+        "methods": {
+          "frozen_direct_one_sided": [
+            0,
+            1,
+            2
+          ],
+          "frozen_symmetric_derivative": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "noise_adapted_direct_one_sided": [
+            0,
+            1
+          ],
+          "noise_adapted_symmetric_derivative": [
+            0,
+            1
+          ]
+        }
+      }
+    ],
+    "largest_successful_tested_radii": {
+      "frozen_direct_one_sided": [
+        "1/500",
+        "7/100"
+      ],
+      "frozen_symmetric_derivative": [
+        "1/500",
+        "7/100"
+      ],
+      "noise_adapted_direct_one_sided": [
+        "3/50",
+        "13/100"
+      ],
+      "noise_adapted_symmetric_derivative": [
+        "1/50",
+        "1/10"
+      ]
+    },
+    "precision_subdivision_differences": [
+      {
+        "observation_index": 0,
+        "radius": "7/50",
+        "method": "noise_adapted_symmetric_derivative",
+        "coarse_candidates": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "finer_candidates": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "independent_candidate_improvements": [
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "sign": 1,
+        "multiplier_source": "noise_adapted",
+        "method": "symmetric_derivative",
+        "producer_candidates": [
+          0,
+          1
+        ],
+        "independent_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/5",
+        "sign": 1,
+        "multiplier_source": "noise_adapted",
+        "method": "symmetric_derivative",
+        "producer_candidates": [
+          0,
+          1,
+          2
+        ],
+        "independent_candidates": [
+          0,
+          1
+        ]
+      }
+    ],
+    "generic_unramified_values": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "generic_unramified_supplement": [
+      {
+        "observation_index": 0,
+        "radius": "0",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/500",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/200",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/100",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/50",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/20",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/50",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/100",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "13/100",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "7/50",
+        "c7_candidates": [
+          4
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/5",
+        "c7_candidates": [
+          2,
+          4
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "0",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/500",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/200",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/100",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/50",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/20",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/100",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "13/100",
+        "c7_candidates": [
+          0
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "7/50",
+        "c7_candidates": [
+          0,
+          1
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/5",
+        "c7_candidates": [
+          0,
+          1
+        ]
+      }
+    ],
+    "largest_tested_unramified_supplement_radii": [
+      "7/50",
+      "13/100"
+    ]
+  },
+  "sampled_proposals": 48,
+  "exploratory_proposals": 36,
+  "stored_midpoints_checked": 158400,
+  "fresh_quadratic_interval_leaves": 126720,
+  "exact_objective_bounds": 192,
+  "independent_displaced_controls": 192,
+  "certified_off_grid_counterexamples": 2,
+  "actual_component_mutations_rejected": 8,
+  "scope": "Only coefficient seven is studied under these widened inputs. Same-grid frozen radii are 0.002 and 0.07; the preceding B grid had no 0.07 sample. Derivative ablations retain subdivision differences and independent improvements. The optional unramified-prime supplement uses separately declared local information. Surviving candidates do not prove actual ambiguity or optimal radii.",
+  "full_proof_formalized": false,
+  "next_gate": "Combine finite Gaussian changes with the known-moment change of the same displaced roots before maximizing separate budgets; extend noisy recovery beyond coefficient seven and investigate constructive/global ambiguity."
+}

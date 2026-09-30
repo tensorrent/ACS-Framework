@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-09-13T16:57:10.510651+00:00",
+  "sources": [
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html",
+      "use": "HiGHS interface, inequality marginals, integrality option and solver status. The installed runtime version is recorded separately; the certification argument does not trust float solver output."
+    },
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "locator": "Theorems 3.34-3.35",
+      "use": "Previously sourced degree sum and discriminant criterion, used only in the explicitly separate local bridge."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "locator": "Section 2, equations (1)-(2)",
+      "use": "Inherited Gaussian Weil-Poitou identity, with conventions and admissibility already derived in the explicit-formula checkpoint."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "locator": "Section 2, equations (2.1)-(2.7)",
+      "use": "Inherited unconditional Euler/Hadamard moment argument at s=2; later GRH-dependent bounds are not used."
+    }
+  ],
+  "scope": "New exclusion, dual, separation and derivative arguments are derived directly in COUPLED_README.md. Source documents remain linked rather than redistributed."
+}

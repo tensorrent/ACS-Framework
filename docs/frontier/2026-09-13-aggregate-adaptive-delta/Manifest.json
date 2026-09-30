@@ -1,0 +1,95 @@
+{
+  "recorded_utc": "2026-09-13T23:09:39.275196+00:00",
+  "baseline_commit": "9671d57eccf4acaa67413a2ef40961cde5cdb139",
+  "files": {
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Adaptive_Audit.json": {
+      "bytes": 3617753,
+      "sha256": "4609886f105bca08a5d4c849c9d8fb7b131d8a5cb4df7c8a6294af3f5562fe89"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Adaptive_Feedback.zip": {
+      "bytes": 20584987,
+      "sha256": "e38ddc8fc0f44f93645cb6110b6295a6b8b99557ad86c5d364d0226ee9bd65dc"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Adaptive_Summary.json": {
+      "bytes": 11110,
+      "sha256": "f4f2e6fdc6d83cb3c5457b776826f65d9d4be97489d2307d96966ba8a9426408"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Adversary_Audit.json": {
+      "bytes": 9774,
+      "sha256": "45e3da89de8d2276d3ad2d9b89c082850b5ab3189c00554f8ee82ea8e603f8b3"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Audit_Closure.json": {
+      "bytes": 4031974,
+      "sha256": "aecefbdd2b162939e2f24f08158f9569c00b7e58b6f60f3dd7cec1bc9a87d3c2"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Branch_Events.jsonl": {
+      "bytes": 399787,
+      "sha256": "d0ed780fb0d0beeb6482856b7896c878ab29d33c8d23baeb249a0f43652c17e8"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Development_Notes.json": {
+      "bytes": 2314,
+      "sha256": "cc01babe5dfae8f6286a83cca1f98cbf638fc500ef98311c65c0499268450480"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Execution_Artifacts.zip": {
+      "bytes": 5053,
+      "sha256": "ce30086302c9f12751eb8062cc39ffb1e3f4d9de52f97915141e0ee0e9711c72"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Execution_Receipts.json": {
+      "bytes": 5916,
+      "sha256": "19a6477f38a6c204dbcbf697d66df06f90904b0f407b9fc16d1c81cf161a117b"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Inherited_Inputs.json": {
+      "bytes": 1234,
+      "sha256": "e925d753f0201441d2ab954e859a2cbcfedd8a3426515959d080db5c8a3e5a1b"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Primary_Sources.json": {
+      "bytes": 1812,
+      "sha256": "0e4f3254253088621c0f7e86ed1239f7f92354c8c4a9a83af5b07f9dc671501b"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/README.md": {
+      "bytes": 3410,
+      "sha256": "0a7ec0898b1ece33267aec20c63523473bd82c2f8cf95ba86591f117b3be4d49"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Research_Queue.json": {
+      "bytes": 234056,
+      "sha256": "a6ff0c40579ee9d6b6107ab62f3e5b6480dbaff9282deefe70d5cbdbc3052d98"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Runtime.json": {
+      "bytes": 1161,
+      "sha256": "d59c1e5bad30ca740dddb449b2f8970a96919e1c937d97b15ec449a003170ac0"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Source_Inventory.json": {
+      "bytes": 2988,
+      "sha256": "fb0a50419544811dfe6c6cb64668f6e7de418313ac1319ca2b7e40f9a9672f3b"
+    },
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Source_Snapshot.zip": {
+      "bytes": 74771,
+      "sha256": "18d192ac07f84f5fbed21a7a2e38d5d49110a043dece31fd75f9b4968ea2dd3d"
+    },
+    "code/frontier_verification/dedekind_aggregate_adaptive.py": {
+      "bytes": 9619,
+      "sha256": "d21530982f6202bdc117edae5ea9029167563ac0f21a49d2300b936ed1997550"
+    },
+    "code/frontier_verification/dedekind_aggregate_adaptive_audit.py": {
+      "bytes": 14297,
+      "sha256": "5d79e6371a32e6e6e4960c5fc389e8c1f622b7033bf7f16141891b8708a354d8"
+    },
+    "code/frontier_verification/dedekind_aggregate_adaptive_closure.py": {
+      "bytes": 5599,
+      "sha256": "60664fa866b19d541b1413d27852ac769412715dca4de4418b2988d2150c795c"
+    },
+    "code/frontier_verification/dedekind_aggregate_adaptive_adversary.py": {
+      "bytes": 10214,
+      "sha256": "0fc9485da0a814ea17fcdd3d44ee9ebc1046c90fa69cf80e4314c8ddae7c196f"
+    },
+    "code/frontier_verification/verify_aggregate_adaptive_delta.py": {
+      "bytes": 9624,
+      "sha256": "f96c01d0ac0f9f1628be8a53f5163a85f34fe0fb948e492b20b5b46a00040450"
+    },
+    "code/frontier_verification/AGGREGATE_ADAPTIVE_README.md": {
+      "bytes": 7923,
+      "sha256": "00b2084e67b8ee78114c79f3a715365fea4b9895e3a70c2430bd76d2d40e2d51"
+    }
+  },
+  "scope": "Manifest and Verification excluded from self-reference; preceding checkpoint verified recursively."
+}

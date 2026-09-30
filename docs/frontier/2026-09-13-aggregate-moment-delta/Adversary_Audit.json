@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "source_sha256": "1ef60cb00a23e5e576a575f786894d7ff7f7b7e969664ca803a964e0c33ca6d3",
+  "inputs_sha256": {
+    "Moment_Certificate.json": "0b23ba324c6bf8fa29c75ee2d945e5b100b73af1fa7469b2c77e843735f64d0d",
+    "Moment_Feedback.json": "9838f90309789cf7b31f87c16cd2115046b51bf79ea47fcc0f452e790c0321ed",
+    "Moment_Audit.json": "054565ed461f8cc4a508db6d7cef8c4b13ebbc5edd450a47888e7865bc2c3eed",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Moment_Proposals.json": "0fce20097d84f57f5d34a5f4fc579c5d9e23706ce56c523713cc97d07d5b6ebd",
+    "Proposals.json": "bc2124199dac798e7d08aa0e73691a1c7dfdf1ca1b574759d3a8390edc8c7ed5",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 10,
+  "controls": [
+    {
+      "name": "remove_pair_normalization_from_known_moment",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The original moment enclosure must contain the independently evaluated rational function 12/(9+4t^2).",
+      "original_component_sha256": "8ddda47695d36d36f511cda0dbca4bb92f45b7f7ab81c7ffc05e95be188b95e6",
+      "mutated_component_sha256": "63a5ec74c2b3269eebc314326412024897c20de6a9b3aa683cfd84c1c2600c24"
+    },
+    {
+      "name": "drop_one_joint_cover_leaf",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Joint increments require a complete rational cover of every allowed root value.",
+      "original_component_sha256": "bb8aea1075c2c63f123d2adb1f5d2c071597504ea3fbf6fe5cf6284d9e554885",
+      "mutated_component_sha256": "3d0c725b37628807a9f5b39566fb1d8c9cd5851f3bb0db0aaf0499ae437be12a"
+    },
+    {
+      "name": "replace_joint_leaf_with_finite_only_leaf",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "An independently evaluated joint midpoint change at observation 0, target 2, root 19 lies outside the finite-only leaf enclosure.",
+      "original_component_sha256": "bae6e9daced7803c8fbe085e398af30ee3c1f3facd32eaf5aa2f3872efda79be",
+      "mutated_component_sha256": "ed44eda626cf605eba6db548f75b750efab8696a8ceee043231df0f2cdb238d4"
+    },
+    {
+      "name": "freeze_known_moment_while_moving_root",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Both changes increase across the one-root interval. The joint endpoint exceeds the full finite-only maximum, so freezing the baseline moment omits a strictly positive budget term.",
+      "original_component_sha256": "8c1679f60b89a7d65e566ff12d56fcc8de4cfc9e89b02db34429d45e74cd908b",
+      "mutated_component_sha256": "06b5d677abc2569978842eca3bcf949e479e2edd86ddaf8cf64b67a0bec1af2c"
+    },
+    {
+      "name": "negative_dual_multiplier",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Exact integer weighted inequalities require nonnegative rational multipliers.",
+      "original_component_sha256": "be7f522593e8670d2f075d9fc25a3e5edb2431113b39a143c350b597de1cc07f",
+      "mutated_component_sha256": "072ff7c25e364960fa568057bd17e9751b2862e29e5816e61d1845354d07f666"
+    },
+    {
+      "name": "remove_held_out_true_coefficient",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The strict rational objective gap must fail when the independently established actual coefficient is substituted for the excluded candidate.",
+      "original_component_sha256": "0049a3795f47e2c728e5a0c4c6d1ed9f306041e05117255081bf1b6ffc410bff",
+      "mutated_component_sha256": "49883b66d052d8f78c4959d27ea091f84bc64f86cf991a8248b82d02b0fe29b7"
+    },
+    {
+      "name": "discard_validated_domain_prerequisites",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The new residual-support exclusion depends on validated coefficient domains; resetting every box to 0..4 destroys its strict gap.",
+      "original_component_sha256": "6bf2d0f9042fffa2cfe08ffe9e7b740a49d5210f00e394fcd49e46ab38610b9a",
+      "mutated_component_sha256": "ebf4baf4d68ecb227c478a8156923893363dbbc9a3e214cd2bc3fbd7c91eb965"
+    },
+    {
+      "name": "reuse_zero_noise_domains_at_radius_point_one",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Initial domains must come from certificates for the declared noisy input, not from the zero-radius case.",
+      "original_component_sha256": "346eece8eeae797f13a0d7b00ae70a98bc9fe26ac4aed1b82bc4d3e499c716af",
+      "mutated_component_sha256": "332efb711aa077f236854d73ae95f06e0f83d403687e5bacd880dfe499382808"
+    },
+    {
+      "name": "drop_generic_local_model",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The complete model catalogue must match the independent degree-partition enumeration.",
+      "original_component_sha256": "cbcf0d7f111da676835aebe2c8f5ef12df917687d196b94882693ac2e998a46a",
+      "mutated_component_sha256": "6c01cb577401e9604426bc07412f1dd0ba13b089711a164b5e51a44f913ccd6a"
+    },
+    {
+      "name": "admit_ramified_model_at_seven",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The inserted model matches the noisy coefficient domains but violates the declared discriminant-ramification rule at seven.",
+      "original_component_sha256": "3e32f55b00df7c03b73b839e48df293092f2b8a0ee58fdb7a21ac7c8371d5134",
+      "mutated_component_sha256": "d7f3803e42397266ecf570a661304b1a3502293014c88bfe8b2d25978d971ec0"
+    }
+  ],
+  "search_probes": [
+    {
+      "name": "finite_only_leaf_substitution",
+      "witness_found": true
+    }
+  ],
+  "frozen_moment_counterexample": {
+    "observation_index": 0,
+    "root_index": 0,
+    "row_index": 0,
+    "radius": "1/200",
+    "finite_derivative": {
+      "mid": [
+        34645937377635467839962292615941227393516939428401305491026995454070643783006361389017946078782487120120087223857471,
+        -383
+      ],
+      "rad": [
+        141113141,
+        -35
+      ]
+    },
+    "joint_derivative": {
+      "mid": [
+        34646371431931237449821930508855077777262012102358469121317067592416470805422296108955123661017422389279797572535295,
+        -383
+      ],
+      "rad": [
+        564464349,
+        -37
+      ]
+    },
+    "finite_endpoint_change": {
+      "mid": [
+        346328306002886239958813165220060946679466360904756041092094213428124286378393933615882258411908092885178322255045,
+        -384
+      ],
+      "rad": [
+        300917081,
+        -126
+      ]
+    },
+    "joint_endpoint_change": {
+      "mid": [
+        22165288837223539640955414984166551562796369094675578962313461787079650559883348103932372966441229102461953100075501,
+        -390
+      ],
+      "rad": [
+        300920823,
+        -126
+      ]
+    },
+    "strict_gap": {
+      "mid": [
+        277253038820283591372401162633696287237311744238244711496160651733328498310553873439307317895190367565206167725,
+        -390
+      ],
+      "rad": [
+        300920823,
+        -126
+      ]
+    },
+    "scope": "A unit measurement multiplier and uncertainty in one inherited root give a counterexample for the analytic budget expression. Other roots stay fixed. This does not assert that unknown zeros attain the tail bound or construct an alternate number field."
+  },
+  "scope": "Semantic component mutations test moment normalization, continuous covers, moment coupling, nonnegative duals, local/dual prerequisites, noise-radius provenance and local assumptions. The one-root counterexample concerns the analytic error-budget expression, not actual attainment of the unknown-zero bound or global field ambiguity."
+}

@@ -1,0 +1,507 @@
+{
+  "status": "finite_audit_passed_general_matching_proof_pending",
+  "source_sha256": "24a774e10d483fa2b2d1e3250992d662ff60f57d964927e3f21ca8d67f0314ed",
+  "inputs_sha256": {
+    "Population_Observation_Proposal.json": "d7a95dee6dc46c72134b79d40be3d3d6baef9761b0bb17bee7f1e28b66e3a055",
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09"
+  },
+  "cases": [
+    {
+      "precision_bits": 160,
+      "DP_lower": "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "DP_upper": "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+      "bound_gap": "1/500000000000000000000000000000",
+      "DP_states": [
+        90,
+        90
+      ],
+      "lower_path": [
+        {
+          "move": "match",
+          "a_index": 0,
+          "b_index": 0
+        },
+        {
+          "move": "match",
+          "a_index": 1,
+          "b_index": 1
+        },
+        {
+          "move": "match",
+          "a_index": 2,
+          "b_index": 2
+        },
+        {
+          "move": "match",
+          "a_index": 3,
+          "b_index": 3
+        },
+        {
+          "move": "match",
+          "a_index": 4,
+          "b_index": 4
+        },
+        {
+          "move": "match",
+          "a_index": 5,
+          "b_index": 5
+        },
+        {
+          "move": "match",
+          "a_index": 6,
+          "b_index": 6
+        },
+        {
+          "move": "match",
+          "a_index": 7,
+          "b_index": 7
+        },
+        {
+          "move": "match",
+          "a_index": 8,
+          "b_index": 8
+        },
+        {
+          "move": "match",
+          "a_index": 9,
+          "b_index": 9
+        },
+        {
+          "move": "match",
+          "a_index": 10,
+          "b_index": 10
+        },
+        {
+          "move": "match",
+          "a_index": 11,
+          "b_index": 11
+        },
+        {
+          "move": "match",
+          "a_index": 12,
+          "b_index": 12
+        },
+        {
+          "move": "match",
+          "a_index": 13,
+          "b_index": 13
+        },
+        {
+          "move": "match",
+          "a_index": 14,
+          "b_index": 14
+        },
+        {
+          "move": "match",
+          "a_index": 15,
+          "b_index": 15
+        },
+        {
+          "move": "match",
+          "a_index": 16,
+          "b_index": 16
+        },
+        {
+          "move": "delete_A",
+          "a_index": 17,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 18,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 19,
+          "b_index": 18
+        },
+        {
+          "move": "match",
+          "a_index": 20,
+          "b_index": 19
+        },
+        {
+          "move": "match",
+          "a_index": 21,
+          "b_index": 20
+        },
+        {
+          "move": "match",
+          "a_index": 22,
+          "b_index": 21
+        }
+      ],
+      "upper_path": [
+        {
+          "move": "match",
+          "a_index": 0,
+          "b_index": 0
+        },
+        {
+          "move": "match",
+          "a_index": 1,
+          "b_index": 1
+        },
+        {
+          "move": "match",
+          "a_index": 2,
+          "b_index": 2
+        },
+        {
+          "move": "match",
+          "a_index": 3,
+          "b_index": 3
+        },
+        {
+          "move": "match",
+          "a_index": 4,
+          "b_index": 4
+        },
+        {
+          "move": "match",
+          "a_index": 5,
+          "b_index": 5
+        },
+        {
+          "move": "match",
+          "a_index": 6,
+          "b_index": 6
+        },
+        {
+          "move": "match",
+          "a_index": 7,
+          "b_index": 7
+        },
+        {
+          "move": "match",
+          "a_index": 8,
+          "b_index": 8
+        },
+        {
+          "move": "match",
+          "a_index": 9,
+          "b_index": 9
+        },
+        {
+          "move": "match",
+          "a_index": 10,
+          "b_index": 10
+        },
+        {
+          "move": "match",
+          "a_index": 11,
+          "b_index": 11
+        },
+        {
+          "move": "match",
+          "a_index": 12,
+          "b_index": 12
+        },
+        {
+          "move": "match",
+          "a_index": 13,
+          "b_index": 13
+        },
+        {
+          "move": "match",
+          "a_index": 14,
+          "b_index": 14
+        },
+        {
+          "move": "match",
+          "a_index": 15,
+          "b_index": 15
+        },
+        {
+          "move": "match",
+          "a_index": 16,
+          "b_index": 16
+        },
+        {
+          "move": "delete_A",
+          "a_index": 17,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 18,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 19,
+          "b_index": 18
+        },
+        {
+          "move": "match",
+          "a_index": 20,
+          "b_index": 19
+        },
+        {
+          "move": "match",
+          "a_index": 21,
+          "b_index": 20
+        },
+        {
+          "move": "match",
+          "a_index": 22,
+          "b_index": 21
+        }
+      ],
+      "endpoint_inclusions": 88,
+      "pair_rows_replayed": 506,
+      "threshold_boundary_checks": 4,
+      "all_actual_root_intervals_contained_in_common_observation_boxes": true
+    },
+    {
+      "precision_bits": 224,
+      "DP_lower": "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "DP_upper": "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+      "bound_gap": "1/500000000000000000000000000000",
+      "DP_states": [
+        90,
+        90
+      ],
+      "lower_path": [
+        {
+          "move": "match",
+          "a_index": 0,
+          "b_index": 0
+        },
+        {
+          "move": "match",
+          "a_index": 1,
+          "b_index": 1
+        },
+        {
+          "move": "match",
+          "a_index": 2,
+          "b_index": 2
+        },
+        {
+          "move": "match",
+          "a_index": 3,
+          "b_index": 3
+        },
+        {
+          "move": "match",
+          "a_index": 4,
+          "b_index": 4
+        },
+        {
+          "move": "match",
+          "a_index": 5,
+          "b_index": 5
+        },
+        {
+          "move": "match",
+          "a_index": 6,
+          "b_index": 6
+        },
+        {
+          "move": "match",
+          "a_index": 7,
+          "b_index": 7
+        },
+        {
+          "move": "match",
+          "a_index": 8,
+          "b_index": 8
+        },
+        {
+          "move": "match",
+          "a_index": 9,
+          "b_index": 9
+        },
+        {
+          "move": "match",
+          "a_index": 10,
+          "b_index": 10
+        },
+        {
+          "move": "match",
+          "a_index": 11,
+          "b_index": 11
+        },
+        {
+          "move": "match",
+          "a_index": 12,
+          "b_index": 12
+        },
+        {
+          "move": "match",
+          "a_index": 13,
+          "b_index": 13
+        },
+        {
+          "move": "match",
+          "a_index": 14,
+          "b_index": 14
+        },
+        {
+          "move": "match",
+          "a_index": 15,
+          "b_index": 15
+        },
+        {
+          "move": "match",
+          "a_index": 16,
+          "b_index": 16
+        },
+        {
+          "move": "delete_A",
+          "a_index": 17,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 18,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 19,
+          "b_index": 18
+        },
+        {
+          "move": "match",
+          "a_index": 20,
+          "b_index": 19
+        },
+        {
+          "move": "match",
+          "a_index": 21,
+          "b_index": 20
+        },
+        {
+          "move": "match",
+          "a_index": 22,
+          "b_index": 21
+        }
+      ],
+      "upper_path": [
+        {
+          "move": "match",
+          "a_index": 0,
+          "b_index": 0
+        },
+        {
+          "move": "match",
+          "a_index": 1,
+          "b_index": 1
+        },
+        {
+          "move": "match",
+          "a_index": 2,
+          "b_index": 2
+        },
+        {
+          "move": "match",
+          "a_index": 3,
+          "b_index": 3
+        },
+        {
+          "move": "match",
+          "a_index": 4,
+          "b_index": 4
+        },
+        {
+          "move": "match",
+          "a_index": 5,
+          "b_index": 5
+        },
+        {
+          "move": "match",
+          "a_index": 6,
+          "b_index": 6
+        },
+        {
+          "move": "match",
+          "a_index": 7,
+          "b_index": 7
+        },
+        {
+          "move": "match",
+          "a_index": 8,
+          "b_index": 8
+        },
+        {
+          "move": "match",
+          "a_index": 9,
+          "b_index": 9
+        },
+        {
+          "move": "match",
+          "a_index": 10,
+          "b_index": 10
+        },
+        {
+          "move": "match",
+          "a_index": 11,
+          "b_index": 11
+        },
+        {
+          "move": "match",
+          "a_index": 12,
+          "b_index": 12
+        },
+        {
+          "move": "match",
+          "a_index": 13,
+          "b_index": 13
+        },
+        {
+          "move": "match",
+          "a_index": 14,
+          "b_index": 14
+        },
+        {
+          "move": "match",
+          "a_index": 15,
+          "b_index": 15
+        },
+        {
+          "move": "match",
+          "a_index": 16,
+          "b_index": 16
+        },
+        {
+          "move": "delete_A",
+          "a_index": 17,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 18,
+          "b_index": 17
+        },
+        {
+          "move": "match",
+          "a_index": 19,
+          "b_index": 18
+        },
+        {
+          "move": "match",
+          "a_index": 20,
+          "b_index": 19
+        },
+        {
+          "move": "match",
+          "a_index": 21,
+          "b_index": 20
+        },
+        {
+          "move": "match",
+          "a_index": 22,
+          "b_index": 21
+        }
+      ],
+      "endpoint_inclusions": 88,
+      "pair_rows_replayed": 506,
+      "threshold_boundary_checks": 4,
+      "all_actual_root_intervals_contained_in_common_observation_boxes": true
+    }
+  ],
+  "scope": "Dynamic programming independently obtains the rational bounds without choosing a deleted index in advance. Boolean reachability tests both boundaries. Explicit common observations contain both actual source interval sets after the declared deletion. A general uncrossing proof, fixed-population classifier audit and semantic adversary are still required before packaging a new research checkpoint."
+}

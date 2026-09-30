@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "source_sha256": "1c13ac063d97a864d7d0283418f99e6a6e1bb71d6103f4d5277b58c4941036ea",
+  "checker_sha256": "5520972163b9c1516b8156243f54ff6b73b07b6a4a622c0fbb79c0edfb28d54f",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-nested-audit/Lean_Check.olean",
+    "NoiseBoxTransfer.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'NoiseBoxTransfer.interval_member' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoiseBoxTransfer.box_member' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoiseBoxTransfer.certificate_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoiseBoxTransfer.reverse_inclusion_fails' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "11ae9aa7cddda06319a6a0a7823c4ec8750b09b0cfa4172276a9317cd11584e1",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "interval_member",
+    "box_member",
+    "certificate_transfer",
+    "reverse_inclusion_fails"
+  ],
+  "scope": "Checks scalar and coordinatewise interval inclusion, transfer of an arbitrary universally valid box predicate to a contained box, and failure of the reverse inclusion. The explicit formula, numerical budgets, arithmetic/local premises and file lineage are not formalized here."
+}

@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-09-14T01:20:31.612295+00:00",
+  "recorded_commands": 7,
+  "successful_commands": 7,
+  "failed_commands": 0,
+  "recording_scope": "Seven source-acquisition, classification, actual-field, count-decoding and adversarial commands. Packaging and final recursive verification are separate.",
+  "failures": [],
+  "freeze_boundary": "Every executed instrument is unchanged. Earlier dated checkpoints and pinned instruments remain unchanged. No new package dependencies, roots or measurement rows were introduced.",
+  "method_delta": "Derive the complete field class from metadata by excluding an A4 normal closure using its cyclic cubic quotient, local wild ramification and Minkowski. Then determine exactly which arithmetic information a certified aggregate count contributes.",
+  "independence": "Generator closure versus exhaustive subgroup subsets with opposite composition and cycle parity; square-class planes versus all sign-valued functions modulo 24; order trace discriminants and exhaustive projective nonintegrality checks versus round_two; multiplication characteristic polynomials versus Newton traces; factor-root template construction versus held-out aggregate roots; interval envelopes versus dynamic attainable-count sets; character coefficients versus 1128 local polynomial factorizations.",
+  "shared_backend_limits": "Exact algebraic methods share Python and SymPy/FLINT in places. Independent formulations are not independent software stacks. Candidate spectral enclosures and completeness certificates are inherited and recursively verified; no new transcendental certification is claimed.",
+  "arithmetic_scope": "The written arithmetic bridge is supported by primary references and finite checks but is not a Lean proof. Two actual A4 fields show that dropping ramified-prime support or the small 3-adic discriminant exponent invalidates the obstruction.",
+  "information_scope": "The original benchmark remains valid for its restricted decoder. A more informed decoder uses the complete metadata class and distinguishing count, so prior sufficient Gaussian noise radii do not characterize the information available in this richer model.",
+  "history_policy": "Keep all 117 branch IDs, preserve the 418-event byte prefix and append five events. Research remains active without global completion.",
+  "verification_attempts": {
+    "failed_recursive_verification": 1,
+    "successful_diagnoses": 1,
+    "cause": "Integer-key subgroup counts become string-key JSON objects; numerical versus lexical sort order made the first byte comparison fail despite identical data. The preceding recursive checkpoint replay had succeeded.",
+    "correction": "Separate v2 verifier normalizes through JSON before comparison and rejects colliding keys. Four controls accept representation equivalence and reject changed values/key collisions. Original scientific instruments, their outputs and all seven scientific/source receipts are unchanged.",
+    "preservation": "Original verifier, proof guide and packager remain unchanged. Packaging_Attempt_v1.zip preserves the entire first package and manifest-bound code. Failed verification, successful diagnosis and their sources/logs are retained separately.",
+    "rerun": "The v2 verifier checks new science/provenance before repeating the complete prior recursive replay. Final verification receipt remains separate from the seven scientific/source commands."
+  }
+}

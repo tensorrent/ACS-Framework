@@ -1,0 +1,41 @@
+{
+  "recorded_utc": "2026-09-13T18:50:49.944583+00:00",
+  "sources": [
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs.html",
+      "use": "HiGHS interface, inequality marginals, integrality option and solver status. The installed runtime version is recorded separately; the certification argument does not trust float solver output."
+    },
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "locator": "Theorems 3.34-3.35",
+      "use": "Previously sourced degree sum and discriminant criterion, used only in the explicitly separate local bridge."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "locator": "Section 2, equations (1)-(2)",
+      "use": "Inherited Gaussian Weil-Poitou identity, with conventions and admissibility already derived in the explicit-formula checkpoint."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "locator": "Section 2, equations (2.1)-(2.7)",
+      "use": "Inherited unconditional Euler/Hadamard moment argument at s=2; later GRH-dependent bounds are not used."
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/optimize.linprog-highs-ipm.html",
+      "use": "Interior-point route, inequality marginals and solver status/time-limit semantics. The live manual is version 1.18.0; executed version 1.17.0 is pinned separately. No proof depends on solver correctness."
+    },
+    {
+      "url": "https://clarabel.org/stable/python/getting_started_py/",
+      "use": "Conic Ax+s=b interface, solver settings and output statuses. Executed version 0.11.1 is pinned separately; proposals are independently validated."
+    },
+    {
+      "url": "https://clarabel.org/stable/api_cone_types/",
+      "use": "Lorentz cone convention t >= norm(x). The scalar squared encoding is independently derived and kernel checked."
+    },
+    {
+      "url": "https://pypi.org/project/clarabel/",
+      "use": "Clarabel 0.11.1 package distribution and runtime acquisition."
+    }
+  ],
+  "scope": "Inherited analytic sources plus official conic interface references. Scalar support, cubic remainder and complete certificate bounds are derived in QUADRATIC_README.md."
+}

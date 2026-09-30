@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-09-14T05:34:45.010159+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Verification.json": "dc0873d2f3728452dd54fea5367cbbce35bfa88be41fe26299a64a2262bc02b5",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Research_Queue.json": "100ebde67ddce59dda02cb85d1b63819aefd85793feb3c9799845dcaa665d300",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Branch_Events.jsonl": "ce0291608b39d2b3834b434cabf6ea8277955f281b91b182b49a4ed1365243fb",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "code/frontier_verification/verify_aggregate_augmented_feature_delta.py": "2dcb00c4f7601368a5aa57d179dca6e5b9cfa68836af6e5bbaed86de6aff1f28",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Certificate_Enlarged_v2.json": "226061491ded83386c102c47daaebf544224d251020950be345ff541e3dc73f8",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Certificate_Small_v2.json": "37c428f6122f70cdf964ad6126edc2418ab3a141508a0e32324b4492b27c7dc5",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Certificate_Local_v2.json": "b443e85ec1be0b6777d26d5fd3be3fb5a971b6e29939ecb3f6e7e60bd1db9086"
+  },
+  "scope": "Complete field classification, finite source populations, rational midpoint/preconditioner and earlier collision witnesses are inherited and recursively verified. Both source precision variants and witness containment are freshly audited."
+}

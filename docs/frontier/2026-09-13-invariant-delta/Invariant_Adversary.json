@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "source_sha256": "c6f701c9bca1c5c6baa78cc79a1b07505b132e36be97b609b557b2cb3c21e351",
+  "auditor_sha256": "9b85f7819744459ebdbbc2c86f2051d2aee99f14d7dc878821d36927144d0aa6",
+  "input_sha256": "19517aa1342ff2eef98c460a0e39124486222d42b99fc2a98f7c0ef99a9c094b",
+  "checks": [
+    {
+      "mutation": "omit_possible_s4",
+      "rejected_by_independent_auditor": true
+    },
+    {
+      "mutation": "incorrect_resolvent_kernel",
+      "rejected_by_independent_auditor": true
+    },
+    {
+      "mutation": "retain_unramified_quadratic_quotient",
+      "rejected_by_independent_auditor": true
+    },
+    {
+      "mutation": "invent_stronger_minkowski_bound",
+      "rejected_by_independent_auditor": true
+    },
+    {
+      "mutation": "ramification_index_in_euler_weight",
+      "rejected_by_independent_auditor": true
+    },
+    {
+      "mutation": "wrong_unobserved_local_factor",
+      "rejected_by_independent_auditor": true
+    }
+  ],
+  "scope": "Six actual corrupted transcripts are rejected by the independent auditor. This audits finite certificates; it does not mechanize the cited arithmetic theorems."
+}

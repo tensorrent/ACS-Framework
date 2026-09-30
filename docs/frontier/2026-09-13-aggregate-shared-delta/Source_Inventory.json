@@ -1,0 +1,21 @@
+{
+  "baseline_commit": "3d2ae0cc01ac9a25120efd61a2ee7373fc0cebf2",
+  "instruments": {
+    "code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445",
+    "code/frontier_verification/dedekind_aggregate_local.py": "269c7341c0d9113e6794c2218ed75ab31ed619171f4a47747c96c2bfdf076497",
+    "code/frontier_verification/dedekind_aggregate_shared_audit.py": "a008926d702b7eae8eae2ac2560a89a6b5e535a04a2c611dad4fd4272bdcafe4",
+    "code/frontier_verification/dedekind_aggregate_local_audit.py": "4b24497f463d9bfba3d3fd30310761b4ab22a68b1e5436b5d7707d2d9aa97fce",
+    "code/frontier_verification/dedekind_aggregate_shared_adversary.py": "ed90f401d97bd599be1d9ab493901b8657a23f5baf7cefb66a3991b1c529954e",
+    "code/frontier_verification/verify_aggregate_shared_delta.py": "44b8a9de55a337e3d1bfc41f0dbfaecb3ab0a52f39d9ec230b1714c737370d39",
+    "code/frontier_verification/AGGREGATE_SHARED_README.md": "d66fee837414b0e46d60169fd41e4b86652fb6fedf260e1bf6b7ed1b144e7883"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/dedekind_aggregate_integer_audit.py": "ef0cec02cac7302e5fed2440f74f0ed8e679dd754bb509a1833d0c4cf7ceee31",
+    "code/frontier_verification/verify_aggregate_delta.py": "7c0a3543380f429a4b8b203c012a41a714e405bbdd919044d42950f56478a953",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New shared-error and local-feedback instruments, their direct dependencies, and immutable producer versions used for all seven recorded scientific runs. Earlier dependencies and dated packages are verified recursively."
+}

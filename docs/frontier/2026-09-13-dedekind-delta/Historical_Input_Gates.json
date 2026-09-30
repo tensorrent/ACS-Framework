@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "3a1d8fbe5c6da7679be62b411a474aa535d44006",
+  "historical_consumer": "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_test.py",
+  "referenced_inputs": [
+    {
+      "path": "/home/claude/Qsqrt5/zeros_chi5.txt",
+      "exists_in_local_environment": false
+    },
+    {
+      "path": "/home/claude/cyclotomic_5/Qzeta5_data.npz",
+      "exists_in_local_environment": false
+    },
+    {
+      "path": "/mnt/project/The_first_100_000_zeros_of_the_Riemann_zeta_function__accurate_to_within_3_10__-9_",
+      "exists_in_local_environment": false
+    }
+  ],
+  "missing_tracked_basenames": [
+    "zeros_chi5.txt",
+    "Qzeta5_data.npz"
+  ],
+  "scope": "The supplied historical quadratic table and NPZ are unavailable; the new runs use declared certified factors and cannot establish byte-identical reproduction of the historical reported ratios."
+}

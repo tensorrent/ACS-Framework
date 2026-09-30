@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-13T22:41:18.161566+00:00",
+  "recorded_commands": 7,
+  "successful_commands": 7,
+  "failed_commands": 0,
+  "recording_scope": "Proposal, continuum certificate, one-pass local projection, independent moment audit, local/dual feedback, independent local audit and adversarial audit. Packaging and final recursive verification are separate. Earlier failed attempts remain intact in preceding checkpoints.",
+  "freeze_boundary": "The 272 proposals were frozen before continuum validation. The 288 multiplier cases, including sixteen legacy c7 vectors, were frozen before the independent moment audit. Local/dual feedback consumes those independently validated error budgets, with its source frozen before exact local replay. No executed scientific instrument was revised.",
+  "moment_derivation": "The baseline tail plus the per-root increment of -2H-kappa*m equals the finite change plus the moving moment tail. Joint and separated interval budgets are independently valid; the minimum is explicitly used when enclosure widths differ.",
+  "attribution": "The joint budget is selected in 97 positive-radius cases but changes no producer candidate domain. Its largest relative reduction is about 0.7042%. New noisy target recovery comes from extending the objective set and alternating valid local domains with frozen-dual residual supports.",
+  "independence": "Real first-derivative covers are checked by complex quadratic covers. Symbolic moment derivatives and rational monotonic endpoint enclosures add an exact route above t=3/2, which every tested interval satisfies. Integer tail products and rational residual supports replay the deductions. Transcendental interval calculations share FLINT.",
+  "input_boundary": "The noisy local stages initialize generic boxes and use only certificates for that radius. Feedback reads analytic budgets and derived candidate domains from the independent audit, not its held-out arithmetic input. Formal noninterference or blindness is not claimed.",
+  "baseline_limit": "This frozen-dual family recovers 14/13 exact-input targets with the stronger local profile. Earlier complete row/local feedback already recovers 17/17 and remains the best exact-input result. The lower count is a method limitation, not an information loss or a replacement of the older result.",
+  "counterexample_scope": "A unit-row, one-root diagnostic shows a positive omitted moment term above 1.099e-7 when the root moves. It concerns the analytic budget expression; neither unknown-tail saturation nor an alternate field is asserted.",
+  "history_policy": "Preserve all 117 branches and the 398-event byte prefix; append five events. The wider ACS investigation remains active."
+}

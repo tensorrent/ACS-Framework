@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-09-13T19:21:53.831020+00:00",
+  "recorded_commands": 9,
+  "successful_commands": 7,
+  "failed_commands": 1,
+  "deliberately_interrupted_commands": 1,
+  "failed_attempt": {
+    "run": "local-independent-audit",
+    "result": "An exact dyadic gap expressed as a Fraction exceeded Python's 4300-digit integer-printing limit. The failed source and traceback are retained."
+  },
+  "interrupted_attempt": {
+    "run": "local-independent-audit2",
+    "result": "After replacing the diagnostic with a compact lower bound, full Fraction normalization remained costly. The observed child process was deliberately stopped by SIGTERM after 453.535648 seconds. The runner retained returncode -15 and both streams."
+  },
+  "successful_replacement": "The final audit aligns each dyadic mantissa at the least exponent and sums shifted signed integers. This is the full exact sum with no dropped or rounded terms. All 598 spectral gaps exceed their positive fixed-grid lower bounds. The largest common denominator is 2^422955.",
+  "independence": "The profile audit uses ordered compositions and separate Galois integer triples, symbolic rational identities, exact dyadic spectral sums and held-out arithmetic. The wider-range audit checks phase brackets and independent 80-digit extrema. The elementary non-Galois certificate avoids symbolic factorization. Analytic row reconstruction still shares the pinned loader.",
+  "premise_boundary": "The four assumption profiles separate degree, ramification labels from the discriminant, and Galois structure. The discriminant remains an analytic invariant in all explicit-formula rows. No Galois property or prime residue-class splitting pattern is inferred from the spectrum.",
+  "fixed_point_scope": "Local/spectral iteration reaches a finite exclusion fixed point. It does not establish joint feasibility, actual-field realization or optimal uncertainty tolerance.",
+  "history_policy": "All earlier dated packages and pinned instruments remain byte-identical. All 116 branches persist; no global completion or exhaustion is asserted."
+}

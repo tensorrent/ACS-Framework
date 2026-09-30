@@ -1,0 +1,18 @@
+# Shared-invariant fields and finite spectral information
+
+Two nonisomorphic fields share degree four, signature (0,2), field discriminant 576, Galois group V4, ramified-prime exponents and the conductor multiset. The prior leaves both possible. A certified finite positive-zero count distinguishes them, even with ordinate errors up to 1/3. Their coefficient at seven is 4 versus 0.
+
+This is the sixteenth research continuation. The [preceding invariant checkpoint](../2026-09-13-invariant-delta/README.md) showed that the old discriminant-125 field was already identified by global inputs. This pass establishes a benchmark with additional finite spectral information. The [derivation and reproduction guide](../../../code/frontier_verification/BIQUADRATIC_README.md) explains the class, proofs, measurements and limitations.
+
+- [Result and scope](Biquadratic_Summary.json): two-field classification, differing arithmetic and robust count gate.
+- [Arithmetic producer](Pair_Arithmetic.json), [independent arithmetic audit](Pair_Arithmetic_Audit.json) and [complete V4 class](Pair_Candidate_Class.json): 190 maximality cosets, 144 local factorizations, seven radical triples and seven character planes. Polynomial index primes are explicitly controlled.
+- [Complete finite spectra and direct-contour audit](Pair_Spectra.zip): 160/224-bit spectra of five primitive quadratic factors plus zeta through height 20; 40 factor roots, 23 aggregate roots for A and 22 for B; 63,405 direct-contour segments and sixteen independent-backend root checks.
+- [Fresh contour replay](Pair_Fresh_Replay.json): all stored paths checked at 256 bits with 77,735 accepted leaves and 156 endpoint signs. An initial precision-only replay failure is preserved; adaptive subdivision passes.
+- [Count decoding](Pair_Decoding.json) and [independent bounds and adversarial audit](Pair_Adversary.json): first separating integer height 2; threshold 7/3 remains separating at radius 1/3, while radius 1/2 makes this count ambiguous. Eleven actual malformed inputs are rejected.
+- [Primary references](Primary_Sources.json), [acquisition hashes](Source_Acquisition.json) and [rendered-page checks](Source_Visual_Checks.json): product integral bases, conductor-discriminant formula and Dirichlet analytic identities. Third-party source files remain outside the repository.
+- [Eleven execution receipts](Execution_Receipts.json), [exact output streams](Execution_Artifacts.zip), [development notes](Development_Notes.json), [runtime](Runtime.json), [instrument inventory](Source_Inventory.json) and [source snapshot](Source_Snapshot.zip) preserve ten successes and one failed replay.
+- [Research queue](Research_Queue.json) and [append-only ledger](Branch_Events.jsonl): retain all 117 branches, preserve the 378-event prefix and append five events. [Manifest](Manifest.json) and [verification result](Verification.json) support integrity and reproduction.
+
+The classifier uses an explicitly enumerated V4 field class and certified candidate templates. A bare observed count cannot certify its own completeness or measurement error. No unknown external data set was tested, and no candidate-free explicit-formula recovery, non-V4 class exhaustion, optimal full-spectrum noise threshold, global GRH or global ACS completion is claimed. The rational noise gate was constructed after certification of the candidate spectra; the integer grid preceded spectral generation.
+
+The next gate is direct recovery of a differing Euler coefficient from explicit-formula constraints under these same shared global inputs, followed by a comparison with the candidate-template selector. The ongoing queue also preserves the remaining operator, real-part, topology, physical-identification and private-input gates.

@@ -1,0 +1,19 @@
+{
+  "recorded_commands": 12,
+  "successful_commands": 10,
+  "failed_commands": 2,
+  "failures": [
+    {
+      "receipt": "lean-draft-v1",
+      "result": "A direct draft compiler launch used the repository cwd with an incorrect relative Lean source path; the file was not opened. The actual missing-file error is preserved. The subsequent checker uses explicit absolute source, project and runtime paths."
+    },
+    {
+      "receipt": "lean-proof-v1",
+      "result": "The original proof draft omitted the real-number import and called an unimported noncomm_ring tactic. Compilation failed with unknown-tactic and typeclass errors. The failed source and output are preserved; error recovery mentions sorryAx, which is not accepted as a proof. A separate v2 adds the real import, disables autoImplicit, uses distributivity, and corrects quotient-sign cases. All eight lemmas compile. The separate canonical file uses the current Mathlib.Basic.Real.Basic import to remove a deprecation warning."
+    }
+  ],
+  "positive_delta": "Both canonical numerical programs and all 28 adversarial mutations pass. Nine exact matrix/algebra controls expose invalid shortcuts. The final eight-lemma canonical Lean source has no errors, warnings or sorryAx.",
+  "source_policy": "All executed scientific sources, exploratory reports and actual logs are preserved; corrections use new versions. The four original reports retain their exploratory status while later certificates and the written proof establish the new scoped result.",
+  "runtime": "No package acquisition, runtime version change or new source roots.",
+  "audit_scope": "The written Proof_Audit.md is an implementing-investigator audit, not a separate agent or human review. Numerical methods differ but share FLINT. The complete assembled theorem remains partly written."
+}

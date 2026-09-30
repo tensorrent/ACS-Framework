@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "source_sha256": "3c8b34a1bcf1b5934cb7af402336e78b6e39e4a277861ce2ee49e6e727de32f1",
+  "checker_sha256": "5e67ad74e7322b742818565ef3c9276d5554ec1a3edaab6b8727c21ff50fb958",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/augmented-feature-audit/Lean_Check.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean"
+  ],
+  "returncode": 1,
+  "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:31:5: error: unexpected token 'prefix'; expected '_' or identifier\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:31:13: error: unexpected identifier; expected prec\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:32:21: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:32:32: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:33:10: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:33:21: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:33:33: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:33:55: error: unexpected identifier; expected ':'\n'AugmentedFeatureLocal.injective_on_of_preconditioned_defect' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AugmentedFeatureLocal.half_defect_inverse_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AugmentedFeatureLocal.split_gap_for_one_remaining_feature' depends on axioms: [propext, Classical.choice, Quot.sound]\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/AugmentedFeatureLocal.lean:50:14: error(lean.unknownIdentifier): Unknown constant `equal_prefixes_do_not_imply_equal_extension`\n'AugmentedFeatureLocal.local_square_derivative_defect' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AugmentedFeatureLocal.local_does_not_imply_global_control' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": null,
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "injective_on_of_preconditioned_defect",
+    "half_defect_inverse_bound",
+    "split_gap_for_one_remaining_feature",
+    "equal_prefixes_do_not_imply_equal_extension",
+    "local_square_derivative_defect",
+    "local_does_not_imply_global_control"
+  ],
+  "scope": "Six lemmas cover local injectivity from a preconditioned defect estimate, a half-defect inverse bound, a remaining-feature gap, prefix versus extended equality, and an exact local-versus-global counterexample. The vector mean-value/row-norm bridge and numerical interval, modular matrix and inherited spectral/arithmetic premises remain written/computational."
+}

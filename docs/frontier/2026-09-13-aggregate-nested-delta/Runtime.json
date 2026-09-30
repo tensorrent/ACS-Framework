@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-09-13T23:30:30.399345+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "executable": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+  "platform": "macOS-15.3.2-arm64-arm-64bit",
+  "python_flint": "0.9.0",
+  "flint": "3.6.0",
+  "mpmath": "1.3.0",
+  "sympy": "1.14.0",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "pytest": "8.4.2",
+  "requirements": "code/frontier_verification/source_requirements.txt",
+  "scope": "Inherited Python 3.12.14 and pinned libraries; 224-bit real/48-leaf certificates, 384-bit complex/96-leaf audits, rational moments, integer/Fraction supports and 85-digit mpmath controls. Lean 4.34.0-rc2 with inherited pinned mathlib compiles four new geometric transfer theorems. No new packages or downloads.",
+  "clarabel": "0.11.1",
+  "cffi": "2.1.1",
+  "pycparser": "3.0",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13"
+}

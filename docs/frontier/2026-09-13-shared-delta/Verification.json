@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T17:57:15.379720+00:00",
+  "scope": "Retained source, certificate transcript and history checks; numerical bases, optimizers and the independent arithmetic audit are not rerun.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 18,
+  "marginal_certificates_replayed_in_recorded_audit": 36,
+  "shared_certificates_across_two_precisions": 120,
+  "independent_derivative_cases": 75,
+  "independent_finite_center_sums": 2,
+  "shared_unique_targets": 81,
+  "unresolved_targets": 10,
+  "recorded_commands": 4,
+  "limited_probe_solver_trials": 2,
+  "research_branches": 116,
+  "ledger_events": 366,
+  "preserved_event_prefix": 363,
+  "ledger_head_sha256": "4d7a11d707776b3dd0315bcf898039512ee967aabe9f769dffe19b4804e77581",
+  "local_links": 37
+}

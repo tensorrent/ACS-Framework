@@ -9,8 +9,8 @@ r"""
 HARDENED CHARACTER TWIST  --  push rung-2 from T3 to T1, and test the k=3 parity law.
 
 hp_ladder_character_twist.py established the chi^k twist on rungs 1-2 but the rung-2 phase
-alignment was data-limited (~55 L-zeros). Using freshly generated zeros (generate_more_lzeros.py,
-~150 per character, non-circular via Hurwitz zeta), this:
+alignment was unresolved with the earlier short tables. The September 2026
+replacement uses finite certified lists (146 mod-5 and 157 mod-7 zeros), and this:
 
   (1) recomputes the rung-1/2 phase-demod resultants at larger N (rung-2 should now clear
       its off-diagonal decisively);
@@ -103,15 +103,12 @@ for title, ext, orig, q, gen, order in cases:
     print()
 
 print("=" * 72)
-print("""READING (honest, mixed -- falsification-first):
-  WON: rung-1 twist hardened decisively at ~150 zeros (R~0.99 both). The commutator parity
-       law ||[iota,T]||_k=0 iff order(chi)|2k holds at k=1,2,3, INCLUDING the new rung-3
-       prediction (order-6 commutes on rung 3, order-4 does not); mod-7 rung-3 phase resolves
-       under chi^3 (R~0.59, above floor), an empirical confirmation of the k=3 rung.
-  DID NOT WIN: rung-2 phase did NOT harden -- it sits at the demod floor (~0.26/0.22) even at
-       ~150 zeros, and mod-7 rung-2 dropped vs the 55-zero run. The p^2-line phase is below the
-       L-zero noise floor at accessible heights; more zeros did not rescue it. Rung-2 twist
-       stays T3. Reported as a first-class negative rather than spun.
-  Net: the twist STRUCTURE (chi^k on rung k, parity law) is confirmed to depth 3 where the
-  signal clears background; the rung-2 phase magnitude remains data-limited. Proves nothing
-  about RH.""")
+print("""READING:
+  The values and resolution labels above are calculated from the loaded tables.
+  The 2/sqrt(number of primes) threshold is a heuristic comparison, not a
+  calibrated significance test. A finite resultant does not establish an
+  infinite explicit formula or a natural spectral operator.
+  The displayed parity quantity is computed directly from character values;
+  it is an algebraic control and does not depend on the supplied zero list.
+  Certified replacement data and before/after results are recorded in
+  docs/frontier/2026-09-13-lfunction-delta/.""")

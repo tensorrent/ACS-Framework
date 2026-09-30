@@ -1,0 +1,16 @@
+{
+  "recorded_utc": "2026-09-13T21:58:19.977316+00:00",
+  "recorded_commands": 6,
+  "successful_commands": 6,
+  "failed_commands": 0,
+  "recording_scope": "One exploratory probe, one final proposal run, two certificate runs, one independent audit and one adversarial audit. Packaging and the final recursive verifier are separate. Previous failed attempts remain unchanged in inherited checkpoints.",
+  "freeze_boundary": "The 48 rational proposals were frozen before both certificate runs. Both producers completed before the independent audit. Held-out arithmetic enters only that downstream audit. No executed instrument was revised during this pass.",
+  "proposal_scope": "The 33-point-per-root floating LP is a proposal generator. The sampled score is neither a rigorous continuum bound nor a certified optimum. The proof uses rounded nonnegative rational multipliers, full residual support and complete interval covers.",
+  "error_enclosure": "The real producer uses first-derivative midpoint Taylor enclosures of nonlinear changes. The independent complex route uses second derivatives and quadratic interval remainders. Both preserve the original bracket, every widened interval, multiplicity and finite cutoff.",
+  "precision_comparison": "Direct candidate sets agree at both producer precisions. One A symmetric-derivative domain at radius 0.14 narrows with the finer partition. The independent audit additionally strengthens two B derivative domains. All differences are preserved in the summary and audit; precision and subdivision effects are not conflated.",
+  "fair_baseline": "Both old frozen and adapted multipliers are checked on the same twelve-point grid with both error methods. Frozen B recovery at 0.07 extends the earlier grid, rather than being credited to multiplier adaptation.",
+  "counterexample_scope": "Two interval-certified off-grid root changes exceed all 33 sampled errors. They invalidate sampled maxima as continuum certificates, but do not establish that a sampled LP score would change a recovered integer. These same witnesses are reused by two of the eight mutations.",
+  "independence": "Real first-order and complex second-order interval routes share FLINT. Exact integer objectives and 85-digit mpmath displaced controls are additional routes. The retained global analytic argument is not formalized.",
+  "unresolved": "Larger-radius surviving candidates do not prove feasible spectra or number fields. Wider-noise recovery of all seventeen targets is not established. The original full-support and wider ACS questions remain open.",
+  "history_policy": "Preserve all 117 branches and the 393-event byte prefix; append five events. The ongoing goal remains active."
+}

@@ -1,0 +1,9 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Primary_Sources.json": "efc4b327d31878f3f18806b1d3e2d1d009ebe7edc04ad8f2c1992f97467045c6",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Primary_Sources.json": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "scope": "Primary Mathlib Taylor and python-flint Arb constructor documentation was retrieved. Exact pinned Taylor and finite-maximum sources match local Git objects and are archived with the mathlib license. Current web pages are not asserted to match the pinned Git revision. New derivative identities and proofs are independently derived and checked."
+}

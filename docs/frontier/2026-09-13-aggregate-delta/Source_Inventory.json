@@ -1,0 +1,24 @@
+{
+  "baseline_commit": "41c2dd015a1455a8613a2acb806d82a65369f560",
+  "instruments": {
+    "code/frontier_verification/dedekind_aggregate_inputs.py": "8430a449eec39a5e5c9e9eed56dbe6a5cef28a2524ff8ccebc5d5c584dea2cd0",
+    "code/frontier_verification/dedekind_aggregate_measurements.py": "d60b4e7343eb8b099a3d0009e73c67aaf45e102f115d301b4ad7a26f128a14bc",
+    "code/frontier_verification/dedekind_aggregate_recovery.py": "9f327503cf67df3be740fe065d18a876d9e4ee6f7b1164421bddd6d07d8b0744",
+    "code/frontier_verification/dedekind_aggregate_integer_audit.py": "ef0cec02cac7302e5fed2440f74f0ed8e679dd754bb509a1833d0c4cf7ceee31",
+    "code/frontier_verification/dedekind_aggregate_analytic_audit.py": "1b60f12ea05be32723ec779a3e7c54a67c7f89ac42d938ab3f34987a1cadb5bb",
+    "code/frontier_verification/dedekind_aggregate_radius.py": "d8da431fe83862694829b2d980845b40831784298f056e32c637acfe082b806a",
+    "code/frontier_verification/dedekind_aggregate_adversary.py": "5aa0004100e335e0a1f51ce1e818680b1f457618c9f2c162342abff559d49313",
+    "code/frontier_verification/verify_aggregate_delta.py": "7c0a3543380f429a4b8b203c012a41a714e405bbdd919044d42950f56478a953",
+    "code/frontier_verification/AGGREGATE_README.md": "1c22d2ff5b8ebd7c8cf3bb14bdd6f9259e91399d9011036bc727e054ecaedf61"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/dedekind_explicit_crosscheck.py": "8b1647b8b616190026b18290832a0de0b2b31359007d45064afe6d74f464e563",
+    "code/frontier_verification/dedekind_inputs.py": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "code/frontier_verification/verify_biquadratic_delta.py": "00d08ebd235963eca3ea195962d63a8f3971183749fed21af8b4362183f07ca4",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New direct-recovery instruments, pinned dependencies and preserved source-recheck versions. Previous dated checkpoints and instruments are unchanged."
+}

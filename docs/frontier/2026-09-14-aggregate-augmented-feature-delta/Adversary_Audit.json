@@ -1,0 +1,371 @@
+{
+  "status": "passed",
+  "source_sha256": "6aad62ee8025a5d58e3f145a6774108ac7d4497f73022e8477dcd9486ef34844",
+  "inputs_sha256": {
+    "Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "Augmented_Certificate_Local_v2.json": "b443e85ec1be0b6777d26d5fd3be3fb5a971b6e29939ecb3f6e7e60bd1db9086",
+    "Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "Feature_Noise_Boundary.json": "70b13dcf426b53b7947723b1318722806ae21e83b5206a7b09be840a8fa11c7d"
+  },
+  "mutations_rejected": 45,
+  "mutations": [
+    {
+      "name": "missing joint moment",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong moment offset",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong moment numerator",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong Gaussian width",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong center 41",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing collision dimension",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong reported dimension",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "critical variable adjusted",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "duplicate variables",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "zero split",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "stale radius",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false strict threshold improvement",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed common coordinate",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing correction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "off-root correction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "inconsistent A interval",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed fixed B",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "oversized correction box",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "truncated coordinate witness",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "inflated coordinate margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "singular slice preconditioner",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "identity slice preconditioner",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "claimed noncontraction",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative self-map margin",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing feature enclosure",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false feature residual",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "raw coordinates released",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "count profile released",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "unknown tail included",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "post-noise censoring",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "source loses multiplicity",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "field identity leaked into input",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong source metadata",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false interior count",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false local membership",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "local region expanded without proof",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong local center",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "understated inverse stability constant",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "understated matrix norm",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false zero local defect",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "singular full preconditioner",
+      "status": "rejected",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "full features omit final center",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing rank minor",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "rank flag contradicts claim",
+      "status": "rejected",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "noncontracting rank defect",
+      "status": "rejected",
+      "exception": "AssertionError"
+    }
+  ],
+  "exact_zero_margin_controls": [
+    {
+      "dimension": 18,
+      "input": "E1_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 18,
+      "input": "E2_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 18,
+      "input": "E1_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 18,
+      "input": "E2_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 19,
+      "input": "E1_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 19,
+      "input": "E2_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 19,
+      "input": "E1_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 19,
+      "input": "E2_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 20,
+      "input": "E1_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 20,
+      "input": "E2_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 20,
+      "input": "E1_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 20,
+      "input": "E2_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 21,
+      "input": "E1_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 21,
+      "input": "E2_160.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    },
+    {
+      "dimension": 21,
+      "input": "E1_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": 6.661338147750939e-16
+    },
+    {
+      "dimension": 21,
+      "input": "E2_224.json",
+      "index": 1,
+      "exact_margin": "0",
+      "binary64_margin": -2.220446049250313e-16
+    }
+  ],
+  "local_to_global_counterexample": {
+    "map": "x^2",
+    "region": [
+      "3/4",
+      "5/4"
+    ],
+    "preconditioner": "1/2",
+    "derivative_defect_bound": "1/4",
+    "outside_region_collision": [
+      "-1",
+      "1"
+    ]
+  },
+  "noise_boundary_control": {
+    "tau_5e_minus_18_common_release": "certified",
+    "tau_1e_minus_18_common_release_for_this_witness": "excluded because its last-feature separation exceeds 2*tau",
+    "scope": "This excludes the smaller error only for the constructed local witness, not all possible witnesses."
+  },
+  "scope": "Actual independent-auditor rejection paths test source, feature, coordinate, contraction, rank and local-region semantics. Exact counterexamples separate local from global and exact from noisy observation contracts."
+}

@@ -1,0 +1,22 @@
+{
+  "recorded_commands": 13,
+  "successful_commands": 11,
+  "failed_commands": 2,
+  "failures": [
+    {
+      "receipt": "augmented-certificate-enlarged",
+      "result": "The first certificate source reaches the local-radius sweep then raises TypeError because Arb does not directly compare to Python Fraction. No certificate JSON is emitted. Separate v2 compares against an Arb enclosure of 1/2; all scientific formulas and input files remain unchanged."
+    },
+    {
+      "receipt": "augmented-feature-lean",
+      "result": "The first proof uses the reserved Lean keyword prefix as a binder. Five lemmas check, but the compilation fails and no successful artifact is claimed. Separate v2 renames that binder and all six lemmas compile."
+    }
+  ],
+  "canonical_sources": [
+    "code/frontier_verification/dedekind_augmented_feature_certificate_v2.py",
+    "code/frontier_verification/proofs/AugmentedFeatureLocal_v2.lean"
+  ],
+  "source_policy": "Executed source versions and failures remain immutable. The final recursive verifier runs after packaging and preserves its own external receipt. Its exact stdout becomes Verification.json.",
+  "runtime": "No package acquisition, version changes or new source roots. Existing pinned Python, FLINT and Lean/mathlib environments are reused.",
+  "shared_infrastructure": "Independent real and complex formulations share FLINT and inherited source premises. Exact rational inclusions and modular determinants provide distinct arithmetic routes."
+}

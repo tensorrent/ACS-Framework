@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T20:57:48.945580+00:00",
+  "scope": "Recursive history and fresh measurement, coefficient-recovery, exact-integer, radius and adversarial replay. Independent analytic audit execution is retained and checked; --recompute-analytic reruns it. Full analytic and number-field arguments remain unformalized.",
+  "manifest_files": 28,
+  "preceding_checkpoint_integrity": "passed",
+  "measurement_rows_per_spectrum": 17,
+  "generic_coefficients": 604,
+  "target_count": 17,
+  "monotone_unique_targets": [
+    13,
+    9
+  ],
+  "continuous_dual_unique_targets": [
+    12,
+    9
+  ],
+  "coefficient_at_7": [
+    4,
+    0
+  ],
+  "integer_exclusions": 184,
+  "integer_dual_bounds": 136,
+  "radius_integer_dual_bounds": 24,
+  "independent_factorizations": 1128,
+  "independent_weight_checks": 20536,
+  "finite_formula_cases": 34,
+  "alternate_gamma_integrals": 17,
+  "analytic_recomputed_this_invocation": false,
+  "actual_input_proof_mutations_rejected": 12,
+  "formula_mutations_detected": 112,
+  "formula_mutations_tested": 170,
+  "displaced_sum_controls": 408,
+  "recorded_commands": 11,
+  "failed_commands": 1,
+  "research_branches": 117,
+  "ledger_events": 388,
+  "preserved_event_prefix": 383,
+  "ledger_head_sha256": "da0d4278f5431420b093ab8e1b1d397b4f9f5c3992fcf975c4d2ebba52f3711c",
+  "local_links": 44
+}

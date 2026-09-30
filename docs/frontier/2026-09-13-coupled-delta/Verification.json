@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T16:57:59.169031+00:00",
+  "scope": "Retained source identities and transcript consistency; numerical optimizers, quadrature and root certification are not rerun.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 30,
+  "coupled_cases": 24,
+  "integer_exclusions_replayed_in_recorded_audit": 8601,
+  "dual_certificates_replayed_in_recorded_audit": 970,
+  "target_pair_branches": 8,
+  "excluded_pairs": 6,
+  "verified_feasible_relaxed_models": 2,
+  "targets_without_local_relations_at_600": 91,
+  "targets_with_added_local_relation_at_220": 91,
+  "receipts": 11,
+  "research_branches": 116,
+  "ledger_events": 360,
+  "preserved_event_prefix": 355,
+  "ledger_head_sha256": "64ca01946cdba414453a4a9a5d1472fdca3f0cb84a6967539065a9249da399cc",
+  "local_links": 37
+}

@@ -1,0 +1,233 @@
+{
+  "status": "passed",
+  "source_sha256": "afbe59a37672c93c2a97a060462bb347b6872588ef1726417a5b30d72a4e7b14",
+  "inputs_sha256": {
+    "Discriminant_Parity.json": "2a177275c9ad94fc4c076e04b9db8ea449061864fa0e89b4742c21c992e79f89",
+    "Joint_Target_Branches.json": "5e91967031408b41b505cf11c9037a94e5dc14a4e1d8026e826856b356163653",
+    "Joint_Projection_Audit.json": "a39bcb3c21cf394472329d6cadd4f5882bc1f9e46884bfdde48c1094ec498788",
+    "Model_Hull_Witnesses.json": "f6022b983a7105211232e73bd90e26b110fb2e29a074b70a6410ee3e478aa0c6",
+    "Global_Cut_Audit.json": "5d7949034a3912249d30094fecb2103d51467a94e6318205e581c01c53e85f97",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "permutation_checks": 24,
+  "even_permutations": 12,
+  "unramified_cycle_types": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "controls": {
+    "polynomial_controls": [
+      {
+        "polynomial": "x**4 - x**2 - 1",
+        "signed_polynomial_discriminant": -400,
+        "absolute_discriminant_is_square": true,
+        "prime": 3,
+        "factor_degrees": [
+          4
+        ],
+        "irreducibility_cross_check": "passed",
+        "sylvester_determinant_cross_check": "passed"
+      },
+      {
+        "polynomial": "x**4 - x**3 - 7*x**2 + 2*x + 9",
+        "signed_polynomial_discriminant": 26569,
+        "absolute_discriminant_is_square": true,
+        "prime": 2,
+        "factor_degrees": [
+          1,
+          3
+        ],
+        "irreducibility_cross_check": "passed",
+        "sylvester_determinant_cross_check": "passed"
+      }
+    ],
+    "square_does_not_imply_V4": true,
+    "absolute_square_without_signature_is_insufficient": true,
+    "ramified_model_control": {
+      "model": [
+        [
+          2,
+          2
+        ]
+      ],
+      "prime": 2,
+      "field_discriminant": 576,
+      "c_p": 0,
+      "c_p_squared": 2,
+      "must_not_apply_unramified_cycle_count": true
+    },
+    "index_prime_control": {
+      "original_polynomial": "x**4 - 2*x**3 + 7*x**2 - 6*x + 3",
+      "original_polynomial_discriminant": 14400,
+      "field_discriminant": 576,
+      "index_squared": 25,
+      "prime": 5,
+      "original_reduction_has_repeated_factors": true,
+      "alternate_polynomial": "x**4 - 2*x**3 + 19*x**2 - 18*x + 57",
+      "alternate_discriminant": 7750656,
+      "alternate_factor_degrees": [
+        2,
+        2
+      ],
+      "field_is_unramified": true
+    }
+  },
+  "cases": [
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "seed_profile": "degree_only",
+      "unique_targets": 17,
+      "branch_replays": [
+        {
+          "branch_index": 29,
+          "incompatible_primes": [],
+          "retained": true,
+          "exact_integer_cut_checks": 163,
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30855282130222931736301322825319573937274362039583768303577665286205132810223257874393254856374673949915590934807211,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          },
+          "coefficient_vector_sha256": "c712fece1c4901aa75350b32a9b5acd30d28244acb48c15c8283e044ccd3d415",
+          "heldout_target_checks": 17
+        },
+        {
+          "branch_index": 36,
+          "incompatible_primes": [
+            29
+          ],
+          "retained": false
+        }
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "seed_profile": "degree_discriminant",
+      "unique_targets": 17,
+      "branch_replays": [
+        {
+          "branch_index": 2,
+          "incompatible_primes": [],
+          "retained": true,
+          "exact_integer_cut_checks": 163,
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30855282130222931736301322825319573937274362039583768303577665286205132810223257874393254856374673949915590934807211,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          },
+          "coefficient_vector_sha256": "c712fece1c4901aa75350b32a9b5acd30d28244acb48c15c8283e044ccd3d415",
+          "heldout_target_checks": 17
+        },
+        {
+          "branch_index": 6,
+          "incompatible_primes": [
+            29
+          ],
+          "retained": false
+        }
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "seed_profile": "degree_only",
+      "unique_targets": 17,
+      "branch_replays": [
+        {
+          "branch_index": 8,
+          "incompatible_primes": [],
+          "retained": true,
+          "exact_integer_cut_checks": 188,
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27384103437236212088140780718455467295052158066856751432505949843456599216429629684283413107334949359654419405663383,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          },
+          "coefficient_vector_sha256": "9328fda32f150fc5a5a68b14ccde12408d6ac5e083de2683c14e912b1cc759f5",
+          "heldout_target_checks": 17
+        },
+        {
+          "branch_index": 14,
+          "incompatible_primes": [
+            5
+          ],
+          "retained": false
+        }
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "seed_profile": "degree_discriminant",
+      "unique_targets": 17,
+      "branch_replays": [
+        {
+          "branch_index": 4,
+          "incompatible_primes": [],
+          "retained": true,
+          "exact_integer_cut_checks": 188,
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27384103437236212088140780718455467295052158066856751432505949843456599216429629684283413107334949359654419405663383,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          },
+          "coefficient_vector_sha256": "9328fda32f150fc5a5a68b14ccde12408d6ac5e083de2683c14e912b1cc759f5",
+          "heldout_target_checks": 17
+        },
+        {
+          "branch_index": 10,
+          "incompatible_primes": [
+            5
+          ],
+          "retained": false
+        }
+      ]
+    }
+  ],
+  "scope": "Independent partition/divisor local enumeration, permutation determinants, exact integer witness cuts, fresh unrounded interval checks and held-out targets. Polynomial controls separate signed square from absolute square, A4 from V4, ramified rules and power-basis index primes. The general number-theoretic derivation is written and source-backed, not a Lean kernel proof."
+}

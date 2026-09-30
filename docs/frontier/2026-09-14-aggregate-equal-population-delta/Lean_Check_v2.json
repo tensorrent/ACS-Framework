@@ -1,0 +1,31 @@
+{
+  "status": "failed",
+  "source_sha256": "537ae7813b6aadac290f64e1f5249ac3fff756164b1ffe542323329c4f724682",
+  "checker_sha256": "76417bf80823b68e1d2cb156218212e27cd765444cfdedd8bee7da36e1070152",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-equal-population-audit/Lean_Check_v2.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean"
+  ],
+  "returncode": 1,
+  "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:26:56: error: unexpected token 'prefix'; expected '_' or identifier\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:26:62: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:27:46: error: unexpected token '++'; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:31:69: error: unexpected token 'theorem'; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:33:56: error: unexpected token 'prefix'; expected '_' or identifier\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:33:62: error: unexpected identifier; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:34:21: error: unexpected token ','; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:34:61: error: unexpected token '++'; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:35:36: error: unexpected token ':='; expected ':'\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:43:13: error(lean.unknownIdentifier): Unknown identifier `suffix_filter_bound`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:42:71: error: unsolved goals\n\u03b1 : Type u_1\np : \u03b1 \u2192 Bool\nap asuf bp bsuf : List \u03b1\nha : \u2200 x \u2208 asuf, p x = false\nhb : \u2200 x \u2208 bp, p x = true\nhlen : ap.length < bp.length\n\u22a2 (List.filter p (ap ++ asuf)).length < (List.filter p (bp ++ bsuf)).length\n'InteriorCount.suffix_point_above' depends on axioms: [propext, Classical.choice, Quot.sound]\n'InteriorCount.prefix_point_below' depends on axioms: [propext, Classical.choice, Quot.sound]\n'InteriorCount.interval_gate_above' depends on axioms: [propext, Classical.choice, Quot.sound]\n'InteriorCount.interval_gate_below' depends on axioms: [propext, Classical.choice, Quot.sound]\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:55:14: error(lean.unknownIdentifier): Unknown constant `suffix_filter_bound`\n/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount_v2.lean:56:14: error(lean.unknownIdentifier): Unknown constant `prefix_filter_bound`\n'InteriorCount.count_separation' depends on axioms: [sorryAx]\n'InteriorCount.count_permutation' depends on axioms: [propext, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": null,
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "suffix_point_above",
+    "prefix_point_below",
+    "interval_gate_above",
+    "interval_gate_below",
+    "suffix_filter_bound",
+    "prefix_filter_bound",
+    "count_separation",
+    "count_permutation"
+  ],
+  "scope": "Eight scalar and finite-list lemmas establish midpoint separation, interval gates, prefix/suffix filter bounds, strict count separation and invariance under permutation. Connecting the true source ranks and certified roots to these hypotheses remains a written/computational argument; the arithmetic and full matching theory are not formalized here."
+}

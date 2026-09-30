@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T23:37:27.810660+00:00",
+  "scope": "Fresh nested-domain proposals and real certificates, independent complex/rational/integer audits, exact supplemental closure, ten transfer mutations and fresh Lean compilation. Prior checkpoints verified recursively. The transfer theorem concerns box geometry; the full arithmetic proof is unformalized, and tested nonclosure is not an impossibility bound.",
+  "manifest_files": 25,
+  "preceding_checkpoint_integrity": "passed",
+  "target_count": 17,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "radii": [
+    "1/10",
+    "2/25",
+    "3/50",
+    "1/20",
+    "1/25",
+    "3/100"
+  ],
+  "degree_discriminant_final_unique_targets": [
+    [
+      15,
+      11
+    ],
+    [
+      17,
+      13
+    ],
+    [
+      17,
+      13
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      17,
+      17
+    ]
+  ],
+  "local_profiles": 2,
+  "nested_cases": 24,
+  "new_multiplier_cases": 470,
+  "transported_root_intervals": 540,
+  "stored_midpoints_checked": 110832,
+  "fresh_quadratic_interval_leaves": 221664,
+  "exact_domain_objectives": 470,
+  "independent_displaced_controls": 412,
+  "local_removals": 100,
+  "dual_removals": 132,
+  "supplemental_local_removals": 0,
+  "supplemental_dual_removals": 0,
+  "actual_component_mutations_rejected": 10,
+  "kernel_checked_transfer_theorems": 4,
+  "fresh_lean_compilation": "passed",
+  "recorded_commands": 5,
+  "failed_commands": 0,
+  "research_branches": 117,
+  "ledger_events": 413,
+  "preserved_event_prefix": 408,
+  "ledger_head_sha256": "4a2c6c8a8fc7e469e99c109003cafa4a1a06f9d83a2a417349cf6e06786083ec",
+  "local_links": 48
+}

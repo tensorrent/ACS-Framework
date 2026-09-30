@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "9671d57eccf4acaa67413a2ef40961cde5cdb139",
+  "instruments": {
+    "code/frontier_verification/dedekind_aggregate_adaptive.py": "d21530982f6202bdc117edae5ea9029167563ac0f21a49d2300b936ed1997550",
+    "code/frontier_verification/dedekind_aggregate_adaptive_audit.py": "5d79e6371a32e6e6e4960c5fc389e8c1f622b7033bf7f16141891b8708a354d8",
+    "code/frontier_verification/dedekind_aggregate_adaptive_closure.py": "60664fa866b19d541b1413d27852ac769412715dca4de4418b2988d2150c795c",
+    "code/frontier_verification/dedekind_aggregate_adaptive_adversary.py": "0fc9485da0a814ea17fcdd3d44ee9ebc1046c90fa69cf80e4314c8ddae7c196f",
+    "code/frontier_verification/verify_aggregate_adaptive_delta.py": "f96c01d0ac0f9f1628be8a53f5163a85f34fe0fb948e492b20b5b46a00040450",
+    "code/frontier_verification/AGGREGATE_ADAPTIVE_README.md": "00b2084e67b8ee78114c79f3a715365fea4b9895e3a70c2430bd76d2d40e2d51"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_aggregate_moment_certificate.py": "0a74b7104877c81357ba2d6d1d54c8743fe3b8e3d2d17abd430d3a6569bf8f35",
+    "code/frontier_verification/dedekind_aggregate_moment_audit.py": "044b995035378d75130a23554fb71c7c1c0e00e684bc94e4a2b58b4646f6322d",
+    "code/frontier_verification/dedekind_aggregate_moment_local_audit.py": "ecb0d829f8d0f2067cbf51cafaa8d49483441179b71eb147a447eaa5380928bf",
+    "code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445",
+    "code/frontier_verification/dedekind_aggregate_shared_audit.py": "a008926d702b7eae8eae2ac2560a89a6b5e535a04a2c611dad4fd4272bdcafe4",
+    "code/frontier_verification/dedekind_aggregate_noise_certificate.py": "32584a36fe5d30741a619620e7c9fda676d91371fae9d5895462ee1454a3669c",
+    "code/frontier_verification/dedekind_aggregate_noise_audit.py": "e96a9482d1c6ad10b40063083a6ef1cd7774a209b7c03f97cd18ef5409218f57",
+    "code/frontier_verification/dedekind_aggregate_integer_audit.py": "ef0cec02cac7302e5fed2440f74f0ed8e679dd754bb509a1833d0c4cf7ceee31",
+    "code/frontier_verification/dedekind_aggregate_local_audit.py": "4b24497f463d9bfba3d3fd30310761b4ab22a68b1e5436b5d7707d2d9aa97fce",
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/verify_aggregate_moment_delta.py": "54b8687b0537f7e8edfdabf149104b268dd1294a2331be6dbb88dcb570d23863",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New adaptive instruments and direct dependencies; executed source versions are unchanged and preceding packages are verified recursively."
+}

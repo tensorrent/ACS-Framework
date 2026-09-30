@@ -1,0 +1,307 @@
+{
+  "recorded_utc": "2026-09-13T17:55:03.111354+00:00",
+  "height": 2000,
+  "additional_radius": "5e-3",
+  "retained_measurements": 455,
+  "known_positive_ordinates": 7602,
+  "coefficient_support": 604,
+  "target_count": 91,
+  "prior_unique_targets": 73,
+  "marginal_dual_unique_targets": 73,
+  "two_target_probe_unique_targets": 74,
+  "shared_unique_targets": 81,
+  "new_singletons": [
+    {
+      "n": 32,
+      "prime": 2,
+      "power": 5,
+      "candidates": [
+        0
+      ]
+    },
+    {
+      "n": 257,
+      "prime": 257,
+      "power": 1,
+      "candidates": [
+        0
+      ]
+    },
+    {
+      "n": 269,
+      "prime": 269,
+      "power": 1,
+      "candidates": [
+        0
+      ]
+    },
+    {
+      "n": 271,
+      "prime": 271,
+      "power": 1,
+      "candidates": [
+        4
+      ]
+    },
+    {
+      "n": 281,
+      "prime": 281,
+      "power": 1,
+      "candidates": [
+        4
+      ]
+    },
+    {
+      "n": 283,
+      "prime": 283,
+      "power": 1,
+      "candidates": [
+        0
+      ]
+    },
+    {
+      "n": 311,
+      "prime": 311,
+      "power": 1,
+      "candidates": [
+        4
+      ]
+    },
+    {
+      "n": 313,
+      "prime": 313,
+      "power": 1,
+      "candidates": [
+        0
+      ]
+    }
+  ],
+  "unresolved_targets": [
+    {
+      "n": 64,
+      "prime": 2,
+      "power": 6,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 81,
+      "prime": 3,
+      "power": 4,
+      "candidates": [
+        3,
+        4
+      ]
+    },
+    {
+      "n": 125,
+      "prime": 5,
+      "power": 3,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 128,
+      "prime": 2,
+      "power": 7,
+      "candidates": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 243,
+      "prime": 3,
+      "power": 5,
+      "candidates": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 256,
+      "prime": 2,
+      "power": 8,
+      "candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 289,
+      "prime": 17,
+      "power": 2,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 343,
+      "prime": 7,
+      "power": 3,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 359,
+      "prime": 359,
+      "power": 1,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 361,
+      "prime": 19,
+      "power": 2,
+      "candidates": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "all_target_domain_changes": [
+    {
+      "n": 32,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 125,
+      "before": [
+        0,
+        1,
+        2
+      ],
+      "after": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 243,
+      "before": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "after": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 257,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 269,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 271,
+      "before": [
+        3,
+        4
+      ],
+      "after": [
+        4
+      ]
+    },
+    {
+      "n": 281,
+      "before": [
+        3,
+        4
+      ],
+      "after": [
+        4
+      ]
+    },
+    {
+      "n": 283,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 311,
+      "before": [
+        3,
+        4
+      ],
+      "after": [
+        4
+      ]
+    },
+    {
+      "n": 313,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 343,
+      "before": [
+        0,
+        1,
+        2
+      ],
+      "after": [
+        0,
+        1
+      ]
+    }
+  ],
+  "main_shared_certificates": 56,
+  "main_requested_solver_calls": 48,
+  "opposite_box_bounds_without_solver": 8,
+  "probe_limited_solver_calls": 2,
+  "marginal_certificates_replayed": 36,
+  "shared_certificates_at_two_precisions": 120,
+  "independent_derivative_cases": 75,
+  "independent_finite_center_sums": 2,
+  "scope": "Same declared uncertainty, inputs and inherited analytic assumptions. Only shared-error information changes the inference model. The ten surviving domains do not establish joint feasibility, an optimal noise threshold or alternate fields."
+}

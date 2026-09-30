@@ -1,0 +1,95 @@
+{
+  "recorded_utc": "2026-09-13T19:52:44.971299+00:00",
+  "baseline_commit": "f2b93e9bf75f376a73f8f554df0be1b4f03cee67",
+  "files": {
+    "docs/frontier/2026-09-13-invariant-delta/Branch_Events.jsonl": {
+      "bytes": 365579,
+      "sha256": "98d9836761d58d156a532775d204859b12ac746613dab59133398b050f749525"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Development_Notes.json": {
+      "bytes": 1934,
+      "sha256": "4e992e8e4c4602d3e57e3a08bc56c27751e6736b447e93a99c1c5d80eed9be80"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Execution_Artifacts.zip": {
+      "bytes": 6155,
+      "sha256": "f35d579428382408e4ec0b1b6f54ef85c633e745871ed6d225ccbe07bdf53304"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Execution_Receipts.json": {
+      "bytes": 4813,
+      "sha256": "087209fc179a71c7bc9cdf59917520920ffb260ae5c300983f84b32205af0d44"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Invariant_Adversary.json": {
+      "bytes": 1136,
+      "sha256": "053f586c8f70287f2075580a2ad0b92696c1ad103b292894d9875e43b48743de"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Invariant_Audit.json": {
+      "bytes": 82179,
+      "sha256": "ea381bf1f08f3206e24d166fcef17ddb80793fcff56d56c448cafc49693708c2"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Invariant_Predictions.json": {
+      "bytes": 88743,
+      "sha256": "19517aa1342ff2eef98c460a0e39124486222d42b99fc2a98f7c0ef99a9c094b"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Invariant_Summary.json": {
+      "bytes": 1370,
+      "sha256": "fa1b22b7eb100725f84906b0dafa3e28a3f00fd207f01ee6f450c52a3cf705c7"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Primary_Sources.json": {
+      "bytes": 3018,
+      "sha256": "db11211af21cc823b891cd7c4cb795e282d9e1f74acce75130f80762c5ee161d"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/README.md": {
+      "bytes": 3834,
+      "sha256": "b8245bd6920550802e3164f73b21a959add1a4550b81e956338fca60f8cee13b"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Research_Queue.json": {
+      "bytes": 207425,
+      "sha256": "23ce0f6abba6a02508302170ed9fb3bab51925f4a40adac941b5dd20b1974146"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Runtime.json": {
+      "bytes": 988,
+      "sha256": "d7814b121d352b16230517ffe176bdb3c2a25862b5f1af1f423fe999da1567de"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Source_Acquisition.json": {
+      "bytes": 1978,
+      "sha256": "253d23ae1c450d0493fa41a6fdca7289d00da10f5f20571350029380bca67a6e"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Source_Inventory.json": {
+      "bytes": 1135,
+      "sha256": "b57ac3d4ca61a577be0cedd7dae62ab5902c9d9e80bf33454915cec2cb3e2bba"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Source_Snapshot.zip": {
+      "bytes": 32287,
+      "sha256": "867e6f6e5c90a5f50d48baa53c80f698955574609d198e64b3a1326535a40d9a"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Source_Visual_Checks.json": {
+      "bytes": 943,
+      "sha256": "b9b3b491f5730fb047a9ba0611a5a322e4bf3c9ffde9883b380004b1195c3fc7"
+    },
+    "docs/frontier/2026-09-13-invariant-delta/Verification_Development.json": {
+      "bytes": 859,
+      "sha256": "dba3eb2f3690581e7cd7c73673bd3cea80a464f0210da9af9419c9de6af5e399"
+    },
+    "code/frontier_verification/dedekind_invariant_classification.py": {
+      "bytes": 6383,
+      "sha256": "7532ad6d302ff37ff2429a6574908f64367bcf41dcc9c8ef08ccec9823b1ade6"
+    },
+    "code/frontier_verification/dedekind_invariant_audit.py": {
+      "bytes": 12728,
+      "sha256": "9b85f7819744459ebdbbc2c86f2051d2aee99f14d7dc878821d36927144d0aa6"
+    },
+    "code/frontier_verification/dedekind_invariant_adversary.py": {
+      "bytes": 2641,
+      "sha256": "c6f701c9bca1c5c6baa78cc79a1b07505b132e36be97b609b557b2cb3c21e351"
+    },
+    "code/frontier_verification/verify_invariant_delta.py": {
+      "bytes": 6090,
+      "sha256": "fd2bbe54f52f492999e2782bcd8283e167b9d086fca612329e25690348652337"
+    },
+    "code/frontier_verification/INVARIANT_README.md": {
+      "bytes": 9501,
+      "sha256": "ad5ee6fe24c4d136ca8e43fa30321c536181c31ce5bafe2627d8deebbca5075e"
+    }
+  },
+  "scope": "Manifest and verification output excluded from self-reference; previous checkpoint is checked recursively."
+}

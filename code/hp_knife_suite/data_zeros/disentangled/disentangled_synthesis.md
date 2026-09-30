@@ -1,3 +1,5 @@
+> **Cyclotomic correction, 13 September 2026:** The inherited Q(ζ_5) ratio and structural claims in this historical report are superseded by the [all-factor Frontier audit](../../../../docs/frontier/2026-09-13-dedekind-delta/README.md). The earlier doubled spectrum and separate normalizers do not define the common-weight Dedekind zero sum. This notice does not newly verify the other field comparisons below.
+
 # Disentangled Conductor vs Class Number Effects — 14 Fields
 
 **Author**: Bradley Wallace + Claude

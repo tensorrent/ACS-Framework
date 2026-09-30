@@ -1,0 +1,10213 @@
+{
+  "status": "passed",
+  "source_sha256": "47baab750508951d44695109bfc111829b055c1ce0f965d73cd8dfe08b86b8f0",
+  "input_sha256": "0659b5fbff9578b835c8c9f6bc6b48db744df850ec0a6315a6bf27271f5c908a",
+  "results_sha256": {
+    "Ranges_Probe160.json": "a2293ea72d665b9a99448de7f152c6177a9a26d7b969bb18d8721e0433341536",
+    "Ranges_160.json": "3d256af731ee068fcb02e485add2d6991834b5c949ff11f233b138b2babc5b72",
+    "Ranges_224.json": "94ff16a67f2f5c4992d58106a73e8752836d6eb2ea7f6af28a305d284f006e70"
+  },
+  "fixed_point_scale_bits": 192,
+  "interval_replays": [
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 316,
+      "domains_sha256": "6ebb663847d2702c0d201bf8b7a57c3e079bd478afe5a0950d2e9d71d0dfe3cd",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 320,
+      "domains_sha256": "12a20933f6ee9d7050324ddd245d1d9844758fd2a8714cdcb01aa78256396e4d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "f42c092209cb5e581ed5027100cd99845dd400cd0c5f1d1472475470d47e9696",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 332,
+      "domains_sha256": "7e3b23811102931f6f73a6fe75391ff24e97bec97f34a965115fac979ab5ecc6",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 313,
+      "domains_sha256": "6ee134239e46b986335cd07f1e21c8405d2d6b8076a6a0ffc70183d20ca3d0f3",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 340,
+      "domains_sha256": "61204ecffbd1f2cc13081c99d6bcca9dcb95d90176a90229ba129598e47e4daa",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 307,
+      "domains_sha256": "63214ab1cfed1dad96a1bccd808f36d339d8175fe4dacb8c999a7129f2e5b308",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 344,
+      "domains_sha256": "643108ccc62d3a034bcfe22f5bf71e7991301395178d6d28b3b1202dfff74782",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-6",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-5",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 316,
+      "domains_sha256": "6ebb663847d2702c0d201bf8b7a57c3e079bd478afe5a0950d2e9d71d0dfe3cd",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 320,
+      "domains_sha256": "12a20933f6ee9d7050324ddd245d1d9844758fd2a8714cdcb01aa78256396e4d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "f42c092209cb5e581ed5027100cd99845dd400cd0c5f1d1472475470d47e9696",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 332,
+      "domains_sha256": "7e3b23811102931f6f73a6fe75391ff24e97bec97f34a965115fac979ab5ecc6",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 313,
+      "domains_sha256": "6ee134239e46b986335cd07f1e21c8405d2d6b8076a6a0ffc70183d20ca3d0f3",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 340,
+      "domains_sha256": "61204ecffbd1f2cc13081c99d6bcca9dcb95d90176a90229ba129598e47e4daa",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 307,
+      "domains_sha256": "63214ab1cfed1dad96a1bccd808f36d339d8175fe4dacb8c999a7129f2e5b308",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 344,
+      "domains_sha256": "643108ccc62d3a034bcfe22f5bf71e7991301395178d6d28b3b1202dfff74782",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 66,
+      "domains_sha256": "449264316abaa41ab818d7611ea61c4fb81a4fbad4a60a5c48a0a6c2f89a9c05",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 66,
+      "domains_sha256": "449264316abaa41ab818d7611ea61c4fb81a4fbad4a60a5c48a0a6c2f89a9c05",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 34,
+      "domains_sha256": "e41c194cd9fa03818c079d9223d2a49d12ba383ab6df822d8823b4b9de023b36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 313,
+      "domains_sha256": "cc8a70674f2f36f436ad526d62ff7c37df07ebb4215d0fcb9c45e8de24afb017",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "783e806c4d3c3bd1da9a5b336aa03b841db6800b980eb2bfedffb2faa08dc384",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "4f909d5df67bccc3c5f15aab99433c9a5a0517c1648795d63114dde84d658726",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 317,
+      "domains_sha256": "799bcd7eb9a56e0ff84607e695a02e92895a330ba86bb8a1e9dfbb7dbe774977",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "4f909d5df67bccc3c5f15aab99433c9a5a0517c1648795d63114dde84d658726",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 317,
+      "domains_sha256": "799bcd7eb9a56e0ff84607e695a02e92895a330ba86bb8a1e9dfbb7dbe774977",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 11,
+      "domains_sha256": "6274c1dcc7487df95dd90da3dd2916ddd4fa424d2ca38ed09167fba04a1a844c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 325,
+      "domains_sha256": "cf79e08b4ccd185a2bd0cdd12dcd6351982b92ea531dfb561ef1756bc0521088",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 326,
+      "domains_sha256": "2b022d45e7b570157aa2c7cb03d3cc91288e28283d12e81067ff816f09da551c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 326,
+      "domains_sha256": "2b022d45e7b570157aa2c7cb03d3cc91288e28283d12e81067ff816f09da551c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 4,
+      "domains_sha256": "c5e9dbe1856a08b4947ed1eb35fd5933f147edd2d09c306ce20a9fe1d2fd7bcc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 3,
+      "domains_sha256": "c59b1080bb57f1a764e22851bba02440f22104b45945a17942c7e99bf2a02bda",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "4052ffcc95f9f0c6a99c7f0423a7cf50174cb0e4c174550670c58fcdaba43b9c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "1470e4ef9deae610c35b5c59cdea01f4827803a5c881491c798dc40993c205b9",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "1470e4ef9deae610c35b5c59cdea01f4827803a5c881491c798dc40993c205b9",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_160.json",
+      "case": [
+        "5e-3",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-6",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 376,
+      "domains_sha256": "de13c74336c64efc77c4b36f1a8353cb2c49c7f6d8ce2443bbb3abdceaaabe36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 329,
+      "domains_sha256": "f8874295e37ae2837e657203b58530f1d8aeeb98fdb0f6b48568918cedd6911e",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 367,
+      "domains_sha256": "09a0b1e9b7e4d998e7e4ba8f5921810b25fa583beca860478091ca69a2fa1e90",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-5",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 262,
+      "domains_sha256": "617f8143600da7a95da8e7ccee24b60e01568acf5e098080dd87f1380fdb468d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "bfff7eca8c1d9e3c5cd394bce910d3c5f6a49179fcd943dc59f55dea16721c86",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 316,
+      "domains_sha256": "6ebb663847d2702c0d201bf8b7a57c3e079bd478afe5a0950d2e9d71d0dfe3cd",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 320,
+      "domains_sha256": "12a20933f6ee9d7050324ddd245d1d9844758fd2a8714cdcb01aa78256396e4d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 368,
+      "domains_sha256": "30c5a22f653ab8e5cf2c876b9d6008c2cfa862f183586e43d62b8865d2542736",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "f42c092209cb5e581ed5027100cd99845dd400cd0c5f1d1472475470d47e9696",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 332,
+      "domains_sha256": "7e3b23811102931f6f73a6fe75391ff24e97bec97f34a965115fac979ab5ecc6",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 313,
+      "domains_sha256": "6ee134239e46b986335cd07f1e21c8405d2d6b8076a6a0ffc70183d20ca3d0f3",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 340,
+      "domains_sha256": "61204ecffbd1f2cc13081c99d6bcca9dcb95d90176a90229ba129598e47e4daa",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 307,
+      "domains_sha256": "63214ab1cfed1dad96a1bccd808f36d339d8175fe4dacb8c999a7129f2e5b308",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 344,
+      "domains_sha256": "643108ccc62d3a034bcfe22f5bf71e7991301395178d6d28b3b1202dfff74782",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 364,
+      "domains_sha256": "df50eb0d31d89df4c84bb4e8d92037d112bcfcf13faf4f51b16dcbaef118c126",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-4",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 375,
+      "domains_sha256": "4dcf0db0f48432f20a4ba8f18370924d5450d0c76e44d6325d43b87fbe22b47d",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 66,
+      "domains_sha256": "449264316abaa41ab818d7611ea61c4fb81a4fbad4a60a5c48a0a6c2f89a9c05",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 66,
+      "domains_sha256": "449264316abaa41ab818d7611ea61c4fb81a4fbad4a60a5c48a0a6c2f89a9c05",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        220,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 259,
+      "domains_sha256": "aa8e9f0ba931d55379a1b64600dff7e417ab0dc249fb84ed72969e036531e3dc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 34,
+      "domains_sha256": "e41c194cd9fa03818c079d9223d2a49d12ba383ab6df822d8823b4b9de023b36",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 313,
+      "domains_sha256": "cc8a70674f2f36f436ad526d62ff7c37df07ebb4215d0fcb9c45e8de24afb017",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "783e806c4d3c3bd1da9a5b336aa03b841db6800b980eb2bfedffb2faa08dc384",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "4f909d5df67bccc3c5f15aab99433c9a5a0517c1648795d63114dde84d658726",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 317,
+      "domains_sha256": "799bcd7eb9a56e0ff84607e695a02e92895a330ba86bb8a1e9dfbb7dbe774977",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 315,
+      "domains_sha256": "4f909d5df67bccc3c5f15aab99433c9a5a0517c1648795d63114dde84d658726",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        600,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 317,
+      "domains_sha256": "799bcd7eb9a56e0ff84607e695a02e92895a330ba86bb8a1e9dfbb7dbe774977",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 11,
+      "domains_sha256": "6274c1dcc7487df95dd90da3dd2916ddd4fa424d2ca38ed09167fba04a1a844c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 325,
+      "domains_sha256": "cf79e08b4ccd185a2bd0cdd12dcd6351982b92ea531dfb561ef1756bc0521088",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 326,
+      "domains_sha256": "2b022d45e7b570157aa2c7cb03d3cc91288e28283d12e81067ff816f09da551c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 326,
+      "domains_sha256": "2b022d45e7b570157aa2c7cb03d3cc91288e28283d12e81067ff816f09da551c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 331,
+      "domains_sha256": "99ded3ce8b0eda0dfc2deb8f2c68e84d96407b0196a661788ccc417ab3969251",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 4,
+      "domains_sha256": "c5e9dbe1856a08b4947ed1eb35fd5933f147edd2d09c306ce20a9fe1d2fd7bcc",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 327,
+      "domains_sha256": "8e615e4865af6b6e22a9fcb5712647b922b1b6b247ec850a0c661b3c84d8309b",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        1500,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "global",
+        "single_cutoff"
+      ],
+      "exclusions": 3,
+      "domains_sha256": "c59b1080bb57f1a764e22851bba02440f22104b45945a17942c7e99bf2a02bda",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "global",
+        "retained_prefix"
+      ],
+      "exclusions": 68,
+      "domains_sha256": "d7e690ac5d99bfe8b7c863f23b5c90dd79aa3da6b9550c999df51fd100b70783",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "derivative",
+        "single_cutoff"
+      ],
+      "exclusions": 321,
+      "domains_sha256": "4052ffcc95f9f0c6a99c7f0423a7cf50174cb0e4c174550670c58fcdaba43b9c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "derivative",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "direct",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "1470e4ef9deae610c35b5c59cdea01f4827803a5c881491c798dc40993c205b9",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "direct",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "stationary",
+        "single_cutoff"
+      ],
+      "exclusions": 324,
+      "domains_sha256": "1470e4ef9deae610c35b5c59cdea01f4827803a5c881491c798dc40993c205b9",
+      "all_604_arithmetic_coefficients_retained": true
+    },
+    {
+      "file": "Ranges_224.json",
+      "case": [
+        "5e-3",
+        2000,
+        "stationary",
+        "retained_prefix"
+      ],
+      "exclusions": 338,
+      "domains_sha256": "f32561654098ba8ccef326d3f82a4724f17ff4b9ec9227e179bc8b412598ed1c",
+      "all_604_arithmetic_coefficients_retained": true
+    }
+  ],
+  "exclusions_replayed": 119400,
+  "critical_point_strict_phase_brackets": 57691,
+  "precision_domain_comparisons": 160,
+  "domain_inclusion_comparisons": 528,
+  "probe_repeat_cases": 40,
+  "arithmetic_factor_degrees": {
+    "2": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3": [
+      [
+        1,
+        4
+      ]
+    ],
+    "5": [
+      [
+        4,
+        1
+      ]
+    ],
+    "7": [
+      [
+        1,
+        4
+      ]
+    ],
+    "11": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "13": [
+      [
+        1,
+        4
+      ]
+    ],
+    "17": [
+      [
+        1,
+        4
+      ]
+    ],
+    "19": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "23": [
+      [
+        1,
+        4
+      ]
+    ],
+    "29": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "31": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "37": [
+      [
+        1,
+        4
+      ]
+    ],
+    "41": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "43": [
+      [
+        1,
+        4
+      ]
+    ],
+    "47": [
+      [
+        1,
+        4
+      ]
+    ],
+    "53": [
+      [
+        1,
+        4
+      ]
+    ],
+    "59": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "61": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "67": [
+      [
+        1,
+        4
+      ]
+    ],
+    "71": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "73": [
+      [
+        1,
+        4
+      ]
+    ],
+    "79": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "83": [
+      [
+        1,
+        4
+      ]
+    ],
+    "89": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "97": [
+      [
+        1,
+        4
+      ]
+    ],
+    "101": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "103": [
+      [
+        1,
+        4
+      ]
+    ],
+    "107": [
+      [
+        1,
+        4
+      ]
+    ],
+    "109": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "113": [
+      [
+        1,
+        4
+      ]
+    ],
+    "127": [
+      [
+        1,
+        4
+      ]
+    ],
+    "131": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "137": [
+      [
+        1,
+        4
+      ]
+    ],
+    "139": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "149": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "151": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "157": [
+      [
+        1,
+        4
+      ]
+    ],
+    "163": [
+      [
+        1,
+        4
+      ]
+    ],
+    "167": [
+      [
+        1,
+        4
+      ]
+    ],
+    "173": [
+      [
+        1,
+        4
+      ]
+    ],
+    "179": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "181": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "191": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "193": [
+      [
+        1,
+        4
+      ]
+    ],
+    "197": [
+      [
+        1,
+        4
+      ]
+    ],
+    "199": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "211": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "223": [
+      [
+        1,
+        4
+      ]
+    ],
+    "227": [
+      [
+        1,
+        4
+      ]
+    ],
+    "229": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "233": [
+      [
+        1,
+        4
+      ]
+    ],
+    "239": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "241": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "251": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "257": [
+      [
+        1,
+        4
+      ]
+    ],
+    "263": [
+      [
+        1,
+        4
+      ]
+    ],
+    "269": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "271": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "277": [
+      [
+        1,
+        4
+      ]
+    ],
+    "281": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "283": [
+      [
+        1,
+        4
+      ]
+    ],
+    "293": [
+      [
+        1,
+        4
+      ]
+    ],
+    "307": [
+      [
+        1,
+        4
+      ]
+    ],
+    "311": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "313": [
+      [
+        1,
+        4
+      ]
+    ],
+    "317": [
+      [
+        1,
+        4
+      ]
+    ],
+    "331": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "337": [
+      [
+        1,
+        4
+      ]
+    ],
+    "347": [
+      [
+        1,
+        4
+      ]
+    ],
+    "349": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "353": [
+      [
+        1,
+        4
+      ]
+    ],
+    "359": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "367": [
+      [
+        1,
+        4
+      ]
+    ],
+    "373": [
+      [
+        1,
+        4
+      ]
+    ],
+    "379": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "383": [
+      [
+        1,
+        4
+      ]
+    ],
+    "389": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "397": [
+      [
+        1,
+        4
+      ]
+    ],
+    "401": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "409": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "419": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "421": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "431": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "433": [
+      [
+        1,
+        4
+      ]
+    ],
+    "439": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "443": [
+      [
+        1,
+        4
+      ]
+    ],
+    "449": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "457": [
+      [
+        1,
+        4
+      ]
+    ],
+    "461": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "463": [
+      [
+        1,
+        4
+      ]
+    ],
+    "467": [
+      [
+        1,
+        4
+      ]
+    ],
+    "479": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "487": [
+      [
+        1,
+        4
+      ]
+    ],
+    "491": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "499": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "503": [
+      [
+        1,
+        4
+      ]
+    ],
+    "509": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "521": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "523": [
+      [
+        1,
+        4
+      ]
+    ],
+    "541": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "547": [
+      [
+        1,
+        4
+      ]
+    ],
+    "557": [
+      [
+        1,
+        4
+      ]
+    ],
+    "563": [
+      [
+        1,
+        4
+      ]
+    ],
+    "569": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "571": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "577": [
+      [
+        1,
+        4
+      ]
+    ],
+    "587": [
+      [
+        1,
+        4
+      ]
+    ],
+    "593": [
+      [
+        1,
+        4
+      ]
+    ],
+    "599": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "601": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "607": [
+      [
+        1,
+        4
+      ]
+    ],
+    "613": [
+      [
+        1,
+        4
+      ]
+    ],
+    "617": [
+      [
+        1,
+        4
+      ]
+    ],
+    "619": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "631": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "641": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "643": [
+      [
+        1,
+        4
+      ]
+    ],
+    "647": [
+      [
+        1,
+        4
+      ]
+    ],
+    "653": [
+      [
+        1,
+        4
+      ]
+    ],
+    "659": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "661": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "673": [
+      [
+        1,
+        4
+      ]
+    ],
+    "677": [
+      [
+        1,
+        4
+      ]
+    ],
+    "683": [
+      [
+        1,
+        4
+      ]
+    ],
+    "691": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "701": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "709": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "719": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "727": [
+      [
+        1,
+        4
+      ]
+    ],
+    "733": [
+      [
+        1,
+        4
+      ]
+    ],
+    "739": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "743": [
+      [
+        1,
+        4
+      ]
+    ],
+    "751": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "757": [
+      [
+        1,
+        4
+      ]
+    ],
+    "761": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "769": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "773": [
+      [
+        1,
+        4
+      ]
+    ],
+    "787": [
+      [
+        1,
+        4
+      ]
+    ],
+    "797": [
+      [
+        1,
+        4
+      ]
+    ],
+    "809": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "811": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "821": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "823": [
+      [
+        1,
+        4
+      ]
+    ],
+    "827": [
+      [
+        1,
+        4
+      ]
+    ],
+    "829": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "839": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "853": [
+      [
+        1,
+        4
+      ]
+    ],
+    "857": [
+      [
+        1,
+        4
+      ]
+    ],
+    "859": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "863": [
+      [
+        1,
+        4
+      ]
+    ],
+    "877": [
+      [
+        1,
+        4
+      ]
+    ],
+    "881": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "883": [
+      [
+        1,
+        4
+      ]
+    ],
+    "887": [
+      [
+        1,
+        4
+      ]
+    ],
+    "907": [
+      [
+        1,
+        4
+      ]
+    ],
+    "911": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "919": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "929": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "937": [
+      [
+        1,
+        4
+      ]
+    ],
+    "941": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "947": [
+      [
+        1,
+        4
+      ]
+    ],
+    "953": [
+      [
+        1,
+        4
+      ]
+    ],
+    "967": [
+      [
+        1,
+        4
+      ]
+    ],
+    "971": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "977": [
+      [
+        1,
+        4
+      ]
+    ],
+    "983": [
+      [
+        1,
+        4
+      ]
+    ],
+    "991": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "997": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1009": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1013": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1019": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1021": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1031": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1033": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1039": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1049": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1051": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1061": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1063": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1069": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1087": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1091": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1093": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1097": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1103": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1109": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1117": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1123": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1129": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1151": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1153": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1163": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1171": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1181": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1187": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1193": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1201": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1213": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1217": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1223": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1229": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1231": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1237": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1249": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1259": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1277": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1279": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1283": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1289": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1291": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1297": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1301": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1303": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1307": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1319": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1321": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1327": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1361": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1367": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1373": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1381": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1399": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1409": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1423": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1427": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1429": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1433": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1439": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1447": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1451": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1453": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1459": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1471": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1481": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1483": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1487": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1489": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1493": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1499": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1511": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1523": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1531": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1543": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1549": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1553": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1559": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1567": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1571": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1579": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1583": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1597": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1601": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1607": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1609": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1613": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1619": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1621": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1627": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1637": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1657": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1663": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1667": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1669": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1693": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1697": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1699": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1709": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1721": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1723": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1733": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1741": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1747": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1753": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1759": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1777": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1783": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1787": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1789": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1801": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1811": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1823": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1831": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1847": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1861": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1867": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1871": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1873": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1877": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1879": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1889": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1901": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1907": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1913": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1931": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1933": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1949": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1951": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "1973": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1979": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "1987": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1993": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1997": [
+      [
+        1,
+        4
+      ]
+    ],
+    "1999": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2003": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2011": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2017": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2027": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2029": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2039": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2053": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2063": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2069": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2081": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2083": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2087": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2089": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2099": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2111": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2113": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2129": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2131": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2137": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2141": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2143": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2153": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2161": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2179": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2203": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2207": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2213": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2221": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2237": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2239": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2243": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2251": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2267": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2269": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2273": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2281": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2287": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2293": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2297": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2309": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2311": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2333": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2339": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2341": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2347": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2351": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2357": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2371": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2377": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2381": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2383": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2389": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2393": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2399": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2411": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2417": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2423": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2437": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2441": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2447": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2459": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2467": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2473": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2477": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2503": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2521": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2531": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2539": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2543": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2549": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2551": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2557": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2579": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2591": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2593": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2609": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2617": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2621": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2633": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2647": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2657": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2659": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2663": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2671": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2677": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2683": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2687": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2689": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2693": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2699": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2707": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2711": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2713": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2719": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2729": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2731": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2741": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2749": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2753": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2767": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2777": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2789": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2791": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2797": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2801": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2803": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2819": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2833": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2837": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2843": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2851": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2857": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2861": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2879": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2887": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2897": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2903": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2909": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2917": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2927": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2939": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2953": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2957": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2963": [
+      [
+        1,
+        4
+      ]
+    ],
+    "2969": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "2971": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "2999": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3001": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3011": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3019": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3023": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3037": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3041": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3049": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3061": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3067": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3079": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3083": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3089": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3109": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3119": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3121": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3137": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3163": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3167": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3169": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3181": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3187": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3191": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3203": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3209": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3217": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3221": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3229": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3251": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3253": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3257": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3259": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3271": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3299": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3301": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3307": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3313": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3319": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3323": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3329": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3331": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3343": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3347": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3359": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3361": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3371": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3373": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3389": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3391": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3407": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3413": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3433": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3449": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3457": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3461": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3463": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3467": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3469": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3491": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3499": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3511": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3517": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3527": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3529": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3533": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3539": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3541": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3547": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3557": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3559": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3571": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3581": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3583": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3593": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3607": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3613": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3617": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3623": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3631": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3637": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3643": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3659": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3671": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3673": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3677": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3691": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3697": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3701": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3709": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3719": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3727": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3733": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3739": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3761": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3767": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3769": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3779": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3793": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3797": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3803": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3821": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3823": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3833": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3847": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3851": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3853": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3863": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3877": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3881": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3889": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3907": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3911": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3917": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3919": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3923": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3929": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "3931": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "3943": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3947": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3967": [
+      [
+        1,
+        4
+      ]
+    ],
+    "3989": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "4001": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "4003": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4007": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4013": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4019": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "4021": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "4027": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4049": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "4051": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "4057": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4073": [
+      [
+        1,
+        4
+      ]
+    ],
+    "4079": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "4091": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "4093": [
+      [
+        1,
+        4
+      ]
+    ]
+  },
+  "mpmath_digits": 80,
+  "mpmath_extrema_cases": [
+    {
+      "height": 220,
+      "delta": "5e-4",
+      "target": 2,
+      "roots_checked": 528,
+      "critical_points_checked": 0,
+      "minimum_sum": "-0.733947171354079288954424670266289595255743468752310240718427879688692242",
+      "maximum_sum": "-0.699629054321584655844173490536318801506167485825754968257655267714395936",
+      "lower_bound_slack": "1.29015056417661238339435646511e-64",
+      "upper_bound_slack": "1.4707013351758426440540053181e-64",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 220,
+      "delta": "5e-4",
+      "target": 11,
+      "roots_checked": 528,
+      "critical_points_checked": 0,
+      "minimum_sum": "-33.6164066448213367560423209571413685821327939585579427599416132234464635",
+      "maximum_sum": "-33.4415786303619133156171560287791904324559693957898761500223945026726889",
+      "lower_bound_slack": "1.25505146350750522824675976487e-63",
+      "upper_bound_slack": "2.35221732575575391050452482102e-63",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 220,
+      "delta": "5e-4",
+      "target": 361,
+      "roots_checked": 528,
+      "critical_points_checked": 1,
+      "minimum_sum": "7.52295925335655067577565771718229794595750930314001238840255872463485201",
+      "maximum_sum": "8.22940893124947544036504983532153173586782378551773327767258321474632397",
+      "lower_bound_slack": "3.60715776584947896608151132911e-63",
+      "upper_bound_slack": "1.66147821480982387527985608283e-41",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-4",
+      "target": 2,
+      "roots_checked": 7602,
+      "critical_points_checked": 3,
+      "minimum_sum": "-0.783496923281208514398681885166420625676452191586126721242445454707240371",
+      "maximum_sum": "-0.63301765618001750083687005454460297195347521935294668781882582018834202",
+      "lower_bound_slack": "1.31625449267434486718196981072e-60",
+      "upper_bound_slack": "1.68832735429150444394508042828e-63",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-4",
+      "target": 11,
+      "roots_checked": 7602,
+      "critical_points_checked": 8,
+      "minimum_sum": "-123.902208334802262815748080793389556142963433160171140879494601289650056",
+      "maximum_sum": "-122.957369970870152672725139308559939748177062992766432047319478664488511",
+      "lower_bound_slack": "2.96334053116906762536681501399e-62",
+      "upper_bound_slack": "4.51049768892932785146395648633e-40",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-4",
+      "target": 361,
+      "roots_checked": 7602,
+      "critical_points_checked": 13,
+      "minimum_sum": "-74.4005527203292186997686141243088368301140876189138671244344301291150634",
+      "maximum_sum": "-64.656043967269981756014843914330987165694650000268782589804201485791595",
+      "lower_bound_slack": "1.11975889057162824926315839277e-40",
+      "upper_bound_slack": "6.17894907757546435521295708666e-40",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 220,
+      "delta": "5e-3",
+      "target": 2,
+      "roots_checked": 528,
+      "critical_points_checked": 0,
+      "minimum_sum": "-0.888374215109756094324970080780135973097628786577211421388378148018004961",
+      "maximum_sum": "-0.545193722075685421607525890741925536995864035340219245018475873496367385",
+      "lower_bound_slack": "1.30911987492319857460886556878e-64",
+      "upper_bound_slack": "1.46678177764824725794284473937e-64",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 220,
+      "delta": "5e-3",
+      "target": 11,
+      "roots_checked": 528,
+      "critical_points_checked": 6,
+      "minimum_sum": "-34.400757164557116961918481504574016365322605466442315576458883794267576",
+      "maximum_sum": "-32.6524814617836786840684839196817203904564673167169127760916141296274942",
+      "lower_bound_slack": "8.87099726231640330880362168826e-38",
+      "upper_bound_slack": "4.63209477671413462556483123101e-38",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 220,
+      "delta": "5e-3",
+      "target": 361,
+      "roots_checked": 528,
+      "critical_points_checked": 6,
+      "minimum_sum": "4.34096918390130681505935893501472741186202110358218394592150202895612803",
+      "maximum_sum": "11.4045470103960193744559752129150124057743324897399024377990155053997855",
+      "lower_bound_slack": "2.876483746609886878010149803e-39",
+      "upper_bound_slack": "1.24737962139275099065162627819e-40",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-3",
+      "target": 2,
+      "roots_checked": 7602,
+      "critical_points_checked": 16,
+      "minimum_sum": "-1.46065908869394064950521486124661659530128494541267400940077773943116445",
+      "maximum_sum": "0.0441417770021604686026457234755258815113714186378746069847311071855951907",
+      "lower_bound_slack": "6.99062366360623845101473185302e-41",
+      "upper_bound_slack": "6.18688700858813428650811627643e-42",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-3",
+      "target": 11,
+      "roots_checked": 7602,
+      "critical_points_checked": 70,
+      "minimum_sum": "-128.145154418138214989696590697654525854656216039281691438098518292113215",
+      "maximum_sum": "-118.696904759297144912438098683089188615687722834587596040949015504213975",
+      "lower_bound_slack": "1.03223270109621859636030518201e-38",
+      "upper_bound_slack": "2.90631006802776256314447096146e-39",
+      "inside_certified_extrema_bounds": true
+    },
+    {
+      "height": 2000,
+      "delta": "5e-3",
+      "target": 361,
+      "roots_checked": 7602,
+      "critical_points_checked": 136,
+      "minimum_sum": "-118.216047609713492524812688162805249347145175377054564713046514906152054",
+      "maximum_sum": "-20.7789328390552963620492528433194762392189834028437688041573514753949053",
+      "lower_bound_slack": "3.93741268668753305668608111119e-39",
+      "upper_bound_slack": "5.80753908107958889849480085499e-39",
+      "inside_certified_extrema_bounds": true
+    }
+  ],
+  "adversarial_controls": {
+    "missing_prerequisites": {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "round": 2,
+      "witness": {
+        "column": 17,
+        "n": 32,
+        "candidate": 3,
+        "measurement_index": 16,
+        "measurement_target": 31,
+        "side": "candidate_minimum_above_observation",
+        "strict_gap": {
+          "mid": [
+            39738710293058122115467110739295424010968036677,
+            -157
+          ],
+          "rad": [
+            785831617,
+            -32
+          ]
+        }
+      },
+      "valid_gap_scaled_integer": "216917493839334678222824223659262638110622648058091779817",
+      "missing_prerequisite_gap_scaled_integer": "-24891489447707388377146592457102575599094174373460609859584"
+    },
+    "true_coefficient_elimination": {
+      "file": "Ranges_Probe160.json",
+      "case": [
+        "5e-4",
+        220,
+        "global",
+        "single_cutoff"
+      ],
+      "witness": {
+        "column": 0,
+        "n": 2,
+        "candidate": 1,
+        "measurement_index": 0,
+        "measurement_target": 2,
+        "side": "candidate_minimum_above_observation",
+        "strict_gap": {
+          "mid": [
+            365375409332725731315411280540794779706425493309,
+            -158
+          ],
+          "rad": [
+            679824541,
+            -33
+          ]
+        }
+      },
+      "true_coefficient": 0,
+      "false_exclusion_gap_scaled_integer": "-496782339153863921762530214212049352529570194813465133056"
+    },
+    "omitted_critical_point": {
+      "height": 220,
+      "delta": "5e-4",
+      "target": 361,
+      "box": {
+        "mid": [
+          19101531339064595486622881984037252040908885649212542744578421161983,
+          -216
+        ],
+        "rad": [
+          549755815,
+          -40
+        ]
+      },
+      "critical_point": {
+        "k": 340,
+        "point": {
+          "mid": [
+            4044914538203202308113638008730363199770163717,
+            -144
+          ],
+          "rad": [
+            192330967,
+            -143
+          ]
+        },
+        "value": {
+          "mid": [
+            97891928365036109696560725379120291097262019,
+            -158
+          ],
+          "rad": [
+            612547245,
+            -160
+          ]
+        },
+        "iterations": 7
+      },
+      "endpoints": [
+        {
+          "mid": [
+            14792821915222847237739917346250261855171376275535883692973223448427,
+            -235
+          ],
+          "rad": [
+            37455799,
+            -254
+          ]
+        },
+        {
+          "mid": [
+            7396502327080764625576260794212724078253478179734468710376755341791,
+            -234
+          ],
+          "rad": [
+            473246023,
+            -258
+          ]
+        }
+      ],
+      "strict_gap_beyond_endpoint_hull": {
+        "mid": [
+          5312383201376458323586607718382347150864335493768754260257801,
+          -235
+        ],
+        "rad": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "elapsed_seconds": 67.64355579204857,
+  "scope": "Exact integer exclusion replay shares certified analytic input intervals. All reported turning points receive independent strict phase brackets; 12 scalar finite-sum extrema receive 80-digit numerical checks on producer machine-enlarged boxes. This neither optimizes correlated measurements nor proves remaining candidate vectors jointly feasible."
+}

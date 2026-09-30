@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T01:46:23.502002+00:00",
+  "manifest_files": 33,
+  "preceding_checkpoint_integrity": "passed",
+  "derived_results": {
+    "Galois_group_derived": "V4",
+    "complete_quartic_candidate_count": 2,
+    "candidate_quadratic_discriminants": [
+      [
+        -24,
+        -3,
+        8
+      ],
+      [
+        -8,
+        -3,
+        24
+      ]
+    ],
+    "exhausted_A4_subsets": 2048,
+    "sign_functions_tested": 256,
+    "quadratic_characters": 8,
+    "character_planes": 7,
+    "actual_A4_control_discriminants": [
+      3136,
+      5184
+    ],
+    "projective_maximality_checks": 470,
+    "nonzero_residue_cosets_covered": 2510,
+    "count_decoding_cases": 20,
+    "uniquely_decoded_cases": 16,
+    "metadata_only_unique_coefficients": 456,
+    "coefficients_resolved_by_distinguishing_count": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "independent_polynomial_factorizations": 1128,
+    "coefficient_comparisons": 1208,
+    "exact_complete_T20_counts": [
+      23,
+      22
+    ],
+    "robust_count_gate": {
+      "height": "7/3",
+      "ordinate_radius": "1/3",
+      "all_604_coefficients_determined": true
+    },
+    "half_radius_ambiguity_controls": 8,
+    "actual_component_mutations_rejected": 13
+  },
+  "fresh_full_class_and_independent_enumeration": "passed",
+  "fresh_actual_A4_maximality_controls": "passed",
+  "fresh_count_decoding_and_polynomial_audit": "passed",
+  "number_theoretic_proof_formalized_in_Lean": false,
+  "new_roots_computed": 0,
+  "recorded_commands": 7,
+  "successful_commands": 7,
+  "failed_commands": 0,
+  "preserved_failed_verification_attempts": 1,
+  "verification_diagnosis": "passed",
+  "JSON_comparison_controls": 4,
+  "research_branches": 117,
+  "ledger_events": 423,
+  "preserved_event_prefix": 418,
+  "ledger_head_sha256": "b9480be4cc8eac2960fdf8b1b541af8d4e3cd0a3474be72a8c50bbeb3ca9a8a3",
+  "local_links": 53,
+  "scope": "Fresh computational replay supports the written metadata-only quartic classification and count-based arithmetic selection, with actual A4 hypothesis controls and thirteen mutations. General number theory is source-backed written mathematics, not a Lean proof. Complete classification is scoped to the stated invariants; the wider ACS investigation remains active."
+}

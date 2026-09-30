@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "source_sha256": "786e8d6e25d244157633b327d791eecbc7e817238557a7e10db9b3634ffc310c",
+  "checker_sha256": "7944baeeb1277a892b03b1407c80d3c64dcc703358b55efdd7bd3b8941613fe3",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/signed-stability-audit",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/signed-stability-audit/Lean_v2.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/signed-stability-audit/SignedCornerStability_v2.lean"
+  ],
+  "returncode": 0,
+  "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/signed-stability-audit/SignedCornerStability_v2.lean:1:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n'SignedCornerStability.inverse_difference' depends on axioms: [propext]\n'SignedCornerStability.column_action' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.inverse_column_replacement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.cramer_column_numerator_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.negative_quotient_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.endpoint_step_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.convex_combination_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'SignedCornerStability.replacement_chain' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "234a389cf9e9afa9983ed0a7bf66ea07c3a20a1f75538eae8e45bd017e0b535d",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "inverse_difference",
+    "column_action",
+    "inverse_column_replacement",
+    "cramer_column_numerator_invariant",
+    "negative_quotient_transfer",
+    "endpoint_step_nonnegative",
+    "convex_combination_upper",
+    "replacement_chain"
+  ],
+  "scope": "Eight generic lemmas: noncommutative inverse difference, rank-one column action and replacement, Cramer numerator invariance, same-determinant-sign negative quotient transfer, nondecreasing endpoint steps, convex combination bounds and a finite replacement chain. Analytic derivative bounds, closed-hull/integral membership, connectedness and the assembled concrete ACS theorem remain written or computational."
+}

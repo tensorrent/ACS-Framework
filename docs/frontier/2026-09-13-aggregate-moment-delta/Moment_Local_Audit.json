@@ -1,0 +1,1310 @@
+{
+  "status": "passed",
+  "source_sha256": "ecb0d829f8d0f2067cbf51cafaa8d49483441179b71eb147a447eaa5380928bf",
+  "inputs_sha256": {
+    "Moment_Local.json": "77cb08edd796ef14762185a010d2de5f5aea97302213a667d25f02e48684c156",
+    "Moment_Feedback.json": "9838f90309789cf7b31f87c16cd2115046b51bf79ea47fcc0f452e790c0321ed",
+    "Moment_Certificate.json": "0b23ba324c6bf8fa29c75ee2d945e5b100b73af1fa7469b2c77e843735f64d0d",
+    "Moment_Audit.json": "054565ed461f8cc4a508db6d7cef8c4b13ebbc5edd450a47888e7865bc2c3eed",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Moment_Proposals.json": "0fce20097d84f57f5d34a5f4fc579c5d9e23706ce56c523713cc97d07d5b6ebd",
+    "Proposals.json": "bc2124199dac798e7d08aa0e73691a1c7dfdf1ca1b574759d3a8390edc8c7ed5",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52"
+  },
+  "independent_catalog": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        4
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        4,
+        1
+      ]
+    ]
+  ],
+  "one_pass_replays": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 14,
+      "removals": 97,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 14,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 14,
+      "removals": 97,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 14,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 13,
+      "removals": 96,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 13,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 13,
+      "removals": 96,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 13,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 13,
+      "removals": 98,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 13,
+      "removals": 679,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 13,
+      "removals": 98,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 13,
+      "removals": 679,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 7,
+      "removals": 86,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 9,
+      "removals": 682,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 7,
+      "removals": 86,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 9,
+      "removals": 682,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 91,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 12,
+      "removals": 674,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 91,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 12,
+      "removals": 674,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 91,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 12,
+      "removals": 674,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 91,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 12,
+      "removals": 674,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 92,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 11,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 11,
+      "removals": 92,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 11,
+      "removals": 677,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "spectral_method": "separate",
+      "profile": "degree_only",
+      "unique_targets": 9,
+      "removals": 90,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "spectral_method": "separate",
+      "profile": "degree_discriminant",
+      "unique_targets": 9,
+      "removals": 682,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "spectral_method": "coupled",
+      "profile": "degree_only",
+      "unique_targets": 9,
+      "removals": 90,
+      "all_604_true_coefficients_retained": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "spectral_method": "coupled",
+      "profile": "degree_discriminant",
+      "unique_targets": 9,
+      "removals": 682,
+      "all_604_true_coefficients_retained": true
+    }
+  ],
+  "one_pass_local_removals": 12326,
+  "feedback_replays": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 14,
+      "unique_support": 33,
+      "local_removals": 97,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 14,
+      "unique_support": 34,
+      "local_removals": 677,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 14,
+      "unique_support": 33,
+      "local_removals": 97,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 14,
+      "unique_support": 34,
+      "local_removals": 677,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 32,
+      "local_removals": 96,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 677,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 32,
+      "local_removals": 96,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 677,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 32,
+      "local_removals": 98,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 679,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 32,
+      "local_removals": 98,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 2,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 679,
+      "dual_removals": 0,
+      "exact_dual_proofs": [],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 11,
+      "unique_support": 27,
+      "local_removals": 98,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 110,
+          "column": 4,
+          "candidate": 3,
+          "objective_upper": "-24532407798208104346078051712681975421891808886203492297501173324538137970519808465459305622369283623781308366287935356997/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000",
+          "strict_gap": "1445294792508214182633301654004076707977899157415144640500220157987910370033161622833758988647653365496174778217535356997/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 119,
+          "column": 8,
+          "candidate": 1,
+          "objective_upper": "4037607815316331349727835139697814154079781086653277151746358036497488393031814225620826259640406494624051981223273547709/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "strict_gap": "772207394204479100989821122526748077985616773510961943462173873200475690402903866592829289051599809185350849624726452291/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 123,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "10923312049841889826670228513062649106695730539330944903002452161642206147709883160470996383262623584399174426202088824123/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "strict_gap": "4468096620624703615626271526055950035913542613194620201664849949391278919281214734612701372551796587790914632511511175877/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 125,
+          "column": 11,
+          "candidate": 1,
+          "objective_upper": "35327800400734498378399377581684375384503331219400899700137291966719241912885203894808085114990603288421389383098168081133/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "3150721275431985227341872516112122472019851661913013061530963310864470754592540842901159274545447142053833263685831918867/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 687,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 117,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "75455864924392187946381871750349112901388322763033198105407869995886361363433474570017814900035594509484273845162423529119/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "1501178427940779265100628445243882811658042999594627417928640559281063971522014905400673879036506351466171448405576470881/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 119,
+          "column": 8,
+          "candidate": 1,
+          "objective_upper": "4037607815316331317883064326854421322155628744201321692116366727300484042297449225495787838317871670184240114797479577533/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "strict_gap": "772207394204479132834591935370140909909769115962917403092165182397480041137268866717867710374134633625162716050520422467/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 123,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "54616560187674700851949609454401033067639657121476883125624695954333224222864097737958161473374782776049619650489948557863/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "22340483164658266359532890741191962645406708641150942397711814600834201112091391737460327305697318084900825643078051442137/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 125,
+          "column": 11,
+          "candidate": 1,
+          "objective_upper": "35327800400734496106839506686187188961192242628112038862229486560302152832774712832652182093522155666271382197207651154669/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "3150721275431987498901743411609308895330940253201873899438768717281559834703031905057062296013894764203840449576348845331/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 11,
+      "unique_support": 27,
+      "local_removals": 98,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 110,
+          "column": 4,
+          "candidate": 3,
+          "objective_upper": "-24536573529166574005168024044641480941029440738200463156945166723071477368778566629817036483494604017636053873010037700747/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000",
+          "strict_gap": "1449460523466683841723273985963582227115531009412115499944213556521249768291919787191489849772973759350920284939637700747/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 119,
+          "column": 8,
+          "candidate": 1,
+          "objective_upper": "4031748919019731118608187720925649524731544691024076373932588247673541905570260920265443273816715765073211750838832141459/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "strict_gap": "778066290501079332109468541298912707333853169140162721275943662024422177864457171948212274875290538736191080009167858541/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 123,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "10875640439578588703280073226520592410250255458577201400901145523715629513728561078026156971128679729252754167198086480373/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "strict_gap": "4515768230888004739016426812598006732359017693948363703766156587317855553262536817057540784685740442937334891515513519627/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 125,
+          "column": 11,
+          "candidate": 1,
+          "objective_upper": "35212984576628344064932629504503671916444874075835855873223892319595816236363045450676371735922533872759019513509789174883/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "3265537099538139540808620593292825940078308805478056888444362957987896431114699287032872653613516557716203133274210825117/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 687,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 117,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "75422702414736053954316878191816706990448862386072993633336723475424011950783057360670246396971499965177761994166068060369/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "1534340937596913257165622003776288722597503376554831889999787079743413384172432114748242382100600895772683299401931939631/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 119,
+          "column": 8,
+          "candidate": 1,
+          "objective_upper": "4031748919019731086763416908082256692807392348572120914302596938476537554835895920140404852494180940633399884413038171283/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "strict_gap": "778066290501079363954239354142305539258005511592118180905934971221426528598822172073250696197825363176002946434961828717/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 123,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "54378202136358195234998833021690749585412281717708165615118162764700341052957487325733964412705063500317518355469936839113/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "22578841215974771976483667173902246127634084044919659908218347790467084281998002149684524366367037360632926938098063160887/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 125,
+          "column": 11,
+          "candidate": 1,
+          "objective_upper": "35212984576628341793372758609006485493133785484546995035316086913178727156252554388520468714454086250609012327619272248419/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "3265537099538141812368491488790012363389397396766917726352168364404985511225190349188775675081964179866210319164727751581/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 31,
+      "local_removals": 94,
+      "dual_removals": 3,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 157,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "3098948361259822025380481991073930244258453417984259224796055969476003353535850673826417224429810312178479768306686904577/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "16140312476823419777490143057824318684003138022672697156038071669315852980203021695028204970338214903059131555085313095423/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 158,
+          "column": 11,
+          "candidate": 3,
+          "objective_upper": "-271559096375869614301866229212645605520683704723172588253187741687312240032140047447921796809466106567449929934698280136299/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "40687966318870712667418728625866618381544607435289111683178210021809964027273579021666330472249803984598594053994280136299/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 161,
+          "column": 12,
+          "candidate": 2,
+          "objective_upper": "16246563472229454944469439643314744190609275280797416024367650595876415682696504999830360378776485167077008907305489563679/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000",
+          "strict_gap": "2992697365853786858401185405583504737652316159859540356466477042915440651042367369024261815991540048160602416086510436321/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 675,
+      "dual_removals": 2,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 157,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "3098948333107788401514196913312015537470054727776635789398607466693082417915954356320354650026729798284889891438297893121/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "16140312504975453401356428135586233390791536712880320591435520172098773915822918012534267544741295416952721431953702106879/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 161,
+          "column": 12,
+          "candidate": 2,
+          "objective_upper": "16246563467279755285049291035235179997226490841438665040278093970822692173244993824592761030212160054015558753121823916063/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000",
+          "strict_gap": "2992697370803486517821334013663068931035100599218291340556033667969164160493878544261861164555865161222052570270176083937/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 31,
+      "local_removals": 94,
+      "dual_removals": 3,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 157,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "3098948361259822025380481991073930244258453417984259224796055969476003353535850673826417224429810312178479768306686904577/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "16140312476823419777490143057824318684003138022672697156038071669315852980203021695028204970338214903059131555085313095423/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 158,
+          "column": 11,
+          "candidate": 3,
+          "objective_upper": "-271559096375869614301866229212645605520683704723172588253187741687312240032140047447921796809466106567449929934698280136299/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "40687966318870712667418728625866618381544607435289111683178210021809964027273579021666330472249803984598594053994280136299/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 161,
+          "column": 12,
+          "candidate": 2,
+          "objective_upper": "16246563472229454944469439643314744190609275280797416024367650595876415682696504999830360378776485167077008907305489563679/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000",
+          "strict_gap": "2992697365853786858401185405583504737652316159859540356466477042915440651042367369024261815991540048160602416086510436321/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 675,
+      "dual_removals": 2,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 157,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "3098948333107788401514196913312015537470054727776635789398607466693082417915954356320354650026729798284889891438297893121/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "16140312504975453401356428135586233390791536712880320591435520172098773915822918012534267544741295416952721431953702106879/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 161,
+          "column": 12,
+          "candidate": 2,
+          "objective_upper": "16246563467279755285049291035235179997226490841438665040278093970822692173244993824592761030212160054015558753121823916063/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000",
+          "strict_gap": "2992697370803486517821334013663068931035100599218291340556033667969164160493878544261861164555865161222052570270176083937/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 31,
+      "local_removals": 94,
+      "dual_removals": 2,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 191,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "8045923192088001361704873337482727216437515716668596887768573036806966349094478312344075337127053611940517545774708525187/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "11193337645995240441165751711415521711824075723988359493065554601984889984644394056510546857640971603297093777617291474813/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 192,
+          "column": 11,
+          "candidate": 3,
+          "objective_upper": "-118945064188166926492260665155675116138734729114616437370957073251421686042389510800074572654505271679516858030121702161677/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "3509499159667475675036914862285622569165180470674699085952307418670548039956276586946839485897120388091190089769702161677/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 675,
+      "dual_removals": 1,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 191,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "1609184627104056894160428950459003188333279068260450955907229266289251408435557765904808571373183502556072714222056158439/3847852167616648360574125009779649785652318288131391276166825527758371266747774473770924438953605043047522264678400000000",
+          "strict_gap": "2238667540512591466413696059320646597319039219870940320259596261469119858312216707866115867580421540491449550456343841561/3847852167616648360574125009779649785652318288131391276166825527758371266747774473770924438953605043047522264678400000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 31,
+      "local_removals": 94,
+      "dual_removals": 2,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 191,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "16090655707483631473389494647885589172451210328434427842336901076760120199771673618578991933341377668340270685798770565999/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "22387865968682852132351755449910908684071972552879484919331354200823592467706071119130252456194672762134951960985229434001/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 192,
+          "column": 11,
+          "candidate": 3,
+          "objective_upper": "-237895238004552414169989086202268259440862598681881028266988461479424227134677096829673755165929213967780050671352519557729/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "7024107947553512535541585615489272301723501393997551696978929813921951129810628403418288828712911384928714790648519557729/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 675,
+      "dual_removals": 1,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 191,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "3218131118869639538316807495502033324581793915540348725174409533207740317187658930587785394563821094003992547293983020003/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000",
+          "strict_gap": "4477573216363657182831442524057266246722842660722433827159241522309002216307890016954063483343388992091051982062816979997/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 12,
+      "unique_support": 29,
+      "local_removals": 95,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 225,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "1866901215347236608913384531159048542928429494873935471054540807106489608505101730563674621685572170146626377466649330509/1923926083808324180287062504889824892826159144065695638083412763879185633373887236885462219476802521523761132339200000000",
+          "strict_gap": "57024868461087571373677973730776349897729649191760167028871956772696024868785506321787597791230351377134754872550669491/1923926083808324180287062504889824892826159144065695638083412763879185633373887236885462219476802521523761132339200000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 226,
+          "column": 11,
+          "candidate": 2,
+          "objective_upper": "-43038736156855637296221649314987044106661222373949255788736913892760617704769162799800145739361194313408302099024660053017/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "4560214480689153690480399217190546250138039492635343027068658615176905037291418062090901349825143882933079452240660053017/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 229,
+          "column": 12,
+          "candidate": 3,
+          "objective_upper": "51271270609228300521388149960156329196398354584720405815999910247512971809479791318001643164542027504913018395956481198741/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "6446511905021424887223725186538417588386419737250463326502472668862597191736825788562223419762048140799815574219518801259/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 235,
+          "column": 15,
+          "candidate": 2,
+          "objective_upper": "7260859371273731284812205854748624878981333961276711618326834076885284618228375654173097491163648813897967603108315262323/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "strict_gap": "2358771047767889616623106669700499585149461759051766572090229742510643548641060530254213606220363793720838058587684737677/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 678,
+      "dual_removals": 3,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 225,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "9334506073816557951414129448968392698057554556846321867684588129083710024479707230535234632471800225238278790135670526081/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000",
+          "strict_gap": "285124345225062950021183075480731766073241163482156322732475690312218142389728953892076464912212382380526871560329473919/9619630419041620901435312524449124464130795720328478190417063819395928166869436184427311097384012607618805661696000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 226,
+          "column": 11,
+          "candidate": 2,
+          "objective_upper": "-43038736156855641893032101520358046262509227596983905060697525284968385826346911149958510964306077504952697336377988791321/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "4560214480689158287290851422561548405986044715669992299029270007384673158869166412249266574770027074477474689593988791321/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 235,
+          "column": 15,
+          "candidate": 2,
+          "objective_upper": "290434374757787253393617922315143508435147979918197815350221262930622036918790910948035192168461097516651121194770455403/192392608380832418028706250488982489282615914406569563808341276387918563337388723688546221947680252152376113233920000000",
+          "strict_gap": "94350842003877582663794578662821470130083848894941312266461289845215089755986536429057251726899406788101105273069544597/192392608380832418028706250488982489282615914406569563808341276387918563337388723688546221947680252152376113233920000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 12,
+      "unique_support": 29,
+      "local_removals": 95,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 225,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "7461305110738106994947014115917771605236977498821316525686113059406409963340224178657898002543952100788025318902049275161/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000",
+          "strict_gap": "234399224495189726201235903641527966067659077441466026647537996110332570155324768883950875363257985307019210454750724839/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 226,
+          "column": 11,
+          "candidate": 2,
+          "objective_upper": "-172289737028830388031962729935534439174783244214618684293187531153421986091471392152239480856484092590244321406216884352693/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "18375650324164453608997729544348447748690512689363033246514510043087135421560413201402503298339890868343430819080884352693/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 229,
+          "column": 12,
+          "candidate": 3,
+          "objective_upper": "204998852299287377685147958592284703300459016907191920564436005688145492163335764081912358767983011725118794242012379873089/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "25872277757711523949299541994494283838680080380691556005573525977356783841530704344343107569233290857732541638691620126911/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 235,
+          "column": 15,
+          "candidate": 2,
+          "objective_upper": "29027794036952252162573145022018518936140103042354234472407829085095430852159530752493914418967094826366459269554884096167/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "strict_gap": "9450727639214231443168105075777978920383079838959678289260426192488281815318213985215329970568955604108763377229115903833/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 13,
+      "unique_support": 33,
+      "local_removals": 678,
+      "dual_removals": 3,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 225,
+          "column": 10,
+          "candidate": 1,
+          "objective_upper": "37306525542012034602123897752281457959846515824013160678078101671237097744517915204156936108895518001960714205719941869949/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "1171996134154449003617352345515039896676667057300752083590153606346614922959829533552308280640532428514508441064058130051/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 226,
+          "column": 11,
+          "candidate": 2,
+          "objective_upper": "-172289737028830406419204538757018447798175265106757281381029976722253058577782385552872941756263625356421902355630199305909/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "18375650324164471996239538365832456372082533581501630334356955611918207907871406602035964198119423634521011768494199305909/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 235,
+          "column": 15,
+          "candidate": 2,
+          "objective_upper": "1161111761105442094507444553381534810549182607562686781364904762824659842845004769224201746846344372897588039063946743487/769570433523329672114825001955929957130463657626278255233365105551674253349554894754184887790721008609504452935680000000",
+          "strict_gap": "378029105941217249722205450530325103711744707689869729101825448278688663854105020284168028735097644321420866807413256513/769570433523329672114825001955929957130463657626278255233365105551674253349554894754184887790721008609504452935680000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "method": "separate",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 10,
+      "unique_support": 26,
+      "local_removals": 94,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 253,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "76050427976733708868759081342387104088003061769118942612296670179812647272042160846153389518798490852524447734560775763497/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "906615375599258342723418853205891625043303993508882911039840375354778062913328629265099260273610008425997559007224236503/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 259,
+          "column": 10,
+          "candidate": 3,
+          "objective_upper": "110943631349430815864013051520614260983730753301106192985073466271079392823026590765946178356682125047840885003188353299733/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "4491933679068634953210698772775232585838795342835545299931299561671745179406643447181554811926026243584782937163646700267/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 269,
+          "column": 15,
+          "candidate": 3,
+          "objective_upper": "209274670834112412515929863648208796334774387542773140846092557919761742392855688822149230590418342939864870578668440169729/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "21596459222886489118517636938570190804364709745110335723916973745740533612010779604106235746797959642986465302035559830271/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 271,
+          "column": 16,
+          "candidate": 3,
+          "objective_upper": "103381448261356303089334078068272923434400611184563982531455417341029721979013596285737901448804023358673772513705256575543/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "12054116767143147727889672225116570135168937459377755753549348491721416023419637927389831719804127932751895426646743424457/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "method": "separate",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 10,
+      "unique_support": 28,
+      "local_removals": 684,
+      "dual_removals": 1,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 253,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "76050427976733708868759081342387104088003061769118942612296670179812647272042160846153389518798490852524447734560775763497/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "906615375599258342723418853205891625043303993508882911039840375354778062913328629265099260273610008425997559007224236503/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "method": "coupled",
+      "profile": "degree_only",
+      "iterations": 3,
+      "unique_targets": 10,
+      "unique_support": 26,
+      "local_removals": 94,
+      "dual_removals": 4,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 253,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "75882513634178255379112951860431514570797040098147397588939490806921495124110777742200764989532855508430227029691560919747/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "1074529718154711832369548335161481142249325664480427934397019748245930210844711733217723789539245352520218263876439080253/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 259,
+          "column": 10,
+          "candidate": 3,
+          "objective_upper": "110886690454072934625320899662368014915413932330973615796228751785376956785668607717698806639426998127382906532773560330983/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "4548874574426516191902850631021478654155616312968122488776014047374181216764626495428926529181153164042761407578439669017/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 269,
+          "column": 15,
+          "candidate": 3,
+          "objective_upper": "209112915151382338330815189485993507513839439137451185195936766240901865312362440793326471524215828194523757898765069075979/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "21758214905616563303632311100785479625299658150432291374072765424600410692504027632928994813000474388327577981938930924021/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        },
+        {
+          "iteration": 1,
+          "audit_case_index": 271,
+          "column": 16,
+          "candidate": 3,
+          "objective_upper": "103097675652053743386917969641180534544686147190316165925924049472041658465008783728712506146071056696155694026050846419293/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "strict_gap": "12337889376445707430305780652208959024883401453625572359080716360709479537424450484415227022537094595269973914301153580707/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "method": "coupled",
+      "profile": "degree_discriminant",
+      "iterations": 3,
+      "unique_targets": 10,
+      "unique_support": 28,
+      "local_removals": 684,
+      "dual_removals": 1,
+      "exact_dual_proofs": [
+        {
+          "iteration": 1,
+          "audit_case_index": 253,
+          "column": 7,
+          "candidate": 1,
+          "objective_upper": "75882513634178255379112951860431514570797040098147397588939490806921495124110777742200764989532855508430227029691560919747/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "strict_gap": "1074529718154711832369548335161481142249325664480427934397019748245930210844711733217723789539245352520218263876439080253/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000"
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    }
+  ],
+  "feedback_local_removals": 12396,
+  "feedback_dual_removals": 56,
+  "scope": "Independent degree-partition enumeration checks every local projection. Exact integer coefficients and rational domain-support bounds replay every feedback exclusion with the unchanged audited analytic budget. No interval backend is used in these deductions. All 604 held-out arithmetic values remain after every round; global realization of survivors is not established."
+}

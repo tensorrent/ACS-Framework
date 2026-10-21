@@ -46,6 +46,7 @@ Start with the [action-identifiability paper](../papers/updates/ACS_Action_Ident
 - [Alpha-decay overlap audit](palpha_audit_log.md) and [overlap artifacts](palpha_overlap/).
 - [Torsion and condensation analysis](Torsion_Topological_Condensation_Analysis.md).
 - [Yang–Mills comparison methodology PDF](ym_comparison_methodology_paper.pdf) and [LaTeX source](ym_comparison_methodology_paper.tex). This supporting document lives outside the 35-paper canonical publication inventory and its build job.
+- [Surrogate discriminant amendments — LaTeX source](surrogate_discriminant_amendments.tex). Three omissions in the FF06e marginal-matched form/function discriminant, stated as propositions and measured on the Riemann zeros and on a lattice $SU(2)$ configuration; includes a removable artifact in the surrogate construction. Like the comparison paper above, this supporting document lives outside the 35-paper canonical publication inventory and its build job. No PDF is committed yet — build with `pdflatex docs/surrogate_discriminant_amendments.tex`.
 - [Historical verification guide](README_verification_suite.md), [efficiency report](EFFICIENCY_BENCHMARK_REPORT.md), and [historical cross-repository glossary](Cross_Repo_Glossary_Extract.md).
 
 The publication's frozen evidence is preserved in place. New indexes point into it; they do not rewrite original receipts, failures, or source snapshots.

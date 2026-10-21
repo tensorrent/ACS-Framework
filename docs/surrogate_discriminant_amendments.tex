@@ -1,0 +1,531 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newcommand{\tier}[1]{\textsc{#1}}
+
+\title{\textbf{What a Surrogate Cannot Tell You}\\[2pt]
+\large Three omissions in a marginal-matched form/function discriminant,\\
+and their consequences on the Riemann zeros and on lattice Yang--Mills}
+\author{Amendments to FF06e\\
+\small Instrument: B.\ Wallace (TensorRent).
+Amendments, propositions and measurements: agent record, 21 October 2026.\\
+\small Byline unset pending the author's decision --- see \textbf{Contributions}, final page.}
+\date{21 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A \emph{marginal-matched surrogate discriminant} asks, of each statistic in a battery,
+whether its value survives replacing the object by one drawn from the object's own
+one-point distribution with all higher structure destroyed. Survivors are said to read
+the distribution class (\emph{form}); collapses to read the object (\emph{function}).
+The instrument is a specialisation of surrogate-data testing \cite{theiler} and was
+introduced to decide a question that arises whenever many statistics agree: whether
+their agreement is over-determination or redundancy. We observe that the operative
+definition omits three elementary conditions, state each as a proposition, and measure
+its consequences. \textbf{(1)} A witness invariant under the surrogate group has a
+\emph{degenerate} null distribution --- a point mass --- so its standardised
+significance is $0/0$; a small reported value is floating-point summation order
+presented as evidence. \textbf{(2)} A witness with bounded range has a \emph{reachable
+ceiling} on significance; where that ceiling falls below the decision threshold, no
+object can be convicted and a verdict of \emph{form} is unearned. \textbf{(3)}
+Non-invariance is necessary but not sufficient for a collapse, so \emph{form} is a
+property of the pair (witness, object) and never of the witness. Recast, \emph{form}
+is the statement that a witness \emph{factors through the marginal}: a descent
+condition rather than a statistical one, which is why (1) is a corollary and not a
+finding. We implement a four-tier verdict and measure the amendments on two corpora
+sharing no subject matter: the first $2003$ non-trivial zeros of $\zeta$, where three
+of six verdicts change and the original form/function split otherwise reproduces; and
+a $6\times6$ $SU(2)$ lattice gauge configuration, where a battery of six witnesses is
+shown to carry at most three independent readings, two of them exactly invariant and
+two without power. We further localise a $0.4$--$1.0\sigma$ residual that FF06e
+attributes to re-interpolation: it requires piecewise-linear interpolation
+specifically and vanishes under exact inversion of the smooth counting function, so it
+is removable rather than a caveat to be carried. None of the three propositions is new
+as statistics; the contribution is that an instrument in use omits them, together with
+the measured size of each omission.
+\end{abstract}
+
+\begin{center}\small\fbox{\begin{minipage}{0.92\linewidth}
+\textbf{Status in this repository.} This is a supporting document under
+\texttt{docs/}, outside the 35-paper canonical publication inventory and its build
+job, following the placement of the Yang--Mills comparison methodology paper. Its
+propositions and measurements are not part of the corpus author statement; see
+\textbf{Contributions} on the final page.
+\end{minipage}}\end{center}
+
+\section{Claim boundaries}\label{sec:status}
+
+Status is separated from exposition throughout, and no claim below is stated more
+strongly in the text than in this table.
+
+\begin{center}\small
+\begin{tabular}{p{0.52\linewidth}ll}
+\toprule
+Claim & Status & Where \\
+\midrule
+Prop.~\ref{prop:degenerate}--\ref{prop:necessary} & elementary, proved & \S\ref{sec:props} \\
+A form witness is one factoring through the marginal & definitional recast & \S\ref{sec:descent} \\
+Three of six verdicts change on the zeros & measured & \S\ref{sec:zeros} \\
+FF06e's form/function split otherwise reproduces & measured, smaller $N$ & \S\ref{sec:zeros} \\
+Six lattice witnesses carry $\le 3$ readings & measured; 4 of 4 collapses structural & \S\ref{sec:lattice} \\
+The $0.4$--$1.0\sigma$ band requires linear interpolation & measured, one implementation & \S\ref{sec:artifact} \\
+Calibration is a precondition, not good practice & argued from a single failure mode & \S\ref{sec:calib} \\
+Any claim about $\zeta$ itself & \textbf{none made} & \S\ref{sec:scope} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Introduction}
+
+A spectrum, a configuration, or a corpus admits no shortage of statistics. When many of
+them behave as expected, the usual reading is over-determination: independent witnesses,
+all agreeing, so the picture is robust. The opposite reading is available on the same
+evidence. If the statistics are not independent --- if they are several lenses on one
+underlying response --- their agreement is redundancy, and counting them as separate
+confirmations is a category error. Worse, if what they share is generic to the
+distribution class rather than specific to the object, their convergence reports only
+that the object belongs to that class, which is true of uncountably many objects with
+nothing else in common.
+
+FF06e makes the question decidable with one operator. Replace the object by a
+\emph{marginal-matched surrogate} --- same one-point distribution, higher correlations
+destroyed --- and ask of each witness whether its value survives. A survivor was reading
+the class (\emph{form}); a collapse was reading the object (\emph{function}), and the
+size of the collapse measures its influence. There is no parameter to tune, because the
+surrogate inherits the object's own distribution and the comparison is internal.
+
+This is a specialisation of surrogate-data testing \cite{theiler}, whose structure is the
+same: specify a null, generate ensembles consistent with it, and compute a discriminating
+statistic on the original and on each surrogate. The specialisation is sharp and worth
+stating, because the null here is not a model fitted to the data but the data's own
+marginal, so the method is a permutation test with the object's empirical distribution as
+the null.
+
+Our concern is the \emph{definition} of the verdict, not the operator. We give three
+conditions it omits, each elementary, each with a measured consequence.
+
+\section{The discriminant}\label{sec:disc}
+
+\begin{definition}[Surrogate ensemble]
+Let $X$ be the object, decomposed into components $x_1,\dots,x_n$ carrying a
+distribution. Let $G = S_n$ act by permuting components. A \emph{surrogate} is $gX$ for
+$g$ drawn uniformly from $G$. By construction every surrogate has the identical
+one-point distribution and no higher-order structure of $X$'s.
+\end{definition}
+
+\begin{definition}[Witness, significance]
+A \emph{witness} is a map $W\colon X \mapsto \mathbb{R}$. With surrogate mean
+$\overline{W}$ and standard deviation $\sigma_W$ over an ensemble of $K$ draws, the
+\emph{standardised significance} is
+\[
+  z(W) \;=\; \frac{\bigl|\,W(X)-\overline{W}\,\bigr|}{\sigma_W}.
+\]
+FF06e's Definition 2 declares $W$ \emph{form} when $z(W)$ is small ($\lesssim 3$) and
+\emph{function} when it is large.
+\end{definition}
+
+The instrument is strictly stronger than the control most evidence disciplines require,
+which is a null baseline measured on unrelated material. Unrelated material differs from
+the object in \emph{both} its marginal and its structure, so a statistic that quiets down
+on it may be responding to either. Holding the marginal fixed leaves only structure.
+
+\section{Form as a descent condition}\label{sec:descent}
+
+The statistical framing above obscures what is actually being asked. Let
+$\pi\colon X \mapsto X/G$ send an object to its orbit --- equivalently, to its multiset
+of components, which is exactly its marginal.
+
+\begin{definition}[Factoring through the marginal]
+$W$ \emph{factors through the marginal} if there is $\widetilde{W}$ with
+$W = \widetilde{W}\circ\pi$, equivalently $W(gX)=W(X)$ for all $g\in G$.
+\end{definition}
+
+A form witness, in the limiting case, is precisely one that factors: its value is
+determined by the marginal and the fibre over that marginal carries no information it can
+see. A function witness does not factor; it sees the fibre. This is a local-to-global
+statement --- the marginal is the quotient datum, and what the surrogate destroys is the
+fibre --- and reading it that way makes the first amendment a one-line corollary rather
+than an empirical discovery.
+
+\section{Three omissions}\label{sec:props}
+
+\begin{proposition}[Degenerate null]\label{prop:degenerate}
+If $W$ factors through the marginal, the null distribution of $W$ is the point mass at
+$W(X)$. Hence $\overline{W}=W(X)$, $\sigma_W=0$, and $z(W)=0/0$ is undefined.
+\end{proposition}
+\begin{proof}
+$W(gX)=W(X)$ for every $g\in G$, so the pushforward of any measure on $G$ is
+$\delta_{W(X)}$.
+\end{proof}
+
+The proposition is trivial; the consequence is not. FF06e's Definition 2 assigns
+\emph{form} on the strength of a small $z$, and its headline table reports three
+witnesses at $0.4$--$1.0\sigma$, while a construction remark states that the bare figure
+for those witnesses is ``exactly zero by construction (symmetric-multiset invariants).''
+Both cannot be read at once, and the reported figure invites being read as a small real
+effect, which the remark denies.
+
+A $0/0$ evaluated in floating point returns whatever the summation order leaves behind.
+Measured on a lattice (\S\ref{sec:lattice}), where two witnesses are provably invariant:
+
+\begin{center}\small
+\begin{tabular}{lrr}
+\toprule
+Witness & $\sigma_W$ & computed $z$ \\
+\midrule
+mean $\operatorname{Re}U$ over links & $6.5\times10^{-16}$ & $\mathbf{1.4}$ \\
+$\max\bigl|\,\|U\|-1\,\bigr|$ & exactly $0$ & $0.0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A $z$ of $1.4$ arising from summation order alone falls inside the band FF06e reports,
+on an object unrelated to the zeros and with no interpolation step present.
+
+\begin{proposition}[Reachable ceiling]\label{prop:ceiling}
+Let $W$ take values in $[a,b]$ and let the null distribution have mean $\mu$ and
+$\sigma_W>0$. Then for every object $X'$ with that null,
+\[
+  z(W) \;\le\; C(W) \;:=\; \frac{\max(b-\mu,\;\mu-a)}{\sigma_W}.
+\]
+If $C(W)<\tau$ for decision threshold $\tau$, no object attains $z\ge\tau$.
+\end{proposition}
+\begin{proof}
+$|W(X')-\mu|\le\max(b-\mu,\mu-a)$ since $W(X')\in[a,b]$.
+\end{proof}
+
+Where $C(W)<\tau$, a low $z$ is a statement about the instrument's resolution and carries
+no information about the object; declaring \emph{form} attributes to the object what
+belongs to the test. Measured: a Wilson loop trace on a $6\times6$ lattice, with range
+$[-1,1]$, has $\sigma_W$ between $0.11$ and $0.45$, giving $C$ below $5$ and in places
+below $2$ against $\tau=3$. A synthetic case isolates the mechanism: a witness returning
+one component of a sequence spanning $[-1,1]$ has $\sigma_W$ equal to the component
+spread ($\approx0.58$) and $C\approx1.7$, so it can never be convicted however structured
+the object.
+
+FF06e's amendment of 24 September 2026 asks for exactly this condition --- ``a null
+result must retain power and resolution limits'' --- but Definition 2 does not encode it,
+so a reader following the definition cannot apply the amendment.
+
+\begin{proposition}[Non-invariance is not sufficient]\label{prop:necessary}
+Non-invariance of $W$ is necessary for $\sigma_W>0$ but does not imply $W(X)$ is
+separated from the null. There exist non-invariant $W$ and objects $X$ with
+$z(W)$ arbitrarily small.
+\end{proposition}
+\begin{proof}
+By example. Let $W$ count ascents, $W(x)=\#\{i: x_{i+1}>x_i\}$, which is not
+$G$-invariant. For $X$ a discretised sine period of length $n$, $W(X)$ is
+$\lfloor n/2\rfloor$ or thereabouts, since a sine ascends on exactly half its period;
+the null mean is $(n-1)/2$. Measured at $n=60$: $W(X)\in\{29,30\}$, null mean $29.5$,
+$z=0.34$. The same $W$ on a monotone sequence of the same length gives $W=n-1$ and large
+$z$.
+\end{proof}
+
+Hence \emph{form} is a property of the pair (witness, object). The practical consequence
+is a reading of FF06e's own results: its distributional witnesses are form \emph{on the
+first $10^5$ zeros}, which is what was measured, and not form as a standing property ---
+they are serviceable statistics on an object whose spacing distribution differs from its
+own shuffle.
+
+\begin{remark}
+None of the three is novel as statistics. Permutation tests require a statistic that
+varies under the null, and any test requires power; both are standard. The contribution
+is that an instrument in use omits them, and the measured size of each omission.
+\end{remark}
+
+\section{A four-tier verdict}\label{sec:tiers}
+
+The propositions give a decision order, applied per witness, with $\varepsilon$ a
+floating-point floor scaled to $|W(X)|$:
+
+\begin{enumerate}[leftmargin=2em,itemsep=2pt]
+\item $\max_i|W_i-W(X)|\le\varepsilon$ over the ensemble $\Rightarrow$ \tier{form\_exact};
+      report no $z$ (Prop.~\ref{prop:degenerate}).
+\item $\sigma_W\le\varepsilon$ but $W(X)$ differs $\Rightarrow$ \tier{function}, $z$
+      unbounded. Every surrogate agrees with every other and not with the object.
+\item $W$ bounded and $C(W)<\tau$ $\Rightarrow$ \tier{no\_power}
+      (Prop.~\ref{prop:ceiling}). Unresolved, not form.
+\item Otherwise \tier{function} if $z\ge\tau$, else \tier{form} --- a verdict about this
+      pair (Prop.~\ref{prop:necessary}).
+\end{enumerate}
+
+A separate check detects a different redundancy: witnesses pairwise affine across three
+or more objects are one witness in two costumes, and counting both double-counts.
+
+\section{Calibration is a precondition}\label{sec:calib}
+
+FF06e calibrates its engine against known invariants and known refractions with negative
+controls and decoys, ``so that the engine could not become its own refraction.'' We find
+this cannot be relaxed to good practice, because one failure mode has no other detector.
+
+The caller must supply the surrogate construction, since only the caller knows what the
+object's marginal is; this is the sole irreducibly domain-specific decision in the method.
+If the supplied construction does not preserve the marginal, it is randomisation, and then
+every witness reads \tier{function} for a reason having nothing to do with the object.
+Measured: replacing the permutation with fresh random values convicts the sample variance
+--- a provable invariant --- as \tier{function}. No internal consistency check catches
+this and nothing about the output looks wrong. The only detector is the requirement that a
+known invariant return \tier{form\_exact}.
+
+The protocol, as implemented:
+\begin{enumerate}[leftmargin=2em,itemsep=1pt]
+\item Known invariants $\Rightarrow$ \tier{form\_exact}, $z$ withheld.
+\item Known non-invariant witnesses on a structured object $\Rightarrow$ \tier{function}.
+\item A decoy returning noise independent of the object $\Rightarrow$ not \tier{function}.
+\item A deliberately marginal-breaking surrogate $\Rightarrow$ must convict an invariant.
+\item Fewer than two surrogates $\Rightarrow$ refuse to run.
+\end{enumerate}
+
+\section{Corpus I: the zeros of $\zeta$}\label{sec:zeros}
+
+\paragraph{Instrument.} Riemann--Siegel $Z$ with two remainder terms \cite{edwards}, zeros
+by sign change and bisection, $2003$ zeros on $t\in(20,2520)$, unfolded by the
+Riemann--von Mangoldt term. Anchored before use: $\theta$ at the first Gram point
+($17.8455995408$ against $17.8455995405$); the first ten zeros against published values,
+worst deviation $2.5\times10^{-3}$; and the counts $N(50)=10$, $N(100)=29$, $N(300)=138$,
+$N(1000)=649$, all exact, with $S(T)=N(T)-\langle N(T)\rangle$ bounded at
+$+0.58,-0.00,+0.29,+0.38$. Positions carry $2.5\times10^{-3}$ --- the remainder is
+asymptotic and $t\approx14$ is where it is weakest --- while the counts are exact. The
+distinction matters: a missed zero is invisible locally and would appear only as $S(T)$
+drifting.
+
+\paragraph{Result.} Surrogate by permuting unfolded spacings; $K=40$; the arithmetic
+witness is the prime-resonance power $\sum_{p\le29}\langle\cos(\gamma\log p)\rangle^2$ on
+actual heights, as in FF06e.
+
+\begin{center}\small
+\begin{tabular}{lrrrl}
+\toprule
+Witness & $\sigma_W$ & $z$ & $C(W)$ & Tier \\
+\midrule
+arithmetic, $p\le29$      & $3.51\times10^{-4}$ & $\mathbf{499.8}$ & --- & \tier{function} \\
+lag-1 spacing correlation & $2.16\times10^{-2}$ & $\mathbf{17.6}$ & $46.6$ & \tier{function} \\
+spacing mean deviation    & $6.97\times10^{-16}$ & withheld & --- & \tier{form\_exact} \\
+spacing variance          & $1.67\times10^{-16}$ & withheld & --- & \tier{form\_exact} \\
+Wigner-shape $L^2$        & exactly $0$ & withheld & --- & \tier{form\_exact} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+FF06e's split reproduces: the arithmetic witness carries the overwhelming majority of the
+object-specific influence and the distributional witnesses carry none.
+Prop.~\ref{prop:degenerate} changes the last three verdicts from \emph{form at
+$0.4$--$1.0\sigma$} to \emph{exactly invariant, significance withheld}. An amendment
+altering no verdict would be a stylistic preference.
+
+\paragraph{A check on amplification.} FF06e's decisive argument is that the function
+signal sharpens with $N$ rather than averaging down, reporting $z_{\mathrm{arith}}=3030$
+at $N=2\times10^4$ and $11\,497$ at $N=10^5$. Those two points imply
+$z\propto N^{0.8}$, which extrapolated to $N=2003$ predicts $481$; we measure $499.8$,
+within $4\%$. Its paired caveat holds in the stated direction: the raw value is
+\emph{larger} at smaller $N$ ($0.1762$ here against $0.0922$ and $0.0636$), so
+significance and magnitude move oppositely. A third point on a curve fitted from two is
+the strongest evidence here that the amplification is structure being resolved.
+
+\section{Corpus II: lattice $SU(2)$}\label{sec:lattice}
+
+A second corpus is needed because the amendments are claims about a method, and a method
+validated on one object is accommodated to it.
+
+\paragraph{Object.} A $6\times6$ periodic lattice carrying a unit quaternion
+$U\in SU(2)$ on each link --- a Wilson lattice gauge configuration \cite{wilson}. The
+marginal is the multiset of link rotors; the surrogate permutes which site each link
+occupies. Spatial adjacency is what gauge structure consists of, a plaquette being the
+ordered product around a face, so adjacency is the right structure to destroy.
+
+\begin{center}\small
+\begin{tabular}{llll}
+\toprule
+Witness & smooth configuration & relaxed two-phase & note \\
+\midrule
+mean $\operatorname{Re}U$ (links) & \tier{form\_exact} & \tier{form\_exact} & invariant; also gauge-dependent \\
+$\max|\|U\|-1|$ & \tier{form\_exact} & \tier{form\_exact} & invariant \\
+mean $\operatorname{Re}P$ (faces) & $z=6.6$ \tier{function} & $z=2.0$ & \\
+Wilson action at $\beta=1$ & $z=6.6$ & $z=2.0$ & affine to the above \\
+loop trace & $z=1.1$ & $z=0.8$ & \tier{no\_power} \\
+order sensitivity & $z=0.6$ & $z=0.2$ & \tier{no\_power} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Six witnesses carry at most three independent readings. Two are exactly invariant
+(Prop.~\ref{prop:degenerate}). The Wilson action at $\beta=1$ equals
+$\textit{wh}\,(1-\langle\operatorname{Re}P\rangle)$, hence is affine to the face mean, and
+their $z$ agree to nine decimals because they must. Two have $C(W)<\tau$
+(Prop.~\ref{prop:ceiling}). All four collapses are structural rather than statistical.
+
+\begin{remark}
+A corollary worth recording. The link mean has no consumer anywhere in the implementing
+codebase, and the instrument supplies the reason: it is gauge-\emph{dependent} --- a gauge
+transformation moves it while the face mean holds to nine decimals --- and
+surrogate-invariant. Gauge-dependent together with invariant exhausts the ways a lattice
+witness can fail to inform.
+\end{remark}
+
+That the same three propositions bite on two corpora sharing no subject matter is the
+evidence that they are amendments to the method rather than to one dataset.
+
+\section{A removable artifact in the surrogate construction}\label{sec:artifact}
+
+FF06e attributes its $0.4$--$1.0\sigma$ form-witness band to its surrogate path: permute
+unfolded spacings, re-accumulate, then interpolate back onto the reference grid. The
+attribution is correct as to mechanism and localises further than stated. Two routes from
+unfolded positions back to heights:
+
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+Route & spacing mean dev. & spacing variance & Wigner $L^2$ \\
+\midrule
+Analytic: bisect the monotone $\langle N\rangle$ & $6.2\times10^{-16}$ & $4.4\times10^{-15}$ & exactly $0$ \\
+Piecewise-linear between samples & $1.9\times10^{-16}$ & $\mathbf{1.03\times10^{-5}}$ & $\mathbf{3.51\times10^{-4}}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The artifact requires interpolation between knots, not the round trip. Inverting the
+smooth counting function by bisection restores exact invariance. A caveat a better
+pipeline removes should be removed rather than documented.
+
+We do not compare the resulting $z$ against FF06e's $0.4$--$1.0$: ours are $0.16$ and
+$0.01$, and $z$ here is a ratio of one small shift to another, dominated by grid, $N$ and
+interpolation detail. The finding is $\sigma_W$ moving from machine epsilon to
+$10^{-5}$; its standardisation is not a quantity worth comparing across implementations.
+
+\section{Discussion}
+
+The amendments cost something, and the cost is worth naming. Prop.~\ref{prop:ceiling}
+converts some former \emph{form} verdicts into \emph{unresolved}, which is a loss of
+apparent information. The trade is favourable for an asymmetric reason: an unresolved
+verdict can be improved by a better witness or a larger object, whereas a false
+\emph{form} verdict cannot be improved, because it does not know it is wrong.
+
+Prop.~\ref{prop:degenerate} replaces a number with a refusal. This is the amendment most
+likely to be resisted, since a table with an omission looks weaker than a table of
+figures. It is the other way around: the figure was never a measurement, and a reader
+who takes $1.0\sigma$ for a small real effect has been misled by the presentation rather
+than by the instrument.
+
+Read as descent (\S\ref{sec:descent}), the three propositions say something compact. The
+surrogate construction is a choice of quotient. A witness either factors through that
+quotient or it does not; if it does, there is nothing to test, and if it does not, whether
+it \emph{detects} the fibre is a separate question of power and of the particular object.
+Conflating ``does not factor'' with ``detects'' is the single error behind all three
+omissions.
+
+\section{Scope and claim boundaries}\label{sec:scope}
+
+\textbf{What a \tier{function} verdict establishes.} That the witness responds to
+structure beyond the object's one-point distribution, relative to that object and that
+surrogate construction. It does \emph{not} establish that the witness is correct,
+meaningful, or evidence for any proposition about the object. FF06e is explicit on this
+and it bears repeating, because a large $z$ reads as a result: a witness may respond
+strongly to the object and be the wrong statistic.
+
+\textbf{No claim is made about $\zeta$.} Nothing here concerns the Riemann hypothesis, the
+construction of a self-adjoint operator, or off-line behaviour. Corpus I is used as an
+object with known structure on which to measure a method.
+
+\textbf{No claim is made about $SU(2)$ gauge theory.} Corpus II is a finite lattice
+configuration used for the same purpose.
+
+\textbf{Where the method stops.} It requires a surrogate preserving the marginal while
+destroying correlation. Where no such construction exists --- where the object cannot be
+quotiented to separate its response from the instrument's --- the form/function question
+is well posed and not answerable by this operator. That is the tool's edge, not a defect
+in results obtained inside it.
+
+\textbf{Single-implementation results.} \S\ref{sec:artifact} rests on one implementation
+of each route. The qualitative finding (machine epsilon against $10^{-5}$) is robust to
+implementation; the particular figures are not.
+
+\section{Reproduction}\label{sec:repro}
+
+Seed $20260423$ throughout. The implementation is the \texttt{AISO-UI-for-Ai}
+tree (\texttt{frontend/src/shuffle-knife.ts}, \texttt{frontend/src/riemann-siegel.ts},
+\texttt{frontend/src/rotor-field.ts}, \texttt{frontend/src/rotor-dynamics.ts}), and the
+commands below are run from its \texttt{frontend/} directory:
+
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Command & Produces \\
+\midrule
+\texttt{npx vitest run tests/shuffle-knife.test.ts} & the calibration protocol, \S\ref{sec:calib} \\
+\texttt{npx vitest run tests/riemann-siegel.test.ts} & the instrument anchors, \S\ref{sec:zeros} \\
+\texttt{npx tsx scripts/riemann-witnesses.mts} & Corpus I, both surrogate routes \\
+\texttt{npx vitest run tests/rotor-dynamics.test.ts} & Corpus II \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Scripts depending on an anchored instrument exit non-zero if an anchor fails, so no table
+in this paper can arise from a run whose instrument was not validated.
+
+\appendix
+\section{Dead ends and self-corrections}
+
+Recorded because the method's own discipline requires it, and because two of the results
+above exist only as the residue of an error.
+
+\begin{enumerate}[leftmargin=2em,itemsep=3pt]
+\item \textbf{The ascent count was predicted to read \tier{function}.} Asserted in
+calibration; the assertion failed and the verdict was correct. This became
+Prop.~\ref{prop:necessary}, the amendment with the widest reach.
+
+\item \textbf{An analytic round trip was expected to reproduce FF06e's band.} It does not
+--- $\sigma_W$ stays at machine epsilon. The negative result showed
+``re-interpolation'' to be too coarse a diagnosis and produced \S\ref{sec:artifact}.
+
+\item \textbf{Two implementations of a Condorcet cyclicity figure disagreed by
+$3.4\sigma$} ($49.2\%$ against $46.5\%$ at five candidates, $4000$ trials each) --- a
+spread as large as a discrepancy then being claimed against a third party's published
+number. The claim was withdrawn until two seeds at $20\,000$ trials and three classical
+anchors settled it. The disagreement is retained as the apparatus band it was.
+
+\item \textbf{A mean was read as a partial collapse.} On the two-phase lattice
+configuration the face mean is $0.263775$, which is the exact count-weighted average of
+$28$ faces at $0.05342509$ and $8$ at exactly $1$, and is attained by no face. The
+surrogate test then shows the mean sits $\approx2\sigma$ from its own null on that
+object: the domain structure is invisible to it and was visible only in the histogram.
+A scalar that cannot see what its own relation shows.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{theiler} J.~Theiler, S.~Eubank, A.~Longtin, B.~Galdrikian, J.~D.~Farmer,
+  \emph{Testing for nonlinearity in time series: the method of surrogate data},
+  Physica D \textbf{58} (1--4), 77--94, 1992. \texttt{doi:10.1016/0167-2789(92)90102-S}.
+\bibitem{ff06e} B.~Wallace, \emph{Spectral Rigidity and Shuffled Spacing Discriminant:
+  Categorising Spectral Witnesses by What They Respond To} (FF06e), TensorRent, 2026;
+  amendment of 24 September 2026.
+\bibitem{edwards} H.~M.~Edwards, \emph{Riemann's Zeta Function}, Academic Press, 1974
+  (Riemann--Siegel formula, Ch.~7).
+\bibitem{wilson} K.~G.~Wilson, \emph{Confinement of quarks},
+  Phys.\ Rev.\ D \textbf{10}, 2445--2459, 1974.
+\end{thebibliography}
+
+\vspace{1em}\noindent\rule{\linewidth}{0.4pt}\\[2pt]
+\small\textbf{Contributions.} The discriminant, the form/function vocabulary, the
+reactional versus response-driven framing, and the finding that a battery of agreeing
+witnesses may be one reading refracted are due to FF06e \cite{ff06e}. The three
+propositions of \S\ref{sec:props}, the descent recasting of \S\ref{sec:descent}, the
+four-tier verdict, both corpora, and the interpolation finding of \S\ref{sec:artifact}
+are this record's. All computation was performed by the implementation cited in
+\S\ref{sec:repro} and is reproducible from it; no figure in this paper is quoted from
+memory or from a source not opened.
+
+\end{document}

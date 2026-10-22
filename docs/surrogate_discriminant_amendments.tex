@@ -61,7 +61,7 @@ the measured size of each omission.
 
 \begin{center}\small\fbox{\begin{minipage}{0.92\linewidth}
 \textbf{Status in this repository.} This is a supporting document under
-\texttt{docs/}, outside the 35-paper canonical publication inventory and its build
+\path{docs/}, outside the 35-paper canonical publication inventory and its build
 job, following the placement of the Yang--Mills comparison methodology paper. Its
 propositions and measurements are not part of the corpus author statement; see
 \textbf{Contributions} on the final page.
@@ -459,9 +459,11 @@ implementation; the particular figures are not.
 \section{Reproduction}\label{sec:repro}
 
 Seed $20260423$ throughout. The implementation is the \texttt{AISO-UI-for-Ai}
-tree (\texttt{frontend/src/shuffle-knife.ts}, \texttt{frontend/src/riemann-siegel.ts},
-\texttt{frontend/src/rotor-field.ts}, \texttt{frontend/src/rotor-dynamics.ts}), and the
-commands below are run from its \texttt{frontend/} directory:
+tree (\path{frontend/src/shuffle-knife.ts}, \path{frontend/src/riemann-siegel.ts},
+\path{frontend/src/rotor-field.ts}, \path{frontend/src/rotor-dynamics.ts}).
+The tree is public at \url{https://github.com/tensorrent/AISO-UI-for-Ai}; the numbers and figures in this document were produced on branch \path{claude/excel-memory-offloading-9ezwrv}, and the four instrument files, the scripts and the lattice test are byte-identical from the generating commits (\texttt{086a0e3}, \texttt{64d9658}) through commit \texttt{3a8e610}, which is the pin. Clone the repository and check it out at that commit,
+\begin{center}\small\texttt{git checkout 3a8e610a80575da13ee68649c7a92ba3690be140}\end{center}
+then \texttt{npm install} in \path{frontend/} and run the commands below from that directory.
 
 \begin{center}\small
 \begin{tabular}{ll}

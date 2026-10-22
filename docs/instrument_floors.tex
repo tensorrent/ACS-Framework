@@ -91,7 +91,7 @@ every figure is emitted from the measurement that produced it.
 \end{abstract}
 
 \begin{center}\small\fbox{\begin{minipage}{0.92\linewidth}
-\textbf{Status in this repository.} A supporting document under \texttt{docs/},
+\textbf{Status in this repository.} A supporting document under \path{docs/},
 outside the 35-paper canonical publication inventory and its build job, following the
 placement of the Yang--Mills comparison methodology paper. Its propositions and
 measurements are not part of the corpus author statement; see \textbf{Contributions} on
@@ -389,7 +389,7 @@ measures the blindness as a \emph{scaling exponent} rather than a tolerance.
 \begin{tikzpicture}
 \begin{loglogaxis}[floorplot, xlabel={fluctuation amplitude}, ylabel={$|V_A-V_B|$},
   legend pos=north west, height=5.2cm]
-\addplot[mark=*, thick, color=blue!60!black] \figquartic;
+\addplot[mark=*, thick, color=blue!60!black] coordinates {\figquartic};
 \addlegendentry{measured}
 \addplot[domain=0.01:0.32, samples=2, dashed, thick, color=red!60!black, forget plot]
   {0.1312*x^4};
@@ -429,8 +429,8 @@ minimum cannot, at any steepness.
   xlabel={$\rho=2\alpha/\beta$}, ylabel={$\langle\operatorname{Re}P\rangle$},
   title={\footnotesize $\lambda=0.4$: a loop}, legend pos=south west,
   ymin=0, ymax=1.08, legend style={font=\scriptsize, draw=gray!40}]
-\addplot[mark=*, thick, color=blue!60!black] \fighystUp;  \addlegendentry{from flat}
-\addplot[mark=square*, thick, color=orange!80!black] \fighystDn; \addlegendentry{from the far basin}
+\addplot[mark=*, thick, color=blue!60!black] coordinates {\fighystUp};  \addlegendentry{from flat}
+\addplot[mark=square*, thick, color=orange!80!black] coordinates {\fighystDn}; \addlegendentry{from the far basin}
 \draw[dashed, gray] (axis cs:3,0) -- (axis cs:3,1.08);
 \node[anchor=south, font=\scriptsize, color=gray!50!black, rotate=90] at (axis cs:2.96,0.1)
   {$\rho=1+5\lambda/\beta$};
@@ -440,8 +440,8 @@ minimum cannot, at any steepness.
 \begin{axis}[floorplot, width=0.48\linewidth, height=5.2cm, at={(0.52\linewidth,0)},
   xlabel={$\rho=2\alpha/\beta$}, title={\footnotesize $\lambda=0$ control: no loop},
   ymin=0, ymax=1.08, yticklabel pos=right]
-\addplot[mark=*, thick, color=blue!60!black] \figctrlUp;
-\addplot[mark=square*, thick, color=orange!80!black] \figctrlDn;
+\addplot[mark=*, thick, color=blue!60!black] coordinates {\figctrlUp};
+\addplot[mark=square*, thick, color=orange!80!black] coordinates {\figctrlDn};
 \node[anchor=north east, font=\scriptsize, color=gray!50!black, align=right]
   at (axis cs:2.2,1.04) {branches coincide\\gap $0.0226$};
 \end{axis}
@@ -465,7 +465,7 @@ parameter reads $\coexMean$. That value is attained by \emph{no face}.
 \begin{tikzpicture}
 \begin{axis}[floorplot, xlabel={face, sorted}, ylabel={$w=\tfrac12\operatorname{tr}P$},
   ymin=-0.08, ymax=1.1, height=4.8cm, legend pos=north west]
-\addplot[only marks, mark=*, mark size=1.6pt, color=blue!60!black] \figcoex;
+\addplot[only marks, mark=*, mark size=1.6pt, color=blue!60!black] coordinates {\figcoex};
 \addlegendentry{the 36 faces}
 \draw[dashed, thick, color=red!60!black] (axis cs:0,0.05342509) -- (axis cs:37,0.05342509);
 \draw[dashed, thick, color=red!60!black] (axis cs:0,1) -- (axis cs:37,1);
@@ -591,9 +591,9 @@ const near = ALL.filter((i) => gap[i] <  eps); // and on what was removed
 \begin{axis}[floorplot, xlabel={mask width $\varepsilon$ (local mean spacings)},
   ylabel={explained variance $r^2$}, legend pos=south east, ymin=0.3, ymax=1.02,
   height=5.4cm]
-\addplot[mark=*, thick, color=blue!60!black] \figgibbsAway;
+\addplot[mark=*, thick, color=blue!60!black] coordinates {\figgibbsAway};
 \addlegendentry{away from the steps}
-\addplot[mark=square*, thick, color=orange!80!black] \figgibbsNear;
+\addplot[mark=square*, thick, color=orange!80!black] coordinates {\figgibbsNear};
 \addlegendentry{the masked neighbourhoods}
 \draw[dashed, gray] (axis cs:0,0.7895) -- (axis cs:0.42,0.7895);
 \node[anchor=west, font=\footnotesize, color=gray!50!black] at (axis cs:0.26,0.755)
@@ -623,10 +623,10 @@ height, so a larger share of any fixed grid falls within a ringing width of a st
 \begin{axis}[floorplot, xlabel={window centre in $t$}, ylabel={explained variance $r^2$},
   legend pos=south west, ymin=0.6, ymax=1.0, height=5.6cm, legend columns=2,
   legend style={font=\scriptsize, draw=gray!40}]
-\addplot[mark=*, thick, color=blue!60!black] \figscaleMsk3000;  \addlegendentry{masked, $P{<}3000$}
-\addplot[mark=*, thick, color=blue!35, dashed] \figscaleMsk300; \addlegendentry{masked, $P{<}300$}
-\addplot[mark=square*, thick, color=orange!80!black] \figscaleRaw3000; \addlegendentry{raw, $P{<}3000$}
-\addplot[mark=square*, thick, color=orange!45, dashed] \figscaleRaw300; \addlegendentry{raw, $P{<}300$}
+\addplot[mark=*, thick, color=blue!60!black] coordinates {\figscaleMskHi};  \addlegendentry{masked, $P{<}3000$}
+\addplot[mark=*, thick, color=blue!35, dashed] coordinates {\figscaleMskLo}; \addlegendentry{masked, $P{<}300$}
+\addplot[mark=square*, thick, color=orange!80!black] coordinates {\figscaleRawHi}; \addlegendentry{raw, $P{<}3000$}
+\addplot[mark=square*, thick, color=orange!45, dashed] coordinates {\figscaleRawLo}; \addlegendentry{raw, $P{<}300$}
 \end{axis}
 \end{tikzpicture}
 \caption{Masked, the reconstruction is scale-stable at adequate cutoff: $0.9609\to
@@ -667,9 +667,9 @@ $0.4$--$1.0\sigma$} to \emph{factoring, significance withheld}.
   legend pos=south east, height=5.2cm]
 \addplot[domain=1500:120000, samples=2, dashed, thick, color=gray!60, forget plot]
   {3030*(x/20000)^0.829};
-\addplot[only marks, mark=square*, mark size=2.4pt, color=orange!80!black] \figamplPub;
+\addplot[only marks, mark=square*, mark size=2.4pt, color=orange!80!black] coordinates {\figamplPub};
 \addlegendentry{published \cite{ff06e}}
-\addplot[only marks, mark=*, mark size=2.6pt, color=blue!60!black] \figamplMine;
+\addplot[only marks, mark=*, mark size=2.6pt, color=blue!60!black] coordinates {\figamplMine};
 \addlegendentry{this record}
 \node[anchor=north west, font=\footnotesize, color=gray!40!black] at (axis cs:2400,2700)
   {$z\propto N^{\amplExp}$, fitted on two points};
@@ -776,8 +776,10 @@ way.
 \section{Reproduction}\label{sec:repro}
 
 Seed $20260423$ throughout. Implementation: the \texttt{AISO-UI-for-Ai} tree
-(\texttt{frontend/src/\{shuffle-knife,riemann-siegel,rotor-field,rotor-dynamics\}.ts}).
-Run from \texttt{frontend/}:
+(\path{frontend/src/shuffle-knife.ts}, \path{frontend/src/riemann-siegel.ts}, \path{frontend/src/rotor-field.ts}, \path{frontend/src/rotor-dynamics.ts}).
+The tree is public at \url{https://github.com/tensorrent/AISO-UI-for-Ai}; the numbers and figures in this document were produced on branch \path{claude/excel-memory-offloading-9ezwrv}, and the four instrument files, the scripts and the lattice test are byte-identical from the generating commits (\texttt{086a0e3}, \texttt{64d9658}) through commit \texttt{3a8e610}, which is the pin. Clone the repository and check it out at that commit,
+\begin{center}\small\texttt{git checkout 3a8e610a80575da13ee68649c7a92ba3690be140}\end{center}
+then \texttt{npm install} in \path{frontend/} and run the commands below from that directory.
 
 \begin{center}\small
 \begin{tabular}{ll}

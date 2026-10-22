@@ -87,3 +87,8 @@ Use the [frontier verification guide](../code/frontier_verification/README.md) f
 ## Find the evidence behind a result
 
 Use the [condensate evidence index](CONDENSATE_EVIDENCE.md), [frontier index](frontier/README.md), and [claim-to-code manifest](../MANIFEST.md). An archived script may require its original environment or source data; the CI entry points above define the portable subset.
+
+## Supporting papers whose instruments live in another repository
+
+The two supporting papers under `docs/` ([surrogate discriminant amendments](surrogate_discriminant_amendments.tex), [instrument floors](instrument_floors.tex)) are reproduced from the public repository [tensorrent/AISO-UI-for-Ai](https://github.com/tensorrent/AISO-UI-for-Ai), not from `code/` here. Each paper's reproduction section names the branch, the pinned commit (at which the instrument files are byte-identical to the generating runs), and the commands, which run from that repository's `frontend/` directory after `npm install`. The committed figure data (`instrument_floors_data.tex`) is the generator's output at that pin, byte-for-byte. Promoting those instruments into `code/` here is an open owner decision recorded in the branch index.
+

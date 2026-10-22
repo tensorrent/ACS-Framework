@@ -5,6 +5,7 @@
 ## Current findings and checks
 
 - [24 September 2026 publication](publication/2026-09-24/README.md): the current consolidated results, corrections, limits, and reproducibility scope.
+- [Rerun of the portable checks, 22 October 2026](publication/2026-10-22-rerun.md): the science verifier, the canonical test suite, the manuscript build and the FF06g full ladder rerun on the pinned environment on a different machine; a dated reproduction receipt, not a new preservation record.
 - [Reproduction guide](REPRODUCTION.md): portable checks, manuscript builds, and optional research suites.
 - [Publication amendments](publication/2026-09-24/amendments.json): a specific update for each of the 33 earlier manuscripts.
 - [Publication manifest](publication/2026-09-24/publication-manifest.json): file hashes for the published papers and evidence.

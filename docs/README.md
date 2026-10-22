@@ -11,8 +11,7 @@
 - [Publication manifest](publication/2026-09-24/publication-manifest.json): file hashes for the published papers and evidence.
 - [Style and literature review](publication/2026-09-24/style-and-research.md): primary references and manuscript conventions.
 - [Branch index](BRANCHES.md): work published on `main`, open research PRs, and unmerged branches.
-- [Governance decisions awaiting the owner, 22 October 2026](decisions_2026-10-22.md): seven decision briefs (the surrogate-discriminant branch, the red integrity gate, PRs #14 and #16, the Exodus kill commit, absolute-path exposure, the infinity-zero ruling), each with its evidence, options, and a recommendation labelled as the agent's.
-- [Decision briefs, 22 October 2026](decisions_2026-10-22.md): the open owner decisions with evidence, options and costs; part 2 covers the quartic chain, the supporting papers' byline, the cross-repository reproduction pin, the Yukawa-ratio reading, the pending paste-ready amendments and the test-ledger scope field. Paste-ready text for the manifest-bound targets is in [proposed amendments, pass 2](proposed_amendments_2026-10-22_pass2.md); nothing there is applied.
+- [Decision briefs, 22 October 2026](decisions_2026-10-22.md): the open owner decisions with evidence, options, costs and a labelled recommendation. Part 1 covers repository governance (the red integrity gate, PR #14, PR #16, the Exodus commit, the absolute-path policy, the infinity-zero ruling, this branch); part 2 covers the quartic chain, the supporting papers' byline, the cross-repository reproduction pin, the Yukawa-ratio reading, the pending paste-ready amendments and the test-ledger scope field. Paste-ready text for the manifest-bound targets is in [proposed amendments, pass 2](proposed_amendments_2026-10-22_pass2.md); nothing there is applied.
 
 ## Explore by research question
 

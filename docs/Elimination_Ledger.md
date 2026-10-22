@@ -51,10 +51,16 @@ Kill condition: slower across the working N range. Collapse: settles the last op
 BRA leg; if killed, kernel value rests on determinism + transparency alone (cleanly
 bounded). Cost: low once unblocked.
 
-**Q3-TARGET — T_min height floor (2πe)^d/q as a real invariant.** `QUEUED`
+**Q3-TARGET — T_min height floor (2πe)^d/q as a real invariant.** `KILLED — scaling law FALSIFIED (T4); d=1,q=1 floor value SURVIVED (T2/T3)`
 Kill test: vary window / N / taper with the zeros engine. Kill condition: floor moves
 with windowing → refraction. Collapse: bounds the status of the LF01 correction.
 Cost: low.
+*Current status (one ruling; dated history kept below, nothing deleted): the floor value
+2πe at d=1,q=1 SURVIVED (scoped) on 2026-06-06 — T2 value / T3 count-tracking; the
+scaling law (2πe)^d/q was then FALSIFIED (T4) the same day at d=2 (Dedekind ζ of Q(i):
+framework floor 72.93 sits above 51 actual zeros; the floor scales as 2πe·q^(−1/d)). The
+later ruling governs. The `QUEUED` tag this line carried until 2026-10-22 was stale, not
+a third verdict.*
 
 ### Build the kill test, then swing — highest collapse, needs a testbed
 
@@ -325,6 +331,10 @@ Self-corrections this session: two broken statistics caught before reading as si
 | Constant T1-upgrades | ACS derivation code under representation swap; RGEs for h̃/h |
 | Q5 full HP operator | a candidate construction (open problem) |
 
+*(2026-10-22 cross-reference, row kept as dated history: the "Q3 (d,q) scaling" need was
+met the same day by computing degree-2 zeros directly instead of fetching them, and the
+scaling law was FALSIFIED (T4) — see "2026-06-06 — Target Q3 (d,q) scaling law" below.)*
+
 ---
 
 ## OOS01 RESULTS (2026-06-06, Mac via Antigravity) — reviewed & re-tiered
@@ -379,7 +389,11 @@ slightly too generous — machine says the value moves under Killing-form normal
 Only ζ zeros (d=1,q=1) on disk; no degree-2 or q>1 L-function zeros. Scaling law of
 T_min=(2πe)^d/q remains untested, exactly as scoped. Needs an actual LMFDB fetch.
 
-### Q5 AISO regression — **T1 PASS** (logged to W2F record)
+### AISO/TENT workspace regression gate (post `#[non_exhaustive]` refactor + SIGPIPE harness fix) — **T1 PASS** (logged to W2F record)
+*(Formerly titled "Q5 AISO regression" until 2026-10-22. The label collided with the
+queue's Q5 — the Hilbert–Pólya operator-class target above — which this entry does not
+concern. It is not a kill target at all: it is the engineering regression gate on the
+AISO/TENT stack's test suite from the same external session. Content and tier unchanged.)*
 Full workspace 842 passed / 0 failed; Step 3 OpenAPI reproduces green; Category A*. No
 regression from the #[non_exhaustive] refactor or SIGPIPE fix. (Count grew 343→842 =
 wider binary scope, not a regression.)
@@ -388,6 +402,8 @@ wider binary scope, not a regression.)
 KILLED: γ (now T1), Q6, Q5-classes, **Q2 BRA speed (T1)**, **Q4 identity-as-stated (T2)**.
 SURVIVED/INVARIANT: h̃/h (now T1), Q3 floor (scoped), Q4 monotonicity-analogy, Q7 (decoupling).
 REFRACTION (T1): g₄'s 4/3, γ's 0.274, λ_φ's 0.1283. BLOCKED: Q3 (d,q) law, Q5 full HP operator.
+*(2026-10-22 cross-reference: "BLOCKED: Q3 (d,q) law" was superseded later the same day by
+the FALSIFIED (T4) entry two below; the Q3 queue entry at the top of this file carries the governing status.)*
 
 ### 2026-06-06 — Target Q4 (monotonicity reading) — **RESOLVED; target now fully closed** · T1 numerical / T2 theorem
 
@@ -671,3 +687,204 @@ neighbour is the **force-free / Taylor state** (Woltjer: relaxation at fixed hel
 dimensions of inverse length. It still does not evade the no-go on its own.
 
 Write-up: `papers/notes/Framing_Transformer_Spin_Parity.tex` §§7–8.
+
+---
+
+> **2026-09-24 carrier-audit obstructions — logged to this ledger 2026-10-22.** Sources:
+> `papers/updates/ACS_Condensate_Carrier_Boundary.tex` §§3–6 and
+> `papers/updates/ACS_Action_Identifiability.tex` §3 (both dated 24 September 2026), with the
+> per-paper withdrawals in `docs/publication/2026-09-24/amendments.json`. Instrument for all
+> five entries: `code/publication_20260924/verify_science.py` (repo-relative, rerunnable —
+> standard (a) of the tiering note, unlike the `/tmp` scripts above). Check names below are
+> quoted from that file as it prints them. Run record for this transcription: the full
+> script, called as `verify_science.run()` from a scratch wrapper against this tree on
+> 2026-10-22, reported `"total": 58, "passed": 58`, `FAILED: []`, exit 0; every check cited
+> below printed `PASS`. Entries are dated by the audit, not by the transcription.
+
+### 2026-09-24 — Klein-cover homology map: the proposed shear M = [[1,2],[0,1]] as a lift — **KILLED** · T1 machine (exact) / T4 falsified
+
+**Target.** The matrix proposed in `papers/notes/Klein_Foam_Monad.tex` as a lifted quotient
+diffeomorphism acting on the first homology of the orientation double cover. Kill
+condition (stated first): a lift must commute with the cover's unique nontrivial deck
+transformation; if it does not, it is not a lift, whatever the accompanying metric does.
+
+**Instrument.** `verify_science.py`, check `cover shear fails necessary deck commutation` —
+exact sympy: D = diag(1,−1), M = [[1,2],[0,1]], asserts M·D − D·M == [[0,−4],[0,0]].
+
+**Result (audit wording, Carrier Boundary §4.3).** "For the source's orientation double
+cover, the deck action on first homology is D = diag(1,−1). A lifted quotient
+diffeomorphism must commute with its unique nontrivial deck transformation. The proposed
+matrix fails this necessary condition: MD − DM = [[0,−4],[0,0]]." And the scope lines
+kept with it: "This does not imply that identity cover homology determines a trivial
+mapping class; the earlier topology correction remains in force. The printed metric, by
+contrast, respects the glide pullback. Its determinant R² + p²cos²(u/2)/(4π²) retains
+independent radius and pitch inputs. A valid metric identity does not repair an invalid
+map."
+
+**Verdict.** KILLED by a finite algebraic obstruction — the commutator is a fixed nonzero
+integer matrix, no tolerance involved. The survivor is narrower: the glide-compatible
+metric is valid and still carries radius and pitch as free inputs (amendment to
+`Klein_Foam_Monad.tex`: "A proposed cover-homology map must commute with the deck action;
+the tested shear fails that necessary condition. A valid glide-compatible metric still
+retains radius and pitch inputs.").
+
+### 2026-09-24 — Balanced colour triplet (|R⟩+|G⟩+|B⟩)/√3 as a colour singlet — **KILLED** · T1 machine (exact) / T4 falsified
+
+**Target.** The colour/music identification — carried in
+`papers/core_trilogy/Holographic_Spectral_Inversion.tex` (optical colour addition) and
+`papers/core_trilogy/Palatini_Gauge_Attractor.tex` — that the balanced vector of the
+fundamental 3 of SU(3) is a singlet. Kill condition: a singlet is annihilated by every
+generator; zero expectation of the two Cartan generators is a weaker condition and must
+not be read as invariance.
+
+**Instrument.** `verify_science.py`, checks `balanced triplet has zero means but nonzero
+variance` (⟨T₃⟩ = ⟨T₈⟩ = 0 on the state, but the summed Cartan variance is 1/3) and
+`triplet Casimir and no invariant vector` (Σ_a T_a² = (4/3)·𝟙 on the 3, and the eight
+stacked generators have rank 3, so their common kernel is {0}); positive control
+`tensor-product singlet positive control` (the 3⊗3̄ singlet is annihilated by every total
+generator). Exact sympy, Gell-Mann normalisation Tr(T_aT_b) = ½δ_ab. The antisymmetric
+three-triplet control the audit also cites lives in the endpoint evidence package, not in
+`verify_science.py`.
+
+**Result (audit wording, Carrier Boundary §4.4).** "The color/music source proposes
+(|R⟩+|G⟩+|B⟩)/√3 as a singlet. It is a vector in the fundamental triplet, not an
+invariant vector. Its two Cartan expectations vanish, but the sum of their variances is
+1/3 and its quadratic Casimir is 4/3. Applying all eight generators gives a trivial
+common kernel in the fundamental representation. As positive controls, the
+triplet–antitriplet singlet and the antisymmetric three-triplet singlet are annihilated
+by the total generators. Zero mean charge and invariance are different conditions."
+
+**Verdict.** KILLED. "Zero mean colour charge" was being read as "singlet"; the Casimir
+4/3 is the fundamental's, not 0, and the irreducible 3 has no invariant vector at all.
+The withdrawal is now in the papers' own amendments ("A Cartan projection is not a
+singlet projection, and optical color addition does not construct an invariant vector";
+"a balanced vector in the fundamental color triplet is not a singlet: vanishing Cartan
+expectations do not imply that the generators annihilate the state"). Guard against
+conflation for readers who grep this file for 4/3: the exact ad_{T_BL} eigenvalue and
+Δ(B−L) = 4/3 of the 2026-07-17 condensate-collapse entry are untouched; the 4/3 here is
+the SU(3) fundamental Casimir and is evidence *against* the singlet reading, not for it.
+
+### 2026-09-24 — Möbius capacitor: α⁻¹ = L with L = log(8R/a) + 1 — **KILLED (factor of two, then a fitted cutoff)** · T1 machine (exact) / T4 falsified
+
+**Target.** The recovered capacitor proposal (`papers/notes/Mobius_Ribbon_Capacitance.tex`,
+`papers/notes/Mobius_Screw_Electron.tex` §4.2, and the archived CPF manuscript) that the
+ribbon self-energy at E = mc² fixes the inverse fine-structure constant as α⁻¹ = L. Kill
+condition: redo the one-line energy match from the printed C, q and R and read off L or
+L/2; separately, check whether the cutoff a/R is derived or inserted.
+
+**Instrument.** `verify_science.py`, check `capacitor factor of two` — exact sympy:
+solve(α·L/2 = 1, α) == [2/L].
+
+**Result (audit wording, Carrier Boundary §4.2).** With "C = 2πε₀R/L, q = e/2,
+R = ħ/(2mc)": "E = q²/(2C) gives E/mc² = αL/2, E = mc² ⟹ α⁻¹ = L/2. The later archived
+CPF manuscript instead used α⁻¹ = L and inserted a/R = 8exp[−(K−1)]. This produces any
+desired L = K by construction. At its chosen K = 137.035999171, that exponential is
+6.65896×10⁻⁵⁹; its own self-energy equation requires a/R = 8exp[−(2K−1)] ≃
+2.03905×10⁻¹¹⁸ to reproduce the same inverse coupling. Neither cutoff follows from
+topology. The companion capacitance computations remain conditional model comparisons."
+
+**Verdict.** KILLED twice over. (i) The printed inputs give α⁻¹ = L/2, not L: the proposal
+is off by its own factor of two before any physics is argued. (ii) Granting either
+normalisation, L is set by an inserted exponential cutoff chosen to land on K, so the
+"derivation" is a fit — the same failure class as the Sl = 2 ↔ g = 2 kill of 2026-07-26
+(a number matched across formalisms rather than produced by one). Amendment wording
+(`Mobius_Screw_Electron.tex`): "energy matching gives α⁻¹ = L/2, not L. These findings
+preclude treating either estimate as a parameter-free particle derivation."
+
+### 2026-09-24 — CPF curvature summand "vanishes on the critical line" (the RH premise) — **KILLED** · T1 machine (exact) / T4 falsified
+
+**Target.** The archived CPF manuscript's premise that its curvature summand
+2ε/((½−β)² − ε²) is zero at β = ½, from which a map to physical curvature and thence an
+RH inference was drawn. Kill condition: substitute β = ½ and read the value.
+
+**Instrument.** `verify_science.py`, check `CPF curvature summand is nonzero on the
+critical line` — exact sympy: (2ε/((½−β)² − ε²)).subs(β, ½) == −2/ε.
+
+**Result (audit wording, Carrier Boundary §6).** "The archived CPF curvature summand
+2ε/((1/2−β)² − ε²) equals −2/ε at β = 1/2, not zero. Independent finite-summand
+integration gives a vanishing long-time average for both on-line and off-line test
+locations away from contour poles. This neither justifies exchanging an infinite zero sum
+with a limit nor derives a map to physical cosmological curvature. No actual zeta zero is
+located or excluded by this countercheck. Finite ordinate statistics and physical
+stability analogies do not establish RH."
+
+**Verdict.** KILLED at the premise: the summand is −2/ε on the line, so the on-line /
+off-line distinction the argument needed is absent, and the long-time average vanishes
+on *both* sides, which discriminates nothing. No RH inference survives from this route.
+The audit's own scope line is kept verbatim above so that this entry is never read as a
+result about ζ: no zero is located or excluded.
+
+### 2026-09-24 — "The neutral restriction determines the scalar spectrum" (uniqueness from neutral data) — **KILLED by counterfamily** · T1 machine (exact basis; spectra at 1e-10 floors) / T4 falsified
+
+**Target.** The reduced-potential practice, carried across the core trilogy and the FF06
+series, of reading stability, masses or a vacuum off the neutral background family
+Φ = diag(a, b·e^{iα}), (D₁,D₂,D₃) = (d·E₄₄/√2)·(1,−i,0) — the two-trace restriction — as
+if neutral data fixed the full 68-coordinate action. Kill condition (stated first):
+exhibit complete actions with *identical* neutral potential and neutral masses whose
+full transverse spectra differ in sign.
+
+**Instrument.** `verify_science.py`: `17 homogeneous quartics` and `4 homogeneous
+quadratics` (the exact basis carries 17 real quartic and four quadratic coefficients);
+`neutral: neutral_quartic_map_rank_11`, `neutral: six_coordinate_invariants_invisible`,
+`neutral: four_invisible_norms_change_transverse_hessian` and
+`neutral: holomorphic_terms_invisible_through_Hessian` (the six invisible directions and
+what they move); `full stationary spectrum k=0.2`, `full stationary spectrum k=0`,
+`full stationary spectrum k=-0.2` (positive/flat/negative physical-mode counts
+(56,0,0), (44,12,0), (6,0,50)); `tadpoles and Goldstones k=…` (tadpole ∞-norm < 1e-10,
+Goldstone Ward relative error < 1e-10, gauge-orbit rank 12) and `coordinate invariance
+k=…` (spectrum error under coordinate rescaling < 1e-10) for each k; and the decisive
+`identical neutral Hessians across stability counterfamily` (the three neutral tangent
+Hessians agree to < 1e-12). Basis and metric are exact rationals
+(`code/condensate_energy/canonical_scalar_action.py`); the spectra are floating-point
+at the stated floors, so this is T1 by machine with a tolerance, not T2 by inspection.
+
+**Result (audit wording, Action Identifiability abstract and §3–3.1).** "Six quartic
+directions are invisible on the neutral background family." "The 21 gauge generators have
+twelve independent orbit directions, leaving 56 physical real scalar directions. The
+entire neutral restriction has quartic rank eleven. The missing six directions are
+I₆, I₈, I₉, I₁₀, Re H_Δ, Im H_Δ." For the bounded witness family
+V₄ = N_Φ² + |d_Φ|² + N_Δ² + k(I₆+I₈+I₉+I₁₀) + …: "The background a = 1/3, b = 1/5, d = 1,
+α = 0 is stationary for each tested k. The neutral potential and its four physical neutral
+masses are identical, while Table 1 shows different full spectra":
+
+| k | positive physical modes | flat | negative |
+|---|---|---|---|
+| 1/5 | 56 | 0 | 0 |
+| 0 | 44 | 12 | 0 |
+| −1/5 | 6 | 0 | 50 |
+
+"Twelve gauge Goldstone directions are excluded from every row. The neutral data alone do
+not distinguish the rows." Independent exact witness: the canonically normalised
+Re D₃,₀₀ has m² = (5/3)k + 4/5625, negative at k = −1/5. "This is a deliberately chosen
+witness family, not an observed particle fit."
+
+**Verdict.** KILLED: one neutral dataset, three complete actions — stable, flat, unstable.
+Any claim that reads stability, a mass-selection rule or a unique vacuum off the
+neutral / two-trace restriction is underdetermined by construction. Scope, in the paper's
+words: "underdetermination within the reviewed assumptions, not a no-go theorem against a
+future model that adds justified premises"; and on the positive row, "Positivity of this
+local spectrum does not prove that the point is the global minimum or that quantum decay
+is absent." This is the kill the amendments to `The_Reversible_Flattening_Monograph.tex`,
+`The_Geometry_Engine.tex`, `When_a_Number_Lies.tex` and `ACS_Deterministic_AI_Stack_PDR.tex`
+all lean on ("different complete actions can share neutral observations while differing in
+transverse stability").
+
+**Scorecard (2026-09-24 carrier audit).**
+
+| Target | Verdict | Tier | `verify_science.py` check |
+|---|---|---|---|
+| Cover shear M = [[1,2],[0,1]] as a lift | KILLED (MD − DM = [[0,−4],[0,0]]) | T1+T4 | `cover shear fails necessary deck commutation` |
+| Balanced triplet as singlet | KILLED (Casimir 4/3, common kernel {0}) | T1+T4 | `balanced triplet has zero means but nonzero variance`, `triplet Casimir and no invariant vector` |
+| Capacitor α⁻¹ = L | KILLED (α⁻¹ = L/2; cutoff inserted) | T1+T4 | `capacitor factor of two` |
+| CPF summand zero on the line | KILLED (−2/ε at β = ½) | T1+T4 | `CPF curvature summand is nonzero on the critical line` |
+| Neutral restriction fixes stability | KILLED (56/0/0, 44/12/0, 6/0/50) | T1+T4 | `full stationary spectrum k=…`, `identical neutral Hessians across stability counterfamily` |
+
+Not logged as new kills, and why. (i) Carrier Boundary §4.1, framing does not determine
+the magnetic moment (g = 1 for uniform q/m on any closed curve): already carried by the
+two 2026-07-26 entries above — same verdict, same instrument class, nothing new to add.
+(ii) Carrier Boundary §5, the added T∧∗T term is algebraic in contortion in the stated
+Palatini action (no independent contortion wave operator): the amendment to
+`Palatini_Gauge_Attractor.tex` withdraws the inference, but `verify_science.py` carries
+no check for it and the "24 independent contortion components" count is stated, not
+exercised here. It is a scope statement until it has an instrument; it goes in as a kill
+when it does.

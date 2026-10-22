@@ -8,6 +8,8 @@ The cleanup removed **nine remote branch refs whose exact tips were already ance
 
 [Machine-readable audit and deletion receipt](branch-audit/2026-09-24.json) records every original tip, commit counts, PR association, ancestry result, and the remote snapshot after cleanup. Counts below are relative to the audited `main` revision and will age as work continues. Use the [live branch list](https://github.com/tensorrent/ACS-Framework/branches) and [open PR list](https://github.com/tensorrent/ACS-Framework/pulls) for current status.
 
+**Addendum, 22 October 2026.** The ref `feature/prime-fhe-homomorphic-primitive` was deleted by the owner on 22 October 2026 because the branch carried intellectual property belonging to koba42 and should not have been in this repository. Deleting a ref does not delete the objects it pointed at: a hosted repository keeps dangling commits and serves them by SHA until a sensitive-data removal is requested, so the full SHA this page and the [24 September audit receipt](branch-audit/2026-09-24.json) recorded is deliberately no longer linked from here. The receipt itself is a dated snapshot and is left as written. Nothing from that branch was merged, cherry-picked, or read into any later work. The entry below is kept so the 24 September count of seven audited refs still reads correctly; its link is removed.
+
 ## Open research PRs
 
 ### Frontier continuation
@@ -26,7 +28,7 @@ The cleanup removed **nine remote branch refs whose exact tips were already ance
 
 ### Prime/FHE homomorphic primitive
 
-`feature/prime-fhe-homomorphic-primitive` · [audited files](https://github.com/tensorrent/ACS-Framework/tree/8fea47f4153dcb13287c90d8f2dbb809bed6d9cc)
+`feature/prime-fhe-homomorphic-primitive` · ref deleted 22 October 2026 (see addendum above); the audited-files link is withdrawn
 
 This is a separate Git history with no common ancestor with main, containing 17 commits. It has no open ACS PR at this snapshot. Its cryptographic manuscript and benchmarks need a deliberate import/review decision; it cannot be treated as an ordinary stale ACS feature branch.
 

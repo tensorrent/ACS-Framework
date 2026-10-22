@@ -221,7 +221,8 @@ document and audit → fix what's dangerous → fix everything else.
 **G. The unmerged FHE side-project** — `feature/prime-fhe-homomorphic-primitive`, last commit
 2026-07-30. A ~217k-line crypto eprint (Transcript Equivalence Theorem, AKPP nullity proof,
 blinded-evaluation handle protocol) that deletes files `main` still uses. Left alone pending an
-owner decision. **Do not merge or cherry-pick from it without asking.**
+owner decision. **Do not merge or cherry-pick from it without asking.** Ref deleted
+22 October 2026: it carried koba42 intellectual property (see §8).
 
 ---
 
@@ -353,3 +354,27 @@ charge comparison invalid).
   `code/acs_codebase` pytest suite at **42 passing** in every verification block from July
   through August; the T1–T4 tier vocabulary; the Elimination Ledger as a living, append-only
   kill log (its description corrected from a fixed "eight falsifications" count in PR #10).
+
+---
+
+## 8. Update, 22 October 2026
+
+§7 above is the state as of 2026-08-07 and is left as written. What has moved since:
+
+- **Two open PRs**, both opened 2026-09-14 and both without a review or a comment:
+  [#14](https://github.com/tensorrent/ACS-Framework/pull/14) (`claude/constraint-projection-framework-010dsu`,
+  46 commits ahead of main) and [#16](https://github.com/tensorrent/ACS-Framework/pull/16)
+  (`codex/acs-frontier-delta-2026-09-12`, 27 ahead). See `docs/BRANCHES.md`.
+- **Nine merged research branch refs were deleted on 2026-09-24** in the branch audit; the
+  "never deleted" line in §7 no longer holds. The receipt is `docs/branch-audit/2026-09-24.json`.
+- **The FHE branch ref was deleted on 2026-10-22** because it carried koba42 intellectual
+  property. The objects may still be reachable by SHA until a hosted sensitive-data removal is
+  made; that is an owner action, not a repository edit. Nothing from it was merged or read into
+  later work.
+- **The publication integrity gate is red on main** since `389afe2` (2026-09-29): eight manifest
+  mismatches from the author-statement insertion into manifest-bound manuscripts.
+  `REPRODUCTION.md` requires a new preservation record for that; none has been made.
+- **One unmerged documentation branch**, `claude/surrogate-discriminant-amendments`, adds two
+  supporting papers under `docs/` (surrogate discriminant amendments; instrument floors) and this
+  update. No PR.
+

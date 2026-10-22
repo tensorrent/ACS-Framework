@@ -60,12 +60,38 @@ figures (phase demod R = 0.991; C9 zeros-vs-truth corr = 0.917).
 | Higgs quartic λ_φ = 2√3/27 | **T2** | Koide projection; `acs_codebase` paper_a + `extras/koide_clebsch_gordan.py` |
 | α₂ = 0 (representation theory) | **T2** | paper_a |
 | β_c = 0 no-go (tree level) | **T2** | `acs_codebase/src/paper_a/betac_tan_beta.py` |
-| tan β gauge-protected (CW 6→5 fails) | **T4** | `extras/phase51_tanbeta.py`, `phase50_vacuum.py` — fermion-dominated, boundary min |
+| tan β gauge-protected (CW 6→5 fails) | **T4** | `extras/phase51_tanbeta.py`, `phase50_vacuum.py` — fermion-dominated, boundary min. Tree level, minimal-bi-doublet ansatz; scope as of 24 Sept 2026 in the note under this table |
 | N_gen = 3 (Jacobi truncation at BCH order 3) | **T1** | paper_a |
 | γ = 0.274 (Barbero-Immirzi, Meissner) | **T2** | `extras/barbero_immirzi_correct.py` |
 | θ_QCD = 0, torsion ratio 0:1:4 | **T2** | paper_a |
 | θ₁₃ obstruction / TM1 PMNS | **T2/T3** | `src/paper_a/theta13_obstruction.py`, `tm1_pmns.py` |
 | Riemann curvature = Layer-2 bracket R^{ab}=dω+ω∧ω; Palatini eqs solve ω→Γ→R (Schwarzschild: ∇g=0, R_μν=0, K=48M²/r⁶) | **T1** | `extras/riemann_curvature_palatini.py` |
+
+> **tan β / Coleman–Weinberg "6 → 5", status as of 24 September 2026** (this paragraph is
+> the same in `MANIFEST.md` and `docs/ACS_Master_Index.md`). Two statements. (1) Tree level,
+> minimal-bi-doublet ansatz: tan β is a gauge-protected flat direction, so the proposed
+> one-loop reduction of that ansatz's six inputs to five fails — **T4** in `MANIFEST.md`
+> (Paper A, `papers/core_trilogy/Palatini_Gauge_Attractor.tex:2185-2195`: "tan β is
+> therefore not lifted by perturbative corrections in this sector"). (2) The count the
+> question was posed on is retired by the 24 September record: "The complete scalar sector
+> contains 17 quartic and four quadratic coefficients; six quartic directions are invisible
+> on the neutral family. [...] Earlier reduced parameter counts apply only to their stated
+> ansatz" (`docs/publication/2026-09-24/amendments.json`, entry for
+> `papers/Form_Function_and_Asymmetry.tex`) and "Reduced scalar-potential formulas apply only
+> to their restricted ansatz: the complete invariant audit has 17 quartics, hidden transverse
+> directions and nontrivial running" (same file, entry for
+> `papers/core_trilogy/Holographic_Spectral_Inversion.tex`). So "6 → 5 inputs?" is
+> **superseded as posed, not open**. Whether radiative corrections select tan β in the
+> complete 17-quartic action is a different question; the record supplies no selector for it
+> ("The complete scalar action and physical vacuum still require coefficients, kinetic
+> normalization and a selection rule", same file, entry for
+> `papers/core_trilogy/Palatini_Gauge_Attractor.tex`), and its radiative audit
+> (`docs/condensate_energy/radiative_flat_modes/README.md:10,223-226`) reports "conditional
+> results for specified boundary couplings" that do "not close [...] recovery of an ACS
+> construction that fixes the inputs". Paper C's "is open" at
+> `papers/core_trilogy/Holographic_Spectral_Inversion.tex:856-858` is manifest-bound; a
+> dated amendment is proposed, not applied. Row-by-row adjudication:
+> `docs/adjudication_2026-10-22.md` (row A-15).
 
 ### Paper B (Riemann Spectral ACS)  +  HP knife suite
 | Claim | Tier | Evidence |

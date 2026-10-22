@@ -67,7 +67,7 @@
 | tan β (bi-doublet VEV ratio) | (0, ∞) | **gauge-protected flat direction** — cannot be fixed perturbatively |
 | v_R (right-handed breaking scale) | unconstrained | sets proton decay / heavy boson masses |
 | v (EW VEV) | 246.22 GeV | calibration (measured) |
-| Free-parameter count | **6–7 inputs (4–5 free + 2 calibration)** | down from SM's 19+; row-level bookkeeping differs between Paper A's ledger (6) and the skill module's (7) — see the §4.2 count note there |
+| Scalar-sector coefficient count (audited 24 Sept 2026) | **17 real quartic + 4 quadratic coefficients** on 68 real scalar coordinates with the trace kinetic metric; **six quartic directions are invisible on the neutral family** | Replaces this row's earlier "6–7 inputs (4–5 free + 2 calibration)". That count, Paper A's 6-input Branch A ledger and Paper C's "5 quartic couplings to 2 free + 1 radiative" chain apply only to the minimal-bi-doublet ansatz, and the two-trace Δ potential of that ansatz is not closed under one-loop running (B(λ₆−λ₇) = −2560/9 at the source point ρ₁ = 8/9, ρ₂ = 0, g = 4/3). Source: `papers/updates/ACS_Action_Identifiability.tex` abstract (lines 23–25), §3 (124–128), §4 (203–208); [amendments.json](publication/2026-09-24/amendments.json), entries for Paper A, Paper C and *Form, Function and Asymmetry* ("Earlier reduced parameter counts apply only to their stated ansatz"). The §8 picture below still prints "6 params (4 free)"; read it with this row. |
 | Claim status | proven / numerical / conjecture / falsified | moves between papers as results sharpen or die |
 
 **The pattern:** framework = Form (constant); each domain = a Function realized within it. The corpus is itself a Form/Function object.

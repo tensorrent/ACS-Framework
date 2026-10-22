@@ -147,12 +147,38 @@ All citations resolved: 0 undefined references across all 5 documents.
 14. 72% parity-odd holonomy under Lorentzian grading (Type IIb)
 
 ### Explicitly open (flagged in papers)
-15. Coleman-Weinberg analysis (6 → 5 inputs?)
+15. Coleman-Weinberg analysis (6 → 5 inputs?) — *superseded as posed, 24 Sept 2026; dated note below*
 16. FeynRules/UFO export
 17. Hilbert-Pólya operator construction
 18. Multi-cluster weighted proof (N2 Theorem 1(iii))
 19. Extension to exceptional algebras (N2)
 20. Action principle that produces S_f (Route B completion)
+
+> **tan β / Coleman–Weinberg "6 → 5", status as of 24 September 2026** (this paragraph is
+> the same in `MANIFEST.md` and `docs/ACS_Master_Index.md`). Two statements. (1) Tree level,
+> minimal-bi-doublet ansatz: tan β is a gauge-protected flat direction, so the proposed
+> one-loop reduction of that ansatz's six inputs to five fails — **T4** in `MANIFEST.md`
+> (Paper A, `papers/core_trilogy/Palatini_Gauge_Attractor.tex:2185-2195`: "tan β is
+> therefore not lifted by perturbative corrections in this sector"). (2) The count the
+> question was posed on is retired by the 24 September record: "The complete scalar sector
+> contains 17 quartic and four quadratic coefficients; six quartic directions are invisible
+> on the neutral family. [...] Earlier reduced parameter counts apply only to their stated
+> ansatz" (`docs/publication/2026-09-24/amendments.json`, entry for
+> `papers/Form_Function_and_Asymmetry.tex`) and "Reduced scalar-potential formulas apply only
+> to their restricted ansatz: the complete invariant audit has 17 quartics, hidden transverse
+> directions and nontrivial running" (same file, entry for
+> `papers/core_trilogy/Holographic_Spectral_Inversion.tex`). So "6 → 5 inputs?" is
+> **superseded as posed, not open**. Whether radiative corrections select tan β in the
+> complete 17-quartic action is a different question; the record supplies no selector for it
+> ("The complete scalar action and physical vacuum still require coefficients, kinetic
+> normalization and a selection rule", same file, entry for
+> `papers/core_trilogy/Palatini_Gauge_Attractor.tex`), and its radiative audit
+> (`docs/condensate_energy/radiative_flat_modes/README.md:10,223-226`) reports "conditional
+> results for specified boundary couplings" that do "not close [...] recovery of an ACS
+> construction that fixes the inputs". Paper C's "is open" at
+> `papers/core_trilogy/Holographic_Spectral_Inversion.tex:856-858` is manifest-bound; a
+> dated amendment is proposed, not applied. Row-by-row adjudication:
+> `docs/adjudication_2026-10-22.md` (row A-15).
 
 ### Explicitly disproved (negative results retained as boundaries)
 21. ad³ = 2·ad for integer matrices (impossible: requires λ = 1/√2)

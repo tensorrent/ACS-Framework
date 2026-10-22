@@ -81,3 +81,74 @@ stronger than the companion paper's.
   reading the record supports and needs no change.
 - No proposal for the five amendments of `AISO:docs/research/ACS_PAPER_AMENDMENTS_2026-10-21.md`;
   they are already paste-ready in that file and their targets are listed in decision 2.5.
+
+# Proposed amendments — 22 October 2026, pass 2
+
+Paste-ready proposals for manifest-bound files (`docs/publication/2026-09-24/publication-manifest.json`
+or `papers/**/*.tex`). Nothing here has been applied; the integrity gate is the owner's to clear.
+Each item follows the papers' `\section*{Amendment: ...}` convention and cites the line it amends
+at commit `c3a383b`. The open-problem cards these come from are in
+[open_problems_2026-10-22.md](open_problems_2026-10-22.md).
+
+## 1. Paper B, Open Problems R04: say that R04 as stated is RH
+
+File: `papers/core_trilogy/Riemann_Spectral_Critical_Line.tex:1594-1598`.
+
+Current text: "Classical equivalence, unresolved premise (R04). Theorem~\ref{thm:vonKoch-acs} gives the
+corrected RH-equivalent bound. Proving that bound independently of RH remains open."
+
+Reason: Theorem `thm:vonKoch-acs` (`:437-444`) states "RH is equivalent to $\sup_{u\ge u_0}
+|\Delta_{\mathrm{norm}}(u)|/(1+u^2)<\infty$". An RH-independent proof of the bound is therefore a proof of
+RH, and the branch should not read as a tractable lemma.
+
+```latex
+\section*{Amendment: R04 is the Riemann hypothesis}
+By Theorem~\ref{thm:vonKoch-acs}, the bound $\sup_{u\ge u_0}|\Delta_{\mathrm{norm}}(u)|/(1+u^2)<\infty$
+is equivalent to RH. Open Problem R04 is therefore not a lemma short of RH: proving it independently of
+RH is proving RH. The finite-$N$ bound on $D_N(u)$, the grid diagnostics, and any envelope chosen with
+$\sigma=1/2$ remain scoped results and are not partial progress on R04.
+```
+
+## 2. Fibered-object note: the cited `docs/witness_perspective/` path does not exist
+
+File: `papers/notes/Critical_Line_As_Fibered_Object.tex:86`.
+
+Current text: "The observer experiment in \path{docs/witness_perspective/} shows why linear span, intrinsic
+dimension, and available measurement directions must be distinguished."
+
+Observed: `ls docs/witness_perspective` fails at `c3a383b`; no file in the tree matches that name.
+
+```latex
+\section*{Amendment: dangling evidence path}
+The scope correction of 22 September 2026 cites an observer experiment at
+\path{docs/witness_perspective/}. That directory is not in the published repository. Until the
+experiment is restored with its receipts, the sentence citing it should be read as an unsupported
+reference; the scope correction's conclusion (no carrier, map, or proof is supplied) does not depend on it.
+```
+
+## 3. Witness paper §10: declare the uniformity statistic $C$ so it can be computed
+
+File: `papers/core_trilogy/Spectral_Witness_Refinement.tex:267-269` and `:290`.
+
+Current text: "For the windowed observable $F_w=K_w[\rho]+E_w$ with $\|E_w\|=O(1/N)$ …" and
+"The constant $C(\rho,q,d)=\|E_w\|\cdot N$ is controlled only above a height floor"; falsifier at `:290`:
+"$S_4$ Artin-$L$ zeros to height $\sim5000$, test boundedness of $C$."
+
+Reason: $K_w[\rho]$, the window $w$ and its normalisation $W$, the norm $\|\cdot\|$, and the meaning of $N$
+are not defined in the paper (grep for `K_w`/`E_w` finds only `:267` and `:269`; the reproducible driver
+at `:447-449` computes only $T_{\min}$). The falsifier cannot be run as written. Also, the height target
+$\sim5000$ comes from the scaling law $T_{\min}=(2\pi e)^d/q$, falsified at $d=2$
+(`docs/Elimination_Ledger.md:428-456`); the corrected floor $2\pi e\,q^{-1/d}$ at $d=3$, $q=229$ is $2.79$.
+
+```latex
+\section*{Amendment: definition of the uniformity constant and the corrected height target}
+The constant $C$ of \S10 is to be read with the following declarations, absent from the original text.
+The window $w$ is the Hann taper of \S2 with $W=\sum_k w(\gamma_k)$; $K_w[\rho](\omega)=\frac1W\int
+w(t)\,\bar\rho(t)\,e^{-i\omega t}\,dt$ with $\bar\rho(t)=\frac{d}{2\pi}\log\frac{q^{1/d}t}{2\pi e}$;
+$E_w=F_w-K_w[\rho]$; $\|E_w\|=\sup_{0<\omega\le\omega_{\max}}|E_w(\omega)|$ for a declared
+$\omega_{\max}$; and $N=N(T)$ is the certified zero count below the cutoff $T$. With these, $C(T)=N(T)\,
+\|E_w\|$ is computable from any certified ordinate list. The height target $\sim5000$ for $S_4$ rested
+on the scaling law $T_{\min}=(2\pi e)^d/q$, which was falsified at $d=2$; the corrected main-term floor
+$2\pi e\,q^{-1/d}$ is $2.79$ for conductor $229$. The falsifier is restated as: for a certified $S_4$
+Artin-$L$ list (conductor 229), compute $C(T)$ at increasing $T$ and test whether it stays bounded.
+```

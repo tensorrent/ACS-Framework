@@ -21,12 +21,22 @@ Decision rule (same as cross-model pass):
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import numpy as np
 
 from cross_model_kill_pass import evaluate_point
 from section9_toy_kill_test import corrcoef_safe, local_op
+
+
+def artifact_dir() -> Path:
+    """Where artifacts land. ACS_OUT_DIR redirects a run to a scratch tree so
+    nothing is written into the tracked docs/; unset, it is docs/ as before."""
+    override = os.environ.get("ACS_OUT_DIR", "").strip()
+    if override:
+        return Path(override).expanduser()
+    return Path(__file__).resolve().parents[2] / "docs"
 
 
 def long_range_ising_hamiltonian(
@@ -128,9 +138,8 @@ def main() -> None:
         },
     }
 
-    out_path = (
-        Path(__file__).resolve().parents[2] / "docs" / "issue7_long_range_results.json"
-    )
+    out_path = artifact_dir() / "issue7_long_range_results.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     print("Issue #7 long-range kill pass complete")

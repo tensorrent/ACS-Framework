@@ -17,6 +17,7 @@ Models:
 from __future__ import annotations
 
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -30,6 +31,15 @@ from section9_toy_kill_test import (
     local_op,
     tfim_hamiltonian,
 )
+
+
+def artifact_dir() -> Path:
+    """Where artifacts land. ACS_OUT_DIR redirects a run to a scratch tree so
+    nothing is written into the tracked docs/; unset, it is docs/ as before."""
+    override = os.environ.get("ACS_OUT_DIR", "").strip()
+    if override:
+        return Path(override).expanduser()
+    return Path(__file__).resolve().parents[2] / "docs"
 
 
 def xxz_hamiltonian(n_sites: int, jxy: float, jz: float, h: float) -> np.ndarray:
@@ -197,9 +207,8 @@ def main() -> None:
         },
     }
 
-    out_path = (
-        Path(__file__).resolve().parents[2] / "docs" / "issue7_cross_model_results.json"
-    )
+    out_path = artifact_dir() / "issue7_cross_model_results.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(combined, indent=2), encoding="utf-8")
 
     total_support = combined["meta"]["combined_support_cases"]

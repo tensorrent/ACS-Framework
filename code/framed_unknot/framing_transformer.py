@@ -43,11 +43,25 @@ Run:  python3 code/framed_unknot/framing_transformer.py
 """
 
 import json
+import os
 import pathlib
 
 import numpy as np
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
+# Where artifacts land. ACS_OUT_DIR redirects a run (and the sibling scripts,
+# which import DOCS from here) to a scratch tree so nothing is written into
+# the tracked docs/; unset, it is docs/ as before.
+_OUT_OVERRIDE = os.environ.get("ACS_OUT_DIR", "").strip()
+DOCS = pathlib.Path(_OUT_OVERRIDE).expanduser() if _OUT_OVERRIDE else ROOT / "docs"
+
+
+def artifact_label(path):
+    """Repo-relative when the artifact sits under ROOT, the full path otherwise."""
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 # --------------------------------------------------------------------------
 # geometry: centerline, torus framing, and their analytic derivatives
@@ -404,7 +418,7 @@ def main():
     print("  same class; Sl = 2 and Sl = 1 do not.")
     print("=" * 74)
 
-    artifact = ROOT / "docs" / "framed_unknot_results.json"
+    artifact = DOCS / "framed_unknot_results.json"
     payload = {
         "description": "Framing transformer of the Mobius-screw centerline",
         "source": "code/framed_unknot/framing_transformer.py",
@@ -433,7 +447,7 @@ def main():
     }
     artifact.parent.mkdir(parents=True, exist_ok=True)
     artifact.write_text(json.dumps(payload, indent=2) + "\n")
-    print(f"\nartifact written: {artifact.relative_to(ROOT)}")
+    print(f"\nartifact written: {artifact_label(artifact)}")
 
 
 if __name__ == "__main__":

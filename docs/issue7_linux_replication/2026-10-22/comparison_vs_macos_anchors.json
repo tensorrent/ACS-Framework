@@ -1,0 +1,346 @@
+{
+  "status": {
+    "macos": "PASS_WITH_CAUTION",
+    "linux": "NEEDS_WORK"
+  },
+  "consistency_errors": {
+    "macos": [],
+    "linux": []
+  },
+  "doc_errors": {
+    "macos": [],
+    "linux": [
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_exhaustive_results.json",
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_cross_model_results.json",
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_long_range_results.json",
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/long_range_stdout.txt",
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/exhaustive_stdout.txt",
+      "issue7_takeup_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/cross_model_stdout.txt",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_exhaustive_results.json",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_cross_model_results.json",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_long_range_results.json",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/long_range_stdout.txt",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/exhaustive_stdout.txt",
+      "issue7_paper_section9_and_4over3.md: missing hash in doc for docs/issue7_logs/cross_model_stdout.txt"
+    ]
+  },
+  "runs": [
+    {
+      "name": "section9",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 13,
+        "linux": 13
+      },
+      "stdout_sha256_match": true
+    },
+    {
+      "name": "mechanism_4over3",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 19,
+        "linux": 19
+      },
+      "stdout_sha256_match": true
+    },
+    {
+      "name": "exhaustive",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "stdout_sha256_match": false
+    },
+    {
+      "name": "cross_model",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "stdout_sha256_match": false
+    },
+    {
+      "name": "long_range",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "stdout_sha256_match": false
+    },
+    {
+      "name": "section9_exact",
+      "exit_code": {
+        "macos": 0,
+        "linux": 0
+      },
+      "stdout_lines": {
+        "macos": 13,
+        "linux": 13
+      },
+      "stdout_sha256_match": true
+    }
+  ],
+  "hashes": [
+    {
+      "path": "docs/issue7_exhaustive_results.json",
+      "match": false,
+      "macos": "2ad53a2c84ea9b51fd36c9c4a956451d9910e51fbfb694738873f7902f3c03cb",
+      "linux": "d2f4da06ac6fb2be351353575e967d2851c29b594dfd91600a73708f3a21fb12"
+    },
+    {
+      "path": "docs/issue7_cross_model_results.json",
+      "match": false,
+      "macos": "763f5a47d93ed7ec382ffb1445c4427c747311de4c813c16d6258cd60763caba",
+      "linux": "a8d76a023d95347d54816b4f982c7bf2d9be64e3b7e8aad949878c2313f373bb"
+    },
+    {
+      "path": "docs/issue7_long_range_results.json",
+      "match": false,
+      "macos": "e0fcab86e6963ee3f5298bc6a9124438bfeeaef5ea457a469703e889e74fbb48",
+      "linux": "f2976f94615d30dce97796f3800deabe3d4890ec4eb00ac1651b89ee835fec01"
+    },
+    {
+      "path": "docs/issue7_section9_exact_results.json",
+      "match": true,
+      "macos": "3242ffb90440868dbff15db66b35d10e44233325aa7dd35ea2e4ab9031bbc650",
+      "linux": "3242ffb90440868dbff15db66b35d10e44233325aa7dd35ea2e4ab9031bbc650"
+    },
+    {
+      "path": "docs/issue7_logs/long_range_stdout.txt",
+      "match": false,
+      "macos": "51924950d9b4c577948f11df2cdeb7390a7124f11c3d9b04480230476298a6c3",
+      "linux": "e34ba966f5e1c79e449f7325b26f1720915f9722fbe33eed4331093db4636e38"
+    },
+    {
+      "path": "docs/issue7_logs/section9_exact_stdout.txt",
+      "match": true,
+      "macos": "08469f911d19dd9bb7934067b1e5503b7e872eb7bd2aeecab1aedcb9673661fc",
+      "linux": "08469f911d19dd9bb7934067b1e5503b7e872eb7bd2aeecab1aedcb9673661fc"
+    },
+    {
+      "path": "docs/issue7_logs/section9_stdout.txt",
+      "match": true,
+      "macos": "5e3d49a49ef53fde92fd29855912852c5a90a5a857c2d0010770a1642434f4f9",
+      "linux": "5e3d49a49ef53fde92fd29855912852c5a90a5a857c2d0010770a1642434f4f9"
+    },
+    {
+      "path": "docs/issue7_logs/mechanism_4over3_stdout.txt",
+      "match": true,
+      "macos": "be1ff08ab3fbb8b8aebaff1ed5e504ff63ac20de661a31fb0d450e36c6ca3146",
+      "linux": "be1ff08ab3fbb8b8aebaff1ed5e504ff63ac20de661a31fb0d450e36c6ca3146"
+    },
+    {
+      "path": "docs/issue7_logs/exhaustive_stdout.txt",
+      "match": false,
+      "macos": "ec79dc64dedc9aa392dfc0fc5c0d5f4714717028b4e9f65ac470073072e119ac",
+      "linux": "651f97a33301561aca747a9a33ae4ad17482dc85db23da326b5453b82475a945"
+    },
+    {
+      "path": "docs/issue7_logs/cross_model_stdout.txt",
+      "match": false,
+      "macos": "b69406e5f4f980ec9127a355208bb03e28077a9ff77dee36209b3d80c8f515d0",
+      "linux": "4436c838bc589bb3ef01f62af07b87d62a8e577c4bbf9960a6aac3c3546a206d"
+    }
+  ],
+  "artifacts": {
+    "issue7_exhaustive_results.json": {
+      "leaves": 133,
+      "exact": 109,
+      "float_diff": 24,
+      "max_abs_diff": 0.08308382397372016,
+      "max_abs_diff_at": "section9_exhaustive.cases[6].corr_gap_outside_leak",
+      "nonfloat_mismatch": [],
+      "shape_mismatch": [],
+      "float_diff_buckets": {
+        "<=1e-12": 23,
+        "<=1e-9": 0,
+        "<=1e-6": 0,
+        ">1e-6": 1
+      },
+      "float_diff_over_1e-6": [
+        {
+          "at": "section9_exhaustive.cases[6].corr_gap_outside_leak",
+          "macos": 0.45309766061850404,
+          "linux": 0.3700138366447839,
+          "abs_diff": 0.08308382397372016
+        }
+      ],
+      "byte_identical": false
+    },
+    "issue7_cross_model_results.json": {
+      "leaves": 116,
+      "exact": 80,
+      "float_diff": 36,
+      "max_abs_diff": 0.041079598646590054,
+      "max_abs_diff_at": "tfim.cases[4].corr_gap_leak_max",
+      "nonfloat_mismatch": [],
+      "shape_mismatch": [],
+      "float_diff_buckets": {
+        "<=1e-12": 29,
+        "<=1e-9": 4,
+        "<=1e-6": 0,
+        ">1e-6": 3
+      },
+      "float_diff_over_1e-6": [
+        {
+          "at": "tfim.cases[2].corr_gap_leak_mean",
+          "macos": 0.4941230679476619,
+          "linux": 0.5172156183852262,
+          "abs_diff": 0.023092550437564308
+        },
+        {
+          "at": "tfim.cases[4].corr_gap_leak_max",
+          "macos": 0.7473750246762589,
+          "linux": 0.788454623322849,
+          "abs_diff": 0.041079598646590054
+        },
+        {
+          "at": "tfim.cases[4].corr_gap_leak_mean",
+          "macos": 0.8684063833108066,
+          "linux": 0.8755763933582926,
+          "abs_diff": 0.007170010047486075
+        }
+      ],
+      "byte_identical": false
+    },
+    "issue7_long_range_results.json": {
+      "leaves": 120,
+      "exact": 84,
+      "float_diff": 36,
+      "max_abs_diff": 0.046485412219046895,
+      "max_abs_diff_at": "sweeps.alpha_2.cases[2].corr_gap_leak_mean",
+      "nonfloat_mismatch": [],
+      "shape_mismatch": [],
+      "float_diff_buckets": {
+        "<=1e-12": 20,
+        "<=1e-9": 14,
+        "<=1e-6": 0,
+        ">1e-6": 2
+      },
+      "float_diff_over_1e-6": [
+        {
+          "at": "sweeps.alpha_2.cases[2].corr_gap_leak_max",
+          "macos": -0.6253030070155198,
+          "linux": -0.659306052698186,
+          "abs_diff": 0.03400304568266621
+        },
+        {
+          "at": "sweeps.alpha_2.cases[2].corr_gap_leak_mean",
+          "macos": -0.6459424692744328,
+          "linux": -0.6924278814934797,
+          "abs_diff": 0.046485412219046895
+        }
+      ],
+      "byte_identical": false
+    },
+    "issue7_section9_exact_results.json": {
+      "leaves": 63,
+      "exact": 63,
+      "float_diff": 0,
+      "max_abs_diff": 0.0,
+      "max_abs_diff_at": "",
+      "nonfloat_mismatch": [],
+      "shape_mismatch": [],
+      "float_diff_buckets": {
+        "<=1e-12": 0,
+        "<=1e-9": 0,
+        "<=1e-6": 0,
+        ">1e-6": 0
+      },
+      "float_diff_over_1e-6": [],
+      "byte_identical": true
+    },
+    "issue7_logs/section9_stdout.txt": {
+      "byte_identical": true,
+      "lines": {
+        "macos": 13,
+        "linux": 13
+      },
+      "differing_lines": []
+    },
+    "issue7_logs/mechanism_4over3_stdout.txt": {
+      "byte_identical": true,
+      "lines": {
+        "macos": 19,
+        "linux": 19
+      },
+      "differing_lines": []
+    },
+    "issue7_logs/exhaustive_stdout.txt": {
+      "byte_identical": false,
+      "lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "differing_lines": [
+        {
+          "line": 5,
+          "macos": "artifact: /Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_exhaustive_results.json",
+          "linux": "artifact: /tmp/claude-0/-home-user-AISO-UI-for-Ai/0a65ff12-c324-580c-9107-21ebe0faa7f4/scratchpad/actionable/issue7-out/issue7_exhaustive_results.json"
+        }
+      ]
+    },
+    "issue7_logs/cross_model_stdout.txt": {
+      "byte_identical": false,
+      "lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "differing_lines": [
+        {
+          "line": 5,
+          "macos": "artifact: /Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_cross_model_results.json",
+          "linux": "artifact: /tmp/claude-0/-home-user-AISO-UI-for-Ai/0a65ff12-c324-580c-9107-21ebe0faa7f4/scratchpad/actionable/issue7-out/issue7_cross_model_results.json"
+        }
+      ]
+    },
+    "issue7_logs/long_range_stdout.txt": {
+      "byte_identical": false,
+      "lines": {
+        "macos": 5,
+        "linux": 5
+      },
+      "differing_lines": [
+        {
+          "line": 5,
+          "macos": "artifact: /Users/coo-koba42/dev/rh_papers_may21/acs-framework/docs/issue7_long_range_results.json",
+          "linux": "artifact: /tmp/claude-0/-home-user-AISO-UI-for-Ai/0a65ff12-c324-580c-9107-21ebe0faa7f4/scratchpad/actionable/issue7-out/issue7_long_range_results.json"
+        }
+      ]
+    },
+    "issue7_logs/section9_exact_stdout.txt": {
+      "byte_identical": true,
+      "lines": {
+        "macos": 13,
+        "linux": 13
+      },
+      "differing_lines": []
+    }
+  },
+  "linux_report_text": {
+    "contains_/Users": false,
+    "count_/Users": 0,
+    "absolute_path_fields": [
+      "script",
+      "stdout_file"
+    ]
+  }
+}

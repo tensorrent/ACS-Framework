@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -39,9 +40,16 @@ from scipy.special import spherical_jn
 # Paths
 # ---------------------------------------------------------------------------
 
-REPO_DOCS = (
-    Path(__file__).resolve().parents[2] / "docs" / "palpha_overlap_results.json"
+# Where artifacts land. ACS_OUT_DIR redirects a run (and the sibling P_alpha
+# scripts, which import DOCS_DIR from here) to a scratch tree so nothing is
+# written into the tracked docs/; unset, it is docs/ as before.
+_OUT_OVERRIDE = os.environ.get("ACS_OUT_DIR", "").strip()
+DOCS_DIR = (
+    Path(_OUT_OVERRIDE).expanduser()
+    if _OUT_OVERRIDE
+    else Path(__file__).resolve().parents[2] / "docs"
 )
+REPO_DOCS = DOCS_DIR / "palpha_overlap_results.json"
 
 # ---------------------------------------------------------------------------
 # Table data (Flag_Condensate_Nuclear_Decay, 14 isotopes)

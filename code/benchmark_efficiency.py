@@ -44,6 +44,13 @@ REPORT_OUT = (
     if (_MONOREPO / "Aiso_build_artifacts").is_dir()
     else (_ACS_ROOT / "docs" / "EFFICIENCY_BENCHMARK_REPORT.md")
 )
+# ACS_OUT_DIR redirects both outputs to one scratch directory so a benchmark
+# run never writes into the tracked docs/ (the scripts it times inherit it
+# through the environment); unset, the paths above stand.
+_OUT_OVERRIDE = os.environ.get("ACS_OUT_DIR", "").strip()
+if _OUT_OVERRIDE:
+    DOCS_OUT = Path(_OUT_OVERRIDE).expanduser() / DOCS_OUT.name
+    REPORT_OUT = Path(_OUT_OVERRIDE).expanduser() / REPORT_OUT.name
 
 
 def _relpath(p: Path) -> str:

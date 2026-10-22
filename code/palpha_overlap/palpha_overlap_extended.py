@@ -18,7 +18,7 @@ from typing import Any
 import numpy as np
 
 from isotope_catalog import catalog_metadata, combined_isotopes, extended_isotopes
-from palpha_overlap import ISOTOPES
+from palpha_overlap import DOCS_DIR, ISOTOPES
 from palpha_overlap_refined import channel_A_from_model_rows
 from palpha_overlap_throat import (
     A_WS_DEFAULT_FM,
@@ -30,11 +30,7 @@ from palpha_overlap_throat import (
     summarize_model_rows,
 )
 
-REPO_DOCS = (
-    Path(__file__).resolve().parents[2]
-    / "docs"
-    / "palpha_overlap_extended_results.json"
-)
+REPO_DOCS = DOCS_DIR / "palpha_overlap_extended_results.json"
 
 
 def run_throat_ws_for_isotopes(

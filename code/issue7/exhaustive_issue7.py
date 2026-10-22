@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from pathlib import Path
 
 import numpy as np
@@ -32,6 +33,15 @@ from section9_toy_kill_test import (
     local_op,
     tfim_hamiltonian,
 )
+
+
+def artifact_dir() -> Path:
+    """Where artifacts land. ACS_OUT_DIR redirects a run to a scratch tree so
+    nothing is written into the tracked docs/; unset, it is docs/ as before."""
+    override = os.environ.get("ACS_OUT_DIR", "").strip()
+    if override:
+        return Path(override).expanduser()
+    return Path(__file__).resolve().parents[2] / "docs"
 
 
 def estimate_velocity_with_threshold(
@@ -207,9 +217,7 @@ def main() -> None:
     mech = run_4over3_exhaustive()
     result = {"section9_exhaustive": section9, "mechanism_4over3_exhaustive": mech}
 
-    out_path = (
-        Path(__file__).resolve().parents[2] / "docs" / "issue7_exhaustive_results.json"
-    )
+    out_path = artifact_dir() / "issue7_exhaustive_results.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(result, indent=2), encoding="utf-8")
 

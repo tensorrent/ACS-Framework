@@ -35,13 +35,10 @@ Run:  python3 code/framed_unknot/moment_ratio.py
 """
 
 import json
-import pathlib
 
 import numpy as np
 
-from framing_transformer import mobius_screw
-
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+from framing_transformer import DOCS, artifact_label, mobius_screw
 
 
 def vector_area(gamma, dgamma, dphi):
@@ -127,9 +124,9 @@ def main():
         "vector_areas": rows,
         "winding_ratio_screw_over_single_loop": rows[0]["Az"] / single,
     }
-    out = ROOT / "docs" / "framed_unknot_moment_ratio.json"
+    out = DOCS / "framed_unknot_moment_ratio.json"
     out.write_text(json.dumps(payload, indent=2) + "\n")
-    print(f"\nartifact written: {out.relative_to(ROOT)}")
+    print(f"\nartifact written: {artifact_label(out)}")
 
 
 if __name__ == "__main__":

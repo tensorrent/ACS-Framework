@@ -45,13 +45,10 @@ Run:  python3 code/framed_unknot/one_object.py
 """
 
 import json
-import pathlib
 
 import numpy as np
 
-from framing_transformer import mobius_screw, torus_framing, _Rz, _Ry
-
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+from framing_transformer import DOCS, artifact_label, mobius_screw, torus_framing, _Rz, _Ry
 
 
 # --------------------------------------------------------------------------
@@ -237,9 +234,9 @@ def main():
                    "the (1/2,1/2) rep -- the representation-theoretic home of "
                    "spin-1/2, and not the linking number.",
     }
-    out = ROOT / "docs" / "framed_unknot_one_object.json"
+    out = DOCS / "framed_unknot_one_object.json"
     out.write_text(json.dumps(payload, indent=2) + "\n")
-    print(f"\nartifact written: {out.relative_to(ROOT)}")
+    print(f"\nartifact written: {artifact_label(out)}")
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -23,7 +24,13 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
-LOGS = DOCS / "issue7_logs"
+# Where this run's artifacts land. ACS_OUT_DIR redirects the whole pipeline
+# (the kill scripts inherit it through the environment) to a scratch tree so
+# a replication never overwrites the committed anchors; unset, it is docs/ as
+# before. The take-up documents the doc-hash check reads stay under DOCS.
+_OUT_OVERRIDE = os.environ.get("ACS_OUT_DIR", "").strip()
+OUT = Path(_OUT_OVERRIDE).expanduser() if _OUT_OVERRIDE else DOCS
+LOGS = OUT / "issue7_logs"
 
 
 @dataclass
@@ -67,6 +74,11 @@ RUN_SPECS = [
 ]
 
 
+def out_path(docs_rel: str) -> Path:
+    """Map a docs/-relative artifact path onto this run's output tree."""
+    return OUT / Path(docs_rel).relative_to("docs")
+
+
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -80,7 +92,7 @@ def sha256_file(path: Path) -> str:
 
 def run_one(spec: RunSpec) -> dict[str, Any]:
     script = ROOT / spec.script_rel
-    out = ROOT / spec.stdout_rel
+    out = out_path(spec.stdout_rel)
     out.parent.mkdir(parents=True, exist_ok=True)
     proc = subprocess.run(
         [sys.executable, str(script)],
@@ -180,10 +192,10 @@ def main() -> None:
     results = [run_one(spec) for spec in RUN_SPECS]
     run_failures = [r for r in results if r["exit_code"] != 0]
 
-    exhaustive_json = DOCS / "issue7_exhaustive_results.json"
-    cross_json = DOCS / "issue7_cross_model_results.json"
-    long_range_json = DOCS / "issue7_long_range_results.json"
-    exact_json = DOCS / "issue7_section9_exact_results.json"
+    exhaustive_json = OUT / "issue7_exhaustive_results.json"
+    cross_json = OUT / "issue7_cross_model_results.json"
+    long_range_json = OUT / "issue7_long_range_results.json"
+    exact_json = OUT / "issue7_section9_exact_results.json"
     ex_data = load_json(exhaustive_json)
     cross_data = load_json(cross_json)
     long_range_data = load_json(long_range_json)
@@ -240,7 +252,7 @@ def main() -> None:
         ],
     }
 
-    out_report = DOCS / "issue7_verification_report.json"
+    out_report = OUT / "issue7_verification_report.json"
     out_report.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     print("Issue #7 verification pipeline complete")

@@ -31,6 +31,16 @@ from fractions import Fraction
 from itertools import product
 from pathlib import Path
 import json
+import os
+
+
+def artifact_dir() -> Path:
+    """Where artifacts land. ACS_OUT_DIR redirects a run to a scratch tree so
+    nothing is written into the tracked docs/; unset, it is docs/ as before."""
+    override = os.environ.get("ACS_OUT_DIR", "").strip()
+    if override:
+        return Path(override).expanduser()
+    return Path(__file__).resolve().parents[2] / "docs"
 
 
 def spins_from_bits(bits: tuple[int, ...]) -> tuple[int, ...]:
@@ -192,9 +202,8 @@ def run_sweep(n: int = 8, j: int = 1, b: int = 2) -> dict:
 
 def main() -> None:
     result = run_sweep()
-    out = (
-        Path(__file__).resolve().parents[2] / "docs" / "issue7_section9_exact_results.json"
-    )
+    out = artifact_dir() / "issue7_section9_exact_results.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2), encoding="utf-8")
 
     s = result["summary"]

@@ -56,6 +56,7 @@ from scipy.special import spherical_jn
 
 # Reuse isotope table from the flat-proxy module (do not duplicate silently).
 from palpha_overlap import (  # type: ignore
+    DOCS_DIR,
     ISOTOPES,
     IsotopeRow,
     R0_DEFAULT_FM,
@@ -70,9 +71,7 @@ from palpha_overlap import (  # type: ignore
 # Paths / defaults
 # ---------------------------------------------------------------------------
 
-REPO_DOCS = (
-    Path(__file__).resolve().parents[2] / "docs" / "palpha_overlap_throat_results.json"
-)
+REPO_DOCS = DOCS_DIR / "palpha_overlap_throat_results.json"
 
 N_GRID = 4096
 A_WS_DEFAULT_FM = 0.55

@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -671,7 +672,15 @@ def main() -> int:
             print(f"ERROR: non-positive C for {name}: {val}", file=sys.stderr)
             return 1
 
-    out_path = Path(__file__).resolve().parents[2] / "docs" / "capacitance_ribbon_results.json"
+    # ACS_OUT_DIR redirects the artifact to a scratch tree so nothing is written
+    # into the tracked docs/; unset, it is docs/ as before.
+    out_override = os.environ.get("ACS_OUT_DIR", "").strip()
+    out_dir = (
+        Path(out_override).expanduser()
+        if out_override
+        else Path(__file__).resolve().parents[2] / "docs"
+    )
+    out_path = out_dir / "capacitance_ribbon_results.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("w", encoding="utf-8") as fh:
         json.dump(summary, fh, indent=2, allow_nan=False)

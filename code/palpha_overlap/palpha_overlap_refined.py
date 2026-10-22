@@ -53,6 +53,7 @@ from scipy.optimize import brentq
 
 # Local imports (same package directory).
 from palpha_overlap import (  # type: ignore
+    DOCS_DIR,
     ISOTOPES,
     IsotopeRow,
     R0_DEFAULT_FM,
@@ -80,9 +81,7 @@ from acs_memo import fmt_float, get_npz_solve, put_npz_solve  # noqa: E402
 # Paths / constants
 # ---------------------------------------------------------------------------
 
-REPO_DOCS = (
-    Path(__file__).resolve().parents[2] / "docs" / "palpha_overlap_refined_results.json"
-)
+REPO_DOCS = DOCS_DIR / "palpha_overlap_refined_results.json"
 
 HBARC_MEV_FM = 197.3269718
 E2_MEV_FM = 1.439964547  # e^2 / (4 pi epsilon_0) in MeV fm

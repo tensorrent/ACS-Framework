@@ -222,7 +222,7 @@ document and audit → fix what's dangerous → fix everything else.
 2026-07-30. A ~217k-line crypto eprint (Transcript Equivalence Theorem, AKPP nullity proof,
 blinded-evaluation handle protocol) that deletes files `main` still uses. Left alone pending an
 owner decision. **Do not merge or cherry-pick from it without asking.** Ref deleted
-22 October 2026: it carried koba42 intellectual property (see §8).
+22 October 2026: it carried third-party material not licensed for this repository (see §8).
 
 ---
 
@@ -367,8 +367,10 @@ charge comparison invalid).
   (`codex/acs-frontier-delta-2026-09-12`, 27 ahead). See `docs/BRANCHES.md`.
 - **Nine merged research branch refs were deleted on 2026-09-24** in the branch audit; the
   "never deleted" line in §7 no longer holds. The receipt is `docs/branch-audit/2026-09-24.json`.
-- **The FHE branch ref was deleted on 2026-10-22** because it carried koba42 intellectual
-  property. The objects may still be reachable by SHA until a hosted sensitive-data removal is
+- **The FHE branch ref was deleted on 2026-10-22** because it carried material from third-party
+  sources whose intellectual property is not licensed for this repository. The owner's own FHE
+  results are not covered by that reason; the third-party items cannot appear in any paper here.
+  The objects may still be reachable by SHA until a hosted sensitive-data removal is
   made; that is an owner action, not a repository edit. Nothing from it was merged or read into
   later work.
 - **The publication integrity gate is red on main** since `389afe2` (2026-09-29): eight manifest

@@ -1,5 +1,19 @@
 # Governance — Tiers, the Claim Ledger, the Kills, and the License
 
+> **Note (2026-10-22).** The "canonical sources of truth" rule stated below
+> (`MANIFEST.md` + `docs/Elimination_Ledger.md`; restated in §10 as "MANIFEST +
+> Elimination_Ledger remain canonical") predates the 24 September 2026 publication
+> update and is superseded for claim status. The rule that now governs, as
+> `MANIFEST.md` itself states in its first note: the
+> [dated publication record](../../../../docs/publication/2026-09-24/README.md)
+> and each paper's dated amendment (`\section*{Amendment: scope and evidence,
+> 24 September 2026}`, texts in `docs/publication/2026-09-24/amendments.json`)
+> govern earlier physical interpretations, and
+> `docs/publication/2026-09-24/publication-manifest.json` binds the reviewed
+> paper/PDF and evidence files. `MANIFEST.md` and the Elimination Ledger remain the
+> tier and kill ledgers; where either disagrees with a dated amendment on a claim's
+> physical interpretation, the amendment governs. The text below is left as written.
+
 Sources: `MANIFEST.md`, `docs/Elimination_Ledger.md`, `docs/ACS_FRAMEWORK_SKILL.md`,
 `docs/ACS_Technical_Whitepaper.md`, `docs/ACS_Corpus_Map.md`, `docs/Editorial_Audit_2026-08-07.md`,
 `LICENSE`, `CITATION.cff`.

@@ -2,6 +2,15 @@
 
 # Finite-Model Kill Tests for a Gap--Cone Dependency Chain and the 4/3 Coincidence
 
+> **Publication status (24 September 2026).** The LaTeX source of this document,
+> `papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex`, carries this front notice: "This version includes a
+> claim-specific amendment at the end of the main text. That amendment governs
+> earlier physical interpretations and distinguishes retained calculations from
+> withdrawn or unresolved inferences." This Markdown mirror does not carry that
+> amendment; read it in the `.tex` source or its PDF, and see the
+> [24 September 2026 publication record](../../docs/publication/2026-09-24/README.md)
+> for the per-paper amendment text (`amendments.json`) and the bound manifest.
+
 **TR-2026-FF06-I7** · ACS Framework Issue `#7` companion · 2026-07-22
 
 ## Authors and provenance

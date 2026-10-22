@@ -15,7 +15,11 @@ the positions, not the spacings. Reconstructing P from that pair correlation rec
 sit at prime-power frequencies with heights ~ (Lambda(n)/sqrt n)^2 (the explicit formula).
 
 Data: code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt (shipped in this repo).
-Canonical seed 20260423. prime_peak_power reused verbatim from the shuffle-knife suite.
+Canonical seed 20260423. prime_peak_power is defined below, not imported: it is the
+complex-exponential power form of the shuffle-knife prime-resonance witness over p <= 13
+(the functional the paper's Method section labels eq:power); the shuffle-knife suite itself
+(FF06e) states the witness in cosine form, sum_{p<=29} <cos(gamma log p)>^2, and no
+shuffle-knife code is reused.
 No external deps beyond numpy. Run from anywhere inside the repo:  python3 scripts/prime_carrier_reproduce.py
 """
 import os

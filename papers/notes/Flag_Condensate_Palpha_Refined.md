@@ -2,6 +2,15 @@
 
 # Refined \(P_\alpha\) Overlap: Parametric Spectroscopic Factor and Self-Consistent WS+Coulomb Eigenmode
 
+> **Publication status (24 September 2026).** The LaTeX source of this document,
+> `papers/notes/Flag_Condensate_Palpha_Refined.tex`, carries this front notice: "This version includes a
+> claim-specific amendment at the end of the main text. That amendment governs
+> earlier physical interpretations and distinguishes retained calculations from
+> withdrawn or unresolved inferences." This Markdown mirror does not carry that
+> amendment; read it in the `.tex` source or its PDF, and see the
+> [24 September 2026 publication record](../../docs/publication/2026-09-24/README.md)
+> for the per-paper amendment text (`amendments.json`) and the bound manifest.
+
 **ACS Theoretical Physics Working Group**  
 Sovereign-Stack ACS Research Program & Flag Condensate Project  
 Date: July 23, 2026

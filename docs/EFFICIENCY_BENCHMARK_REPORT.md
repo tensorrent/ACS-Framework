@@ -78,6 +78,6 @@ Memo blobs live under `.cache/bie_capacitance/` and `.cache/palpha_eigen/` (giti
 | `code/acs_memo.py` | Disk + memory memo |
 | `code/benchmark_efficiency.py` | Unified runner |
 | `docs/efficiency_benchmark_results.json` | JSON |
-| `Aiso_build_artifacts/density_engine_many_worlds/EFFICIENCY_BENCHMARK_REPORT.md` | This report |
+| `Aiso_build_artifacts/density_engine_many_worlds/EFFICIENCY_BENCHMARK_REPORT.md` | This report in the private AISO build tree (external repository, not committed here); the public copy is `docs/EFFICIENCY_BENCHMARK_REPORT.md` |
 
 **Re-run:** `python3 code/benchmark_efficiency.py`

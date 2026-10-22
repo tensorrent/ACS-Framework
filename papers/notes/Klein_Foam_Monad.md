@@ -2,6 +2,15 @@
 
 # The Klein-Foam Monad: A Geometric Postulation of Reality
 
+> **Publication status (24 September 2026).** The LaTeX source of this document,
+> `papers/notes/Klein_Foam_Monad.tex`, carries this front notice: "This version includes a
+> claim-specific amendment at the end of the main text. That amendment governs
+> earlier physical interpretations and distinguishes retained calculations from
+> withdrawn or unresolved inferences." This Markdown mirror does not carry that
+> amendment; read it in the `.tex` source or its PDF, and see the
+> [24 September 2026 publication record](../../docs/publication/2026-09-24/README.md)
+> for the per-paper amendment text (`amendments.json`) and the bound manifest.
+
 **TR-2026-FF06-KFM** · Brad Wallace · Flag Condensate Collaboration · July 22, 2026  
 TeX: `papers/notes/Klein_Foam_Monad.tex`
 

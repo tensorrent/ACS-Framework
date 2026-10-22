@@ -29,6 +29,9 @@ from typing import Any, Callable
 
 CODE_ROOT = Path(__file__).resolve().parent
 # ACS-Framework public: code/ sits under repo root. Monorepo checkout may be deeper.
+# `Aiso_build_artifacts/` is external to this repository: it lives in the private AISO
+# build tree and is not committed here, so in a public checkout the monorepo branches
+# below never fire and DAW_DIR does not exist.
 _ACS_ROOT = CODE_ROOT.parent
 _MONOREPO = CODE_ROOT.parents[2] if (CODE_ROOT.parents[2] / "Aiso_build_artifacts").is_dir() else _ACS_ROOT
 REPO_ROOT = _MONOREPO
@@ -893,7 +896,8 @@ def write_efficiency_report(result: dict[str, Any]) -> None:
             "| `code/benchmark_efficiency.py` | Unified runner |",
             "| `docs/efficiency_benchmark_results.json` | JSON |",
             "| `Aiso_build_artifacts/density_engine_many_worlds/EFFICIENCY_BENCHMARK_REPORT.md` | "
-            "This report |",
+            "This report in the private AISO build tree (external repository, not committed "
+            "here); the public copy is `docs/EFFICIENCY_BENCHMARK_REPORT.md` |",
             "",
             "**Re-run:** `python3 code/benchmark_efficiency.py`",
             "",

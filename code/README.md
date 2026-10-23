@@ -14,7 +14,7 @@ These are the portable publication entry points. They do not rerun every archive
 
 ## Research instruments
 
-- [condensate_energy/](condensate_energy/): the preserved action-to-carrier investigation. Start from the [evidence index](../docs/CONDENSATE_EVIDENCE.md) and [endpoint audit](../docs/condensate_energy/endpoint_audit/README.md) to identify the appropriate model, source snapshot, and receipt. Some archive-recovery scripts require the original local drive.
+- [condensate_energy/](condensate_energy/): the preserved action-to-carrier investigation. Start from the [evidence index](../docs/CONDENSATE_EVIDENCE.md) and [endpoint audit](../docs/condensate_energy/endpoint_audit/README.md) to identify the appropriate model, source snapshot, and receipt. Some archive-recovery scripts require the original local drive. Which scripts, what each reads, and what is committed in its place: [records that depend on the authoring machine](../docs/REPRODUCTION.md#records-that-depend-on-the-authoring-machine) (23 October 2026).
 - [frontier_verification/](frontier_verification/README.md): pinned Python and Lean checks for the frontier deltas published on `main`.
 - [hp_knife_suite/](hp_knife_suite/): prime/zero position, spacing, phase, and shuffle experiments. [Data and optional commands](../docs/REPRODUCTION.md#optional-research-suites).
   [reconstructed/](hp_knife_suite/reconstructed/README.md) holds three Elimination-Ledger kill tests (Q3 scaling, Q5 Hilbert–Pólya class, Q7 neutrino), labelled RECONSTRUCTED: re-authored on 2026-10-22 from the ledger's description, not the uncommitted originals. The guide reports agreement cell by cell and what the owner must supply for the other five.

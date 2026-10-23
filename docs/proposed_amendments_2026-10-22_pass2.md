@@ -381,3 +381,363 @@ does not supply the static, positive quantity a $c$-function reading would requi
 ## What this block leaves out
 
 No text for Link 3, the cross-correlation lemma or the Kernel Law: there is no result to state. Nothing for `AxiomIII.lean`: it is not manifest-bound, and whether to touch it is the decision brief in Card M6(5).
+
+# Proposed amendments — 23 October 2026, pass 2 (FF06e, the ladder row, the seam-note copy, and an application map)
+
+Paste-ready proposals for manifest-bound files, and one map. Nothing here has been applied:
+every target below is a `papers/**/*.tex` listed in
+`docs/publication/2026-09-24/publication-manifest.json` (`grep -c` = 2 for each of
+`papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex`,
+`papers/notes/Density_Engine_Many_Worlds.tex`, `papers/notes/Critical_Line_As_Fibered_Object.tex`,
+`papers/notes/Mobius_Screw_Electron.tex`), so applying any of them is the owner's to clear through
+the integrity gate. Line numbers are at commit `6d1647a` (none of the cited papers changed since
+`6ece905`, where the block was drafted). Written by agent session `proposals-pass2`.
+The AISO paths below are in the public repository `tensorrent/AISO-UI-for-Ai`.
+
+## 1. FF06e: the form-witness band, and Definition 2 as amended
+
+**Target.** `papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex` (manifest `grep -c` = 2).
+
+**What it reconciles.** Three statements in the paper cannot all be read as written.
+
+- `:72` (Definition 2): "$W$ is \textbf{form} if $z(W)$ is small ($\lesssim3$)". No power or
+  resolution condition.
+- `:45` (abstract): "spacing, counting, and Wigner-shape are FORM ($0.4$--$1.0\sigma$ from the
+  surrogate null --- residuals of the re-interpolation step; zero by construction on bare permuted
+  spacings, see the surrogate-construction remark)"; `:88-90` table rows at $1.0$, $1.0$, $0.4$;
+  `:95` "Three witnesses sit within one standard deviation of the surrogate"; `:123` "$0.4\sigma$
+  against $11{,}497\sigma$".
+- `:97-98` (Remark, corrected 2026-07-02): "The $0.4$--$1.0\sigma$ deviations for the form-witnesses
+  are purely artifacts of this re-interpolation path; on bare permuted spacings without grid
+  re-interpolation, the form-witness standard deviation is exactly zero by construction
+  (symmetric-multiset invariants)."
+- `:144` (24 September amendment): "a null result must retain power and resolution limits" —
+  which Definition 2 does not encode.
+
+The supporting paper `docs/surrogate_discriminant_amendments.tex` records the conflict
+(`:179-180` "Both cannot be read at once, and the reported figure invites being read as a small
+real effect, which the remark denies.") and the gap (`:220-222` "FF06e's amendment of 24 September
+2026 asks for exactly this condition ... but Definition 2 does not encode it, so a reader following
+the definition cannot apply the amendment."). Its §`sec:artifact` (`:385-405`; AISO
+`docs/research/ACS_PAPER_AMENDMENTS_2026-10-21.md` §3.5, `:283-297`;
+`docs/research/SHUFFLE_KNIFE_REPAIRED.md` §5, `:206-221`) localises the band: on 2003 zeros, the
+analytic route (bisecting the smooth counting function) gives surrogate σ of $6.2\times10^{-16}$,
+$4.4\times10^{-15}$ and exactly $0$ for spacing mean deviation, spacing variance and Wigner-shape
+$L^2$; piecewise-linear interpolation between samples gives $1.9\times10^{-16}$,
+$1.03\times10^{-5}$, $3.51\times10^{-4}$ (`:397-398`). "The artifact requires interpolation
+between knots, not the round trip" (`:403`).
+
+**A second implementation, at the paper's own scale (cheap check, run 23 October).** Python,
+the corpus's Odlyzko file `code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt`, the corpus's
+own `W_shape` and `np.interp` refold (`code/hp_knife_suite/hp_form_function_relativity.py:54-55,
+66-71`), $N=10^5$, $K=60$, seed $20260423$, three routes back from permuted unfolded positions:
+bare (stay in unfolded coordinates), analytic (Newton inversion of the smooth counting function)
+and linear interpolation on the zero knots. The script is reproduced below; it reads the data file
+and writes nothing.
+
+| witness ($N=10^5$, seed 20260423) | bare σ | analytic σ | linear-interp σ | bare z | linear-interp z |
+|---|---|---|---|---|---|
+| spacing mean deviation | 6.304e-15 | 6.334e-15 | 3.944e-15 | 0.166 | 0.794 |
+| spacing variance | 5.418e-15 | 2.779e-14 | **3.059e-07** | 0.323 | 0.498 |
+| Wigner-shape $L^2$ | 6.997e-18 | 6.997e-18 | **2.890e-06** | 0.992 | 0.119 |
+| lag-1 (control) | 3.480e-03 | 3.480e-03 | 3.480e-03 | 103 | 103 |
+
+Seeds 1 and 2 at $N=10^5$: linear-interp σ for spacing variance 3.692e-07 and 3.600e-07, for
+Wigner-shape 2.724e-06 and 3.440e-06; bare/analytic σ for those two witnesses at most 2.485e-14;
+bare-route Wigner-shape z = 0.992 at all three seeds (every surrogate value is bit-identical to the
+real one, `max|W_i − W_real| = 0`; the non-zero σ is the rounding of the mean of 60 equal numbers).
+At $N=2\times10^4$ the bare and analytic Wigner-shape σ are exactly 0 and z is `nan`.
+
+What this adds to the supporting paper, and what it does not:
+
+1. The localisation reproduces with a different language, data source and $N$ (50× more zeros):
+   linear interpolation inflates σ for the variance and shape witnesses from the floating-point
+   floor to $10^{-7}$–$10^{-6}$; the analytic route does not.
+2. The Remark's "purely artifacts of this re-interpolation path" does not hold for the spacing mean
+   deviation: interpolation leaves its σ at the floor (3.9e-15 against 6.3e-15 bare), because the
+   mean of the spacings telescopes to the endpoints and the endpoints are knots. Its tabulated
+   $1.0\sigma$ is summation order, which is the supporting paper's Proposition `prop:degenerate`
+   (`:166-180`) and its lattice measurement (`:190-196`, $z=1.4$ with no interpolation present).
+3. The computed z is not a measurement on any route: bare permuted spacings, with no interpolation,
+   return z between 0.17 and 0.99 for these three witnesses (seed 20260423) — inside FF06e's band.
+4. Not reproduced: FF06e's own figures (1.0, 1.0, 0.4). FF06e's original suite is not in this
+   repository (`docs/Cross_Repo_Glossary_Extract.md:239` names `Math-grav-shared/scripts/knife_2x2.py`).
+   Since `4f3f28d` the repository has a rerun driver, `code/hp_knife_suite/ff06e_headline.py`, whose
+   spacing-mean and counting witnesses are labelled RECONSTRUCTED. Run here
+   (`python -I code/hp_knife_suite/ff06e_headline.py --n 100000 --surrogates 60 --seed 20260423`,
+   2.21 s, stdout only, `git status` clean afterwards): shape σ 2.866e-06, z 0.1; spacing_mean σ
+   3.911e-15 and counting σ 3.922e-15, both printed as "float floor" with z 0.8. Its shape and
+   spacing-mean σ differ from the linear-interp column above (2.890e-06, 3.944e-15) by 0.8% each.
+   That driver is a separate implementation of the same pipeline, so it is a reproduction, not a
+   distinct method. The `W_shape` used by both gives 0.025709 against the table's 0.0258 (`:90`).
+   The paper defines no counting witness (`grep -n counting` hits `:45, :89, :95, :131` only); the
+   driver's endpoint reading gives 5.9491e-06 where the table prints `1\times10^{-5}` (`:89`), so it
+   may not be the paper's quantity, and the block below does not classify it. The AISO note
+   `ACS_PAPER_AMENDMENTS_2026-10-21.md:277-281` makes the same reservation.
+5. One implementation per route here as well; the qualitative finding (floor against $10^{-7}$–$10^{-6}$)
+   is what is claimed, not the particular figures.
+
+**Relation to the 21 October paste-ready block.** AISO `ACS_PAPER_AMENDMENTS_2026-10-21.md` §3.7
+(`:315-348`) is a three-part Definition 2 amendment written before §3.5's localisation was folded in.
+The block below is meant to **replace** it (apply one, not both). It differs in four places: it
+localises the σ inflation to piecewise-linear interpolation and calls it removable (§3.5); it
+quotes the lattice figure as the supporting paper does (`:190-191`: $z=1.4$ and $0.0$), where §3.7
+says "$1.0$--$1.4$" (`:327`); it does not classify the counting witness, whose definition is not
+recorded; and it states the amended definition whole, so that a reader can apply it.
+
+**Relation to the V2 proposal for the same file.** `docs/proposals/2026-10-22-V2-ff06e-headline.md`
+§3 proposes `\section*{Amendment: reproducing script for the headline table, 23 October 2026}`,
+which names the driver, withholds the spacing-mean and counting z, and reports the $K=60$ against
+$K=6000$ spread of the function z values. The two blocks do not overlap and agree where they touch
+(both withhold the endpoint witnesses' z). If both are applied, the V2 block goes first and this one
+after it; this block names the driver by path, so it reads correctly with or without the V2 block.
+
+**Placement.** A new `\section*` after the 24 September block, i.e. after `:152` ("historical
+experiment or a proof of RH."), before `\end{document}` (`:154`). Optionally, if the owner prefers
+a pointer at the definition itself, one line after `:73` (`\end{definition}`); it is a second edit
+to the same sealed file and changes nothing the end-of-text block does not.
+
+```latex
+\section*{Amendment: Definition 2 and the form-witness band, 23 October 2026}
+\textbf{What the form figures are.} The table of \S\ref{sec:meas} reports spacing mean
+deviation, counting deviation and Wigner shape at $1.0$, $1.0$ and $0.4\sigma$, and the remark of
+2 July 2026 states that on bare permuted spacings their surrogate standard deviation is zero by
+construction. The remark is right about the mathematics: a witness that depends on the spacings
+only through their multiset is unchanged by every permutation, its surrogate distribution is a
+point mass, and $z(W)=0/0$. The tabulated figures are therefore not measurements of those
+witnesses, and $1.0\sigma$ is not to be read as a small real effect. Two later measurements
+locate the figures. First, where the surrogate's standard deviation is inflated it is inflated
+by piecewise-linear interpolation between the zero ordinates on the way back from unfolded
+positions to heights, not by the round trip as such: on $2003$ zeros, interpolation gives
+$\sigma=1.03\times10^{-5}$ for the spacing variance and $3.51\times10^{-4}$ for Wigner shape,
+while inverting the smooth counting function analytically gives $4.4\times10^{-15}$ and exactly
+$0$. Second, the computed ratio is not a measurement on any route: for a multiset invariant it
+is a ratio of rounding residues, and on an unrelated lattice configuration with no interpolation
+step two such invariants return $z=1.4$ and $0.0$. The band is a removable artifact of the
+surrogate pipeline and of evaluating $0/0$ in floating point; it is not a caveat to be carried.
+(Measurements: \emph{What a Surrogate Cannot Tell You}, \path{docs/surrogate_discriminant_amendments.tex},
+\S5 for the lattice figures and \S10 for the two routes.) The counting witness is not defined in this
+paper; the reading of it in \path{code/hp_knife_suite/ff06e_headline.py} depends only on the window
+endpoints and is exactly invariant, but it returns $5.9\times10^{-6}$ where the table prints
+$1\times10^{-5}$, so its classification is left open.
+
+\textbf{Definition~\ref{def:ff}, as amended.} Let $K\ge2$ marginal-matched surrogates be drawn,
+with $\overline{W}$, $\sigma_W$ as before and a decision threshold $\tau\simeq3$. In order:
+(i) if every surrogate reproduces $W_{\mathrm{real}}$ to the floating-point floor, $W$ is
+\emph{exactly invariant} (form by construction) and no $z$ is quoted;
+(ii) if $\sigma_W$ is at the floor but $W_{\mathrm{real}}$ differs, $W$ is function with $z$
+unbounded;
+(iii) if $W$ takes values in $[a,b]$ and its reachable ceiling
+$C(W)=\max(b-\overline{W},\,\overline{W}-a)/\sigma_W$ is below $\tau$, no object can reach the
+threshold and the verdict is \emph{unresolved} (no power), not form --- the operative form of the
+24 September requirement that a null result retain its power and resolution limits;
+(iv) otherwise $W$ is function if $z(W)\ge\tau$ and form if $z(W)<\tau$.
+Every verdict is a statement about the pair (witness, object): the classifications of
+\S\ref{sec:meas} are statements about these witnesses on the first $10^5$ zeros, not standing
+properties of the statistics. Under the amended definition the arithmetic and lag-1 witnesses
+remain function; spacing mean deviation and Wigner shape are exactly invariant with $z$
+withheld; and the comparison drawn in \S\ref{sec:epistemology}, $0.4\sigma$ against
+$11{,}497\sigma$, reads as exactly invariant against $11{,}497\sigma$. No conclusion of the paper
+changes; one of its figures is withdrawn.
+```
+
+Optional pointer after `:73`:
+
+```latex
+\noindent\emph{Amended 23 October 2026: Definition~\ref{def:ff} is restated in full in the
+amendment at the end of the main text; apply that form.}
+```
+
+<details><summary>The check script (pinned interpreter; reads one data file, writes nothing)</summary>
+
+```python
+import sys, numpy as np
+path = sys.argv[1]; N = int(sys.argv[2]); K = int(sys.argv[3]); SEED = int(sys.argv[4]) if len(sys.argv) > 4 else 20260423
+g = np.loadtxt(path)[:N]
+def Nsmooth(T): return (T/(2*np.pi))*np.log(T/(2*np.pi)) - T/(2*np.pi) + 7/8
+def Ninv(u, T0):
+    T = T0.copy()
+    for _ in range(8):
+        T = T - (Nsmooth(T) - u) / (np.log(T/(2*np.pi))/(2*np.pi))
+    return T
+w0 = Nsmooth(g); s0 = np.diff(w0)
+def W_meandev(s): return s.mean() - 1.0
+def W_var(s): return s.var()
+def W_shape(s):  # verbatim from code/hp_knife_suite/hp_form_function_relativity.py
+    s = s / s.mean()
+    edges = np.linspace(0, 4, 41); ctr = 0.5*(edges[:-1]+edges[1:])
+    h, _ = np.histogram(s, bins=edges, density=True)
+    wig = (32/np.pi**2) * ctr**2 * np.exp(-4*ctr**2/np.pi)
+    return np.sqrt(np.mean((h - wig)**2))
+def W_lag1(s):
+    s = s - s.mean(); return np.sum(s[:-1]*s[1:]) / np.sum(s*s)
+WS = [("spacing mean dev", W_meandev), ("spacing variance", W_var), ("Wigner-shape L2", W_shape), ("lag-1 (control)", W_lag1)]
+rng = np.random.default_rng(SEED)
+real = {n: f(np.diff(Nsmooth(g))) for n, f in WS}
+acc = {r: {n: [] for n, _ in WS} for r in ("bare", "analytic", "linear-interp")}
+for k in range(K):
+    sp = rng.permutation(s0)
+    ws = np.concatenate([[w0[0]], w0[0] + np.cumsum(sp)])
+    routes = {"bare": ws,
+              "linear-interp": Nsmooth(np.interp(ws, w0, g)),
+              "analytic": Nsmooth(Ninv(ws, np.interp(ws, w0, g)))}
+    for r, w in routes.items():
+        s = np.diff(w)
+        for n, f in WS: acc[r][n].append(f(s))
+for n, _ in WS:
+    print(f"{n:18s} W_real={real[n]: .6e}")
+    for r in ("bare", "analytic", "linear-interp"):
+        a = np.array(acc[r][n]); m, sd = a.mean(), a.std(ddof=1)
+        z = abs(real[n]-m)/sd if sd > 0 else float('nan')
+        print(f"   {r:14s} mean={m: .6e} sigma={sd:.3e} max|Wi-Wreal|={np.max(np.abs(a-real[n])):.3e} z={z:.3g}")
+```
+
+Run as `python -I ff06e_band_routes.py code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt 100000 60 [seed]`
+(2.7 s wall at $N=10^5$, $K=60$).
+
+</details>
+
+## 2. Density Engine note: the micro rung of the scale ladder
+
+**Target.** `papers/notes/Density_Engine_Many_Worlds.tex` (manifest `grep -c` = 2).
+
+**What it corrects.** `:176` caption "Self-similar phase-defect ladder (interpretive; numerics
+scoped per row)"; `:183` the row `Micro & Framed unknot electron; $Sl=2$ & \cite{Mobius2026} \\`;
+`:190-192` "At each rung: confined standing wave $\to$ phase slip at defect $\to$ Bogoliubov mode
+mixing $\to$ observable ( $g$-factor proxy, half-life, Hawking temperature)." The cited note no
+longer supports a $g$ reading at that rung:
+
+- `papers/notes/Mobius_Screw_Electron.tex:45-46` (abstract): "The earlier identification of this
+  magnitude with $g=2$ is withdrawn: parity does not determine a magnetic moment."
+- `:185` `\begin{remark}[Superseded: the identification~\eqref{eq:g2} is falsified (T4)]`, and
+  `:199-203`: the double cover "comes from the odd meridian winding $q = 1$ ... not from the
+  product $pq$."
+- `:321` claim table: `$g\leftrightarrow 2$ & \textbf{falsified (T4)}`.
+- `:339` (24 September amendment): "the inference from self-linking to $g=2$ is withdrawn. ... For
+  uniform charge-to-mass ratio on the same classical closed curve, the conventional ratio is $g=1$."
+- `papers/notes/Framing_Transformer_Spin_Parity.tex:278` corollary "The identification $Sl=2
+  \leftrightarrow g=2$ loses its support"; `docs/Elimination_Ledger.md:551` "Möbius-screw: *Sl = 2*
+  as the geometric origin of *g = 2* — **KILLED**", `:622` "**FALSIFIED (T4)**".
+
+The Density Engine note's own 24 September amendment (`:423-432`) does not mention the ladder.
+What survives at the micro rung is a topological reading ($|Sl|=2$, spinorial), not an observable.
+
+**Placement.** (A) The amendment section after `:432` ("historical experiment or a proof of RH."),
+before `\begin{thebibliography}{99}` (`:434`). (B) Only if the owner also edits the body: replace
+`:183` and the parenthesis at `:191` as shown. (A) alone is sufficient.
+
+```latex
+\section*{Amendment: the micro rung of the scale ladder, 23 October 2026}
+Table~\ref{tab:ladder} lists the micro rung as ``Framed unknot electron; $Sl=2$'', and the text
+beneath it names a ``$g$-factor proxy'' as that rung's observable. The cited note
+\cite{Mobius2026} has since withdrawn the identification of the self-linking magnitude with
+$g=2$ --- parity does not determine a magnetic moment --- and records $g\leftrightarrow2$ as
+falsified (T4). What survives at the micro rung is the framed-curve geometry: $|Sl|=pq=2$ and a
+spinorial lift whose double cover comes from the odd meridian winding $q=1$. That is a
+topological reading, not an observable. The row is accordingly to be read as ``Framed unknot;
+$|Sl|=2$, spinorial; $g$ reading withdrawn (T4)'', and the micro entry is removed from the list
+of observables, so that the ladder carries an observable at the meso and macro rungs only. The
+pattern statement of the subsection is unchanged; it is now illustrated by two rungs with an
+observable and one with a geometry.
+```
+
+(B), in-place:
+
+```latex
+Micro & Framed unknot; $|Sl|=2$, spinorial ($g$ reading withdrawn, T4) & \cite{Mobius2026} \\
+```
+
+```latex
+Bogoliubov mode mixing $\to$ observable (half-life, Hawking temperature; none at the micro rung,
+whose $g$ reading is withdrawn). \textbf{Self-similarity} means structural recurrence of
+```
+
+(The second replaces lines `:191-192` whole; `:193` continues unchanged with "this
+\emph{pattern}, ...".)
+
+**Build check.** Each block of §§1–3 was inserted at the stated line into a scratch copy of its
+target (outside the worktree; (A) and (B) together for §2, the optional pointer included for §1)
+and built with Tectonic: exit 0 for all three, no undefined references; the only warnings are the
+hyperref `@table.N already defined` ones that the unmodified Density Engine note also emits.
+
+## 3. Fibered-object note: the recalled reversibility criterion, both copies
+
+**Target.** `papers/notes/Critical_Line_As_Fibered_Object.tex` (manifest `grep -c` = 2). The parent
+paper's own "iff" (`papers/later_FF06_series/The_Reversible_Flattening.tex`) is handled by another
+agent and by `docs/proposed_amendments_2026-10-22.md` §7; this item is the copy only.
+
+**What it corrects.** The note recalls the short paper's biconditional twice:
+
+- `:46-48` (abstract): "\textit{The Reversible Flattening} fixes ``flattening'' to mean the
+  medium-driven compression of a \emph{relational} object to a \emph{scalar}, reversible exactly
+  when the compressing operation is a homomorphism".
+- `:92-95` (Definition, "recalled from \textit{The Reversible Flattening}"): "it is
+  \emph{reversible} iff the projecting operation is a homomorphism into the stored relational
+  structure."
+
+The standing form is the Monograph's (`papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex:54`):
+"\emph{injective} homomorphism into a \emph{pre-specified} structure ... a one-way implication whose
+converse is falsified by the Cantor pairing". The Process Record (`:292-295`) gives the witness:
+"$\pi(1,2)=8$, $\pi(2,0)=3$, $\pi(3,2)=17$, and $8+3=11\ne 17$". Re-checked here with
+$\pi(a,b)=\tfrac12(a+b)(a+b+1)+b$: 8, 3, 17, and the map is a bijection onto $\{0,\dots,14\}$ on
+the first five diagonals.
+
+**What this adds to the first pass.** `docs/proposed_amendments_2026-10-22.md` §8 (`:573-604`)
+amends `:92-96` only; the abstract's "reversible exactly when" (`:47`) is the same biconditional
+and is not covered. §8 also says the seam statement "is unchanged, since it concerns the forward
+direction only"; the seam is described as the "boundary of reversibility" (`:95`), which the
+biconditional supported, so the block below claims no more than the Monograph does, which retains
+the seam language alongside the one-way criterion (`:54-55`). The block replaces §8's (apply one).
+
+**Placement.** After the 24 September block, i.e. after `:333` ("historical experiment or a proof
+of RH."), before `\end{document}` (`:335`). It can sit beside the `docs/witness_perspective/`
+amendment (`docs/proposed_amendments_2026-10-22.md` §11, or this file's §2 of the Riemann block).
+
+```latex
+\section*{Amendment: the recalled reversibility criterion, 23 October 2026}
+The abstract and the definition ``Flattening and its seam'' recall \textit{The Reversible
+Flattening} in its original biconditional form (``reversible exactly when the compressing
+operation is a homomorphism''; ``reversible iff the projecting operation is a homomorphism into
+the stored relational structure''). The criterion that stands is the monograph's: an
+\emph{injective} homomorphism into a \emph{pre-specified} structure suffices for reversibility,
+and the implication is one-way. Its converse is false: the Cantor pairing
+$\pi(a,b)=\tfrac12(a+b)(a+b+1)+b$ is a bijection $\mathbb{N}^2\to\mathbb{N}$, hence reversible,
+yet $\pi(1,2)+\pi(2,0)=8+3=11\neq17=\pi(3,2)$, so it does not carry componentwise addition. Both
+recalled sentences are to be read with ``when'' in place of ``exactly when'' and ``iff'', and
+with the two qualifiers. The seam --- convolution, crossable for density and uncrossable for
+identity --- is retained in the form the monograph gives it, and this note's reading of the
+critical line as a seam inherits that form and no more.
+```
+
+## 4. Application map for the five paste-ready blocks of `ACS_PAPER_AMENDMENTS_2026-10-21.md`
+
+A map, not a proposal: where each block of AISO `docs/research/ACS_PAPER_AMENDMENTS_2026-10-21.md`
+goes, so that applying them after the owner's ruling is mechanical. All five targets are sealed
+(`grep -c` = 2 each). Every insertion point is the last line of the target's 24 September block,
+which is the same sentence in all four files ("historical experiment or a proof of RH."), followed
+by one blank line and `\end{document}`; applying a block means inserting a blank line and the block
+after that line. Because each insertion is at the end of its file, applying one does not move
+another file's anchor.
+
+| # | Block (AISO lines) | Target | Insert after | Cross-references in the block, checked | Fix needed before pasting |
+|---|---|---|---|---|---|
+| 1 | §1.3 Condorcet figures (`:106-125`) | `papers/later_FF06_series/When_a_Number_Lies.tex` | `:231` | "\S5" → `\section` 5 at `:163`, list at `:182-183` ✓; "about 48%" at `:183` ✓ | none |
+| 2 | §2.3 fourth mechanism (`:177-203`) | same file | after block 1's last line (`:231` if applied alone) | "Clause (ii)" → `:154` "(ii) it is a product, a ratio, or a non-transitive graph rather than a sum" ✓ | none; apply after block 1 to keep date order |
+| 3 | §3.7 Definition 2 (`:315-348`) | `papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex` | `:152` | `\ref{def:ff}` → `:67` ✓; `\ref{sec:meas}` → `:77` ✓ | **superseded** by §1 above (apply one); if §3.7 is kept, change "$1.0$--$1.4$" (`:327`) to "$1.4$ and $0.0$" per `docs/surrogate_discriminant_amendments.tex:190-191`. Two other blocks target this file: `docs/proposals/2026-10-22-V2-ff06e-headline.md` §3, then §1 above, in that order |
+| 4 | §4.3 unconverged instrument (`:387-409`) | `papers/later_FF06_series/The_Elimination_Ledger.tex` | `:505` | "\S2.3" → subsection 2.3 at `:101`, criterion at `:106` ✓; "\S8" → `\section` 8 at `:417`, trap at `:425` ✓ | none |
+| 5 | §5.5 completeness (`:519-550`) | `papers/later_FF06_series/Three_Layer_Decomposition.tex` | `:166` | "abstract and \S2 ... entirely" → `:33`, `:94` ✓; **"\S7" ✗** — the file has six numbered sections (`:41, :65, :96, :115, :132, :147`) and the qualification it means is §6 Scope, `:149` | replace "\S7" with "\S6"; **"Table~1" ✗** — the file has no numbered table (no `\begin{table}` or `\caption`); the rows meant are the unnumbered scaling tabular at `:76-85` in §2, so replace "the rows of Table~1" with "the rows of the scaling table in \S2" |
+
+Not in the map, because they carry no paste-ready block: §5b (amplification, confirmed; no change
+proposed), §6 (`computational-tensegrity` has no `paper/` directory; needs the files, not an
+amendment), §7 (what could not be checked). Sections 2 and 3 of this block target files the
+21 October document does not touch.
+
+## What this block leaves out
+
+- The other parts of candidate 56 (the Process Record's $T_{\min}=(2\pi e)^d/q$ citation, the Σ
+  forms table's γ and λ tiers, the sphaleron/NbTi/fluxon placeholder rows) are not proposed here.
+- No meso or macro row of the ladder was checked; only the micro row has a recorded retirement.
+- FF06e's counting witness is left unclassified; its original definition is in a suite outside
+  this repository, and the in-repo driver's reading of it does not reproduce the printed value.
+- The application map checks that each anchor line and each cross-reference exists; it does not
+  re-derive any number in the 21 October blocks.

@@ -70,9 +70,10 @@ python hp_xp_test.py
 python hp_signed_lfunction.py
 python hp_phase_test.py
 python hp_form_function_relativity.py
+python gue_perturbation_sweep.py --quick
 ```
 
-The form/function script also accepts `--full` for the dense GUE comparison. Runtime and results depend on the selected sample and configuration. The first 100,000 zero ordinates are in [riemann_zeros_100k.txt](../code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt); read the [source/data audit](frontier/2026-09-12-source-delta/README.md) for provenance and precision limits. Several earlier stochastic studies use seed `20260423`; each experiment's actual recorded configuration is authoritative.
+The form/function script also accepts `--full` for the dense GUE comparison. The GUE perturbation sweep reconstructs [Three-Layer Decomposition](../papers/later_FF06_series/Three_Layer_Decomposition.tex) §3. The paper does not state the matrix size, distance, diagonal scale or unfolding, so the script's docstring fixes them. `--quick` takes about a second. The default (N = 4000, 40 draws) has not been run; `--n 2000` took 16.5 minutes single-threaded. At N = 2000 no ε moved the spacings toward the zeros, but the §3 table's ε = 0.4 and ε = 0.8 "breaks" rows did not reproduce. Runtime and results depend on the selected sample and configuration. The first 100,000 zero ordinates are in [riemann_zeros_100k.txt](../code/hp_knife_suite/data_zeros/riemann_zeros_100k.txt); read the [source/data audit](frontier/2026-09-12-source-delta/README.md) for provenance and precision limits. Several earlier stochastic studies use seed `20260423`; each experiment's actual recorded configuration is authoritative.
 
 ### Companion notes and frontier proofs
 

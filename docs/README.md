@@ -6,6 +6,7 @@
 
 - [24 September 2026 publication](publication/2026-09-24/README.md): the current consolidated results, corrections, limits, and reproducibility scope.
 - [Rerun of the portable checks, 22 October 2026](publication/2026-10-22-rerun.md): the science verifier, the canonical test suite, the manuscript build and the FF06g full ladder rerun on the pinned environment on a different machine; a dated reproduction receipt, not a new preservation record.
+- [Check coverage of the two update papers](publication/2026-10-22-check-coverage.md): every number printed in the action-identifiability and carrier-boundary papers mapped to the verifier check that exercises it (fresh), to the hash-checked record it rests on (integrity-only), or to neither; 86 numbers, 37 fresh, 48 integrity-only, 1 with no coverage, against the 58 PASS lines of the same pinned verifier.
 - [Reproduction guide](REPRODUCTION.md): portable checks, manuscript builds, and optional research suites.
 - [Publication amendments](publication/2026-09-24/amendments.json): a specific update for each of the 33 earlier manuscripts.
 - [Publication manifest](publication/2026-09-24/publication-manifest.json): file hashes for the published papers and evidence.

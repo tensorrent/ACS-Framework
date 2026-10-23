@@ -299,3 +299,85 @@ replay will use a documented one-line edit of the solver call and be labelled a 
 - No proposal closing the geometric g route in `docs/Elimination_Ledger.md` (not manifest-bound):
   Card C5(4) leaves that as an owner decision, and a ledger entry should follow the decision, not
   precede it.
+
+# Proposed amendments — 22 October 2026, pass 2 (monograph and prime-gap note)
+
+Companion to the monograph section of [open problems](open_problems_2026-10-22.md#monograph-sigma-synthesis-prime-gap-operator-frontier-branches) and to [prime-gap and F_N runs](prime_gap_and_FN_runs_2026-10-22.md). Both target files are listed in `docs/publication/2026-09-24/publication-manifest.json` (`grep -c`: 2 each) and are not edited. Line numbers are at commit `5417173`. Nothing here is applied.
+
+## 1. Monograph: the N = 200 F_N run is no longer "planned"
+
+File: `papers/Form_Function_and_Asymmetry.tex:2313-2314` (and `:879`).
+
+Current text: "\emph{Scaling to $N = 200$ zeros and $p \leq 15 \times 10^6$ is planned; the results reported here use the smaller sample.}" and "extension to $N = 200$ is in progress)."
+
+Reason: the run was made on 23 October 2026 (runs page, table rows 6–7). With the procedure of the appendix (8 equal-count segments) the standard-deviation slope is −6.2834e-03 with OLS p = 0.026, and the off-line counterfactual's slope is negative as well; with equal-width windows in $x$ the on-line slope has p = 0.555 and the off-line slope p = 0.003. The difference comes from segment widths (13.59 down to 0.143 in $x$), not from the zeros.
+
+```latex
+\section*{Amendment: the $N=200$ stationarity run (October 2026)}
+The planned run was made with $N=200$ zeros and all primes $p\le 15\times10^6$ (970{,}704 primes).
+With the eight equal-count segments described in Appendix~\ref{app:numerics}, the slope of the
+segment standard deviations is $-6.28\times10^{-3}$ (OLS $p=0.026$), and an off-line zero at
+$\sigma=0.55$ also gives a negative slope, so this segmentation does not separate the two cases at
+this range: its segments have widths from $13.6$ down to $0.14$ in $x=\ln p$, below the slowest
+period $2\pi/\gamma_1=0.44$. With eleven windows of equal width $1$ in $x$ ($x\ge5$) the on-line
+slope is $+6.0\times10^{-4}$ per window ($p=0.56$) and the off-line slope $+3.4\times10^{-3}$
+($p=0.003$). The $N=25$ statement above stands as a statement about $p\le10^4$; the equal-count
+procedure should not be used at larger ranges. These are finite-range diagnostics and not
+evidence for or against RH.
+```
+
+## 2. Monograph: one printed variance ratio
+
+File: `papers/Form_Function_and_Asymmetry.tex:2104-2105`.
+
+Current text: "grows monotonically with $X$ (values $2.6, 4.2, 6.8$ at $X = 10^2, 10^3, 10^4$)."
+
+Reason: `code/acs_codebase/extras/fn_n200.py`, rerun unchanged from a copy (55 s), prints 2.6, 4.3, 6.8 at those X (and 3.4, 5.2, 8.6 at 3·10², 3·10³, 3·10⁴). The direction and the conclusion are unchanged; only the middle digit differs.
+
+```latex
+\section*{Amendment: variance ratio at $X=10^3$}
+Rerunning the $N=200$ variance comparison gives $\mathrm{Var}[F_N^{\sigma=0.6}]/\mathrm{Var}[F_N^{\sigma=0.5}]
+=2.6,\ 4.3,\ 6.8$ at $X=10^2,10^3,10^4$; the printed $4.2$ should read $4.3$. Monotone growth is unchanged.
+```
+
+## 3. Prime-gap note: "monotonically decreasing", and the answer past φ(m) = 24
+
+File: `papers/notes/Prime_Gap_Transition_Operator.tex:185` (and `:344`).
+
+Current text: "Within the tested range, the ratio $r_{\text{eff}}/r_{\text{alg}}$ is monotonically decreasing, and we report this as an empirical observation only. Whether the trend continues, saturates, or reverses for $\varphi(m) > 24$ is an open computational question."
+
+Reason: the note's own table (`:168-173`) has 0.274 → 0.277 (φ = 8 → 12) and 0.179 → 0.182 (φ = 16 → 24). The runs page reproduces all six r_eff values and extends the computation: the note's composite moduli leave columns empty past φ = 24 at its sample, and prime moduli show a reversal at fixed sample that disappears at ten times the primes.
+
+```latex
+\section*{Amendment: the Compression Law past $\varphi(m)=24$ (October 2026)}
+The ratio in the table is not monotone ($0.274\to0.277$ at $\varphi=8\to12$; $0.179\to0.182$ at
+$\varphi=16\to24$); read ``decreasing overall''. All six $r_{\text{eff}}$ values reproduce on the
+primes $\le2\times10^7$. For the next composite moduli ($m=120,126,150,180,210$) some transition
+columns $(a,b)$ have no successor at this sample (22 to 955 of them), so $P_m$ is not defined by
+Section~\ref{sec:setup}. Prime moduli remain defined to $\varphi=42$: at the same sample the ratio
+falls to $0.299$ at $\varphi=28$ and then rises to $0.320$ at $\varphi=42$, but with ten times the primes
+($p\le2\times10^8$) the moduli $\varphi=22,28,40$ give $0.298,\,0.243,\,0.205$. The effective rank
+therefore depends on the sample size as strongly as on $\varphi(m)$, and the exponents
+$\beta\approx1.61$, $\delta\approx0.64$ describe the tested pairs $(\varphi(m),x)$, not $\varphi(m)$ alone.
+```
+
+## 4. Monograph: the 2-qubit ΔI_Q computation exists
+
+File: `papers/Form_Function_and_Asymmetry.tex:2169-2171`.
+
+Current text: "The explicit computation for finite-dimensional toy models (e.g.\ a 2-qubit ACS) is tractable ($\sim\!2$ pages)".
+
+Reason: commit `2e340ff` added `code/acs_codebase/src/paper_c/quantum_delta_i.py` with `tests/test_quantum_delta_i.py` (32 passed on 23 October, 6.50 s). Per Card M1, the computed ΔI_Q is odd under role exchange (`test_delta_i_q_odd_under_role_swap`), so it does not bear on Link 3.
+
+```latex
+\section*{Amendment: the 2-qubit $\DI_Q$ computation}
+The finite-dimensional computation is now carried out for a 2-qubit Lindblad model in
+\texttt{code/acs\_codebase/src/paper\_c/quantum\_delta\_i.py} and pinned by
+\texttt{tests/test\_quantum\_delta\_i.py}. It is a toy-model computation; it does not address the
+infinite-dimensional LQG case, and its $\DI_Q$ is odd under exchange of the two subsystems, so it
+does not supply the static, positive quantity a $c$-function reading would require.
+```
+
+## What this block leaves out
+
+No text for Link 3, the cross-correlation lemma or the Kernel Law: there is no result to state. Nothing for `AxiomIII.lean`: it is not manifest-bound, and whether to touch it is the decision brief in Card M6(5).

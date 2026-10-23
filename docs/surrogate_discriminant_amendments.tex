@@ -82,7 +82,7 @@ A form witness is one factoring through the marginal & definitional recast & \S\
 Three of six verdicts change on the zeros & measured & \S\ref{sec:zeros} \\
 FF06e's form/function split otherwise reproduces & measured, smaller $N$ & \S\ref{sec:zeros} \\
 Six lattice witnesses carry $\le 3$ readings & measured; 4 of 4 collapses structural & \S\ref{sec:lattice} \\
-The $0.4$--$1.0\sigma$ band requires linear interpolation & measured, one implementation & \S\ref{sec:artifact} \\
+The $0.4$--$1.0\sigma$ band requires linear interpolation & measured, two implementations & \S\ref{sec:artifact} \\
 Calibration is a precondition, not good practice & argued from a single failure mode & \S\ref{sec:calib} \\
 Any claim about $\zeta$ itself & \textbf{none made} & \S\ref{sec:scope} \\
 \bottomrule
@@ -330,14 +330,19 @@ altering no verdict would be a stylistic preference.
 \paragraph{A check on amplification.} FF06e's decisive argument is that the function
 signal sharpens with $N$ rather than averaging down, reporting $z_{\mathrm{arith}}=3030$
 at $N=2\times10^4$ and $11\,497$ at $N=10^5$. The exact two-point exponent is
-$0.829$, which extrapolated a decade below the fitted range predicts $450$; we measure
-$499.8$, i.e.\ $11\%$ high. (An earlier version of this paragraph said $4\%$, using the
-exponent rounded to $0.8$, which moves the prediction to $481$. The rounding flattered
-the comparison. A two-point fit carries no uncertainty estimate, so $11\%$ a decade
-outside the fitted range is agreement rather than a discrepancy.) Its paired caveat holds in the stated direction: the raw value is
+$0.829$, which extrapolated a decade below the fitted range predicts $450$. At our seed
+we read $499.8$, but that is one draw of a $40$-surrogate estimate: over $300$ surrogate
+seeds it spans $331$--$580$ ($95\%$), and with $3000$ surrogates it converges to $419.5$
+($95\%$: $406.5$--$433.2$), $7\%$ below the prediction. Treating FF06e's two values as the
+$60$-surrogate estimates they are widens the prediction itself to $228$--$847$ ($95\%$).
+(Earlier versions of this paragraph said $4\%$, from an exponent rounded to $0.8$, and then
+$11\%$, from the single draw. Both flattered or overstated a comparison the data cannot
+make.) The growth with $N$ is not in question; the exponent is not testable at this
+precision. Its paired caveat holds in the stated direction: the raw value is
 \emph{larger} at smaller $N$ ($0.1762$ here against $0.0922$ and $0.0636$), so
-significance and magnitude move oppositely. A third point on a curve fitted from two is
-the strongest evidence here that the amplification is structure being resolved.
+significance and magnitude move oppositely. That the signal grows by more than an order of
+magnitude across the three sizes is the evidence that the amplification is structure being
+resolved; the third point's agreement with the fitted exponent is not, at this precision.
 
 \section{Corpus II: lattice $SU(2)$}\label{sec:lattice}
 
@@ -452,9 +457,11 @@ quotiented to separate its response from the instrument's --- the form/function 
 is well posed and not answerable by this operator. That is the tool's edge, not a defect
 in results obtained inside it.
 
-\textbf{Single-implementation results.} \S\ref{sec:artifact} rests on one implementation
-of each route. The qualitative finding (machine epsilon against $10^{-5}$) is robust to
-implementation; the particular figures are not.
+\textbf{Implementation dependence.} \S\ref{sec:artifact} now rests on two independent
+implementations of each route (23 October 2026). Both find machine epsilon under exact
+inversion against roughly $10^{-5}$ under piecewise-linear interpolation; neither
+reproduces FF06e's band digits (the second gives median $z$ of $0.21$ and $0.09$ over
+twenty seeds). The mechanism is robust to implementation; the particular figures are not.
 
 \section{Reproduction}\label{sec:repro}
 

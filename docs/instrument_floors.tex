@@ -115,8 +115,8 @@ Equal $c_1$ hides a different vacuum count & measured; scaling exponent $4$ conf
 First-order transition at $\rho=1+5\lambda/\beta$ & measured: loop, coexistence, spinodal & \S\ref{sec:firstorder} \\
 The $\zeta$ residual is truncation, not structure & measured, one masking family & \S\ref{sec:gibbs} \\
 Scale-stability holds after masking & measured, four windows & \S\ref{sec:gibbs} \\
-The $0.4$--$1.0\sigma$ artifact needs linear interpolation & measured, one implementation & \S\ref{sec:artifact} \\
-Amplification: our point near the published curve & measured; $11\%$ high, two-point fit & \S\ref{sec:zresults} \\
+The $0.4$--$1.0\sigma$ artifact needs linear interpolation & measured, two implementations & \S\ref{sec:artifact} \\
+Amplification: our point near the published curve & measured; converged $7\%$ low, inside the fit band & \S\ref{sec:zresults} \\
 Any claim about $\zeta$, RH, or continuum $SU(2)$ & \textbf{none made} & \S\ref{sec:scope} \\
 \bottomrule
 \end{tabular}
@@ -495,6 +495,16 @@ down just above a spinodal. The jump's \emph{magnitude} at that $\rho$ is theref
 unconverged and the suite asserts a floor rather than a value. The hysteresis result
 does not rest on it: both endpoints of the gap are converged.
 
+\emph{What had not converged (added 23 October 2026).} A finite-size-scaling run over
+widths $6$ to $32$ and three seeds found it was the step count, not the lattice: from
+$8000$ steps every width and seed reads $0.237054$, the smaller root of the per-face force
+$6\lambda w^2 - 2\alpha w + (\beta-\lambda) = 0$ at $\alpha=\rho\beta/2$, $\rho=3.1$. The
+converged jump is therefore the relation $1-w^*(3.1)=0.762946$, measured against the
+$\rho=2.9$ side where flat is exact, and the suite now asserts it to five decimals. The
+pre-registered verdict stands: at $4000$ steps the reading was unconverged, and the
+$4000$-step floor of $0.7$ holds on the suite's lattice and seed but is missed at three of
+eighteen width and seed settings.
+
 \section{The battery, measured}\label{sec:battery}
 
 Criterion~I applied to the lattice, $K=40$ surrogates, two configurations.
@@ -678,11 +688,14 @@ $0.4$--$1.0\sigma$} to \emph{factoring, significance withheld}.
 \caption{The function signal sharpens with $N$ rather than averaging down, which is the
 argument that it resolves structure rather than an artifact. The two published points
 fix $z\propto N^{\amplExp}$; extrapolated a decade below the fitted range this predicts
-$\amplPred$ at $N=\nZeros$, against $499.8$ measured --- $11\%$ high. The paired caveat
-in \cite{ff06e} also holds in the stated direction: the \emph{raw} value is larger at
-smaller $N$ ($0.1762$ here against $0.0922$ and $0.0636$), so significance and magnitude
-move oppositely. A two-point fit carries no uncertainty estimate, so $11\%$ a decade out
-is agreement and not a discrepancy.}
+$\amplPred$ at $N=\nZeros$, against $499.8$ read at our seed. That reading is one draw
+of a $40$-surrogate estimate: over $300$ surrogate seeds it spans $331$--$580$ ($95\%$), and
+with $3000$ surrogates it converges to $419.5$ ($95\%$: $406.5$--$433.2$), $7\%$ below the
+prediction. Treating the two published values as $60$-surrogate estimates widens the
+prediction itself to $228$--$847$ ($95\%$). The growth with $N$ is not in question; the
+exponent cannot be tested at this precision. The paired caveat in \cite{ff06e} holds in the
+stated direction: the \emph{raw} value is larger at smaller $N$ ($0.1762$ here against
+$0.0922$ and $0.0636$), so significance and magnitude move oppositely.}
 \label{fig:ampl}
 \end{figure}
 
@@ -691,6 +704,11 @@ An earlier draft reported this agreement as $4\%$. That used the exponent rounde
 $0.8$, which moves the prediction from $\amplPred$ to $481$ and the discrepancy from
 $11\%$ to $4\%$. The exact two-point exponent is $\amplExp$ and the honest figure is
 $11\%$. The rounding flattered the comparison and is corrected here.
+
+A second correction, 23 October 2026: the $11\%$ was itself a single $40$-surrogate draw
+at the eighty-third percentile of that estimate's spread. Converged, the measurement sits
+$7\%$ below the prediction, and the prediction's own band, once the published points'
+sampling noise is propagated, contains both. Neither figure is a test of the exponent.
 \end{remark}
 
 \section{A removable artifact}\label{sec:artifact}
@@ -756,12 +774,17 @@ establishes where a \emph{residual} lives, not that a series converges.
 \textbf{No claim about continuum $SU(2)$ or about confinement.}
 Sections~\ref{sec:lattice}--\ref{sec:firstorder} concern a finite periodic lattice with
 a chosen three-character action at zero temperature. The transition is a property of
-that action on that lattice; no continuum limit is taken and no finite-size scaling is
-performed.
+that action on that lattice; no continuum limit is taken. A finite-size-scaling run at
+$\rho=3.1$ over widths $6$ to $32$ (23 October 2026) finds the converged order parameter
+independent of width to six decimals; that measures the lattice dependence of this action,
+not a continuum limit.
 
-\textbf{Single-implementation results.} Section~\ref{sec:artifact} rests on one
-implementation of each route. The qualitative finding is robust to implementation; the
-figures are not.
+\textbf{Implementation dependence.} Section~\ref{sec:artifact} now rests on two independent
+implementations of each route (the second written from the first's interface only, with
+its own zeros, exact inverse and generator; 23 October 2026). Both find the residual
+present under piecewise-linear interpolation and at machine epsilon under exact inversion.
+Neither reproduces the published band's digits: over twenty seeds the second gives median
+$z$ of $0.21$ and $0.09$. The mechanism is robust to implementation; the figures are not.
 
 \textbf{Unconverged where stated.} The jump magnitude at $\rho=3.1$
 (\S\ref{sec:firstorder}) failed its pre-registered convergence check and is asserted as
@@ -822,7 +845,8 @@ $\alpha=0.4$, no critical ratio anywhere. There is none when the attacked direct
 no stiffness. The face-based term of \eqref{eq:action} is the repair.
 
 \item \textbf{A rounded exponent flattered a comparison} from $11\%$ to $4\%$
-(Fig.~\ref{fig:ampl}).
+(Fig.~\ref{fig:ampl}); and the $11\%$ was itself one $40$-surrogate draw, $7\%$ low once
+converged.
 
 \item \textbf{Two implementations of an unrelated cyclicity figure disagreed by
 $3.4\sigma$}, a spread as large as a discrepancy then being claimed against a published

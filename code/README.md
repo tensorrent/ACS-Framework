@@ -17,6 +17,7 @@ These are the portable publication entry points. They do not rerun every archive
 - [condensate_energy/](condensate_energy/): the preserved action-to-carrier investigation. Start from the [evidence index](../docs/CONDENSATE_EVIDENCE.md) and [endpoint audit](../docs/condensate_energy/endpoint_audit/README.md) to identify the appropriate model, source snapshot, and receipt. Some archive-recovery scripts require the original local drive.
 - [frontier_verification/](frontier_verification/README.md): pinned Python and Lean checks for the frontier deltas published on `main`.
 - [hp_knife_suite/](hp_knife_suite/): prime/zero position, spacing, phase, and shuffle experiments. [Data and optional commands](../docs/REPRODUCTION.md#optional-research-suites).
+  [reconstructed/](hp_knife_suite/reconstructed/README.md) holds three Elimination-Ledger kill tests (Q3 scaling, Q5 Hilbert–Pólya class, Q7 neutrino), labelled RECONSTRUCTED: re-authored on 2026-10-22 from the ledger's description, not the uncommitted originals. The guide reports agreement cell by cell and what the owner must supply for the other five.
 - [notes_verification/](notes_verification/): companion-note checks, including the scaled-invariance test.
 - [issue7/](issue7/): Section 9 cone-chain and four-thirds tests; see the [corresponding report](../docs/issue7_paper_section9_and_4over3.md).
 - [framed_unknot/](framed_unknot/README.md): framing, SU(2) lift, and moment-ratio checks.

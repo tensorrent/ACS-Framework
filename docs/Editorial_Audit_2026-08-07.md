@@ -1011,3 +1011,23 @@ need no qualifier. *(Supersedes M-95, which covered only the FF06f case.)*
 ### Open, not fixed
 
 None from this pass.
+
+### Follow-up check, 22 October 2026: methodology entries M33, M34, L30, L32, L33
+
+Each entry was set against the current `.tex` it names (HEAD `5417173`). Line numbers are
+current-file line numbers; "0 hits" is `grep -c` on the named file. The two `.tex` files are
+manifest-bound (`publication-manifest.json` lists each twice), so nothing in them was edited;
+residuals are recorded here only.
+
+| Entry | File | Verdict | Line that decides it | Residual |
+|---|---|---|---|---|
+| M33 | `papers/methodology/Prime_Carrier_Position_Form_Factor.tex` | Resolved | :69 "the complex-exponential power form of the shuffle-knife suite's prime-resonance witness (FF06e uses the cosine form $\langle\cos(\gamma\log p)\rangle^2$ over $p \le 29$; \eqref{eq:power} is its coherent-power generalisation, and the prime set here is $p \le 13$)"; :156 repeats it. `verbatim`: 0 hits in this file and in the FF06e file. | None. The script docstring the 21 Oct reader flagged was corrected by `861550d` (22 Oct): `scripts/prime_carrier_reproduce.py`:18-22 now reads "prime_peak_power is defined below, not imported: it is the complex-exponential power form ... and no shuffle-knife code is reused." `verbatim`: 0 hits there. |
+| M34 | `papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex` | Resolved | `STRUCK` and `WO-03`: 0 hits. :97 "\textbf{Remark (surrogate construction, corrected 2026-07-02).}" is a labelled remark; the abstract at :45 carries the caveat: "($0.4$--$1.0\sigma$ from the surrogate null --- residuals of the re-interpolation step; zero by construction on bare permuted spacings, see the surrogate-construction remark)". | Placement (polish only): the remark at :97-98 still sits between :95 ("They are reading the universality class.") and :99 ("Two witnesses sit thousands and tens of standard deviations away..."), so it still splits the two halves of "The split is clean". The table has no `\caption` (`caption`: 0 hits), so the caption half of the suggested fix has nowhere to go. |
+| L30 | `papers/methodology/Prime_Carrier_Position_Form_Factor.tex` | Resolved in the paper; the citation's target is incomplete | :50 "recorded in a working synthesis during the elimination campaign (see \nolinkurl{docs/Elimination_Ledger.md}) ... (a ``converse machine'': an instrument built to detect exactly the structure a destructive test showed was being destroyed)". `Fan-Wan`, `Fan--Wan`, `strip-mine`: 0 hits (the six `fan` hits are `fancyhdr`). | The cited file exists (890 lines) but does not record that synthesis: `grep -c -i -E 'two.point\|higher.order\|phase.coherence\|prime.peak\|resonance\|shuffle\|converse' docs/Elimination_Ledger.md` = 0. The path now points to a file in the repository, but not to the reading the paper attributes to it. |
+| L32 | `papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex` | Resolved | :111 "So the original battery of agreeing witnesses (six statistics listed in \S1; five are measured in the suite above, the pair correlation entering through the form factor) resolves into one generic form-bundle plus essentially one function witness." `six agreeing`: 0 hits. :55 lists the six. | None. |
+| L33 | `papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex` | Resolved | :36 "\date{\small FF06e \ $\cdot$ \ Companion to \textit{Spectral Witness Survival}\ ---\ SIP License v1.1}" | None. |
+
+Result: 5 of 5 entries are resolved in the current text. M33's script-side residual is closed by
+`861550d`. Two polish-level residuals remain, in manifest-bound files: where the M34 remark sits, and
+the fact that L30's ledger citation does not contain the synthesis it is cited for. Neither changes a
+number or a claim.

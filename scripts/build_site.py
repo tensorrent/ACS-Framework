@@ -109,6 +109,20 @@ def check_links(output):
     return problems, external
 
 
+def check_llm_txt():
+    """Verify llm.txt and llms.txt exist and match the canonical structured generator."""
+    from generate_llm_txt import build_llm_text
+    expected = build_llm_text()
+    problems = []
+    for rel in ('llm.txt', 'llms.txt', 'site/llm.txt', 'site/llms.txt'):
+        path = ROOT / rel
+        if not path.exists():
+            problems.append(f'missing structured LLM file: {rel}')
+        elif path.read_text(encoding='utf-8') != expected:
+            problems.append(f'structured LLM file out of date (run scripts/generate_llm_txt.py): {rel}')
+    return problems
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / 'build/site')
@@ -116,6 +130,7 @@ def main():
     problems = check_vendor()
     manifest_problems, assets = check_manifest()
     problems += manifest_problems
+    problems += check_llm_txt()
     copy_tree(args.output)
     link_problems, external = check_links(args.output)
     problems += link_problems

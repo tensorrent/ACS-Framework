@@ -1,0 +1,1237 @@
+# ACS Framework (Asymptotic Compatibility Synthesis / Asymmetric Codependent Systems)
+
+> Self-contained structured reference (`llm.txt` / `llms.txt`) for AI systems, LLM agents, and automated scientific auditors.
+> Author: Bradley Wallace (Independent Researcher, TensoRrent)
+> Live Documentary Site: https://tensorrent.github.io/ACS-Framework/
+> Canonical GitHub Repository: https://github.com/tensorrent/ACS-Framework
+> Release Anchor: 24 September 2026 Consolidated Publication + 30 October 2026 Documentary & Provenance Release
+> License: Sovereign Integrity Protocol (SIP) License v1.1 (Free for personal, academic, and verification use; commercial/revenue use requires a prior written license)
+
+---
+
+## 1. Machine-Readable Endpoints & Structured Data Files
+
+- **Full LLM Structured Corpus (`llm.txt`)**: `https://tensorrent.github.io/ACS-Framework/llm.txt` (mirror: `https://tensorrent.github.io/ACS-Framework/llms.txt`)
+- **Canonical 35-Paper Catalog (`catalog.json`)**: `https://tensorrent.github.io/ACS-Framework/data/catalog.json`
+- **Audited T1–T4 Claim & Elimination Ledger (`claims.json`)**: `https://tensorrent.github.io/ACS-Framework/data/claims.json`
+- **Program Chronology & Verification Timeline (`timeline.json`)**: `https://tensorrent.github.io/ACS-Framework/data/timeline.json`
+- **Deterministic Scene Asset SHA-256 Manifest (`manifest.json`)**: `https://tensorrent.github.io/ACS-Framework/assets/manifest.json`
+- **Offline Build & Link Integrity Report (`build-report.json`)**: `https://tensorrent.github.io/ACS-Framework/build-report.json`
+- **Interactive Möbius Screw Framing Simulator**: `https://tensorrent.github.io/ACS-Framework/visualizations/mobius_screw_framing_transformer.html`
+- **Interactive q-Plane Confinement Simulator**: `https://tensorrent.github.io/ACS-Framework/visualizations/acs_q_plane_confinement_simulator.html`
+
+---
+
+## 2. Executive Summary & Epistemic Governance Rules for AI Systems
+
+The ACS Framework investigates how two mutually-constraining fields — **Form** (structural information) and **Function** (dynamic information) — generate net transfer entropy `ΔI`, whose second-order Taylor coefficient under flow composition is the Lie bracket `[f, g]` (**the BCH–TE morphism**). Applied to the Palatini frame-connection pair `(e, ω)`, the bracket image spans `sl(4,R)` (dim 15 = 9 torsion + 6 Lorentz), inside which `sl(3,R)` (5 torsion + 3 Lorentz) emerges as a numerical closure attractor (Tier T3). Applied to prime distributions and Riemann zeta zeros via the Weil–Guinand explicit formula, it separates marginal spacing statistics (`FORM`) from exact level-position arithmetic (`FUNCTION`).
+
+### Non-Negotiable Citation & Reasoning Rules for AI Agents
+
+1. **Always State the Verification Tier (`T1`, `T2`, `T3`, `T4`)**:
+   - **T1 (Machine-Verified)**: Automated deterministic test passes in the repository verification suite (seed `20260423`).
+   - **T2 (Proved in Paper)**: Complete analytical derivation or mathematical proof in the canonical `.tex` manuscript.
+   - **T3 (Numerically Verified)**: Consistent across seeded numerical ensembles/sweeps, **not** an unconditional analytical theorem.
+   - **T4 (Explicitly Falsified)**: Refuted by symbolic proof, counterexample, or numerical kill test. Recorded permanently in the append-only Elimination Ledger.
+   - **Rule**: Tiers never promote automatically. Never present a `T3` numerical observation as a `T2` theorem.
+2. **Explicit Non-Claims (Never Overclaim)**:
+   - **Riemann Hypothesis**: The ACS Framework **does not prove the Riemann Hypothesis** and **constructs no Hilbert–Pólya operator**. Paper B proves `RH => stationarity` (T2), while the converse depends on a minimum-gap bound checked only to `N = 200`.
+   - **`sl(3,R)` Selection**: The selection of `sl(3,R)` inside `sl(4,R)` (`D(sl(3,R)) = 1.4e-16` vs `>= 0.49` across 50,000 random `Gr(8,15)` subspaces) is **T3 numerical**, not an analytical uniqueness proof. Pure rank-2 signature selection (`N2`) has an explicit counterexample in the exceptional Lie algebra `G_2` (dim 14).
+   - **24 September 2026 Consolidations & Withdrawals**:
+     - The complete scalar action has **68 real coordinates** and **17 quartics**, of which **6 vanish on the neutral slice** (`ACS_Action_Identifiability.pdf`, T1). Physical masses require the kinetic metric.
+     - Classical condensate binding is strictly separated from physical Standard Model particle identification (`ACS_Condensate_Carrier_Boundary.pdf`, T1). Earlier inferences equating self-linking `|Sl| = 2` with the electron `g = 2` factor, singlet color confinement from classical framing alone, and propagating algebraic Palatini torsion are **withdrawn / falsified (T4)**.
+   - **Five Mandatory Caveats**:
+     1. *Coleman–Mandula*: The `(3,1)` grading is an **internal** algebra grading, not spacetime signature; bridging to Lorentzian geometry requires soldering/pre-geometry.
+     2. *Exceptional Algebra Boundary*: Grading selection (`N2`) fails for `G_2`.
+     3. *Barbero–Immirzi Refraction*: `γ_BI = 0.274067` (`SU(2)`) refracts to `0.190206` (`SO(3)`) under instrument swap (`Q1`) and sits above the Domagala–Lewandowski value `0.2375`.
+     4. *Neutrino Decoupling*: Clearing the X-ray bound requires `M_WR >= 16 TeV` (`v_R >= 49 TeV`), which **kills the keV sterile-neutrino dark-matter reading** (`Q7`).
+     5. *`tan β` Gauge Protection*: `tan β` is a gauge-protected flat direction at tree level, and 1-loop Coleman–Weinberg `6 -> 5` parameter reduction fails (`T4`, `F-11`).
+
+---
+
+## 3. Eight Structural Invariables (`INV-1` … `INV-8`)
+
+- **INV-1 (Net Transfer Entropy Primitive (ΔI))**: Any two mutually-constraining fields — Form (structural information) and Function (dynamic information) — generate net transfer entropy ΔI = T_{Y->X} - T_{X->Y}; its sign defines directional governance and ΔI = 0 defines the attractor.
+- **INV-2 (BCH–TE Morphism)**: The second-order Taylor coefficient of net transfer entropy ΔI(ε) under flow composition equals the Lie bracket [f, g]: ΔI(ε) = ε⟨f-g, ∇log(dμ/dν)⟩ + 2ε²⟨[f,g], ∇log(dμ/dν)⟩ + O(ε³) (Tier T2 finite-dim proof; T1 machine-verified).
+- **INV-3 (Form / Function Ontology)**: Across substrates (gravity, Riemann zeros, condensates, attention), Form encodes marginal/structural constraints while Function encodes exact relational/positional dynamics.
+- **INV-4 (Operator-Type Ladder)**: bracket(Function, Function) -> Form; holonomy(bracket, Function) -> irreducible Form.
+- **INV-5 (Inversion Arc)**: A system that solves a constraint becomes the next constraint; role exchange f <-> g flips the sign of ΔI at 1st and 2nd order, and Killing orthogonality tr([X,Y]X) = 0 enforces algebraic non-traversability.
+- **INV-6 (Tensegrity & Zero-Mode Gauge Freedom)**: Rigidity-matrix zero modes correspond to gauge freedoms; in the 68-coordinate scalar action, 6 of 17 quartic directions vanish identically on the neutral slice.
+- **INV-7 (Four-Tier Epistemic Discipline (T1-T4))**: Every claim is classified T1 (Machine-Verified), T2 (Proved in Paper), T3 (Numerically Verified), or T4 (Explicitly Falsified). Tiers never promote automatically; T4 falsifications are preserved permanently in the append-only Elimination Ledger.
+- **INV-8 (Local Validity vs Global Overreach)**: Each operator lens is valid within its explicit domain boundary and fails when universalized without checking representation or normalization invariance (REFRACTION vs INVARIANT).
+
+---
+
+## 4. Audited T1–T4 Claim & Elimination Ledger (20 Core Entries)
+
+### [UPD-01] 68-coordinate scalar sector & 6 neutral-family blind quartic directions
+- **Tier**: `T1` (INVARIANT) | **Domain**: 24 Sept Update
+- **Metric / Identity**: `68 real coords, 17 quartics, 6 vanish on neutral slice`
+- **Scope & Boundary**: Identical neutral observations coexist with stable, flat, and unstable transverse spectra; physical masses require the kinetic metric.
+- **Verification Script**: `code/publication_20260924/verify_science.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.tex`
+
+### [UPD-02] Condensate carrier boundary & withdrawal of framing g=2, singlet-color, and propagating algebraic torsion
+- **Tier**: `T1` (BOUNDARY) | **Domain**: 24 Sept Update
+- **Metric / Identity**: `58 fresh checks + 516 verified receipt hashes`
+- **Scope & Boundary**: Classical scalar binding is conditional on the specified action; separates binding from physical particle identification.
+- **Verification Script**: `code/publication_20260924/verify_science.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.tex`
+
+### [PA-01] BCH–TE morphism: 2nd-order transfer entropy coefficient equals the Lie bracket [f, g]
+- **Tier**: `T2` (INVARIANT) | **Domain**: Paper A · Gravity & Gauge
+- **Metric / Identity**: `ΔI(ε) = ε⟨f−g,∇log(dμ/dν)⟩ + 2ε²⟨[f,g],∇log(dμ/dν)⟩ + O(ε³)`
+- **Scope & Boundary**: Proved in finite dimensions via exact Cartan formula [L_f, L_g] = L_{[f,g]}; infinite-dimensional Palatini extension is explicitly conjectured.
+- **Verification Script**: `code/acs_codebase/src/paper_a/`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+
+### [PA-02] Palatini bracket image Im(Φ) = sl(4,R) (dim 15 = 9 torsion + 6 Lorentz) & sl(3,R) 5+3 closure attractor
+- **Tier**: `T3` (CANDIDATE) | **Domain**: Paper A · Gravity & Gauge
+- **Metric / Identity**: `D(sl(3,R)) = 1.4e-16 vs min random Gr(8,15) = 0.49 (50k samples)`
+- **Scope & Boundary**: Numerical selection across 50,000 Grassmannian samples, not an analytical uniqueness theorem. Complexification J(T) = i·sym(T) + anti(T) imports unitarity.
+- **Verification Script**: `code/acs_codebase/src/paper_a/selection_full.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+
+### [PA-03] Three fermion generations N_gen = 3 from Jacobi identity truncation at BCH order 3
+- **Tier**: `T1` (INVARIANT) | **Domain**: Paper A · Gravity & Gauge
+- **Metric / Identity**: `‖Jacobi‖ = 6e-15 at order 3; bosonic ρ_vac = +512/3 − 512/3 = 0 exact`
+- **Scope & Boundary**: Exact rational and machine-precision verification on the sl(4,R) Palatini generator algebra.
+- **Verification Script**: `code/acs_codebase/src/paper_a/three_generations.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+
+### [PA-04] Yukawa ratio h̃/h = 2/3 is the sole full normalization-invariant survivor under Q1 instrument swap
+- **Tier**: `T1` (INVARIANT) | **Domain**: Paper A · Gravity & Gauge
+- **Metric / Identity**: `h̃/h = 2/3 invariant; g₄ (4/3→2/3) & λ_φ = 2√3/27 split; γ_BI (0.2741→0.1902) refracts`
+- **Scope & Boundary**: Relations survive instrument swap; bare normalization-laden constants refract under trace/representation change.
+- **Verification Script**: `code/acs_codebase/src/paper_a/higgs_derivation.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+
+### [PA-05] Coleman–Weinberg 6→5 parameter reduction (tan β gauge-protected flat direction)
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Paper A · Gravity & Gauge
+- **Metric / Identity**: `Fermion-dominated potential drives minimum to boundary; CW 6→5 fails`
+- **Scope & Boundary**: Explicitly falsified (F-11): tan β remains a free parameter in the 6-input Branch A ledger.
+- **Verification Script**: `code/acs_codebase/src/paper_a/betac_tan_beta.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+
+### [PB-01] RH ⇒ uniform stationarity of F_N(x) and σ = 1/2 as unique center manifold (pure rotation)
+- **Tier**: `T2` (INVARIANT) | **Domain**: Paper B · Riemann Spectral
+- **Metric / Identity**: `α(2,001,052 zeros) = +0.001259; off-line injection recovers α = 2σ − 1 within 1.5%`
+- **Scope & Boundary**: Forward implication proved via AM–GM; converse is conditional on a minimum-gap bound verified only to N = 200 (does not prove RH).
+- **Verification Script**: `code/acs_codebase/src/paper_b/renormalized_stability.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.tex`
+
+### [PB-02] Wronskian W[f,g] = f'g − g'f is a Lie bracket but fails the Leibniz Poisson rule by −fgh'
+- **Tier**: `T2` (FALSIFIED) | **Domain**: Paper B · Riemann Spectral
+- **Metric / Identity**: `W[fg,h] − (fW[g,h] + gW[f,h]) = −fgh' exact`
+- **Scope & Boundary**: Disproves the earlier plasma-Hamiltonian symplectic reading (F-3); any symplectic structure must live on mode-amplitude space.
+- **Verification Script**: `code/acs_codebase/src/paper_b/wronskian_leibniz.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.tex`
+
+### [PB-03] Shuffle-knife witness split: exactly two robust FUNCTION faces (Arithmetic 11,497σ, Local-order 26σ)
+- **Tier**: `T1` (INVARIANT) | **Domain**: Paper B′ · Witness & HP Knife
+- **Metric / Identity**: `100,000 Odlyzko zeros, 60 surrogates, seed 20260423; effective rank ≈ 4.8/5`
+- **Scope & Boundary**: Spacing, counting, and Wigner shape flip to FORM (0.4–1.0σ) under GUE-marginal shuffling; no independent third FUNCTION face exists.
+- **Verification Script**: `code/hp_knife_suite/hp_vantage_points.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Spectral_Witness_Refinement.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Spectral_Witness_Refinement.tex`
+
+### [PB-04] Hilbert–Pólya wall resolved in chiral anti-commuting antiunitary class (C H* C⁻¹ = −H, C² = −1, β = codim − 1 = 2)
+- **Tier**: `T1` (INVARIANT) | **Domain**: Paper B′ · Witness & HP Knife
+- **Metric / Identity**: `|Im W|/|Re W| = 0.0001 (real orbits) + β = 2.019 (GUE repulsion) coexist in chiral class`
+- **Scope & Boundary**: Pins the symmetry class required to reconcile T-even orbit amplitudes with T-broken GUE repulsion; constructs no operator.
+- **Verification Script**: `code/hp_knife_suite/hp_wall_resolution_class.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.tex`
+
+### [PB-05] 3-rung prime-power harmonic tower p^{−k/2} and L-function commutator law ‖[ι,T]‖_k = 0 ⇔ ord(χ) | 2k
+- **Tier**: `T1` (INVARIANT) | **Domain**: Paper B′ · Witness & HP Knife
+- **Metric / Identity**: `Rung-2 slope −0.533, Rung-3 slope −1.015 (R²=1.00); 33-line corr 1.000; Rung-2 L-phase stays T3 (0.26 floor)`
+- **Scope & Boundary**: Exhibits Weil–Guinand explicit formula and Dirichlet twist; honest negative recorded where rung-2 L-zero phase remains noise-limited at 150 zeros.
+- **Verification Script**: `code/hp_knife_suite/hp_twist_hardened.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.tex`
+
+### [PC-01] Role exchange f ↔ g flips ΔI sign at 1st & 2nd order; Killing orthogonality tr([X,Y]X) = 0 gives algebraic non-traversability
+- **Tier**: `T2` (INVARIANT) | **Domain**: Paper C · Inversion Arc
+- **Metric / Identity**: `π_X([X,Y]) ≡ 0 to < 1e-15 across 1,000 random sl(3,R) & sl(4,R) pairs`
+- **Scope & Boundary**: Algebraic non-traversability of the bracket output back to either input; three distinct ambiguity dimensions (14, 15, 19) kept separate.
+- **Verification Script**: `code/acs_codebase/src/paper_c/killing_orthogonality.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.tex`
+
+### [PC-02] Universal 2π holonomy inversion across all ACS domains
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Paper C · Inversion Arc
+- **Metric / Identity**: `spec(ad_{T_{B-L}}) = {0(×9), ±4/3(×3)} real ⇒ ‖exp(2π ad_{T_{B-L}})‖ ≈ e^{8π/3} ≈ 4,348.5 ≠ 1`
+- **Scope & Boundary**: Falsified (F-2): sl(4,R) adjoint flow is hyperbolic (Cayley–Hamilton ad³ = (16/9)ad), not elliptic; 2π closure is representation-specific to SU(2).
+- **Verification Script**: `code/acs_codebase/src/paper_c/spectral_taxonomy.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.tex`
+
+### [FT-01] Călugăreanu invariance Tw + Wr = Sl = −2.000000 across donut-to-throat deformation & SU(2) parity law σ = (−1)^{Sl+1}
+- **Tier**: `T1` (INVARIANT) | **Domain**: Framing Transformer
+- **Metric / Identity**: `T·U = 0 to 2.2e-16; Tw = −1.033761, Wr = −0.966239, Sl = −2.000000; S³ Laplace λ = −3 (deg 4)`
+- **Scope & Boundary**: Verified by two independent routes (Călugăreanu sum vs Gauss double integral) and closed-form quaternion lift to S³.
+- **Verification Script**: `code/framed_unknot/framing_transformer.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.tex`
+
+### [FT-02] Self-linking magnitude |Sl| = 2 as the geometric origin of the electron g = 2 factor (and geometric g ≠ 1 for uniform closed loops)
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Framing Transformer
+- **Metric / Identity**: `n = 0 untwisted circle also gives σ = −1; moment ratio μ/⟨L⟩ shares vector area A ⇒ g = 1 exact`
+- **Scope & Boundary**: Double kill: Sl = 2 and Sl = 0 lie in the same Z/2 spinorial class, and uniform q/m circulation forces g = 1 identically.
+- **Verification Script**: `code/framed_unknot/moment_ratio.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.tex`
+
+### [EL-01] Q4: Transfer-entropy asymmetry ΔI is identical to the Zamolodchikov / Casini–Huerta RG c-function (FF06Σ Link 3)
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Elimination Ledger
+- **Metric / Identity**: `Fails on sign (signed vs c ≥ 0), symmetric fixed-point value (0 vs c ≠ 0), and category (temporal vs spatial)`
+- **Scope & Boundary**: Verdict: 'No reading is both novel and true.' Cross-domain sameness in Σ is scoped as structural analogy, not identity.
+- **Verification Script**: `code/acs_codebase/src/paper_c/`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.tex`
+
+### [EL-02] Q3: Degree-d height floor scaling law T_min(d,q) = (2πe)^d / q
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Elimination Ledger
+- **Metric / Identity**: `At d = 2, q = 4 (Dedekind ζ_{Q(i)}), formula gives 72.93, sitting above 51 actual zeros (true floor 8.54)`
+- **Scope & Boundary**: Degenerate-case trap: (2πe)^d/q and 2πe·q^{−1/d} coincide only at d = 1. The d = 1 value 2πe ≈ 17.08 survives.
+- **Verification Script**: `code/hp_knife_suite/reconstructed/q3_scaling_test_reconstructed.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.tex`
+
+### [EL-03] I7: Section 9 spectral-gap-to-cone chain & 4/3 lattice mechanism under K1/K2
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Elimination Ledger
+- **Metric / Identity**: `TFIM exhaustive chain support 0/12 (leakage leg sign +0.9636); 4/3 collapses to n = d + 1 identity`
+- **Scope & Boundary**: Machine-verified negative control across TFIM, cross-model (1/12), and long-range (5/12) passes.
+- **Verification Script**: `code/issue7/verify_issue7_pipeline.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex`
+
+### [EL-04] Q2: BRA integer resonance kernel 489× speed superiority over FP32 baseline
+- **Tier**: `T4` (FALSIFIED) | **Domain**: Elimination Ledger
+- **Metric / Identity**: `Measured 1.37× to 1.82× slower (f64 vs f32); cross-run bitwise determinism survives (T1)`
+- **Scope & Boundary**: Speed projection withdrawn;Paper D is scoped as a deterministic engineering blueprint, not a throughput certification.
+- **Verification Script**: `code/benchmark_efficiency.py`
+- **Canonical PDF**: `https://tensorrent.github.io/ACS-Framework/papers/ACS_Deterministic_AI_Stack_PDR.pdf`
+- **LaTeX Source**: `https://tensorrent.github.io/ACS-Framework/papers/ACS_Deterministic_AI_Stack_PDR.tex`
+
+---
+
+## 5. Complete Falsification Register (`F-1` … `F-23`) & Open Problems (`O-1` … `O-8`)
+
+### Falsified Conjectures (`F-1` … `F-23`, Tier T4)
+
+- **F-1 — ad^3 = 2*ad for integer eigenvalues**: Requires eigenvalue lambda = 1/sqrt(2); actual sl(4,R) B-L generator satisfies ad^3 = (16/9)*ad.
+- **F-2 — Universal 2pi holonomy inversion across all ACS domains**: sl(4,R) adjoint spectrum {0(x9), +-4/3(x3)} is real/hyperbolic, so ||exp(2pi ad)|| approx e^{8pi/3} approx 4348.5 != 1. 2pi spinor closure is representation-specific to SU(2).
+- **F-3 — Wronskian W[f,g] = f'g - g'f is a canonical Poisson bracket**: Fails the Leibniz rule by an exact remainder: W[fg,h] - (fW[g,h] + gW[f,h]) = -fgh', refuting the early plasma-Hamiltonian reading.
+- **F-4 — IR Pythagorean lattice imprint on PDG particle masses (N1)**: Monte Carlo z-scores z in [-0.7, +0.3] vs PDG masses — clean statistical null.
+- **F-5 — Intrinsic algebraic chirality without physical unitarity input**: Chirality bias vanishes under covariant conjugation; unitarity enters via complexification J(T) = i*sym(T) + anti(T).
+- **F-6 — Killing form alone selects Lorentzian (3,1) signature / EM as torsion annihilator**: Cartan involution != parity involution; torsion sector Sym_0(4) has centralizer {0} in sl(4,R).
+- **F-7 — Holonomy stability selects spacetime signature (Route C)**: All signatures produce equal holonomy norms under the tested functional.
+- **F-8 — Bi-doublet quartic coupling alpha_2 is an optional free parameter**: Forbidden by representation theory: Phi ~ (1,2,2) is an SU(4) singlet so T^A Phi = 0 => alpha_2 = 0 identically.
+- **F-9 — Tree-level beta_c explains fermion mass hierarchy**: Tree-level equal-VEV no-go forces tan(beta) = +-1 and degenerate up/down mass matrices.
+- **F-10 — Tree-level Yukawa rescue of tan(beta)**: Identity M_u - M_d = (h - h_tilde)(kappa_1 - kappa_2) forces M_u = M_d and |V_CKM| = I at equal VEVs.
+- **F-11 — Coleman-Weinberg 1-loop 6->5 parameter reduction fixing tan(beta)**: Fermion-dominated 1-loop potential drives minimum to boundary; tan(beta) remains a gauge-protected flat direction in the 6-input Branch A ledger.
+- **F-12 — 115-dimensional exceptional subalgebra closure**: Proper Lie bracket saturation shows the generated algebra is all of gl(12) (dim 144).
+- **F-13 — N3 uniform-X prime-gap transition conjecture**: Falsified numerically in the tested prime-gap range.
+- **F-14 — Assembly order selects distinct packing outcomes ('acid-to-water')**: Greedy packing jams near ~5.5 regardless of assembly order.
+- **F-15 — Order-asymmetry acts as a stable signed lever at large N**: Sign oscillates and amplitude decays with N.
+- **F-16 — Shell-commensuration of asymmetry at centered-hexagonal numbers**: Zero crossings do not align with centered-hexagonal numbers.
+- **F-17 — Sound and light are two octaves of one electromagnetic medium**: 4/4 pre-registered scaling tests fail.
+- **F-18 — Particle/wave duality is infinite Mandelbrot self-similarity**: Generative models exhibit a characteristic cutoff scale.
+- **F-19 — Central-number residual equals the Higgs quartic residual ('same gap')**: Confuses angle-independent charge cancellation with scale-dependent coupling magnitude.
+- **F-20 — Higgs quartic residual is a UV Planck-scale boundary condition**: SM RG running of lambda crosses lambda_ACS = 2*sqrt(3)/27 once near the electroweak scale (~130-180 GeV) and runs down.
+- **F-21 — Hilbert-Polya operator H built from balanced symmetrized duality involution**: Balanced involutions force beta = 1 (GOE) and break GUE level repulsion (beta = 2).
+- **F-22 — Hilbert-Polya operator via arithmetic diagonal perturbation of GUE**: Cosmetic when weak, destroys GUE spacing when strong; no intermediate selection regime exists.
+- **F-23 — Lag-1 spacing autocorrelation is a beyond-GUE arithmetic invariant**: Observed 0.050 gap sits inside the 0.08 finite-sample apparatus band; vanishes under bare permuted spacings.
+
+### Open Problems (`O-1` … `O-8`)
+
+- **O-1 — Arithmetic realization of the Hilbert-Polya operator in the pinned chiral class**: Symmetry class pinned (anti-commuting antiunitary C H* C^-1 = -H, C^2 = -1, beta = codim - 1 = 2); explicit arithmetic operator construction remains open.
+- **O-2 — FeynRules / UFO collider model export for the 68-coordinate scalar & Pati-Salam sector**: Open engineering & phenomenology export.
+- **O-3 — First-principles action principle for the dual gravitational functional S_tilde_g**: Open continuum variational problem.
+- **O-4 — High-degree L-function zero-height floor verification (d > 1, q > 1)**: d=1 value 2*pi*e survives; (2*pi*e)^d/q falsified at d=2 by Dedekind zeta_Q(i); full LMFDB sweep open.
+- **O-5 — Complete Standard Model fermion & gauge embedding from the GL(4,R) frame bundle**: Condensate carrier boundary (24 Sept 2026) separates classical scalar binding from full SM quantum numbers.
+- **O-6 — Full bulk-boundary ER=EPR holographic dictionary from Killing orthogonality**: Algebraic non-traversability tr([X,Y]X) = 0 proved (T2); dynamical bulk geometry remains open.
+- **O-7 — Global singlet projection for the Barbero-Immirzi parameter (0.274067 vs 0.2375)**: Local representation swap refracts gamma_BI (Q1); global projection open.
+- **O-8 — Right-handed neutrino X-ray bound tension**: Resolved via decoupling (M_WR >= 16 TeV, v_R >= 49 TeV), which kills the keV sterile-neutrino dark-matter reading.
+
+---
+
+## 6. Complete 35-Manuscript Canonical Catalog
+
+1. **Complete Scalar Actions and Identifiability Boundaries** (`Current consolidations`)
+   - Summary: Full scalar action, hidden directions, stability, scale freedom, and RG input dependence.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.tex`
+2. **Condensate Binding and Particle-Identification Limits** (`Current consolidations`)
+   - Summary: Charge, gauge carriers, framing, topology, color, and torsion boundaries.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.tex`
+3. **Paper A — Palatini Gauge Attractor** (`Foundational papers`)
+   - Summary: Gauge-algebra construction; read the corrected torsion and color claims.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Palatini_Gauge_Attractor.tex`
+4. **Paper B — Riemann Spectral Critical Line** (`Foundational papers`)
+   - Summary: Finite spectral constructions and their limits; does not prove RH.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Riemann_Spectral_Critical_Line.tex`
+5. **Paper B′ — Spectral Witness Refinement** (`Foundational papers`)
+   - Summary: Witness survival and transport obstructions.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Spectral_Witness_Refinement.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Spectral_Witness_Refinement.tex`
+6. **Paper C — Holographic Spectral Inversion** (`Foundational papers`)
+   - Summary: Algebraic correspondences and amended interpretation limits.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/core_trilogy/Holographic_Spectral_Inversion.tex`
+7. **N1 — Pythagorean Lattice Limits** (`Companion notes`)
+   - Summary: Minimal algebra and lattice projections.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Pythagorean_Lattice_Limits.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Pythagorean_Lattice_Limits.tex`
+8. **N2 — Adjoint Clifford Signature Selection** (`Companion notes`)
+   - Summary: Grading and signature-selection proposal.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Adjoint_Clifford_Signature_Selection.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Adjoint_Clifford_Signature_Selection.tex`
+9. **N3 — Prime-Gap Transition Operator** (`Companion notes`)
+   - Summary: Operators on prime-gap ensembles.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Prime_Gap_Transition_Operator.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Prime_Gap_Transition_Operator.tex`
+10. **Möbius Screw Electron** (`Companion notes`)
+   - Summary: Framed-unknot proposal; the framing-to-g=2 inference is withdrawn.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Mobius_Screw_Electron.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Mobius_Screw_Electron.tex`
+11. **Framing Transformer and Spin Parity** (`Companion notes`)
+   - Summary: Frame-loop lift, parity, and a falsified moment-ratio inference.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.tex`
+12. **Möbius Ribbon Capacitance** (`Companion notes`)
+   - Summary: Capacitance models; cutoff and normalization limits remain explicit.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Mobius_Ribbon_Capacitance.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Mobius_Ribbon_Capacitance.tex`
+13. **Klein-Foam Monad** (`Companion notes`)
+   - Summary: Condensate ontology and its required physical completion.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Klein_Foam_Monad.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Klein_Foam_Monad.tex`
+14. **Flag Condensate Nuclear Decay** (`Companion notes`)
+   - Summary: Phase-slip and Gamow-channel model.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Nuclear_Decay.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Nuclear_Decay.tex`
+15. **Alpha Overlap — Baseline** (`Companion notes`)
+   - Summary: Baseline overlap proposal.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Overlap.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Overlap.tex`
+16. **Alpha Overlap — Refined** (`Companion notes`)
+   - Summary: Refined model and expanded catalog.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Refined.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Refined.tex`
+17. **Alpha Overlap — Throat Channel** (`Companion notes`)
+   - Summary: Throat-channel overlap model.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Throat_Overlap.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex`
+18. **Density Engine and Many Worlds** (`Companion notes`)
+   - Summary: Interpretive note, distinct from experimental confirmation.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Density_Engine_Many_Worlds.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Density_Engine_Many_Worlds.tex`
+19. **Critical Line as a Fibered Object** (`Companion notes`)
+   - Summary: Fibered/seam formulation and its identification limits.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Critical_Line_As_Fibered_Object.tex`
+20. **FF06e — Spectral Rigidity and the Shuffle Knife** (`Methodology`)
+   - Summary: Finite-sample discriminants and reference ensembles.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Spectral_Rigidity_Shuffle_Knife.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex`
+21. **FF06f — Prime-Carrier Position Form Factor** (`Methodology`)
+   - Summary: Position statistics and the prime/zero correspondence.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Prime_Carrier_Position_Form_Factor.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Prime_Carrier_Position_Form_Factor.tex`
+22. **FF06g-M — Form/Function Relativity** (`Methodology`)
+   - Summary: Reference-frame dependence of the form/function labels.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Form_Function_Relativity.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Form_Function_Relativity.tex`
+23. **FF06h-M — Scaled Invariance of Infinity and Zero** (`Methodology`)
+   - Summary: Resolution-relative counts and joint-scaling invariants.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex`
+24. **I7 — Section 9 Cone Chain and Four-Thirds Tests** (`Methodology`)
+   - Summary: Exact constraints and negative controls.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex`
+25. **FF06g-L — The Geometry Engine** (`Later research sequence`)
+   - Summary: Reference-engine specification.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Geometry_Engine.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Geometry_Engine.tex`
+26. **FF06h-L — When a Number Lies** (`Later research sequence`)
+   - Summary: Relational limits and domain tests.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/When_a_Number_Lies.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/When_a_Number_Lies.tex`
+27. **FF06i — The Reversible Flattening** (`Later research sequence`)
+   - Summary: Reversible representation changes.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening.tex`
+28. **FF06J — Reversible Flattening Monograph** (`Later research sequence`)
+   - Summary: Expanded presentation of the research thread.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening_Monograph.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex`
+29. **FF06K — Reversible Flattening Process Record** (`Later research sequence`)
+   - Summary: Historical process record.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening_Process_Record.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex`
+30. **K1 — The Elimination Ledger** (`Later research sequence`)
+   - Summary: Falsifications and revised interpretations.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/The_Elimination_Ledger.tex`
+31. **Σ — One Mechanism, Many Forms** (`Later research sequence`)
+   - Summary: Consolidated synthesis.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex`
+32. **Three-Layer Decomposition** (`Later research sequence`)
+   - Summary: Level decomposition of the zero statistics.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/Three_Layer_Decomposition.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/later_FF06_series/Three_Layer_Decomposition.tex`
+33. **Form, Function, and Asymmetry** (`Monographs and engineering`)
+   - Summary: Consolidated core monograph with dated amendments.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/Form_Function_and_Asymmetry.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/Form_Function_and_Asymmetry.tex`
+34. **Paper D — Deterministic AI Stack PDR** (`Monographs and engineering`)
+   - Summary: Engineering blueprint, not a benchmark certification.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/ACS_Deterministic_AI_Stack_PDR.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/ACS_Deterministic_AI_Stack_PDR.tex`
+35. **Discrete Geometry Formalism** (`Monographs and engineering`)
+   - Summary: Dynamical epistemic algebra formalization.
+   - PDF: `https://tensorrent.github.io/ACS-Framework/papers/discrete_geometry_formalism.pdf`
+   - LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/discrete_geometry_formalism.tex`
+
+---
+
+## 7. Chronological Research & Verification Timeline
+
+- **2026-03 → 2026-06 · Core Trilogy & FF06 Methodology — Form/Function Asymmetry, Palatini Attractor, Riemann Stationarity & Inversion Arc**
+  - Detail: Establishment of the BCH–TE morphism, Paper A (sl(3,R) inside sl(4,R)), Paper B (stationarity & Wronskian non-Poisson proof), Paper B′ (shuffle-knife surrogates at seed 20260423), Paper C (Killing orthogonality & 3-class taxonomy), and the FF06 methodology sequence.
+  - Primary PDF: `https://tensorrent.github.io/ACS-Framework/papers/Form_Function_and_Asymmetry.pdf` | LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/Form_Function_and_Asymmetry.tex`
+- **2026-06-06 → 2026-07-26 · Elimination Ledger & Framing Transformer — Strip-Mine Falsification Campaign (Q1–Q7) & Möbius-Screw Spin-Parity Kill**
+  - Detail: Systematic adversarial falsification of the program's own load-bearing conjectures: Q4 (ΔI ≡ c-function killed), Q3 ((2πe)^d/q killed at d=2 by 51 Dedekind zeros), Q1 (instrument-swap refraction table leaving h̃/h = 2/3), and Framing Transformer proof that n=0 untwisted circle is spinorial (killing Sl=2 ↔ g=2 and proving g=1 for all uniform closed curves).
+  - Primary PDF: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.pdf` | LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/notes/Framing_Transformer_Spin_Parity.tex`
+- **2026-08-07 → 2026-08-12 · Editorial Audit & Byte-Reproducible Figures — 99-Item Audit Closure, 360-Entry In-Repo Glossary & 15 Computed Paper Figures**
+  - Detail: Replacement of all 27 placeholder figure PDFs with scripts/generate_paper_figures.py (12 computed from live algebra/Odlyzko zeros, 1 tabulated, 2 schematic), resolution of Wronskian convention C3 and torsion 0:1:4 vs two-tier basis readings, and disambiguation of FF06g/h (-M vs -L).
+  - Primary PDF: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Form_Function_Relativity.pdf` | LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/methodology/Form_Function_Relativity.tex`
+- **2026-09-11 → 2026-09-24 · Consolidated Publication & CI Verification — Two New Consolidation Papers, 33 Manuscript Amendments & 58-Check Science Driver**
+  - Detail: Publication of Complete Scalar Actions and Identifiability Boundaries (68 real coordinates, 6 neutral blind directions) and Condensate Binding and Particle-Identification Limits, amending all 33 prior LaTeX manuscripts and binding 35 PDFs + 516 evidence receipt hashes under GitHub Actions CI.
+  - Primary PDF: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.pdf` | LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Action_Identifiability.tex`
+- **2026-09-29 → 2026-10-30 · Provenance Disclosure & Documentary Site — Author Provenance, Analog MoE Disclosure & Self-Contained Documentary Site**
+  - Detail: Formal disclosure of Bradley Wallace's 5,000–6,000 hours of solo research and voice-directed Analog MoE assistive workflow (dyslexia/ADHD accommodation), coupled with an offline-verified documentary site (vendored Three.js 0.186.1 + KaTeX 0.19.0, SHA-pinned CI, and Playwright desktop/mobile light/dark smoke gates).
+  - Primary PDF: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.pdf` | LaTeX: `https://tensorrent.github.io/ACS-Framework/papers/updates/ACS_Condensate_Carrier_Boundary.tex`
+
+---
+
+## 8. Author Provenance & Analog Mixture-of-Experts (Analog MoE) Disclosure
+
+- **Sole Human Author**: Bradley Wallace (Independent Researcher, TensoRrent), 5,000–6,000 hours of solo theoretical and computational research.
+- **Accessibility & Neurodiversity Context**: Developed using a voice-directed cognitive-accessibility workflow accommodating dyslexia, ADHD, and dysgraphia/writing constraints.
+- **Analog Mixture-of-Experts (Analog MoE) Workflow**: Frontier language models and symbolic/numerical compute harnesses are used strictly as an assistive transcription and adversarial falsification layer. Every candidate claim is subjected to deterministic scripts and strip-mine kill tests (`Q1`–`Q7`, `F-1`–`F-23`); refuted claims are preserved permanently in the Tier T4 Elimination Ledger.
+
+---
+
+## 9. Machine-Parseable Consolidated JSON Payload
+
+```json
+{
+  "schema_version": 1,
+  "framework": "Asymptotic Compatibility Synthesis (ACS) Framework",
+  "author": {
+    "name": "Bradley Wallace",
+    "organization": "TensoRrent",
+    "role": "Independent Researcher",
+    "methodology": "Voice-directed Analog Mixture-of-Experts (Analog MoE) adversarial verification workflow"
+  },
+  "urls": {
+    "site": "https://tensorrent.github.io/ACS-Framework/",
+    "repository": "https://github.com/tensorrent/ACS-Framework",
+    "llm_txt": "https://tensorrent.github.io/ACS-Framework/llm.txt",
+    "llms_txt": "https://tensorrent.github.io/ACS-Framework/llms.txt",
+    "catalog_json": "https://tensorrent.github.io/ACS-Framework/data/catalog.json",
+    "claims_json": "https://tensorrent.github.io/ACS-Framework/data/claims.json",
+    "timeline_json": "https://tensorrent.github.io/ACS-Framework/data/timeline.json",
+    "assets_manifest_json": "https://tensorrent.github.io/ACS-Framework/assets/manifest.json"
+  },
+  "verification_metrics": {
+    "canonical_manuscripts": 35,
+    "publication_science_checks": 58,
+    "canonical_pytest_modules": 46,
+    "verified_receipt_hashes": 516,
+    "canonical_seed": 20260423,
+    "pdg_v_gev": 246.22,
+    "odlyzko_zeros_tested": 100000
+  },
+  "non_claims": [
+    "Does NOT prove the Riemann Hypothesis.",
+    "Constructs NO self-adjoint Hilbert-Polya operator.",
+    "sl(3,R) inside sl(4,R) closure selection is Tier T3 numerical (50,000 Grassmannian samples), NOT an analytical uniqueness proof.",
+    "Framing self-linking |Sl|=2 does NOT generate electron g=2 (falsified Tier T4; uniform closed loops yield g=1 identically).",
+    "Transfer-entropy asymmetry Delta I is NOT identical to the Zamolodchikov / Casini-Huerta RG c-function (falsified Tier T4, Q4).",
+    "Degree-d height floor formula (2*pi*e)^d/q is falsified at d=2 by 51 actual zeros of Dedekind zeta_Q(i) (Tier T4, Q3)."
+  ],
+  "invariables": [
+    {
+      "id": "INV-1",
+      "name": "Net Transfer Entropy Primitive (ΔI)",
+      "statement": "Any two mutually-constraining fields — Form (structural information) and Function (dynamic information) — generate net transfer entropy ΔI = T_{Y->X} - T_{X->Y}; its sign defines directional governance and ΔI = 0 defines the attractor."
+    },
+    {
+      "id": "INV-2",
+      "name": "BCH–TE Morphism",
+      "statement": "The second-order Taylor coefficient of net transfer entropy ΔI(ε) under flow composition equals the Lie bracket [f, g]: ΔI(ε) = ε⟨f-g, ∇log(dμ/dν)⟩ + 2ε²⟨[f,g], ∇log(dμ/dν)⟩ + O(ε³) (Tier T2 finite-dim proof; T1 machine-verified)."
+    },
+    {
+      "id": "INV-3",
+      "name": "Form / Function Ontology",
+      "statement": "Across substrates (gravity, Riemann zeros, condensates, attention), Form encodes marginal/structural constraints while Function encodes exact relational/positional dynamics."
+    },
+    {
+      "id": "INV-4",
+      "name": "Operator-Type Ladder",
+      "statement": "bracket(Function, Function) -> Form; holonomy(bracket, Function) -> irreducible Form."
+    },
+    {
+      "id": "INV-5",
+      "name": "Inversion Arc",
+      "statement": "A system that solves a constraint becomes the next constraint; role exchange f <-> g flips the sign of ΔI at 1st and 2nd order, and Killing orthogonality tr([X,Y]X) = 0 enforces algebraic non-traversability."
+    },
+    {
+      "id": "INV-6",
+      "name": "Tensegrity & Zero-Mode Gauge Freedom",
+      "statement": "Rigidity-matrix zero modes correspond to gauge freedoms; in the 68-coordinate scalar action, 6 of 17 quartic directions vanish identically on the neutral slice."
+    },
+    {
+      "id": "INV-7",
+      "name": "Four-Tier Epistemic Discipline (T1-T4)",
+      "statement": "Every claim is classified T1 (Machine-Verified), T2 (Proved in Paper), T3 (Numerically Verified), or T4 (Explicitly Falsified). Tiers never promote automatically; T4 falsifications are preserved permanently in the append-only Elimination Ledger."
+    },
+    {
+      "id": "INV-8",
+      "name": "Local Validity vs Global Overreach",
+      "statement": "Each operator lens is valid within its explicit domain boundary and fails when universalized without checking representation or normalization invariance (REFRACTION vs INVARIANT)."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "T1",
+      "name": "Machine-Verified",
+      "rule": "Automated test passes and reproduces deterministically by running the repository verification suite."
+    },
+    {
+      "id": "T2",
+      "name": "Proved in Paper",
+      "rule": "Complete mathematical derivation or structural proof in the canonical LaTeX manuscript, human-verified."
+    },
+    {
+      "id": "T3",
+      "name": "Numerically Verified",
+      "rule": "Consistent across seeded numerical sweeps and ensembles, not yet established as an unconditional theorem."
+    },
+    {
+      "id": "T4",
+      "name": "Explicitly Falsified",
+      "rule": "Computation or structural proof shows the conjecture is false. Preserved in the append-only Elimination Ledger; never hidden."
+    }
+  ],
+  "claims": [
+    {
+      "id": "UPD-01",
+      "domain": "24 Sept Update",
+      "claim": "68-coordinate scalar sector & 6 neutral-family blind quartic directions",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "68 real coords, 17 quartics, 6 vanish on neutral slice",
+      "scope": "Identical neutral observations coexist with stable, flat, and unstable transverse spectra; physical masses require the kinetic metric.",
+      "script": "code/publication_20260924/verify_science.py",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "tex": "papers/updates/ACS_Action_Identifiability.tex"
+    },
+    {
+      "id": "UPD-02",
+      "domain": "24 Sept Update",
+      "claim": "Condensate carrier boundary & withdrawal of framing g=2, singlet-color, and propagating algebraic torsion",
+      "tier": "T1",
+      "axis": "BOUNDARY",
+      "metric": "58 fresh checks + 516 verified receipt hashes",
+      "scope": "Classical scalar binding is conditional on the specified action; separates binding from physical particle identification.",
+      "script": "code/publication_20260924/verify_science.py",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "tex": "papers/updates/ACS_Condensate_Carrier_Boundary.tex"
+    },
+    {
+      "id": "PA-01",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "BCH–TE morphism: 2nd-order transfer entropy coefficient equals the Lie bracket [f, g]",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "ΔI(ε) = ε⟨f−g,∇log(dμ/dν)⟩ + 2ε²⟨[f,g],∇log(dμ/dν)⟩ + O(ε³)",
+      "scope": "Proved in finite dimensions via exact Cartan formula [L_f, L_g] = L_{[f,g]}; infinite-dimensional Palatini extension is explicitly conjectured.",
+      "script": "code/acs_codebase/src/paper_a/",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-02",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Palatini bracket image Im(Φ) = sl(4,R) (dim 15 = 9 torsion + 6 Lorentz) & sl(3,R) 5+3 closure attractor",
+      "tier": "T3",
+      "axis": "CANDIDATE",
+      "metric": "D(sl(3,R)) = 1.4e-16 vs min random Gr(8,15) = 0.49 (50k samples)",
+      "scope": "Numerical selection across 50,000 Grassmannian samples, not an analytical uniqueness theorem. Complexification J(T) = i·sym(T) + anti(T) imports unitarity.",
+      "script": "code/acs_codebase/src/paper_a/selection_full.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-03",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Three fermion generations N_gen = 3 from Jacobi identity truncation at BCH order 3",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "‖Jacobi‖ = 6e-15 at order 3; bosonic ρ_vac = +512/3 − 512/3 = 0 exact",
+      "scope": "Exact rational and machine-precision verification on the sl(4,R) Palatini generator algebra.",
+      "script": "code/acs_codebase/src/paper_a/three_generations.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-04",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Yukawa ratio h̃/h = 2/3 is the sole full normalization-invariant survivor under Q1 instrument swap",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "h̃/h = 2/3 invariant; g₄ (4/3→2/3) & λ_φ = 2√3/27 split; γ_BI (0.2741→0.1902) refracts",
+      "scope": "Relations survive instrument swap; bare normalization-laden constants refract under trace/representation change.",
+      "script": "code/acs_codebase/src/paper_a/higgs_derivation.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-05",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Coleman–Weinberg 6→5 parameter reduction (tan β gauge-protected flat direction)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Fermion-dominated potential drives minimum to boundary; CW 6→5 fails",
+      "scope": "Explicitly falsified (F-11): tan β remains a free parameter in the 6-input Branch A ledger.",
+      "script": "code/acs_codebase/src/paper_a/betac_tan_beta.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PB-01",
+      "domain": "Paper B · Riemann Spectral",
+      "claim": "RH ⇒ uniform stationarity of F_N(x) and σ = 1/2 as unique center manifold (pure rotation)",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "α(2,001,052 zeros) = +0.001259; off-line injection recovers α = 2σ − 1 within 1.5%",
+      "scope": "Forward implication proved via AM–GM; converse is conditional on a minimum-gap bound verified only to N = 200 (does not prove RH).",
+      "script": "code/acs_codebase/src/paper_b/renormalized_stability.py",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "tex": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex"
+    },
+    {
+      "id": "PB-02",
+      "domain": "Paper B · Riemann Spectral",
+      "claim": "Wronskian W[f,g] = f'g − g'f is a Lie bracket but fails the Leibniz Poisson rule by −fgh'",
+      "tier": "T2",
+      "axis": "FALSIFIED",
+      "metric": "W[fg,h] − (fW[g,h] + gW[f,h]) = −fgh' exact",
+      "scope": "Disproves the earlier plasma-Hamiltonian symplectic reading (F-3); any symplectic structure must live on mode-amplitude space.",
+      "script": "code/acs_codebase/src/paper_b/wronskian_leibniz.py",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "tex": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex"
+    },
+    {
+      "id": "PB-03",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "Shuffle-knife witness split: exactly two robust FUNCTION faces (Arithmetic 11,497σ, Local-order 26σ)",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "100,000 Odlyzko zeros, 60 surrogates, seed 20260423; effective rank ≈ 4.8/5",
+      "scope": "Spacing, counting, and Wigner shape flip to FORM (0.4–1.0σ) under GUE-marginal shuffling; no independent third FUNCTION face exists.",
+      "script": "code/hp_knife_suite/hp_vantage_points.py",
+      "pdf": "papers/core_trilogy/Spectral_Witness_Refinement.pdf",
+      "tex": "papers/core_trilogy/Spectral_Witness_Refinement.tex"
+    },
+    {
+      "id": "PB-04",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "Hilbert–Pólya wall resolved in chiral anti-commuting antiunitary class (C H* C⁻¹ = −H, C² = −1, β = codim − 1 = 2)",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "|Im W|/|Re W| = 0.0001 (real orbits) + β = 2.019 (GUE repulsion) coexist in chiral class",
+      "scope": "Pins the symmetry class required to reconcile T-even orbit amplitudes with T-broken GUE repulsion; constructs no operator.",
+      "script": "code/hp_knife_suite/hp_wall_resolution_class.py",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "tex": "papers/notes/Critical_Line_As_Fibered_Object.tex"
+    },
+    {
+      "id": "PB-05",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "3-rung prime-power harmonic tower p^{−k/2} and L-function commutator law ‖[ι,T]‖_k = 0 ⇔ ord(χ) | 2k",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "Rung-2 slope −0.533, Rung-3 slope −1.015 (R²=1.00); 33-line corr 1.000; Rung-2 L-phase stays T3 (0.26 floor)",
+      "scope": "Exhibits Weil–Guinand explicit formula and Dirichlet twist; honest negative recorded where rung-2 L-zero phase remains noise-limited at 150 zeros.",
+      "script": "code/hp_knife_suite/hp_twist_hardened.py",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "tex": "papers/notes/Critical_Line_As_Fibered_Object.tex"
+    },
+    {
+      "id": "PC-01",
+      "domain": "Paper C · Inversion Arc",
+      "claim": "Role exchange f ↔ g flips ΔI sign at 1st & 2nd order; Killing orthogonality tr([X,Y]X) = 0 gives algebraic non-traversability",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "π_X([X,Y]) ≡ 0 to < 1e-15 across 1,000 random sl(3,R) & sl(4,R) pairs",
+      "scope": "Algebraic non-traversability of the bracket output back to either input; three distinct ambiguity dimensions (14, 15, 19) kept separate.",
+      "script": "code/acs_codebase/src/paper_c/killing_orthogonality.py",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "tex": "papers/core_trilogy/Holographic_Spectral_Inversion.tex"
+    },
+    {
+      "id": "PC-02",
+      "domain": "Paper C · Inversion Arc",
+      "claim": "Universal 2π holonomy inversion across all ACS domains",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "spec(ad_{T_{B-L}}) = {0(×9), ±4/3(×3)} real ⇒ ‖exp(2π ad_{T_{B-L}})‖ ≈ e^{8π/3} ≈ 4,348.5 ≠ 1",
+      "scope": "Falsified (F-2): sl(4,R) adjoint flow is hyperbolic (Cayley–Hamilton ad³ = (16/9)ad), not elliptic; 2π closure is representation-specific to SU(2).",
+      "script": "code/acs_codebase/src/paper_c/spectral_taxonomy.py",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "tex": "papers/core_trilogy/Holographic_Spectral_Inversion.tex"
+    },
+    {
+      "id": "FT-01",
+      "domain": "Framing Transformer",
+      "claim": "Călugăreanu invariance Tw + Wr = Sl = −2.000000 across donut-to-throat deformation & SU(2) parity law σ = (−1)^{Sl+1}",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "T·U = 0 to 2.2e-16; Tw = −1.033761, Wr = −0.966239, Sl = −2.000000; S³ Laplace λ = −3 (deg 4)",
+      "scope": "Verified by two independent routes (Călugăreanu sum vs Gauss double integral) and closed-form quaternion lift to S³.",
+      "script": "code/framed_unknot/framing_transformer.py",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "id": "FT-02",
+      "domain": "Framing Transformer",
+      "claim": "Self-linking magnitude |Sl| = 2 as the geometric origin of the electron g = 2 factor (and geometric g ≠ 1 for uniform closed loops)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "n = 0 untwisted circle also gives σ = −1; moment ratio μ/⟨L⟩ shares vector area A ⇒ g = 1 exact",
+      "scope": "Double kill: Sl = 2 and Sl = 0 lie in the same Z/2 spinorial class, and uniform q/m circulation forces g = 1 identically.",
+      "script": "code/framed_unknot/moment_ratio.py",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "id": "EL-01",
+      "domain": "Elimination Ledger",
+      "claim": "Q4: Transfer-entropy asymmetry ΔI is identical to the Zamolodchikov / Casini–Huerta RG c-function (FF06Σ Link 3)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Fails on sign (signed vs c ≥ 0), symmetric fixed-point value (0 vs c ≠ 0), and category (temporal vs spatial)",
+      "scope": "Verdict: 'No reading is both novel and true.' Cross-domain sameness in Σ is scoped as structural analogy, not identity.",
+      "script": "code/acs_codebase/src/paper_c/",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "tex": "papers/later_FF06_series/The_Elimination_Ledger.tex"
+    },
+    {
+      "id": "EL-02",
+      "domain": "Elimination Ledger",
+      "claim": "Q3: Degree-d height floor scaling law T_min(d,q) = (2πe)^d / q",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "At d = 2, q = 4 (Dedekind ζ_{Q(i)}), formula gives 72.93, sitting above 51 actual zeros (true floor 8.54)",
+      "scope": "Degenerate-case trap: (2πe)^d/q and 2πe·q^{−1/d} coincide only at d = 1. The d = 1 value 2πe ≈ 17.08 survives.",
+      "script": "code/hp_knife_suite/reconstructed/q3_scaling_test_reconstructed.py",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "tex": "papers/later_FF06_series/The_Elimination_Ledger.tex"
+    },
+    {
+      "id": "EL-03",
+      "domain": "Elimination Ledger",
+      "claim": "I7: Section 9 spectral-gap-to-cone chain & 4/3 lattice mechanism under K1/K2",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "TFIM exhaustive chain support 0/12 (leakage leg sign +0.9636); 4/3 collapses to n = d + 1 identity",
+      "scope": "Machine-verified negative control across TFIM, cross-model (1/12), and long-range (5/12) passes.",
+      "script": "code/issue7/verify_issue7_pipeline.py",
+      "pdf": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf",
+      "tex": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex"
+    },
+    {
+      "id": "EL-04",
+      "domain": "Elimination Ledger",
+      "claim": "Q2: BRA integer resonance kernel 489× speed superiority over FP32 baseline",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Measured 1.37× to 1.82× slower (f64 vs f32); cross-run bitwise determinism survives (T1)",
+      "scope": "Speed projection withdrawn;Paper D is scoped as a deterministic engineering blueprint, not a throughput certification.",
+      "script": "code/benchmark_efficiency.py",
+      "pdf": "papers/ACS_Deterministic_AI_Stack_PDR.pdf",
+      "tex": "papers/ACS_Deterministic_AI_Stack_PDR.tex"
+    }
+  ],
+  "falsifications_f1_f23": [
+    {
+      "id": "F-1",
+      "claim": "ad^3 = 2*ad for integer eigenvalues",
+      "mechanism": "Requires eigenvalue lambda = 1/sqrt(2); actual sl(4,R) B-L generator satisfies ad^3 = (16/9)*ad."
+    },
+    {
+      "id": "F-2",
+      "claim": "Universal 2pi holonomy inversion across all ACS domains",
+      "mechanism": "sl(4,R) adjoint spectrum {0(x9), +-4/3(x3)} is real/hyperbolic, so ||exp(2pi ad)|| approx e^{8pi/3} approx 4348.5 != 1. 2pi spinor closure is representation-specific to SU(2)."
+    },
+    {
+      "id": "F-3",
+      "claim": "Wronskian W[f,g] = f'g - g'f is a canonical Poisson bracket",
+      "mechanism": "Fails the Leibniz rule by an exact remainder: W[fg,h] - (fW[g,h] + gW[f,h]) = -fgh', refuting the early plasma-Hamiltonian reading."
+    },
+    {
+      "id": "F-4",
+      "claim": "IR Pythagorean lattice imprint on PDG particle masses (N1)",
+      "mechanism": "Monte Carlo z-scores z in [-0.7, +0.3] vs PDG masses — clean statistical null."
+    },
+    {
+      "id": "F-5",
+      "claim": "Intrinsic algebraic chirality without physical unitarity input",
+      "mechanism": "Chirality bias vanishes under covariant conjugation; unitarity enters via complexification J(T) = i*sym(T) + anti(T)."
+    },
+    {
+      "id": "F-6",
+      "claim": "Killing form alone selects Lorentzian (3,1) signature / EM as torsion annihilator",
+      "mechanism": "Cartan involution != parity involution; torsion sector Sym_0(4) has centralizer {0} in sl(4,R)."
+    },
+    {
+      "id": "F-7",
+      "claim": "Holonomy stability selects spacetime signature (Route C)",
+      "mechanism": "All signatures produce equal holonomy norms under the tested functional."
+    },
+    {
+      "id": "F-8",
+      "claim": "Bi-doublet quartic coupling alpha_2 is an optional free parameter",
+      "mechanism": "Forbidden by representation theory: Phi ~ (1,2,2) is an SU(4) singlet so T^A Phi = 0 => alpha_2 = 0 identically."
+    },
+    {
+      "id": "F-9",
+      "claim": "Tree-level beta_c explains fermion mass hierarchy",
+      "mechanism": "Tree-level equal-VEV no-go forces tan(beta) = +-1 and degenerate up/down mass matrices."
+    },
+    {
+      "id": "F-10",
+      "claim": "Tree-level Yukawa rescue of tan(beta)",
+      "mechanism": "Identity M_u - M_d = (h - h_tilde)(kappa_1 - kappa_2) forces M_u = M_d and |V_CKM| = I at equal VEVs."
+    },
+    {
+      "id": "F-11",
+      "claim": "Coleman-Weinberg 1-loop 6->5 parameter reduction fixing tan(beta)",
+      "mechanism": "Fermion-dominated 1-loop potential drives minimum to boundary; tan(beta) remains a gauge-protected flat direction in the 6-input Branch A ledger."
+    },
+    {
+      "id": "F-12",
+      "claim": "115-dimensional exceptional subalgebra closure",
+      "mechanism": "Proper Lie bracket saturation shows the generated algebra is all of gl(12) (dim 144)."
+    },
+    {
+      "id": "F-13",
+      "claim": "N3 uniform-X prime-gap transition conjecture",
+      "mechanism": "Falsified numerically in the tested prime-gap range."
+    },
+    {
+      "id": "F-14",
+      "claim": "Assembly order selects distinct packing outcomes ('acid-to-water')",
+      "mechanism": "Greedy packing jams near ~5.5 regardless of assembly order."
+    },
+    {
+      "id": "F-15",
+      "claim": "Order-asymmetry acts as a stable signed lever at large N",
+      "mechanism": "Sign oscillates and amplitude decays with N."
+    },
+    {
+      "id": "F-16",
+      "claim": "Shell-commensuration of asymmetry at centered-hexagonal numbers",
+      "mechanism": "Zero crossings do not align with centered-hexagonal numbers."
+    },
+    {
+      "id": "F-17",
+      "claim": "Sound and light are two octaves of one electromagnetic medium",
+      "mechanism": "4/4 pre-registered scaling tests fail."
+    },
+    {
+      "id": "F-18",
+      "claim": "Particle/wave duality is infinite Mandelbrot self-similarity",
+      "mechanism": "Generative models exhibit a characteristic cutoff scale."
+    },
+    {
+      "id": "F-19",
+      "claim": "Central-number residual equals the Higgs quartic residual ('same gap')",
+      "mechanism": "Confuses angle-independent charge cancellation with scale-dependent coupling magnitude."
+    },
+    {
+      "id": "F-20",
+      "claim": "Higgs quartic residual is a UV Planck-scale boundary condition",
+      "mechanism": "SM RG running of lambda crosses lambda_ACS = 2*sqrt(3)/27 once near the electroweak scale (~130-180 GeV) and runs down."
+    },
+    {
+      "id": "F-21",
+      "claim": "Hilbert-Polya operator H built from balanced symmetrized duality involution",
+      "mechanism": "Balanced involutions force beta = 1 (GOE) and break GUE level repulsion (beta = 2)."
+    },
+    {
+      "id": "F-22",
+      "claim": "Hilbert-Polya operator via arithmetic diagonal perturbation of GUE",
+      "mechanism": "Cosmetic when weak, destroys GUE spacing when strong; no intermediate selection regime exists."
+    },
+    {
+      "id": "F-23",
+      "claim": "Lag-1 spacing autocorrelation is a beyond-GUE arithmetic invariant",
+      "mechanism": "Observed 0.050 gap sits inside the 0.08 finite-sample apparatus band; vanishes under bare permuted spacings."
+    }
+  ],
+  "open_problems": [
+    {
+      "id": "O-1",
+      "title": "Arithmetic realization of the Hilbert-Polya operator in the pinned chiral class",
+      "status": "Symmetry class pinned (anti-commuting antiunitary C H* C^-1 = -H, C^2 = -1, beta = codim - 1 = 2); explicit arithmetic operator construction remains open."
+    },
+    {
+      "id": "O-2",
+      "title": "FeynRules / UFO collider model export for the 68-coordinate scalar & Pati-Salam sector",
+      "status": "Open engineering & phenomenology export."
+    },
+    {
+      "id": "O-3",
+      "title": "First-principles action principle for the dual gravitational functional S_tilde_g",
+      "status": "Open continuum variational problem."
+    },
+    {
+      "id": "O-4",
+      "title": "High-degree L-function zero-height floor verification (d > 1, q > 1)",
+      "status": "d=1 value 2*pi*e survives; (2*pi*e)^d/q falsified at d=2 by Dedekind zeta_Q(i); full LMFDB sweep open."
+    },
+    {
+      "id": "O-5",
+      "title": "Complete Standard Model fermion & gauge embedding from the GL(4,R) frame bundle",
+      "status": "Condensate carrier boundary (24 Sept 2026) separates classical scalar binding from full SM quantum numbers."
+    },
+    {
+      "id": "O-6",
+      "title": "Full bulk-boundary ER=EPR holographic dictionary from Killing orthogonality",
+      "status": "Algebraic non-traversability tr([X,Y]X) = 0 proved (T2); dynamical bulk geometry remains open."
+    },
+    {
+      "id": "O-7",
+      "title": "Global singlet projection for the Barbero-Immirzi parameter (0.274067 vs 0.2375)",
+      "status": "Local representation swap refracts gamma_BI (Q1); global projection open."
+    },
+    {
+      "id": "O-8",
+      "title": "Right-handed neutrino X-ray bound tension",
+      "status": "Resolved via decoupling (M_WR >= 16 TeV, v_R >= 49 TeV), which kills the keV sterile-neutrino dark-matter reading."
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-03 → 2026-06",
+      "phase": "Core Trilogy & FF06 Methodology",
+      "title": "Form/Function Asymmetry, Palatini Attractor, Riemann Stationarity & Inversion Arc",
+      "detail": "Establishment of the BCH–TE morphism, Paper A (sl(3,R) inside sl(4,R)), Paper B (stationarity & Wronskian non-Poisson proof), Paper B′ (shuffle-knife surrogates at seed 20260423), Paper C (Killing orthogonality & 3-class taxonomy), and the FF06 methodology sequence.",
+      "pdf": "papers/Form_Function_and_Asymmetry.pdf",
+      "tex": "papers/Form_Function_and_Asymmetry.tex"
+    },
+    {
+      "date": "2026-06-06 → 2026-07-26",
+      "phase": "Elimination Ledger & Framing Transformer",
+      "title": "Strip-Mine Falsification Campaign (Q1–Q7) & Möbius-Screw Spin-Parity Kill",
+      "detail": "Systematic adversarial falsification of the program's own load-bearing conjectures: Q4 (ΔI ≡ c-function killed), Q3 ((2πe)^d/q killed at d=2 by 51 Dedekind zeros), Q1 (instrument-swap refraction table leaving h̃/h = 2/3), and Framing Transformer proof that n=0 untwisted circle is spinorial (killing Sl=2 ↔ g=2 and proving g=1 for all uniform closed curves).",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "date": "2026-08-07 → 2026-08-12",
+      "phase": "Editorial Audit & Byte-Reproducible Figures",
+      "title": "99-Item Audit Closure, 360-Entry In-Repo Glossary & 15 Computed Paper Figures",
+      "detail": "Replacement of all 27 placeholder figure PDFs with scripts/generate_paper_figures.py (12 computed from live algebra/Odlyzko zeros, 1 tabulated, 2 schematic), resolution of Wronskian convention C3 and torsion 0:1:4 vs two-tier basis readings, and disambiguation of FF06g/h (-M vs -L).",
+      "pdf": "papers/methodology/Form_Function_Relativity.pdf",
+      "tex": "papers/methodology/Form_Function_Relativity.tex"
+    },
+    {
+      "date": "2026-09-11 → 2026-09-24",
+      "phase": "Consolidated Publication & CI Verification",
+      "title": "Two New Consolidation Papers, 33 Manuscript Amendments & 58-Check Science Driver",
+      "detail": "Publication of Complete Scalar Actions and Identifiability Boundaries (68 real coordinates, 6 neutral blind directions) and Condensate Binding and Particle-Identification Limits, amending all 33 prior LaTeX manuscripts and binding 35 PDFs + 516 evidence receipt hashes under GitHub Actions CI.",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "tex": "papers/updates/ACS_Action_Identifiability.tex"
+    },
+    {
+      "date": "2026-09-29 → 2026-10-30",
+      "phase": "Provenance Disclosure & Documentary Site",
+      "title": "Author Provenance, Analog MoE Disclosure & Self-Contained Documentary Site",
+      "detail": "Formal disclosure of Bradley Wallace's 5,000–6,000 hours of solo research and voice-directed Analog MoE assistive workflow (dyslexia/ADHD accommodation), coupled with an offline-verified documentary site (vendored Three.js 0.186.1 + KaTeX 0.19.0, SHA-pinned CI, and Playwright desktop/mobile light/dark smoke gates).",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "tex": "papers/updates/ACS_Condensate_Carrier_Boundary.tex"
+    }
+  ],
+  "papers_catalog": [
+    {
+      "label": "Complete Scalar Actions and Identifiability Boundaries",
+      "group": "Current consolidations",
+      "source": "papers/updates/ACS_Action_Identifiability.tex",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "summary": "Full scalar action, hidden directions, stability, scale freedom, and RG input dependence."
+    },
+    {
+      "label": "Condensate Binding and Particle-Identification Limits",
+      "group": "Current consolidations",
+      "source": "papers/updates/ACS_Condensate_Carrier_Boundary.tex",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "summary": "Charge, gauge carriers, framing, topology, color, and torsion boundaries."
+    },
+    {
+      "label": "Paper A — Palatini Gauge Attractor",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Palatini_Gauge_Attractor.tex",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "summary": "Gauge-algebra construction; read the corrected torsion and color claims."
+    },
+    {
+      "label": "Paper B — Riemann Spectral Critical Line",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "summary": "Finite spectral constructions and their limits; does not prove RH."
+    },
+    {
+      "label": "Paper B′ — Spectral Witness Refinement",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Spectral_Witness_Refinement.tex",
+      "pdf": "papers/core_trilogy/Spectral_Witness_Refinement.pdf",
+      "summary": "Witness survival and transport obstructions."
+    },
+    {
+      "label": "Paper C — Holographic Spectral Inversion",
+      "group": "Foundational papers",
+      "source": "papers/core_trilogy/Holographic_Spectral_Inversion.tex",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "summary": "Algebraic correspondences and amended interpretation limits."
+    },
+    {
+      "label": "N1 — Pythagorean Lattice Limits",
+      "group": "Companion notes",
+      "source": "papers/notes/Pythagorean_Lattice_Limits.tex",
+      "pdf": "papers/notes/Pythagorean_Lattice_Limits.pdf",
+      "summary": "Minimal algebra and lattice projections."
+    },
+    {
+      "label": "N2 — Adjoint Clifford Signature Selection",
+      "group": "Companion notes",
+      "source": "papers/notes/Adjoint_Clifford_Signature_Selection.tex",
+      "pdf": "papers/notes/Adjoint_Clifford_Signature_Selection.pdf",
+      "summary": "Grading and signature-selection proposal."
+    },
+    {
+      "label": "N3 — Prime-Gap Transition Operator",
+      "group": "Companion notes",
+      "source": "papers/notes/Prime_Gap_Transition_Operator.tex",
+      "pdf": "papers/notes/Prime_Gap_Transition_Operator.pdf",
+      "summary": "Operators on prime-gap ensembles."
+    },
+    {
+      "label": "Möbius Screw Electron",
+      "group": "Companion notes",
+      "source": "papers/notes/Mobius_Screw_Electron.tex",
+      "pdf": "papers/notes/Mobius_Screw_Electron.pdf",
+      "summary": "Framed-unknot proposal; the framing-to-g=2 inference is withdrawn."
+    },
+    {
+      "label": "Framing Transformer and Spin Parity",
+      "group": "Companion notes",
+      "source": "papers/notes/Framing_Transformer_Spin_Parity.tex",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "summary": "Frame-loop lift, parity, and a falsified moment-ratio inference."
+    },
+    {
+      "label": "Möbius Ribbon Capacitance",
+      "group": "Companion notes",
+      "source": "papers/notes/Mobius_Ribbon_Capacitance.tex",
+      "pdf": "papers/notes/Mobius_Ribbon_Capacitance.pdf",
+      "summary": "Capacitance models; cutoff and normalization limits remain explicit."
+    },
+    {
+      "label": "Klein-Foam Monad",
+      "group": "Companion notes",
+      "source": "papers/notes/Klein_Foam_Monad.tex",
+      "pdf": "papers/notes/Klein_Foam_Monad.pdf",
+      "summary": "Condensate ontology and its required physical completion."
+    },
+    {
+      "label": "Flag Condensate Nuclear Decay",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Nuclear_Decay.tex",
+      "pdf": "papers/notes/Flag_Condensate_Nuclear_Decay.pdf",
+      "summary": "Phase-slip and Gamow-channel model."
+    },
+    {
+      "label": "Alpha Overlap — Baseline",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Overlap.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Overlap.pdf",
+      "summary": "Baseline overlap proposal."
+    },
+    {
+      "label": "Alpha Overlap — Refined",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Refined.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Refined.pdf",
+      "summary": "Refined model and expanded catalog."
+    },
+    {
+      "label": "Alpha Overlap — Throat Channel",
+      "group": "Companion notes",
+      "source": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.tex",
+      "pdf": "papers/notes/Flag_Condensate_Palpha_Throat_Overlap.pdf",
+      "summary": "Throat-channel overlap model."
+    },
+    {
+      "label": "Density Engine and Many Worlds",
+      "group": "Companion notes",
+      "source": "papers/notes/Density_Engine_Many_Worlds.tex",
+      "pdf": "papers/notes/Density_Engine_Many_Worlds.pdf",
+      "summary": "Interpretive note, distinct from experimental confirmation."
+    },
+    {
+      "label": "Critical Line as a Fibered Object",
+      "group": "Companion notes",
+      "source": "papers/notes/Critical_Line_As_Fibered_Object.tex",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "summary": "Fibered/seam formulation and its identification limits."
+    },
+    {
+      "label": "FF06e — Spectral Rigidity and the Shuffle Knife",
+      "group": "Methodology",
+      "source": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.tex",
+      "pdf": "papers/methodology/Spectral_Rigidity_Shuffle_Knife.pdf",
+      "summary": "Finite-sample discriminants and reference ensembles."
+    },
+    {
+      "label": "FF06f — Prime-Carrier Position Form Factor",
+      "group": "Methodology",
+      "source": "papers/methodology/Prime_Carrier_Position_Form_Factor.tex",
+      "pdf": "papers/methodology/Prime_Carrier_Position_Form_Factor.pdf",
+      "summary": "Position statistics and the prime/zero correspondence."
+    },
+    {
+      "label": "FF06g-M — Form/Function Relativity",
+      "group": "Methodology",
+      "source": "papers/methodology/Form_Function_Relativity.tex",
+      "pdf": "papers/methodology/Form_Function_Relativity.pdf",
+      "summary": "Reference-frame dependence of the form/function labels."
+    },
+    {
+      "label": "FF06h-M — Scaled Invariance of Infinity and Zero",
+      "group": "Methodology",
+      "source": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.tex",
+      "pdf": "papers/methodology/Scaled_Invariance_of_Infinity_and_Zero.pdf",
+      "summary": "Resolution-relative counts and joint-scaling invariants."
+    },
+    {
+      "label": "I7 — Section 9 Cone Chain and Four-Thirds Tests",
+      "group": "Methodology",
+      "source": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex",
+      "pdf": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf",
+      "summary": "Exact constraints and negative controls."
+    },
+    {
+      "label": "FF06g-L — The Geometry Engine",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Geometry_Engine.tex",
+      "pdf": "papers/later_FF06_series/The_Geometry_Engine.pdf",
+      "summary": "Reference-engine specification."
+    },
+    {
+      "label": "FF06h-L — When a Number Lies",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/When_a_Number_Lies.tex",
+      "pdf": "papers/later_FF06_series/When_a_Number_Lies.pdf",
+      "summary": "Relational limits and domain tests."
+    },
+    {
+      "label": "FF06i — The Reversible Flattening",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening.pdf",
+      "summary": "Reversible representation changes."
+    },
+    {
+      "label": "FF06J — Reversible Flattening Monograph",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Monograph.pdf",
+      "summary": "Expanded presentation of the research thread."
+    },
+    {
+      "label": "FF06K — Reversible Flattening Process Record",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.tex",
+      "pdf": "papers/later_FF06_series/The_Reversible_Flattening_Process_Record.pdf",
+      "summary": "Historical process record."
+    },
+    {
+      "label": "K1 — The Elimination Ledger",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/The_Elimination_Ledger.tex",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "summary": "Falsifications and revised interpretations."
+    },
+    {
+      "label": "Σ — One Mechanism, Many Forms",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.tex",
+      "pdf": "papers/later_FF06_series/One_Mechanism_Many_Forms_Sigma.pdf",
+      "summary": "Consolidated synthesis."
+    },
+    {
+      "label": "Three-Layer Decomposition",
+      "group": "Later research sequence",
+      "source": "papers/later_FF06_series/Three_Layer_Decomposition.tex",
+      "pdf": "papers/later_FF06_series/Three_Layer_Decomposition.pdf",
+      "summary": "Level decomposition of the zero statistics."
+    },
+    {
+      "label": "Form, Function, and Asymmetry",
+      "group": "Monographs and engineering",
+      "source": "papers/Form_Function_and_Asymmetry.tex",
+      "pdf": "papers/Form_Function_and_Asymmetry.pdf",
+      "summary": "Consolidated core monograph with dated amendments."
+    },
+    {
+      "label": "Paper D — Deterministic AI Stack PDR",
+      "group": "Monographs and engineering",
+      "source": "papers/ACS_Deterministic_AI_Stack_PDR.tex",
+      "pdf": "papers/ACS_Deterministic_AI_Stack_PDR.pdf",
+      "summary": "Engineering blueprint, not a benchmark certification."
+    },
+    {
+      "label": "Discrete Geometry Formalism",
+      "group": "Monographs and engineering",
+      "source": "papers/discrete_geometry_formalism.tex",
+      "pdf": "papers/discrete_geometry_formalism.pdf",
+      "summary": "Dynamical epistemic algebra formalization."
+    }
+  ]
+}
+```

@@ -16,7 +16,7 @@ const shots = resolve(process.argv[3] ?? 'build/site-shots');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css',
   '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
   '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf', '.pdf': 'application/pdf', '.tex': 'text/plain',
-  '.glb': 'model/gltf-binary' };
+  '.txt': 'text/plain; charset=utf-8', '.glb': 'model/gltf-binary' };
 const VIEWS = [
   { name: 'desktop', viewport: { width: 1440, height: 900 } },
   { name: 'phone', viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true },

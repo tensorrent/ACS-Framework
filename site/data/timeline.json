@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "date": "2026-03 → 2026-06",
+      "phase": "Core Trilogy & FF06 Methodology",
+      "title": "Form/Function Asymmetry, Palatini Attractor, Riemann Stationarity & Inversion Arc",
+      "detail": "Establishment of the BCH–TE morphism, Paper A (sl(3,R) inside sl(4,R)), Paper B (stationarity & Wronskian non-Poisson proof), Paper B′ (shuffle-knife surrogates at seed 20260423), Paper C (Killing orthogonality & 3-class taxonomy), and the FF06 methodology sequence.",
+      "pdf": "papers/Form_Function_and_Asymmetry.pdf",
+      "tex": "papers/Form_Function_and_Asymmetry.tex"
+    },
+    {
+      "date": "2026-06-06 → 2026-07-26",
+      "phase": "Elimination Ledger & Framing Transformer",
+      "title": "Strip-Mine Falsification Campaign (Q1–Q7) & Möbius-Screw Spin-Parity Kill",
+      "detail": "Systematic adversarial falsification of the program's own load-bearing conjectures: Q4 (ΔI ≡ c-function killed), Q3 ((2πe)^d/q killed at d=2 by 51 Dedekind zeros), Q1 (instrument-swap refraction table leaving h̃/h = 2/3), and Framing Transformer proof that n=0 untwisted circle is spinorial (killing Sl=2 ↔ g=2 and proving g=1 for all uniform closed curves).",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "date": "2026-08-07 → 2026-08-12",
+      "phase": "Editorial Audit & Byte-Reproducible Figures",
+      "title": "99-Item Audit Closure, 360-Entry In-Repo Glossary & 15 Computed Paper Figures",
+      "detail": "Replacement of all 27 placeholder figure PDFs with scripts/generate_paper_figures.py (12 computed from live algebra/Odlyzko zeros, 1 tabulated, 2 schematic), resolution of Wronskian convention C3 and torsion 0:1:4 vs two-tier basis readings, and disambiguation of FF06g/h (-M vs -L).",
+      "pdf": "papers/methodology/Form_Function_Relativity.pdf",
+      "tex": "papers/methodology/Form_Function_Relativity.tex"
+    },
+    {
+      "date": "2026-09-11 → 2026-09-24",
+      "phase": "Consolidated Publication & CI Verification",
+      "title": "Two New Consolidation Papers, 33 Manuscript Amendments & 58-Check Science Driver",
+      "detail": "Publication of Complete Scalar Actions and Identifiability Boundaries (68 real coordinates, 6 neutral blind directions) and Condensate Binding and Particle-Identification Limits, amending all 33 prior LaTeX manuscripts and binding 35 PDFs + 516 evidence receipt hashes under GitHub Actions CI.",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "tex": "papers/updates/ACS_Action_Identifiability.tex"
+    },
+    {
+      "date": "2026-09-29 → 2026-10-30",
+      "phase": "Provenance Disclosure & Documentary Site",
+      "title": "Author Provenance, Analog MoE Disclosure & Self-Contained Documentary Site",
+      "detail": "Formal disclosure of Bradley Wallace's 5,000–6,000 hours of solo research and voice-directed Analog MoE assistive workflow (dyslexia/ADHD accommodation), coupled with an offline-verified documentary site (vendored Three.js 0.186.1 + KaTeX 0.19.0, SHA-pinned CI, and Playwright desktop/mobile light/dark smoke gates).",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "tex": "papers/updates/ACS_Condensate_Carrier_Boundary.tex"
+    }
+  ]
+}

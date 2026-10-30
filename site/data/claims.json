@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "seed": 20260423,
+  "tiers": [
+    {
+      "id": "T1",
+      "name": "Machine-Verified",
+      "rule": "Automated test passes and reproduces deterministically by running the repository verification suite."
+    },
+    {
+      "id": "T2",
+      "name": "Proved in Paper",
+      "rule": "Complete mathematical derivation or structural proof in the canonical LaTeX manuscript, human-verified."
+    },
+    {
+      "id": "T3",
+      "name": "Numerically Verified",
+      "rule": "Consistent across seeded numerical sweeps and ensembles, not yet established as an unconditional theorem."
+    },
+    {
+      "id": "T4",
+      "name": "Explicitly Falsified",
+      "rule": "Computation or structural proof shows the conjecture is false. Preserved in the append-only Elimination Ledger; never hidden."
+    }
+  ],
+  "claims": [
+    {
+      "id": "UPD-01",
+      "domain": "24 Sept Update",
+      "claim": "68-coordinate scalar sector & 6 neutral-family blind quartic directions",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "68 real coords, 17 quartics, 6 vanish on neutral slice",
+      "scope": "Identical neutral observations coexist with stable, flat, and unstable transverse spectra; physical masses require the kinetic metric.",
+      "script": "code/publication_20260924/verify_science.py",
+      "pdf": "papers/updates/ACS_Action_Identifiability.pdf",
+      "tex": "papers/updates/ACS_Action_Identifiability.tex"
+    },
+    {
+      "id": "UPD-02",
+      "domain": "24 Sept Update",
+      "claim": "Condensate carrier boundary & withdrawal of framing g=2, singlet-color, and propagating algebraic torsion",
+      "tier": "T1",
+      "axis": "BOUNDARY",
+      "metric": "58 fresh checks + 516 verified receipt hashes",
+      "scope": "Classical scalar binding is conditional on the specified action; separates binding from physical particle identification.",
+      "script": "code/publication_20260924/verify_science.py",
+      "pdf": "papers/updates/ACS_Condensate_Carrier_Boundary.pdf",
+      "tex": "papers/updates/ACS_Condensate_Carrier_Boundary.tex"
+    },
+    {
+      "id": "PA-01",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "BCH–TE morphism: 2nd-order transfer entropy coefficient equals the Lie bracket [f, g]",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "ΔI(ε) = ε⟨f−g,∇log(dμ/dν)⟩ + 2ε²⟨[f,g],∇log(dμ/dν)⟩ + O(ε³)",
+      "scope": "Proved in finite dimensions via exact Cartan formula [L_f, L_g] = L_{[f,g]}; infinite-dimensional Palatini extension is explicitly conjectured.",
+      "script": "code/acs_codebase/src/paper_a/",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-02",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Palatini bracket image Im(Φ) = sl(4,R) (dim 15 = 9 torsion + 6 Lorentz) & sl(3,R) 5+3 closure attractor",
+      "tier": "T3",
+      "axis": "CANDIDATE",
+      "metric": "D(sl(3,R)) = 1.4e-16 vs min random Gr(8,15) = 0.49 (50k samples)",
+      "scope": "Numerical selection across 50,000 Grassmannian samples, not an analytical uniqueness theorem. Complexification J(T) = i·sym(T) + anti(T) imports unitarity.",
+      "script": "code/acs_codebase/src/paper_a/selection_full.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-03",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Three fermion generations N_gen = 3 from Jacobi identity truncation at BCH order 3",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "‖Jacobi‖ = 6e-15 at order 3; bosonic ρ_vac = +512/3 − 512/3 = 0 exact",
+      "scope": "Exact rational and machine-precision verification on the sl(4,R) Palatini generator algebra.",
+      "script": "code/acs_codebase/src/paper_a/three_generations.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-04",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Yukawa ratio h̃/h = 2/3 is the sole full normalization-invariant survivor under Q1 instrument swap",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "h̃/h = 2/3 invariant; g₄ (4/3→2/3) & λ_φ = 2√3/27 split; γ_BI (0.2741→0.1902) refracts",
+      "scope": "Relations survive instrument swap; bare normalization-laden constants refract under trace/representation change.",
+      "script": "code/acs_codebase/src/paper_a/higgs_derivation.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PA-05",
+      "domain": "Paper A · Gravity & Gauge",
+      "claim": "Coleman–Weinberg 6→5 parameter reduction (tan β gauge-protected flat direction)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Fermion-dominated potential drives minimum to boundary; CW 6→5 fails",
+      "scope": "Explicitly falsified (F-11): tan β remains a free parameter in the 6-input Branch A ledger.",
+      "script": "code/acs_codebase/src/paper_a/betac_tan_beta.py",
+      "pdf": "papers/core_trilogy/Palatini_Gauge_Attractor.pdf",
+      "tex": "papers/core_trilogy/Palatini_Gauge_Attractor.tex"
+    },
+    {
+      "id": "PB-01",
+      "domain": "Paper B · Riemann Spectral",
+      "claim": "RH ⇒ uniform stationarity of F_N(x) and σ = 1/2 as unique center manifold (pure rotation)",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "α(2,001,052 zeros) = +0.001259; off-line injection recovers α = 2σ − 1 within 1.5%",
+      "scope": "Forward implication proved via AM–GM; converse is conditional on a minimum-gap bound verified only to N = 200 (does not prove RH).",
+      "script": "code/acs_codebase/src/paper_b/renormalized_stability.py",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "tex": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex"
+    },
+    {
+      "id": "PB-02",
+      "domain": "Paper B · Riemann Spectral",
+      "claim": "Wronskian W[f,g] = f'g − g'f is a Lie bracket but fails the Leibniz Poisson rule by −fgh'",
+      "tier": "T2",
+      "axis": "FALSIFIED",
+      "metric": "W[fg,h] − (fW[g,h] + gW[f,h]) = −fgh' exact",
+      "scope": "Disproves the earlier plasma-Hamiltonian symplectic reading (F-3); any symplectic structure must live on mode-amplitude space.",
+      "script": "code/acs_codebase/src/paper_b/wronskian_leibniz.py",
+      "pdf": "papers/core_trilogy/Riemann_Spectral_Critical_Line.pdf",
+      "tex": "papers/core_trilogy/Riemann_Spectral_Critical_Line.tex"
+    },
+    {
+      "id": "PB-03",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "Shuffle-knife witness split: exactly two robust FUNCTION faces (Arithmetic 11,497σ, Local-order 26σ)",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "100,000 Odlyzko zeros, 60 surrogates, seed 20260423; effective rank ≈ 4.8/5",
+      "scope": "Spacing, counting, and Wigner shape flip to FORM (0.4–1.0σ) under GUE-marginal shuffling; no independent third FUNCTION face exists.",
+      "script": "code/hp_knife_suite/hp_vantage_points.py",
+      "pdf": "papers/core_trilogy/Spectral_Witness_Refinement.pdf",
+      "tex": "papers/core_trilogy/Spectral_Witness_Refinement.tex"
+    },
+    {
+      "id": "PB-04",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "Hilbert–Pólya wall resolved in chiral anti-commuting antiunitary class (C H* C⁻¹ = −H, C² = −1, β = codim − 1 = 2)",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "|Im W|/|Re W| = 0.0001 (real orbits) + β = 2.019 (GUE repulsion) coexist in chiral class",
+      "scope": "Pins the symmetry class required to reconcile T-even orbit amplitudes with T-broken GUE repulsion; constructs no operator.",
+      "script": "code/hp_knife_suite/hp_wall_resolution_class.py",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "tex": "papers/notes/Critical_Line_As_Fibered_Object.tex"
+    },
+    {
+      "id": "PB-05",
+      "domain": "Paper B′ · Witness & HP Knife",
+      "claim": "3-rung prime-power harmonic tower p^{−k/2} and L-function commutator law ‖[ι,T]‖_k = 0 ⇔ ord(χ) | 2k",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "Rung-2 slope −0.533, Rung-3 slope −1.015 (R²=1.00); 33-line corr 1.000; Rung-2 L-phase stays T3 (0.26 floor)",
+      "scope": "Exhibits Weil–Guinand explicit formula and Dirichlet twist; honest negative recorded where rung-2 L-zero phase remains noise-limited at 150 zeros.",
+      "script": "code/hp_knife_suite/hp_twist_hardened.py",
+      "pdf": "papers/notes/Critical_Line_As_Fibered_Object.pdf",
+      "tex": "papers/notes/Critical_Line_As_Fibered_Object.tex"
+    },
+    {
+      "id": "PC-01",
+      "domain": "Paper C · Inversion Arc",
+      "claim": "Role exchange f ↔ g flips ΔI sign at 1st & 2nd order; Killing orthogonality tr([X,Y]X) = 0 gives algebraic non-traversability",
+      "tier": "T2",
+      "axis": "INVARIANT",
+      "metric": "π_X([X,Y]) ≡ 0 to < 1e-15 across 1,000 random sl(3,R) & sl(4,R) pairs",
+      "scope": "Algebraic non-traversability of the bracket output back to either input; three distinct ambiguity dimensions (14, 15, 19) kept separate.",
+      "script": "code/acs_codebase/src/paper_c/killing_orthogonality.py",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "tex": "papers/core_trilogy/Holographic_Spectral_Inversion.tex"
+    },
+    {
+      "id": "PC-02",
+      "domain": "Paper C · Inversion Arc",
+      "claim": "Universal 2π holonomy inversion across all ACS domains",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "spec(ad_{T_{B-L}}) = {0(×9), ±4/3(×3)} real ⇒ ‖exp(2π ad_{T_{B-L}})‖ ≈ e^{8π/3} ≈ 4,348.5 ≠ 1",
+      "scope": "Falsified (F-2): sl(4,R) adjoint flow is hyperbolic (Cayley–Hamilton ad³ = (16/9)ad), not elliptic; 2π closure is representation-specific to SU(2).",
+      "script": "code/acs_codebase/src/paper_c/spectral_taxonomy.py",
+      "pdf": "papers/core_trilogy/Holographic_Spectral_Inversion.pdf",
+      "tex": "papers/core_trilogy/Holographic_Spectral_Inversion.tex"
+    },
+    {
+      "id": "FT-01",
+      "domain": "Framing Transformer",
+      "claim": "Călugăreanu invariance Tw + Wr = Sl = −2.000000 across donut-to-throat deformation & SU(2) parity law σ = (−1)^{Sl+1}",
+      "tier": "T1",
+      "axis": "INVARIANT",
+      "metric": "T·U = 0 to 2.2e-16; Tw = −1.033761, Wr = −0.966239, Sl = −2.000000; S³ Laplace λ = −3 (deg 4)",
+      "scope": "Verified by two independent routes (Călugăreanu sum vs Gauss double integral) and closed-form quaternion lift to S³.",
+      "script": "code/framed_unknot/framing_transformer.py",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "id": "FT-02",
+      "domain": "Framing Transformer",
+      "claim": "Self-linking magnitude |Sl| = 2 as the geometric origin of the electron g = 2 factor (and geometric g ≠ 1 for uniform closed loops)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "n = 0 untwisted circle also gives σ = −1; moment ratio μ/⟨L⟩ shares vector area A ⇒ g = 1 exact",
+      "scope": "Double kill: Sl = 2 and Sl = 0 lie in the same Z/2 spinorial class, and uniform q/m circulation forces g = 1 identically.",
+      "script": "code/framed_unknot/moment_ratio.py",
+      "pdf": "papers/notes/Framing_Transformer_Spin_Parity.pdf",
+      "tex": "papers/notes/Framing_Transformer_Spin_Parity.tex"
+    },
+    {
+      "id": "EL-01",
+      "domain": "Elimination Ledger",
+      "claim": "Q4: Transfer-entropy asymmetry ΔI is identical to the Zamolodchikov / Casini–Huerta RG c-function (FF06Σ Link 3)",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Fails on sign (signed vs c ≥ 0), symmetric fixed-point value (0 vs c ≠ 0), and category (temporal vs spatial)",
+      "scope": "Verdict: 'No reading is both novel and true.' Cross-domain sameness in Σ is scoped as structural analogy, not identity.",
+      "script": "code/acs_codebase/src/paper_c/",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "tex": "papers/later_FF06_series/The_Elimination_Ledger.tex"
+    },
+    {
+      "id": "EL-02",
+      "domain": "Elimination Ledger",
+      "claim": "Q3: Degree-d height floor scaling law T_min(d,q) = (2πe)^d / q",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "At d = 2, q = 4 (Dedekind ζ_{Q(i)}), formula gives 72.93, sitting above 51 actual zeros (true floor 8.54)",
+      "scope": "Degenerate-case trap: (2πe)^d/q and 2πe·q^{−1/d} coincide only at d = 1. The d = 1 value 2πe ≈ 17.08 survives.",
+      "script": "code/hp_knife_suite/reconstructed/q3_scaling_test_reconstructed.py",
+      "pdf": "papers/later_FF06_series/The_Elimination_Ledger.pdf",
+      "tex": "papers/later_FF06_series/The_Elimination_Ledger.tex"
+    },
+    {
+      "id": "EL-03",
+      "domain": "Elimination Ledger",
+      "claim": "I7: Section 9 spectral-gap-to-cone chain & 4/3 lattice mechanism under K1/K2",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "TFIM exhaustive chain support 0/12 (leakage leg sign +0.9636); 4/3 collapses to n = d + 1 identity",
+      "scope": "Machine-verified negative control across TFIM, cross-model (1/12), and long-range (5/12) passes.",
+      "script": "code/issue7/verify_issue7_pipeline.py",
+      "pdf": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.pdf",
+      "tex": "papers/methodology/Section9_Cone_Chain_and_Four_Thirds_Kill_Tests.tex"
+    },
+    {
+      "id": "EL-04",
+      "domain": "Elimination Ledger",
+      "claim": "Q2: BRA integer resonance kernel 489× speed superiority over FP32 baseline",
+      "tier": "T4",
+      "axis": "FALSIFIED",
+      "metric": "Measured 1.37× to 1.82× slower (f64 vs f32); cross-run bitwise determinism survives (T1)",
+      "scope": "Speed projection withdrawn;Paper D is scoped as a deterministic engineering blueprint, not a throughput certification.",
+      "script": "code/benchmark_efficiency.py",
+      "pdf": "papers/ACS_Deterministic_AI_Stack_PDR.pdf",
+      "tex": "papers/ACS_Deterministic_AI_Stack_PDR.tex"
+    }
+  ]
+}

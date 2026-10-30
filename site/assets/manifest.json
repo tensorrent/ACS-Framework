@@ -1,0 +1,22 @@
+{
+  "assets": [
+    {
+      "id": "scene-mobius-framing",
+      "output": "mobius-framing.svg",
+      "generator": "blender/generate_scene_assets.py",
+      "sha256": "15424bd94997190586cfff3b4bdbd730b2460aa74259a48e2a77dfbcf6940b5d"
+    },
+    {
+      "id": "scene-palatini-attractor",
+      "output": "palatini-attractor.svg",
+      "generator": "blender/generate_scene_assets.py",
+      "sha256": "6ab826d08434a3955c47cb2bebd48d91d5974953268a634c6927669215eb05f8"
+    },
+    {
+      "id": "scene-critical-seam",
+      "output": "critical-seam.svg",
+      "generator": "blender/generate_scene_assets.py",
+      "sha256": "cf51186a647ea20dc99826c9c60ee98630416540299cb7370cece6464fee95ee"
+    }
+  ]
+}

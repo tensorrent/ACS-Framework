@@ -1,0 +1,84 @@
+name: Documentary site
+# Builds and checks the site on every push and pull request. Deploys to GitHub Pages only from a
+# push to main, so nothing goes live until a branch is reviewed and merged.
+on:
+  push:
+    branches: [main, 'claude/**', 'codex/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  NODE_VERSION: v26.13.0
+  PLAYWRIGHT_VERSION: 1.64.1
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install verified Node.js LTS
+        shell: bash
+        run: |
+          base="https://nodejs.org/dist/${NODE_VERSION}"
+          file="node-${NODE_VERSION}-linux-x64.tar.xz"
+          curl --fail --location --retry 3 -o "$RUNNER_TEMP/$file" "$base/$file"
+          curl --fail --location --retry 3 -o "$RUNNER_TEMP/SHASUMS256.txt" "$base/SHASUMS256.txt"
+          (cd "$RUNNER_TEMP" && grep " $file\$" SHASUMS256.txt | sha256sum --check)
+          tar -xJf "$RUNNER_TEMP/$file" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/node-${NODE_VERSION}-linux-x64/bin" >> "$GITHUB_PATH"
+      - name: Audit pinned front-end libraries
+        run: |
+          npm ci --prefix site --ignore-scripts --no-fund
+          npm audit --prefix site --audit-level=low
+      - name: Vendored files match the pinned packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          check() { cmp "site/node_modules/$1" "site/vendor/$2"; }
+          check three/build/three.module.js three/three.module.js
+          check three/build/three.core.js three/three.core.js
+          check three/examples/jsm/controls/OrbitControls.js three/addons/controls/OrbitControls.js
+          check katex/dist/katex.min.js katex/katex.min.js
+          check katex/dist/katex.min.css katex/katex.min.css
+          diff -r site/node_modules/katex/dist/fonts site/vendor/katex/fonts
+      - name: Build and check the site offline
+        run: python3 scripts/build_site.py
+      - name: Browser smoke test (desktop and phone, light and dark)
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/pw" && cd "$RUNNER_TEMP/pw"
+          npm init -y >/dev/null
+          npm install --ignore-scripts --no-fund --save-exact "playwright@${PLAYWRIGHT_VERSION}"
+          npx playwright install --with-deps chromium
+          cd "$GITHUB_WORKSPACE"
+          NODE_PATH="$RUNNER_TEMP/pw/node_modules" node site/tests/smoke.mjs build/site build/site-shots
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: site-build
+          path: |
+            build/site/build-report.json
+            build/site-shots/
+          retention-days: 30
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        with:
+          path: build/site
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

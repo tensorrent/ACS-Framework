@@ -1,0 +1,12 @@
+{
+  "name": "acs-framework-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vendored front-end libraries for the ACS-Framework documentary site. Nothing is fetched at runtime.",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "engines": { "node": ">=26.12.0" },
+  "dependencies": {
+    "katex": "0.19.0",
+    "three": "0.186.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-09-14T02:28:41.383351+00:00",
+  "recorded_commands": 13,
+  "successful_commands": 11,
+  "failed_commands": 2,
+  "recording_scope": "Five initial exploratory/development runs and eight portable scientific/formal runs. Packaging and final recursive verification are separate.",
+  "failures": [
+    {
+      "command": "independent-population-proposal",
+      "cause": "The exact minimax bounds matched, but the exploratory audit assumed width<1e-30. The actual exported interval width is2e-30 at both nominal precisions.",
+      "correction": "Separate audit_population_proposal_v2.py retains the exact bounds and reports their actual gap; the failed source and receipt remain unchanged."
+    },
+    {
+      "command": "population-lean-lemmas",
+      "cause": "Lean refused a source outside its default package root before checking the theorem.",
+      "correction": "Separate check_population_lean_v2.py adds the documented -R source-root option; the theorem source is unchanged."
+    }
+  ],
+  "freeze_boundary": "All executed sources and scientific outputs are preserved. Portable repository instruments are separately recorded versions; old scratch proposals, audits, drivers and theorem source remain in the source snapshot. Earlier dated checkpoints are unchanged.",
+  "method_delta": "Separate cardinality from coordinate information; replace necessary coefficient-relaxation feasibility with common finite observations realized by two actual fields; identify the exact critical-root expression and extend the construction to post-noise window selection.",
+  "independence": "Factor-contour counts versus held-out aggregate lengths; character coefficients versus1128local polynomial factorizations; deletion enumeration versus minimax dynamic programming and boolean reachability;41796literal finite matchings; pair certificates versus raw interval/doubled-inequality reconstruction; eight Lean lemmas. Exact algebra shares Python/SymPy in places, and source spectral certificates remain inherited.",
+  "negative_controls": "A false preservation/completeness claim can misclassify a deleted A population as B; the scalar selector cannot authenticate its premise. A zip-only endpoint loop accepts a21entry witness that violates the deletion budget. Dropping order invalidates uncrossing.",
+  "critical_gap_delta": "286strict comparisons show that the second-root gap exactly controls six optimal deletions. Five further window mutations and198inequalities protect source ranks and construct a boundary exit. No unrecorded tail roots move in the upper witness.",
+  "window_count_semantics": "The window artifact source-population sizes23/22 refer to the tracked entries originally through20. Those entries still exist after noise; the visible window counts become22/22. The full positive source families are not claimed finite.",
+  "formal_scope": "Eight elementary lemmas in two modules are compiled. Full number theory, analytic completeness, finite inversion removal, DP correctness and retained-rank logic remain separately stated written/computational arguments.",
+  "history_policy": "Keep all117branch IDs, preserve the423-event byte prefix, appendfiveevents and leave the global research goal active."
+}

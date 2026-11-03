@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "path": "cyclotomic_5/zeros_chi_5_order4_ext.txt",
+      "sha256": "3009568a16f63a4cfbfa3031c175b9f2878cd173c851ab87cdd7766105ea8c07",
+      "rows": 146,
+      "identical_to_corrected": true
+    },
+    {
+      "path": "cyclotomic_7/zeros_chi_7_order6_ext.txt",
+      "sha256": "f3727cad331f96d2484c6a69bb578c473e6bd99d30936262c8ee8b71eacaa0d2",
+      "rows": 157,
+      "identical_to_corrected": true
+    }
+  ],
+  "source_sha256": "de8819ec0fbd684ce291d0c4018c43a1162c254039e8667f69af51ed4a5d61da"
+}

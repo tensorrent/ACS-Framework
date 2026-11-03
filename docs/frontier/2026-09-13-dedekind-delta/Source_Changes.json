@@ -1,0 +1,66 @@
+{
+  "baseline_commit": "3a1d8fbe5c6da7679be62b411a474aa535d44006",
+  "files": {
+    "code/hp_knife_suite/data_zeros/DEDEKIND_FACTORS.json": {
+      "before_sha256": null,
+      "after_sha256": "c3e3688a2075f4431faccb07a44cd1d82afef22985634bae2900d6c142e98597",
+      "after_bytes": 105302
+    },
+    "code/hp_knife_suite/data_zeros/README_LFUNCTION_CERTIFICATES.md": {
+      "before_sha256": "439f716d53fbd9266e349ec53d7a672d8a85dce3f9c85a18c9b0cec4cee0287a",
+      "after_sha256": "642d8170f6561ccdf135c5109c39a638a612cb292da6b1ba99ef40a78f3a7d8e",
+      "after_bytes": 2224
+    },
+    "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclo_figure.py": {
+      "before_sha256": "5c7cdf59cf2b56f2837fc98662f09880b848126099cbea58a54b7a04dc8ab2ca",
+      "after_sha256": "01c6913e2e5ad60cdcd0b6abe49e89187cd8a9f0103379be63a7f28af757597c",
+      "after_bytes": 10077
+    },
+    "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_synthesis.md": {
+      "before_sha256": "9dc700be8cf492ca3f52cd15f33000914d12d6c33fdcb2cd1ede143c167eea5c",
+      "after_sha256": "c14ea376c9f2b88af9a37e89aabf8a3e01781a8e8d4064f8f927a1a39c572e5f",
+      "after_bytes": 9198
+    },
+    "code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_test.py": {
+      "before_sha256": "c3b1c2a9f91c5868bc13c31d6c6c5660dfee6df5b7187ab95d10ad7cf8cb3734",
+      "after_sha256": "ab16cc6e4dc2e5a769a9e4e70a6bd3a4f89378a6a55a9268883785fbffa0017e",
+      "after_bytes": 1415
+    },
+    "code/hp_knife_suite/data_zeros/cyclotomic_5/zeros_chi_5_quadratic_ext.txt": {
+      "before_sha256": null,
+      "after_sha256": "0454f0a96dee3eb0e737bc581ec4cba076eac4dba362a2d20043305434df98f0",
+      "after_bytes": 3594
+    },
+    "code/hp_knife_suite/data_zeros/cyclotomic_and_h6/final_synthesis.md": {
+      "before_sha256": "fa79cbf1263da590a0195b94ecbb57ba0bed1fe678f845eefaf0b3babfc713bc",
+      "after_sha256": "65da6c6cf2eaf95fba4daaa1fd32a0008bccd6340e8aa5dd3ba6ce8df384666d",
+      "after_bytes": 10897
+    },
+    "code/hp_knife_suite/data_zeros/disentangled/disentangled_synthesis.md": {
+      "before_sha256": "5b671370a6947cf9f656c6b3243b4fddecb83e48086d800ae3b2df2c4f280b7e",
+      "after_sha256": "b15288c9a7a85022df009b8198b819497d66d6bd9bfde66f9bda7f1b2b9545f6",
+      "after_bytes": 10948
+    },
+    "code/hp_knife_suite/data_zeros/riemann_zeros_220_certified.txt": {
+      "before_sha256": null,
+      "after_sha256": "ce0dfce1019d0005a40bea096b451d2f2d2d32ab526a8f4187845961e70be28e",
+      "after_bytes": 2221
+    }
+  },
+  "instruments": {
+    "code/frontier_verification/DEDEKIND_README.md": "09fa8c2d586a494ddfc962b8391101801ba82ac8c48defa1178f4d6fc579291e",
+    "code/frontier_verification/dedekind_euler_audit.py": "15acb9ba3c3e5815875924bfae73690d24a640fa154a53355a2825bb3ca2fe61",
+    "code/frontier_verification/dedekind_export.py": "2c795a495406d4f16fddcd1026c60cec6d8fdd1348a9102f88574ab754420898",
+    "code/frontier_verification/dedekind_factor_certificate.py": "ee3708c7470eba2ab41511ee54e4a1333c24ae9f48aa4fbc34ba795f035a051a",
+    "code/frontier_verification/dedekind_independent_roots.py": "7ad3a86d172e40af4aa12258c4283461e273460f63d7306d8d5e52fb3eda9b60",
+    "code/frontier_verification/dedekind_inputs.py": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "code/frontier_verification/dedekind_witness_audit.py": "fb95a264e0b2e1bb573c842ab8604d5528c3735ac45be52f30c8cee488f53135",
+    "code/frontier_verification/verify_dedekind_delta.py": "5e7a9ca0790de9805c9fb690a0b108ff4c92875be8e01c73506292ad55251ad6"
+  },
+  "dependencies": {
+    "code/frontier_verification/lfunction_zero_certificate.py": "02e90ef9b0fa4b58ef466dab821dd07b0be40847204654cc1bab6fd9f0e997cd",
+    "code/frontier_verification/verify_lfunction_delta.py": "0479ac7c149a4f067b244eac912b72d2452db03012e0620ba9db4192c3e95b88",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "preservation": "Existing source before/after and all four exact factor-table bytes are archived; prior instruments remain unchanged."
+}

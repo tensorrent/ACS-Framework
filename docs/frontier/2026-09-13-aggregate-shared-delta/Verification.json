@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T21:34:34.130143+00:00",
+  "scope": "Recursive preceding-checkpoint verification, fresh two-precision shared bounds and local feedback, complex interval and exact integer replay, displaced controls, and ten semantic proof-component mutations. Shared interval routes both use FLINT; the full analytic argument is not formalized.",
+  "manifest_files": 25,
+  "preceding_checkpoint_integrity": "passed",
+  "measurement_rows_per_spectrum": 17,
+  "generic_coefficients": 604,
+  "joint_unique_targets": [
+    17,
+    17
+  ],
+  "joint_unique_support_degree_only": [
+    45,
+    37
+  ],
+  "joint_unique_support_degree_discriminant": [
+    45,
+    38
+  ],
+  "largest_tested_shared_box_radii": [
+    "1/500",
+    "1/20"
+  ],
+  "largest_tested_shared_unramified_radii": [
+    "1/200",
+    "1/20"
+  ],
+  "stored_leaf_midpoints_checked": 39600,
+  "fresh_complex_interval_leaves": 47520,
+  "exact_objective_bounds": 144,
+  "local_exclusions": 3162,
+  "linear_exclusions": 190,
+  "independent_displaced_controls": 96,
+  "common_error_premise_controls": 2,
+  "actual_component_mutations_rejected": 10,
+  "recorded_commands": 7,
+  "failed_commands": 0,
+  "research_branches": 117,
+  "ledger_events": 393,
+  "preserved_event_prefix": 388,
+  "ledger_head_sha256": "ed9018ae83d571a39be1cfc199d0cd9e56cb632dd8d4d72a3d7ca302e17bb7a7",
+  "local_links": 43
+}

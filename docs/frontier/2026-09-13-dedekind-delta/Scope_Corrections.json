@@ -1,0 +1,28 @@
+{
+  "corrections": [
+    {
+      "claim": "Every primitive-character rectangle count equals its positive critical-line brackets.",
+      "result": "The even mod-5 character has a trivial zero at the origin inside this rectangle. Count 147 equals 146 positive brackets plus the exact origin zero."
+    },
+    {
+      "claim": "Sum of separately normalized factor means represents the product zero measure up to a common scalar.",
+      "result": "Different N_j alter relative root weights. The union mean preserves common multiplicity. All six cutoffs give exact weighted-log-derivative cancellation counterexamples."
+    },
+    {
+      "claim": "The prime-power coefficient is g log(p), where g counts prime ideals.",
+      "result": "It is g*f*log(p), with residue degree f from log(norm(P)); p=5 instead has coefficient log(5)."
+    },
+    {
+      "claim": "Doubling one positive complex-character list supplies the conjugate contribution.",
+      "result": "The prior height-reversal correction is now exercised with both certified positive lists and all four factors at matched cutoffs."
+    },
+    {
+      "claim": "The historical 5\u20136 ratio is now reconstructed or universal.",
+      "result": "Historical quadratic and NPZ inputs are missing. Fresh declared controls vary with T, window, cohort and grid; the old ratio remains withdrawn."
+    },
+    {
+      "claim": "Finite frequency peaks prove Euler coefficients, density, significance or a natural operator.",
+      "result": "Euler identities are proved separately. An explicit formula with controlled tails and a separate statistical design remain required bridges."
+    }
+  ]
+}

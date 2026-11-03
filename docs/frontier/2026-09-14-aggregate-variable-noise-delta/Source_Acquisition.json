@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-09-14T05:59:09.892130+00:00",
+  "source_sha256": "2e1eda27eb2726d8294dde3a9299f8f7bc14bd04db2c0ec9fdf24ff9b33b98d6",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "pinned_sources": [
+    {
+      "path": "Mathlib/Algebra/Order/Group/Abs.lean",
+      "sha256": "6dd77c705c13d17bf1e66a3e2e7f0093eab399d660de997b2bd287b95bb974d0",
+      "bytes": 10784,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Analysis/Normed/Group/Basic.lean",
+      "sha256": "4a16138ea1b7ac2dfe475ffb4eb13174a1df8bc012a986b0eb4316e9adf8c95b",
+      "bytes": 44516,
+      "matches_pinned_git_object": true
+    }
+  ],
+  "retrieved_primary_documentation": {
+    "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Algebra/Order/Group/Abs.html",
+    "retrieval": "Successfully opened with the web tool on 14 September 2026.",
+    "relevant_results": [
+      "abs_le",
+      "abs_sub_le"
+    ],
+    "scope": "Primary reference for absolute-value inequalities used in the midpoint and common-report budget arguments. Current documentation is not asserted to match the pinned runtime revision."
+  },
+  "runtime_change": "No package acquisition, version change or new source roots. Existing Python/FLINT and Lean/mathlib runtimes are reused.",
+  "scope": "The midpoint and scaling arguments are explicit algebraic derivations, with generic Lean lemmas compiled separately. Exact local reference sources match pinned Git objects and are archived with the mathlib license."
+}

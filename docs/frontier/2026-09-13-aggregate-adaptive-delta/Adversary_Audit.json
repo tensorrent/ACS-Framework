@@ -1,0 +1,165 @@
+{
+  "status": "passed",
+  "source_sha256": "0fc9485da0a814ea17fcdd3d44ee9ebc1046c90fa69cf80e4314c8ddae7c196f",
+  "inputs_sha256": {
+    "Adaptive_Feedback.json": "e976ad37d91ce9229ed6cfaf18ef71861daac1a118be3638a4b4c431f6fc5c92",
+    "Adaptive_Audit.json": "4609886f105bca08a5d4c849c9d8fb7b131d8a5cb4df7c8a6294af3f5562fe89",
+    "Audit_Closure.json": "aecefbdd2b162939e2f24f08158f9569c00b7e58b6f60f3dd7cec1bc9a87d3c2",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Moment_Feedback.json": "9838f90309789cf7b31f87c16cd2115046b51bf79ea47fcc0f452e790c0321ed",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 10,
+  "controls": [
+    {
+      "name": "borrow_zero_radius_seed",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "2c02466bb73882fc06ea3a7161bdc3d03ceeeff4c2439e80fd06b87ec6a08b12",
+      "mutated_component_sha256": "82f4886fa236ff6d88f0fbe000a00628eb1fa63003eba449a18258345fcb0114",
+      "predicate": "A seed must have the same observation, uncertainty radius and local profile."
+    },
+    {
+      "name": "use_final_domains_as_initial_premises",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "c3cf150999e9cebbb96fbc5c49c734e2e35783b7a8d53b8127723bd63de42829",
+      "mutated_component_sha256": "f2c0438694947e018f4a3b423cd8a6790d7a9d311da10d736b03c84d46795eaa",
+      "predicate": "The premise is reconstructed from the inherited validated state, before this round makes exclusions."
+    },
+    {
+      "name": "attach_budget_from_different_multiplier",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "6493b9621667a0380390e911e2889f83d5e3d5fbd75b274a4f248f18a7304620",
+      "mutated_component_sha256": "c61af9491492e1cba94cfbf49a2b34802134108b1722cab2502828a8f7adf7d9",
+      "predicate": "The validated analytic budget is bound to the full certificate, including its rational multipliers."
+    },
+    {
+      "name": "reverse_target_sign",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "4cc61275ba58f3ea7193b8373396da2a7a51dcd4e1fb6aa4a9e0b776259965af",
+      "mutated_component_sha256": "0591739776390e047011f0d6d710fe960c727a78d4571777899f855be2a9b7b5",
+      "predicate": "The proposal and certificate must describe the same signed objective."
+    },
+    {
+      "name": "negative_dual_multiplier",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "f4f81f428272ac53c417024c426f841ebd5f19c2b56253be53aab76f352ecded",
+      "mutated_component_sha256": "70439c44c2ad05afe19ef6050bd5f62c2babaa1ee274595683c338bf8cacb20e",
+      "predicate": "Integer inequality combination requires distinct row indices and nonnegative rational multipliers."
+    },
+    {
+      "name": "drop_continuum_cover_leaf",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1426a2d5659ed67a5f2af220cb553ce4d89e78a2133231a02ed21420e9953947",
+      "mutated_component_sha256": "be0b4e2d5d255ca41e90bc31d954a7f9b800b108f47ef1617a9ec4c19b1ac54e",
+      "predicate": "The independent audit requires a complete rational partition for every active root interval."
+    },
+    {
+      "name": "change_multiplier_after_certification",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "1426a2d5659ed67a5f2af220cb553ce4d89e78a2133231a02ed21420e9953947",
+      "mutated_component_sha256": "9e7aa328dd66180c8c57b105376b306dff9d777e49f14cc9700305677fd1d98a",
+      "predicate": "Fresh alpha/sigma reconstruction must agree with the stored shared functions and tail multiplier."
+    },
+    {
+      "name": "remove_heldout_true_value",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "073e0dad57e68c5da7e54947649425b6d9d6d82c5eae0e3d8e0525826c62db6f",
+      "mutated_component_sha256": "227c288eb41258efe610ca0927b497fff9b3a47bcfb02b8b64880cd148e5c57d",
+      "predicate": "A strictly positive independently recomputed gap is required; this predicate does not consult truth."
+    },
+    {
+      "name": "omit_local_catalogue_model",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "cbcf0d7f111da676835aebe2c8f5ef12df917687d196b94882693ac2e998a46a",
+      "mutated_component_sha256": "6c01cb577401e9604426bc07412f1dd0ba13b089711a164b5e51a44f913ccd6a",
+      "predicate": "Generic local possibilities must match independent degree-partition enumeration."
+    },
+    {
+      "name": "choose_lower_support_for_negative_residual",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "original_component_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "mutated_component_sha256": "b6904d810e21a7a18b9fb7f955fad6c9ef3c6ec1016e98916c85c79e7c46e19b",
+      "predicate": "Maximizing a negative residual uses the smallest domain value; reversing the endpoint understates the support."
+    }
+  ],
+  "exact_general_domain_support_checks": 604,
+  "stale_budget_counterexample": {
+    "certificate_index": 13,
+    "observation_index": 0,
+    "radius": "1/200",
+    "n": 23,
+    "sign": 1,
+    "multiplier_scale": 9,
+    "allowed_displaced_ordinates": [
+      "8388770703399623839248022590011985436459/4253529586511730793292182592897102643200",
+      "40133833927080885201734883174734156787943/8507059173023461586584365185794205286400",
+      "41641833442950028267962732435773631739743/8507059173023461586584365185794205286400",
+      "55839631682443060762401684376085706390857/8507059173023461586584365185794205286400",
+      "32426480129132989565811563945124074480259/4253529586511730793292182592897102643200",
+      "34218527507401346249046115082500188470441/4253529586511730793292182592897102643200",
+      "4586825299747643809609301470929568059873/531691198313966349161522824112137830400",
+      "87079196666556223127703394568407557090807/8507059173023461586584365185794205286400",
+      "22972437418150356672855938490833932341567/2126764793255865396646091296448551321600",
+      "47827563781601049817327152742060418040409/4253529586511730793292182592897102643200",
+      "101581597233933150916815036034930525505507/8507059173023461586584365185794205286400",
+      "104769052999884698133827649423175418637457/8507059173023461586584365185794205286400",
+      "1828649481622635610326090888500170119363/132922799578491587290380706028034457600",
+      "595634743295838071478597706392686789385723570544772367977073538336047/42124916667422874679167211073468172927558038160219644501724391014400",
+      "63299076806659278375146147836023107583559/4253529586511730793292182592897102643200",
+      "129228645293095732011170604932895038399843/8507059173023461586584365185794205286400",
+      "66778794665152375403134561687172022448359/4253529586511730793292182592897102643200",
+      "72426064669716777852322760014237850260841/4253529586511730793292182592897102643200",
+      "144921203232643086604409855810456865062707/8507059173023461586584365185794205286400",
+      "152017950184260054858175742856418235468843/8507059173023461586584365185794205286400",
+      "155398428609332821621659212986106966098257/8507059173023461586584365185794205286400",
+      "80012970264588746066770527142219216238391/4253529586511730793292182592897102643200",
+      "167750830198780715402522249835707274531743/8507059173023461586584365185794205286400"
+    ],
+    "old_valid_budget": "13971036119597919831181086790170043448548362659728322116429805578829983087965340735033504728172893542935292111071791/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+    "original_finite_change": {
+      "mid": [
+        25834445365795058646399363311119212423929583248158848643209384226931849852460710042978332336375715256212682372990909,
+        -387
+      ],
+      "rad": [
+        810162879,
+        -236
+      ]
+    },
+    "changed_multiplier_finite_change": {
+      "mid": [
+        14531875518259720488599641862504556988460390577089352361805278627649165542009149399175311939211339831619633834753847,
+        -383
+      ],
+      "rad": [
+        911433235,
+        -233
+      ]
+    },
+    "strict_excess_over_stale_budget": {
+      "mid": [
+        15092714916921521146018196934839070528372418494450382607180751676468347996052958063317119150249786120303975558435903,
+        -384
+      ],
+      "rad": [
+        911433235,
+        -233
+      ]
+    },
+    "scaled_valid_budget": "125739325076381278480629781111530391036935263937554899047868250209469847791688066615301542553556041886417628999646119/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+    "scope": "Positive scaling changes the measurement combination. These permitted exact displaced ordinates make its finite-sum change exceed the unscaled old total budget. Scaling the old valid budget by the same positive factor repairs this diagnostic. No unknown-tail saturation or alternate number field is claimed."
+  },
+  "scope": "Ten component mutations challenge adaptive lineage, uncertainty coupling, continuum coverage and integer support. A separate interval witness demonstrates why changed multipliers require changed error budgets. This is not a formal proof of software noninterference or a global realization audit."
+}

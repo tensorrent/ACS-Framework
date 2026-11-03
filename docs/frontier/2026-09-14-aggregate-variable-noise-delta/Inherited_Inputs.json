@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-09-14T06:07:11.313941+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Verification.json": "58d9a05107736c0a025755d26491826429df2326d4b114be6cc100e23972b537",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Research_Queue.json": "78fe36c6f408b7ed956a764df21c90172852ee3405331e9c725c559fb9ab42c4",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Branch_Events.jsonl": "9398ade143c04d0dfbeb485a637691eb45dc06f43a323a382450122fe17f5275",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Feature_Space_Proposals.json": "419ffb641f73a9efbb8100786671ab6196a073a82c59ff581def6d98249028e1",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Weighted_Region_Certificate.json": "34e640228426d9d5e22c0f9a72f9eb5b84645504ebce71d580f4583a57408e9a",
+    "docs/frontier/2026-09-14-aggregate-weighted-feature-delta/Independent_Weighted_Region_Audit_v2.json": "509f59d1c33722f7f96ebe46e328221cba481f06e0943861e595bb070b0eb355",
+    "docs/frontier/2026-09-14-aggregate-augmented-feature-delta/Augmented_Proposals_Local.json": "a89312cecf2892cc3d43bf7f045fb2f89042ffaae89e49eaec56b95251dab59d",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "code/frontier_verification/verify_aggregate_weighted_feature_delta_v2.py": "73dd43fc7f060d6cd5a987c3ebb96b7638b34ea23c22f237633a993957c017ad"
+  },
+  "scope": "Complete field class, source populations, root midpoint/direction, previous numerical seed, certified region and uniform lower bound remain inherited. Fresh exact source constraints, analytic audits and arithmetic comparisons are added; the whole previous chain is recursively verified."
+}

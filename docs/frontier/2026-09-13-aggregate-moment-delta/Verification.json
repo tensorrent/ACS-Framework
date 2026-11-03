@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T22:44:57.767383+00:00",
+  "scope": "Fresh joint-moment proposals, continuum bounds, local projections, frozen-dual feedback, complex/rational/integer audits and semantic controls. Prior history verified recursively. Shared FLINT backend and unformalized analytic premises remain explicit; neither surviving domains nor frozen-family fixed points prove optimality or global ambiguity.",
+  "manifest_files": 27,
+  "preceding_checkpoint_integrity": "passed",
+  "target_count": 17,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "radii": [
+    "0",
+    "1/200",
+    "1/50",
+    "1/10"
+  ],
+  "degree_discriminant_feedback_unique_targets": [
+    [
+      14,
+      13
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      13,
+      10
+    ]
+  ],
+  "proposal_count": 272,
+  "validated_multiplier_cases": 288,
+  "joint_budget_selected_cases": 97,
+  "new_producer_integer_domains_from_joint_budget": 0,
+  "stored_midpoints_checked": 104592,
+  "fresh_quadratic_interval_leaves": 209184,
+  "exact_objective_bounds": 576,
+  "symbolic_moment_derivative_checks": 3,
+  "independent_displaced_controls": 528,
+  "independent_candidate_improvements": 2,
+  "one_pass_local_removals": 12326,
+  "feedback_local_removals": 12396,
+  "feedback_dual_removals": 56,
+  "actual_component_mutations_rejected": 10,
+  "recorded_commands": 7,
+  "failed_commands": 0,
+  "research_branches": 117,
+  "ledger_events": 403,
+  "preserved_event_prefix": 398,
+  "ledger_head_sha256": "06c083ad8fccda939abe05039039848b3f715122abf594ebcb32bb4324b929f2",
+  "local_links": 46
+}

@@ -1,0 +1,16 @@
+{
+  "recorded_commands": 10,
+  "successful_commands": 9,
+  "failed_commands": 1,
+  "failures": [
+    {
+      "receipt": "shifted-pair-exploration",
+      "result": "The first common-shift search calls Newton from the unchanged A correction and raises ZeroDivisionError: matrix is numerically singular. No proposal JSON is emitted. Separate v2 predicts the common A shift and first-order tau change, and catches failed trial solves during backtracking. The failed source remains unchanged."
+    }
+  ],
+  "rejected_trial": "The last full optimizer step converges and passes source-center checks, but its maximum center displacement exceeds the cube radius by approximately 1.4599e-6. The smaller accepted step is certified. A rejected search trial does not prove global impossibility.",
+  "setup_note": "An initial scratch-directory setup used a workspace-relative path from the repository directory; cp and runner launch failed before any scientific script executed. The unexecuted directory was moved to the intended scratch location. No scientific source was overwritten or run during that setup attempt.",
+  "source_policy": "Executed sources and reports remain immutable. Numerical proposal labels reflect their original exploratory status; later canonical certificates and independent audits establish the stated exact results. The subsequent recursive verifier preserves its own external receipt and supplies exact stdout bytes as Verification.json.",
+  "runtime": "No package acquisition, version change or new source roots. Existing pinned Python/FLINT and Lean/mathlib are reused.",
+  "independence": "Primary real interval Jacobian matrix products and independent complex scalar derivative bounds share FLINT. The independent auditor rebuilds source inequalities directly and repeats polynomial factorizations. Classification, source roots and the uniform lower theorem are inherited and recursively verified."
+}

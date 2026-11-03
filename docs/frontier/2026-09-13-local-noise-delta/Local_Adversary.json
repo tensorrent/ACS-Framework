@@ -1,0 +1,247 @@
+{
+  "status": "passed",
+  "source_sha256": "98d89977cdac0a68df727d0326edbcb28253cd3653208b72134192c84a6b8076",
+  "polynomial_ascending": [
+    -1,
+    -1,
+    0,
+    0,
+    1
+  ],
+  "mod2_nondivisibility": [
+    {
+      "divisor_ascending_mod2": [
+        0,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        1
+      ]
+    },
+    {
+      "divisor_ascending_mod2": [
+        1,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        1
+      ]
+    },
+    {
+      "divisor_ascending_mod2": [
+        0,
+        0,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        1,
+        1
+      ]
+    },
+    {
+      "divisor_ascending_mod2": [
+        0,
+        1,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        1
+      ]
+    },
+    {
+      "divisor_ascending_mod2": [
+        1,
+        0,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        0,
+        1
+      ]
+    },
+    {
+      "divisor_ascending_mod2": [
+        1,
+        1,
+        1
+      ],
+      "remainder_ascending_mod2": [
+        1
+      ]
+    }
+  ],
+  "irreducibility_argument": "A reducible quartic over a field has a factor of degree one or two. All six monic candidates over F2 leave a nonzero remainder.",
+  "mod7_linear_factor_ascending": [
+    -3,
+    1
+  ],
+  "mod7_cubic_factor_ascending": [
+    -2,
+    2,
+    3,
+    1
+  ],
+  "integer_factor_product": [
+    6,
+    -8,
+    -7,
+    0,
+    1
+  ],
+  "cubic_residues_at_0_through_6_mod7": [
+    5,
+    4,
+    1,
+    2,
+    6,
+    5,
+    5
+  ],
+  "cubic_irreducibility_argument": "A cubic over a field is reducible exactly when it has a root; all seven residues are nonzero.",
+  "sylvester_matrix": [
+    [
+      1,
+      0,
+      0,
+      -1,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      -1,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      -1,
+      -1
+    ],
+    [
+      4,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0,
+      0,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      4,
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      -1
+    ]
+  ],
+  "bareiss_pivots": [
+    1,
+    1,
+    1,
+    3,
+    9,
+    27
+  ],
+  "polynomial_discriminant": -283,
+  "trial_divisions_for_283": [
+    {
+      "divisor": 2,
+      "remainder": 1
+    },
+    {
+      "divisor": 3,
+      "remainder": 1
+    },
+    {
+      "divisor": 4,
+      "remainder": 3
+    },
+    {
+      "divisor": 5,
+      "remainder": 3
+    },
+    {
+      "divisor": 6,
+      "remainder": 1
+    },
+    {
+      "divisor": 7,
+      "remainder": 3
+    },
+    {
+      "divisor": 8,
+      "remainder": 3
+    },
+    {
+      "divisor": 9,
+      "remainder": 4
+    },
+    {
+      "divisor": 10,
+      "remainder": 3
+    },
+    {
+      "divisor": 11,
+      "remainder": 8
+    },
+    {
+      "divisor": 12,
+      "remainder": 7
+    },
+    {
+      "divisor": 13,
+      "remainder": 10
+    },
+    {
+      "divisor": 14,
+      "remainder": 3
+    },
+    {
+      "divisor": 15,
+      "remainder": 13
+    },
+    {
+      "divisor": 16,
+      "remainder": 11
+    }
+  ],
+  "field_discriminant": -283,
+  "maximal_order_argument": "The square of the order index divides the polynomial discriminant. Its absolute value is prime, so the index is one.",
+  "unramified_prime": 7,
+  "local_residue_degrees": [
+    1,
+    3
+  ],
+  "coefficient_at_7": 1,
+  "non_galois_argument": "In a Galois number-field extension every residue degree above a fixed rational prime is equal. The certified unramified degrees 1 and 3 contradict that condition.",
+  "scope": "An elementary independent counterexample to imposing a Galois profile on a general quartic. It does not contradict the Galois property of the cyclotomic witness used in the recovery experiment."
+}

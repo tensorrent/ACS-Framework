@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T22:00:27.755825+00:00",
+  "scope": "Fresh sampled proposals, exact-rational continuum certificates, independent complex quadratic covers, integer objective replay, displaced sums, off-grid counterexamples and semantic mutations. Prior checkpoint verified recursively. Interval routes share FLINT; no optimal noise threshold or full formal proof is claimed.",
+  "manifest_files": 23,
+  "preceding_checkpoint_integrity": "passed",
+  "coefficient_target": 7,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "largest_tested_noise_adapted_direct_radii": [
+    "3/50",
+    "13/100"
+  ],
+  "largest_tested_frozen_direct_radii": [
+    "1/500",
+    "7/100"
+  ],
+  "largest_tested_noise_adapted_symmetric_radii": [
+    "1/50",
+    "1/10"
+  ],
+  "largest_tested_unramified_supplement_radii": [
+    "7/50",
+    "13/100"
+  ],
+  "proposal_count": 48,
+  "exploratory_proposal_count": 36,
+  "stored_midpoints_checked": 158400,
+  "fresh_quadratic_interval_leaves": 126720,
+  "exact_objective_bounds": 192,
+  "independent_displaced_controls": 192,
+  "certified_off_grid_counterexamples": 2,
+  "actual_component_mutations_rejected": 8,
+  "producer_subdivision_differences": 1,
+  "independent_candidate_improvements": 2,
+  "recorded_commands": 6,
+  "failed_commands": 0,
+  "research_branches": 117,
+  "ledger_events": 398,
+  "preserved_event_prefix": 393,
+  "ledger_head_sha256": "364bb94c520dff30312ac88dbd1ab731dfa7a4ee81a412654b7039b0e8048187",
+  "local_links": 44
+}

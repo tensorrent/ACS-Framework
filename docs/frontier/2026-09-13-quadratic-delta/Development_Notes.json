@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-09-13T18:50:49.944583+00:00",
+  "recorded_commands": 14,
+  "successful_recorded_commands": 10,
+  "unsuccessful_recorded_commands": 4,
+  "additional_launch_failures": 1,
+  "failures": [
+    {
+      "run": "quadratic-lean1",
+      "kind": "launch_failure_without_normal_receipt",
+      "result": "The runner was asked to execute the non-executable Python checker without its interpreter. Popen failed before the checker started. The launch failure and empty streams are retained."
+    },
+    {
+      "run": "quadratic-lean2",
+      "kind": "Lean_project_root",
+      "result": "Lean rejected the external absolute input path. The next checker copies the source into its declared project and checks byte identity."
+    },
+    {
+      "run": "quadratic-lean3",
+      "kind": "uncached_umbrella_import",
+      "result": "Mathlib.olean was unavailable. The source now imports the specific cached real and tactic modules."
+    },
+    {
+      "run": "quadratic-lean4",
+      "kind": "unfinished_scalar_proof",
+      "result": "The positivity tactic did not extract positivity of E from a conjunction. Explicit positive E and 2E hypotheses finish attainment. The failed source and sorryAx-bearing failed transcript remain separate from the successful source."
+    },
+    {
+      "run": "quadratic-independent-numeric",
+      "kind": "audit_expression_error",
+      "result": "The scalar numerical maximum used -d*y-e*y at the vertex, omitting the square. Exact rational evaluation in Scalar_Diagnostic.json confirms the certificate upper bound. The corrected full audit evaluates -d*y-e*y*y and also checks the exact midpoint maximum."
+    }
+  ],
+  "limited_solver_trials": "Conic_Probe160 has two MaxTime statuses at 30 seconds; Conic_Extended160 has one AlmostSolved at 120 seconds. All eight conic proposals receive full interval and exact integer checks. Primal vectors remain unverified.",
+  "control_interpretation": "Frozen prior multipliers remain at 81 for all three models. Newly optimized and combined proposals produce 81,83,83. The second-order model with a cubic remainder supports the gain; enforcing the exact square relation does not add a singleton on these runs.",
+  "formal_scope": "Ten real scalar maximum and cone-geometry theorems are kernel checked. Taylor bounds, zero completeness, explicit formula and coefficient inference retain their existing analytic/computational status.",
+  "packaging_failure": "An initial source archive attempted to include lakefile.lean; this project uses lakefile.toml. The failed packager source and Packaging_Failure.json are retained. This is separate from the fourteen computation/runtime/checker receipts.",
+  "metadata_correction": "The inherited queue parent_checkpoint still named the older Dedekind checkpoint. This new queue points to its immediate shared-error predecessor. Earlier dated queues remain unchanged. Verification_Initial.json records the successful integrity check before this metadata correction; the final verifier additionally checks the parent pointer.",
+  "history_policy": "Earlier dated packages and pinned instruments remain byte-identical. All 116 branches stay recorded. No global completion or exhaustion is asserted."
+}

@@ -1,0 +1,548 @@
+{
+  "status": "passed",
+  "source_sha256": "1b387ff0668153239cb99c90e3c703f00660234d50a1bc62a8ab625e7077260d",
+  "arithmetic_sha256": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+  "possible_quadratic_radicands": [
+    -6,
+    -3,
+    -2,
+    -1,
+    2,
+    3,
+    6
+  ],
+  "all_biquadratic_models": [
+    {
+      "radicands": [
+        -6,
+        -3,
+        2
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -3,
+        8
+      ],
+      "field_discriminant_by_character_conductors": 576,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -6,
+        -2,
+        3
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -8,
+        12
+      ],
+      "field_discriminant_by_character_conductors": 2304,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -6,
+        -1,
+        6
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -4,
+        24
+      ],
+      "field_discriminant_by_character_conductors": 2304,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -3,
+        -2,
+        6
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -3,
+        24
+      ],
+      "field_discriminant_by_character_conductors": 576,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -3,
+        -1,
+        3
+      ],
+      "quadratic_discriminants": [
+        -4,
+        -3,
+        12
+      ],
+      "field_discriminant_by_character_conductors": 144,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -2,
+        -1,
+        2
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -4,
+        8
+      ],
+      "field_discriminant_by_character_conductors": 256,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        2,
+        3,
+        6
+      ],
+      "quadratic_discriminants": [
+        8,
+        12,
+        24
+      ],
+      "field_discriminant_by_character_conductors": 2304,
+      "signature": [
+        4,
+        0
+      ]
+    }
+  ],
+  "retained_models": [
+    {
+      "radicands": [
+        -6,
+        -3,
+        2
+      ],
+      "quadratic_discriminants": [
+        -24,
+        -3,
+        8
+      ],
+      "field_discriminant_by_character_conductors": 576,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "radicands": [
+        -3,
+        -2,
+        6
+      ],
+      "quadratic_discriminants": [
+        -8,
+        -3,
+        24
+      ],
+      "field_discriminant_by_character_conductors": 576,
+      "signature": [
+        0,
+        2
+      ]
+    }
+  ],
+  "mod24_units": [
+    1,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23
+  ],
+  "characters": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "conductor": 1,
+      "parity": 0
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "conductor": 3,
+      "parity": 1
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "conductor": 8,
+      "parity": 0
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "conductor": 24,
+      "parity": 1
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "conductor": 4,
+      "parity": 1
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "conductor": 12,
+      "parity": 0
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "conductor": 8,
+      "parity": 1
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "conductor": 24,
+      "parity": 0
+    }
+  ],
+  "character_planes": [
+    {
+      "basis_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "conductors": [
+        3,
+        8,
+        24
+      ],
+      "field_discriminant": 576,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "conductors": [
+        3,
+        4,
+        12
+      ],
+      "field_discriminant": 144,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "conductors": [
+        3,
+        8,
+        24
+      ],
+      "field_discriminant": 576,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "conductors": [
+        8,
+        4,
+        8
+      ],
+      "field_discriminant": 256,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "conductors": [
+        8,
+        12,
+        24
+      ],
+      "field_discriminant": 2304,
+      "signature": [
+        4,
+        0
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "conductors": [
+        24,
+        4,
+        24
+      ],
+      "field_discriminant": 2304,
+      "signature": [
+        0,
+        2
+      ]
+    },
+    {
+      "basis_vectors": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "conductors": [
+        24,
+        12,
+        8
+      ],
+      "field_discriminant": 2304,
+      "signature": [
+        0,
+        2
+      ]
+    }
+  ],
+  "complete_candidate_count": 2,
+  "premises": [
+    "A quadratic subfield can ramify only at primes ramified in the quartic field.",
+    "The fundamental discriminant of Q(sqrt(d)) is d for d=1 mod 4 and 4d otherwise, with d squarefree.",
+    "A V4 field is determined by its three quadratic subfields.",
+    "The discriminant of an abelian field is the product of the conductors of its characters (Milne CFT V.3.27)."
+  ],
+  "scope": "Exactly two fields among Galois V4 quartics of signature (0,2) and field discriminant 576. The Galois-group input is explicit; no exhaustion of non-V4 quartics is asserted. This strengthens the earlier two-example contract without editing its frozen producer."
+}

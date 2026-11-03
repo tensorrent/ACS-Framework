@@ -1,0 +1,242 @@
+{
+  "pair-adversarial-decoding": {
+    "started_utc": "2026-09-13T20:21:02.983804+00:00",
+    "elapsed_seconds": 0.611187,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_adversary.py",
+      "--arithmetic",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic.json",
+      "--spectrum160",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json",
+      "--spectrum224",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json",
+      "--decoded",
+      "../acs-research/biquadratic-audit/Pair_Decoding.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Adversary.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_adversary.py": "ad1c549cc191d5dbfca4f1d5b3b6d7f4b0d9bb7555b413e6a8b4ff2317ce09c3"
+    },
+    "stdout_sha256": "9fa05fa79cdb3d83004d1b48dc42f05a7a78e504aba0ff152a83b35321bc143c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-arithmetic": {
+    "started_utc": "2026-09-13T20:01:11.126734+00:00",
+    "elapsed_seconds": 0.399933,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_pair.py",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_pair.py": "4bcf6641d87ea00ac05a0e7bb1468799d91c83d2dfd6d357209c8f9892230e86"
+    },
+    "stdout_sha256": "86f3709c166bf28ab551d996d863ae17c2e9745026cef4d56e0f6b054f3e6bbf",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-arithmetic-independent": {
+    "started_utc": "2026-09-13T20:05:26.869301+00:00",
+    "elapsed_seconds": 0.397581,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_arithmetic_audit.py",
+      "--arithmetic",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_arithmetic_audit.py": "9ab66a310e15775145727d11f96b52b8ae76c4cd049d1e1728408c899f4d9d0b"
+    },
+    "stdout_sha256": "b40f480fc12e9c48916c88020417cf8eee5d8dc0585a4b1883f32f47a2596ff7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-candidate-class": {
+    "started_utc": "2026-09-13T20:09:50.705783+00:00",
+    "elapsed_seconds": 0.03941,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_class.py",
+      "--arithmetic",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Candidate_Class.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_class.py": "1b387ff0668153239cb99c90e3c703f00660234d50a1bc62a8ab625e7077260d"
+    },
+    "stdout_sha256": "e0999cc698c25db7570e080bbc71573ae4d0143b8f60a1ff33d926d6f968111e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-count-decoding": {
+    "started_utc": "2026-09-13T20:12:15.157574+00:00",
+    "elapsed_seconds": 0.076038,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_decoding.py",
+      "--arithmetic",
+      "../acs-research/biquadratic-audit/Pair_Arithmetic.json",
+      "--classification",
+      "../acs-research/biquadratic-audit/Pair_Candidate_Class.json",
+      "--spectrum160",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json",
+      "--spectrum224",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Decoding.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_decoding.py": "d6babd7e7779066db14ea118a5692bf8bb2b4e58ce325664b65648570cccf8b7"
+    },
+    "stdout_sha256": "f42bbbc2adf7d1746bbd1a3818a9df831a12f917a9e69fc61d3c3afbd278d975",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-fresh-path-replay": {
+    "started_utc": "2026-09-13T20:18:33.666869+00:00",
+    "elapsed_seconds": 0.564105,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_replay.py",
+      "--spectrum160",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json",
+      "--spectrum224",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json",
+      "--direct",
+      "../acs-research/biquadratic-audit/Pair_Spectral_Audit.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Fresh_Replay.json"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_replay.py": "727df0b90f441a405d4b9cb79594fbac5a0ea4aed27b2acc583b2dd64e682629"
+    },
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "1b1d99e0502a5d0600a474a1d984475be570e03bf83a97a60535a7a466a1c20f"
+  },
+  "pair-refined-path-replay": {
+    "started_utc": "2026-09-13T20:19:42.092451+00:00",
+    "elapsed_seconds": 88.569221,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_replay.py",
+      "--spectrum160",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json",
+      "--spectrum224",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json",
+      "--direct",
+      "../acs-research/biquadratic-audit/Pair_Spectral_Audit.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Fresh_Replay.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_replay.py": "21b884453bc330683e94b8fbfd64ec077633cf8f1da1e51c07607c7b7ef8e05d"
+    },
+    "stdout_sha256": "e4fba0fdd32d9f96604604b258f31ab1c60e32c9004a9c2e8341ad587623c2fd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-spectral-independent": {
+    "started_utc": "2026-09-13T20:07:26.042292+00:00",
+    "elapsed_seconds": 89.290846,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_spectral_audit.py",
+      "--spectrum160",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json",
+      "--spectrum224",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Spectral_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_spectral_audit.py": "13f6e2e9646089fb70272bdb7570356b40b6c92695c0ecb66c1462f1c9de5b8d"
+    },
+    "stdout_sha256": "40d766b21b413b8b2fdb4083c6b57b3faa9e83ee9deffe56abf56fd8ffbdb370",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-spectrum160": {
+    "started_utc": "2026-09-13T20:02:42.721379+00:00",
+    "elapsed_seconds": 1.794318,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_spectrum.py",
+      "--precision",
+      "160",
+      "--top",
+      "20",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Spectrum160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_spectrum.py": "44beb3d30c8afa4cee9cebe8a9b0ba7eefcd983e1ac74593cd54e7429f2d273c"
+    },
+    "stdout_sha256": "c4f418839c5e9d0e3e9eff9e77eb0ad45424380fbb4b9605adde0b80551e0405",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pair-spectrum224": {
+    "started_utc": "2026-09-13T20:03:27.783842+00:00",
+    "elapsed_seconds": 3.085017,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_biquadratic_spectrum.py",
+      "--precision",
+      "224",
+      "--top",
+      "20",
+      "--output",
+      "../acs-research/biquadratic-audit/Pair_Spectrum224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_biquadratic_spectrum.py": "44beb3d30c8afa4cee9cebe8a9b0ba7eefcd983e1ac74593cd54e7429f2d273c"
+    },
+    "stdout_sha256": "729753cb32c939c36cffc10e12f57f1a435d4a8bebcc810a828634a998ccbf75",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "primary-acquisition": {
+    "started_utc": "2026-09-13T20:18:38.868687+00:00",
+    "elapsed_seconds": 2.616047,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/biquadratic-audit/acquire_primary.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/biquadratic-audit/acquire_primary.py": "a96aace853def92429ff795fd2015fc5041e503f3f0f3563f817dcbfc2442d64"
+    },
+    "stdout_sha256": "d7d8df51ffe94bb39f5f402d16524e76bfb4e4b376a8a9aab7c4ea9c62f1e54e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

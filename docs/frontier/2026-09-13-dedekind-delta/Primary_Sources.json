@@ -1,0 +1,37 @@
+{
+  "retrieved_utc": "2026-09-13T15:04:17.026851+00:00",
+  "sources": [
+    {
+      "url": "https://kconrad.math.uconn.edu/math5230f08/stevenhagen.pdf",
+      "title": "Peter Stevenhagen, Algebraic Number Theory",
+      "location": "Theorem 3.12, printed page 33, PDF page 33",
+      "supports": "Cyclotomic prime decomposition, residue degree from multiplicative order, and total ramification at the conductor prime."
+    },
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "title": "J.S. Milne, Class Field Theory",
+      "location": "Chapter VI, Example 1.1(b), printed page 184, PDF page 193",
+      "supports": "Dedekind zeta Euler product over prime ideals with ideal norms."
+    },
+    {
+      "url": "https://dlmf.nist.gov/25.15",
+      "title": "NIST DLMF 25.15",
+      "supports": "Dirichlet L Hurwitz representation, analytic continuation and even-character trivial zeros."
+    },
+    {
+      "url": "https://python-flint.readthedocs.io/en/latest/arb.html#flint.arb.zeta_nzeros",
+      "title": "python-flint 0.9.0 total zeta-zero count",
+      "supports": "Count of Riemann zeros with positive imaginary part up to the specified height."
+    },
+    {
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.zeta_zeros",
+      "title": "python-flint 0.9.0 indexed zeta zeros",
+      "supports": "Consecutive indexed nontrivial zeros represented as complex balls."
+    },
+    {
+      "url": "https://www-users.cse.umn.edu/~odlyzko/zeta_tables/",
+      "title": "Andrew Odlyzko, Tables of zeros of the Riemann zeta function",
+      "supports": "Provenance of previously archived zeros2 high-precision literals; this pass checks their inclusion in independent interval results."
+    }
+  ]
+}

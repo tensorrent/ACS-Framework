@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "source_sha256": "bc25478b4e7b4d36e1fb3329e5a29f11528617d1f49a1fbe53052241d6d1ef14",
+  "inputs_sha256": {
+    "Population_Decoder.json": "ef609de276a818981d261a517633861032a513e9e64fdd04bb3a18b157e1a9ad",
+    "Population_Matching.json": "886ce398de6a32e625894c3b2a362144d8ba69cab1c00a6069663c919b27c25e",
+    "Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "Pair_Spectra.zip": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+    "Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "Measurements_Recovery.zip": "fdec85cf88d86ba5782d6347861a7d95fa6253a1cee09c831ea84aadd4434bc1"
+  },
+  "actual_component_mutations_rejected": 25,
+  "mutations": [
+    {
+      "mutation": "false_completeness",
+      "rejected": true
+    },
+    {
+      "mutation": "deletion_budget_in_fixed_population",
+      "rejected": true
+    },
+    {
+      "mutation": "insertion_budget_in_fixed_population",
+      "rejected": true
+    },
+    {
+      "mutation": "count_after_noise_censoring",
+      "rejected": true
+    },
+    {
+      "mutation": "leaked_ordinates",
+      "rejected": true
+    },
+    {
+      "mutation": "Boolean_population_count",
+      "rejected": true
+    },
+    {
+      "mutation": "negative_population_count",
+      "rejected": true
+    },
+    {
+      "mutation": "omit_a_complete_field_candidate",
+      "rejected": true
+    },
+    {
+      "mutation": "corrupt_arithmetic_after_population_selection",
+      "rejected": true
+    },
+    {
+      "mutation": "deduplicate_root_multiplicities",
+      "rejected": true
+    },
+    {
+      "mutation": "zero_deletion_budget_for_shared_observation",
+      "rejected": true
+    },
+    {
+      "mutation": "allow_an_insertion",
+      "rejected": true
+    },
+    {
+      "mutation": "Boolean_deletion_budget",
+      "rejected": true
+    },
+    {
+      "mutation": "missing_source_completeness",
+      "rejected": true
+    },
+    {
+      "mutation": "zip_truncation_loses_an_observed_root",
+      "rejected": true
+    },
+    {
+      "mutation": "silently_delete_from_both_sources",
+      "rejected": true
+    },
+    {
+      "mutation": "omit_a_deletion_case",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_source_matching_index",
+      "rejected": true
+    },
+    {
+      "mutation": "forged_source_interval_endpoint",
+      "rejected": true
+    },
+    {
+      "mutation": "understate_common_observation_radius",
+      "rejected": true
+    },
+    {
+      "mutation": "overstate_impossibility_threshold",
+      "rejected": true
+    },
+    {
+      "mutation": "corrupt_shared_ordinate",
+      "rejected": true
+    },
+    {
+      "mutation": "erase_actual_field_distinction",
+      "rejected": true
+    },
+    {
+      "mutation": "claim_exact_threshold_inside_unresolved_bracket",
+      "rejected": true
+    },
+    {
+      "mutation": "omit_second_precision",
+      "rejected": true
+    }
+  ],
+  "finite_arbitrary_matching_crosscheck": {
+    "sorted_multiset_problems": 543,
+    "arbitrary_indexed_matchings_enumerated": 41796,
+    "largest_retained_population": 4,
+    "coordinate_grid": [
+      -1,
+      0,
+      1
+    ],
+    "duplicates_and_negative_coordinates_included": true,
+    "uncrossing_without_order_counterexample": {
+      "A": [
+        1,
+        0
+      ],
+      "B": [
+        0,
+        1
+      ],
+      "crossed_max_distance": 0,
+      "straight_max_distance": 1
+    }
+  },
+  "actual_zip_truncation_counterexample": {
+    "naive_endpoint_loop_accepts": true,
+    "observed_population": 21,
+    "required_deletions": [
+      2,
+      1
+    ],
+    "permitted_deletions_per_field": 1,
+    "correct_auditor_rejects": true
+  },
+  "unverifiable_contract_limitation": "The intact population selector can be deceived by a false completeness/preservation declaration. Two concrete A-to-B misclassifications after a deletion are preserved in Population_Decoder.json and independently audited; a scalar count cannot authenticate those premises.",
+  "scope": "Twenty-five actual mutations, an accepted-by-zip invalid witness and 41796 arbitrary finite matchings supplement the exact real-field certificates and Lean observation lemmas. Finite grid exhaustion does not replace the written general matching proof or certify unknown external input completeness."
+}

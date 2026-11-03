@@ -1,0 +1,10 @@
+{
+  "kind": "retained_evidence_verifier_output_location_failure",
+  "command_from_workspace": "work/acs-research/.venv/bin/python work/acs-repo/code/frontier_verification/verify_ordinate_delta.py > work/acs-research/uncertainty-audit/Verification.json",
+  "returncode": 1,
+  "observed_failure": "AssertionError: (PosixPath('/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-uncertainty-delta/README.md'), 'Verification.json')",
+  "location": "verify_ordinate_delta.py:126, local-link existence check",
+  "cause": "The verifier result was redirected to scratch, while the checkpoint README already linked the final checkpoint Verification.json. That final path did not yet exist during the first packaging verification.",
+  "resolution": "Run the unchanged verifier with output redirected to docs/frontier/2026-09-13-uncertainty-delta/Verification.json, creating the output path before the link check. Publish only if the process exits successfully and emits status passed.",
+  "scope": "Packaging-order failure after preceding-checkpoint, source, manifest, transcript, audit and ledger checks. No numerical producer, integer replay, source certificate or mathematical result was changed. This invocation is separate from the four recorded computation commands."
+}

@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-09-14T00:30:46.895728+00:00",
+  "recorded_commands": 12,
+  "successful_commands": 10,
+  "failed_commands": 2,
+  "recording_scope": "Ten successful numerical, combinatorial, source and adversarial executions, one failed HTTP acquisition and one failed parity auditor. Packaging and final recursive verification are separate.",
+  "failures": [
+    {
+      "command": "primary-source-acquisition",
+      "reason": "HTTP 406 with default urllib headers",
+      "resolution": "Separate acquire_primary_sources_v2.py with standard request headers; old source and receipt preserved"
+    },
+    {
+      "command": "independent-parity-audit",
+      "reason": "SymPy expression factor sorting reached FLINT nmod comparison: TypeError nmods cannot be ordered",
+      "resolution": "Separate dedekind_aggregate_parity_audit_v2.py uses Poly.factor_list for that control; old source and receipt preserved"
+    }
+  ],
+  "freeze_boundary": "All executed instrument versions are retained unchanged. The v2 correction changes only the factorization API in the index-prime control, not the decoder, mathematical hypotheses or arithmetic comparison.",
+  "method_delta": "Keep full global cut vectors; explore the convex hull of local models; branch over every remaining target tuple and prove infeasibility with constant-zero rational separation; derive missing unramified parity from signed discriminant.",
+  "no_gain_control": "52 model-hull objectives give zero new individual-domain exclusions before joint target branching.",
+  "solver_acceptance": "12 optimal maximum-slack proposals have negative exact selected slack and are rejected. A status-zero solver result is not evidence of feasible inequalities.",
+  "verification_search_scope": "Final verification reruns the continuum and model-hull LP deduction computations. It checks every stored MILP point and every joint separation exactly instead of repeating MILP search or the joint branch LP proposal search.",
+  "independence": "Real continuum versus complex quadratic covers, rational moments, integer versus Fraction supports, independent local catalogues, full integer witnesses, unrounded interval margins, permutation inversion/cycle/determinant agreement, polynomial/Sylvester discriminants and separate irreducibility controls. Transcendental interval routes share FLINT; mpmath displaced controls are samples.",
+  "arithmetic_scope": "Source-backed general discriminant arguments are written, not Lean formalized. The finite permutation checks do not alone prove the general number-theoretic bridge.",
+  "history_policy": "Keep all 117 branches, preserve the 413-event prefix and append five events. Research remains active without global completion."
+}

@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-14T02:39:35.954197+00:00",
+  "manifest_files": 36,
+  "preceding_checkpoint_integrity": "passed",
+  "derived_results": {
+    "preserved_population_sizes": [
+      23,
+      22
+    ],
+    "fixed_population_field_selection_independent_of_coordinate_radius": true,
+    "coordinate_transformations": 72,
+    "collapsed_geometry_controls": 4,
+    "false_completeness_or_preservation_counterexamples": 2,
+    "polynomial_factorizations": 1128,
+    "unique_field_coefficient_comparisons": 1208,
+    "observation_coefficient_comparisons": 2416,
+    "common_observation_population": 22,
+    "required_source_deletions": [
+      1,
+      0
+    ],
+    "common_observation_fixed_coefficients": 456,
+    "common_observation_ambiguous_coefficients": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "numerical_radius_bracket": [
+      "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+    ],
+    "numerical_radius_bracket_width": "1/500000000000000000000000000000",
+    "exact_symbolic_threshold": "(second_positive_ordinate_A - second_positive_ordinate_B) / 2",
+    "optimal_deletion_indices_zero_based": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "matching_pair_rows": 1012,
+    "endpoint_inclusions": 176,
+    "threshold_boundary_checks": 8,
+    "strict_critical_gap_inequalities": 286,
+    "post_noise_window_arbitrary_deletions": 0,
+    "post_noise_window_visible_populations": [
+      22,
+      22
+    ],
+    "post_noise_window_exact_inequalities": 198,
+    "arbitrary_finite_matching_problems": 543,
+    "literal_finite_matchings": 41796,
+    "mutations_rejected": 34,
+    "kernel_checked_observation_lemmas": 8,
+    "new_roots_computed": 0
+  },
+  "fresh_population_and_actual_matching": "passed",
+  "fresh_independent_arithmetic_DP_and_critical_gap": "passed",
+  "fresh_exploratory_success_replay": "passed",
+  "fresh_lean_compilation": "passed",
+  "general_arithmetic_and_full_matching_proof_formalized_in_Lean": false,
+  "recorded_commands": 13,
+  "successful_commands": 11,
+  "failed_commands": 2,
+  "research_branches": 117,
+  "ledger_events": 428,
+  "preserved_event_prefix": 423,
+  "ledger_head_sha256": "dfef0f425b215d3b77449764514070ba550acd5837c52b340fe273d9740470b0",
+  "local_links": 56,
+  "scope": "Preserved cardinality identifies this completely classified field pair independently of coordinate errors. Under one deletion, or coordinate noise followed by complete window selection with no arbitrary deletions, actual fields admit a common observation at a threshold given exactly by half their second-root gap, with a2e-30 numerical bracket. Fresh independent arithmetic, matching, adversarial, interval and eight elementary Lean checks support the written proof. The wider ACS goal remains active."
+}

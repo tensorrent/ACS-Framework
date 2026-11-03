@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-09-13T19:52:44.971299+00:00",
+  "theorem": "Every number field of degree four and absolute field discriminant 125 is isomorphic to Q(zeta_5).",
+  "global_invariant_local_factors": 72,
+  "previous_ambiguous_factors_selected": 48,
+  "prior_only_coefficient_predictions": 604,
+  "held_out_target_matches": 91,
+  "additional_spectral_observations_used": 0,
+  "complete_number_field_proof_formalized": false,
+  "s4_exhaustive_subsets": 130817,
+  "subdirect_product_exhaustive_subsets_with_identity": 32768,
+  "finite_field_factorizations": 564,
+  "mutated_transcripts_rejected": 6,
+  "interpretation": "Degree, signature and discriminant already supplied to the explicit formula identify this witness. Earlier local/spectral profile comparisons restrict permissible deductions; their survivor counts and numerical thresholds are not unrestricted actual-field ambiguity or information-theoretic limits.",
+  "unchanged_mathematical_scope": "Earlier numerical enclosures and restricted decoder results stand. No new spectral measurement, improved uncertainty threshold, general field-identification theorem or global completion is claimed.",
+  "next_question": "Construct independently verified nonisomorphic fields sharing every permitted global invariant, with a differing Euler observable, before measuring information added by finite zero data."
+}

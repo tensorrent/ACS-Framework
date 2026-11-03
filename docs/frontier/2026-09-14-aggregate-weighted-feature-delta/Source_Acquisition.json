@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-09-14T05:19:53.484632+00:00",
+  "source_sha256": "1f935cb6158c71c6c0f6f88d242110c69da89e3bb12c11633cb62f3ece420341",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "pinned_sources": [
+    {
+      "path": "Mathlib/Analysis/Calculus/Taylor.lean",
+      "sha256": "fba037b49e06e1fe416f04f9682bfe924601cfaf0aa137ec54331a288c995160",
+      "bytes": 29023,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Data/Finset/Max.lean",
+      "sha256": "c7985dc5f0435ac75778d0412f9a561946639d3b161246cbf603746a1f86ff11",
+      "bytes": 23174,
+      "matches_pinned_git_object": true
+    }
+  ],
+  "retrieved_primary_documentation": {
+    "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Calculus/Taylor.html",
+    "retrieval": "Successfully opened with the web tool on 14 September 2026.",
+    "relevant_results": [
+      "taylor_mean_remainder_lagrange_iteratedDeriv",
+      "taylor_mean_remainder_bound",
+      "taylor_integral_remainder"
+    ],
+    "use": "Primary documentation for scalar Taylor expansions with bounded remainders. The current web page is not asserted to be the exact pinned runtime revision."
+  },
+  "Arb_constructor_documentation": {
+    "url": "https://python-flint.readthedocs.io/en/latest/arb.html",
+    "retrieval": "Successfully opened with the web tool on 14 September 2026; the page identifies python-flint 0.9.0.",
+    "verified_behavior": "The documentation says a nonzero radius can be rounded upward by the constructor. It describes a fixed 30-bit radius precision and exact dyadic tuple inputs. The observed 108 reconstruction false rejections and zero exact endpoint violations are separately recorded computational evidence."
+  },
+  "runtime_change": "No package acquisition or version changes. The new generic Lean lemmas use already available normed-group, finite maximum and tactic modules; the Taylor and mean-value applications remain written derivations.",
+  "scope": "Exact local reference sources are compared to their pinned Git objects and archived with the existing mathlib license. Current primary documentation supplements, rather than replaces, the pinned source evidence."
+}

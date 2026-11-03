@@ -1,0 +1,273 @@
+{
+  "recorded_utc": "2026-09-14T07:22:46.174129+00:00",
+  "result": "A source-critical strip bootstrap strengthens the uniform local lower guarantee, while two mixed A/B pairs improve the actual ambiguity upper endpoint. Their exact ratio is approximately 1.0064543677534608.",
+  "derived_results": {
+    "feature_dimension": 22,
+    "source_population": 22,
+    "source_cutoff": "39/2",
+    "original_coordinate_cube_radius": "1/100",
+    "root_coordinate_error_radius": "90839418064418614701455025847221831488999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+    "bootstrap_feature_budget_cap": "9159947199471985024448783805197524678865624849230862655961171344917615986572448261346072329131445652167472066460047221983728257141727654757017979009015476179590361546737/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "critical_difference_cap": "122964743380256799548923143877101646771984008665647575371681060777082534876548294727424927353664546972240971660611966284282946949744302176537493261561414049070312778879854483966991571747008097603/6044629098073145873530880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "conditional_critical_curve_interval": [
+      "25081778380602160518197690395501681292220092978820183496636074072899017347917465123451705272575072646335453027759028339388033715717053050255697823462506738438585950929687221120145516033008428252991902397/6044629098073145873530880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "25081778505639065317248372022754547562815679106282324347931224816261138902082534876548294727424927353664546972240971660611966284282946949744302176537493261561414049070312778879854483966991571747008097603/6044629098073145873530880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "critical_strip_half_width_display": 1.0342810350341335e-08,
+    "conditional_secant_inverse_bound": "17416160366598884123294534008917/316912650057057350374175801344",
+    "inverse_bound_display": 54.955712129078016,
+    "uniform_identification_strictly_below": "2951479051793528258559409704189641294348288/16220063312536928917555635803301818668842315673828125",
+    "lower_display": 1.8196470598929473e-10,
+    "previous_uniform_guarantee": "11258999068426239999997748200186314752/62511190784174907712083398364484310150146484375",
+    "best_certified_tau_upper": "18313917311990001951561289857230118983856682610229412410535678510468210617191976388162596440031277639947206659979609717702475870279128519786358583724864622406066967377207/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "upper_display": 1.8313917311990002e-10,
+    "previous_upper_endpoint": "9159947199471985024448783805197524678865624849230862655961171344917615986572448261346072329131445652167472066460047221983728257141727654757017979009015476179590361546737/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "upper_to_guarantee_ratio": "318958120846249442890524109419732932250821004866233016636268812518194690229371384018730438408155953230593548399031454544623069877494916475456163682839191567967431047893889858585096590548838434640554819/316912650057057350374112418813988588529925164839731200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "ratio_display": 1.0064543677534608,
+    "relative_threshold_gap_display": 0.006454367753460846,
+    "mixed_pair_count": 2,
+    "critical_epsilon": "10000000000000001/1000000000000000000000000",
+    "variable_radius": "1e-120",
+    "tau_scale": "1e-10",
+    "pairs": [
+      {
+        "case_id": "1/1000000",
+        "free_A_indices": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          21
+        ],
+        "free_B_indices": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "tau_interval": [
+          "18314064434518525328308305181735025043989520203208154573164647980873969248190119196382179820297274261560724435441666722643346339934941258146112463698493079732477283608531/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "18314064434518525328308305181735025043989520203208154573164647980873969248190119196382179820297274261560724435441666722663346339934941258146112463698493079732477283608531/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "minimum_cube_margin": "1/1000000"
+      },
+      {
+        "case_id": "1/10000000000",
+        "free_A_indices": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          21
+        ],
+        "free_B_indices": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "tau_interval": [
+          "18313917311990001951561289857230118983856682610229412410535678510468210617191976388162596440031277639947206659979609717682475870279128519786358583724864622406066967377207/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "18313917311990001951561289857230118983856682610229412410535678510468210617191976388162596440031277639947206659979609717702475870279128519786358583724864622406066967377207/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "minimum_cube_margin": "1/10000000000"
+      }
+    ],
+    "rejected_naive_pair_count": 3,
+    "rejected_cube_escape_displays": [
+      0.00028713472798418973,
+      0.0002881096418599686,
+      0.00028811939100054453
+    ],
+    "scalar_source_inequalities": 352,
+    "polynomial_factorizations": 1128,
+    "coefficient_comparisons": 1208,
+    "fixed_coefficients": 456,
+    "ambiguous_coefficients": 148,
+    "lower_primary_precision_bits": [
+      1024,
+      1536
+    ],
+    "lower_independent_Cramer_precision_bits": [
+      896,
+      1152
+    ],
+    "mixed_primary_precision_bits": [
+      768,
+      1024
+    ],
+    "mixed_independent_complex_precision_bits": [
+      896,
+      1152
+    ],
+    "mutations_rejected": 46,
+    "exact_controls": 5,
+    "Lean_lemmas": 7,
+    "original_observation_contract_preserved": true,
+    "new_source_roots": 0,
+    "entire_concrete_bridge_Lean_formalized": false,
+    "sharp_source_feasible_threshold_proved": false,
+    "arbitrary_report_decoder_implemented": false
+  },
+  "unchanged_contract": {
+    "source_cutoff": "39/2",
+    "source_population": 22,
+    "source_selection": "complete_positive_prefix_before_coordinate_errors",
+    "root_entries_and_multiplicity": "preserved",
+    "root_coordinate_error_radius": "90839418064418614701455025847221831488999921783555007822547/158456325028528675187087900672000000000000000000000000000000",
+    "observed_root_region_radius": "1/100",
+    "region_geometry": "standard_coordinate_cube_centered_at_c",
+    "features": [
+      {
+        "kind": "gaussian",
+        "center": 2,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 3,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 4,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 5,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 7,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 8,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 9,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 11,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 13,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 16,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 17,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 19,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 23,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 25,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 27,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 29,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 31,
+        "a": "1/25"
+      },
+      {
+        "kind": "rational_moment",
+        "numerator": 3,
+        "offset": "9/4"
+      },
+      {
+        "kind": "gaussian",
+        "center": 37,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 2,
+        "a": "1/24"
+      },
+      {
+        "kind": "gaussian",
+        "center": 41,
+        "a": "1/25"
+      },
+      {
+        "kind": "gaussian",
+        "center": 43,
+        "a": "1/25"
+      }
+    ],
+    "additional_feature_errors": "independent_absolute_component_bounds",
+    "raw_roots_or_counts_released": false,
+    "unknown_tails_included": false
+  },
+  "lower_argument": "Any common report below the inherited budget cap has a bounded critical root difference. Opposite source bounds then force both critical roots into a narrow strip. The restricted convex column family inherits all global signs; a newly checked coordinate 12 face sign gives its corner constant. The new lower budget is below the original cap, making the exclusion noncircular under the original observation contract.",
+  "upper_argument": "For each noncritical coordinate, pin one observation inside its selected cube endpoint and solve the other A or B root, plus scaled noise. Explicit signs, side-specific correction boxes and direct source inequalities certify two strict self-mapping contractions. Exact feature midpoints make the pairs ambiguous at their positive tau.",
+  "independence": "Real-polynomial Cramer ratios audit the lower corner; complex scalar derivatives independently audit the real interval mixed systems. All 352 scalar source inequalities and 1128 polynomial factorizations are rebuilt. Both numerical routes share FLINT and inherited source/classification premises.",
+  "formal_scope": "Seven generic Lean lemmas prove necessary/sufficient source bounds, strip and segment inclusions, common-budget caps, noncircular exclusion and the actual free-A/free-B derivative rule. Full concrete analytic assembly remains partly written or computational.",
+  "negative_evidence": "The original all-free-A near-corner proposal fails a region/source assertion. A separate diagnostic proves all three numerical/source-center checks pass while each leaves the coordinate cube. These are rejected trials, not ambiguity endpoints or impossibility results.",
+  "open_gates": [
+    "Tighter source-feasible thresholds and actual pairs",
+    "Validated parameter families",
+    "Arbitrary-report bounded-error inverse-set decoding",
+    "Wider/global regions and counterexamples",
+    "Complete analytic formalization",
+    "All natural operator, infinite arithmetic, real-part, topology, physical acquisition and private-input branches remain active"
+  ]
+}

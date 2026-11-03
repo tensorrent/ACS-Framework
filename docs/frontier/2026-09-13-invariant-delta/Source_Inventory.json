@@ -1,0 +1,15 @@
+{
+  "baseline_commit": "f2b93e9bf75f376a73f8f554df0be1b4f03cee67",
+  "instruments": {
+    "code/frontier_verification/dedekind_invariant_classification.py": "7532ad6d302ff37ff2429a6574908f64367bcf41dcc9c8ef08ccec9823b1ade6",
+    "code/frontier_verification/dedekind_invariant_audit.py": "9b85f7819744459ebdbbc2c86f2051d2aee99f14d7dc878821d36927144d0aa6",
+    "code/frontier_verification/dedekind_invariant_adversary.py": "c6f701c9bca1c5c6baa78cc79a1b07505b132e36be97b609b557b2cb3c21e351",
+    "code/frontier_verification/verify_invariant_delta.py": "fd2bbe54f52f492999e2782bcd8283e167b9d086fca612329e25690348652337",
+    "code/frontier_verification/INVARIANT_README.md": "ad5ee6fe24c4d136ca8e43fa30321c536181c31ce5bafe2627d8deebbca5075e"
+  },
+  "dependencies": {
+    "code/frontier_verification/verify_local_noise_delta.py": "4b6569f4010246ef1a4a093f4931c9473b3f967307f987159babc411e1949caf",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New classification instruments and preserved acquisition scripts. No earlier instrument changed."
+}

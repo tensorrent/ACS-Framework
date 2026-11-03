@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "source_sha256": "8b018ead4a06c532f0c12ca2eaeceb8134bcdacf41b8c4b454492ca301abb624",
+  "new_downloads": 2,
+  "sources": [
+    {
+      "author": "J. S. Milne",
+      "title": "Fields and Galois Theory",
+      "version": "5.10, September 2022",
+      "url": "https://www.jmilne.org/math/CourseNotes/FT.pdf",
+      "resolved_url": "https://www.jmilne.org/math/CourseNotes/FT.pdf",
+      "retrieved_utc": "2026-09-14T00:21:59.958456+00:00",
+      "bytes": 1853550,
+      "sha256": "5c43ea0bf4ec190b819727fe720414a80e09f9e762533d08bad5b8a0b6de7273",
+      "locations": [
+        "Proposition 4.1 and Corollary 4.2, printed pp. 47\u201348 / PDF pages 47\u201348"
+      ],
+      "redistributed_in_repository": false
+    },
+    {
+      "author": "J. S. Milne",
+      "title": "Algebraic Number Theory",
+      "version": "3.08, July 2020",
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "resolved_url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "retrieved_utc": "2026-09-14T00:22:00.550825+00:00",
+      "bytes": 1296815,
+      "sha256": "24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847",
+      "locations": [
+        "Remark 2.25 and Proposition 2.26, printed p. 34 / PDF page 36",
+        "Proposition 2.40, sign of discriminant",
+        "Theorem 3.35, ramification criterion",
+        "Corollary 8.22 and Theorem 8.23, printed pp. 145\u2013146 / PDF pages 147\u2013148"
+      ],
+      "redistributed_in_repository": false
+    }
+  ],
+  "scope": "Primary source fingerprints and theorem locations. No PDF redistribution. The report supplies its own field-basis and finite-etale derivations and does not apply power-basis factorization at an index prime."
+}

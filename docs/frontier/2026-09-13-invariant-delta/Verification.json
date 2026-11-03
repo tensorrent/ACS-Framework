@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T19:53:11.847620+00:00",
+  "scope": "Previous checkpoint integrity plus fresh replay of all new finite-group, polynomial, held-out and corrupted-transcript audits. Cited arithmetic theorems remain mathematical premises, not a fully mechanized number-field proof.",
+  "manifest_files": 22,
+  "preceding_checkpoint_integrity": "passed",
+  "s4_exhaustive_subsets": 130817,
+  "product_subsets_with_identity": 32768,
+  "independent_factorizations": 564,
+  "coefficient_matches": 604,
+  "target_matches": 91,
+  "local_factors_from_invariants": 72,
+  "prior_ambiguous_factors_selected": 48,
+  "mutated_transcripts_rejected": 6,
+  "recorded_commands": 5,
+  "failed_commands": 1,
+  "research_branches": 117,
+  "ledger_events": 378,
+  "preserved_event_prefix": 373,
+  "ledger_head_sha256": "5c2d32ae64d80079b4873e3e4489f1fdcc5c50719cfe5fecf735ce108cd176b4",
+  "local_links": 37
+}

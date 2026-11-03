@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-14T04:07:47.137446+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Verification.json": "9c5b0c3b2389e92c404fd1789922b4e305a7e8c3c412459ff11b557bb240d61e",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Research_Queue.json": "ac56f081603d16424d7754e6f02cfc75806949999a8d897bf981f714f011c78f",
+    "docs/frontier/2026-09-14-aggregate-equal-population-delta/Branch_Events.jsonl": "abad0b576571de59567febb0e6e62c624c6284ec5449e6b7421e6a6374506314",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432"
+  },
+  "scope": "The complete two-field metadata class and complete finite source populations are inherited and recursively verified; both root-file precision variants are used in the coordinate audit."
+}

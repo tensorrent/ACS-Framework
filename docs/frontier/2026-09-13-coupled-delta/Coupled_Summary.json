@@ -1,0 +1,758 @@
+{
+  "recorded_utc": "2026-09-13T16:57:10.510651+00:00",
+  "target_prime_power_limit": 361,
+  "target_count": 91,
+  "generic_coefficient_support": 604,
+  "prime_cutoff": 4096,
+  "height_comparisons": [
+    {
+      "height": 220,
+      "certified_positive_roots_used": 528,
+      "coupled_integer_exclusion_unique": 78,
+      "initial_dual_unique": 76,
+      "integer_refined_dual_unique": 89,
+      "coupled_rounds": 12,
+      "incidental_unique_coefficients": []
+    },
+    {
+      "height": 600,
+      "certified_positive_roots_used": 1822,
+      "coupled_integer_exclusion_unique": 91,
+      "initial_dual_unique": 90,
+      "integer_refined_dual_unique": 91,
+      "coupled_rounds": 4,
+      "incidental_unique_coefficients": [
+        {
+          "n": 367,
+          "prime": 367,
+          "power": 1,
+          "candidates": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "height": 1000,
+      "certified_positive_roots_used": 3361,
+      "coupled_integer_exclusion_unique": 91,
+      "initial_dual_unique": 91,
+      "integer_refined_dual_unique": 91,
+      "coupled_rounds": 5,
+      "incidental_unique_coefficients": []
+    },
+    {
+      "height": 1500,
+      "certified_positive_roots_used": 5427,
+      "coupled_integer_exclusion_unique": 91,
+      "initial_dual_unique": 91,
+      "integer_refined_dual_unique": 91,
+      "coupled_rounds": 2,
+      "incidental_unique_coefficients": []
+    },
+    {
+      "height": 2000,
+      "certified_positive_roots_used": 7602,
+      "coupled_integer_exclusion_unique": 91,
+      "initial_dual_unique": 91,
+      "integer_refined_dual_unique": 91,
+      "coupled_rounds": 2,
+      "incidental_unique_coefficients": []
+    }
+  ],
+  "uncertainty_cases": [
+    {
+      "height": 1000,
+      "additional_radius": "5e-21",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-16",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-13",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-10",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-8",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-6",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 1000,
+      "additional_radius": "5e-4",
+      "unique_targets": 67,
+      "unresolved_targets": [
+        {
+          "n": 16,
+          "prime": 2,
+          "power": 4,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "prime": 3,
+          "power": 3,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 32,
+          "prime": 2,
+          "power": 5,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 64,
+          "prime": 2,
+          "power": 6,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 81,
+          "prime": 3,
+          "power": 4,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 121,
+          "prime": 11,
+          "power": 2,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 125,
+          "prime": 5,
+          "power": 3,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 128,
+          "prime": 2,
+          "power": 7,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 243,
+          "prime": 3,
+          "power": 5,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 256,
+          "prime": 2,
+          "power": 8,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 343,
+          "prime": 7,
+          "power": 3,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-21",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-16",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-13",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-10",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-8",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-6",
+      "unique_targets": 91,
+      "unresolved_targets": []
+    },
+    {
+      "height": 2000,
+      "additional_radius": "5e-4",
+      "unique_targets": 55,
+      "unresolved_targets": [
+        {
+          "n": 8,
+          "prime": 2,
+          "power": 3,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 16,
+          "prime": 2,
+          "power": 4,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 25,
+          "prime": 5,
+          "power": 2,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 27,
+          "prime": 3,
+          "power": 3,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 32,
+          "prime": 2,
+          "power": 5,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 49,
+          "prime": 7,
+          "power": 2,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 64,
+          "prime": 2,
+          "power": 6,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 81,
+          "prime": 3,
+          "power": 4,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 121,
+          "prime": 11,
+          "power": 2,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 125,
+          "prime": 5,
+          "power": 3,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 128,
+          "prime": 2,
+          "power": 7,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 243,
+          "prime": 3,
+          "power": 5,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 256,
+          "prime": 2,
+          "power": 8,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 343,
+          "prime": 7,
+          "power": 3,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "at_220_without_local_relations": {
+    "unique_targets_before_branching": 89,
+    "candidate_pairs": 8,
+    "excluded_pairs": 6,
+    "feasible_pairs": [
+      {
+        "359": 0,
+        "361": 4
+      },
+      {
+        "359": 1,
+        "361": 1
+      }
+    ]
+  },
+  "optional_local_bridge_at_220": {
+    "prime": 19,
+    "square": 361,
+    "retained_residue_degrees": [
+      2,
+      2
+    ],
+    "unique_targets": 91
+  },
+  "original_local_factor_cohort": {
+    "rational_primes": 72,
+    "unresolved_local_factors": 48
+  },
+  "incidental_367_scope": "The coefficient at 367 is recovered as zero at height 600; adding this prime to the local-factor cohort adds the unresolved square 134689.",
+  "scope": "Finite inequalities with explicit inference tiers, not an unknown-field or operator identification. Height-dependent width choices and the coarse uncertainty bound prevent interpreting the noise counts as optimal thresholds."
+}

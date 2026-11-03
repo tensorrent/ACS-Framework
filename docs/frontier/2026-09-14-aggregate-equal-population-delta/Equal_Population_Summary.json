@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-09-14T03:17:25.254986+00:00",
+  "result": "Equal total counts do not remove the strongest binary information in a finite source list: one interior count has the same sharp theoretical separation threshold as the complete list under preserved-population absolute coordinate errors.",
+  "derived_results": {
+    "source_cutoff": "39/2",
+    "equal_populations": [
+      22,
+      22
+    ],
+    "anonymous_input_files": 4,
+    "parent_intervals_partitioned": 90,
+    "retained_intervals": 88,
+    "metadata_and_total_population_fixed_coefficients": 456,
+    "interior_count_cases": 32,
+    "uniformly_unique_count_cases": 20,
+    "coefficients_fixed_by_unique_count": 604,
+    "common_observation_fixed_coefficients": 456,
+    "common_observation_ambiguous_coefficients": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "exact_symbolic_threshold": "(a_1 - b_1)/2, with zero-based sorted true source indices",
+    "rational_height": "1411978600627841645479140495578793091273/340282366920938463463374607431768211456",
+    "threshold_bracket": [
+      "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+    ],
+    "threshold_bracket_width": "1/500000000000000000000000000000",
+    "rational_gate_guarantee": "0 <= r < L",
+    "actual_common_observation_at_U": true,
+    "actual_ambiguity_at_L_claimed": false,
+    "independent_polynomial_factorizations": 1128,
+    "polynomial_coefficient_comparisons": 1208,
+    "common_observation_endpoint_checks": 176,
+    "strict_noncritical_pair_comparisons": 42,
+    "all_bipartite_pair_cost_entries": 1936,
+    "bipartite_boundary_checks": 8,
+    "finite_multiset_pairs": 1741,
+    "literal_indexed_matchings": 32016,
+    "finite_positive_gap_count_gates": 1672,
+    "mutations_rejected": 36,
+    "cutoff_plateau": [
+      "378045925415659873749288033426620929703984929857744333253209/19807040628566084398385987584000000000000000000000000000000",
+      "6250789966234782066585688727409680876843704899341367767558031/316912650057057350374175801344000000000000000000000000000000"
+    ],
+    "cutoff_plateau_exact_checks": 162,
+    "kernel_checked_lemmas": 8,
+    "new_roots_computed": 0,
+    "new_Gaussian_measurements": 0
+  },
+  "mathematical_argument": "For sorted equal-length lists choose a maximum-gap index k and its true midpoint height. Below half that gap, at most k entries of one list and at least k+1 of the other can lie below the gate. The ordered midpoint list is common at the half-gap threshold. Strict interval dominance identifies the second positive roots as the critical pair in this actual field class.",
+  "rational_vs_symbolic": "The implemented rational height uses certified box endpoints. It guarantees separation for r<L. The true-root midpoint need not equal that rational height. Overlapping closed-box count envelopes at L are epistemic and do not establish actual-field ambiguity there; the rational uniform common witness at U does.",
+  "input_contract": "Complete source selection below39/2 precedes coordinate perturbation. All22entries and multiplicities remain, including any noisy points outside the original window. No post-noise censoring or edit allowance is used.",
+  "cutoff_continuum": "The identical source lists occur for every cutoff in the certified open plateau, approximately(19.086441660064803,19.724015324441552). Endpoint inequalities prove the continuum result; eighteen interior cutoff controls supplement it.",
+  "scope": "Known benchmark, complete two-field metadata class inherited from a source-backed written argument, inherited complete finite spectra, no new zeros or Gaussian budgets. Eight constituent Lean lemmas pass; full arithmetic and spectral bridges remain written/computational.",
+  "next_gate": "Define and audit a feature-only Gaussian observation contract with actual-source perturbations, explicit errors and tail treatment; prove actual feasibility or separation with validated analysis. Maintain the broader117branch ACS program, natural operators, infinite information, topology, physical interpretation and private-input gates. No global completion."
+}

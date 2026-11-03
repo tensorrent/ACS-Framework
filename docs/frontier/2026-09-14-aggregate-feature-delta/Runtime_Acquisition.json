@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "source_sha256": "2093a3304a9da74636f9c60460f8938bbac48b94250ba105e9e86eacc655b7bb",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "exe",
+    "cache",
+    "get",
+    "Mathlib.Topology.MetricSpace.Contracting"
+  ],
+  "returncode": 0,
+  "stdout": "Current branch: HEAD\nUsing cache from origin: (some leanprover-community/mathlib4)\nAttempting to download 1664 file(s) from leanprover-community/mathlib4 cache at https://lakecache.blob.core.windows.net/mathlib4-master\nDecompressed 1664 file(s)\nAlready decompressed 1664 file(s)\n",
+  "stderr": "\nDownloaded: 1 file(s) [attempted 1/1664 = 0%, 43 KB/s], Decompressed: 0\u001b[K\nDownloaded: 3 file(s) [attempted 3/1664 = 0%, 15 KB/s], Decompressed: 1\u001b[K\nDownloaded: 44 file(s) [attempted 44/1664 = 2%, 33 KB/s], Decompressed: 39\u001b[K\nDownloaded: 90 file(s) [attempted 90/1664 = 5%, 385 KB/s], Decompressed: 82\u001b[K\nDownloaded: 145 file(s) [attempted 145/1664 = 8%, 953 KB/s], Decompressed: 144\u001b[K\nDownloaded: 205 file(s) [attempted 205/1664 = 12%, 808 KB/s], Decompressed: 196\u001b[K\nDownloaded: 264 file(s) [attempted 264/1664 = 15%, 1297 KB/s], Decompressed: 254\u001b[K\nDownloaded: 332 file(s) [attempted 332/1664 = 19%, 274 KB/s], Decompressed: 323\u001b[K\nDownloaded: 401 file(s) [attempted 401/1664 = 24%, 2349 KB/s], Decompressed: 391\u001b[K\nDownloaded: 484 file(s) [attempted 484/1664 = 29%, 344 KB/s], Decompressed: 450\u001b[K\nDownloaded: 547 file(s) [attempted 547/1664 = 32%, 282 KB/s], Decompressed: 538\u001b[K\nDownloaded: 618 file(s) [attempted 618/1664 = 37%, 1175 KB/s], Decompressed: 596\u001b[K\nDownloaded: 688 file(s) [attempted 688/1664 = 41%, 211 KB/s], Decompressed: 674\u001b[K\nDownloaded: 753 file(s) [attempted 753/1664 = 45%, 72 KB/s], Decompressed: 743\u001b[K\nDownloaded: 831 file(s) [attempted 831/1664 = 49%, 91 KB/s], Decompressed: 821\u001b[K\nDownloaded: 899 file(s) [attempted 899/1664 = 54%, 2248 KB/s], Decompressed: 889\u001b[K\nDownloaded: 987 file(s) [attempted 987/1664 = 59%, 362 KB/s], Decompressed: 967\u001b[K\nDownloaded: 1065 file(s) [attempted 1065/1664 = 64%, 69 KB/s], Decompressed: 1055\u001b[K\nDownloaded: 1143 file(s) [attempted 1143/1664 = 68%, 941 KB/s], Decompressed: 1133\u001b[K\nDownloaded: 1221 file(s) [attempted 1221/1664 = 73%, 210 KB/s], Decompressed: 1211\u001b[K\nDownloaded: 1299 file(s) [attempted 1299/1664 = 78%, 202 KB/s], Decompressed: 1296\u001b[K\nDownloaded: 1377 file(s) [attempted 1377/1664 = 82%, 1997 KB/s], Decompressed: 1368\u001b[K\nDownloaded: 1455 file(s) [attempted 1455/1664 = 87%, 61 KB/s], Decompressed: 1436\u001b[K\nDownloaded: 1524 file(s) [attempted 1524/1664 = 91%, 203 KB/s], Decompressed: 1504\u001b[K\nDownloaded: 1597 file(s) [attempted 1597/1664 = 95%, 244 KB/s], Decompressed: 1582\u001b[K\nDownloaded: 1660 file(s) [attempted 1660/1664 = 99%, 2809 KB/s], Decompressed: 1650\u001b[K\nDownloaded: 1664 file(s) [attempted 1664/1664 = 100%, 2809 KB/s], Decompressed: 1650\u001b[K\n",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "module_source_sha256": "8d567fac6fdd9223c975598f79080ca011a5651a2dcc6c78472644fee424c3cb",
+  "module_olean_sha256": "3d2269f0b11f7e440a918aa44fcb42f41ff67f2b77c37f779685a49d535a49f8",
+  "scope": "Acquire the missing compiled Banach fixed-point module and its dependencies from the pinned mathlib cache; no toolchain, package manifest or theorem source change."
+}

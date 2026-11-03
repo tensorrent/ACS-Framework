@@ -1,0 +1,8 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-signed-corner-delta/Primary_Sources.json": "f7ab7fcb387a774fe59d248c714d26225e7eaa6422c0de472c3fd910e387ecec",
+    "docs/frontier/2026-09-14-aggregate-variable-noise-delta/Primary_Sources.json": "e4508fde4dbe556f048078c7609a3631610c0c7c36258b5c005cec7b82b004df"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "scope": "Current primary Mathlib derivative-addition/subtraction documentation was retrieved. Three pinned derivative/interval sources match Git objects and are archived with license. Source endpoint and budget-bootstrap implications are explicitly derived and compiled in generic Lean form."
+}

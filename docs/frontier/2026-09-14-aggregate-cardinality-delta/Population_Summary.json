@@ -1,0 +1,78 @@
+{
+  "recorded_utc": "2026-09-14T02:28:41.383351+00:00",
+  "result": "Preserved source-list length identifies the complete two-field class independently of coordinate error. Allowing one missing root, or instead selecting the observed window after coordinate noise with no arbitrary deletions, yields actual-field ambiguity at exactly half the second-root gap.",
+  "metadata": [
+    "degree four",
+    "absolute field discriminant 576",
+    "signature (0,2)"
+  ],
+  "metadata_class": "The preceding source-backed classification derives exactly two fields without a supplied Galois-group label. That proof and finite spectral completeness are inherited.",
+  "preserved_population_model": "The complete source population is selected through20 before coordinate errors. Entries and multiplicities are preserved; coordinate values and their order may change. Length23 selectsA and22 selectsB, independently of the error radius.",
+  "one_deletion_model": "At most one source entry may be deleted per field, no insertions, independent bounded absolute errors on retained entries. A common population must have22entries, so A losesone and B losesnone.",
+  "post_noise_window_model": "Every positive source zero ordinate is transformed with bounded absolute error, then every transformed entry inside the open window(0,20) is observed. No arbitrary insertions/deletions. Protected first-two ranks yield the lower bound; moving A last recorded root above20 and leaving all unrecorded tail entries unchanged gives a complete common-observation construction.",
+  "exact_threshold_formula": "(second positive ordinate of A - second positive ordinate of B)/2",
+  "approximate_radius_display_only": "0.5732773345123776",
+  "exact_numerical_bounds": "Use the rational endpoints in derived_results; their width is2e-30. The symbolic identity does not collapse the numerical interval.",
+  "arithmetic_at_common_observation": "Both actual fields are compatible and the metadata class contains no others:456tracked coefficients stayfixed and148areambiguous, including targets3,7,19,27,31.",
+  "derived_results": {
+    "preserved_population_sizes": [
+      23,
+      22
+    ],
+    "fixed_population_field_selection_independent_of_coordinate_radius": true,
+    "coordinate_transformations": 72,
+    "collapsed_geometry_controls": 4,
+    "false_completeness_or_preservation_counterexamples": 2,
+    "polynomial_factorizations": 1128,
+    "unique_field_coefficient_comparisons": 1208,
+    "observation_coefficient_comparisons": 2416,
+    "common_observation_population": 22,
+    "required_source_deletions": [
+      1,
+      0
+    ],
+    "common_observation_fixed_coefficients": 456,
+    "common_observation_ambiguous_coefficients": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "numerical_radius_bracket": [
+      "90839419648981864986741777717783925558942864433180832021203/158456325028528675187087900672000000000000000000000000000000",
+      "90839419648981864986741777718100838208999921783555007822547/158456325028528675187087900672000000000000000000000000000000"
+    ],
+    "numerical_radius_bracket_width": "1/500000000000000000000000000000",
+    "exact_symbolic_threshold": "(second_positive_ordinate_A - second_positive_ordinate_B) / 2",
+    "optimal_deletion_indices_zero_based": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "matching_pair_rows": 1012,
+    "endpoint_inclusions": 176,
+    "threshold_boundary_checks": 8,
+    "strict_critical_gap_inequalities": 286,
+    "post_noise_window_arbitrary_deletions": 0,
+    "post_noise_window_visible_populations": [
+      22,
+      22
+    ],
+    "post_noise_window_exact_inequalities": 198,
+    "arbitrary_finite_matching_problems": 543,
+    "literal_finite_matchings": 41796,
+    "mutations_rejected": 34,
+    "kernel_checked_observation_lemmas": 8,
+    "new_roots_computed": 0
+  },
+  "new_roots_computed": 0,
+  "new_measurement_rows": 0,
+  "proof_scope": "Eight elementary list/real-interval lemmas are Lean-checked. The complete quartic classification, spectral certificates, inversion-removal matching proof, dynamic-program correctness and retained-rank window argument are not claimed as complete Lean formalizations.",
+  "input_scope": "Completeness/preservation declarations are not self-authenticating. Two actual false-premise population misclassifications are preserved. Window observation is an ideal complete acquisition model; physical detectors and unmodeled missed/extra entries require separate contracts.",
+  "next_gate": "Extend error norms, edit budgets, cutoffs and field classes; build equal-population benchmarks; formalize the remaining matching/arithmetic arguments. Preserve broader ACS research without global completion."
+}

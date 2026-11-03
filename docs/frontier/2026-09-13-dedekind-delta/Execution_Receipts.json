@@ -1,0 +1,192 @@
+{
+  "all-independent-roots": {
+    "started_utc": "2026-09-13T14:50:15.184962+00:00",
+    "elapsed_seconds": 34.595212,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_independent_roots.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-dedekind-delta/Factor_Certificates.zip",
+      "--primary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-12-source-delta/Primary_Tables.zip",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Independent_Root_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_independent_roots.py": "7ad3a86d172e40af4aa12258c4283461e273460f63d7306d8d5e52fb3eda9b60"
+    },
+    "stdout_sha256": "8f71ce9a457ef33fc23fa45e430222c92622eb063795769e20ed24778aa2806d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "euler-audit": {
+    "started_utc": "2026-09-13T14:36:56.551011+00:00",
+    "elapsed_seconds": 0.502365,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_euler_audit.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/factors-224.json",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-lfunction-delta/Certificates.zip",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Euler_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_euler_audit.py": "15acb9ba3c3e5815875924bfae73690d24a640fa154a53355a2825bb3ca2fe61"
+    },
+    "stdout_sha256": "8616c8ae2e42ba1155099a16ab31c240d0b52aed6de3bd28f95ca1c7d3ed43b3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "euler-final": {
+    "started_utc": "2026-09-13T14:45:34.947797+00:00",
+    "elapsed_seconds": 0.552805,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_euler_audit.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-dedekind-delta/Factor_Certificates.zip",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-lfunction-delta/Certificates.zip",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Euler_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_euler_audit.py": "15acb9ba3c3e5815875924bfae73690d24a640fa154a53355a2825bb3ca2fe61"
+    },
+    "stdout_sha256": "8616c8ae2e42ba1155099a16ab31c240d0b52aed6de3bd28f95ca1c7d3ed43b3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "factor-export": {
+    "started_utc": "2026-09-13T14:45:36.024967+00:00",
+    "elapsed_seconds": 0.195988,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_export.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-dedekind-delta/Factor_Certificates.zip",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-lfunction-delta/Certificates.zip",
+      "--output-root",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/hp_knife_suite/data_zeros"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_export.py": "2c795a495406d4f16fddcd1026c60cec6d8fdd1348a9102f88574ab754420898"
+    },
+    "stdout_sha256": "0538323ca15bd89dcbbab90cfa235cea036e9b7f822f639f38aedd385a1c057f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "factors-160": {
+    "started_utc": "2026-09-13T14:33:35.862307+00:00",
+    "elapsed_seconds": 34.341669,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_factor_certificate.py",
+      "--precision",
+      "160",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/factors-160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_factor_certificate.py": "ee3708c7470eba2ab41511ee54e4a1333c24ae9f48aa4fbc34ba795f035a051a"
+    },
+    "stdout_sha256": "d3fc4405afbab3985421bcd09c11c4e71118c71d3ceec423976ea91780986800",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "factors-224": {
+    "started_utc": "2026-09-13T14:33:35.867679+00:00",
+    "elapsed_seconds": 61.404749,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_factor_certificate.py",
+      "--precision",
+      "224",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/factors-224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_factor_certificate.py": "ee3708c7470eba2ab41511ee54e4a1333c24ae9f48aa4fbc34ba795f035a051a"
+    },
+    "stdout_sha256": "79cb0caa2cd76f9f4009e880d4eb14f74747f20588f57d33fce5d7bee4dce438",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "finite-witness": {
+    "started_utc": "2026-09-13T14:40:54.246053+00:00",
+    "elapsed_seconds": 0.952764,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_witness_audit.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/factors-224.json",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-lfunction-delta/Certificates.zip",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Finite_Witness_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_witness_audit.py": "fb95a264e0b2e1bb573c842ab8604d5528c3735ac45be52f30c8cee488f53135"
+    },
+    "stdout_sha256": "fdb5823ccc91fe728142adc6e462c5121516b3a4ee9921f1aaa6f91f0ef371bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "finite-witness-final": {
+    "started_utc": "2026-09-13T14:45:34.938637+00:00",
+    "elapsed_seconds": 1.023641,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_witness_audit.py",
+      "--extra",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-dedekind-delta/Factor_Certificates.zip",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-lfunction-delta/Certificates.zip",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Finite_Witness_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_witness_audit.py": "fb95a264e0b2e1bb573c842ab8604d5528c3735ac45be52f30c8cee488f53135"
+    },
+    "stdout_sha256": "fdb5823ccc91fe728142adc6e462c5121516b3a4ee9921f1aaa6f91f0ef371bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "portable-entrypoint": {
+    "started_utc": "2026-09-13T14:45:36.275179+00:00",
+    "elapsed_seconds": 0.975119,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_test.py",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/dedekind-audit/Entrypoint_Result.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/hp_knife_suite/data_zeros/cyclotomic_5/cyclotomic_test.py": "ab16cc6e4dc2e5a769a9e4e70a6bd3a4f89378a6a55a9268883785fbffa0017e"
+    },
+    "stdout_sha256": "fdb5823ccc91fe728142adc6e462c5121516b3a4ee9921f1aaa6f91f0ef371bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "baseline_commit": "20e537936bf70a7d66d4bb70322c02b0fc97d628",
+  "instruments": {
+    "code/frontier_verification/dedekind_signed_corner_certificate.py": "80511558663f1e4cb8c457a50a76966fd34e785e72df802120e8e20c09ada732",
+    "code/frontier_verification/dedekind_signed_corner_audit.py": "272eac3b7952574355fa34430c04b41043da116f49e91fe2a7a3a4a3d2b7c8b0",
+    "code/frontier_verification/dedekind_signed_corner_adversary.py": "b9e0792d00654d7a3e33b7676358eeb37d2a26c10d3bdfe9bcc59b746565a2cd",
+    "code/frontier_verification/check_signed_corner_lean.py": "7944baeeb1277a892b03b1407c80d3c64dcc703358b55efdd7bd3b8941613fe3",
+    "code/frontier_verification/verify_aggregate_signed_corner_delta.py": "fba827efcdac4c12e465b04ec7107711a91a9af4578baacf77387f09a0bc0f0c",
+    "code/frontier_verification/SIGNED_CORNER_README.md": "15ed71d05e4b568f7c8f6f5d08da919ce395858f70a767d379226ba271c008c0",
+    "code/frontier_verification/proofs/SignedCornerStability.lean": "67ec3da3d9086db6b972dd58ea8d014de3365839e5e4910df68386b5b4961892"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_aggregate_integer_audit.py": "ef0cec02cac7302e5fed2440f74f0ed8e679dd754bb509a1833d0c4cf7ceee31",
+    "code/frontier_verification/dedekind_aggregate_local_audit.py": "4b24497f463d9bfba3d3fd30310761b4ab22a68b1e5436b5d7707d2d9aa97fce",
+    "code/frontier_verification/dedekind_aggregate_moment_adversary.py": "1ef60cb00a23e5e576a575f786894d7ff7f7b7e969664ca803a964e0c33ca6d3",
+    "code/frontier_verification/dedekind_aggregate_moment_audit.py": "044b995035378d75130a23554fb71c7c1c0e00e684bc94e4a2b58b4646f6322d",
+    "code/frontier_verification/dedekind_aggregate_moment_certificate.py": "0a74b7104877c81357ba2d6d1d54c8743fe3b8e3d2d17abd430d3a6569bf8f35",
+    "code/frontier_verification/dedekind_aggregate_moment_feedback.py": "4d291e5910bb68451160c55bc6ece91183788affd3c34f824c8bf82ec5ecdd48",
+    "code/frontier_verification/dedekind_aggregate_moment_local.py": "3c27247d3276514c95666e9a019581858a3078c51f4ed60c3185b88b9b33623d",
+    "code/frontier_verification/dedekind_aggregate_moment_local_audit.py": "ecb0d829f8d0f2067cbf51cafaa8d49483441179b71eb147a447eaa5380928bf",
+    "code/frontier_verification/dedekind_aggregate_moment_proposals.py": "9a647c4278a3789535b292905b5b3230aaa28293347bcf448addc99e35caf20a",
+    "code/frontier_verification/dedekind_aggregate_noise_audit.py": "e96a9482d1c6ad10b40063083a6ef1cd7774a209b7c03f97cd18ef5409218f57",
+    "code/frontier_verification/dedekind_aggregate_noise_certificate.py": "32584a36fe5d30741a619620e7c9fda676d91371fae9d5895462ee1454a3669c",
+    "code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445",
+    "code/frontier_verification/dedekind_aggregate_shared_audit.py": "a008926d702b7eae8eae2ac2560a89a6b5e535a04a2c611dad4fd4272bdcafe4",
+    "code/frontier_verification/dedekind_augmented_feature_audit.py": "991cd5ea2d8879f93f9bfda86a542456c873f8bbdaa605db4c9672aede925304",
+    "code/frontier_verification/dedekind_class_count_audit.py": "bb478b52511f4cb5316d9831a0a9cdb7243f69b99cc1ddef3f179c9f77ff95cb",
+    "code/frontier_verification/dedekind_class_count_decode.py": "3d910cf101c0464fdff0de566a574bcd3c134767a13182cfe5c6c47b6a6568c3",
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_full_class_adversary.py": "7e64d2eba245bafbf2ebb0a135495d1d592c878962d786db813d771c5129f76f",
+    "code/frontier_verification/dedekind_full_quartic_audit.py": "438051faed4b796173485984f1113ad06b25d4a5e17c746177734dcd6349db07",
+    "code/frontier_verification/dedekind_full_quartic_class.py": "180184e946f79296ff637719afc9aecf3188496a967f792dafa69718943d6077",
+    "code/frontier_verification/dedekind_quartic_class_controls.py": "3ce404d1c48d74c148b64396e74a9e000a80b27107eb55b8a7ae377d2a7def5f",
+    "code/frontier_verification/dedekind_weighted_region_audit_v2.py": "c9564e7bc49a8377fd5d9a079ec9adaa23595e975e3b90c69cd2aaf4a8babab7",
+    "code/frontier_verification/dedekind_weighted_region_certificate.py": "43a12c33fdf1c35772c0d1e2417e476b0ec2eb9abf1f4018362a611c8bc968c9",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f",
+    "code/frontier_verification/verify_aggregate_classification_delta_v2.py": "6a979db731e512fba16a4837017dcbaa327ae5a9f0a910e1b13561210d7e6ac5",
+    "code/frontier_verification/verify_aggregate_moment_delta.py": "54b8687b0537f7e8edfdabf149104b268dd1294a2331be6dbb88dcb570d23863"
+  },
+  "external_runtime_sources": {
+    "external/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean": "1ee785b6ebd213ad2ed971bf3c804afee8cc6ce52be69e63572b4cf1bdb5e880",
+    "external/Mathlib/LinearAlgebra/Matrix/Adjugate.lean": "7e28f11ff275a95412e8e8849715da0c763ff96709005d75843b8e0c40c5fef3",
+    "external/Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean": "870291a8544ad9297e0c17f3531bea11607a1f0d83b775b13a31981777c30f2e",
+    "external/Mathlib/Data/Matrix/Mul.lean": "b770bcc914584d4b04065b2d05f50b4eb098709a7fd367adad0e055dfc9d6d0e",
+    "external/Mathlib/Basic/Real/Basic.lean": "1195d39119c210541ba0956209b636b2c344fbf6a07402ae3ac43c4e20d7bb50",
+    "external/mathlib-LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "exploration_sources": {
+    "exploration/run_recorded.py": "7cbc8d8caa128a6f6855c3fe809d300830ea185e0bbd934e6adac15e227f7e03",
+    "exploration/capture_sources.py": "b34cd35af2552de80a657682629a3dea5fa299a40e087893ed7d6f52ed20c979",
+    "exploration/create_lean_checker.py": "23d6d385e9f10487de436e8af76dd9617ccb68bf50974437dcac5534cf5e8777",
+    "exploration/explore_signed_resolvent.py": "89878def7a4762ef9f10a8054f835c0b98b054ca9d2391ab7bf70eb139ae9999",
+    "exploration/explore_gradient_signs.py": "97ceb15ba5fe6c89f1b81d890c1711c17790abca518c3cb743f0ce56091b9ac7",
+    "exploration/explore_corner_inverse.py": "67b0174c86faa189a69736cd613c8757269495242c0b66f84c16077c7d0e4e90",
+    "exploration/audit_gradient_candidate.py": "517bb48bba87b7b04ef501ed5e74f1fa78986130391d1858c42d644f7b488a78",
+    "exploration/SignedCornerStability_v1.lean": "3af4ef7038f7e64def498c4211508be5ce2346ddd5bc35fc89982f4dd5bfa519",
+    "exploration/SignedCornerStability_v2.lean": "786e8d6e25d244157633b327d791eecbc7e817238557a7e10db9b3634ffc310c"
+  },
+  "packaging_sources": {
+    "packaging/package_signed_corner_delta.py": "66058abfd208d3d0f4d11348a7121a400432774711b6d45cb663a3b7448a223f"
+  },
+  "scope": "Seven new instruments; transitive imported local Python dependencies; four original explorations; both proof drafts; runner, source capture and checker generator; packager and pinned Mathlib references with license. The preceding verifier is pinned in inherited inputs and recursively executed."
+}

@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-09-13T16:24:33.079680+00:00",
+  "sources": [
+    {
+      "url": "https://dlmf.nist.gov/25.15",
+      "locator": "25.15.1, 25.15.3, 25.15.5, 25.15.7-9",
+      "use": "Dirichlet series, independent Hurwitz representation, primitive functional equation, trivial zeros and nonvanishing at 1."
+    },
+    {
+      "url": "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.lgamma",
+      "locator": "acb.lgamma",
+      "use": "Analytic log-gamma differs from the principal logarithm of the gamma value; the contour needs its continuous argument lift."
+    },
+    {
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "locator": "Theorems 3.34 and 3.35, printed pages 59-60; PDF pages 60-61",
+      "use": "Degree sum and the discriminant criterion for ramification. The local-model enumeration uses these general constraints, not the specific splitting pattern."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "locator": "Section 2, equations (1)-(2), page 3",
+      "use": "Inherited Weil-Poitou identity; use and admissibility are derived in the prior checkpoint."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "locator": "Section 2, equations (2.1)-(2.7), page 4",
+      "use": "Inherited unconditional Euler/Hadamard logarithmic-derivative premise at s=2; later GRH-dependent estimates are not used."
+    }
+  ],
+  "scope": "Primary documents are linked, not redistributed. New bounds and finite inference arguments are stated in RECOVERY_README.md."
+}

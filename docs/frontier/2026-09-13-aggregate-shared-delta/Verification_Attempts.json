@@ -1,0 +1,15 @@
+{
+  "first_invocation": {
+    "returncode": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "eb948efd5eb7a6e3dca83c943bd9b165231d6e902327b8c078d7c06b7ec866fa",
+    "command": "../acs-research/.venv/bin/python code/frontier_verification/verify_aggregate_shared_delta.py > ../acs-research/aggregate-shared-audit/Verification.json 2> ../acs-research/aggregate-shared-audit/verification-stderr.txt",
+    "failure": "The final README link check required the new output Verification.json, but this invocation redirected the report into scratch before any repository report file existed.",
+    "completed_before_failure": "Recursive history, new producers, all three independent audits, manifests, input hashes, receipts, source records, branch preservation and ledger replay reached the final local-link check successfully."
+  },
+  "correction": "Create a marked in-progress report at the expected output path, then rerun the unchanged verifier and replace it with the successful report.",
+  "instruments_changed": false,
+  "scientific_recorded_commands": 7,
+  "scientific_failed_commands": 0,
+  "retained_packaging_verification_failures": 1
+}

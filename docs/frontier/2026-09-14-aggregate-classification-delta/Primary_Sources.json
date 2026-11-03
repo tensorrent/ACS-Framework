@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "source_sha256": "e397786eb3791f293e5d152b2c9796b70ec71d2a7f7ed85c5f1dbb517cffc5c5",
+  "recorded_utc": "2026-09-14T00:50:18.434094+00:00",
+  "metadata_sha256": "138e4f57181d0878c456fea76dac5780487b40ba96345e0f5663c53116472c88",
+  "metadata_source_sha256": {
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "new_downloads": 1,
+  "reused_local_primary_PDFs": 1,
+  "sources": [
+    {
+      "author": "Keith Conrad",
+      "title": "The Different Ideal",
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/different.pdf",
+      "resolved_url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/different.pdf",
+      "bytes": 744682,
+      "sha256": "afc82d34f4e1cfc51a6701f4e724b0726ef0fb922cb227be5217fa22950be17c",
+      "locations": [
+        "Theorem4.13, printed/PDF page12: tame exponent e\u22121 and wild exponent at least e",
+        "Corollary4.16, printed/PDF page14: local contributions to field discriminant"
+      ],
+      "redistributed_in_repository": false
+    },
+    {
+      "author": "J.S. Milne",
+      "title": "Algebraic Number Theory",
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "bytes": 1296815,
+      "sha256": "24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847",
+      "locations": [
+        "Proposition2.26 and2.40: embedding determinant and sign",
+        "Theorem3.35: ramification iff field-discriminant divisibility",
+        "Theorem4.9: no nontrivial extension of Q unramified at all finite primes",
+        "Corollaries7.51/7.52: closure of unramified local extensions",
+        "Lemma7.57, Theorem7.58, Corollary7.59: inertia, normal wild filtration and tame embedding",
+        "Proposition8.2 and decomposition-group section: local factors and local Galois action"
+      ],
+      "redistributed_in_repository": false
+    }
+  ],
+  "inherited_sources": {
+    "record": "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json",
+    "sha256": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd",
+    "use": "Conductor-discriminant formula and certified candidate arithmetic/spectral identities"
+  },
+  "scope": "Decoder metadata contains only degree, absolute discriminant and signature. New primary source download and exact reuse are distinguished. PDFs stay in scratch; written mathematical derivations and independent finite audits are required in addition to source fingerprints."
+}

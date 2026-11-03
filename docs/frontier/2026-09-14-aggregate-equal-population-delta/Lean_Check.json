@@ -1,0 +1,31 @@
+{
+  "status": "failed",
+  "source_sha256": "769359f4ec2f41b2d2cea4ad5d03294a69a766c43c795ba5a154f9262ff2e056",
+  "checker_sha256": "76417bf80823b68e1d2cb156218212e27cd765444cfdedd8bee7da36e1070152",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-equal-population-audit/Lean_Check.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount.lean"
+  ],
+  "returncode": 1,
+  "stdout": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/InteriorCount.lean:1:0: error: object file '/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Omega.olean' of module Mathlib.Tactic.Omega does not exist\n",
+  "stderr": "",
+  "olean_sha256": null,
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "suffix_point_above",
+    "prefix_point_below",
+    "interval_gate_above",
+    "interval_gate_below",
+    "suffix_filter_bound",
+    "prefix_filter_bound",
+    "count_separation",
+    "count_permutation"
+  ],
+  "scope": "Eight scalar and finite-list lemmas establish midpoint separation, interval gates, prefix/suffix filter bounds, strict count separation and invariance under permutation. Connecting the true source ranks and certified roots to these hypotheses remains a written/computational argument; the arithmetic and full matching theory are not formalized here."
+}

@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-09-13T23:30:30.399345+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "docs/frontier/2026-09-13-aggregate-delta/Measurements_Recovery.zip": "fdec85cf88d86ba5782d6347861a7d95fa6253a1cee09c831ea84aadd4434bc1",
+    "docs/frontier/2026-09-13-aggregate-delta/Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "docs/frontier/2026-09-13-aggregate-delta/Input_Provenance.json": "acf6c62260582724441d12b5817fbcfbe9d6317fdd86dd3926c7faea2bc8cb42",
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Audit_Closure.json": "aecefbdd2b162939e2f24f08158f9569c00b7e58b6f60f3dd7cec1bc9a87d3c2",
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Manifest.json": "a98abf31062a57e03cdb381afe08eba6fd159e1a06193f34946944e6a5d883eb",
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Verification.json": "8411bd451f33ca6373bc9e5452c365cfc0ce8f52b6af2a3e675448e843fefbc5"
+  },
+  "scope": "Fixed spectra and measurements, plus exact radius-0.1 seed domains whose prior numerical and local proofs are recursively verified. Manifest and Verification in scientific input maps refer to the preceding checkpoint, not this output package."
+}

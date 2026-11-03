@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-09-14T03:17:25.254986+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Spectra.zip": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-14-aggregate-cardinality-delta/Verification.json": "b39142dac667a84cc6362fbf62952b7754100a3a3b0c8bb2fb550f27e5ee88a1",
+    "docs/frontier/2026-09-14-aggregate-cardinality-delta/Research_Queue.json": "f05de9da31c90e4b57dc6880904b81b04cd7adc147661e08091870ca1f3ea1d0",
+    "docs/frontier/2026-09-14-aggregate-cardinality-delta/Branch_Events.jsonl": "2fcb0adf3cc94d4f0cd8b322e065c513ff29f0c4cf2715f533ae3a37d4c4b488"
+  },
+  "scope": "Complete metadata classification and all finite zero/completeness certificates are inherited and recursively verified. New prefix membership is checked independently against both parent source arrays and the separately stored factor aggregate."
+}

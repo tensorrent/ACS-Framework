@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "downloaded_utc": "2026-09-13T19:44:44.197371+00:00",
+  "sources": [
+    {
+      "name": "Milne_ANT.pdf",
+      "url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 1296815,
+      "sha256": "24b83c789a89f25aebffb3cbe4ae5ca29edd0075acc072de093d140770630847"
+    },
+    {
+      "name": "Conrad_Different.pdf",
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/different.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 744682,
+      "sha256": "afc82d34f4e1cfc51a6701f4e724b0726ef0fb922cb227be5217fa22950be17c"
+    },
+    {
+      "name": "Conrad_Tame_Composita.pdf",
+      "url": "https://math.stanford.edu/~conrad/676Page/handouts/tamecomp.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 113648,
+      "sha256": "c9804a005181cae2b797f366bb13ae33883b272bb4875caea7a44261c0d9c219"
+    },
+    {
+      "name": "Conrad_Inertia_Surjectivity.pdf",
+      "url": "https://math.stanford.edu/~conrad/676Page/handouts/inertiasurj.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 54705,
+      "sha256": "5aa228ddd41861c0cf8a7d1296ca333d4dd0a219002656d35edb4d419c4cee2a"
+    },
+    {
+      "name": "Wang_2018.pdf",
+      "url": "https://asset.library.wisc.edu/1711.dl/6NIAB7DW5X5WN8J/R/file-284b7.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 463671,
+      "sha256": "bf8bd50b7e8d679522045735b5edd30f691b5b446fab9c7c8300c95b9f7269f3"
+    },
+    {
+      "name": "Prasad_Yeung_2007.pdf",
+      "url": "https://archive.mpim-bonn.mpg.de/id/eprint/741/1/preprint_2007_70.pdf",
+      "curl_returncode": 0,
+      "stderr": "",
+      "bytes": 214982,
+      "sha256": "3e7508e7c52ffb28ca86d4b1295b12dfa32e8adeddc174d3c1907bcdf522be12"
+    }
+  ],
+  "scope": "Ordinary curl content negotiation after urllib received HTTP 406. Public PDFs stay in local scratch; unavailable downloads are reported, not bypassed."
+}

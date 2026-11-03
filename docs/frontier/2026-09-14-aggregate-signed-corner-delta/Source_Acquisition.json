@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-09-14T06:43:57.442222+00:00",
+  "source_sha256": "b34cd35af2552de80a657682629a3dea5fa299a40e087893ed7d6f52ed20c979",
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "pinned_sources": [
+    {
+      "path": "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean",
+      "sha256": "1ee785b6ebd213ad2ed971bf3c804afee8cc6ce52be69e63572b4cf1bdb5e880",
+      "bytes": 32351,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/LinearAlgebra/Matrix/Adjugate.lean",
+      "sha256": "7e28f11ff275a95412e8e8849715da0c763ff96709005d75843b8e0c40c5fef3",
+      "bytes": 22197,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/LinearAlgebra/Matrix/Determinant/Basic.lean",
+      "sha256": "870291a8544ad9297e0c17f3531bea11607a1f0d83b775b13a31981777c30f2e",
+      "bytes": 37752,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Data/Matrix/Mul.lean",
+      "sha256": "b770bcc914584d4b04065b2d05f50b4eb098709a7fd367adad0e055dfc9d6d0e",
+      "bytes": 47791,
+      "matches_pinned_git_object": true
+    },
+    {
+      "path": "Mathlib/Basic/Real/Basic.lean",
+      "sha256": "1195d39119c210541ba0956209b636b2c344fbf6a07402ae3ac43c4e20d7bb50",
+      "bytes": 20427,
+      "matches_pinned_git_object": true
+    }
+  ],
+  "retrieved_primary_documentation": [
+    {
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.html",
+      "retrieval": "Successfully opened with the web tool on 14 September 2026.",
+      "scope": "Current primary documentation is distinct from pinned runtime source evidence."
+    },
+    {
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Matrix/Adjugate.html",
+      "retrieval": "Successfully opened with the web tool on 14 September 2026.",
+      "scope": "Current primary documentation is distinct from pinned runtime source evidence."
+    }
+  ],
+  "relevant_results": [
+    "Matrix.inv_sub_inv",
+    "Matrix.det_smul_inv_mulVec_eq_cramer",
+    "Matrix.cramer_apply",
+    "Matrix.mulVec_mulVec",
+    "Matrix.sub_mulVec"
+  ],
+  "runtime_change": "No package acquisition, version change or new source roots. Existing Python/FLINT and Lean/mathlib are reused.",
+  "scope": "Pinned matrix inverse, determinant, Cramer, multiplication and real-number sources match local Git objects and are archived with their license. The new closed-hull/secant proof is derived explicitly; compiled generic lemmas do not formalize its full analytic assembly."
+}

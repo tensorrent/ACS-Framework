@@ -1,0 +1,885 @@
+{
+  "recorded_utc": "2026-09-13T21:31:48.572266+00:00",
+  "result": "Common-root error cancellation increases sufficient noise radii, and alternating generic local models with spectral rows recovers all seventeen targets in both aggregate spectra.",
+  "inherited_input_contract": [
+    "degree four",
+    "signature (0,2)",
+    "discriminant 576",
+    "complete aggregate finite critical-line root intervals through height 20"
+  ],
+  "additional_local_profiles": [
+    "generic sum(e*f)=4 local models",
+    "optionally ramification exactly at primes dividing discriminant"
+  ],
+  "not_decoder_inputs": [
+    "Galois group",
+    "field candidate catalogue",
+    "subfields",
+    "defining polynomials",
+    "conductor-parity assignment",
+    "held-out arithmetic"
+  ],
+  "new_roots_computed": 0,
+  "measurement_rows": 17,
+  "generic_coefficients": 604,
+  "radius_results": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "methods": {
+        "global_rows": [
+          4
+        ],
+        "local_rows": [
+          4
+        ],
+        "shared_roots": [
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100000",
+      "methods": {
+        "global_rows": [
+          4
+        ],
+        "local_rows": [
+          4
+        ],
+        "shared_roots": [
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10000",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          4
+        ],
+        "shared_roots": [
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/1000",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/500",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "3/100",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/20",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/5",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "methods": {
+        "global_rows": [
+          0
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100000",
+      "methods": {
+        "global_rows": [
+          0
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10000",
+      "methods": {
+        "global_rows": [
+          0
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/1000",
+      "methods": {
+        "global_rows": [
+          0,
+          1
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/500",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/100",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/20",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/5",
+      "methods": {
+        "global_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "local_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shared_roots": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  ],
+  "generic_unramified_radius_results": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "input_candidates": [
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100000",
+      "input_candidates": [
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10000",
+      "input_candidates": [
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/1000",
+      "input_candidates": [
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/500",
+      "input_candidates": [
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "input_candidates": [
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100",
+      "input_candidates": [
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "3/100",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/20",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/5",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100000",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10000",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/1000",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/500",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/100",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/20",
+      "input_candidates": [
+        0
+      ],
+      "degree_discriminant_candidates": [
+        0
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "input_candidates": [
+        0,
+        1
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/5",
+      "input_candidates": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "degree_discriminant_candidates": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "local_feedback_results": [
+    {
+      "observation_index": 0,
+      "profile": "degree_only",
+      "baseline_unique_targets": 13,
+      "first_local_unique_targets": 14,
+      "joint_unique_targets": 17,
+      "joint_unique_support": 45
+    },
+    {
+      "observation_index": 0,
+      "profile": "degree_discriminant",
+      "baseline_unique_targets": 13,
+      "first_local_unique_targets": 15,
+      "joint_unique_targets": 17,
+      "joint_unique_support": 45
+    },
+    {
+      "observation_index": 1,
+      "profile": "degree_only",
+      "baseline_unique_targets": 9,
+      "first_local_unique_targets": 11,
+      "joint_unique_targets": 17,
+      "joint_unique_support": 37
+    },
+    {
+      "observation_index": 1,
+      "profile": "degree_discriminant",
+      "baseline_unique_targets": 9,
+      "first_local_unique_targets": 12,
+      "joint_unique_targets": 17,
+      "joint_unique_support": 38
+    }
+  ],
+  "largest_tested_generic_box_radii": {
+    "global_rows": [
+      "1/100000",
+      "1/10000"
+    ],
+    "local_rows": [
+      "1/10000",
+      "1/100"
+    ],
+    "shared_roots": [
+      "1/500",
+      "1/20"
+    ]
+  },
+  "largest_tested_shared_plus_unramified_radii": [
+    "1/200",
+    "1/20"
+  ],
+  "stored_leaf_midpoints_checked": 39600,
+  "fresh_complex_interval_leaves": 47520,
+  "exact_objective_bounds": 144,
+  "local_exclusions": 3162,
+  "spectral_exclusions": 190,
+  "independent_displaced_controls": 96,
+  "common_error_premise_controls": 2,
+  "actual_component_mutations_rejected": 10,
+  "scope": "Tested sufficient frozen-dual radii, not optimal noise limits. All seventeen targets means prime powers through 31, not all 604 support coefficients. Survivors do not prove global realization. Local rules are separately declared. No new field-class enumeration or full analytic formalization.",
+  "full_proof_formalized": false,
+  "next_gate": "Optimize duals against the actual shared-error objective and audit higher-order/direct nonlinear enclosures; resolve remaining support coefficients or produce constructive ambiguity under an explicit field contract."
+}

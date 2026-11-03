@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "source_sha256": "4b68f496059c2ee16262fc8c484aff62f0a7e8412025be834034e7803ff3e910",
+  "inputs_sha256": {
+    "Joint_Target_Branches.json": "5e91967031408b41b505cf11c9037a94e5dc14a4e1d8026e826856b356163653",
+    "Joint_Projection_Audit.json": "a39bcb3c21cf394472329d6cadd4f5882bc1f9e46884bfdde48c1094ec498788",
+    "Model_Hull_Witnesses.json": "f6022b983a7105211232e73bd90e26b110fb2e29a074b70a6410ee3e478aa0c6",
+    "Model_Witness_Audit.json": "359b1e142f7202f445db6794a0edd6d01aed147cbe61b4a53dc0984eff5b022d",
+    "Global_Cut_Audit.json": "5d7949034a3912249d30094fecb2103d51467a94e6318205e581c01c53e85f97",
+    "Discriminant_Parity.json": "2a177275c9ad94fc4c076e04b9db8ea449061864fa0e89b4742c21c992e79f89",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 10,
+  "mutations": [
+    {
+      "mutation": "drop_one_cartesian_target_tuple",
+      "rejected": true
+    },
+    {
+      "mutation": "change_exact_separation_bound",
+      "rejected": true
+    },
+    {
+      "mutation": "negative_cut_multiplier",
+      "rejected": true
+    },
+    {
+      "mutation": "duplicate_cut_multiplier",
+      "rejected": true
+    },
+    {
+      "mutation": "forget_signed_discriminant",
+      "rejected": true
+    },
+    {
+      "mutation": "drop_surviving_relaxed_tuple_before_parity",
+      "rejected": true
+    },
+    {
+      "mutation": "invent_incompatible_prime",
+      "rejected": true
+    },
+    {
+      "mutation": "forge_full_parity_witness",
+      "rejected": true
+    },
+    {
+      "mutation": "wrong_permutation_sign",
+      "rejected": true
+    },
+    {
+      "mutation": "assume_V4_and_discard_three_cycles",
+      "rejected": true
+    }
+  ],
+  "optimal_but_infeasible_proposals": [
+    {
+      "case_index": 1,
+      "proposal_index": 1,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-3338959625587138801833033623145095360895094429299582045300543764867971978991119223784200222039848478990905779022216865849344",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 4,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-7167601829043713711696272619765857220052937300153786071749156462548414172640291899127845005984704985402240169071465515753984",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 6,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-57845647676335019340064073874999408062677621698079026746379410195658454443960938699803590143113013007733353103149236616522752",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 7,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-3338958883927841412230105281041960475184817684901548708879450790030969803068776979124725333503109687805900974985526127960064",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 8,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-102826758226259812140015305863706892508726970303563206898565471237787254319382585628887696858884200834950835473241362158414848",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 10,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-11210339418541265452481205191383669660281520309288210464874415086294742316563076097873750527665870758559349850781125899058688",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 1,
+      "proposal_index": 11,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-7167595766438767352438628991531969260117477968814731844009715810865045121740964697659253870528198939304538465371345892450816",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 3,
+      "proposal_index": 2,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-11210353905736109589605265475339235775245670682117182551607826392329687878733744744268736585233486569406803765984431484304896",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 3,
+      "proposal_index": 5,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-11211160395157078460131283790489863324251262375414219736390873345147400585921759717301790725702908872462377612970365819420160",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 5,
+      "proposal_index": 4,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-34590704177496873983304892932477330905604041512610182430946412695918231615277187383725337499287706078049368597740344737118208",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 5,
+      "proposal_index": 9,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-14689832595458516401813433072160438838041829962018064333893208953544667371879329849033410360689031117944127806807915346688000",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    },
+    {
+      "case_index": 7,
+      "proposal_index": 8,
+      "solver_status": 0,
+      "selected_minimum_integer_slack": "-14689832094850094929659124733059428233992955005268065675946911461950912880467388721769252834314262620030685621140538090747904",
+      "scope": "Optimal maximum-slack proposal with negative slack is not a feasible point."
+    }
+  ],
+  "minimum_instead_of_maximum_support_counterexample": {
+    "source_case_index": 1,
+    "cut_index": 1,
+    "wrong_min_support_upper": "-520426562317516107561335980589147131025472943263654824452756276420323045080694771968215041325311680305447958221959890284047/84615164005151820665845159428194693098035799419427996068435045795123941278247852265624218936283556460491675139202989862944768",
+    "correct_max_support_upper": "186862501530090874065800046517553126579471367861479896911791456231036348989478509170193830234555294137901836647437592613361/84615164005151820665845159428194693098035799419427996068435045795123941278247852265624218936283556460491675139202989862944768",
+    "verified_witness_integer_slack": "94876809930464700888696176445084037007698390052924098558464895292545234875803592502468905113256670677568015710959063382876672"
+  },
+  "ramified_and_signed_discriminant_guard_checks": "passed",
+  "scope": "Ten mutations reach semantic component assertions. A real stored feasible point refutes the min-support substitution. Twelve optimal slack-search outputs are preserved as infeasible proposals. These are finite-relaxation controls, not claims of alternate fields or noise impossibility."
+}

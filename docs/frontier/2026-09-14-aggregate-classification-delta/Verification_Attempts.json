@@ -1,0 +1,34 @@
+{
+  "final-recursive-verification": {
+    "started_utc": "2026-09-14T01:20:38.938522+00:00",
+    "elapsed_seconds": 641.77659,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/verify_aggregate_classification_delta.py"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/verify_aggregate_classification_delta.py": "983dc0cf14d7060341f3b3b52a07b6cbb60efc8f559bec3c1b288921c5366733"
+    },
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "ee4fc7cdc93bb696b0a17c51070b970d61e1bd4be091515a163209fa1237a9b7"
+  },
+  "verification-diagnosis": {
+    "started_utc": "2026-09-14T01:32:49.402950+00:00",
+    "elapsed_seconds": 0.528788,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/aggregate-classification-audit/diagnose_verification_replay.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-classification-audit/diagnose_verification_replay.py": "1cec3afccfff343c84069529a1956ff57e0479452a834bbda3e4144937adc978"
+    },
+    "stdout_sha256": "98733c95669f3d24e4e73a5fc6e2df0a89472564634ea25e7d917478604de2c8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "recorded_utc": "2026-09-13T22:41:18.161566+00:00",
+  "baseline_commit": "42049330e3b249326d8e3b2a1f2a040103c43b1d",
+  "files": {
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Adversary_Audit.json": {
+      "bytes": 7856,
+      "sha256": "5a82f297a0ad2e552c9b7c835355e54fcc473ceb7986a7f98d665e55cd244956"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Branch_Events.jsonl": {
+      "bytes": 394296,
+      "sha256": "b6ee5a0742b18ce1cae4b2025253428b6a0e18a4ca66c5721ba51d9ae638d46c"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Development_Notes.json": {
+      "bytes": 2726,
+      "sha256": "6108b7608e3a78cc7c7bd457beb448a56ea89a3009e4b52d27d49be85277e4bb"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Execution_Artifacts.zip": {
+      "bytes": 8246,
+      "sha256": "91d02ec76f8c5b06a504391fc33def33a4cf6d2986e0ecbd520d21e31c770646"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Execution_Receipts.json": {
+      "bytes": 9997,
+      "sha256": "63b312b01e0e9cba1f64d21577f956f9e85663965141ec4a1e42455c62e36841"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Inherited_Inputs.json": {
+      "bytes": 996,
+      "sha256": "cdf1a6d8a6194105bd8863ada518f60eb2592b6d8e39f4f424e0efc42efd4704"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Local_Feedback.zip": {
+      "bytes": 558963,
+      "sha256": "c083c28dc89e543e9c6c931c7f6b31d4586b1951e7d3964e9ccd2e60e6304c11"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Audit.json": {
+      "bytes": 3988644,
+      "sha256": "054565ed461f8cc4a508db6d7cef8c4b13ebbc5edd450a47888e7865bc2c3eed"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Certificates.zip": {
+      "bytes": 25939025,
+      "sha256": "bb3aa637092994a2e254e2bd12128887d6c1113cca99a8599ab32c525e9204df"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Local_Audit.json": {
+      "bytes": 59659,
+      "sha256": "3f9f3c04c0e6d87ac88806da2b176a18c97b36c79576d6b439a9e2aad8b8b3dd"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Proposals.json": {
+      "bytes": 201490,
+      "sha256": "0fce20097d84f57f5d34a5f4fc579c5d9e23706ce56c523713cc97d07d5b6ebd"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Summary.json": {
+      "bytes": 83785,
+      "sha256": "34669548090e43f77016a530dc249ca450f3ca031ea0ccc171044a8f8c9edd81"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Primary_Sources.json": {
+      "bytes": 1905,
+      "sha256": "0b7215f3fd1c35ae0437106f759dc400c2eca85c73b9765fc480b97245ea1999"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/README.md": {
+      "bytes": 3817,
+      "sha256": "af783ac769e3fc0a7fdc9ef42e0b00adf31e26a6f4b3c29b919d3e4929e55ca2"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Research_Queue.json": {
+      "bytes": 230548,
+      "sha256": "6a8422da88e51657d15e915855398ed4b3db7158038adb21ebb06fc33df449c3"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Runtime.json": {
+      "bytes": 1193,
+      "sha256": "fd70a9c3640587c667e43440df0ccd274ff9551fd42761e4e4fd0802c0d6111b"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Source_Inventory.json": {
+      "bytes": 3044,
+      "sha256": "cf98f01505e471ca801be2d5710b8cd173b4a562adde5a6bb4ea3008e79d6882"
+    },
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Source_Snapshot.zip": {
+      "bytes": 72554,
+      "sha256": "173e5470f7b1ba3ca9010e725603907f18d22d541a317d474f37bee03bac619b"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_proposals.py": {
+      "bytes": 4775,
+      "sha256": "9a647c4278a3789535b292905b5b3230aaa28293347bcf448addc99e35caf20a"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_certificate.py": {
+      "bytes": 7402,
+      "sha256": "0a74b7104877c81357ba2d6d1d54c8743fe3b8e3d2d17abd430d3a6569bf8f35"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_local.py": {
+      "bytes": 3458,
+      "sha256": "3c27247d3276514c95666e9a019581858a3078c51f4ed60c3185b88b9b33623d"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_audit.py": {
+      "bytes": 12226,
+      "sha256": "044b995035378d75130a23554fb71c7c1c0e00e684bc94e4a2b58b4646f6322d"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_feedback.py": {
+      "bytes": 7175,
+      "sha256": "4d291e5910bb68451160c55bc6ece91183788affd3c34f824c8bf82ec5ecdd48"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_local_audit.py": {
+      "bytes": 8778,
+      "sha256": "ecb0d829f8d0f2067cbf51cafaa8d49483441179b71eb147a447eaa5380928bf"
+    },
+    "code/frontier_verification/dedekind_aggregate_moment_adversary.py": {
+      "bytes": 12048,
+      "sha256": "1ef60cb00a23e5e576a575f786894d7ff7f7b7e969664ca803a964e0c33ca6d3"
+    },
+    "code/frontier_verification/verify_aggregate_moment_delta.py": {
+      "bytes": 11606,
+      "sha256": "54b8687b0537f7e8edfdabf149104b268dd1294a2331be6dbb88dcb570d23863"
+    },
+    "code/frontier_verification/AGGREGATE_MOMENT_README.md": {
+      "bytes": 10332,
+      "sha256": "ae5eea6079211a64b974b23f79901ca6bdcae417391862005f99a4ca6b8a2ff6"
+    }
+  },
+  "scope": "Manifest and Verification excluded from self-reference; preceding checkpoint verified recursively."
+}

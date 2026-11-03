@@ -1,0 +1,648 @@
+{
+  "recorded_utc": "2026-09-13T23:30:30.399345+00:00",
+  "result": "All seventeen aggregate-spectrum targets are certified at radius 0.08 for A and 0.05 for B under both local profiles, with exact wider-to-narrower premise transfer and four kernel-checked geometric theorems.",
+  "input_contract": [
+    "degree four",
+    "signature (0,2)",
+    "discriminant 576",
+    "complete aggregate finite critical-line spectra through 20",
+    "same fixed original root intervals and measurement family",
+    "generic coefficient boxes 0..4",
+    "validated radius-0.1 domains under the same local profile"
+  ],
+  "local_deduction_profiles": [
+    "degree-only local models",
+    "degree plus ramification from the supplied discriminant"
+  ],
+  "not_inference_inputs": [
+    "Galois group",
+    "candidate field catalogue",
+    "defining polynomials",
+    "subfields",
+    "conductor-parity assignment",
+    "held-out arithmetic coefficients",
+    "smaller-radius successes used to seed larger radii"
+  ],
+  "new_roots_computed": 0,
+  "measurement_rows": 17,
+  "target_count": 17,
+  "generic_coefficients": 604,
+  "derived_results": {
+    "results": [
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 14,
+        "adaptive_unique_support": 33,
+        "adaptive_iterations": 1,
+        "closure_iterations": 1,
+        "final_unique_targets": 14,
+        "final_unique_support": 33,
+        "remaining_target_domains": [
+          {
+            "n": 25,
+            "candidates": [
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 15,
+        "adaptive_unique_support": 35,
+        "adaptive_iterations": 1,
+        "closure_iterations": 1,
+        "final_unique_targets": 15,
+        "final_unique_support": 35,
+        "remaining_target_domains": [
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              1,
+              2,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "2/25",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 7,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "2/25",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/50",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 7,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/50",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/20",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 6,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/20",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/25",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/25",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/100",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "3/100",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 15,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 11,
+        "adaptive_unique_support": 28,
+        "adaptive_iterations": 1,
+        "closure_iterations": 1,
+        "final_unique_targets": 11,
+        "final_unique_support": 28,
+        "remaining_target_domains": [
+          {
+            "n": 17,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 19,
+            "candidates": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 11,
+        "adaptive_unique_support": 31,
+        "adaptive_iterations": 1,
+        "closure_iterations": 1,
+        "final_unique_targets": 11,
+        "final_unique_support": 31,
+        "remaining_target_domains": [
+          {
+            "n": 17,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 19,
+            "candidates": [
+              2,
+              4
+            ]
+          },
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "2/25",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 13,
+        "adaptive_unique_support": 31,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 13,
+        "final_unique_support": 31,
+        "remaining_target_domains": [
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "2/25",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 13,
+        "adaptive_unique_support": 33,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 13,
+        "final_unique_support": 33,
+        "remaining_target_domains": [
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 13,
+        "adaptive_unique_support": 31,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 13,
+        "final_unique_support": 31,
+        "remaining_target_domains": [
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/50",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 13,
+        "adaptive_unique_support": 33,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 13,
+        "final_unique_support": 33,
+        "remaining_target_domains": [
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/20",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 7,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/20",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 6,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/25",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 6,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/25",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/100",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 6,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "3/100",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      }
+    ],
+    "new_multiplier_cases": 470,
+    "all_sampled_lp_statuses_success": true,
+    "adaptive_local_removals": 100,
+    "adaptive_dual_removals": 132,
+    "additional_audit_exclusions_across_rounds": 4,
+    "supplemental_local_removals": 0,
+    "supplemental_dual_removals": 0,
+    "noise_test_gates": [
+      {
+        "observation_index": 0,
+        "profile": "degree_only",
+        "largest_tested_all_target_radius": "2/25",
+        "next_tested_nonclosure_radius": "1/10",
+        "scope": "The smaller endpoint is a sufficient recovery certificate and transfers to contained smaller boxes. The larger endpoint is a stalled tested update, not an impossibility or optimality bound."
+      },
+      {
+        "observation_index": 0,
+        "profile": "degree_discriminant",
+        "largest_tested_all_target_radius": "2/25",
+        "next_tested_nonclosure_radius": "1/10",
+        "scope": "The smaller endpoint is a sufficient recovery certificate and transfers to contained smaller boxes. The larger endpoint is a stalled tested update, not an impossibility or optimality bound."
+      },
+      {
+        "observation_index": 1,
+        "profile": "degree_only",
+        "largest_tested_all_target_radius": "1/20",
+        "next_tested_nonclosure_radius": "3/50",
+        "scope": "The smaller endpoint is a sufficient recovery certificate and transfers to contained smaller boxes. The larger endpoint is a stalled tested update, not an impossibility or optimality bound."
+      },
+      {
+        "observation_index": 1,
+        "profile": "degree_discriminant",
+        "largest_tested_all_target_radius": "1/20",
+        "next_tested_nonclosure_radius": "3/50",
+        "scope": "The smaller endpoint is a sufficient recovery certificate and transfers to contained smaller boxes. The larger endpoint is a stalled tested update, not an impossibility or optimality bound."
+      }
+    ],
+    "transported_root_intervals": 540
+  },
+  "transported_root_intervals": 540,
+  "stored_midpoints_checked": 110832,
+  "fresh_quadratic_interval_leaves": 221664,
+  "exact_domain_objectives": 470,
+  "independent_displaced_controls": 412,
+  "actual_component_mutations_rejected": 10,
+  "kernel_checked_transfer_theorems": 4,
+  "scope": "Certificates at a given radius also apply to contained smaller boxes under the unchanged input contract. The next tested nonclosure points, 0.1 for A and 0.06 for B, are method outcomes and not impossibility bounds. Re-optimizing from the stronger radius-0.1 audit domains adds no exclusions there. Four stronger interim audit findings do not change final domains.",
+  "full_proof_formalized": false,
+  "next_gate": "Refine the tested success/nonclosure ranges, improve optimization or propagation, compare noisy standalone-row inference, and investigate constructive/global feasibility of surviving domains."
+}

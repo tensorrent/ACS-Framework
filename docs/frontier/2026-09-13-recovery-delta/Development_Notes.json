@@ -1,0 +1,37 @@
+{
+  "scope": "Recorded mathematical commands and preserved development probes; ordinary file reads and packaging operations are not research experiments.",
+  "controlled_stops": {
+    "recorded_utc": "2026-09-13T15:59:08.965225+00:00",
+    "signal": "SIGTERM",
+    "verified_child_pids": [
+      59191,
+      59192,
+      59193,
+      59545
+    ],
+    "runs": [
+      "extend2000-2",
+      "extend2000-4",
+      "extend2000-3",
+      "folded2000-2"
+    ],
+    "reason": "Wide initial interval evaluation was superseded by a folded contour with prepartitioned horizontal pieces; the latter produced a verified integer count 2028 for character 2 through 2000 in the retained partitioned2000-2 run. Parent runners remain to record each stopped child."
+  },
+  "unsuccessful_recorded_attempts": {
+    "extend2000-2": -15,
+    "extend2000-3": -15,
+    "extend2000-4": -15,
+    "folded2000-2": -15,
+    "recovery-cross-method": 1
+  },
+  "corrections": [
+    "The first retained-evidence verifier used the human-readable broad estimate strings to reproduce candidates. Arb rounds these strings outward; three lower-height cases gained extra candidates. The corrected verifier reconstructs the tighter enclosure from recorded pole/gamma/zero terms and explicit error allowances. No recovery output or producer computation changed.",
+    "Unseeded wide interval evaluations at height 2000 were stopped after a 64-segment seeded folded contour succeeded. All four stopped processes were task-owned and their receipts ended with SIGTERM.",
+    "The initial held-out factor_list(expression, modulus=p) route failed when sorting FLINT modular coefficients. Poly(..., modulus=p).factor_list() avoids that expression-sort conversion and factors are multiplied back.",
+    "The 224-bit Riemann replay uses 90-digit mpmath values because the 60-digit comparison in the 160-bit producer would be too coarse for a new 224-bit root enclosure.",
+    "The float64 resolution probe is a planning experiment only; all coefficient claims use interval arithmetic. Preliminary budget counts differ from realized singleton counts and are not guarantees.",
+    "A preparatory git rev-parse was issued outside the checkout, returned not-a-repository, and was corrected by supplying the checkout cwd. It is not one of the recorded mathematical commands."
+  ],
+  "noncircularity": "Decoder output hashes predate polynomial validation; the decoder uses no actual nuisance coefficients or prime partial sum in its moment bound.",
+  "inconclusive_control": "Omitting the discriminant term has zero exclusions on this width grid; all 455 cases remain inconclusive."
+}

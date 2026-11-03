@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "source_sha256": "905cacc2da416328f653f2f05dbdf51eb744a2a3d36ee2772a2f28713a90f6d8",
+  "checker_sha256": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Lean_Check5.olean",
+    "QuadraticSupport.lean"
+  ],
+  "returncode": 0,
+  "stdout": "QuadraticSupport.lean:25:5: warning: Variable name `hx0` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hx0\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nQuadraticSupport.lean:34:24: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nQuadraticSupport.lean:66:26: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nQuadraticSupport.lean:68:6: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'QuadraticSupport.vertex_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.endpoint_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.endpoint_large' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.upper_on_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.support_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.signed_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.signed_quadratic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.support_attained' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.cone_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'QuadraticSupport.cone_equivalence' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "da65a2e13136d1652f2a6e44d2c6b3de80ea33ddff7ba0755a26c8c35196dac9",
+  "scope": "Kernel checks the real scalar quadratic maximum, its attainment, signed interval coefficient reduction and the squared Lorentz-cone encoding. Numerical Taylor bounds and coefficient recovery are not formalized by this module."
+}

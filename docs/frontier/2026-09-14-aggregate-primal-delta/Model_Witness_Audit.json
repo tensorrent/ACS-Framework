@@ -1,0 +1,3720 @@
+{
+  "status": "passed",
+  "source_sha256": "a7017eda25cad1f67f565c198dc2bb083f4dbd15e68e283ed78ec89a95113265",
+  "inputs_sha256": {
+    "Model_Hull_Witnesses.json": "f6022b983a7105211232e73bd90e26b110fb2e29a074b70a6410ee3e478aa0c6",
+    "Global_Cut_Audit.json": "5d7949034a3912249d30094fecb2103d51467a94e6318205e581c01c53e85f97",
+    "Nested_Closure.json": "32efe8f9c44bd2a8119b501e29097f51564bde1376a6765994cb088d06c9adfe",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52"
+  },
+  "cases": [
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "profile": "degree_only",
+      "mode": "unit_rows_from_common_seed",
+      "initial_unique_targets": 14,
+      "final_unique_targets": 14,
+      "final_unique_support": 33,
+      "iterations": 1,
+      "model_hull_objectives": 6,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "-2"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "4"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "845055a432793815d5d4ae0db5cf45be91d5fdfff78681d7f9d3eb8c6c8a47fa",
+          "selected_minimum_slack": "12260096044750795797652182747024362408967067805089957543438466954191745300122201902732560399411605901544616844483493/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-118269106477444317354173414253142556714861776937280020932812932774004156246817199140829651639013025969907302595694425051821/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            87,
+            92,
+            105,
+            107,
+            112,
+            118,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24520192089501591595304365494048724818860472324078444649777476537446582005297466072767207191914670400874481932474471,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 13,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "b215c23ed95701dd72f7122a850b926dfe454d5f73e5d08402395e7975c023d1",
+          "selected_minimum_slack": "12507719794565926942829073959091871430402497363461865146110698288558270898151466963526784692195200933770155415198629/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-123607034995032460525984591835049401531377159922791403460262747796921348819497797645376747085110401720232874591390243263149/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            84,
+            87,
+            92,
+            105,
+            107,
+            112,
+            118,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25015439589131853885658147918183742861731331440822259855093159235271566998090899534819940603203646940327519324156599,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "e9809dec0acedaa01c68817f50da72dfe35804ffcde3a0ab43d74ed76db8490a",
+          "selected_minimum_slack": "12815900182488857327720796611610438660979802587886736614449989096522010813029678191322641888812496939347056692769901/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-242123327303548022040366229602773921397624535561980492933548265602457656948568473359760347896486842055314652796648387654031/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            16,
+            20,
+            34,
+            35,
+            39,
+            46,
+            61,
+            63,
+            73,
+            77,
+            86,
+            89,
+            92,
+            101,
+            102,
+            107,
+            111,
+            112,
+            122,
+            123,
+            127,
+            132,
+            133,
+            142,
+            144,
+            146,
+            148,
+            149,
+            160,
+            162
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631800364977714655441593223220877322422773532722738010090522163897302220596703477578243559598260027283736104077087,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "f7e90e9396b1acfd423466b9860f13be3c6500654dd76023769a8b6646135660",
+          "selected_minimum_slack": "12816023518557543839378625670769292657717640473994228124754470302629616604504117152124503966437498179690226675037293/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "118351262884686495767344459238785684857543451276796833360712603048911008177003229122185032972156373500539045111217664631/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25632047037115087678757251341538585315898449304937721030958127352759599775781362350370327824790837494782421215498255,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "2fd4e9e44882c7afd1020349309f6a228660ad08870e956de61ac2f6f38fc2c8",
+          "selected_minimum_slack": "12507719371593703694332233117546324550004717168388362006678472258031971573657094353892252113317018148831684857060261/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-123607482912984415782487858192936650984678017134594281590445644883185211472809648455675827636603040895785333080220182287021/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            84,
+            87,
+            92,
+            105,
+            107,
+            112,
+            118,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25015438743187407388664466235092649100935771050675253576242354644634509257027623897038277503862809678724047693623991,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 15,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "97cf536842eed49d19dc3f82b9307d71ebf9fb36683b49f9911c7362c470bb9e",
+          "selected_minimum_slack": "12815900250411386737627606807163195601328128524570345548790746287910058429734365248938262372940302176828619723846765/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-55801146980004699079915933259836309947116429250992420913325919192135747933108153978780257902747613044673070639194716887387/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            16,
+            20,
+            34,
+            35,
+            39,
+            46,
+            61,
+            63,
+            73,
+            86,
+            89,
+            101,
+            107,
+            122,
+            127,
+            132,
+            142,
+            144,
+            146,
+            160,
+            162
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631800500822773475255213614326391203119425406089955879035826585909836136809339389498141808080430079641808190013391,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 3
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "308b8d89202005cbda5d2ec51dd109a329d1337bb46a6815ebe542f2c5f46824",
+          "selected_minimum_slack": "12817167463916395521545789610634294536554525134487314823708471711126198226126627005787156549574444914631102399460461/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-22130571513971586671127079582837592689243688180837380430761243053129997679838444083847171962073302144702036992359307366537/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            87,
+            92,
+            105,
+            107,
+            112,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25634334927832791043091579221268589073572218625923894428881272461703757740853229273165707074706260120010102168229567,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 15,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "3cc7dffbfefffaf0589532e263466d809c4ba3b3e8cf86a3fc4ec6ad64c619cc",
+          "selected_minimum_slack": "12817089809350359409698056494182458301550830891585783696258934836405946519343399882692631172580966105540511047300205/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-189380653032052853389179845437910228609672380056180559174699839485016725867037307462928070980688293705615258231253451551119/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            77,
+            87,
+            92,
+            107,
+            112,
+            123,
+            146,
+            148,
+            149,
+            158,
+            160
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25634179618700718819396112988364916603564830140120832173642538588865652265823474157037806696423483823124566854768751,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "287d1e32f094f50dd7453b5747189059b4a9ff4d6c24524b0d5d02e009d2239b",
+          "selected_minimum_slack": "12817090651647645236710164659262117134037446483511524708413468395904347199401932440233908122653215351845489796133997/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-641486204946163307384714449701367205726838201550978600648903361884284044919052826031806233288305312796473354830788224233871/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            17,
+            20,
+            51,
+            77,
+            79,
+            87,
+            92,
+            106,
+            107,
+            112,
+            123,
+            137,
+            146,
+            148,
+            149,
+            158,
+            160
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25634181303295290473420329318524234268538061323972314197935873017827336511976280904165987583960958955951551012712271,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 9,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "421957190af1e32e65ca02d86f7e59fabe77ddc97c108dee91ef7943b0f8c8d4",
+          "selected_minimum_slack": "12817167463916395521545707029912410479070902463770378249192453056945789627121686745254589858044768543359073588556909/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-110652446930586138963138012923016114593642557028989552253120786934030993581452123961774012761725869694366516495400936968877/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            87,
+            92,
+            105,
+            107,
+            112,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25634334927832791043091414059824820958604973284490021279812745047692657884287869230415902967069256633565344985913023,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 10,
+          "assignment": {
+            "column": 16,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "622aae81de858b37faeb8b4c821246ecaa56f380465f8e76f26a278970911b99",
+          "selected_minimum_slack": "12815977024729662161612888542370895819832658742771230267901286459960984390440528328532668549111722349606222843032685/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-40107542665692363671392159760310086726287408548357732170666638902246006086614464565070100066735893315977048156891358675711/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631954049459324323225777084741791640128485842491725317243986817703599218668054125031528557508210339950599377152495,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 11,
+          "assignment": {
+            "column": 16,
+            "candidate": 3
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "3fa0c5dd85389fec71c020917a1cbef2db52e7fbff4dd8d372a6c93c08928524",
+          "selected_minimum_slack": "12816054713675420677414653672994101527086377573335886067216366106157132110858482859095371465930720515400495926031469/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-103359675403228590417051277438906377625948966995741339147283410246886624949932261620060322454817661931498672887617620525823/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149,
+            160
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25632109427350841354829307345988203054635923503621036915531038818136798837951381121692548860746960902936237601839759,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 12,
+          "assignment": {
+            "column": 16,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "66cec0f2c0b9d0fa8bbf8346fda54e19067419bfd06a9816bf7f90607aebd406",
+          "selected_minimum_slack": "12507720075413886502274512268301690145196369851236133371294828139733280772696229923558397611058101163629573172255653/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-123606550485370831028180121368268931473301860214035886037131463001841700816071598209676639563479061394894069218134824358573/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            51,
+            84,
+            87,
+            92,
+            105,
+            107,
+            112,
+            118,
+            123,
+            146,
+            149
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25015440150827773004549024536603380291319076416370796305435387863502826401844909393973433312623937767609483121341111,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            4
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "profile": "degree_only",
+      "mode": "all_directions_from_common_seed",
+      "initial_unique_targets": 14,
+      "final_unique_targets": 14,
+      "final_unique_support": 33,
+      "iterations": 1,
+      "model_hull_objectives": 6,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "-2"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "4"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "319ea7671525b87bf007ed7e25950fee9c13fcf03a6b523ad4466e30e70b7443",
+          "selected_minimum_slack": "23536052942104279870359139455648121176198568074044665588645789333632831653927544012614391844989771587567026172793797963/961963041904162090143531252444912446413079572032847819041706381939592816686943618442731109738401260761880566169600000000",
+          "full_pool_minimum_slack": "23536052942104279870359139455648121176198568074044665588645789333632831653927544012614391844989771587567026172793797963/961963041904162090143531252444912446413079572032847819041706381939592816686943618442731109738401260761880566169600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30849175312274921711677131267307105826406047659936824629962167309762960825806428338352775918415513588186496670464683,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 13,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "836a316427905368f6e853cda26d1a06f960ea2269b9462013b614056b42778c",
+          "selected_minimum_slack": "-407587844920305029520633987200329023546764456701609136389226533797359860716689358372094753666973691283069553103297957257/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "-407587844920305029520633987200329023546764456701609136389226533797359860716689358372094753666973691283069553103297957257/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [
+            102,
+            111,
+            133
+          ]
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "45c0e4a1284186c573e2eaa3c9a20d506b7afd436844f2504f687ef8fb78650b",
+          "selected_minimum_slack": "117677506779957624340919151579640463635804739312092211612848673962584162011301126962713712481082364801853165002706006647/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "117677506779957624340919151579640463635804739312092211612848673962584162011301126962713712481082364801853165002706006647/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30848452337325211475225910071693270137683458096154101295392757631073370934016815644312319925873267501928325999430315,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "b96711d2e6d22fc44f793ec918e23528ec134c14fb47299e507ce58b9f5ed177",
+          "selected_minimum_slack": "117681057202291538519464102473671372091812964551625396475196803101933202939764299514051847514012052258890972997411811959/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "117681057202291538519464102473671372091812964551625396475196803101933202939764299514051847514012052258890972997411811959/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30849383059237513073646397678858108603975278293346288461134670156449885827687197876599796717549159655123564311419563,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "c5e1662dc5a2ffc24e18edbb97c8b275561ac1bb1f15a1e1cd6d2bef31ccd8d3",
+          "selected_minimum_slack": "-13999222322351003343156782460480189882915893164362863421385071215914871430938070115484072277313876924613750330217706085457/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "-13999222322351003343156782460480189882915893164362863421385071215914871430938070115484072277313876924613750330217706085457/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            22,
+            37,
+            69,
+            102,
+            111,
+            133
+          ]
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 15,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "02c1394bf6fde8e6fa726dc9d2abe680490aa9fef414a7545219811168c8fb00",
+          "selected_minimum_slack": "2354942915235876526492277671654482698280064404881082225047675485392194437482593453202191376077413991045208583693122085807/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "2354942915235876526492277671654482698280064404881082225047675485392194437482593453202191376077413991045208583693122085807/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              38583384723224601010049477372387044953432365612599375155604308020081671478523341100387173394281943507586127619358829,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 3
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "f820d71d2f56015768654daba914ede4da9774178183e93b428bdd6c782a7ded",
+          "selected_minimum_slack": "-56489890308920917324281322143554109436208614939530299557011142769197709417930604199026943499133801765364602639794176383323/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "full_pool_minimum_slack": "-56489890308920917324281322143554109436208614939530299557011142769197709417930604199026943499133801765364602639794176383323/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            16,
+            22,
+            34,
+            35,
+            37,
+            39,
+            46,
+            61,
+            63,
+            69,
+            73,
+            86,
+            89,
+            101,
+            122,
+            127,
+            132,
+            142,
+            144,
+            160,
+            162
+          ]
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 15,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "8afb3d38734a0c22f54c57f20b0ec624c5cbe3e49b9c9544929a1739e40c5384",
+          "selected_minimum_slack": "-407587754385722828641370273564692440818459190051458582626886082767452368538669064834561197937391319312243771360537857417/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "-407587754385722828641370273564692440818459190051458582626886082767452368538669064834561197937391319312243771360537857417/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [
+            102,
+            111,
+            133
+          ]
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "9148416e3ec1cc764504672e526a74b4188a930e262f921c5b0c68b91ef9e3f0",
+          "selected_minimum_slack": "-100416756080331847792983697132526262215553681937073444236880343005651615546272056278210641463754102377881675266837267732827/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "full_pool_minimum_slack": "-100416756080331847792983697132526262215553681937073444236880343005651615546272056278210641463754102377881675266837267732827/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            10,
+            16,
+            22,
+            34,
+            35,
+            37,
+            39,
+            46,
+            61,
+            63,
+            69,
+            73,
+            77,
+            86,
+            89,
+            101,
+            102,
+            111,
+            122,
+            127,
+            131,
+            132,
+            133,
+            142,
+            144,
+            160,
+            162
+          ]
+        },
+        {
+          "proposal_index": 9,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "99eca2fadc516428bc3f72e7be469ad243c53333d27a7a3f6e688d1d7b8c76c4",
+          "selected_minimum_slack": "2354942435320365762233330260353271114560219114382291681775443856226680396770903669406971998555391513873129048008805000111/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "2354942435320365762233330260353271114560219114382291681775443856226680396770903669406971998555391513873129048008805000111/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              38583376860288872648430882985627994365766420373067190897236101096776636331261795329379159166373240542096818812295277,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 10,
+          "assignment": {
+            "column": 16,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "00a387286042e453871f2bd1e30f2690568f763ccdeb1fb01a96ee196f39ead9",
+          "selected_minimum_slack": "-21895194176838409086877353889421229805237344354078536064207841965419418587037258003659668999347403825311230177306886521599/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "-21895194176838409086877353889421229805237344354078536064207841965419418587037258003659668999347403825311230177306886521599/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149
+          ]
+        },
+        {
+          "proposal_index": 11,
+          "assignment": {
+            "column": 16,
+            "candidate": 3
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "0e955017cbfff70d7c2e01ee18d549f04cc6cce7a5693c5f089750422e9519e8",
+          "selected_minimum_slack": "-13999210481325717485231697249085877461166949157841273132831476193095791253400321675115730215875388553329176690178409946193/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "-13999210481325717485231697249085877461166949157841273132831476193095791253400321675115730215875388553329176690178409946193/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            22,
+            37,
+            69,
+            102,
+            111,
+            133
+          ]
+        },
+        {
+          "proposal_index": 12,
+          "assignment": {
+            "column": 16,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "56cf813f4c7b3303b07cd3fe92bd17d8275efa528f7e093ee921f949c89d47b5",
+          "selected_minimum_slack": "117681005920761332121585120220539332382346067449398136350631347523907387904909221261276298470181133749339520415246725751/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "117681005920761332121585120220539332382346067449398136350631347523907387904909221261276298470181133749339520415246725751/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30849369616092058647680809755093063186376788019380025597342361042331145697967975188327953837075478586116009346980523,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            1,
+            4
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "profile": "degree_discriminant",
+      "mode": "unit_rows_from_common_seed",
+      "initial_unique_targets": 15,
+      "final_unique_targets": 15,
+      "final_unique_support": 35,
+      "iterations": 1,
+      "model_hull_objectives": 4,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "2"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "-1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "4"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "723e07311c5904237748927262effb4a700b1c376b3f6a43ebfe2e66e460a5ae",
+          "selected_minimum_slack": "12816023518557544493226120493991669381352659484167252735928783616920102995074323682081392459359522689461464149472365/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "117675988481920593102794915022881489055514639952989684586743664548442073286643019979391753063670172390477923646353060471/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25632047037115088986452240987983338763168487325283770253273336114057887673970681529545718805269297109406567890702351,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "9efad3c1304282c948bc21f97ac3a0944fefaa9072557f566e2368b729c72d02",
+          "selected_minimum_slack": "12816023518557544493226121402392852396948991895495827030497678740598038645994650703575144416536821886276235360416877/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "117675741057940981082084900218787462312122715514579424637461321308149596114530135290656596237791748451086158465035022967/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25632047037115088986452242804785704794361152147940918842421991217965060406763650264878882979680143533060436753403919,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "e9bfca11c2f4490825e49dfc36d9f352fe80f92b976cf556dba2a28be19fe0f4",
+          "selected_minimum_slack": "12815977092365245561916619272600449171637008070329299778606634905183859531899770384638994495301844092773814360552557/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-79418769077272222391903927136429224912995438462903610729966069406367600321169612376104249884242716651322384187347578676709/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            34,
+            35,
+            39,
+            46,
+            61,
+            92,
+            107,
+            112,
+            122,
+            123,
+            144,
+            146,
+            149,
+            160
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631954184730491123833238545200898343737184497607864338205631839164548569206629477991874623348454074766674148932079,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 15,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "f20589fe107b86a5f81c476557b798a87d7b7c39155146473cc65ea86e853baf",
+          "selected_minimum_slack": "12815899433547790032021816706430234007245700583842152121603988287898691623628327224576155186877902740913595176662125/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-66491512578782035787623629593312019859824009231403011635563197169163817267274644590952733541995138657032785241408013719899/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            16,
+            20,
+            34,
+            35,
+            39,
+            46,
+            61,
+            63,
+            73,
+            77,
+            86,
+            89,
+            101,
+            102,
+            107,
+            111,
+            122,
+            127,
+            132,
+            133,
+            142,
+            144,
+            160,
+            162
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631798867095580064043633412860468014954569524633569024526892831803070951163430183846903156315797106725348965326687,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "4996d30773746570483c2538a5dc98787b8ce230a500ca663ef13902aa5b2ed7",
+          "selected_minimum_slack": "12815900370571402306170455427881276221177012718018966486477669791576063659304889759415030300519437069123261512234093/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-704558101749700931086697791639418542859047608852589291649106962186996386181990575775781416041745603615100589474585222459791/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            1,
+            10,
+            16,
+            17,
+            20,
+            34,
+            35,
+            39,
+            46,
+            60,
+            61,
+            63,
+            73,
+            77,
+            86,
+            89,
+            92,
+            101,
+            107,
+            112,
+            122,
+            123,
+            127,
+            131,
+            132,
+            137,
+            142,
+            144,
+            146,
+            148,
+            149,
+            158,
+            160,
+            162
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631800741142804612340910855762552442817193792987197753929522909170433278983425186374558487954492608556819288553519,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 16,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "0b188b47def57547c636aadc2b88bdfe0a4b576a2479e9d036577631f1a4b42d",
+          "selected_minimum_slack": "12815977092380832442090956493913825280179364866031900972607851327756551145426704757490137187701901994805565599724653/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-48956795345623135629312433325144488286422694236904280217540467734228172141861368621878785629118757803396404692393533620991/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            35,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149,
+            160
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25631954184761664884181912987827650560821898089013066726275779877855100774691039824500367570788786390534151049723951,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 16,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "9efad3c1304282c948bc21f97ac3a0944fefaa9072557f566e2368b729c72d02",
+          "selected_minimum_slack": "12816023518557544493226121402392852396948991895495827030497678740598038645994650703575144416536821886276235360416877/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "117675741057940981082084900218787462312122715514579424637461321308149596114530135290656596237791748451086158465035022967/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              25632047037115088986452242804785704794361152147940918842421991217965060406763650264878882979680143533060436753403919,
+              -385
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            4
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "profile": "degree_discriminant",
+      "mode": "all_directions_from_common_seed",
+      "initial_unique_targets": 15,
+      "final_unique_targets": 15,
+      "final_unique_support": 35,
+      "iterations": 1,
+      "model_hull_objectives": 4,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "2"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "-1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "4"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "8db79ee9f8cf5c586bb10d1c8226dc38e814a1c5f405a1788e1497f0fdd803d1",
+          "selected_minimum_slack": "117678906569073451318529249987943331338881948949336276876305370528215130006369151504638562255976410198949274247604351607/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "117678906569073451318529249987943331338881948949336276876305370528215130006369151504638562255976410198949274247604351607/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30848819283643190822444531708839417088838930139299809535281437285906663111477196382935930165635829074871483177808555,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "a9af7d26e3a30e8eb7d665e0db29ed8fe40079c670a8f063e72b0d917d718e73",
+          "selected_minimum_slack": "117679056774838820239635954516318160277025384836979219844710474093000239010764101814100451044509719848772889393711690359/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "full_pool_minimum_slack": "117679056774838820239635954516318160277025384836979219844710474093000239010764101814100451044509719848772889393711690359/4809815209520810450717656262224562232065397860164239095208531909697964083434718092213655548692006303809402830848000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30848858659183347692899127660725708245999602996630081186012472600711715513741988601765360873005374824894197890699947,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "8a27133a4af6b257c2083de8673e9c7524d403a443d4d1c56f740c8198f3a5a5",
+          "selected_minimum_slack": "-21895222472140839042197784131521944873526700551010122171109035922518921638151845203649876143034153455872663605438342742783/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "-21895222472140839042197784131521944873526700551010122171109035922518921638151845203649876143034153455872663605438342742783/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149
+          ]
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 15,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "9acbed4c3a5e978a8b149be0ee31c21694bf2f1c0ba7892c5a04910c3e348080",
+          "selected_minimum_slack": "2354940087688149651976507683800278385970395262708258006308116762641163460082542577934245658210843720139562243599964775343/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "2354940087688149651976507683800278385970395262708258006308116762641163460082542577934245658210843720139562243599964775343/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              38583338396682643897983101891383761500550746387239823138834801800212432742109142206070100194858773436267541689819245,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "eb483dfb1a2b3e33b23f24bac41ca445640b1c73f8e75154cce48677db71c38f",
+          "selected_minimum_slack": "2354941146216672519078992375568407295941309950904580728389789428486475232214693981004663806884408879753146398423978550191/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "2354941146216672519078992375568407295941309950904580728389789428486475232214693981004663806884408879753146398423978550191/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              38583355739613962552590211081312785561514212638648374627567379948300765023163308566672373838572781416079296133867629,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 16,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "621b21d088aba6fcf174aeaf9dc58fb9314665ecd3a3f16778c30747a7529908",
+          "selected_minimum_slack": "-4379359529358233773488782730660102861035649365396179584527684900448203353875687389571012002227698778305616255066549148211/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "full_pool_minimum_slack": "-4379359529358233773488782730660102861035649365396179584527684900448203353875687389571012002227698778305616255066549148211/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [
+            20,
+            92,
+            107,
+            112,
+            123,
+            146,
+            149
+          ]
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 16,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "90062fde191746290494ce7c1e2ab326602d83f20ec4eabbb2a78ef24b8c7824",
+          "selected_minimum_slack": "23536089608423984110060271990796279840173267398791462968601857071874897840555945660667974319064106341994607136202898763/961963041904162090143531252444912446413079572032847819041706381939592816686943618442731109738401260761880566169600000000",
+          "full_pool_minimum_slack": "23536089608423984110060271990796279840173267398791462968601857071874897840555945660667974319064106341994607136202898763/961963041904162090143531252444912446413079572032847819041706381939592816686943618442731109738401260761880566169600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 163,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              30849223371553484452738199703776500350450965558868946914953322971858636557073236777063590971188528659479009946292907,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            1,
+            4
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "profile": "degree_only",
+      "mode": "unit_rows_from_common_seed",
+      "initial_unique_targets": 13,
+      "final_unique_targets": 13,
+      "final_unique_support": 31,
+      "iterations": 1,
+      "model_hull_objectives": 8,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "1"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "4789dc1af3d3265327c15c61f9ab4fd5c8e6a1fb3873d3fe2a846fe781256ada",
+          "selected_minimum_slack": "5225880702871829072004609617380935133059081178785122042975393464122875482509099799863828382398214091996214385160129/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-7782958121002631454261241051087885880734534775679338719791160152270928360120522871344631262750916066499260541473308143427/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            84,
+            140
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487316288018438469523740533162661429039017733956467671397658821818824406944196708691730806493086288037471,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 12,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "4769e7707acd8343134b8c27a749a5d9b6cf05b87c57db3420d012d5f16de7cd",
+          "selected_minimum_slack": "5225880702871829343967701869073909785689726845796234830288977178095071362246695779436623864559725115567618796007361/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "556279566053217422711218402366338603375253473495914282890955011367011137401254578181600668391062471872839271447303923897/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487317375870807476295639143685244097083468883763254638462659109737991032437029153092988002342979696673471,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 12,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "bde8353711956a1c19dd5ebd50fae05513015b6d33ee6fe68bf18bd3ae91dd23",
+          "selected_minimum_slack": "5225880702699181397982729797338944919950985935787322503842499234302645092555425130452814365567305446043866214150081/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-2965409884707591126097416082142268967706292329332017862892216861231187398785454834071448782893060100072721895658988255823/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            130
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810796725591930919189355779680730280457047819577619636799987925114493125369670560896675604485158810338948607,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 13,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "f428979790c6e8c2a83261431282f41d8d2385a0b51d00f57545d87b3ca5ad7e",
+          "selected_minimum_slack": "5225880702699536681146751992584808576131131127425652899124787821481178754564157021021759665037820086795750910177217/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-13716862151223003554396294201018291407265413315151464654349403188892879220117903586075305397884165740528210219912675998287/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            68,
+            84,
+            112,
+            130,
+            140
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810798146724587007970339234305450861223601141158998722054782530824133212290412923608500000463635033073236095,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 13,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "83512acc03fd6acdd33017c85afc60716f793bf7e4185d9c5389ccb9b1072b49",
+          "selected_minimum_slack": "5225880702896509560748934252750228364002563575170531326133694629239754416959796346299178930929913279503871920811969/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-11696283080452965651947391183330797208918795550206906922792655143071808149467475380343637175580043063803226961796805671807/7695704335233296721148250019559299571304636576262782552333651055516742533495548947541848877907210086095044529356800000000",
+          "violated_full_pool_cut_indices": [
+            7,
+            38,
+            61,
+            84,
+            87,
+            113,
+            130,
+            135,
+            140,
+            147,
+            154
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811586038242995737011000913456936591014580654866568272051695104103434204328497128830195839151680683731443183,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "c89badd431f6e8d840ee38f2b7983621f82ed489ffcc7ba8584537b122a53423",
+          "selected_minimum_slack": "5225880702871829071886160936720522828838747565813801861874395695457450751641763169023973383884827803778795502284737/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "1206957550141571490119921381153452645295224260153121886601719438810068009422223813691113320962109671737428544222340074397/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487316287544643746882091316281326977153737010293762496081060365241891394905178255670544532135837280087743,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "da58f5a713c92afe534b906e3cf18eb141f768863eb37e2ea497d4c9e2b72f9e",
+          "selected_minimum_slack": "5225880702896864573769406131483001163909908381248135995687214447958631604501503351761861956555220619977700058312641/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-80428710604350011453455620743380923508027142264521304795206151756602140057685415800999150196655640263541388271799264520571/38478521676166483605741250097796497856523182881313912761668255277583712667477744737709244389536050430475222646784000000000",
+          "violated_full_pool_cut_indices": [
+            7,
+            38,
+            40,
+            42,
+            43,
+            61,
+            82,
+            84,
+            87,
+            109,
+            112,
+            113,
+            128,
+            130,
+            135,
+            140,
+            142,
+            147,
+            154,
+            187
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811587458295077624525932004656565970238891073545380342636158481890458803294900644408912899522264537139577215,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "e6a8df75dcf572f0d5cab8c6aa65169a86b56c9613d08ff241c0a4943ebe85e1",
+          "selected_minimum_slack": "5225880702699181397962599303805270817622670545562017698921876256541476904509542942350492445066764605942296994885569/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-3319827260282087357353746321468406211397127672998308440725232506098795505990641718007459007506916767195503109739987089999/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            130
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810796725591850397215221083271417018896146600358402311161116838690332497658410801266831404384581742654294607,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "15d2271cdc2e3ee546d039ed6a8ea8e7098757e52046c131ed54aef3fdcc2d78",
+          "selected_minimum_slack": "5225880702871829072004601930365313428767134438222123838375701629736022553476123444035820470013139623507774940622785/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-10832420363520524370383087678395884137980158966717047278907005050577752409090213573010336879901740461757298444827666804547/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            66,
+            84,
+            140
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487316288018407721461253715994874466787024915509119849252278142810462577374091517083083135766148609529407,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 9,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "e8baca44f781dc2aa81e108ae66fb155917ca10c732f3531bd8acbe9c173be1d",
+          "selected_minimum_slack": "5225880702699536945164172585189343549409222227847405225605937359896085810424700005780289203815635421094926118793153/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-12587079879854312025168674818984060354807665626943372876901516605183135898618090409170310021963009144275413394978041510479/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            68,
+            130
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810798147780656690340757374198563225625288150464498111506150390700160917222216978953478604231393600691397823,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            0
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "profile": "degree_only",
+      "mode": "all_directions_from_common_seed",
+      "initial_unique_targets": 13,
+      "final_unique_targets": 13,
+      "final_unique_support": 31,
+      "iterations": 1,
+      "model_hull_objectives": 8,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "1"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "98b458788424e9adca6a80e6f14d75db6478291768b40d7790a66bdc0d1b0a24",
+          "selected_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "full_pool_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27383491356800908824571481681479639346127267726209763542916044876579094327983266294682949946537897436197730172965527,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 12,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "4a4892333a72b4ead0cc85c8b49efd27d74d6fde57d5f4a92aa09820f2a9d25a",
+          "selected_minimum_slack": "3342729755235597580768412031850389780719387178572754340219896057164959947589132635875515612268691928416372967329688210333/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3342729755235597580768412031850389780719387178572754340219896057164959947589132635875515612268691928416372967329688210333/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              13691821077445007690827415682459196623721905707736660852417185494356506710325366776516836775214641027703943643209857,
+              -387
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 12,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "583bbaf147d47c8ce479692181c52b28ff8713c583f5a947771886603ad1dfcd",
+          "selected_minimum_slack": "1491735639192905514922808904869954983619996437080028411163050030618717384327270627989181327635069444033860821660623972039/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "1491735639192905514922808904869954983619996437080028411163050030618717384327270627989181327635069444033860821660623972039/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440596712536563956495301097389343703739048906806489815222629865783583469746527265253552822514644569908460522973527,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 13,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "9b1e9f275987dc7d0e20ac3636d95fed37429affe500cf5a19f0c97d20292a1b",
+          "selected_minimum_slack": "1491754853792256970595419641801791379293955631848946642413877027269606915055939977090091792186102844782892848898041718471/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "1491754853792256970595419641801791379293955631848946642413877027269606915055939977090091792186102844782892848898041718471/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440911524532338206235355411280551210461196353900446171918913972452607837387336819586126819222032936386816984111447,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 13,
+            "candidate": 2
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "0c955c56e66ec4501aa18cc13073f73ecf527c5c36b476408bbaeaa444d6fe82",
+          "selected_minimum_slack": "-16889992274168395499660592252186196731251973394829190640110553074178824030897064152209637450824075233422543260615402703671/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "full_pool_minimum_slack": "-16889992274168395499660592252186196731251973394829190640110553074178824030897064152209637450824075233422543260615402703671/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            31,
+            47,
+            62,
+            65,
+            66,
+            129,
+            143,
+            162,
+            168,
+            181
+          ]
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "c22f6c8378a8b88ad654317acc1b2bfa8c950f81bc9ea26373641f3ddb93e478",
+          "selected_minimum_slack": "3342729671532758128509103795919976135249954605423596293438402830234911985832147106441825494826030642681465070545233267613/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3342729671532758128509103795919976135249954605423596293438402830234911985832147106441825494826030642681465070545233267613/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              13691820734598177294373289148088222331879109888117709499445869227995817454095048517561578746683451833006381826434433,
+              -387
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "1a1dcc821dafb2062709e4cf4e5f2cf595d864a437ab56d7aea9d4784d660605",
+          "selected_minimum_slack": "3342709246589184801369494560935868002323570430181848087632455784106856682247511454534296056175335922761860554813977414557/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3342709246589184801369494560935868002323570430181848087632455784106856682247511454534296056175335922761860554813977414557/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              13691737074029300946409449721593315419412640306327508854943004680246263352403789262991873710159588849583068187369473,
+              -387
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "d8a9167e809c11656b477e24822f166d4547f7daf1d34608863c91c6dc75cd63",
+          "selected_minimum_slack": "1491740162283090293465064556576406983690118419175767468686605938068386213311376369428746811223666420600310179223945356999/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "1491740162283090293465064556576406983690118419175767468686605938068386213311376369428746811223666420600310179223945356999/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440670818846151368131617694947853272887927461463078601606386744275747089842874364347078639256578767309184841701719,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "98b458788424e9adca6a80e6f14d75db6478291768b40d7790a66bdc0d1b0a24",
+          "selected_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "full_pool_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27383491356800908824571481681479639346127267726209763542916044876579094327983266294682949946537897436197730172965527,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 9,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "581dc16737d0f62439f000d37f227c741dcb80a056cb1e7749f6deb3913ccb33",
+          "selected_minimum_slack": "-57382158576009829694583722938126714211100898289133063804270347474783856921403632222786759221441527804469249245343419323/153914086704665934422965000391185991426092731525255651046673021110334850669910978950836977558144201721900890587136000000",
+          "full_pool_minimum_slack": "-57382158576009829694583722938126714211100898289133063804270347474783856921403632222786759221441527804469249245343419323/153914086704665934422965000391185991426092731525255651046673021110334850669910978950836977558144201721900890587136000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            130
+          ]
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            0
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "profile": "degree_discriminant",
+      "mode": "unit_rows_from_common_seed",
+      "initial_unique_targets": 13,
+      "final_unique_targets": 13,
+      "final_unique_support": 33,
+      "iterations": 1,
+      "model_hull_objectives": 8,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "1"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "c8c829cc77344712bca51e7e29e60d26a3e554dfa1fe90b2057cc355b5e7f077",
+          "selected_minimum_slack": "5225880702871829343947539933340424192260986615165939425441275592189164313805732557581007415133387873643480627785665/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "2798511630965646290509559940621112081196108090433224542946046989464021007959960135169931419812999238193073143670307572637/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487317375790159733361696769970283174562287263868142611632742285988215004151095969912837912704565793421727,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 12,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "716137b4eb613660e4d670544d80acc217771afd498f7c266db40f97aec3954b",
+          "selected_minimum_slack": "5225880702871829341957135977805678673595096370841010808121355631200587361398583659647285729079136335333265675366337/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "2885498972446528815828936850704605196693660259425110286059575842700798794078395055559724479590174308062042458773896055709/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487317367828543911222714695306722197262572794703917239131736648259450407509241126394969990193950088650927,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 12,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "bd1c05327106ede1cc74f81f24f963456d3116b61d7ec508ce1449b09cf44578",
+          "selected_minimum_slack": "5225880702699181126097653462767265779544756602924723126481595457230276664693109252670214811573673077239486616940481/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-1677429668975134608661126169882189255956418395726193801454221965385659023539849636136559097934790054647564984873539970371/3847852167616648360574125009779649785652318288131391276166825527758371266747774473770924438953605043047522264678400000000",
+          "violated_full_pool_cut_indices": [
+            40,
+            61,
+            84,
+            112,
+            128,
+            130,
+            140,
+            187
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810796724504390613851069063119105363125597422068003156701379619872334982205951923112028329890315186046413615,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 13,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "31ba2aa9f651c69987cb8a8a478a4082bfdb0862d9b891617fefa229a9b24e4a",
+          "selected_minimum_slack": "5225880702699536925646847361837328541014963370116523976328564210391747889645952410312743300377891485579088640585665/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-14443454292399207148642821142856571551811893908711189367851466731907910995228516769369305326133120481142338089388123372111/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            68,
+            84,
+            112,
+            130,
+            140,
+            187
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810798147702587389447349314164986190194364625467834350462103946842298208106493153103033631296060997982254335,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "ca4bf61114a3f7a42054499af6da538a3253612fd6928e9ffaad682a895ec253",
+          "selected_minimum_slack": "5225880702871829071909086351524230457027276455415619560260201570209139733600996891187333110850853087135122129661889/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-4989422196086571636495354682149082471882637804605463164313247567050192395897445356618068096447757774656705731015837347651/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [
+            84,
+            140
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487316287636345406096921829035442535561007802986099123148275896752133494564179915305575931311064758218399,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "fd0a2cdb3ecd4c2565464ac902a23328b07908ff924becc2a308c8fb5e79205c",
+          "selected_minimum_slack": "5225880702871829071909013367608182890345489899129816817218507217843476935177620478788085861587714619159020907507649/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "1063932384633653006244957350806969065507330263397830124060238093729136413606417530839135656116287614220516577567263968157/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487316287636053470432731562308296310417796831800894541585235159874695512798246891296280894797398976788815,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "64a531d9e4cb67baec4019e2651695e74ced7d111961abe6778aae7d50cd5c06",
+          "selected_minimum_slack": "5225880702699181126096262144187362900860158020041782129871891684016438035439542435415271248161232294868120100908993/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-7235641201127311291908229066805420839549302937861793197498908271370463828620449736408267508405366201757436024845834140239/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            84,
+            130,
+            140
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810796724504385048576749451604366968794065658082048027623930735506855179019622057893087113551674217680348271,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "9d80fe95d8d0fe958df4cd1b1bf13216c7c8bdeb2936dbfb7a6ef23cf33f9f3b",
+          "selected_minimum_slack": "5225880702871829334086670807543476644516652167276436669195522889728991937397173679059684457081635812241166224830401/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "542551128591658619535717329261856793933378085565140847579756663568914827182302315280142231583389600894543799374169614521/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522811487317336346683230173906578992945383004276238890718823053503481009672190379527583151760735111647385746751,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "025af10ddb4a4257a1c7467a83e4ed69ebb57ba2b1875bc16d01345c677bbbd1",
+          "selected_minimum_slack": "5225880702699536960808218180942813485863061188987945311003311494255382773268929571949263451891343704178592201289665/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+          "full_pool_minimum_slack": "-10186188857987257071147956720945555699297485140146811091713006090000974655260719093335670666056567085960423861388983941711/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            130
+          ],
+          "unrounded_real_cut_checks": 34,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              20903522810798147843232872723771253944378581469850310806800165844974717003251688245959257263008703997876830486727967,
+              -386
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            0
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "profile": "degree_discriminant",
+      "mode": "all_directions_from_common_seed",
+      "initial_unique_targets": 13,
+      "final_unique_targets": 13,
+      "final_unique_support": 33,
+      "iterations": 1,
+      "model_hull_objectives": 8,
+      "local_removals": 0,
+      "dual_removals": 0,
+      "objective_replays": [
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 12,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 13,
+          "sign": 1,
+          "exact_upper": "4"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 15,
+          "sign": 1,
+          "exact_upper": "1"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": -1,
+          "exact_upper": "0"
+        },
+        {
+          "iteration": 1,
+          "column": 16,
+          "sign": 1,
+          "exact_upper": "1"
+        }
+      ],
+      "witness_replays": [
+        {
+          "proposal_index": 0,
+          "assignment": null,
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "5a09e787771f765f53e704fa54fdbb859021290479149326544ec46cdb488f9f",
+          "selected_minimum_slack": "668542298990670720544216359374055815220104674003310691053462970349284937589078729373553287515822003517388987200615327929/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "full_pool_minimum_slack": "668542298990670720544216359374055815220104674003310691053462970349284937589078729373553287515822003517388987200615327929/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              13691746283328936356745551039980663177603039547890462039829384180642259590733246002916202906220503501562255344424449,
+              -387
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 1,
+          "assignment": {
+            "column": 12,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "0667ad85bbefada0eb1a5972ed13c98cd835c71067916d926c5a6343686606b0",
+          "selected_minimum_slack": "3507408942463816578471300264132128016800501085760152042481516045932504167394935826103788244857682328827236134614783511453/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3507408942463816578471300264132128016800501085760152042481516045932504167394935826103788244857682328827236134614783511453/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              897896689270737044088652867617824777419384266973515115650463731085232775281054072654313671203417212899167781802613,
+              -383
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 2,
+          "assignment": {
+            "column": 12,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "5ae20b93dea858db8ffd8c2d65eddef322dce33b27246be5171c362b35fb514e",
+          "selected_minimum_slack": "1491730333015224860002139655267995927497481100194020235256717964962568626858243916881364459954057405667416001895667869383/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "1491730333015224860002139655267995927497481100194020235256717964962568626858243916881364459954057405667416001895667869383/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440509776121444106275056111910846528227757627266131879071481682599363119808128168040494939609527364181312252553559,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 3,
+          "assignment": {
+            "column": 13,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "1c09560a56394bb66dc3aaf7f5b2e02a8d1c85fdf0aff737e2e35d7eed64d12a",
+          "selected_minimum_slack": "477352812295951931099950575045480167767254842415295119157834191111181503579795097756567008802982652985386765293465227/24626253872746549507674400062589758628174837044040904167467683377653576107185756632133916409303072275504142493941760000",
+          "full_pool_minimum_slack": "477352812295951931099950575045480167767254842415295119157834191111181503579795097756567008802982652985386765293465227/24626253872746549507674400062589758628174837044040904167467683377653576107185756632133916409303072275504142493941760000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440463989552738872317469442328585841792475213350414443025856216888033255667036053723360375262099364919667208149335,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 4,
+          "assignment": {
+            "column": 13,
+            "candidate": 4
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "c22f6c8378a8b88ad654317acc1b2bfa8c950f81bc9ea26373641f3ddb93e478",
+          "selected_minimum_slack": "3342729671532758128509103795919976135249954605423596293438402830234911985832147106441825494826030642681465070545233267613/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3342729671532758128509103795919976135249954605423596293438402830234911985832147106441825494826030642681465070545233267613/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              13691820734598177294373289148088222331879109888117709499445869227995817454095048517561578746683451833006381826434433,
+              -387
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 5,
+          "assignment": {
+            "column": 15,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "98b458788424e9adca6a80e6f14d75db6478291768b40d7790a66bdc0d1b0a24",
+          "selected_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "full_pool_minimum_slack": "668542269453147188099889689489249003475016505800889779547741446285054361464541686028344059996584367545577400990276888761/15391408670466593442296500039118599142609273152525565104667302111033485066991097895083697755814420172190089058713600000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27383491356800908824571481681479639346127267726209763542916044876579094327983266294682949946537897436197730172965527,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 6,
+          "assignment": {
+            "column": 15,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "2f14554d4858d64c7f6dc085d6152e13be1ad0988865a62539ae0c2d6f3c0219",
+          "selected_minimum_slack": "1491754800465653492202465008959191233884558281936037484370564115046263040286574371486295172746025700004436627579962140359/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "1491754800465653492202465008959191233884558281936037484370564115046263040286574371486295172746025700004436627579962140359/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              24440910650829266816245186706787390428073630172927342547300551659163340928345710619133972746551514006461613730113879,
+              -389
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 7,
+          "assignment": {
+            "column": 16,
+            "candidate": 0
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": true,
+          "verified_full_pool_feasible": true,
+          "coefficient_vector_sha256": "1f369b4c0449cf07d4ad8db3022bedbeab6f9d82f1c00c95236122b9e90d0b4b",
+          "selected_minimum_slack": "3342709098901567139147861211511833943598129589169743530103848163785703801624826237808249918579147742902802623762285218717/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "full_pool_minimum_slack": "3342709098901567139147861211511833943598129589169743530103848163785703801624826237808249918579147742902802623762285218717/76957043352332967211482500195592995713046365762627825523336510555167425334955489475418488779072100860950445293568000000000",
+          "violated_full_pool_cut_indices": [],
+          "unrounded_real_cut_checks": 188,
+          "all_unrounded_real_cuts_strictly_satisfied": true,
+          "smallest_unrounded_real_margin": {
+            "mid": [
+              27383472938201638003899279044704943829746469243083857173143285875787101851324352814834291554416068132239355858855575,
+              -388
+            ],
+            "rad": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "proposal_index": 8,
+          "assignment": {
+            "column": 16,
+            "candidate": 1
+          },
+          "solver_status": 0,
+          "integer_proposal_available": true,
+          "verified_selected_feasible": false,
+          "verified_full_pool_feasible": false,
+          "coefficient_vector_sha256": "6fc2edfa747cc459de05378761cd8e1d553bf5ae684aeb2867e7634cea4e1ea8",
+          "selected_minimum_slack": "-7172769577563522914872619498564173942379372561166047693333452862280719179915717149301392985505011044936858213447528364623/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "full_pool_minimum_slack": "-7172769577563522914872619498564173942379372561166047693333452862280719179915717149301392985505011044936858213447528364623/19239260838083241802870625048898248928261591440656956380834127638791856333738872368854622194768025215237611323392000000000",
+          "violated_full_pool_cut_indices": [
+            61,
+            65,
+            130
+          ]
+        }
+      ],
+      "full_pool_witnessed_target_values": [
+        {
+          "n": 2,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 4,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 5,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 7,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 8,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 9,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 11,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 13,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 16,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 17,
+          "values": [
+            0
+          ]
+        },
+        {
+          "n": 19,
+          "values": [
+            4
+          ]
+        },
+        {
+          "n": 23,
+          "values": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 25,
+          "values": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 27,
+          "values": [
+            2
+          ]
+        },
+        {
+          "n": 29,
+          "values": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 31,
+          "values": [
+            0
+          ]
+        }
+      ],
+      "all_604_true_coefficients_retained_each_round": true
+    }
+  ],
+  "exact_model_hull_objectives": 52,
+  "local_removals": 0,
+  "dual_removals": 0,
+  "verified_selected_witnesses": 66,
+  "verified_full_pool_witnesses": 37,
+  "scope": "Independent local catalogue enumeration and direct Fraction arithmetic replay every model-hull bound and exclusion. Every returned integer point is reconstructed from an actual allowed local model for each prime and checked against all selected/full-pool integer cuts. Feasible selected points also receive fresh 384-bit checks against the unrounded measurement combinations. This establishes only feasibility or exclusions in the declared necessary-inequality/local-model relaxation, not alternate spectra or number fields."
+}

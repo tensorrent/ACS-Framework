@@ -1,0 +1,36 @@
+{
+  "mathlib_revision": "be865aa50cc0364be66c3941a6dc0c845a2c2ceb",
+  "module_source_sha256": "8d567fac6fdd9223c975598f79080ca011a5651a2dcc6c78472644fee424c3cb",
+  "module_source_matches_git_object": true,
+  "primary_sources": [
+    {
+      "title": "Mathlib4 Contracting maps documentation",
+      "url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Topology/MetricSpace/Contracting.html",
+      "access": "full web page retrieved",
+      "use": "Banach fixed-point theorem on a complete subset and ContractingWith hypotheses; exact compiled version is the pinned local source."
+    },
+    {
+      "title": "Fredrik Johansson: Using ball arithmetic",
+      "url": "https://fredrikj.net/arb/using.html",
+      "access": "full author documentation page retrieved",
+      "use": "Enclosure semantics, interval predicate interpretation and dependency overestimation; historical documentation, not a version claim about the installed FLINT3.6.0."
+    },
+    {
+      "title": "FLINT arb.h documentation",
+      "url": "https://flintlib.org/doc/arb.html",
+      "access": "search-index excerpt retrieved; direct page access returned403",
+      "use": "Cross-check that decimal text conversion encloses the specified decimal whereas binary64 input denotes its already-rounded value; full direct page not retrieved."
+    }
+  ],
+  "failed_accesses": [
+    {
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/be865aa50cc0364be66c3941a6dc0c845a2c2ceb/Mathlib/Topology/MetricSpace/Contracting.lean",
+      "result": "web cache miss; the local source was checked byte-for-byte against its git object instead"
+    },
+    {
+      "url": "https://flintlib.org/doc/issues.html",
+      "result": "direct page403; search-index excerpt only"
+    }
+  ],
+  "scope": "Primary-source provenance and limitations are explicit. No third-party PDF was downloaded or redistributed. New interval/Taylor and source-coordinate arguments are derived and tested locally."
+}

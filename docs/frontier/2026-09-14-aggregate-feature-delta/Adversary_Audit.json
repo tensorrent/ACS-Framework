@@ -1,0 +1,236 @@
+{
+  "status": "passed",
+  "source_sha256": "00a977781919c7283c2ae085dd7f81788f1eecc7dcb0b20f25f813e8a8e5f6e7",
+  "inputs_sha256": {
+    "Enlarged_Slice_Proposal.json": "406728de6c06e74fb429075326dd2cdbaa0a1ade70e777ea5a7cb7df5328c421",
+    "Enlarged_Slice_Certificate.json": "6fcf5750ca93eefab70abbb163a111409515661eef7aadd74c4f2003fdefe18a",
+    "Equal_Population_Inputs.zip": "52e1f8e024719a717721b4414b5c48143af577b986e8b0463ad41c718df54f9c",
+    "Equal_Population_Decoder.json": "31690146f1e9d933a5062c5edd86586763c327a8e43b99762140cba0cb25c0e9",
+    "Original_Export_Audit.json": "c71a1ab1a8b461f77b135aec62d0f0198c4d2303ff8c5ea50b7b8003f55852e4",
+    "Corrected_Export_Audit.json": "1f9823f4fd329b6f49b8479c66760c6fe77a4a74d82a30388a641ccbb2aad2c0"
+  },
+  "mutations": [
+    {
+      "name": "missing Gaussian feature",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong Gaussian width",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong critical coordinate",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong critical displacement",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong radius",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "corrupted common coordinate",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "critical coordinate admitted as free variable",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "duplicated variable index",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "missing correction variable",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "singular zero preconditioner",
+      "rejected": true,
+      "exception": "StopIteration"
+    },
+    {
+      "name": "inadequate identity preconditioner",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "preconditioner perturbed by one",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract included_unknown_tail",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract released_moment",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract released_cumulative_counts",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract released_raw_coordinates",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract post_noise_window_censoring",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract source_population",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract normalization",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "changed observable contract source_selection",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "fixed B coordinate changed",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "false strict radius improvement",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "coordinate margin inflated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "coordinate witness truncated",
+      "rejected": true,
+      "exception": "StopIteration"
+    },
+    {
+      "name": "common feature vector corrupted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "negative self-map margin",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "derivative row omitted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "precision certificate omitted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "source root omitted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "wrong field discriminant",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "field label leaked into anonymous input",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "root multiplicity corrupted",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "uncorrected midpoint fails feature self-map",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "off-root center fails strict self-map",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "name": "oversized correction box",
+      "rejected": true,
+      "exception": "AssertionError"
+    }
+  ],
+  "mutations_rejected": 35,
+  "original_export_reporting_bug_independently_rejected": true,
+  "corrected_export_independently_accepted": true,
+  "exact_zero_margin_controls": [
+    {
+      "input_member": "E1_160.json",
+      "source_index": 1,
+      "exact_margin": "0",
+      "binary64_recomputed_margin": -1.1102230246251565e-16
+    },
+    {
+      "input_member": "E2_160.json",
+      "source_index": 1,
+      "exact_margin": "0",
+      "binary64_recomputed_margin": -1.1102230246251565e-16
+    },
+    {
+      "input_member": "E1_224.json",
+      "source_index": 1,
+      "exact_margin": "0",
+      "binary64_recomputed_margin": -1.1102230246251565e-16
+    },
+    {
+      "input_member": "E2_224.json",
+      "source_index": 1,
+      "exact_margin": "0",
+      "binary64_recomputed_margin": -1.1102230246251565e-16
+    }
+  ],
+  "tiny_residual_counterexample": {
+    "function": "F(x)=1e-100 for every real x",
+    "preconditioner": "1",
+    "domain": "[-1,1]",
+    "residual_everywhere": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "has_root": false,
+    "T_at_left_endpoint": "-10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "self_map_fails": true
+  },
+  "singular_preconditioner_counterexample": {
+    "function": "F(x)=1",
+    "preconditioner": "0",
+    "T": "identity",
+    "all_points_fixed": true,
+    "F_has_root": false,
+    "lesson": "A fixed point of x-RF(x) alone does not imply F(x)=0 without an injective R; the actual certificates prove nonsingularity."
+  },
+  "scope": "Semantic mutations target actual producer/auditor functions. Independent sufficient conditions certify existence; solver success or tiny residual alone does not. Rejected certificates and local Newton failures do not prove nonexistence outside the tested slice."
+}

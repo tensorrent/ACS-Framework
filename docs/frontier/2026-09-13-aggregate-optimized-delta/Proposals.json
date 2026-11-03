@@ -1,0 +1,1940 @@
+{
+  "status": "proposed",
+  "source_sha256": "8d175e07b00b1e882cedef077d455f9a880f778f4084cabad1b36935b571f2f2",
+  "inputs_sha256": {
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "radii": [
+    "0",
+    "1/500",
+    "1/200",
+    "1/100",
+    "1/50",
+    "1/20",
+    "3/50",
+    "7/100",
+    "1/10",
+    "13/100",
+    "7/50",
+    "1/5"
+  ],
+  "sample_offsets_per_root": 33,
+  "rational_multiplier_grid": 1000000000,
+  "cases": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "91863490309/1000000000"
+        ],
+        [
+          3,
+          "15367452027/200000000"
+        ],
+        [
+          4,
+          "324361553/8000000"
+        ],
+        [
+          7,
+          "30009780929/500000000"
+        ],
+        [
+          8,
+          "25427486129/500000000"
+        ],
+        [
+          11,
+          "6906541519/500000000"
+        ],
+        [
+          14,
+          "20924248481/1000000000"
+        ],
+        [
+          17,
+          "2400105553/125000000"
+        ],
+        [
+          18,
+          "791637813/250000000"
+        ],
+        [
+          23,
+          "8727133341/1000000000"
+        ],
+        [
+          24,
+          "7430838551/1000000000"
+        ],
+        [
+          27,
+          "632475527/250000000"
+        ],
+        [
+          30,
+          "597256609/500000000"
+        ],
+        [
+          33,
+          "3552517/10000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.972058777085431
+    },
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/500",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "177348341/125000000"
+        ],
+        [
+          2,
+          "1931243741/250000000"
+        ],
+        [
+          5,
+          "12380036987/1000000000"
+        ],
+        [
+          6,
+          "43835478353/1000000000"
+        ],
+        [
+          9,
+          "94853206677/500000000"
+        ],
+        [
+          10,
+          "139527305861/1000000000"
+        ],
+        [
+          13,
+          "3694227437/20000000"
+        ],
+        [
+          14,
+          "49519967647/250000000"
+        ],
+        [
+          17,
+          "3027695909/25000000"
+        ],
+        [
+          18,
+          "1941773707/125000000"
+        ],
+        [
+          23,
+          "36195443347/1000000000"
+        ],
+        [
+          24,
+          "4905962729/250000000"
+        ],
+        [
+          29,
+          "5856288741/1000000000"
+        ],
+        [
+          30,
+          "3092053653/250000000"
+        ],
+        [
+          33,
+          "276056517/100000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.862799555027932
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/500",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "1357057653/1000000000"
+        ],
+        [
+          2,
+          "7382318073/1000000000"
+        ],
+        [
+          5,
+          "5899576173/500000000"
+        ],
+        [
+          6,
+          "8314307183/200000000"
+        ],
+        [
+          9,
+          "44109830467/250000000"
+        ],
+        [
+          10,
+          "127778518591/1000000000"
+        ],
+        [
+          13,
+          "166072973591/1000000000"
+        ],
+        [
+          14,
+          "85216370953/500000000"
+        ],
+        [
+          17,
+          "99282588121/1000000000"
+        ],
+        [
+          18,
+          "2394458009/200000000"
+        ],
+        [
+          23,
+          "107031973/4000000"
+        ],
+        [
+          24,
+          "876584437/62500000"
+        ],
+        [
+          29,
+          "4105078017/1000000000"
+        ],
+        [
+          30,
+          "538401709/62500000"
+        ],
+        [
+          33,
+          "1913573793/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.818383514808176
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/200",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "1357057653/1000000000"
+        ],
+        [
+          2,
+          "7382318073/1000000000"
+        ],
+        [
+          5,
+          "5899576173/500000000"
+        ],
+        [
+          6,
+          "8314307183/200000000"
+        ],
+        [
+          9,
+          "44109830467/250000000"
+        ],
+        [
+          10,
+          "127778518591/1000000000"
+        ],
+        [
+          13,
+          "166072973591/1000000000"
+        ],
+        [
+          14,
+          "85216370953/500000000"
+        ],
+        [
+          17,
+          "99282588121/1000000000"
+        ],
+        [
+          18,
+          "2394458009/200000000"
+        ],
+        [
+          23,
+          "107031973/4000000"
+        ],
+        [
+          24,
+          "876584437/62500000"
+        ],
+        [
+          29,
+          "4105078017/1000000000"
+        ],
+        [
+          30,
+          "538401709/62500000"
+        ],
+        [
+          33,
+          "1913573793/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.7455253557990424
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "269467709/200000000"
+        ],
+        [
+          2,
+          "732826821/100000000"
+        ],
+        [
+          5,
+          "1170703599/100000000"
+        ],
+        [
+          6,
+          "41209194589/1000000000"
+        ],
+        [
+          9,
+          "21780933531/125000000"
+        ],
+        [
+          10,
+          "125792091313/1000000000"
+        ],
+        [
+          13,
+          "5088494657/31250000"
+        ],
+        [
+          14,
+          "165260544411/1000000000"
+        ],
+        [
+          17,
+          "18954854627/200000000"
+        ],
+        [
+          18,
+          "11075295899/1000000000"
+        ],
+        [
+          23,
+          "23785183341/1000000000"
+        ],
+        [
+          24,
+          "11707689051/1000000000"
+        ],
+        [
+          29,
+          "801060643/250000000"
+        ],
+        [
+          30,
+          "6511276689/1000000000"
+        ],
+        [
+          33,
+          "280775807/200000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.5993627100448076
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/20",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "655009223/500000000"
+        ],
+        [
+          2,
+          "111258333/15625000"
+        ],
+        [
+          5,
+          "283801117/25000000"
+        ],
+        [
+          6,
+          "39806113409/1000000000"
+        ],
+        [
+          9,
+          "165604469709/1000000000"
+        ],
+        [
+          10,
+          "117840170679/1000000000"
+        ],
+        [
+          13,
+          "29916902617/200000000"
+        ],
+        [
+          14,
+          "142597003181/1000000000"
+        ],
+        [
+          17,
+          "14377825979/200000000"
+        ],
+        [
+          20,
+          "42045460731/1000000000"
+        ],
+        [
+          23,
+          "32335487509/1000000000"
+        ],
+        [
+          24,
+          "1132448397/100000000"
+        ],
+        [
+          29,
+          "665117177/250000000"
+        ],
+        [
+          30,
+          "2538599629/500000000"
+        ],
+        [
+          33,
+          "64515807/62500000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.1581223002692584
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/20",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "3/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "351915091/500000000"
+        ],
+        [
+          2,
+          "3804718531/1000000000"
+        ],
+        [
+          5,
+          "596663771/100000000"
+        ],
+        [
+          6,
+          "4062371431/200000000"
+        ],
+        [
+          9,
+          "7617519129/100000000"
+        ],
+        [
+          10,
+          "50685737981/1000000000"
+        ],
+        [
+          13,
+          "30326537651/500000000"
+        ],
+        [
+          14,
+          "13177997287/250000000"
+        ],
+        [
+          17,
+          "12447096401/500000000"
+        ],
+        [
+          20,
+          "53299117/3906250"
+        ],
+        [
+          23,
+          "40591689/3906250"
+        ],
+        [
+          24,
+          "1825456167/500000000"
+        ],
+        [
+          29,
+          "877217657/1000000000"
+        ],
+        [
+          30,
+          "213043647/125000000"
+        ],
+        [
+          33,
+          "354734879/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -3.0319140691067803
+    },
+    {
+      "observation_index": 0,
+      "radius": "3/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "7/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "313657223/500000000"
+        ],
+        [
+          2,
+          "846383277/250000000"
+        ],
+        [
+          5,
+          "2641331477/500000000"
+        ],
+        [
+          6,
+          "17815251903/1000000000"
+        ],
+        [
+          9,
+          "64359358791/1000000000"
+        ],
+        [
+          10,
+          "41595407059/1000000000"
+        ],
+        [
+          13,
+          "24127231447/500000000"
+        ],
+        [
+          14,
+          "39252815661/1000000000"
+        ],
+        [
+          17,
+          "17278836341/1000000000"
+        ],
+        [
+          20,
+          "8408377279/1000000000"
+        ],
+        [
+          23,
+          "3073663909/500000000"
+        ],
+        [
+          24,
+          "2064612277/1000000000"
+        ],
+        [
+          29,
+          "245845453/500000000"
+        ],
+        [
+          30,
+          "191544793/200000000"
+        ],
+        [
+          33,
+          "25016927/125000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -2.9349722645466185
+    },
+    {
+      "observation_index": 0,
+      "radius": "7/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "260519507/500000000"
+        ],
+        [
+          2,
+          "1401155531/500000000"
+        ],
+        [
+          5,
+          "540776269/125000000"
+        ],
+        [
+          6,
+          "7146492847/500000000"
+        ],
+        [
+          9,
+          "47179321127/1000000000"
+        ],
+        [
+          10,
+          "7026917667/250000000"
+        ],
+        [
+          13,
+          "2946845009/100000000"
+        ],
+        [
+          14,
+          "4539606809/250000000"
+        ],
+        [
+          17,
+          "525659201/100000000"
+        ],
+        [
+          20,
+          "395656439/500000000"
+        ],
+        [
+          23,
+          "7868219/50000000"
+        ],
+        [
+          25,
+          "4781693/20000000"
+        ],
+        [
+          26,
+          "106952193/1000000000"
+        ],
+        [
+          31,
+          "33491177/500000000"
+        ],
+        [
+          32,
+          "22262439/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -2.6653929226946595
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "13/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "540503349/1000000000"
+        ],
+        [
+          2,
+          "2908631561/1000000000"
+        ],
+        [
+          5,
+          "1124549159/250000000"
+        ],
+        [
+          6,
+          "7455713181/500000000"
+        ],
+        [
+          9,
+          "9994014663/200000000"
+        ],
+        [
+          10,
+          "30198445991/1000000000"
+        ],
+        [
+          13,
+          "16135727289/500000000"
+        ],
+        [
+          14,
+          "21320354827/1000000000"
+        ],
+        [
+          17,
+          "3699900973/500000000"
+        ],
+        [
+          20,
+          "661886991/200000000"
+        ],
+        [
+          23,
+          "1277242231/500000000"
+        ],
+        [
+          24,
+          "119218407/125000000"
+        ],
+        [
+          29,
+          "119252439/500000000"
+        ],
+        [
+          30,
+          "23313141/50000000"
+        ],
+        [
+          33,
+          "48300259/500000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -2.3995512145282607
+    },
+    {
+      "observation_index": 0,
+      "radius": "13/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "7/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "24699497/50000000"
+        ],
+        [
+          2,
+          "1328315167/500000000"
+        ],
+        [
+          5,
+          "410055051/100000000"
+        ],
+        [
+          6,
+          "6773146743/500000000"
+        ],
+        [
+          9,
+          "11219903547/250000000"
+        ],
+        [
+          10,
+          "5394610937/200000000"
+        ],
+        [
+          13,
+          "28812845503/1000000000"
+        ],
+        [
+          14,
+          "95491173/5000000"
+        ],
+        [
+          17,
+          "6402695009/1000000000"
+        ],
+        [
+          20,
+          "1333088897/500000000"
+        ],
+        [
+          23,
+          "405994247/200000000"
+        ],
+        [
+          24,
+          "753255187/1000000000"
+        ],
+        [
+          29,
+          "37724659/200000000"
+        ],
+        [
+          30,
+          "184557499/500000000"
+        ],
+        [
+          33,
+          "15307903/200000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -2.3118431864099303
+    },
+    {
+      "observation_index": 0,
+      "radius": "7/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/5",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [
+        [
+          1,
+          "364333411/1000000000"
+        ],
+        [
+          2,
+          "487439839/250000000"
+        ],
+        [
+          5,
+          "2963781101/1000000000"
+        ],
+        [
+          6,
+          "9504341551/1000000000"
+        ],
+        [
+          9,
+          "27536990641/1000000000"
+        ],
+        [
+          10,
+          "14604954117/1000000000"
+        ],
+        [
+          13,
+          "335207233/25000000"
+        ],
+        [
+          14,
+          "1098144793/200000000"
+        ],
+        [
+          19,
+          "2855581/20000000"
+        ],
+        [
+          22,
+          "25678233/100000000"
+        ],
+        [
+          25,
+          "11716399/200000000"
+        ],
+        [
+          28,
+          "34537/20000000"
+        ],
+        [
+          30,
+          "7009421/1000000000"
+        ],
+        [
+          33,
+          "816231/250000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": -1.783163273848379
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/5",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 4.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "2945889089/1000000000"
+        ],
+        [
+          5,
+          "566059883/250000000"
+        ],
+        [
+          6,
+          "6539517607/1000000000"
+        ],
+        [
+          9,
+          "11702827/5000000"
+        ],
+        [
+          12,
+          "134426189/200000000"
+        ],
+        [
+          15,
+          "148259263/200000000"
+        ],
+        [
+          16,
+          "35722683/125000000"
+        ],
+        [
+          21,
+          "10120161/125000000"
+        ],
+        [
+          22,
+          "19521751/500000000"
+        ],
+        [
+          27,
+          "553001/250000000"
+        ],
+        [
+          30,
+          "1080287/500000000"
+        ],
+        [
+          33,
+          "5913/8000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0013357946127006547
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/500",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/500",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "2358497747/1000000000"
+        ],
+        [
+          3,
+          "333829147/500000000"
+        ],
+        [
+          5,
+          "151979799/200000000"
+        ],
+        [
+          6,
+          "1109491099/500000000"
+        ],
+        [
+          8,
+          "3219989641/1000000000"
+        ],
+        [
+          11,
+          "1630815617/1000000000"
+        ],
+        [
+          12,
+          "697092931/1000000000"
+        ],
+        [
+          14,
+          "872470271/500000000"
+        ],
+        [
+          17,
+          "1893433749/1000000000"
+        ],
+        [
+          18,
+          "157001561/500000000"
+        ],
+        [
+          23,
+          "49328803/62500000"
+        ],
+        [
+          24,
+          "106689887/250000000"
+        ],
+        [
+          29,
+          "60122729/500000000"
+        ],
+        [
+          30,
+          "245677491/1000000000"
+        ],
+        [
+          33,
+          "26614271/500000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.017666790593432787
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/200",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "299981247/125000000"
+        ],
+        [
+          3,
+          "38093763/50000000"
+        ],
+        [
+          5,
+          "164284873/250000000"
+        ],
+        [
+          6,
+          "1003493753/500000000"
+        ],
+        [
+          8,
+          "297971887/100000000"
+        ],
+        [
+          11,
+          "310261007/250000000"
+        ],
+        [
+          14,
+          "134531803/50000000"
+        ],
+        [
+          17,
+          "2511152307/1000000000"
+        ],
+        [
+          18,
+          "39363031/100000000"
+        ],
+        [
+          23,
+          "120984361/125000000"
+        ],
+        [
+          24,
+          "25721971/50000000"
+        ],
+        [
+          29,
+          "142804421/1000000000"
+        ],
+        [
+          30,
+          "72337107/250000000"
+        ],
+        [
+          33,
+          "31045353/500000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.03944015448004604
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "598845403/250000000"
+        ],
+        [
+          3,
+          "149348157/200000000"
+        ],
+        [
+          5,
+          "135489327/200000000"
+        ],
+        [
+          6,
+          "2064746019/1000000000"
+        ],
+        [
+          8,
+          "28602769/10000000"
+        ],
+        [
+          11,
+          "59762367/50000000"
+        ],
+        [
+          14,
+          "1269351039/500000000"
+        ],
+        [
+          17,
+          "1155642079/500000000"
+        ],
+        [
+          18,
+          "347472939/1000000000"
+        ],
+        [
+          23,
+          "820002167/1000000000"
+        ],
+        [
+          24,
+          "104059979/250000000"
+        ],
+        [
+          29,
+          "111487611/1000000000"
+        ],
+        [
+          30,
+          "11132727/50000000"
+        ],
+        [
+          33,
+          "47213609/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0757528070912152
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "593912403/250000000"
+        ],
+        [
+          3,
+          "66516597/100000000"
+        ],
+        [
+          5,
+          "199926299/250000000"
+        ],
+        [
+          6,
+          "2474441621/1000000000"
+        ],
+        [
+          8,
+          "305721703/250000000"
+        ],
+        [
+          13,
+          "1564324507/1000000000"
+        ],
+        [
+          14,
+          "4144610473/1000000000"
+        ],
+        [
+          17,
+          "807339647/250000000"
+        ],
+        [
+          18,
+          "5648521/12500000"
+        ],
+        [
+          23,
+          "103202953/100000000"
+        ],
+        [
+          24,
+          "126873281/250000000"
+        ],
+        [
+          29,
+          "131280903/1000000000"
+        ],
+        [
+          30,
+          "256562073/1000000000"
+        ],
+        [
+          33,
+          "52989887/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.1483911128480355
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/20",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/20",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "1212790889/500000000"
+        ],
+        [
+          3,
+          "258899397/500000000"
+        ],
+        [
+          5,
+          "598732019/500000000"
+        ],
+        [
+          6,
+          "4414748997/1000000000"
+        ],
+        [
+          9,
+          "1435363441/125000000"
+        ],
+        [
+          10,
+          "10219433287/1000000000"
+        ],
+        [
+          13,
+          "1572528621/100000000"
+        ],
+        [
+          14,
+          "19529842399/1000000000"
+        ],
+        [
+          17,
+          "6111347691/500000000"
+        ],
+        [
+          18,
+          "7450777/5000000"
+        ],
+        [
+          23,
+          "3182260877/1000000000"
+        ],
+        [
+          24,
+          "750052379/500000000"
+        ],
+        [
+          29,
+          "38627063/100000000"
+        ],
+        [
+          30,
+          "23805729/31250000"
+        ],
+        [
+          33,
+          "160015557/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.36732924350218243
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "3/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "152389629/62500000"
+        ],
+        [
+          3,
+          "539086177/1000000000"
+        ],
+        [
+          5,
+          "295642033/250000000"
+        ],
+        [
+          6,
+          "4426776103/1000000000"
+        ],
+        [
+          9,
+          "12045650169/1000000000"
+        ],
+        [
+          10,
+          "10729833593/1000000000"
+        ],
+        [
+          13,
+          "3295542967/200000000"
+        ],
+        [
+          14,
+          "20398264869/1000000000"
+        ],
+        [
+          17,
+          "12745414371/1000000000"
+        ],
+        [
+          18,
+          "97005839/62500000"
+        ],
+        [
+          23,
+          "414094447/125000000"
+        ],
+        [
+          24,
+          "780539757/500000000"
+        ],
+        [
+          29,
+          "50238061/125000000"
+        ],
+        [
+          30,
+          "792575437/1000000000"
+        ],
+        [
+          33,
+          "41619333/250000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.4392949611387375
+    },
+    {
+      "observation_index": 1,
+      "radius": "7/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "7/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "489538747/200000000"
+        ],
+        [
+          3,
+          "555583269/1000000000"
+        ],
+        [
+          5,
+          "5854873/5000000"
+        ],
+        [
+          6,
+          "1109329731/250000000"
+        ],
+        [
+          9,
+          "1562709339/125000000"
+        ],
+        [
+          10,
+          "11142909129/1000000000"
+        ],
+        [
+          13,
+          "17086316383/1000000000"
+        ],
+        [
+          14,
+          "10550170979/500000000"
+        ],
+        [
+          17,
+          "13167925629/1000000000"
+        ],
+        [
+          18,
+          "320430287/200000000"
+        ],
+        [
+          23,
+          "683643/200000"
+        ],
+        [
+          24,
+          "1610354631/1000000000"
+        ],
+        [
+          29,
+          "207269183/500000000"
+        ],
+        [
+          30,
+          "817458727/1000000000"
+        ],
+        [
+          33,
+          "171699113/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.511612997291525
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "1319050303/500000000"
+        ],
+        [
+          3,
+          "55392849/62500000"
+        ],
+        [
+          5,
+          "779429151/1000000000"
+        ],
+        [
+          6,
+          "3185167157/1000000000"
+        ],
+        [
+          9,
+          "6993668229/1000000000"
+        ],
+        [
+          10,
+          "6757410881/1000000000"
+        ],
+        [
+          13,
+          "85943279/8000000"
+        ],
+        [
+          14,
+          "3259782211/250000000"
+        ],
+        [
+          17,
+          "3784120569/500000000"
+        ],
+        [
+          18,
+          "10352759/12500000"
+        ],
+        [
+          23,
+          "1641063903/1000000000"
+        ],
+        [
+          24,
+          "730519841/1000000000"
+        ],
+        [
+          29,
+          "91704351/500000000"
+        ],
+        [
+          30,
+          "359998653/1000000000"
+        ],
+        [
+          33,
+          "75581599/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.729554971255052
+    },
+    {
+      "observation_index": 1,
+      "radius": "13/100",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "13/100",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "1316681539/500000000"
+        ],
+        [
+          3,
+          "890173661/1000000000"
+        ],
+        [
+          5,
+          "95695071/125000000"
+        ],
+        [
+          6,
+          "3119367591/1000000000"
+        ],
+        [
+          9,
+          "1643814083/250000000"
+        ],
+        [
+          10,
+          "6407732709/1000000000"
+        ],
+        [
+          13,
+          "10230609639/1000000000"
+        ],
+        [
+          14,
+          "6199959061/500000000"
+        ],
+        [
+          17,
+          "142746919/20000000"
+        ],
+        [
+          18,
+          "77000411/100000000"
+        ],
+        [
+          23,
+          "1507344419/1000000000"
+        ],
+        [
+          24,
+          "662646229/1000000000"
+        ],
+        [
+          29,
+          "82334793/500000000"
+        ],
+        [
+          30,
+          "321607359/1000000000"
+        ],
+        [
+          33,
+          "8396111/125000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.9485060384139405
+    },
+    {
+      "observation_index": 1,
+      "radius": "7/50",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "7/50",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "26291279/10000000"
+        ],
+        [
+          3,
+          "887521637/1000000000"
+        ],
+        [
+          5,
+          "76615021/100000000"
+        ],
+        [
+          6,
+          "1559589209/500000000"
+        ],
+        [
+          9,
+          "65780397/10000000"
+        ],
+        [
+          10,
+          "6410021809/1000000000"
+        ],
+        [
+          13,
+          "10232711179/1000000000"
+        ],
+        [
+          14,
+          "12397240077/1000000000"
+        ],
+        [
+          17,
+          "7131344003/1000000000"
+        ],
+        [
+          18,
+          "48021679/62500000"
+        ],
+        [
+          23,
+          "93833599/62500000"
+        ],
+        [
+          24,
+          "657661331/1000000000"
+        ],
+        [
+          29,
+          "40640309/250000000"
+        ],
+        [
+          30,
+          "316364059/1000000000"
+        ],
+        [
+          33,
+          "65788547/1000000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 1.0220353090832652
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/5",
+      "sign": -1,
+      "column": 4,
+      "multipliers": [],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 0.0
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/5",
+      "sign": 1,
+      "column": 4,
+      "multipliers": [
+        [
+          0,
+          "247512069/100000000"
+        ],
+        [
+          3,
+          "1360805073/1000000000"
+        ],
+        [
+          4,
+          "120233103/1000000000"
+        ],
+        [
+          6,
+          "398031929/1000000000"
+        ],
+        [
+          8,
+          "7287029/5000000"
+        ],
+        [
+          10,
+          "62715467/250000000"
+        ],
+        [
+          13,
+          "1290271587/1000000000"
+        ],
+        [
+          14,
+          "742822241/500000000"
+        ],
+        [
+          17,
+          "201922979/1000000000"
+        ],
+        [
+          19,
+          "61226499/500000000"
+        ],
+        [
+          22,
+          "140685409/250000000"
+        ],
+        [
+          25,
+          "457824127/1000000000"
+        ],
+        [
+          28,
+          "86292117/500000000"
+        ],
+        [
+          31,
+          "79860393/200000000"
+        ],
+        [
+          32,
+          "48635911/500000000"
+        ]
+      ],
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "sampled_surrogate_score": 1.431041056303375
+    }
+  ],
+  "scope": "Floating sampled-error minimization proposes nonnegative rational duals. The sampled score is not a bound for continuous ordinate uncertainty, not a certified relaxation optimum, and not a coefficient certificate. Every proposal requires separate interval validation, including all coefficient residuals and unconditional tails. No local model, field catalogue or arithmetic truth is used."
+}

@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "source_sha256": "6686460efd3f142f946597784970ab236d7ff6579f61b35eb00fb2feca68b992",
+  "inputs_sha256": {
+    "Certificate320.json": "6bd8d0ab0ab5050f0858e506019736c53b483c73ebf489dd8678f1762c89ff12",
+    "Noise_Audit.json": "036bfb6ed38ba6d955ca44488bfbb578f1921da133ed43597dc7036d664d63c0",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 8,
+  "controls": [
+    {
+      "name": "negative_inequality_multiplier",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Exact integer objective replay requires every inequality multiplier to be nonnegative.",
+      "original_component_sha256": "4b37b610812896b82b0326fea4be2e3e07e5bb037eeba0d578378110ceacacd3",
+      "mutated_component_sha256": "2fe60269d027b23334e0eb5828334db4107a2031f767a60797c2dce60a815548"
+    },
+    {
+      "name": "reverse_one_signed_root_weight",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The signed finite-root coefficient and the nonnegative unknown-tail coefficient must match the actual dual multipliers.",
+      "original_component_sha256": "65fb61d7b5620f1a756af7bf1fe2622c728cf83bbb4a296dfb730122585b56f1",
+      "mutated_component_sha256": "7964de584e866d4643edbfc6a333357c38318449810954fe7ef7d5269cf25731"
+    },
+    {
+      "name": "omit_unknown_zero_budget",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Fresh moment inflation and sigma-weighted unknown-zero budgets remain positive after finite-error optimization.",
+      "original_component_sha256": "c5e8edf600e36a5afe1d5d7774aa9a8adeae7be574ec18b1c54d7e9c4919bec2",
+      "mutated_component_sha256": "3530ca8181fa657c5182c2834c37150252c8982d0c919a35308c256fdc5ceb78"
+    },
+    {
+      "name": "omit_full_box_residual",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The positive coefficient objective retains support four when its multiplier vector is empty.",
+      "original_component_sha256": "1fbbec856866a7d9f17819b52bda6917e738e667cdc4d4688df3b86f4f7d8cd7",
+      "mutated_component_sha256": "48b1f166b5083c67f0cbdf47dc07639f45ebc6deb8e189d8121c9e2e69e34894"
+    },
+    {
+      "name": "drop_one_continuum_cover_leaf",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The rational leaf boundaries must cover every allowed ordinate value without gaps.",
+      "original_component_sha256": "5a6a8941decd457b290470183f854442faf6df206968268fa10613dbbb003014",
+      "mutated_component_sha256": "4c6d54d6d9fc36777740b94c515059ee6e77f65e2765eb6e39ba8530b9d88735"
+    },
+    {
+      "name": "replace_leaf_range_with_its_midpoint_value",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "A fresh complex evaluation at the leaf endpoint is covered by the full enclosure and falls outside the substituted midpoint-only interval.",
+      "original_component_sha256": "181f557b204f719ea9137d6d0e9d21fc806bacf5bd0c580647b4c39bca26db39",
+      "mutated_component_sha256": "00753572237f383351245f9ed40b79726cf181d46cbda6587299edd022cba66b"
+    },
+    {
+      "name": "use_sampled_maximum_as_continuum_bound_0",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The audited off-grid error exceeds every one of the 33 sampled values but remains below the certified continuous root bound.",
+      "original_component_sha256": "3d67e71e9b33049a61146ba467de95f886358f824222ca5660ba95bae2e9ae13",
+      "mutated_component_sha256": "1f9304a934c571e915f906688cca9898f297a80460b01066c311ee2eeb2eb05a"
+    },
+    {
+      "name": "use_sampled_maximum_as_continuum_bound_1",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The audited off-grid error exceeds every one of the 33 sampled values but remains below the certified continuous root bound.",
+      "original_component_sha256": "dbf853489acaeb130b20f788fa4dc5783364e2dc4d988de490798d27a90e3715",
+      "mutated_component_sha256": "7cdf882c4ac233fbdff4ed320825b4cc91827bbcad7309346ffa70e386c403b0"
+    }
+  ],
+  "scope": "Eight targeted semantic mutations of actual proof components, including the two independently certified off-grid witnesses. Each original component passes before its mutation is required to fail. These are not exhaustive fuzzing, and the off-grid tests overlap the two witnesses already reported by the independent audit."
+}

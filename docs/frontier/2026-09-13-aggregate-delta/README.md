@@ -1,0 +1,18 @@
+# Direct recovery from aggregate spectra
+
+The coefficient at seven is now recovered directly from the two aggregate spectra through height 20: 4 for the first field and 0 for the second. The decoder uses the shared degree, signature and discriminant with generic integer coefficient bounds. It receives no candidate-field list, Galois group, factor labels, local-power relations or neighboring arithmetic values.
+
+This is the seventeenth research continuation. The [preceding checkpoint](../2026-09-13-biquadratic-delta/README.md) established a shared-invariant two-field class and a count-based selector. This pass verifies direct explicit-formula recovery from the same finite spectra. The [derivation and reproduction guide](../../../code/frontier_verification/AGGREGATE_README.md) gives the inequalities, exact dual argument, uncertainty model and limitations.
+
+- [Result and scope](Aggregate_Summary.json): seventeen Gaussian measurements per spectrum; thirteen and nine of seventeen target coefficients recovered by integer propagation; coefficient-seven bounds force 4 and 0.
+- [Aggregate-only inputs](Aggregate_Inputs.zip) and [separate provenance](Input_Provenance.json): exact extraction from the prior finite certificates, with labels and arithmetic withheld from decoder inputs.
+- [Measurement and recovery transcripts](Measurements_Recovery.zip): two precision runs, all 604 generic coefficient columns, monotone exclusions and rational dual certificates.
+- [Exact integer audit](Integer_Audit.json): 184 exclusions, 136 objective bounds, 1,128 held-out polynomial factorizations and retention of all true coefficients.
+- [Independent analytic audit](Analytic_Audit.json): 20,536 weight comparisons, 34 finite formula cases and seventeen alternate gamma integrals. Of 170 formula variants, 112 are detected; the others remain inside the retained error budgets.
+- [Frozen-dual uncertainty study](Radius_Audit.json) and [adversarial audit](Adversary_Audit.json): sufficient tested radii of 10^-5 and 10^-4 for the two c7 certificates, 24 exact radius bounds, 408 displaced-sum controls and twelve rejected input/proof mutations.
+- [Primary sources and visual checks](Primary_Sources.json), [source recheck](Source_Recheck.json), [runtime](Runtime.json), [eleven execution receipts](Execution_Receipts.json), [output streams](Execution_Artifacts.zip), [development notes](Development_Notes.json), [instrument inventory](Source_Inventory.json) and [source snapshot](Source_Snapshot.zip).
+- [Research queue](Research_Queue.json), [append-only ledger](Branch_Events.jsonl), [manifest](Manifest.json) and [verification result](Verification.json): all 117 branches retained, the 383-event prefix preserved and five events appended.
+
+The held-out arithmetic agrees with every deduction, but unresolved coefficient domains do not prove joint feasibility or alternate fields. Frozen-dual radius failures are method limits, not optimal information limits. The finite critical-line spectrum and its completeness are certified inputs; no global GRH assumption, external unknown-field trial, general field-identification theorem or complete Lean formalization is claimed. Ten recorded commands succeeded; a source-render filename failure and its corrected script are preserved.
+
+The next gate is to combine measurements before bounding their shared ordinate errors and test whether cancellation yields stronger sufficient recovery radii. Unresolved coefficients, broader field classes and the full ACS operator, topology, physical-identification and private-input questions retain continuation gates. The ongoing research goal remains active.

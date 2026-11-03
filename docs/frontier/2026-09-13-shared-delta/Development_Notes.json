@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-09-13T17:55:03.111354+00:00",
+  "recorded_commands": 4,
+  "unsuccessful_recorded_commands": 0,
+  "retained_limited_trials": "The first shared probe uses the default HiGHS route. Its lower-bound solves for targets 32 and 361 reach their 90-second limits; those two certificates retain valid zero-multiplier box bounds. Upper-bound proposals complete, and the probe certifies coefficient 32.",
+  "solver_change": "The later instrument uses highs-ipm with a 15-second limit. All 48 requested solves finish successfully. Eight already supplied opposite box bounds avoid unnecessary optimization after a singleton is established.",
+  "certification_policy": "Any rational signed combination is eligible for direct interval validation. Solver success, time limits, feasibility tolerances and claimed optimality are never proofs.",
+  "continuation_scope": "First-order ordinate errors are shared across rows; absolute curvature and omitted-tail allowances remain separate. Combining curvature or introducing common quadratic displacements with cubic remainders is a new explicit gate.",
+  "history_policy": "Earlier dated packages and previously pinned instruments remain byte-identical. No global completion or exhaustion is asserted."
+}

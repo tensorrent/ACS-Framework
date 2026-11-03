@@ -1,0 +1,28 @@
+{
+  "recorded_commands": 18,
+  "successful_commands": 14,
+  "failed_commands": 4,
+  "separately_recorded_launch_failures": 1,
+  "failures": [
+    {
+      "receipt": "audit-original-local-export",
+      "result": "Independent complex reconstruction rejects the original post-solve double-application residual and preconditioner reports. Corrected source is separate and passes."
+    },
+    {
+      "receipt": "feature-contraction-lean",
+      "result": "Missing compiled Contracting.olean dependency. The pinned mathlib cache was acquired without changing the toolchain, package manifest or source revision."
+    },
+    {
+      "receipt": "feature-contraction-lean-after-acquisition",
+      "result": "The same source then fails on out-of-scope nonnegative-real notation. Separate FeatureContraction_v2.lean names NNReal explicitly and passes all six lemmas."
+    },
+    {
+      "receipt": "overextended-feature-slice-proposal",
+      "result": "The epsilon5e-6 local Newton attempt raises a numerically singular Jacobian error; this is not a global nonexistence result."
+    }
+  ],
+  "manual_launch_failure": "Launch_Failure.json distinguishes the assistant interpreter-path typo from actual runner receipts. The process never launched; empty streams and the observed tool error are retained.",
+  "canonical_Lean_source": "code/frontier_verification/proofs/FeatureContraction_v2.lean",
+  "source_policy": "Executed sources, failed reports and original prototypes are immutable. The final recursive verifier runs after packaging with a separate external receipt. Exploratory replay excludes clock fields from comparisons, preserves fresh outputs, and uses original clock-bearing input bytes for downstream recorded hashes.",
+  "shared_infrastructure": "Independent formulations still share FLINT ball arithmetic, Python and inherited field/spectral evidence. Modular nonsingularity and exact Fraction endpoint checks supply distinct arithmetic routes."
+}

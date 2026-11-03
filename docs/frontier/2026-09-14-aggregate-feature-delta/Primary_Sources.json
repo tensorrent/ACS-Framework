@@ -1,0 +1,9 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Primary_Sources.json": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "runtime_acquisition_record": "Runtime_Acquisition.json",
+  "scope": "Mathlib4 Banach documentation and the Arb author usage guide were retrieved; the exact pinned module is verified against its local git object. Direct FLINT pages returned403 and are marked as search-excerpt access only. No third-party PDFs are redistributed. New analytic identities and interval arguments are derived and checked locally."
+}

@@ -1,0 +1,1781 @@
+{
+  "status": "passed",
+  "source_sha256": "8b1647b8b616190026b18290832a0de0b2b31359007d45064afe6d74f464e563",
+  "producer_result_sha256": "b2586edf06c2674615ebc94e0c60afddee88ac2ed68cf2d90fcabda2d88386c0",
+  "input_identity": {
+    "extra_certificate_sha256": "e9266056744df6b1c2c4b2fb17da65b28c8a213be6a6422b498408a8d8ae6b2d",
+    "extra_input_sha256": "0d68e07973176ba48ecab0f1316046415889792104077fce5e5799b1c45a7b16",
+    "prior_archive_sha256": "2fb3ba0ccd8a1dcbdeef46105060a431b901a6ae65bca465afc1e5c679b12a5f",
+    "chi1_certificate_sha256": "067f155421d7f624440af176c57b128c6928bdb9569d2955d62ba4a5f45c4db8",
+    "chi3_certificate_sha256": "ce39e90681f0f3a040ae4fd942e7749dd8888817270ac8115de38e0a26aaa7ef",
+    "loader_sha256": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "counts_at_220": {
+      "zeta": 90,
+      "chi1": 146,
+      "chi2": 146,
+      "chi3": 146
+    }
+  },
+  "mpmath_decimal_digits": 60,
+  "digamma_interval_precision_bits": 224,
+  "independent_configurations": [
+    {
+      "a": "1/25",
+      "frequency_label": "zero",
+      "zero_sum": "2.02124079394960013012080875386081607949225762945479827026936",
+      "prime_sum": "0.000000189083722629324096412584750973424676124628140006494312582404",
+      "gamma": "-6.8090701428512534079983051376461515494307690251502145096487",
+      "arithmetic": "2.02124079394960013012080876842780352660692722941877488339955",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log2",
+      "zero_sum": "-0.997395332671720518910808915573164447510149648641809115291918",
+      "prime_sum": "0.00534107837648514992227020174351949997554062555410054603026244",
+      "gamma": "-3.47279601544776158546581349775690448244926820887737154099023",
+      "arithmetic": "-0.997395332671720518910808933554483992430583583209563643581903",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log3",
+      "zero_sum": "0.246088665389428888818124781984741758587105638344989846609396",
+      "prime_sum": "0.198838243516579224587221252596975874645266975701519030030742",
+      "gamma": "-1.89129056906666277468367579846592762327982344530529770791501",
+      "arithmetic": "0.246088665389428888818124760079313866618246561326192237213432",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log5",
+      "zero_sum": "0.4496177124101518851649183612723390995298813564494039716379",
+      "prime_sum": "1.09919580905622921550383233588622346314568745817540293888817",
+      "gamma": "-1.1614361138819623839494971571472747781063162831465076752986",
+      "arithmetic": "0.449617712410151885164918365340070964946013727854162801872558",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log11",
+      "zero_sum": "-1.53929286800879599084575133643825025594524343328440318923929",
+      "prime_sum": "4.51747978221074276529461327747633831843977297039994353350447",
+      "gamma": "-0.676312093420562696998042373784503642759806229284358904940142",
+      "arithmetic": "-1.53929286800879599084575136748455112455089889231006399865765",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log19",
+      "zero_sum": "1.5558834452436930146380724784151770026891350752709311745512",
+      "prime_sum": "2.58692873342409774446374281667476840557778131821128872336805",
+      "gamma": "-0.491615827886168135455954745747281020684956627470177102634254",
+      "arithmetic": "1.55588344524369301463807242456216334762754728385796116446701",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log139",
+      "zero_sum": "0.234799787241218756466651789583852948675854131463325582734984",
+      "prime_sum": "11.5864979953761629661999678898522723187610944219009416778509",
+      "gamma": "-0.172689399373366646102749666641797619765217499889778708303075",
+      "arithmetic": "0.23479978724121875646665190351573111767381531368206363767231",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log16",
+      "zero_sum": "0.706934174939313501055682877511778162956729760943129117093575",
+      "prime_sum": "3.04383495493127158717863101472952153879827851258459283899487",
+      "gamma": "-0.541944080237129156329165204107747954373777873484083690345818",
+      "arithmetic": "0.706934174939313501055682770920774020852544996808434867061317",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log361",
+      "zero_sum": "1.00850648350196180984186252948354128423988581006249120492114",
+      "prime_sum": "18.1289660674282306577619567612204231431897847492050460271362",
+      "gamma": "-0.106641158778693681357438589793123100622777763064572011220492",
+      "arithmetic": "1.00850648350196180984186230155673440030665416940374461898612",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "off_peak_2.2",
+      "zero_sum": "-0.829960665287029359274218680397098688386100895579016863821157",
+      "prime_sum": "3.43514479738632062338270145220082224548510172058998627086587",
+      "gamma": "-0.765390756043613970828535810015605658791684487814273938134863",
+      "arithmetic": "-0.829960665287029359274218634467697297036928029538800108614201",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "zero",
+      "zero_sum": "9.80056957215453791282677539861751199966076556436400854743627",
+      "prime_sum": "3.05417327882906149887778360778990718558607731628372054277386e-28",
+      "gamma": "-5.82485826648953236184022742936907211745699453422823295285151",
+      "arithmetic": "9.80056957215453791282677539485305332637309110586149136161304",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log2",
+      "zero_sum": "-0.841566167348795664546960405964142480304889069794536688620259",
+      "prime_sum": "0.00000000155548471767403505499536010083900755475436226612016890928802",
+      "gamma": "-2.96827918919327279126877407428325191643326552920499931086122",
+      "arithmetic": "-0.841566167348795664546960441642272340273901160409299705641076",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log3",
+      "zero_sum": "0.548197987139668535567424741460053558081733293436460764205931",
+      "prime_sum": "0.0029814919816324781913736738525817466309364461444404086979832",
+      "gamma": "-1.76400232322636044138896871585977294181283632734506237755361",
+      "arithmetic": "0.548197987139668535567424697471413698742282185022747260118455",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log5",
+      "zero_sum": "-0.468463578357069732054874485329002605845957374974308206114566",
+      "prime_sum": "2.03041402145128288297719389663801340954478309941384581895626",
+      "gamma": "-1.12804772608503141259499285113059406373205578237596726474982",
+      "arithmetic": "-0.468463578357069732054874493409586965373593290582772271581715",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log11",
+      "zero_sum": "-5.25584431687562939560875024153222983608467524405878785573008",
+      "prime_sum": "8.2165640369106199528435237711541898647474999993900363667861",
+      "gamma": "-0.666473071339048846520138150745656899529229427605650673858041",
+      "arithmetic": "-5.25584431687562939560875035459829686817811291568020926161768",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log19",
+      "zero_sum": "3.01897878819319638305570818421247712443058947670970578261623",
+      "prime_sum": "1.09470934442974871183337980390896840609191566299763948987426",
+      "gamma": "-0.486111681921393056375948712426165271919012444107421131683438",
+      "arithmetic": "3.0189787881931963830557080250441001359794484711016895422568",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log139",
+      "zero_sum": "0.0538707625589386611839118464777769252947659796179360940582496",
+      "prime_sum": "11.679177989232968154810030018806248632301728715192039383372",
+      "gamma": "-0.171320015475050344415667559690628306451819466634220646070029",
+      "arithmetic": "0.0538707625589386611839121241777643653717242156774978918856573",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log16",
+      "zero_sum": "1.51956500526467731784846166750853201443054996766468307566723",
+      "prime_sum": "2.20563352312828185654210857654784716129294144859624957167368",
+      "gamma": "-0.535439763931669936751573472864028952693260507155417717736935",
+      "arithmetic": "1.51956500526467731784846148208396185305140169931921232632342",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log361",
+      "zero_sum": "3.52849298382425195130272336633410550258952646812963683922029",
+      "prime_sum": "15.466004033044922562945928962632959671118370197402807397526",
+      "gamma": "-0.105825730146500262636251833778547255844453242298921000224377",
+      "arithmetic": "3.52849298382425195130272271320450971783733164556958331612848",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "off_peak_2.2",
+      "zero_sum": "-0.47289221258605011856248477844473313545102388860867891476844",
+      "prime_sum": "3.06556440934026484031502713943156777890926248188844542420041",
+      "gamma": "-0.752717940596005507838159432547026031277964331317638730291768",
+      "arithmetic": "-0.472892212586050118562484637042728383013472325775532645715969",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "zero",
+      "zero_sum": "33.2209495745066559752422682553420237636796402108882853438707",
+      "prime_sum": "2.59873395759905073665512875304537694408731569003260038185969e-112",
+      "gamma": "3.97885601693530284022624244311650308471719930082981209848518",
+      "arithmetic": "33.2209495745066559752422682564472927677277833924454141071132",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log2",
+      "zero_sum": "-0.736822760643726394485723760498769981181998245543897230803477",
+      "prime_sum": "1.39875003423242017195658648563219395646064249716570148970745e-36",
+      "gamma": "-2.85946934382480358025418579673142510487814126657157259797173",
+      "arithmetic": "-0.736822760643726394485723825759337355695386172895036887718077",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log3",
+      "zero_sum": "0.571120667116523631742355282348670472592374055458297243748231",
+      "prime_sum": "0.0000000000188804220633274506447406991682475039431477839950949793243828",
+      "gamma": "-1.73972423644495532802538903687143218317614144417126332304881",
+      "arithmetic": "0.571120667116523631742355194524576360554667997849553539699254",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log5",
+      "zero_sum": "-2.49635968112896910470621308617906792059186013894047733032588",
+      "prime_sum": "4.06082513903471318293302172765218298317614406983305293496947",
+      "gamma": "-1.12049369026476069494107541068225278613592829289123325281409",
+      "arithmetic": "-2.49635968112896910470621304768101294870768845093730837279246",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log11",
+      "zero_sum": "-13.3599075785651809566164160163962339336511979860076482150782",
+      "prime_sum": "16.3161995106038566750573312178744009003571530758457537498099",
+      "gamma": "-0.664106244793280177209552649036234936384256172320842680014809",
+      "arithmetic": "-13.3599075785651809566164161305456256745870956404685457906523",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log19",
+      "zero_sum": "3.90142390790770280624634543488187154346101383833246466118849",
+      "prime_sum": "0.204991883094273884975369229775436915434520733585918792214592",
+      "gamma": "-0.484767479424579258417458365115431144549657034785054360156702",
+      "arithmetic": "3.90142390790770280624634523029145444481041709225288676286208",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log139",
+      "zero_sum": "-0.686146694275702726314290810771898297003768724747153708149229",
+      "prime_sum": "12.3972355562353057317269083085274972167329571887379567845304",
+      "gamma": "-0.170980126444550444710599007174219156627430769651340689743117",
+      "arithmetic": "-0.686146694275702726314290131676640988184555375994590319965644",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log16",
+      "zero_sum": "-0.191877355194034366815578755740418831921171563902878227905001",
+      "prime_sum": "3.91067723712466932229584773449008941975617456419929338660931",
+      "gamma": "-0.533857198320450011378311266081335998724722804047880672396276",
+      "arithmetic": "-0.191877355194034366815579088493878187788413970826646928987958",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log361",
+      "zero_sum": "8.09324411481813059291542581322586919143612945481483499752887",
+      "prime_sum": "10.8656760576736930195845281200475640598297121034377308899899",
+      "gamma": "-0.105623023184866889082783420375187501277086913404719304027065",
+      "arithmetic": "8.09324411481813059291542441217256853190470550162480455603106",
+      "within_producer_enclosures": true
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "off_peak_2.2",
+      "zero_sum": "2.26448120323929321926637603508432539364044209685211663627013",
+      "prime_sum": "0.324946202254025070091674579370867298291354731708046149397183",
+      "gamma": "-0.749696002244337889704878191707268327144756500599738469112152",
+      "arithmetic": "2.26448120323929321926637613908060169466445664722942117707802",
+      "within_producer_enclosures": true
+    }
+  ],
+  "digamma_routes": [
+    {
+      "a": "1/25",
+      "frequency_label": "zero",
+      "upper_limit": 60,
+      "digamma_integral": "[3.5600408242433531263660322833 +/- 6.61e-29]",
+      "gamma_normalization": "[-10.36911096709460653436433742093925441036858440478391972 +/- 4.47e-54]",
+      "finite_value": "[-6.809070142851253407998305138 +/- 4.14e-28]",
+      "tail_bound": "[9.521057157485755817539743435839964961749696063691578712e-62 +/- 1.49e-117]",
+      "enclosure": "[-6.809070142851253407998305138 +/- 4.14e-28]"
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log11",
+      "upper_limit": 60,
+      "digamma_integral": "[-0.6763120934205601351681328065 +/- 8.38e-29]",
+      "gamma_normalization": "[-2.5618299095672492367389906261636217430191540192630057e-15 +/- 6.61e-68]",
+      "finite_value": "[-0.6763120934205626969980423738 +/- 6.40e-29]",
+      "tail_bound": "[9.521057157485755817539743435839964961749696063691578712e-62 +/- 1.49e-117]",
+      "enclosure": "[-0.6763120934205626969980423738 +/- 6.40e-29]"
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log361",
+      "upper_limit": 60,
+      "digamma_integral": "[-0.1066411587786936813574385898 +/- 6.24e-29]",
+      "gamma_normalization": "[-7.6814434437466051952712677912970376459179186569092329e-94 +/- 8.19e-147]",
+      "finite_value": "[-0.1066411587786936813574385898 +/- 6.24e-29]",
+      "tail_bound": "[9.521057157485755817539743435839964961749696063691578712e-62 +/- 1.49e-117]",
+      "enclosure": "[-0.1066411587786936813574385898 +/- 6.24e-29]"
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "zero",
+      "upper_limit": 120,
+      "digamma_integral": "[14.913363667699680706888447412509 +/- 8.63e-31]",
+      "gamma_normalization": "[-20.73822193418921306872867484187850882073716880956783943 +/- 1.07e-54]",
+      "finite_value": "[-5.824858266489532361840227429369 +/- 4.98e-31]",
+      "tail_bound": "[3.746996687784716805612415158620889436559557805710879364e-61 +/- 1.93e-117]",
+      "enclosure": "[-5.824858266489532361840227429369 +/- 4.98e-31]"
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log11",
+      "upper_limit": 120,
+      "digamma_integral": "[-0.666473071339048846520138150746 +/- 6.31e-31]",
+      "gamma_normalization": "[-7.726923208308026823010129309316400124805819237880844e-62 +/- 2.45e-114]",
+      "finite_value": "[-0.666473071339048846520138150746 +/- 6.31e-31]",
+      "tail_bound": "[3.746996687784716805612415158620889436559557805710879364e-61 +/- 1.93e-117]",
+      "enclosure": "[-0.666473071339048846520138150746 +/- 6.31e-31]"
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log361",
+      "upper_limit": 120,
+      "digamma_integral": "[-0.105825730146500262636251833779 +/- 7.76e-31]",
+      "gamma_normalization": "[-6.245637563384988208492680582168804611451430426219734e-376 +/- 5.84e-428]",
+      "finite_value": "[-0.105825730146500262636251833779 +/- 7.76e-31]",
+      "tail_bound": "[3.746996687784716805612415158620889436559557805710879364e-61 +/- 1.93e-117]",
+      "enclosure": "[-0.105825730146500262636251833779 +/- 7.76e-31]"
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "zero",
+      "upper_limit": 240,
+      "digamma_integral": "[45.45529988531372897768359212687 +/- 4.37e-30]",
+      "gamma_normalization": "[-41.47644386837842613745734968375701764147433761913567886 +/- 2.14e-54]",
+      "finite_value": "[3.97885601693530284022624244312 +/- 4.35e-30]",
+      "tail_bound": "[1.486513440071969617964269620305336464995758998331201321e-60 +/- 4.64e-115]",
+      "enclosure": "[3.97885601693530284022624244312 +/- 4.35e-30]"
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log11",
+      "upper_limit": 240,
+      "digamma_integral": "[-0.664106244793280177209552649036 +/- 7.80e-31]",
+      "gamma_normalization": "[-7.99358922129684967516245551387956936853001976349026e-249 +/- 2.15e-300]",
+      "finite_value": "[-0.664106244793280177209552649036 +/- 7.80e-31]",
+      "tail_bound": "[1.486513440071969617964269620305336464995758998331201321e-60 +/- 4.64e-115]",
+      "enclosure": "[-0.664106244793280177209552649036 +/- 7.80e-31]"
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log361",
+      "upper_limit": 240,
+      "digamma_integral": "[-0.105623023184866889082783420375 +/- 8.49e-31]",
+      "gamma_normalization": "[-3.412106322908942586068620737762901794298111024595920e-1505 +/- 6.82e-1557]",
+      "finite_value": "[-0.105623023184866889082783420375 +/- 8.49e-31]",
+      "tail_bound": "[1.486513440071969617964269620305336464995758998331201321e-60 +/- 4.64e-115]",
+      "enclosure": "[-0.105623023184866889082783420375 +/- 8.49e-31]"
+    }
+  ],
+  "mutation_results": [
+    {
+      "a": "1/25",
+      "frequency_label": "zero",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-1.0106203969748000650604044 +/- 7.34e-26]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.528174316871698899148749 +/- 4.72e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.1934369760725808901789177 +/- 8.01e-26]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.020100334168336115084331 +/- 1.39e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-6.8090701428512534079983051 +/- 8.97e-26]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[6.810210791716240052358879 +/- 5.21e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-10.369110967094606534364337 +/- 4.73e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-1.89083720613752305e-7 +/- 3.70e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.9974e-21 +/- 8.64e-26]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-3.781674452586481928e-7 +/- 9.01e-26]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.4986976663358602594554045 +/- 5.23e-26]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.839639027255231761471466 +/- 5.10e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.095286153012590866777074 +/- 5.23e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.1426399674514617682656225 +/- 7.71e-26]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-3.472796015447761585465813 +/- 5.36e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[0.338101793701064448211652 +/- 4.11e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-0.514788032893849044570059 +/- 1.26e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.005341025623211601864105 +/- 3.08e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.343488889129e-12 +/- 4.43e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-0.010682156752970299844540 +/- 4.42e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log3",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.123044332694714444409062 +/- 4.16e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.459389527612540017590184 +/- 7.08e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.023972057420212561807456 +/- 3.96e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.332610943444283635156422 +/- 6.97e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.891290569066662774683676 +/- 7.53e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[0.003606534528387252932600 +/- 4.06e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-0.005491248050206290178283 +/- 4.52e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.198731465769012396798211 +/- 7.53e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.8160787865644079e-8 +/- 4.42e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-0.397676487033158449174442 +/- 5.77e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log5",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.224808856205075942582459 +/- 5.96e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-1.218689377222821949464190 +/- 6.55e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.043390497795509647200482 +/- 1.75e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.710249001142264388225633 +/- 6.29e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.161436113881962383949498 +/- 9.38e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[6.34206079096392614e-7 +/- 7.56e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-9.65631374898928629e-7 +/- 8.21e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-1.015206327039083568826097 +/- 6.90e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.000155943313183414819083 +/- 9.02e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-2.198391618112458431007665 +/- 4.98e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log11",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.769646434004397995422876 +/- 3.70e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.68455798566636727461184 +/- 5.07e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.147303688763448290257333 +/- 5.59e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.654499007622507788891693 +/- 5.90e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.676312093420562696998042 +/- 4.81e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[1.682555212e-15 +/- 5.71e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-2.561829909e-15 +/- 6.74e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.027575059690850163735973 +/- 6.39e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.304909860424261408195297 +/- 8.78e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-9.034959564421485530589226 +/- 6.62e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log19",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.777941722621846507319036 +/- 7.40e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.41594900517253994376402 +/- 2.48e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.149465369905315292669798 +/- 4.01e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.63442800655395889455775 +/- 1.05e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.491615827886168135455955 +/- 8.01e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[2e-23 +/- 1.08e-24]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-3.1e-23 +/- 7.85e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.283569658274571167606859 +/- 6.53e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.609664951137059702671820 +/- 6.33e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-5.173857466848195488927486 +/- 6.88e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log139",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.117399893620609378233326 +/- 3.99e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.21266837523770577658475 +/- 3.98e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.02220806565771999757540 +/- 6.15e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[11.99398718199074836876937 +/- 1.05e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.17268939937336664610275 +/- 1.04e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 7.01e-25]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 7.01e-25]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.18923169274558653678384 +/- 3.20e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.10275760332618339496994 +/- 3.25e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-23.17299599075232593239994 +/- 4.93e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log16",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.353467087469656750527841 +/- 4.38e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.56571146095554362488243 +/- 5.16e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.067757747261707297133907 +/- 4.12e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.292713210107714244554203 +/- 7.55e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.541944080237129156329165 +/- 3.59e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[9.276e-21 +/- 3.62e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-1.4123e-20 +/- 3.92e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.130967861098880528505701 +/- 6.18e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.733249573311131724793544 +/- 5.20e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-6.087669909862543174357262 +/- 5.34e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "log361",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.504253241750980904920931 +/- 6.44e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.50273819866612509283226 +/- 6.81e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.09670057649653036685688 +/- 3.14e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[19.24411370970888614896126 +/- 2.54e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.10664115877869368135744 +/- 3.00e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.59e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.59e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.01399531330702040672905 +/- 3.05e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.528521492962721500121644 +/- 9.78e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-36.25793213485646131552391 +/- 3.72e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/25",
+      "frequency_label": "off_peak_2.2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.414980332643514679637109 +/- 3.59e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[1.290352319724828555985339 +/- 6.10e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.079946599281067556107384 +/- 3.72e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.370574888142408925564174 +/- 6.94e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.765390756043613970828536 +/- 6.25e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[4.96309372844e-13 +/- 7.98e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-7.55672198472e-13 +/- 8.48e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.115477300396305305061956 +/- 5.82e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.094478712509342961830039 +/- 7.75e-25]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-6.870289594772641246765403 +/- 7.19e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "zero",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-4.9002847860772689564133877 +/- 4.06e-26]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.384556442697126479959530 +/- 4.65e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.771353292430657571580536 +/- 5.31e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.0050062552115901699492440 +/- 9.08e-26]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-5.824858266489532361840227 +/- 4.96e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[13.6204215834324801047177588 +/- 8.57e-26]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-20.738221934189213068728675 +/- 2.35e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[+/- 7.57e-26]",
+          "rejected": false
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 7.60e-26]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[+/- 7.54e-26]",
+          "rejected": false
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.420783083674397832273480 +/- 7.53e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.96616286981544605545353 +/- 2.71e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.067072291648943065334415 +/- 7.92e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.126630279072341428422974 +/- 9.11e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-2.96827918919327279126877 +/- 4.26e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[8.2744327620415972875e-5 +/- 9.05e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-0.000125985104020180225580 +/- 6.77e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-1.55548471767403e-9 +/- 5.24e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 1.07e-24]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[-3.11096943534807e-9 +/- 9.54e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log3",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.274098993569834267783712 +/- 4.93e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.60702515372868183144907 +/- 3.48e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.21035903693889361053650 +/- 5.00e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.315181802346590161056150 +/- 9.04e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.76400232322636044138897 +/- 2.18e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[1.071294091617e-12 +/- 9.69e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-1.631134138738e-12 +/- 8.97e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.002981491981632474364164 +/- 6.51e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 8.93e-25]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[-0.005962983963264956382747 +/- 6.36e-25]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log5",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.234231789178534866027437 +/- 9.46e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-1.71613003795785561542665 +/- 1.82e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.07785153142676278769120 +/- 2.16e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.68999816917924456351731 +/- 3.66e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.12804772608503141259499 +/- 3.27e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.40e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.40e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-2.03041256951735659146651 +/- 1.27e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-3.00014077e-15 +/- 5.50e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-4.06082804290256576595439 +/- 3.61e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log11",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[2.627922158437814697804375 +/- 8.06e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[1.94514840875341114484508 +/- 3.40e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.39504543094312222668775 +/- 3.24e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.62719279137403940375491 +/- 2.83e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.66647307133904884652014 +/- 3.11e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.26e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.26e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-4.0502731954423429e-7 +/- 1.53e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.04384907961053935337428 +/- 5.15e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-16.43312807382123990568705 +/- 3.72e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log19",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-1.509489394096598191527854 +/- 4.51e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[2.10854023330144053196948 +/- 4.73e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.39052991803659718487419 +/- 3.91e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.59979981454433815126504 +/- 4.34e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.48611168192139305637595 +/- 2.12e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 8.76e-25]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 8.76e-25]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.138156316783329397677982 +/- 9.19e-25]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.70086864370253467233568 +/- 2.47e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-2.18941868885949742366676 +/- 1.22e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log139",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.02693538127946933059196 +/- 4.60e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.61862613348157748808108 +/- 8.12e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.10313198552026668638944 +/- 6.70e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[11.90436876726695716040961 +/- 5.87e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.17132001547505034441567 +/- 3.76e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 5.57e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 5.57e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.30637403610323056666785 +/- 4.55e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.00073712720998779916388 +/- 5.71e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-23.35835597846593630962006 +/- 5.61e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log16",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.75978250263233865892423 +/- 2.76e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-2.55075798896597494996191 +/- 4.21e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.13375175849101094848866 +/- 5.71e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.26063829232462911114214 +/- 4.59e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.53543976393166993675157 +/- 7.50e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 4.03e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 4.03e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.00624618502932640216690 +/- 3.92e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.46649907176531366208110 +/- 3.30e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-4.41126704625656371308422 +/- 3.91e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "log361",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-1.76424649191212597565136 +/- 5.33e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.4912083263459657709740 +/- 4.05e-23]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.3421991987101496748547 +/- 3.14e-23]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[19.10032274701567477688490 +/- 6.02e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.1058257301465002626363 +/- 5.07e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 7.94e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 7.94e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-9.732291523537009619e-5 +/- 5.88e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.89345402391105745276219 +/- 7.51e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-30.93200806608984512589186 +/- 5.86e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/100",
+      "frequency_label": "off_peak_2.2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.236446106293025059281242 +/- 5.31e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[2.37793250849891483861023 +/- 2.30e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.18154493287817636764697 +/- 4.10e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.34539013735022022959070 +/- 2.36e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.75271794059600550783816 +/- 9.92e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.15e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.15e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.00033184238077637845218 +/- 1.31e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.00040421318059730644652 +/- 3.50e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-6.13112881868052968063005 +/- 5.43e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "zero",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-16.610474787253327987621134 +/- 4.33e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-0.359340882968018667440636 +/- 4.87e-25]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-1.640721039314845910198978 +/- 4.15e-25]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.001250390706392925580508 +/- 4.16e-25]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[3.978856016935302840226242 +/- 5.40e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[27.240843166864960209435517 +/- 7.16e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-41.476443868378426137457350 +/- 4.13e-25]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[+/- 6.10e-25]",
+          "rejected": false
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 6.10e-25]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[+/- 6.10e-25]",
+          "rejected": false
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.368411380321863197242862 +/- 6.06e-25]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.80437697112457637554059 +/- 5.39e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.82553629597906263418972 +/- 2.82e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.12264658318107718573136 +/- 2.26e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-2.859469343824803580254186 +/- 8.92e-25]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[3.7103e-20 +/- 8.80e-25]",
+          "rejected": true
+        },
+        "omit_gamma_normalization": {
+          "residual": "[-5.649e-20 +/- 3.73e-24]",
+          "rejected": true
+        },
+        "omit_ramified_prime": {
+          "residual": "[+/- 1.04e-24]",
+          "rejected": false
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 1.04e-24]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[+/- 1.04e-24]",
+          "rejected": false
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log3",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-0.28556033355826181587118 +/- 7.63e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[0.48888103377327557784191 +/- 7.86e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-1.13464255297653734190880 +/- 1.48e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.31084490358035938183108 +/- 9.16e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.7397242364449553280254 +/- 2.15e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.05e-23]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.05e-23]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-1.888042206332e-11 +/- 8.29e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 1.05e-23]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[-3.776084412665e-11 +/- 5.74e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log5",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[1.24817984056448455235311 +/- 4.16e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-1.39358603670805227602833 +/- 7.97e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.80462550240934823283990 +/- 3.06e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[2.68495914817050477316789 +/- 7.27e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-1.12049369026476069494107 +/- 6.77e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 7.45e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 7.45e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-4.06082513903471318293302 +/- 5.74e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[+/- 7.45e-24]",
+          "rejected": false
+        },
+        "reverse_prime_sign": {
+          "residual": "[-8.12165027806942636586604 +/- 4.81e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log11",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[6.67995378928259047830821 +/- 6.92e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[3.06864749765899784545409 +/- 8.10e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.69257230129607807353906 +/- 2.91e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.6203981768319558956505 +/- 4.23e-23]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.6641062447932801772096 +/- 4.96e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 9.96e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 9.96e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[+/- 9.97e-24]",
+          "rejected": false
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-2.34437211106565059e-6 +/- 6.54e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-32.6323990212077133501147 +/- 3.98e-23]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log19",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-1.95071195395385140312317 +/- 3.57e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[5.4558261770969744863084 +/- 3.58e-23]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-0.78089895343986801535405 +/- 5.44e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.59118327042655594963918 +/- 9.07e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.4847674794245792584175 +/- 5.31e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 1.15e-23]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 1.15e-23]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.00097322914986317073120 +/- 7.59e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-0.15301399004918134893769 +/- 8.18e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-0.4099837661885477699507 +/- 4.04e-23]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log139",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.34307334713785136315715 +/- 7.51e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[1.5573706749527333757202 +/- 1.38e-23]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.2223834627451676252449 +/- 1.79e-23]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[11.88206898840415345012322 +/- 7.96e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.17098012644455044471060 +/- 6.40e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 5.41e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 5.41e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-0.26314490180639850574510 +/- 7.49e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-4.4668790475e-13 +/- 6.42e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-24.79447111247061146345382 +/- 8.79e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log16",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[0.09593867759701718340779 +/- 2.83e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[-5.8572862794816058096568 +/- 4.62e-23]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.06715817236748298130885 +/- 7.25e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[4.25265708025108496685858 +/- 4.83e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.53385719832045001137831 +/- 6.01e-24]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 4.75e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 4.75e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-4.06622590288998e-9 +/- 4.13e-24]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-2.93299814353062732416220 +/- 4.38e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-7.82135447424933864459170 +/- 7.45e-24]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "log361",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-4.0466220574090652964577 +/- 4.00e-23]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[3.4378034264745883430087 +/- 7.57e-23]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[-1.1665008327874572856463 +/- 5.07e-23]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[19.0645431956766905015827 +/- 4.27e-23]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.1056230231848668890828 +/- 3.90e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 5.56e-23]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 5.56e-23]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-2.99572931e-14 +/- 5.10e-23]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.7486599594469774056188 +/- 5.83e-23]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-21.7313521153473860391691 +/- 5.05e-23]",
+          "rejected": true
+        }
+      }
+    },
+    {
+      "a": "1/400",
+      "frequency_label": "off_peak_2.2",
+      "variants": {
+        "omit_negative_zeros": {
+          "residual": "[-1.13224060161964660963319 +/- 6.73e-24]",
+          "rejected": true
+        },
+        "double_one_positive_conjugate": {
+          "residual": "[1.07149221508883370497994 +/- 9.36e-24]",
+          "rejected": true
+        },
+        "separate_factor_normalizers": {
+          "residual": "[0.07897235443600634995915 +/- 5.95e-24]",
+          "rejected": true
+        },
+        "omit_pole": {
+          "residual": "[3.33912340773765617906293 +/- 8.50e-24]",
+          "rejected": true
+        },
+        "omit_gamma": {
+          "residual": "[-0.7496960022443378897049 +/- 3.14e-23]",
+          "rejected": true
+        },
+        "omit_discriminant": {
+          "residual": "[+/- 9.59e-24]",
+          "rejected": false
+        },
+        "omit_gamma_normalization": {
+          "residual": "[+/- 9.59e-24]",
+          "rejected": false
+        },
+        "omit_ramified_prime": {
+          "residual": "[-2.8973736e-15 +/- 5.13e-23]",
+          "rejected": true
+        },
+        "omit_residue_degree_multiplier": {
+          "residual": "[-1.692881277e-14 +/- 9.55e-24]",
+          "rejected": true
+        },
+        "reverse_prime_sign": {
+          "residual": "[-0.6498924045080501401833 +/- 5.11e-23]",
+          "rejected": true
+        }
+      }
+    }
+  ],
+  "mutation_rejection_counts": {
+    "omit_negative_zeros": 30,
+    "double_one_positive_conjugate": 30,
+    "separate_factor_normalizers": 30,
+    "omit_pole": 30,
+    "omit_gamma": 30,
+    "omit_discriminant": 13,
+    "omit_gamma_normalization": 13,
+    "omit_ramified_prime": 26,
+    "omit_residue_degree_multiplier": 23,
+    "reverse_prime_sign": 27
+  },
+  "elapsed_seconds": 17.810127707663924,
+  "scope": "Independent numeric recomputation and alternate gamma integral; this does not independently certify root completeness or formalize the analytic explicit formula."
+}

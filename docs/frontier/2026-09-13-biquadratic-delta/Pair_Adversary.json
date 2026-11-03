@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "source_sha256": "ad1c549cc191d5dbfca4f1d5b3b6d7f4b0d9bb7555b413e6a8b4ff2317ce09c3",
+  "inputs_sha256": {
+    "Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "Pair_Spectrum160.json": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+    "Pair_Spectrum224.json": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e",
+    "Pair_Decoding.json": "c518da2319770e106a1af57b34622dbb000d35fb52d98f0a319405bf9ce44039"
+  },
+  "independent_grid_counts": 80,
+  "independent_robust_candidate_bounds": 12,
+  "actual_mutated_inputs_rejected": 11,
+  "controls": [
+    {
+      "mutation": "drop_aggregate_zero",
+      "rejected_by": "factor-union and count validation",
+      "mutated_json_sha256": "23a2c3442c062cec24045b81029bcd3f8ef5f2effb2506e87cd8ff65f7494d4e"
+    },
+    {
+      "mutation": "duplicate_aggregate_zero",
+      "rejected_by": "factor-union and count validation",
+      "mutated_json_sha256": "ec50f52734d8084fe31a6ab6836e8e1cc1324e60608dcf576b6321ad26fc9cd4"
+    },
+    {
+      "mutation": "false_complete_factor_count",
+      "rejected_by": "factor-union and count validation",
+      "mutated_json_sha256": "b6d65d7c7d862067f39ed287a2d3476fa22b18598431f56d304c66dd3e7f0e05"
+    },
+    {
+      "mutation": "wrong_integer_height_count",
+      "rejected_by": "factor-union and count validation",
+      "mutated_json_sha256": "e9d9752313efa1a1409089c3e28fb147e614a9e934a1d8b3d14aac65f78faeda"
+    },
+    {
+      "mutation": "wrong_character_identity",
+      "rejected_by": "factor-union and count validation",
+      "mutated_json_sha256": "422fd78dce2580b44f501ea219953cec4ea8dc052a6bb0f584a586367d23f7fe"
+    },
+    {
+      "mutation": "omit_maximal_order_coset",
+      "rejected_by": "independent arithmetic auditor on mutated file",
+      "mutated_file_sha256": "81abcd8e9f347f3d57f564d7ca5bb6c9be704524b5915c6ae267c01232160101"
+    },
+    {
+      "mutation": "polynomial_discriminant_as_field_discriminant",
+      "rejected_by": "independent arithmetic auditor on mutated file",
+      "mutated_file_sha256": "21c76f795e51bb7f35b74aee696fdc4c0e56e767926f312874ab6032d4203016"
+    },
+    {
+      "mutation": "bad_index_prime_local_model",
+      "rejected_by": "independent arithmetic auditor on mutated file",
+      "mutated_file_sha256": "493792475d14fb4f8d6b4a583820ec2e481da0851e5e14e6b891d70c375983f0"
+    },
+    {
+      "mutation": "field_label_leak",
+      "measurement": {
+        "height": "7/3",
+        "positive_zero_count": 1,
+        "field_hint": "A"
+      },
+      "rejected_by": "observation schema"
+    },
+    {
+      "mutation": "boolean_count",
+      "measurement": {
+        "height": "7/3",
+        "positive_zero_count": true
+      },
+      "rejected_by": "observation schema"
+    },
+    {
+      "mutation": "negative_count",
+      "measurement": {
+        "height": "7/3",
+        "positive_zero_count": -1
+      },
+      "rejected_by": "observation schema"
+    }
+  ],
+  "scope": "Mutations exercise the actual validators. Aggregate completeness is checked against certified factor unions, not inferred from a bare count. The count selector cannot detect an omitted observation when its input merely asserts a plausible count; trusted completeness and displacement bounds remain explicit measurement premises."
+}

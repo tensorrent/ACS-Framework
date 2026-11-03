@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-09-14T02:28:41.383351+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "docs/frontier/2026-09-13-aggregate-delta/Measurements_Recovery.zip": "fdec85cf88d86ba5782d6347861a7d95fa6253a1cee09c831ea84aadd4434bc1",
+    "docs/frontier/2026-09-13-aggregate-delta/Input_Provenance.json": "acf6c62260582724441d12b5817fbcfbe9d6317fdd86dd3926c7faea2bc8cb42",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "docs/frontier/2026-09-13-biquadratic-delta/Pair_Spectra.zip": "4ba4439ea48e652fbcac8c7e492cbd8ab8e0d23831ca0bada0016b69e51fe066",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Quartic_Class.json": "d65ff9e8022a092b69f91de8e173fbdd054d96ef22e9df48c7f75b3ca040bdc8",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Full_Class_Audit.json": "1df26fe5433beabd44e6ba79264e53b7e48c4d94a5374b77fbf952e737e7eb3b",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Primary_Sources.json": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Manifest.json": "096f1a3075c62840ca7d2c192f0ff5d07ebc36ee930d1d34d50d5aaf4371d906",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Verification.json": "2d7d13a7b2779a2293a7b483586e27fad7c343eaf80fbafc1bbb788dca6e531b"
+  },
+  "scope": "The complete metadata class and all finite source zero intervals/completeness certificates are inherited and recursively verified. No external unknown-field observation is asserted complete from its count alone."
+}

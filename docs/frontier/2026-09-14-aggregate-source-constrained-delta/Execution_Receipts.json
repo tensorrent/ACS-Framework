@@ -1,0 +1,224 @@
+{
+  "complementary-pair-checks": {
+    "started_utc": "2026-09-14T06:58:37.341674+00:00",
+    "elapsed_seconds": 0.657986,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/check_complementary_pairs.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/check_complementary_pairs.py": "a36cf04033e0f95593216052cdc91164f4d206f437fcd5d7f687e6ca2b8fcb4c"
+    },
+    "stdout_sha256": "15ad68e7251ae70d14089bc7e40260e316f45822b197b898e0cc0f8562818a4b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "complementary-pair-exploration": {
+    "started_utc": "2026-09-14T06:55:56.702264+00:00",
+    "elapsed_seconds": 2.22216,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/explore_complementary_pairs.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/explore_complementary_pairs.py": "968895aff505148061673e105bcd273fbc94ff680a100f70526051761a994fcd"
+    },
+    "stdout_sha256": "10eb415d098f1d204ba8281238df08cfe2dca8b50d5f27f13af566afcaaed33c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corner-pair-diagnostic": {
+    "started_utc": "2026-09-14T06:54:19.510700+00:00",
+    "elapsed_seconds": 2.563663,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/source-constrained-audit/../../acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/explore_corner_pairs_v2.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {},
+    "stdout_sha256": "045463a5489a4fff0bdcb6a28e392fa974ef2101463a1d935922b1bebb84ce78",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "corner-pair-exploration": {
+    "started_utc": "2026-09-14T06:53:45.956094+00:00",
+    "elapsed_seconds": 1.020376,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/explore_corner_pairs.py"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/explore_corner_pairs.py": "00e865042770cc5401d714020c7720773cee57baa393934ef2eb5e356647995b"
+    },
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "5ee6ebd6b6cd027cd005de4443717b40e8dad9afb2ec629ae34bd56f452fff77"
+  },
+  "critical-strip-exploration": {
+    "started_utc": "2026-09-14T06:51:00.900167+00:00",
+    "elapsed_seconds": 0.26434,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/explore_critical_strip.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/explore_critical_strip.py": "c7ffcf4297c5bb87d2d549f827066ccef8e904d079755a0dce0da55ebbab76ff"
+    },
+    "stdout_sha256": "cb10bba8e48a3d1e610d6aa6ca6a342d4268ffe70c5927173ab878359aabc42a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-critical-strip": {
+    "started_utc": "2026-09-14T06:57:10.365774+00:00",
+    "elapsed_seconds": 0.582238,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/audit_critical_strip.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/audit_critical_strip.py": "836938c0821cfa10e00cea034642b792b2855a4161e9b9762875527737764b73"
+    },
+    "stdout_sha256": "32088d2306c9b5d877ee8f0855bd90876497e40e256930b596f49aa911e91d61",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-source-constrained-audit": {
+    "started_utc": "2026-09-14T07:10:41.006768+00:00",
+    "elapsed_seconds": 1.050863,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_source_constrained_audit.py",
+      "--strip",
+      "../acs-research/source-constrained-audit/Source_Strip_Certificate.json",
+      "--mixed",
+      "../acs-research/source-constrained-audit/Mixed_Noise_Certificate.json",
+      "--proposal",
+      "../acs-research/source-constrained-audit/Complementary_Pair_Proposals.json",
+      "--output",
+      "../acs-research/source-constrained-audit/Independent_Source_Constrained_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_source_constrained_audit.py": "97d7b51b67e4651f236a6efc71ce1dd3856a1ad2e92f932844b24afaa6689d78"
+    },
+    "stdout_sha256": "9cc047954e15f596c9b4f895f76e49982c609ac9c1518d78c878e6035a983ea0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "mixed-noise-certificate": {
+    "started_utc": "2026-09-14T07:07:21.647741+00:00",
+    "elapsed_seconds": 0.480102,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_mixed_noise_certificate.py",
+      "--proposal",
+      "../acs-research/source-constrained-audit/Complementary_Pair_Proposals.json",
+      "--output",
+      "../acs-research/source-constrained-audit/Mixed_Noise_Certificate.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_mixed_noise_certificate.py": "3f66d8666f278324717165d3b6aef8e8cf0d4ae81494109c03741eaf8e55c3b7"
+    },
+    "stdout_sha256": "3a2d782cecca350c1525843501155ab0ead175e28b06a698f0526e1ee4223dc0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source-acquisition": {
+    "started_utc": "2026-09-14T07:16:44.888628+00:00",
+    "elapsed_seconds": 0.076465,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/source-constrained-audit/capture_sources.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/source-constrained-audit/capture_sources.py": "3801b24df1a412573be8c12733324e98148ace3b26b544736487e2c006be90df"
+    },
+    "stdout_sha256": "16c003b0892f20cbd7e1ea38f8a0e49bcc9e26b4f36d3c85b5254b2b025e5f70",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source-constrained-adversaries": {
+    "started_utc": "2026-09-14T07:13:55.909945+00:00",
+    "elapsed_seconds": 3.333149,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_source_constrained_adversary.py",
+      "--strip",
+      "../acs-research/source-constrained-audit/Source_Strip_Certificate.json",
+      "--mixed",
+      "../acs-research/source-constrained-audit/Mixed_Noise_Certificate.json",
+      "--proposal",
+      "../acs-research/source-constrained-audit/Complementary_Pair_Proposals.json",
+      "--output",
+      "../acs-research/source-constrained-audit/Adversary_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_source_constrained_adversary.py": "4540ae178dcd2ef2ea3408a604a4a0d79614da87238b9fdbb035f6896e923e29"
+    },
+    "stdout_sha256": "cafd5453786c226869674b01d8bf3f8b6f095ef5c673dc06ce898b38a2da11b0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source-constrained-lean": {
+    "started_utc": "2026-09-14T07:12:00.510296+00:00",
+    "elapsed_seconds": 8.018024,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/check_source_constrained_lean.py",
+      "--source",
+      "code/frontier_verification/proofs/SourceConstrainedNoise.lean",
+      "--project",
+      "../acs-research/lean-audit/withMathlib",
+      "--binary",
+      "../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin",
+      "--output",
+      "../acs-research/source-constrained-audit/Lean_Check.json",
+      "--versions",
+      "../acs-research/source-constrained-audit/lean-versions"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_source_constrained_lean.py": "213dfd46253fe03cb2c918f9e5ad53f57091407d037724f8e309a69c4cbd85e6"
+    },
+    "stdout_sha256": "4427ddb7af6499dcfe1bc40150acb832cb6cddf92a650d9fe35a8586dbcdf401",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source-strip-certificate": {
+    "started_utc": "2026-09-14T07:07:21.311743+00:00",
+    "elapsed_seconds": 0.312656,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_source_strip_certificate.py",
+      "--output",
+      "../acs-research/source-constrained-audit/Source_Strip_Certificate.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_source_strip_certificate.py": "540c0eaf0b94702d16aa2842963332045fabf63fb387d8e501abc97a1dce9040"
+    },
+    "stdout_sha256": "a8f485d27bec76df66ba97c7bc633192fbb7da1e45b24997d90a11d2700354ab",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

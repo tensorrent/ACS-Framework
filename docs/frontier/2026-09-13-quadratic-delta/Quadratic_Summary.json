@@ -1,0 +1,194 @@
+{
+  "recorded_utc": "2026-09-13T18:50:49.944583+00:00",
+  "height": 2000,
+  "additional_radius": "5e-3",
+  "retained_measurements": 455,
+  "known_positive_ordinates": 7602,
+  "coefficient_support": 604,
+  "target_count": 91,
+  "prior_unique_targets": 81,
+  "frozen_prior_multiplier_counts": {
+    "linear": 81,
+    "independent_quadratic": 81,
+    "quadratic": 81
+  },
+  "combined_proposal_control_counts": {
+    "linear": 81,
+    "independent_quadratic": 83,
+    "quadratic": 83
+  },
+  "quadratic_unique_targets": 83,
+  "new_singletons": [
+    {
+      "n": 289,
+      "prime": 17,
+      "power": 2,
+      "candidates": [
+        0
+      ]
+    },
+    {
+      "n": 359,
+      "prime": 359,
+      "power": 1,
+      "candidates": [
+        0
+      ]
+    }
+  ],
+  "unresolved_targets": [
+    {
+      "n": 64,
+      "prime": 2,
+      "power": 6,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 81,
+      "prime": 3,
+      "power": 4,
+      "candidates": [
+        3,
+        4
+      ]
+    },
+    {
+      "n": 125,
+      "prime": 5,
+      "power": 3,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 128,
+      "prime": 2,
+      "power": 7,
+      "candidates": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 243,
+      "prime": 3,
+      "power": 5,
+      "candidates": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 256,
+      "prime": 2,
+      "power": 8,
+      "candidates": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 343,
+      "prime": 7,
+      "power": 3,
+      "candidates": [
+        0,
+        1
+      ]
+    },
+    {
+      "n": 361,
+      "prime": 19,
+      "power": 2,
+      "candidates": [
+        3,
+        4
+      ]
+    }
+  ],
+  "all_target_domain_changes": [
+    {
+      "n": 128,
+      "before": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "after": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 256,
+      "before": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "after": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 289,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 359,
+      "before": [
+        0,
+        1
+      ],
+      "after": [
+        0
+      ]
+    },
+    {
+      "n": 361,
+      "before": [
+        2,
+        3,
+        4
+      ],
+      "after": [
+        3,
+        4
+      ]
+    }
+  ],
+  "combined_proposals": 100,
+  "distinct_multiplier_combinations": 15,
+  "main_lp_certificates": 52,
+  "main_successful_lp_solves": 50,
+  "opposite_existing_box_bounds": 2,
+  "limited_conic_solves": 2,
+  "almost_solved_conic_solves": 1,
+  "successful_conic_solves": 5,
+  "certificate_evaluations_across_precisions": 2392,
+  "independent_derivative_cases": 75,
+  "independent_full_displaced_sums": 2,
+  "kernel_checked_scalar_theorems": 10,
+  "scope": "Same declared uncertainty and inherited analytic assumptions. Both the independent-square and exact quadratic controls identify 83. The exact square relation produces no additional singleton on this collection. Eight surviving target domains are not proved jointly feasible or realized by another field."
+}

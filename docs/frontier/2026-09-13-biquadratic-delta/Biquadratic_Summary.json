@@ -1,0 +1,105 @@
+{
+  "recorded_utc": "2026-09-13T20:27:54.398034+00:00",
+  "result": "Exactly two V4 quartic fields have signature (0,2) and field discriminant 576; a certified finite zero count distinguishes them even with independent ordinate errors bounded by 1/3.",
+  "fields": {
+    "A": "Q(sqrt(2),sqrt(-3))",
+    "B": "Q(sqrt(-2),sqrt(-3))"
+  },
+  "permitted_global_inputs": {
+    "candidate_labels": [
+      "A",
+      "B"
+    ],
+    "degree": 4,
+    "signature": [
+      0,
+      2
+    ],
+    "absolute_field_discriminant": 576,
+    "galois_group": "V4",
+    "ramified_prime_valuations": {
+      "2": 6,
+      "3": 2
+    },
+    "nontrivial_character_conductor_multiset": [
+      3,
+      8,
+      24
+    ],
+    "allowed_observation": "Unlabelled aggregate positive Dedekind-zero intervals through a declared cutoff, with certified multiplicities and completeness.",
+    "not_supplied_as_observation": [
+      "defining polynomial of the observed field",
+      "quadratic subfield identities",
+      "factor-labelled zero lists",
+      "conductor-parity assignment",
+      "Euler coefficients"
+    ],
+    "predeclared_measurement_grid": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "classification_scope": "Two explicitly certified candidate fields; no claim that they exhaust every quartic of discriminant 576."
+  },
+  "class_certificate_strengthens_original_two_example_contract": true,
+  "complete_class_requires_V4": true,
+  "candidate_fields": 2,
+  "maximal_order_cosets": 190,
+  "local_factorizations": 144,
+  "differing_local_observables": 19,
+  "coefficient_at_7": {
+    "A": 4,
+    "B": 0
+  },
+  "finite_factor_roots": 40,
+  "height": 20,
+  "aggregate_root_counts": {
+    "A": 23,
+    "B": 22
+  },
+  "first_distinguishing_predeclared_integer_height": 2,
+  "counts_below_two": {
+    "A": 1,
+    "B": 0
+  },
+  "robust_height": "7/3",
+  "robust_ordinate_radius": "1/3",
+  "robust_counts": {
+    "A": 1,
+    "B": 0
+  },
+  "radius_half_same_gate": "Both fields can produce either 0 or 1; ambiguity applies to this count statistic.",
+  "first_zero_gate_critical_radius": {
+    "radius_lower": "56368272064889225867861938416149990263897488609206222646203/158456325028528675187087900672000000000000000000000000000000",
+    "radius_upper": "56368272064889225867861938416466902913954545959580398447547/158456325028528675187087900672000000000000000000000000000000",
+    "threshold_lower": "184833307431996661922841053853831905680959825761741172846539/79228162514264337593543950336000000000000000000000000000000",
+    "threshold_upper": "184833307431996661922841053853990362005988354436928260747211/79228162514264337593543950336000000000000000000000000000000",
+    "scope": "Sharp supremum for separating the first-positive-zero pair by a single threshold under independent absolute displacements. No claim of optimality over all count gates or full spectral statistics."
+  },
+  "direct_segments": 63405,
+  "fresh_256bit_leaves": 77735,
+  "fresh_endpoint_signs": 156,
+  "independent_mpmath_roots": 16,
+  "grid_replays": 80,
+  "actual_mutations_rejected": 11,
+  "complete_proof_formalized": false,
+  "scope": "Closed candidate-class identification followed by arithmetic prediction. Shared-invariant inputs alone leave both actual fields possible. No candidate-free Weil recovery, unknown external observation trial, global GRH, non-V4 class exhaustion, global noise optimum or ACS completion is asserted.",
+  "next_gate": "Recover a differing Euler observable through certified explicit-formula constraints using the same declared global inputs, and compare against the enumerated-field selector without leaking factor metadata."
+}

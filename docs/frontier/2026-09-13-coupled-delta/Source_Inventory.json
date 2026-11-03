@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "b65f698b5780450101a42607407889d6563a4944",
+  "instruments": {
+    "code/frontier_verification/dedekind_coupled_inputs.py": "502dbb8be6b0096f4079ff1ee8550ad5971552705fc3107ad4b84f4c8e2e2548",
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_dual.py": "71c136b1134d04f83e856fe2afd14561f708ee2f0a4488fa8d67f87eaffdf7a6",
+    "code/frontier_verification/dedekind_coupled_dual_refine.py": "85419e0eb76b1402370856f7e8d13cccb654f0460a1a7ca02bcc9fb35c656d82",
+    "code/frontier_verification/dedekind_coupled_audit.py": "41a3fb51193283126e20e74f32c313c3e79727cc8902f64fe7c23e45e31b374a",
+    "code/frontier_verification/dedekind_coupled_branch_certificate.py": "918a9020ce742c98b6cf586fb8680389de54ee2257e760a7db64ac21b8b21155",
+    "code/frontier_verification/dedekind_coupled_branch_witness.py": "b92ab8f0dab4f845b21bf69dcfa5a7cb6cad15e6cfb2e26cc1fb2561d2d54d46",
+    "code/frontier_verification/dedekind_coupled_branch_audit.py": "0fd6544de24ee3b5257092d2e9fdc6a9662ad9ac256f58669c7de7052cb6ce99",
+    "code/frontier_verification/dedekind_coupled_local_bridge.py": "acb772740656a79daa8295af788b16ffc18057ccb9d9dca31ef49870d4b063de",
+    "code/frontier_verification/verify_coupled_delta.py": "1f8a3ea7460e8717759dddc1110798eeef500451e2af6e7f6d5893258a9447ab",
+    "code/frontier_verification/COUPLED_README.md": "7f050ed2f17f6e6302182765ccb93c0d2f96fd25f4ad0b7e4786daf0c7af3d41"
+  },
+  "dependencies": {
+    "code/frontier_verification/verify_recovery_delta.py": "71dc17ad6b5e4c67f5b66cb367a9f7999f69f6c7c51b3ddaa012daf5cd9d290e",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f",
+    "code/frontier_verification/RECOVERY_README.md": "64e23d4fc34eb088cf827dc73bc2d48cfc1e693ffaa48ea383755184cc6128ef"
+  },
+  "scope": "New coupled-recovery instruments; earlier source and dated evidence bytes preserved."
+}

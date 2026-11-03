@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T15:33:08.610180+00:00",
+  "scope": "Retained identity and reported-computation consistency; quadrature, roots and analytic proofs are not rerun.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 24,
+  "configurations_per_precision": 30,
+  "precisions_bits": [
+    160,
+    224
+  ],
+  "zero_cutoffs_per_configuration": 3,
+  "prime_cutoffs_per_configuration": 3,
+  "eligible_prime_powers": 2436,
+  "independent_configurations": 30,
+  "alternate_gamma_integrals": 9,
+  "distinct_mutations": 10,
+  "mutation_cases": 300,
+  "rejected_mutation_cases": 252,
+  "all_final_residuals_below": "7e-24",
+  "receipts": 9,
+  "research_branches": 115,
+  "ledger_events": 350,
+  "preserved_event_prefix": 346,
+  "ledger_head_sha256": "46692262ff1462d0308b516b2050d7153d95687bc2608613d2ab4fb3412e752a",
+  "local_links": 29
+}

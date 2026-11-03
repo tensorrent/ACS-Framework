@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "source_sha256": "1b6d72c20fa778aad0024b5dc09997544e1e7fed846b433b28db1b6cbe26d97d",
+  "checker_sha256": "1ca61099025dab1bccbedd156511716aed193c4f95deaca290682ba38e027803",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/aggregate-cardinality-audit/Lean_Check.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/PopulationObservation.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'PopulationObservation.fixed_population_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PopulationObservation.unequal_populations_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PopulationObservation.uncrossing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PopulationObservation.common_observation_separation' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PopulationObservation.interval_center' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "0676927f66cadace48bbafcb2f6e146379c77a9c9cd68482db548f4e91ea16c2",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "fixed_population_length",
+    "unequal_populations_disjoint",
+    "uncrossing",
+    "common_observation_separation",
+    "interval_center"
+  ],
+  "scope": "Five elementary list/interval lemmas: cardinality under permutation and per-entry noise, disjointness of unequal populations, ordered uncrossing, the common-observation triangle bound, and a uniform interval-center bound. This does not formalize the complete quartic classification, certified zeros, finite inversion-removal algorithm, dynamic-program correctness or global ACS claims."
+}

@@ -1,0 +1,96 @@
+{
+  "invariant-adversarial-replay": {
+    "started_utc": "2026-09-13T19:47:16.696337+00:00",
+    "elapsed_seconds": 1.367621,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_invariant_adversary.py",
+      "--predictions",
+      "../acs-research/invariant-audit/Invariant_Predictions.json",
+      "--root",
+      ".",
+      "--output",
+      "../acs-research/invariant-audit/Invariant_Adversary.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_invariant_adversary.py": "c6f701c9bca1c5c6baa78cc79a1b07505b132e36be97b609b557b2cb3c21e351"
+    },
+    "stdout_sha256": "ffdd9a904221e487259c53bdd747a6fcf229694dbbfe11f5cc40945fa3330031",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "invariant-independent-audit": {
+    "started_utc": "2026-09-13T19:42:53.463881+00:00",
+    "elapsed_seconds": 0.584442,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_invariant_audit.py",
+      "--predictions",
+      "../acs-research/invariant-audit/Invariant_Predictions.json",
+      "--root",
+      ".",
+      "--output",
+      "../acs-research/invariant-audit/Invariant_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_invariant_audit.py": "9b85f7819744459ebdbbc2c86f2051d2aee99f14d7dc878821d36927144d0aa6"
+    },
+    "stdout_sha256": "0fd0d86126c4f35ee1d5d192ef70125bfbe702749fc270e8060f3918e94504ff",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "invariant-producer": {
+    "started_utc": "2026-09-13T19:39:38.202941+00:00",
+    "elapsed_seconds": 0.085335,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_invariant_classification.py",
+      "--output",
+      "../acs-research/invariant-audit/Invariant_Predictions.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_invariant_classification.py": "7532ad6d302ff37ff2429a6574908f64367bcf41dcc9c8ef08ccec9823b1ade6"
+    },
+    "stdout_sha256": "5e7bdbf514247a2328bd2d2445393d915bcd4dbd605793ee52201df3c6e8f8f1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "primary-acquisition": {
+    "started_utc": "2026-09-13T19:44:04.335883+00:00",
+    "elapsed_seconds": 0.53313,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/invariant-audit/acquire_primary.py"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/invariant-audit/acquire_primary.py": "f1a5cd9037de1bffe33ddadd11dbea5d1e422fb348611c251947e6e7c95e37dd"
+    },
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "41cef3c89a2a55f896f5cd20671112db192011eef6c9d82527b68475b5a4cc88"
+  },
+  "primary-curl-acquisition": {
+    "started_utc": "2026-09-13T19:44:39.941578+00:00",
+    "elapsed_seconds": 4.28715,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "../acs-research/invariant-audit/acquire_primary_curl.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/invariant-audit/acquire_primary_curl.py": "2e3951db74874b67f14549ec8e73ab92acd005efa397875cd868e24037d4ee44"
+    },
+    "stdout_sha256": "8a5851800f9aa709d81743ba5c7b1065e882faab5df11787c34f54820fdebd07",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

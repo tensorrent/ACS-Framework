@@ -1,0 +1,345 @@
+{
+  "clarabel-runtime": {
+    "started_utc": "2026-09-13T18:11:44.871419+00:00",
+    "elapsed_seconds": 1.191704,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/.local/bin/uv",
+      "pip",
+      "install",
+      "--python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "clarabel==0.11.1",
+      "numpy==2.3.5",
+      "scipy==1.17.0"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {},
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "cfc8f7e91b65974c37a4a8e479d418450ee0adf5c8480dd0bc3e94cf4c99b71f"
+  },
+  "conic-extended160": {
+    "started_utc": "2026-09-13T18:19:35.988471+00:00",
+    "elapsed_seconds": 300.887616,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_conic.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--precision",
+      "160",
+      "--targets",
+      "128",
+      "361",
+      "--time-limit",
+      "120",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Conic_Extended160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_conic.py": "8ff7c5ed482de18ab2c61be719be71c4041659bb3f6aabb8cdcdb0a8ddbeb624"
+    },
+    "stdout_sha256": "f8a2772cedd6de2ff6b27b68cf6c19ac151b5ada366f8ab65ba678d2c8adeb7e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "conic-probe160": {
+    "started_utc": "2026-09-13T18:14:43.863606+00:00",
+    "elapsed_seconds": 193.267295,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_conic.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--precision",
+      "160",
+      "--targets",
+      "128",
+      "361",
+      "--time-limit",
+      "30",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Conic_Probe160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_conic.py": "8ff7c5ed482de18ab2c61be719be71c4041659bb3f6aabb8cdcdb0a8ddbeb624"
+    },
+    "stdout_sha256": "4adf7be242ba29a4673537bbdba6557bfe1c34c7c1d721aae59ba3aa4b065fc2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-exact-audit": {
+    "started_utc": "2026-09-13T18:35:58.734548+00:00",
+    "elapsed_seconds": 165.619973,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_audit.py",
+      "--directory",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--results",
+      "Quadratic_Frozen160.json",
+      "Quadratic_160.json",
+      "Conic_Probe160.json",
+      "Conic_Extended160.json",
+      "Quadratic_Union160.json",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_audit.py": "043feedb93ae0bc61f7680c2d60b0ebcc06764ce52d7282c5c0698725412a45b"
+    },
+    "stdout_sha256": "f271e1b418a07eef729668ac6197cedb08f8bc2c099123bd6d2aed229454e85e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-frozen160": {
+    "started_utc": "2026-09-13T18:03:05.927168+00:00",
+    "elapsed_seconds": 57.289909,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_ordinate.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--precision",
+      "160",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_Frozen160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_ordinate.py": "272a1a2f6cdd3e99e36f89bdeb8059d81d7dd575e71e5f6c02edaedca4d66b8c"
+    },
+    "stdout_sha256": "9fc2294c7de2b540b246186ae8772cabf202cf2908c0aacca74f4a76a452995f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-independent-numeric": {
+    "started_utc": "2026-09-13T18:30:10.761516+00:00",
+    "elapsed_seconds": 72.481171,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_numeric.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--result",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_160.json",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_Numeric.json"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_numeric.py": "e2cc9e06728b8fba4916a018e1b688184d1772d2226f1a1051dac8e50d19f622"
+    },
+    "stdout_sha256": "2d3617344f4ebce110700b80815dc29d8efff113215c4d241dafe5ace7a9b3c9",
+    "stderr_sha256": "e33940d508dde9b6e155e8ceaa16bd95beb334979b9547d3eca4e7c1343156b7"
+  },
+  "quadratic-independent-numeric2": {
+    "started_utc": "2026-09-13T18:38:06.687452+00:00",
+    "elapsed_seconds": 72.62753,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_numeric.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--result",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_160.json",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_Numeric2.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_numeric.py": "660dcad06a7b6aa1f53d87bc8417753706922363d928feb03b067bac584dab4d"
+    },
+    "stdout_sha256": "38089b2ac728f4d7a044e2a8bafdc7121086fa5b38fbdf0fd221a5c9085ab962",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-lean2": {
+    "started_utc": "2026-09-13T18:23:14.685090+00:00",
+    "elapsed_seconds": 5.50577,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py",
+      "--source",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/QuadraticSupport.lean",
+      "--project",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib",
+      "--binary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Lean_Check2.json",
+      "--versions",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/lean-versions"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py": "18061e6edd085f19f5b83d76069ecf675ab15a1480e39f4d277fba82f6a6bed0"
+    },
+    "stdout_sha256": "e8e66ee594d693b7ef0feadbd482ba220e88921761aebf4aa809fc14860413c1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-lean3": {
+    "started_utc": "2026-09-13T18:26:29.341284+00:00",
+    "elapsed_seconds": 1.772964,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py",
+      "--source",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/QuadraticSupport.lean",
+      "--project",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib",
+      "--binary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Lean_Check3.json",
+      "--versions",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/lean-versions"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7"
+    },
+    "stdout_sha256": "0de74beb306ecee933bd74f5d237b86b0544d59e0c54d315e297f9e940ef7c97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-lean4": {
+    "started_utc": "2026-09-13T18:28:15.288251+00:00",
+    "elapsed_seconds": 7.902307,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py",
+      "--source",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/QuadraticSupport.lean",
+      "--project",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib",
+      "--binary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Lean_Check4.json",
+      "--versions",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/lean-versions"
+    ],
+    "returncode": 1,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7"
+    },
+    "stdout_sha256": "a790c8e93b8b2fa42456d0e3e77ad6f1f73ce8af03a2e577eb3a72e954444623",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-lean5": {
+    "started_utc": "2026-09-13T18:35:58.737106+00:00",
+    "elapsed_seconds": 3.36143,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py",
+      "--source",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/QuadraticSupport.lean",
+      "--project",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/lean-audit/withMathlib",
+      "--binary",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Lean_Check5.json",
+      "--versions",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/lean-versions"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/check_quadratic_lean.py": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7"
+    },
+    "stdout_sha256": "93ffaf9c8ae84d0e6d6a9e0aea1f5c876bab1a19d1303275db171d9c15e6220d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-recovery160": {
+    "started_utc": "2026-09-13T18:07:43.084918+00:00",
+    "elapsed_seconds": 573.330693,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_recovery.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--precision",
+      "160",
+      "--time-limit",
+      "15",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_recovery.py": "14a9f75826c89f3fe0579302fc0ca29d222fb6274adefbd99c6cafb6f98a31bc"
+    },
+    "stdout_sha256": "c6e014ed64d277a6b3a18af5b8fa05b25c738a574f2eb8a2d7c643a73b7e429b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-scalar-diagnostic": {
+    "started_utc": "2026-09-13T18:36:38.616482+00:00",
+    "elapsed_seconds": 59.137502,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/diagnose_scalar_comparison.py",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/diagnose_scalar_comparison.py": "8c215e676b588d121e49523569ba2f2b81532533503f13f51350fea2f6375c6e"
+    },
+    "stdout_sha256": "aa9718122f3c9a1a46eb392d9ed168c7db2c6959fc2c9f0fe37840f7e4576b0b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quadratic-union160": {
+    "started_utc": "2026-09-13T18:27:19.678010+00:00",
+    "elapsed_seconds": 64.784836,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_union.py",
+      "--directory",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-shared-delta",
+      "--precision",
+      "160",
+      "--results",
+      "Quadratic_Frozen160.json",
+      "Quadratic_160.json",
+      "Conic_Probe160.json",
+      "Conic_Extended160.json",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/quadratic-audit/Quadratic_Union160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_quadratic_union.py": "c9af08ac39acb34b5b65f3b91375c0b8e2b649d754568c059b5dded280b2e945"
+    },
+    "stdout_sha256": "8fa723427a1314de191b4c487ca606d888a497aec7511f38cc4d5ef367c7e2f1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

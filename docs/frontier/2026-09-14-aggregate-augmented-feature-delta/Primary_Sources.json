@@ -1,0 +1,9 @@
+{
+  "inherited_source_records_sha256": {
+    "docs/frontier/2026-09-14-aggregate-feature-delta/Primary_Sources.json": "b4f7374116b61eaf7f45467b3834f2a986c8c59e6d86b9a9f17e847fe4f8cb48",
+    "docs/frontier/2026-09-14-aggregate-classification-delta/Primary_Sources.json": "fb8b0aeec0bbaed07f922dbee59756d4915357284f289d7c394cca82cf2af680",
+    "docs/frontier/2026-09-13-biquadratic-delta/Primary_Sources.json": "7af214d6c9c3f3543f7363eb6badfb73eed84dddf94ae6a259e2eab6a15d45dd"
+  },
+  "new_source_record": "Source_Acquisition.json",
+  "scope": "Primary Mathlib mean-value documentation was retrieved. Exact pinned MeanValue and normed-group source files match their local Git objects and are archived with the mathlib license. New derivative identities and proof arguments are independently derived and checked."
+}

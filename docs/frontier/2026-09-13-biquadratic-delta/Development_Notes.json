@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-09-13T20:27:54.398034+00:00",
+  "recorded_commands": 11,
+  "successful_commands": 10,
+  "failed_commands": 1,
+  "failure": "The first 256-bit replay asserted zero exclusion on each original 224-bit segment without subdivision. It failed because a special-function interval image widened at increased precision. Its exact source and receipt remain preserved. Adaptive subdivision at 256 bits produced 77,735 valid leaves covering every one of the original 63,405 segments.",
+  "serialization": "The original direct-contour image printouts are lossy diagnostics. Fresh replay recomputes images and hashes exact dyadic encodings; it does not parse diagnostic image strings as certificates.",
+  "freeze_chronology": "The arithmetic producer and integer grid 1..20 were recorded before spectral generation. The class certificate was added later without changing the producer. Threshold 7/3 was designed after inspecting certified roots; this is a mathematical gate construction, not statistical held-out performance. Instruments used by completed runs were preserved; the initial failed replay version is archived separately.",
+  "independence": "Order maximality uses producer characteristic polynomials, a radical-basis Newton audit and a classical coprime-discriminants theorem. Radical triples and mod-24 character planes independently enumerate the V4 class. Local polynomial factorizations check character Euler factors while avoiding index primes. Folded and direct contours share FLINT; mpmath selected-root checks use another backend without claiming completeness.",
+  "measurement_boundary": "Factor-labelled data certifies candidate templates. Only aggregate count and height enter selection. Observation completeness and the displacement bound remain premises; a plausible bare count cannot establish either. No external unknown-field measurement was tested.",
+  "history_policy": "All previous dated checkpoints and pinned instruments remain byte-identical. Preserve all 117 branches and the 378-event prefix; append five events. The ongoing goal stays active."
+}

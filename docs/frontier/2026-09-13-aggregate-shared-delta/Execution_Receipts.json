@@ -1,0 +1,190 @@
+{
+  "independent-local-replay": {
+    "started_utc": "2026-09-13T21:14:04.361144+00:00",
+    "elapsed_seconds": 0.671392,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_local_audit.py",
+      "--local",
+      "../acs-research/aggregate-shared-audit/Local160.json",
+      "../acs-research/aggregate-shared-audit/Local224.json",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements160.json",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--recoveries",
+      "../acs-research/aggregate-audit/Recovery160.json",
+      "../acs-research/aggregate-audit/Recovery224.json",
+      "--truth",
+      "docs/frontier/2026-09-13-aggregate-delta/Integer_Audit.json",
+      "--shared",
+      "../acs-research/aggregate-shared-audit/Shared320.json",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Local_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_local_audit.py": "4b24497f463d9bfba3d3fd30310761b4ab22a68b1e5436b5d7707d2d9aa97fce"
+    },
+    "stdout_sha256": "40a8f7b0c9c478c3f095576e24a1174544cdd71451288c9dcd443d609092715d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "independent-shared-replay": {
+    "started_utc": "2026-09-13T21:17:16.326731+00:00",
+    "elapsed_seconds": 8.109995,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_shared_audit.py",
+      "--shared",
+      "../acs-research/aggregate-shared-audit/Shared224.json",
+      "../acs-research/aggregate-shared-audit/Shared320.json",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--recovery",
+      "../acs-research/aggregate-audit/Recovery224.json",
+      "--inputs",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--baseline-radius",
+      "docs/frontier/2026-09-13-aggregate-delta/Radius_Audit.json",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Shared_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_shared_audit.py": "a008926d702b7eae8eae2ac2560a89a6b5e535a04a2c611dad4fd4272bdcafe4"
+    },
+    "stdout_sha256": "4554ef9c20d94651b8304e4bac7e52128092f432d0621e8288b9970e6d5f3074",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "local-spectral160": {
+    "started_utc": "2026-09-13T21:11:16.604516+00:00",
+    "elapsed_seconds": 1.000508,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_local.py",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements160.json",
+      "--recovery",
+      "../acs-research/aggregate-audit/Recovery160.json",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Local160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_local.py": "269c7341c0d9113e6794c2218ed75ab31ed619171f4a47747c96c2bfdf076497"
+    },
+    "stdout_sha256": "cb0d94a53003eeea7357ea5c40b1a08af11818c765a288dc25c1ad98b5507055",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "local-spectral224": {
+    "started_utc": "2026-09-13T21:11:16.611105+00:00",
+    "elapsed_seconds": 1.010624,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_local.py",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--recovery",
+      "../acs-research/aggregate-audit/Recovery224.json",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Local224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_local.py": "269c7341c0d9113e6794c2218ed75ab31ed619171f4a47747c96c2bfdf076497"
+    },
+    "stdout_sha256": "cb0d94a53003eeea7357ea5c40b1a08af11818c765a288dc25c1ad98b5507055",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-error224": {
+    "started_utc": "2026-09-13T21:07:32.279645+00:00",
+    "elapsed_seconds": 1.172443,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_shared.py",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--recovery",
+      "../acs-research/aggregate-audit/Recovery224.json",
+      "--inputs",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--precision",
+      "224",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Shared224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445"
+    },
+    "stdout_sha256": "de3ee74f91c72ebdcba357d8fe8f7db1f96962b8994d9ed00d700a40c3e4fe43",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-error320": {
+    "started_utc": "2026-09-13T21:07:32.269961+00:00",
+    "elapsed_seconds": 1.532294,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_shared.py",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--recovery",
+      "../acs-research/aggregate-audit/Recovery224.json",
+      "--inputs",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--precision",
+      "320",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Shared320.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_shared.py": "4bfee09da41075c71b176432ea2f5fa3c2e77de65fdff966d7eeec40ba651445"
+    },
+    "stdout_sha256": "de3ee74f91c72ebdcba357d8fe8f7db1f96962b8994d9ed00d700a40c3e4fe43",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-local-adversary": {
+    "started_utc": "2026-09-13T21:26:12.641963+00:00",
+    "elapsed_seconds": 0.365139,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "../acs-research/.venv/bin/python",
+      "code/frontier_verification/dedekind_aggregate_shared_adversary.py",
+      "--shared",
+      "../acs-research/aggregate-shared-audit/Shared320.json",
+      "--local",
+      "../acs-research/aggregate-shared-audit/Local224.json",
+      "--measurements",
+      "../acs-research/aggregate-audit/Measurements224.json",
+      "--inputs",
+      "../acs-research/aggregate-audit/inputs/S1_224.json",
+      "../acs-research/aggregate-audit/inputs/S2_224.json",
+      "--truth",
+      "docs/frontier/2026-09-13-aggregate-delta/Integer_Audit.json",
+      "--output",
+      "../acs-research/aggregate-shared-audit/Adversary_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_aggregate_shared_adversary.py": "ed90f401d97bd599be1d9ab493901b8657a23f5baf7cefb66a3991b1c529954e"
+    },
+    "stdout_sha256": "0b9c5349cdc4e238e2be0bf6a2eb3bce8b0486465c9aa017e5bb08d8425bf37b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "baseline_commit": "7e0836a32aa465d76ce236d5873afc528d85e645",
+  "instruments": {
+    "code/frontier_verification/dirichlet_strip_certificate.py": "16c60807a3ef2295e79a10109fa91e964f8b306546878ef32837e99e311f74e2",
+    "code/frontier_verification/dirichlet_folded_count.py": "101c374ac55aec441a96bf4f78a1f3cf2f82029b352f691ee8745fe16c90ad9b",
+    "code/frontier_verification/dirichlet_extended_certificate.py": "336c855bcb858b838d367ba093680a968ec7b0bb9bfa2c021154091ecc479a42",
+    "code/frontier_verification/dirichlet_strip_replay.py": "f993751f440dc25380254c06d731941720088291dad0beb1db1f6bda3969c4da",
+    "code/frontier_verification/riemann_recovery_certificate.py": "7466bb3aae2c67f3ebf72e424e3f92ece37cecab5eb1d44ca622b9ba4b0717df",
+    "code/frontier_verification/riemann_recovery_replay.py": "4fb2ae47e5a5f4ec884f4b1ad5a386569b57d2054b866f3683283abb99ab9fca",
+    "code/frontier_verification/dedekind_recovery_inputs.py": "1dfc4cd20fb762107355de50f4af3363ae00f464dc8b31b25ed78c76d3c42b47",
+    "code/frontier_verification/dedekind_coefficient_recovery.py": "804cda19f6baad0c86838ff448739707e1a89ef15784eb6fce2742de21f77ee1",
+    "code/frontier_verification/dedekind_recovery_audit.py": "003f982cf75d5196f1900a3b2bc18399ef7872eba6bf73cc9c9a29d0d53544e3",
+    "code/frontier_verification/dedekind_local_identifiability.py": "c41dc177cca02980e46e9b1360dd542da0137f922c6a95bd907706df92e514bc",
+    "code/frontier_verification/verify_recovery_delta.py": "71dc17ad6b5e4c67f5b66cb367a9f7999f69f6c7c51b3ddaa012daf5cd9d290e",
+    "code/frontier_verification/RECOVERY_README.md": "64e23d4fc34eb088cf827dc73bc2d48cfc1e693ffaa48ea383755184cc6128ef"
+  },
+  "dependencies": {
+    "code/frontier_verification/lfunction_zero_certificate.py": "02e90ef9b0fa4b58ef466dab821dd07b0be40847204654cc1bab6fd9f0e997cd",
+    "code/frontier_verification/dedekind_inputs.py": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701",
+    "code/frontier_verification/verify_explicit_delta.py": "3f8134d2696d38c2e9a458b84d1154527abc7518e42002567a39046a3ba90344",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+  },
+  "scope": "New recovery/certification instruments and unchanged pinned dependencies; development snapshots preserve superseded prototypes."
+}

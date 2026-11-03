@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-13T23:09:39.275196+00:00",
+  "recorded_commands": 4,
+  "successful_commands": 4,
+  "failed_commands": 0,
+  "recording_scope": "Adaptive proposal/certification feedback, independent continuum/domain audit, audit-strengthened exact closure and lineage adversary. Packaging and recursive verification are separate. Earlier failures remain intact.",
+  "freeze_boundary": "Each scientific source was written and frozen before its recorded run; no executed instrument was revised. Within the adaptive run, every round fixes its premise domains before proposing and certifying new vectors; all producer output was frozen before independent replay.",
+  "new_derivation": "The support over an integer domain equals lower*r plus domain-width*max(r,0). This changes both the residual slack cost and the nominal multiplier objective; it remains valid for domains with holes.",
+  "independence": "Real first-derivative covers versus complex quadratic covers; exact rational moment bounds; independent local catalogue; integer/Fraction replay versus Arb residual supports; 356 mpmath displaced controls. Transcendental interval calculations share FLINT.",
+  "input_boundary": "The producer reads validated prior status and fingerprints, not arithmetic coefficients. Downstream audits check the held-out vectors. This is not a blinded experiment or formal noninterference proof.",
+  "audit_delta": "Eight stricter findings are the same B coefficient-31 candidate 2 in four rounds under two profiles at radius 0.1. Supplemental closure removes it once per profile and makes no further local or singleton gains. No re-optimization is performed after this supplemental closure.",
+  "baseline_limit": "The new exact-input target counts match the older 17/17 full-row closure; some support counts remain weaker. The positive-radius all-target recovery and radius-0.1 target gains are the new result.",
+  "counterexample_scope": "A ninefold multiplier change with a stale old budget fails on explicit permitted root displacements by more than 0.383 in the finite-sum change alone. It does not assert tail saturation or an alternate field.",
+  "history_policy": "Preserve all 117 branches and the 403-event byte prefix; append five events. Continue the wider ACS investigation without global completion."
+}

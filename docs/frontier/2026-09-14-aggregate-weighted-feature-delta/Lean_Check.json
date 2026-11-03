@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "source_sha256": "c58a9e13ca45a7423fa9db0831b2d3bef528d4e5d9785b8c9d0d178ed6b346f5",
+  "checker_sha256": "2954ae9caf49777368f67ada1fa8d852f409e290521343bc4a6eef4e12e821e5",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/local-injectivity-audit/Lean_Check.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/WeightedFeatureStability.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'WeightedFeatureStability.weighted_maximum_principle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'WeightedFeatureStability.componentwise_supersolution_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'WeightedFeatureStability.critical_source_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'WeightedFeatureStability.strict_noise_identification' depends on axioms: [propext, Classical.choice, Quot.sound]\n'WeightedFeatureStability.signed_common_release_error' depends on axioms: [propext, Classical.choice, Quot.sound]\n'WeightedFeatureStability.exact_midpoint_radius_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "911d0f84c3c088a54af00e7c715503c199d97d7419a7b9db7963769fb9624f8a",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "weighted_maximum_principle",
+    "componentwise_supersolution_bound",
+    "critical_source_gap",
+    "strict_noise_identification",
+    "signed_common_release_error",
+    "exact_midpoint_radius_upper"
+  ],
+  "scope": "Six lemmas prove the finite weighted maximum principle, componentwise supersolution bound, critical source gap, strict feature-noise identification consequence, signed common-release error and exact midpoint-radius endpoint bound. Taylor/mean-value application, analytic derivative identities, numerical enclosures and inherited field/spectral/arithmetic premises remain separately written/computational."
+}

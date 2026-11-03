@@ -1,0 +1,111 @@
+{
+  "recorded_utc": "2026-09-13T18:50:49.944583+00:00",
+  "baseline_commit": "ec8ab3d26964deeb3611004e673e33d6b06dc4b0",
+  "files": {
+    "docs/frontier/2026-09-13-quadratic-delta/Branch_Events.jsonl": {
+      "bytes": 356923,
+      "sha256": "1c7f24721f7783ee04bdabced8d3a5cdc9f2691aac2c6dddae7fbcfbd44e83cc"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Development_Notes.json": {
+      "bytes": 3228,
+      "sha256": "dea9993405017a338f6b11387503bef06e0d98b188f3c693f68ec797f1d87917"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Execution_Artifacts.zip": {
+      "bytes": 159415,
+      "sha256": "f18af17d56111bde429acf285dbf56eee0e73cfa106a319f2dc9781b0b6fc3a8"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Execution_Receipts.json": {
+      "bytes": 22096,
+      "sha256": "1d3e74107f06500cc39e764dd6f148808b2ac210de3a3fc9095be19e58525c76"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Lean_Check.json": {
+      "bytes": 2640,
+      "sha256": "93ffaf9c8ae84d0e6d6a9e0aea1f5c876bab1a19d1303275db171d9c15e6220d"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Primary_Sources.json": {
+      "bytes": 2202,
+      "sha256": "0d7bfed7db31b2e17dd8034a232d95ab2889cdded55561469a333f7458af9edf"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Quadratic_Audit.json": {
+      "bytes": 1241184,
+      "sha256": "dbf7e304751522e9d277feba70ff9474a0e95f0eff971bbc3833a77443305fa6"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Quadratic_Audits.zip": {
+      "bytes": 2366773,
+      "sha256": "1e5f49718f3ea7d26c4042861680e116b11094725d0f2ed4339070f7fbde1159"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Quadratic_Numeric2.json": {
+      "bytes": 223899,
+      "sha256": "1dd554f22ae2ab3bed7c614fcb57e719860cef5a2a04fdbcdb32a59f39f62af1"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Quadratic_Summary.json": {
+      "bytes": 3247,
+      "sha256": "3a88dd2a4f7b28af2b77fd770b9f8d49b75aab3350e796974ca8fde8658e404d"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/README.md": {
+      "bytes": 5496,
+      "sha256": "2006cd866e1efa479e7af30f821bf993d4f58cb6f844854f043de31dbbf5e481"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Research_Queue.json": {
+      "bytes": 201125,
+      "sha256": "69c4f04b0b6410c7d82fc41f86b4bcc9ce5979a476ef231b2e002bd11fb62d99"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Runtime.json": {
+      "bytes": 1031,
+      "sha256": "09f4e73f75ff749eb81e2714f269475a48e963bfa3d0ebceb84e44d1971eae6f"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Source_Inventory.json": {
+      "bytes": 2935,
+      "sha256": "8320b16d76cf79e0976fc656de3aa5a78e2f3ad120d98cea4a77e736f0efd2bb"
+    },
+    "docs/frontier/2026-09-13-quadratic-delta/Source_Snapshot.zip": {
+      "bytes": 107683,
+      "sha256": "d4109582814cec91c7516cd225ee2741bd6b9d7be3259cbe9527a733082b6d7b"
+    },
+    "code/frontier_verification/dedekind_quadratic_ordinate.py": {
+      "bytes": 9422,
+      "sha256": "272a1a2f6cdd3e99e36f89bdeb8059d81d7dd575e71e5f6c02edaedca4d66b8c"
+    },
+    "code/frontier_verification/dedekind_quadratic_recovery.py": {
+      "bytes": 7277,
+      "sha256": "14a9f75826c89f3fe0579302fc0ca29d222fb6274adefbd99c6cafb6f98a31bc"
+    },
+    "code/frontier_verification/dedekind_quadratic_conic.py": {
+      "bytes": 7442,
+      "sha256": "8ff7c5ed482de18ab2c61be719be71c4041659bb3f6aabb8cdcdb0a8ddbeb624"
+    },
+    "code/frontier_verification/dedekind_quadratic_union.py": {
+      "bytes": 4048,
+      "sha256": "c9af08ac39acb34b5b65f3b91375c0b8e2b649d754568c059b5dded280b2e945"
+    },
+    "code/frontier_verification/dedekind_quadratic_audit.py": {
+      "bytes": 11903,
+      "sha256": "043feedb93ae0bc61f7680c2d60b0ebcc06764ce52d7282c5c0698725412a45b"
+    },
+    "code/frontier_verification/dedekind_quadratic_numeric.py": {
+      "bytes": 8710,
+      "sha256": "660dcad06a7b6aa1f53d87bc8417753706922363d928feb03b067bac584dab4d"
+    },
+    "code/frontier_verification/check_quadratic_lean.py": {
+      "bytes": 1961,
+      "sha256": "18daf56ec3a6902434dc6de1dd028664ad140ae48419841940eb2f756f77c5f7"
+    },
+    "code/frontier_verification/proofs/QuadraticSupport.lean": {
+      "bytes": 3682,
+      "sha256": "905cacc2da416328f653f2f05dbdf51eb744a2a3d36ee2772a2f28713a90f6d8"
+    },
+    "code/frontier_verification/quadratic_requirements.txt": {
+      "bytes": 71,
+      "sha256": "889f0e63ea72ec4ef7a3f80bef673e940c56943ee8fbe27c7220deafa432338e"
+    },
+    "code/frontier_verification/verify_quadratic_delta.py": {
+      "bytes": 16290,
+      "sha256": "60f344bcb8bf23723189b4ae7b995ea234b11abdd1cdb897db8f43e2ed467d63"
+    },
+    "code/frontier_verification/QUADRATIC_README.md": {
+      "bytes": 10344,
+      "sha256": "f479768b336e8293e78a5e813fcc88b8f94244d43ef2ff0a815988c15b271666"
+    }
+  },
+  "scope": "Manifest and verification output are excluded to avoid self-reference; the preceding checkpoint is checked recursively."
+}

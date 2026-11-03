@@ -1,3 +1,9 @@
+"""Historical plot for the original external NPZ files.
+
+Its numerical narrative is superseded by the 2026-09-13 Dedekind checkpoint.
+Use cyclotomic_test.py for current certified finite comparisons. This file
+preserves the old plotting workflow and is not a current result generator.
+"""
 """Cyclotomic Q(zeta_5) — figure showing 4-tier discrimination."""
 import math, os
 import numpy as np
@@ -164,7 +170,7 @@ Structure: ζ_K(s) = ζ(s) · L(s, χ¹) · L(s, χ²) · L(s, χ³)
 where χ is primitive order-4 character mod 5 (so χ² = chi_5 quadratic, χ³ = χ̄¹)
 
 Zero counts: ζ(54 zeros in T<{omega_cyclo[-1]*0+100}), L(χ²): 113, L(χ¹): 54, L(χ³): 54 (= reflection of χ¹)
-F_K = F_ζ + F_χ² + F_χ¹ + F_χ³ ≈ F_ζ + F_χ² + 2·F_χ¹  (chi³ contributes same as chi¹ under cos)
+Historical approximation F_ζ + F_χ² + 2·F_χ¹ is invalid for distinct positive spectra; see the Frontier correction.
 
 SPLITTING STRUCTURE FOR Q(ζ_5):
 ╔══════════════════════════════════════════════════════════════════════════════════════╗

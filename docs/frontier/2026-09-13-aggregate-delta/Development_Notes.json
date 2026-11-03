@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-09-13T20:57:08.924189+00:00",
+  "recorded_commands": 11,
+  "successful_commands": 10,
+  "failed_commands": 1,
+  "failure": "The first primary-source recheck used Path.with_suffix on a stem containing a dotted arXiv identifier, producing the wrong PNG filename. The renderer succeeded, but reading the wrong name failed. The initial script and traceback are preserved; appending .png to the full stem corrected the recheck. Mathematical instruments and outputs were unchanged.",
+  "data_boundary": "The extractor writes four files containing only degree, discriminant, signature, cutoff and aggregate intervals. The producer imports only the field-independent gamma/kernel/sieve functions from the older recovery instrument. The generic inequality and dual helpers do not read field data. This boundary is inspected and exercised with metadata mutations, not formally proven noninterference or claimed blindness.",
+  "freeze_boundary": "Both precision measurement and recovery runs completed before the independent integer/polynomial auditor ran. The independent source and analytic audits read held-out arithmetic afterward. All instruments used by recorded runs are preserved; the failed source-recheck version is archived separately.",
+  "method_comparison": "Integer propagation may exceed continuous LP uniqueness because integrality is used between rounds. Neither monotone fixed points nor surviving LP domains prove joint feasibility. The previous count selector uses a complete field class, while this decoder uses generic coefficient inequalities.",
+  "uncertainty_scope": "The six tested radii widen the inherited brackets while retaining the certified finite population and cutoff. Separate global derivative bounds are applied before combining rows, making this a conservative sufficient certificate. A larger-radius failure does not imply an indistinguishable field or an optimal noise limit.",
+  "negative_controls": "Five formula variants produce 170 altered intervals; 112 are detected against held-out arithmetic. Small discriminant/normalization perturbations remain inside some error budgets and are retained as undetected. Twelve separate input/proof mutations are rejected.",
+  "history_policy": "Preserve all 117 branches and the 383-event byte prefix; append five events. Earlier dated checkpoints and pinned code remain unchanged. The ongoing goal remains active."
+}

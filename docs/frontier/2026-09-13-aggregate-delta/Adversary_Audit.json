@@ -1,0 +1,547 @@
+{
+  "status": "passed",
+  "source_sha256": "5aa0004100e335e0a1f51ce1e818680b1f457618c9f2c162342abff559d49313",
+  "inputs_sha256": {
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Recovery224.json": "a984d7a87ad0b6ada02090f246bdc87fd9581aa26b74c063dc3854dcc4dc7d84",
+    "Radius_Audit.json": "d2e0acd50b793ecd90114e71bb898e6d29e67fd319376174ffd1d7a83f2ea8dc",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_mutations_rejected": 12,
+  "controls": [
+    {
+      "mutation": "field_identity",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "db2010e1748f95a77b37f430b60f5aae4c424010dfe27ce55d494ac5156a8bb0"
+    },
+    {
+      "mutation": "galois_group",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "f1bc5e2d464a4505da1f92cce4ceb8fa31e6c0071bbec8e07ade270d488cdc75"
+    },
+    {
+      "mutation": "quadratic_subfields",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "b5cec81417ba9bbd5010ce86cad0fed951252ea281f369f3d0d86f9a9ed6f941"
+    },
+    {
+      "mutation": "arithmetic_seed",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "70c7b3bf1af7457f05bd5d233d5c6210d84be020fa990cfce84895eae847598b"
+    },
+    {
+      "mutation": "duplicate_root",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "770b3293f0ffdac23eae00911d59b942cc960cf1a1a4718601869f5c6fad1848"
+    },
+    {
+      "mutation": "reversed_bracket",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "dceadae0cd094d7c4b3c62e0c48a20e9ca634c889ca80fcc9a8b522e1535630a"
+    },
+    {
+      "mutation": "invalid_cutoff",
+      "rejected_by": "aggregate input validator",
+      "mutated_json_sha256": "8164ed851e1263d661c0b34c4bf6bb8d6ce2c265b62ff8e477bc577f0e227e06"
+    },
+    {
+      "mutation": "negative_multiplier",
+      "rejected_by": "exact integer dual validator",
+      "mutated_certificate": {
+        "sign": -1,
+        "multipliers": [
+          [
+            0,
+            "-1"
+          ],
+          [
+            3,
+            "15367452027/200000000"
+          ],
+          [
+            4,
+            "324361553/8000000"
+          ],
+          [
+            7,
+            "30009780929/500000000"
+          ],
+          [
+            8,
+            "25427486129/500000000"
+          ],
+          [
+            11,
+            "6906541519/500000000"
+          ],
+          [
+            14,
+            "20924248481/1000000000"
+          ],
+          [
+            17,
+            "2400105553/125000000"
+          ],
+          [
+            18,
+            "791637813/250000000"
+          ],
+          [
+            23,
+            "8727133341/1000000000"
+          ],
+          [
+            24,
+            "7430838551/1000000000"
+          ],
+          [
+            27,
+            "632475527/250000000"
+          ],
+          [
+            30,
+            "597256609/500000000"
+          ],
+          [
+            33,
+            "3552517/10000000"
+          ]
+        ],
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "weighted_rhs": {
+          "mid": [
+            -13391025792335649190807478211800376996925470509448000319770351122869,
+            -221
+          ],
+          "rad": [
+            23238055,
+            -237
+          ]
+        },
+        "residual_support_bound": {
+          "mid": [
+            21357706194868569383893193032171425680128360996436910664216120183247,
+            -233
+          ],
+          "rad": [
+            151519245,
+            -251
+          ]
+        },
+        "objective_upper_bound": {
+          "mid": [
+            -1673226438574583450810654832840032127494097865164263073703465029269,
+            -218
+          ],
+          "rad": [
+            744962273,
+            -242
+          ]
+        },
+        "residual_sha256": "d2e8f31ce9896781c81e6dc41cf1e9f6960351cbeef1e9f62a281f1837d538bd"
+      }
+    },
+    {
+      "mutation": "out_of_range_row",
+      "rejected_by": "exact integer dual validator",
+      "mutated_certificate": {
+        "sign": -1,
+        "multipliers": [
+          [
+            34,
+            "91863490309/1000000000"
+          ],
+          [
+            3,
+            "15367452027/200000000"
+          ],
+          [
+            4,
+            "324361553/8000000"
+          ],
+          [
+            7,
+            "30009780929/500000000"
+          ],
+          [
+            8,
+            "25427486129/500000000"
+          ],
+          [
+            11,
+            "6906541519/500000000"
+          ],
+          [
+            14,
+            "20924248481/1000000000"
+          ],
+          [
+            17,
+            "2400105553/125000000"
+          ],
+          [
+            18,
+            "791637813/250000000"
+          ],
+          [
+            23,
+            "8727133341/1000000000"
+          ],
+          [
+            24,
+            "7430838551/1000000000"
+          ],
+          [
+            27,
+            "632475527/250000000"
+          ],
+          [
+            30,
+            "597256609/500000000"
+          ],
+          [
+            33,
+            "3552517/10000000"
+          ]
+        ],
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "weighted_rhs": {
+          "mid": [
+            -13391025792335649190807478211800376996925470509448000319770351122869,
+            -221
+          ],
+          "rad": [
+            23238055,
+            -237
+          ]
+        },
+        "residual_support_bound": {
+          "mid": [
+            21357706194868569383893193032171425680128360996436910664216120183247,
+            -233
+          ],
+          "rad": [
+            151519245,
+            -251
+          ]
+        },
+        "objective_upper_bound": {
+          "mid": [
+            -1673226438574583450810654832840032127494097865164263073703465029269,
+            -218
+          ],
+          "rad": [
+            744962273,
+            -242
+          ]
+        },
+        "residual_sha256": "d2e8f31ce9896781c81e6dc41cf1e9f6960351cbeef1e9f62a281f1837d538bd"
+      }
+    },
+    {
+      "mutation": "duplicate_multiplier_row",
+      "rejected_by": "exact integer dual validator",
+      "mutated_certificate": {
+        "sign": -1,
+        "multipliers": [
+          [
+            0,
+            "91863490309/1000000000"
+          ],
+          [
+            3,
+            "15367452027/200000000"
+          ],
+          [
+            4,
+            "324361553/8000000"
+          ],
+          [
+            7,
+            "30009780929/500000000"
+          ],
+          [
+            8,
+            "25427486129/500000000"
+          ],
+          [
+            11,
+            "6906541519/500000000"
+          ],
+          [
+            14,
+            "20924248481/1000000000"
+          ],
+          [
+            17,
+            "2400105553/125000000"
+          ],
+          [
+            18,
+            "791637813/250000000"
+          ],
+          [
+            23,
+            "8727133341/1000000000"
+          ],
+          [
+            24,
+            "7430838551/1000000000"
+          ],
+          [
+            27,
+            "632475527/250000000"
+          ],
+          [
+            30,
+            "597256609/500000000"
+          ],
+          [
+            33,
+            "3552517/10000000"
+          ],
+          [
+            0,
+            "91863490309/1000000000"
+          ]
+        ],
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "weighted_rhs": {
+          "mid": [
+            -13391025792335649190807478211800376996925470509448000319770351122869,
+            -221
+          ],
+          "rad": [
+            23238055,
+            -237
+          ]
+        },
+        "residual_support_bound": {
+          "mid": [
+            21357706194868569383893193032171425680128360996436910664216120183247,
+            -233
+          ],
+          "rad": [
+            151519245,
+            -251
+          ]
+        },
+        "objective_upper_bound": {
+          "mid": [
+            -1673226438574583450810654832840032127494097865164263073703465029269,
+            -218
+          ],
+          "rad": [
+            744962273,
+            -242
+          ]
+        },
+        "residual_sha256": "d2e8f31ce9896781c81e6dc41cf1e9f6960351cbeef1e9f62a281f1837d538bd"
+      }
+    },
+    {
+      "mutation": "false_candidate_list",
+      "rejected_by": "independent integer candidate recomputation",
+      "claimed": [
+        3
+      ],
+      "computed": [
+        4
+      ]
+    },
+    {
+      "mutation": "omit_exclusion_prerequisites",
+      "rejected_by": "exact gap after resetting required domains",
+      "round": 2,
+      "n": 4,
+      "candidate": 0,
+      "valid_gap": "343339529513661110796889624810632761687716936114533208864",
+      "reset_gap": "-36491407484531576844375213041123726330308519588104251698052"
+    }
+  ],
+  "exact_radius_dual_bounds": 24,
+  "radius_replays": [
+    {
+      "observation_index": 0,
+      "radius": "0",
+      "candidates": [
+        4
+      ],
+      "objective_upper_rationals": [
+        "-4986603375039101996523901433722944764761695929075173705154734777023/1255420347077336152767157884641533283220471088892806902579200000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10000000",
+      "candidates": [
+        4
+      ],
+      "objective_upper_rationals": [
+        "-24907727471606121031963962435413321687794496181348356080070783561147/6277101735386680763835789423207666416102355444464034512896000000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/1000000",
+      "candidates": [
+        4
+      ],
+      "objective_upper_rationals": [
+        "-24680122838870354547894586395700114937320848769970780287529427299771/6277101735386680763835789423207666416102355444464034512896000000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/100000",
+      "candidates": [
+        4
+      ],
+      "objective_upper_rationals": [
+        "-22404076512093821360094893909774923158622667757078460124043863813563/6277101735386680763835789423207666416102355444464034512896000000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/10000",
+      "candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "objective_upper_rationals": [
+        "356386744643001421162057659574626468869753742396645367100631257669/6277101735386680763835789423207666416102355444464034512896000000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 0,
+      "radius": "1/1000",
+      "candidates": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "objective_upper_rationals": [
+        "227961019398215201570930594362944577686269256607931471484604029440581/6277101735386680763835789423207666416102355444464034512896000000000",
+        "4"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "0",
+      "candidates": [
+        0
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "8385075659178334973591671729797824163324417063149580590793645199/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10000000",
+      "candidates": [
+        0
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "9304436641958990403933759161729606729070328590774660321830788239/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/1000000",
+      "candidates": [
+        0
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "17578685469752282121380528586682817907829303856226559790095555727/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/100000",
+      "candidates": [
+        0
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "100321173789887768410554599275021059231530753028637967333947104399/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/10000",
+      "candidates": [
+        0
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "927746056470518785288816763176312044247629839522374580088827567247/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    },
+    {
+      "observation_index": 1,
+      "radius": "1/1000",
+      "candidates": [
+        0,
+        1
+      ],
+      "objective_upper_rationals": [
+        "0",
+        "9201994884268706373691461108389545821787348703842252048327443504271/6277101735386680763835789423207666416102355444464034512896000000000"
+      ]
+    }
+  ],
+  "independent_displaced_sum_controls": 408,
+  "import_boundary": [
+    [
+      "fractions",
+      [
+        "Fraction"
+      ]
+    ],
+    [
+      "pathlib",
+      [
+        "Path"
+      ]
+    ],
+    [
+      "flint",
+      [
+        "arb",
+        "ctx"
+      ]
+    ],
+    [
+      "dedekind_coefficient_recovery",
+      [
+        "gamma",
+        "kernel",
+        "prime_powers"
+      ]
+    ],
+    [
+      "dedekind_coupled_recovery",
+      [
+        "encode"
+      ]
+    ]
+  ],
+  "scope": "Actual input, multiplier and candidate mutations exercise the validators; exact integer replay checks all widened-radius c7 bounds. Uniform displaced sums are numerical controls, while the global derivative inequality supplies the all-displacements bound. Static imports and strict schemas support the data boundary, not a formal information-flow proof."
+}

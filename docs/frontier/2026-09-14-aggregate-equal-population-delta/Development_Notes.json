@@ -1,0 +1,22 @@
+{
+  "recorded_commands": 8,
+  "successful_commands": 6,
+  "failed_commands": 2,
+  "failures": [
+    {
+      "receipt": "interior-count-lean",
+      "source": "code/frontier_verification/proofs/InteriorCount.lean",
+      "cause": "Mathlib.Tactic.Omega is unavailable in the pinned runtime.",
+      "correction": "A separate v2 source imports the existing Lean.Elab.Tactic.Omega module."
+    },
+    {
+      "receipt": "interior-count-lean-v2",
+      "source": "code/frontier_verification/proofs/InteriorCount_v2.lean",
+      "cause": "The identifier prefix is a reserved Lean keyword; parsing fails and downstream declarations remain unproved. The failed output is not a kernel success.",
+      "correction": "A separate v3 source renames that variable pre. All eight declarations then compile with only the reported standard axioms and no sorryAx."
+    }
+  ],
+  "canonical_Lean_source": "code/frontier_verification/proofs/InteriorCount_v3.lean",
+  "source_policy": "Original executed Python and Lean sources and every recorded result remain unchanged. The final recursive verifier runs after packaging and has its own external receipt and final report. New mathematical instruments passed on their first recorded runs.",
+  "boundary_findings": "The equal-population examples are complete restricted source lists, not a blinded study. r=L box overlap is not actual-field ambiguity. Exact radii separated by2e-100 can coincide in binary64. The strict and closed counts of the same common observation differ."
+}

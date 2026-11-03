@@ -1,0 +1,24 @@
+{
+  "corrections": [
+    {
+      "claim": "Finite raw zero amplitudes directly equal local Euler coefficients.",
+      "result": "At a=1/400 and u=log2, the prime contribution is about 1.40e-36 but the zero sum is about -0.736822760644. Pole and gamma terms explain the difference. Smoothing leakage also separates the prime sum from an individual coefficient."
+    },
+    {
+      "claim": "Unknown-zero tails require assuming all unknown zeros are on the critical line.",
+      "result": "For these Gaussian tests, the positive moment at s=2 bounds unknown zeros using only 0<Re(rho)<1. This does not establish global GRH."
+    },
+    {
+      "claim": "Two higher-precision arithmetic runs remove uncertainty in inherited root brackets.",
+      "result": "Both runs reuse the same finite root intervals. Their uncertainty dominates the final residual width; new root refinement is required to reduce it."
+    },
+    {
+      "claim": "Fixed finite height supports the limit of arbitrarily narrow arithmetic smoothing.",
+      "result": "The bound requires a*(4+T^2)>=1 and explicit tail/precision control. A joint height-width-precision budget is a remaining gate."
+    },
+    {
+      "claim": "The alternate digamma integral needs no elementary gamma normalization.",
+      "result": "The -4 log(2 pi) g(0) term is necessary; the zero-frequency control rejected its initial omission."
+    }
+  ]
+}

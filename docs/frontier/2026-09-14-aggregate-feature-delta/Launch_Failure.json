@@ -1,0 +1,11 @@
+{
+  "status": "launch_failed_before_scientific_program",
+  "attempt_directory": "audit-corrected-local-export",
+  "runner": "run_recorded.py",
+  "attempted_command": ["../acs-research/.venv/python-not-used/bin/python"],
+  "tool_exit_code": 1,
+  "exception": "FileNotFoundError: [Errno 2] No such file or directory: '../acs-research/.venv/python-not-used/bin/python'",
+  "record_provenance": "Manually transcribed from the actual exec tool failure. This is not a runner-generated receipt: the existing runner does not catch Popen launch errors and did not emit receipt.json. The empty stdout/stderr files and attempt directory are preserved.",
+  "cause": "Assistant invocation typo supplied a nonexistent interpreter instead of the pinned venv interpreter and audit arguments.",
+  "correction": "A separate audit-corrected-local-export-retry invocation uses ../acs-research/.venv/bin/python and the full explicit audit arguments. No scientific source changed."
+}

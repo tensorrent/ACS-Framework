@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "sources": [
+    {
+      "filename": "Belabas_Friedman_1305.0035.pdf",
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "retrieved_utc": "2026-09-13T15:21:18.391321+00:00",
+      "bytes": 215404,
+      "sha256": "9a22c52fdd7dfabcb1eed3405d5d914f4c305de3faafc0b1edbeb7daa523b244",
+      "one_based_pdf_page": 3,
+      "rendered_page_sha256": "ac34cea45b13144ac298f593427b624d3360a39c5884a0220b7882dfc8095493"
+    },
+    {
+      "filename": "Grenie_Molteni_1407.1375.pdf",
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "retrieved_utc": "2026-09-13T15:21:18.646757+00:00",
+      "bytes": 257457,
+      "sha256": "ebeff6dc3e65d3b47b8b10ce6175fb030f5faf61e58fb9997621cf9a51a25858",
+      "one_based_pdf_page": 4,
+      "rendered_page_sha256": "6ba9bd77ff64411261307735b19e0bb9c816da0ad021e23286668108b860eca4"
+    }
+  ],
+  "scope": "Previously acquired primary PDFs rehashed against the preserved download receipts and relevant pages freshly rendered. This is reuse of verified sources, not a new download."
+}

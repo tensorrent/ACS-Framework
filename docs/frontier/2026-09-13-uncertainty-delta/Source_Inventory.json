@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "1489d35af3bf412fe3472d02a5272820d648f7c1",
+  "instruments": {
+    "code/frontier_verification/dedekind_ordinate_ranges.py": "9afc4f91029b299e4605447340558ef9b1d3108ffde50a576c7484ebbacaa0e3",
+    "code/frontier_verification/dedekind_ordinate_audit.py": "47baab750508951d44695109bfc111829b055c1ce0f965d73cd8dfe08b86b8f0",
+    "code/frontier_verification/verify_ordinate_delta.py": "305443911e53024864354451397bca5ee6098b33c4da8d2ec9fe49eee98cf5bc",
+    "code/frontier_verification/ORDINATE_README.md": "936d0e5b9073bae99127f08166847c2bf92aebe681edcdf958c7d3b83f04641e"
+  },
+  "dependencies": {
+    "code/frontier_verification/dedekind_coupled_recovery.py": "59bef40c3b7a47ff44b546e7a771214e43817fe5206659ecfaf20d70b3cb3414",
+    "code/frontier_verification/dedekind_coupled_audit.py": "41a3fb51193283126e20e74f32c313c3e79727cc8902f64fe7c23e45e31b374a",
+    "code/frontier_verification/verify_coupled_delta.py": "1f8a3ea7460e8717759dddc1110798eeef500451e2af6e7f6d5893258a9447ab",
+    "code/frontier_verification/source_requirements.txt": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f",
+    "code/frontier_verification/COUPLED_README.md": "7f050ed2f17f6e6302182765ccb93c0d2f96fd25f4ad0b7e4786daf0c7af3d41",
+    "code/frontier_verification/RECOVERY_README.md": "64e23d4fc34eb088cf827dc73bc2d48cfc1e693ffaa48ea383755184cc6128ef"
+  },
+  "scope": "New ordinate-uncertainty instruments; all earlier pinned source and dated evidence bytes preserved."
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "Belabas_Friedman_1305.0035.pdf",
+    "url": "https://arxiv.org/pdf/1305.0035",
+    "retrieved_utc": "2026-09-13T15:21:18.391321+00:00",
+    "bytes": 215404,
+    "sha256": "9a22c52fdd7dfabcb1eed3405d5d914f4c305de3faafc0b1edbeb7daa523b244",
+    "response_headers": {
+      "Connection": "close",
+      "Content-Length": "215404",
+      "access-control-allow-origin": "*",
+      "x-cloud-trace-context": "2aff54face807231779df8639e98ac59",
+      "content-type": "application/pdf",
+      "content-disposition": "inline; filename=\"1305.0035v1.pdf\"",
+      "link": "<https://arxiv.org/pdf/1305.0035>; rel='canonical'",
+      "server": "Google Frontend",
+      "via": "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish",
+      "last-modified": "Thu, 19 Jan 2023 23:17:25 GMT",
+      "etag": "CPGKl5bi1PwCEAE=",
+      "Accept-Ranges": "bytes",
+      "Age": "119504",
+      "Date": "Sun, 13 Sep 2026 15:21:18 GMT",
+      "X-Served-By": "cache-lga21970-LGA, cache-lga21970-LGA, cache-lga21970-LGA, cache-chi-kmdw8640076-CHI",
+      "X-Cache": "MISS, HIT, HIT",
+      "X-Timer": "S1789312878.281261,VS0,VE2"
+    }
+  },
+  {
+    "filename": "Grenie_Molteni_1407.1375.pdf",
+    "url": "https://arxiv.org/pdf/1407.1375",
+    "retrieved_utc": "2026-09-13T15:21:18.646757+00:00",
+    "bytes": 257457,
+    "sha256": "ebeff6dc3e65d3b47b8b10ce6175fb030f5faf61e58fb9997621cf9a51a25858",
+    "response_headers": {
+      "Connection": "close",
+      "Content-Length": "257457",
+      "server": "Google Frontend",
+      "content-type": "application/pdf",
+      "etag": "CJyj+eiL1vwCEAE=",
+      "access-control-allow-origin": "*",
+      "via": "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish",
+      "x-cloud-trace-context": "f1d2897b502d7740fd6a60ba3eb643f3",
+      "last-modified": "Fri, 20 Jan 2023 11:56:24 GMT",
+      "content-disposition": "inline; filename=\"1407.1375v3.pdf\"",
+      "link": "<https://arxiv.org/pdf/1407.1375>; rel='canonical'",
+      "Accept-Ranges": "bytes",
+      "Age": "38500",
+      "Date": "Sun, 13 Sep 2026 15:21:18 GMT",
+      "X-Served-By": "cache-lga21988-LGA, cache-lga21988-LGA, cache-lga21962-LGA, cache-chi-kmdw8640027-CHI",
+      "X-Cache": "MISS, HIT, MISS",
+      "X-Timer": "S1789312879.515744,VS0,VE22"
+    }
+  }
+]

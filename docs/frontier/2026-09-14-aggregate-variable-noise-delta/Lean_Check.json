@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "source_sha256": "d2223d7d45314aaa57593c65fa0ee244864c93ec1fdb37d2e99926d8c649201d",
+  "checker_sha256": "a9284f71b530318d989b5bc6a3984f2bf750cb3e33abeec0e40d0bda2749f865",
+  "command": [
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/runtime/lean-4.34.0-rc2-darwin_aarch64/bin/lake",
+    "env",
+    "lean",
+    "-R",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs",
+    "-o",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/../acs-research/noise-threshold-audit/Lean_Check.olean",
+    "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/proofs/VariableNoiseMidpoint.lean"
+  ],
+  "returncode": 0,
+  "stdout": "'VariableNoiseMidpoint.scaled_positive_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\n'VariableNoiseMidpoint.affine_noise_column' depends on axioms: [propext, Classical.choice, Quot.sound]\n'VariableNoiseMidpoint.signed_midpoint_errors' depends on axioms: [propext, Classical.choice, Quot.sound]\n'VariableNoiseMidpoint.common_release_budget_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n'VariableNoiseMidpoint.fixed_critical_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'VariableNoiseMidpoint.fixed_report_exclusion_is_not_global' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "olean_sha256": "cdfa348aa607e4bc232de35822787ded54d7adbe41b32c234357bd409cafcacd",
+  "lake_manifest_sha256": "f6b267d4f8d9c918b21d3bcc51ebf8a4442f98c20b62dbb2c526b6833d0faa13",
+  "theorems": [
+    "scaled_positive_interval",
+    "affine_noise_column",
+    "signed_midpoint_errors",
+    "common_release_budget_lower",
+    "fixed_critical_gap",
+    "fixed_report_exclusion_is_not_global"
+  ],
+  "scope": "Six lemmas prove positive scaled noise bounds, the affine noise column, exact signed midpoint errors, a necessary common-report budget, fixed critical-coordinate separation and a counterexample to global inference from a rejected report. The complete contraction, derivative/interval, modular and inherited field/spectral/arithmetic bridges remain written or computational."
+}

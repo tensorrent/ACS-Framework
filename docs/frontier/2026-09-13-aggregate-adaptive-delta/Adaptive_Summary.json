@@ -1,0 +1,393 @@
+{
+  "recorded_utc": "2026-09-13T23:09:39.275196+00:00",
+  "result": "Re-optimizing measurement multipliers after validated local-domain reductions recovers all seventeen targets in both observations at radii 0, 0.005 and 0.02, and fifteen/eleven at radius 0.1 with discriminant ramification.",
+  "input_contract": [
+    "degree four",
+    "signature (0,2)",
+    "discriminant 576",
+    "complete aggregate finite critical-line spectra through 20",
+    "generic coefficient boxes 0..4",
+    "prior same-radius/profile domains with recursively verified deductions"
+  ],
+  "local_deduction_profiles": [
+    "degree-only local models",
+    "degree plus ramification from the supplied discriminant"
+  ],
+  "not_inference_inputs": [
+    "Galois group",
+    "candidate field catalogue",
+    "defining polynomials",
+    "subfields",
+    "conductor-parity assignment",
+    "held-out arithmetic coefficients",
+    "zero-noise domains reused as noisy premises"
+  ],
+  "new_roots_computed": 0,
+  "measurement_rows": 17,
+  "target_count": 17,
+  "generic_coefficients": 604,
+  "derived_results": {
+    "results": [
+      {
+        "observation_index": 0,
+        "radius": "0",
+        "profile": "degree_only",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "0",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 14,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/200",
+        "profile": "degree_only",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/200",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/50",
+        "profile": "degree_only",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/50",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 38,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 38,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "profile": "degree_only",
+        "initial_unique_targets": 11,
+        "adaptive_unique_targets": 14,
+        "adaptive_unique_support": 33,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 14,
+        "final_unique_support": 33,
+        "remaining_target_domains": [
+          {
+            "n": 25,
+            "candidates": [
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 0,
+        "radius": "1/10",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 15,
+        "adaptive_unique_support": 35,
+        "adaptive_iterations": 5,
+        "closure_iterations": 1,
+        "final_unique_targets": 15,
+        "final_unique_support": 35,
+        "remaining_target_domains": [
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              1,
+              2,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "0",
+        "profile": "degree_only",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "0",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/200",
+        "profile": "degree_only",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/200",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/50",
+        "profile": "degree_only",
+        "initial_unique_targets": 12,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 36,
+        "adaptive_iterations": 4,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 36,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/50",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 13,
+        "adaptive_unique_targets": 17,
+        "adaptive_unique_support": 37,
+        "adaptive_iterations": 3,
+        "closure_iterations": 1,
+        "final_unique_targets": 17,
+        "final_unique_support": 37,
+        "remaining_target_domains": []
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "profile": "degree_only",
+        "initial_unique_targets": 10,
+        "adaptive_unique_targets": 11,
+        "adaptive_unique_support": 28,
+        "adaptive_iterations": 4,
+        "closure_iterations": 2,
+        "final_unique_targets": 11,
+        "final_unique_support": 28,
+        "remaining_target_domains": [
+          {
+            "n": 17,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 19,
+            "candidates": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              2,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "observation_index": 1,
+        "radius": "1/10",
+        "profile": "degree_discriminant",
+        "initial_unique_targets": 10,
+        "adaptive_unique_targets": 11,
+        "adaptive_unique_support": 31,
+        "adaptive_iterations": 4,
+        "closure_iterations": 2,
+        "final_unique_targets": 11,
+        "final_unique_support": 31,
+        "remaining_target_domains": [
+          {
+            "n": 17,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 19,
+            "candidates": [
+              2,
+              4
+            ]
+          },
+          {
+            "n": 23,
+            "candidates": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "n": 25,
+            "candidates": [
+              0,
+              4
+            ]
+          },
+          {
+            "n": 29,
+            "candidates": [
+              0,
+              1
+            ]
+          },
+          {
+            "n": 31,
+            "candidates": [
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "new_multiplier_cases": 288,
+    "all_sampled_lp_statuses_success": true,
+    "adaptive_local_removals": 87,
+    "adaptive_dual_removals": 109,
+    "additional_audit_exclusions_across_rounds": 8,
+    "supplemental_local_removals": 0,
+    "supplemental_dual_removals": 2
+  },
+  "stored_midpoints_checked": 80976,
+  "fresh_quadratic_interval_leaves": 161952,
+  "exact_domain_objectives": 288,
+  "independent_displaced_controls": 356,
+  "actual_component_mutations_rejected": 10,
+  "exact_general_domain_support_checks": 604,
+  "scope": "All positive-radius gains use the same fixed finite spectra and measurement family. Every changed multiplier gets a fresh uncertainty certificate. Eight repeated stronger audit findings become two actual supplemental exclusions. The final update is a sufficient deduction method, not an optimality or surviving-field certificate. Earlier exact-input full-row support results remain intact.",
+  "full_proof_formalized": false,
+  "next_gate": "Re-optimize from the audit-strengthened domains, bracket all-target recovery beyond radius 0.02, compare noisy standalone-row propagation, and test constructive or global feasibility of remaining domains."
+}

@@ -1,0 +1,1295 @@
+{
+  "status": "passed",
+  "source_sha256": "d6babd7e7779066db14ea118a5692bf8bb2b4e58ce325664b65648570cccf8b7",
+  "inputs_sha256": {
+    "Pair_Arithmetic.json": "46cfba02bd286dace6e5fc712925a51d4ac0470e449d87493f4eec1bf23c5432",
+    "Pair_Candidate_Class.json": "959e92d1078b1fa12c1f31fa6d4b5f16d660c79a124e84730aee6c9e293b2ddb",
+    "Pair_Spectrum160.json": "0179918f9c6e5d7dc0b342c7c388e13d1ecc692ab5cb00d90fe40c17eb403633",
+    "Pair_Spectrum224.json": "ffe66e16f309cef2e7421748113a1d2e1c369333ae6bb2d95905664973e53b1e"
+  },
+  "no_spectral_observation_candidates": [
+    "A",
+    "B"
+  ],
+  "prior_coefficient_at_7_candidates": [
+    0,
+    4
+  ],
+  "coefficient_at_7_by_selected_field": {
+    "A": 4,
+    "B": 0
+  },
+  "results": [
+    {
+      "precision_bits": 160,
+      "grid_measurements": [
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "1",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "1",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "2",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "2",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "3",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "3",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "4",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "4",
+            "positive_zero_count": 2
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "5",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "5",
+            "positive_zero_count": 2
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "6",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "6",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "7",
+            "positive_zero_count": 4
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "7",
+            "positive_zero_count": 4
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "8",
+            "positive_zero_count": 5
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "8",
+            "positive_zero_count": 5
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "9",
+            "positive_zero_count": 7
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "9",
+            "positive_zero_count": 6
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "10",
+            "positive_zero_count": 7
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "10",
+            "positive_zero_count": 8
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "11",
+            "positive_zero_count": 9
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "11",
+            "positive_zero_count": 9
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "12",
+            "positive_zero_count": 11
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "12",
+            "positive_zero_count": 10
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "13",
+            "positive_zero_count": 12
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "13",
+            "positive_zero_count": 12
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "14",
+            "positive_zero_count": 13
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "14",
+            "positive_zero_count": 13
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "15",
+            "positive_zero_count": 15
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "15",
+            "positive_zero_count": 15
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "16",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "16",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "17",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "17",
+            "positive_zero_count": 18
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "18",
+            "positive_zero_count": 20
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "18",
+            "positive_zero_count": 19
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "19",
+            "positive_zero_count": 22
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "19",
+            "positive_zero_count": 21
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "20",
+            "positive_zero_count": 23
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "20",
+            "positive_zero_count": 22
+          },
+          "selected": [
+            "B"
+          ]
+        }
+      ],
+      "first_distinguishing_integer_height": 2,
+      "robust_gate": [
+        {
+          "radius": "0",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "0",
+              "minimum": 1,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "0",
+              "minimum": 0,
+              "maximum": 0,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            }
+          ]
+        },
+        {
+          "radius": "1/3",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "1/3",
+              "minimum": 1,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "1/3",
+              "minimum": 0,
+              "maximum": 0,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "-1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "-1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            }
+          ]
+        },
+        {
+          "radius": "1/2",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "1/2",
+              "minimum": 0,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "1/2",
+              "minimum": 0,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "-1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "-1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            }
+          ]
+        }
+      ],
+      "first_zero_gate_critical_radius": {
+        "radius_lower": "56368272064889225867861938416149990263897488609206222646203/158456325028528675187087900672000000000000000000000000000000",
+        "radius_upper": "56368272064889225867861938416466902913954545959580398447547/158456325028528675187087900672000000000000000000000000000000",
+        "threshold_lower": "184833307431996661922841053853831905680959825761741172846539/79228162514264337593543950336000000000000000000000000000000",
+        "threshold_upper": "184833307431996661922841053853990362005988354436928260747211/79228162514264337593543950336000000000000000000000000000000",
+        "scope": "Sharp supremum for separating the first-positive-zero pair by a single threshold under independent absolute displacements. No claim of optimality over all count gates or full spectral statistics."
+      }
+    },
+    {
+      "precision_bits": 224,
+      "grid_measurements": [
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "1",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "1",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "2",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "2",
+            "positive_zero_count": 0
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "3",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "3",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "4",
+            "positive_zero_count": 1
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "4",
+            "positive_zero_count": 2
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "5",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "5",
+            "positive_zero_count": 2
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "6",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "6",
+            "positive_zero_count": 3
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "7",
+            "positive_zero_count": 4
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "7",
+            "positive_zero_count": 4
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "8",
+            "positive_zero_count": 5
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "8",
+            "positive_zero_count": 5
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "9",
+            "positive_zero_count": 7
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "9",
+            "positive_zero_count": 6
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "10",
+            "positive_zero_count": 7
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "10",
+            "positive_zero_count": 8
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "11",
+            "positive_zero_count": 9
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "11",
+            "positive_zero_count": 9
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "12",
+            "positive_zero_count": 11
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "12",
+            "positive_zero_count": 10
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "13",
+            "positive_zero_count": 12
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "13",
+            "positive_zero_count": 12
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "14",
+            "positive_zero_count": 13
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "14",
+            "positive_zero_count": 13
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "15",
+            "positive_zero_count": 15
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "15",
+            "positive_zero_count": 15
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "16",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "16",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "17",
+            "positive_zero_count": 17
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "17",
+            "positive_zero_count": 18
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "18",
+            "positive_zero_count": 20
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "18",
+            "positive_zero_count": 19
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "19",
+            "positive_zero_count": 22
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "19",
+            "positive_zero_count": 21
+          },
+          "selected": [
+            "B"
+          ]
+        },
+        {
+          "held_out_field": "A",
+          "measurement": {
+            "height": "20",
+            "positive_zero_count": 23
+          },
+          "selected": [
+            "A"
+          ]
+        },
+        {
+          "held_out_field": "B",
+          "measurement": {
+            "height": "20",
+            "positive_zero_count": 22
+          },
+          "selected": [
+            "B"
+          ]
+        }
+      ],
+      "first_distinguishing_integer_height": 2,
+      "robust_gate": [
+        {
+          "radius": "0",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "0",
+              "minimum": 1,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "0",
+              "minimum": 0,
+              "maximum": 0,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "0",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            }
+          ]
+        },
+        {
+          "radius": "1/3",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "1/3",
+              "minimum": 1,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "1/3",
+              "minimum": 0,
+              "maximum": 0,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "-1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "-1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "1/3",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "B"
+              ]
+            }
+          ]
+        },
+        {
+          "radius": "1/2",
+          "templates": {
+            "A": {
+              "height": "7/3",
+              "radius": "1/2",
+              "minimum": 0,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            },
+            "B": {
+              "height": "7/3",
+              "radius": "1/2",
+              "minimum": 0,
+              "maximum": 1,
+              "scope": "Sufficient count enclosure for independent ordinate displacements bounded by the declared radius; unknown ordinates above the completeness cutoff cannot enter the gate."
+            }
+          },
+          "uniform_displacement_controls": [
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "-1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "A",
+              "uniform_displacement": "1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "-1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 1
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            },
+            {
+              "held_out_field": "B",
+              "uniform_displacement": "1/2",
+              "measurement": {
+                "height": "7/3",
+                "positive_zero_count": 0
+              },
+              "selected": [
+                "A",
+                "B"
+              ]
+            }
+          ]
+        }
+      ],
+      "first_zero_gate_critical_radius": {
+        "radius_lower": "56368272064889225867861938416149990263897488609206222646203/158456325028528675187087900672000000000000000000000000000000",
+        "radius_upper": "56368272064889225867861938416466902913954545959580398447547/158456325028528675187087900672000000000000000000000000000000",
+        "threshold_lower": "184833307431996661922841053853831905680959825761741172846539/79228162514264337593543950336000000000000000000000000000000",
+        "threshold_upper": "184833307431996661922841053853990362005988354436928260747211/79228162514264337593543950336000000000000000000000000000000",
+        "scope": "Sharp supremum for separating the first-positive-zero pair by a single threshold under independent absolute displacements. No claim of optimality over all count gates or full spectral statistics."
+      }
+    }
+  ],
+  "forbidden_label_control_rejected": true,
+  "incompatible_count_returns_empty": true,
+  "scope": "Closed-class discrimination after exact enumeration of the V4 prior. Only the aggregate count enters select(). Candidate spectral templates are certified separately. The measurement is assumed complete with the declared displacement bound; a bare count cannot itself establish completeness or validate arbitrary data."
+}

@@ -1,0 +1,31 @@
+# Larger uniqueness regions and two-sided feature-noise bounds — 14 September 2026
+
+**The certified 22-feature uniqueness radius grows from 1e-10 to 0.03.** More targeted stability estimates and actual inverse-root witnesses place the local ambiguity threshold between approximately 1.768500053e-10 and 2e-10 under one fixed observation contract. The upper/lower ratio is about 1.1309; the exact threshold remains open.
+
+The [proof and reproduction guide](../../../code/frontier_verification/WEIGHTED_FEATURE_README.md) gives the Taylor remainder, weighted maximum principle, componentwise stability and two-stage noise derivations. The [preceding checkpoint](../2026-09-14-aggregate-augmented-feature-delta/README.md) supplied joint-feature collisions and the original smaller uniqueness region.
+
+- [Results and continuation gates](Weighted_Feature_Summary.json).
+- Original [preconditioned Taylor exploration](Preconditioned_Taylor_Exploration.json), [weighted exploration](Weighted_Taylor_Exploration.json), and [independent candidate audit](Independent_Weighted_Candidate_Audit.json), including unsuccessful sufficient bounds.
+- [Weighted region and componentwise stability certificate](Weighted_Region_Certificate.json) and [independent real-polynomial/positive-series audit](Independent_Weighted_Region_Audit_v2.json).
+- [Feature-space proposals](Feature_Space_Proposals.json), [eight certified inverse roots](Feature_Space_Certificate.json), and [independent complex, source and arithmetic audit](Independent_Feature_Space_Audit.json).
+- [Endpoint reconstruction diagnosis](Serialized_Endpoint_Diagnosis.json) and [52 adversaries with exact Taylor/geometry controls](Adversary_Audit.json).
+- [Six compiled Lean lemmas](Lean_Check.json) and [sources/compiled artifact](Lean_Artifacts.zip).
+- [Primary source acquisition](Source_Acquisition.json), [inherited primary sources](Primary_Sources.json), [runtime](Runtime.json), and [inherited inputs](Inherited_Inputs.json).
+- [Fourteen execution receipts](Execution_Receipts.json), [full logs](Execution_Artifacts.zip), [preserved failure and correction](Development_Notes.json), [source inventory](Source_Inventory.json), [source snapshot](Source_Snapshot.zip), [manifest](Manifest.json), and [fresh recursive verification](Verification.json).
+- [All 117 research branches](Research_Queue.json) and the [448-event append-only ledger](Branch_Events.jsonl), retaining all 443 previous events byte for byte.
+
+The complete inherited class contains two quartic fields with discriminant 576, each with 22 positive source entries below 19.5. Select before independent root errors and preserve all entries. This pass fixes root error r=U-1e-8<L, uses the preceding ordered 22 finite kernels, and adds independent absolute feature errors. Source populations, finite moments and unknown tails are not interchanged.
+
+Order-6 Taylor bounds for the derivative retain cancellations after applying the rational preconditioner. Positive rational weights certify a uniform derivative defect below one half on standard coordinate cubes of radii 0.01 and 0.03. Weighted-norm reasoning does not change their geometry. All 12 preceding collision witnesses lie in the larger cube; 11 lie in the smaller cube. The resulting injectivity is local, with no large-cube fixed-point self-map or global theorem claimed.
+
+Exact componentwise supersolutions bound the critical inverse sensitivity by approximately 56.54509302 and 79.66539048 on the two cubes. Independent real derivative recurrences and a positive Neumann series with an exact tail support those bounds using a different construction. The source gap implies uniform field identification for feature error strictly below approximately 1.768500053e-10 on the smaller cube or 1.255250234e-10 on the larger cube.
+
+Eight exact inverse roots realize four signed feature target pairs around the common report Phi(c). Two pairs, at feature budgets 2.1e-10 and 2e-10, are source-feasible for both fields inside the smaller cube. Two lower-budget signed pairs are excluded there; other targets, directions and reports remain possible. The actual construction at 2e-10 bounds the restricted ambiguity threshold from above, while the uniform separation result bounds it from below. No global optimal threshold or arbitrary-data decoder is claimed.
+
+At the common noisy report, independent arithmetic confirms 456 fixed and 148 ambiguous entries among 604 tracked coefficients, using 1128 polynomial factorizations and 1208 comparisons. Below the uniform guarantee the field and tracked arithmetic vector are unique under the same premises. Inverting only the common report would miss the noisy possibilities: its inverse c fails exact source feasibility for both fields, while bounded-error inverse observations exist for both.
+
+The original independent region auditor falsely rejected a serialized bound after reconstructing an Arb ball. A controlled 1024-bit diagnosis records 108 reconstruction false rejections among 1936 comparisons and zero exact endpoint violations. A separate v2 auditor compares exact rational endpoints; no certificate bound was relaxed. The source, actual failure receipt and correction are preserved. Fourteen development commands contain 12 successes and two failures. The first full verifier also failed after passing a decoder record where the proposal generator expects its midpoint/preconditioner record. Its source and KeyError receipt remain preserved beside a separate v2 verifier; scientific certificates are unchanged.
+
+Fifty-two mutations and exact polynomial, geometry and serialization controls test the proof assumptions. Six Lean lemmas prove the weighted maximum principle, componentwise supersolution and source-gap/noise consequences. The full analytic, interval, modular and inherited field/spectral chain is not entirely formalized. No runtime version changed and no new source roots were computed.
+
+Next: tighten the local threshold, optimize feature directions and common reports, implement bounded-error inverse decoding, validate parameter families, and extend global regions or construct counterexamples. Natural operators, infinite arithmetic/real-part information, topology, physical acquisition models and private-input gates remain active across the wider ACS program. No global completion is claimed.

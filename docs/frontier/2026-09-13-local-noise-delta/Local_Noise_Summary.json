@@ -1,0 +1,6355 @@
+{
+  "recorded_utc": "2026-09-13T19:21:53.831020+00:00",
+  "assumption_profiles": {
+    "degree": {
+      "degree": 4,
+      "galois_extension": false,
+      "use_discriminant_to_label_ramified_primes": false
+    },
+    "degree_discriminant": {
+      "degree": 4,
+      "galois_extension": false,
+      "use_discriminant_to_label_ramified_primes": true
+    },
+    "galois": {
+      "degree": 4,
+      "galois_extension": true,
+      "use_discriminant_to_label_ramified_primes": false
+    },
+    "galois_discriminant": {
+      "degree": 4,
+      "galois_extension": true,
+      "use_discriminant_to_label_ramified_primes": true
+    }
+  },
+  "target_count": 91,
+  "coefficient_support": 604,
+  "quadratic_seed_unique_targets": 83,
+  "quadratic_seed_degree_only_unique_targets": 91,
+  "quadratic_seed_degree_only_minimum_observations": [
+    {
+      "column": 26,
+      "n": 64,
+      "answer": 0,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        2
+      ],
+      "witness_prime_powers": [
+        4
+      ],
+      "retained_model_ids": [
+        7
+      ],
+      "minimum_size_witness_sets": 1,
+      "subsets_checked_through_minimum_size": 13
+    },
+    {
+      "column": 31,
+      "n": 81,
+      "answer": 4,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        6
+      ],
+      "witness_prime_powers": [
+        9
+      ],
+      "retained_model_ids": [
+        7
+      ],
+      "minimum_size_witness_sets": 1,
+      "subsets_checked_through_minimum_size": 8
+    },
+    {
+      "column": 41,
+      "n": 125,
+      "answer": 1,
+      "minimum_observation_count": 2,
+      "witness_columns": [
+        3,
+        41
+      ],
+      "witness_prime_powers": [
+        5,
+        125
+      ],
+      "retained_model_ids": [
+        6,
+        10
+      ],
+      "minimum_size_witness_sets": 2,
+      "subsets_checked_through_minimum_size": 16
+    },
+    {
+      "column": 43,
+      "n": 128,
+      "answer": 0,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        0
+      ],
+      "witness_prime_powers": [
+        2
+      ],
+      "retained_model_ids": [
+        5,
+        7,
+        9
+      ],
+      "minimum_size_witness_sets": 4,
+      "subsets_checked_through_minimum_size": 13
+    },
+    {
+      "column": 67,
+      "n": 243,
+      "answer": 0,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        1
+      ],
+      "witness_prime_powers": [
+        3
+      ],
+      "retained_model_ids": [
+        5,
+        7,
+        9
+      ],
+      "minimum_size_witness_sets": 3,
+      "subsets_checked_through_minimum_size": 8
+    },
+    {
+      "column": 69,
+      "n": 256,
+      "answer": 4,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        2
+      ],
+      "witness_prime_powers": [
+        4
+      ],
+      "retained_model_ids": [
+        7
+      ],
+      "minimum_size_witness_sets": 2,
+      "subsets_checked_through_minimum_size": 13
+    },
+    {
+      "column": 85,
+      "n": 343,
+      "answer": 0,
+      "minimum_observation_count": 1,
+      "witness_columns": [
+        4
+      ],
+      "witness_prime_powers": [
+        7
+      ],
+      "retained_model_ids": [
+        5,
+        7,
+        9
+      ],
+      "minimum_size_witness_sets": 2,
+      "subsets_checked_through_minimum_size": 5
+    },
+    {
+      "column": 90,
+      "n": 361,
+      "answer": 4,
+      "minimum_observation_count": 2,
+      "witness_columns": [
+        11,
+        90
+      ],
+      "witness_prime_powers": [
+        19,
+        361
+      ],
+      "retained_model_ids": [
+        5
+      ],
+      "minimum_size_witness_sets": 1,
+      "subsets_checked_through_minimum_size": 4
+    }
+  ],
+  "original_target_primes": 72,
+  "original_unresolved_local_factors": 48,
+  "unresolved_local_models_with_discriminant": [
+    {
+      "prime": 23,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 29,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 37,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 43,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 47,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 53,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 59,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 67,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 73,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 79,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 83,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 89,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 97,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 103,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 107,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 109,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 113,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 127,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 137,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 139,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 149,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 157,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 163,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 167,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 173,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 179,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 193,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 197,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 199,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 223,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 227,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 229,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 233,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 239,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 257,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 263,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 269,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 277,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 283,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 293,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 307,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 313,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 317,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 337,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 347,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 349,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 353,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    },
+    {
+      "prime": 359,
+      "retained_model_ids": [
+        5,
+        7
+      ]
+    }
+  ],
+  "larger_radius_galois_discriminant_counts": {
+    "1e-2": 91,
+    "2e-2": 82,
+    "3e-2": 62
+  },
+  "all_case_comparisons": [
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 220,
+      "profile": "degree",
+      "seed": 47,
+      "local_only": 57,
+      "after_spectral_feedback": 60,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 220,
+      "profile": "degree_discriminant",
+      "seed": 47,
+      "local_only": 61,
+      "after_spectral_feedback": 65,
+      "unique_target_prime_local_models": 15
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 220,
+      "profile": "galois",
+      "seed": 47,
+      "local_only": 60,
+      "after_spectral_feedback": 64,
+      "unique_target_prime_local_models": 14
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 220,
+      "profile": "galois_discriminant",
+      "seed": 47,
+      "local_only": 82,
+      "after_spectral_feedback": 88,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 600,
+      "profile": "degree",
+      "seed": 65,
+      "local_only": 74,
+      "after_spectral_feedback": 75,
+      "unique_target_prime_local_models": 17
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 600,
+      "profile": "degree_discriminant",
+      "seed": 65,
+      "local_only": 76,
+      "after_spectral_feedback": 81,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 600,
+      "profile": "galois",
+      "seed": 65,
+      "local_only": 76,
+      "after_spectral_feedback": 81,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 600,
+      "profile": "galois_discriminant",
+      "seed": 65,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1000,
+      "profile": "degree",
+      "seed": 71,
+      "local_only": 80,
+      "after_spectral_feedback": 81,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1000,
+      "profile": "degree_discriminant",
+      "seed": 71,
+      "local_only": 84,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1000,
+      "profile": "galois",
+      "seed": 71,
+      "local_only": 84,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1000,
+      "profile": "galois_discriminant",
+      "seed": 71,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1500,
+      "profile": "degree",
+      "seed": 73,
+      "local_only": 82,
+      "after_spectral_feedback": 83,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1500,
+      "profile": "degree_discriminant",
+      "seed": 73,
+      "local_only": 86,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1500,
+      "profile": "galois",
+      "seed": 73,
+      "local_only": 85,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 1500,
+      "profile": "galois_discriminant",
+      "seed": 73,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 73,
+      "local_only": 82,
+      "after_spectral_feedback": 83,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 73,
+      "local_only": 86,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 73,
+      "local_only": 85,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "narrow_stationary",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 73,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 220,
+      "profile": "degree",
+      "seed": 31,
+      "local_only": 43,
+      "after_spectral_feedback": 46,
+      "unique_target_prime_local_models": 9
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 220,
+      "profile": "degree_discriminant",
+      "seed": 31,
+      "local_only": 47,
+      "after_spectral_feedback": 51,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 220,
+      "profile": "galois",
+      "seed": 31,
+      "local_only": 47,
+      "after_spectral_feedback": 51,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 220,
+      "profile": "galois_discriminant",
+      "seed": 31,
+      "local_only": 70,
+      "after_spectral_feedback": 75,
+      "unique_target_prime_local_models": 16
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 600,
+      "profile": "degree",
+      "seed": 38,
+      "local_only": 50,
+      "after_spectral_feedback": 53,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 600,
+      "profile": "degree_discriminant",
+      "seed": 38,
+      "local_only": 57,
+      "after_spectral_feedback": 60,
+      "unique_target_prime_local_models": 17
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 600,
+      "profile": "galois",
+      "seed": 38,
+      "local_only": 56,
+      "after_spectral_feedback": 59,
+      "unique_target_prime_local_models": 16
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 600,
+      "profile": "galois_discriminant",
+      "seed": 38,
+      "local_only": 84,
+      "after_spectral_feedback": 84,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1000,
+      "profile": "degree",
+      "seed": 38,
+      "local_only": 50,
+      "after_spectral_feedback": 53,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1000,
+      "profile": "degree_discriminant",
+      "seed": 38,
+      "local_only": 59,
+      "after_spectral_feedback": 67,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1000,
+      "profile": "galois",
+      "seed": 38,
+      "local_only": 58,
+      "after_spectral_feedback": 66,
+      "unique_target_prime_local_models": 18
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1000,
+      "profile": "galois_discriminant",
+      "seed": 38,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1500,
+      "profile": "degree",
+      "seed": 38,
+      "local_only": 50,
+      "after_spectral_feedback": 53,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1500,
+      "profile": "degree_discriminant",
+      "seed": 38,
+      "local_only": 60,
+      "after_spectral_feedback": 68,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1500,
+      "profile": "galois",
+      "seed": 38,
+      "local_only": 59,
+      "after_spectral_feedback": 67,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 1500,
+      "profile": "galois_discriminant",
+      "seed": 38,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 38,
+      "local_only": 50,
+      "after_spectral_feedback": 53,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 38,
+      "local_only": 60,
+      "after_spectral_feedback": 68,
+      "unique_target_prime_local_models": 20
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 38,
+      "local_only": 59,
+      "after_spectral_feedback": 67,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "1e-2",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 38,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 220,
+      "profile": "degree",
+      "seed": 17,
+      "local_only": 30,
+      "after_spectral_feedback": 31,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 220,
+      "profile": "degree_discriminant",
+      "seed": 17,
+      "local_only": 34,
+      "after_spectral_feedback": 34,
+      "unique_target_prime_local_models": 9
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 220,
+      "profile": "galois",
+      "seed": 17,
+      "local_only": 33,
+      "after_spectral_feedback": 33,
+      "unique_target_prime_local_models": 8
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 220,
+      "profile": "galois_discriminant",
+      "seed": 17,
+      "local_only": 64,
+      "after_spectral_feedback": 64,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 600,
+      "profile": "degree",
+      "seed": 17,
+      "local_only": 30,
+      "after_spectral_feedback": 31,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 600,
+      "profile": "degree_discriminant",
+      "seed": 17,
+      "local_only": 36,
+      "after_spectral_feedback": 36,
+      "unique_target_prime_local_models": 11
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 600,
+      "profile": "galois",
+      "seed": 17,
+      "local_only": 35,
+      "after_spectral_feedback": 35,
+      "unique_target_prime_local_models": 10
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 600,
+      "profile": "galois_discriminant",
+      "seed": 17,
+      "local_only": 74,
+      "after_spectral_feedback": 74,
+      "unique_target_prime_local_models": 16
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1000,
+      "profile": "degree",
+      "seed": 17,
+      "local_only": 30,
+      "after_spectral_feedback": 31,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1000,
+      "profile": "degree_discriminant",
+      "seed": 17,
+      "local_only": 36,
+      "after_spectral_feedback": 36,
+      "unique_target_prime_local_models": 11
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1000,
+      "profile": "galois",
+      "seed": 17,
+      "local_only": 35,
+      "after_spectral_feedback": 35,
+      "unique_target_prime_local_models": 10
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1000,
+      "profile": "galois_discriminant",
+      "seed": 17,
+      "local_only": 80,
+      "after_spectral_feedback": 80,
+      "unique_target_prime_local_models": 18
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1500,
+      "profile": "degree",
+      "seed": 17,
+      "local_only": 30,
+      "after_spectral_feedback": 31,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1500,
+      "profile": "degree_discriminant",
+      "seed": 17,
+      "local_only": 36,
+      "after_spectral_feedback": 36,
+      "unique_target_prime_local_models": 11
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1500,
+      "profile": "galois",
+      "seed": 17,
+      "local_only": 35,
+      "after_spectral_feedback": 35,
+      "unique_target_prime_local_models": 10
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 1500,
+      "profile": "galois_discriminant",
+      "seed": 17,
+      "local_only": 82,
+      "after_spectral_feedback": 82,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 17,
+      "local_only": 30,
+      "after_spectral_feedback": 31,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 17,
+      "local_only": 36,
+      "after_spectral_feedback": 36,
+      "unique_target_prime_local_models": 11
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 17,
+      "local_only": 35,
+      "after_spectral_feedback": 35,
+      "unique_target_prime_local_models": 10
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "2e-2",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 17,
+      "local_only": 82,
+      "after_spectral_feedback": 82,
+      "unique_target_prime_local_models": 19
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 220,
+      "profile": "degree",
+      "seed": 10,
+      "local_only": 22,
+      "after_spectral_feedback": 22,
+      "unique_target_prime_local_models": 3
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 220,
+      "profile": "degree_discriminant",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 220,
+      "profile": "galois",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 220,
+      "profile": "galois_discriminant",
+      "seed": 10,
+      "local_only": 56,
+      "after_spectral_feedback": 58,
+      "unique_target_prime_local_models": 11
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 600,
+      "profile": "degree",
+      "seed": 10,
+      "local_only": 22,
+      "after_spectral_feedback": 22,
+      "unique_target_prime_local_models": 3
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 600,
+      "profile": "degree_discriminant",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 600,
+      "profile": "galois",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 600,
+      "profile": "galois_discriminant",
+      "seed": 10,
+      "local_only": 60,
+      "after_spectral_feedback": 60,
+      "unique_target_prime_local_models": 12
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1000,
+      "profile": "degree",
+      "seed": 10,
+      "local_only": 22,
+      "after_spectral_feedback": 22,
+      "unique_target_prime_local_models": 3
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1000,
+      "profile": "degree_discriminant",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1000,
+      "profile": "galois",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1000,
+      "profile": "galois_discriminant",
+      "seed": 10,
+      "local_only": 61,
+      "after_spectral_feedback": 62,
+      "unique_target_prime_local_models": 13
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1500,
+      "profile": "degree",
+      "seed": 10,
+      "local_only": 22,
+      "after_spectral_feedback": 22,
+      "unique_target_prime_local_models": 3
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1500,
+      "profile": "degree_discriminant",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1500,
+      "profile": "galois",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 1500,
+      "profile": "galois_discriminant",
+      "seed": 10,
+      "local_only": 61,
+      "after_spectral_feedback": 62,
+      "unique_target_prime_local_models": 13
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 10,
+      "local_only": 22,
+      "after_spectral_feedback": 22,
+      "unique_target_prime_local_models": 3
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 10,
+      "local_only": 26,
+      "after_spectral_feedback": 26,
+      "unique_target_prime_local_models": 6
+    },
+    {
+      "label": "wide_stationary",
+      "radius": "3e-2",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 10,
+      "local_only": 61,
+      "after_spectral_feedback": 62,
+      "unique_target_prime_local_models": 13
+    },
+    {
+      "label": "shared",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 81,
+      "local_only": 89,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "shared",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 81,
+      "local_only": 90,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "shared",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 81,
+      "local_only": 89,
+      "after_spectral_feedback": 89,
+      "unique_target_prime_local_models": 23
+    },
+    {
+      "label": "shared",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 81,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "quadratic",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree",
+      "seed": 83,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "quadratic",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "degree_discriminant",
+      "seed": 83,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "quadratic",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois",
+      "seed": 83,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    },
+    {
+      "label": "quadratic",
+      "radius": "5e-3",
+      "height": 2000,
+      "profile": "galois_discriminant",
+      "seed": 83,
+      "local_only": 91,
+      "after_spectral_feedback": 91,
+      "unique_target_prime_local_models": 24
+    }
+  ],
+  "remaining_wider_targets": [
+    {
+      "radius": "1e-2",
+      "profile": "degree",
+      "domains": [
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "1e-2",
+      "profile": "degree_discriminant",
+      "domains": [
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "1e-2",
+      "profile": "galois",
+      "domains": [
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "1e-2",
+      "profile": "galois_discriminant",
+      "domains": []
+    },
+    {
+      "radius": "2e-2",
+      "profile": "degree",
+      "domains": [
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 61,
+          "prime": 61,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 71,
+          "prime": 71,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 101,
+          "prime": 101,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 125,
+          "prime": 5,
+          "power": 3,
+          "candidates": [
+            1,
+            4
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "2e-2",
+      "profile": "degree_discriminant",
+      "domains": [
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "2e-2",
+      "profile": "galois",
+      "domains": [
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "2e-2",
+      "profile": "galois_discriminant",
+      "domains": [
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "3e-2",
+      "profile": "degree",
+      "domains": [
+        {
+          "n": 25,
+          "prime": 5,
+          "power": 2,
+          "candidates": [
+            1,
+            3
+          ]
+        },
+        {
+          "n": 29,
+          "prime": 29,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 31,
+          "prime": 31,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 37,
+          "prime": 37,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 41,
+          "prime": 41,
+          "power": 1,
+          "candidates": [
+            3,
+            4
+          ]
+        },
+        {
+          "n": 43,
+          "prime": 43,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 47,
+          "prime": 47,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 49,
+          "prime": 7,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 53,
+          "prime": 53,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 61,
+          "prime": 61,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 71,
+          "prime": 71,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 101,
+          "prime": 101,
+          "power": 1,
+          "candidates": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 125,
+          "prime": 5,
+          "power": 3,
+          "candidates": [
+            1,
+            4
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "3e-2",
+      "profile": "degree_discriminant",
+      "domains": [
+        {
+          "n": 25,
+          "prime": 5,
+          "power": 2,
+          "candidates": [
+            1,
+            3
+          ]
+        },
+        {
+          "n": 29,
+          "prime": 29,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 37,
+          "prime": 37,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 43,
+          "prime": 43,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 47,
+          "prime": 47,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 53,
+          "prime": 53,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 61,
+          "prime": 61,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 71,
+          "prime": 71,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 101,
+          "prime": 101,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "3e-2",
+      "profile": "galois",
+      "domains": [
+        {
+          "n": 29,
+          "prime": 29,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 37,
+          "prime": 37,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 43,
+          "prime": 43,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 47,
+          "prime": 47,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 49,
+          "prime": 7,
+          "power": 2,
+          "candidates": [
+            0,
+            2
+          ]
+        },
+        {
+          "n": 53,
+          "prime": 53,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 59,
+          "prime": 59,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 61,
+          "prime": 61,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 67,
+          "prime": 67,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 71,
+          "prime": 71,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 73,
+          "prime": 73,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 79,
+          "prime": 79,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 83,
+          "prime": 83,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 89,
+          "prime": 89,
+          "power": 1,
+          "candidates": [
+            0,
+            1
+          ]
+        },
+        {
+          "n": 97,
+          "prime": 97,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 101,
+          "prime": 101,
+          "power": 1,
+          "candidates": [
+            2,
+            4
+          ]
+        },
+        {
+          "n": 103,
+          "prime": 103,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 107,
+          "prime": 107,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 109,
+          "prime": 109,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 113,
+          "prime": 113,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 127,
+          "prime": 127,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 131,
+          "prime": 131,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 137,
+          "prime": 137,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 139,
+          "prime": 139,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 149,
+          "prime": 149,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 151,
+          "prime": 151,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 157,
+          "prime": 157,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 163,
+          "prime": 163,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 167,
+          "prime": 167,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 173,
+          "prime": 173,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 197,
+          "prime": 197,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 199,
+          "prime": 199,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 211,
+          "prime": 211,
+          "power": 1,
+          "candidates": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 223,
+          "prime": 223,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 227,
+          "prime": 227,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 229,
+          "prime": 229,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "radius": "3e-2",
+      "profile": "galois_discriminant",
+      "domains": [
+        {
+          "n": 169,
+          "prime": 13,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 179,
+          "prime": 179,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 181,
+          "prime": 181,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 191,
+          "prime": 191,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 193,
+          "prime": 193,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 233,
+          "prime": 233,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 239,
+          "prime": 239,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 241,
+          "prime": 241,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 251,
+          "prime": 251,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 257,
+          "prime": 257,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 263,
+          "prime": 263,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 269,
+          "prime": 269,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 271,
+          "prime": 271,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 277,
+          "prime": 277,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 281,
+          "prime": 281,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 283,
+          "prime": 283,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 289,
+          "prime": 17,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 293,
+          "prime": 293,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 307,
+          "prime": 307,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 311,
+          "prime": 311,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 313,
+          "prime": 313,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 317,
+          "prime": 317,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 331,
+          "prime": 331,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 337,
+          "prime": 337,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 347,
+          "prime": 347,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 349,
+          "prime": 349,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 353,
+          "prime": 353,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 359,
+          "prime": 359,
+          "power": 1,
+          "candidates": [
+            0,
+            4
+          ]
+        },
+        {
+          "n": 361,
+          "prime": 19,
+          "power": 2,
+          "candidates": [
+            0,
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "wide_exclusion_replays": 10592,
+  "strict_phase_brackets": 560440,
+  "independent_extrema_sums": 12,
+  "local_exclusion_replays": 133128,
+  "spectral_feedback_exclusion_replays": 598,
+  "minimum_observation_certificates": 64,
+  "largest_exact_common_denominator_bits": 422955,
+  "scope": "Assumptions are explicit and each profile starts independently from its declared domains. All 91 coefficients at radius 0.005 follow from the quadratic seed and general degree-four local relations. The radius 0.01 result adds Galois structure and local use of the discriminant. Neither result determines the original 48 ambiguous local factors or proves surviving domains jointly feasible."
+}

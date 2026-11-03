@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-09-13T23:30:30.399345+00:00",
+  "new_downloads": 0,
+  "inherited_record": "docs/frontier/2026-09-13-aggregate-delta/Primary_Sources.json",
+  "inherited_record_sha256": "d35199c6a3b501ca80c7a64e1ed7f2f47bf4bf040cc460f9d99f48e5a20cef8b",
+  "sources": [
+    {
+      "filename": "Belabas_Friedman_1305.0035.pdf",
+      "url": "https://arxiv.org/pdf/1305.0035",
+      "retrieved_utc": "2026-09-13T15:21:18.391321+00:00",
+      "bytes": 215404,
+      "sha256": "9a22c52fdd7dfabcb1eed3405d5d914f4c305de3faafc0b1edbeb7daa523b244",
+      "one_based_pdf_page": 3,
+      "rendered_page_sha256": "ac34cea45b13144ac298f593427b624d3360a39c5884a0220b7882dfc8095493",
+      "locator": "Section 2, equations (1)-(2), printed/PDF page 3",
+      "use": "General explicit formula, degree/signature normalization and complex zero parameters.",
+      "rendered_page_visually_inspected": true
+    },
+    {
+      "filename": "Grenie_Molteni_1407.1375.pdf",
+      "url": "https://arxiv.org/pdf/1407.1375",
+      "retrieved_utc": "2026-09-13T15:21:18.646757+00:00",
+      "bytes": 257457,
+      "sha256": "ebeff6dc3e65d3b47b8b10ce6175fb030f5faf61e58fb9997621cf9a51a25858",
+      "one_based_pdf_page": 4,
+      "rendered_page_sha256": "6ba9bd77ff64411261307735b19e0bb9c816da0ad021e23286668108b860eca4",
+      "locator": "Section 2, equations (2.1)-(2.7), printed/PDF page 4",
+      "use": "Coefficient bound and unconditional preliminary logarithmic-derivative/zero-moment identities; later GRH estimates are not used.",
+      "rendered_page_visually_inspected": true
+    }
+  ],
+  "scope": "Previously verified explicit-formula, coefficient and moment references remain inherited. Interval containment and universal-predicate transfer are derived directly and checked in Lean. No new page inspection or download is claimed."
+}

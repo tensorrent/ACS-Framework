@@ -1,0 +1,79 @@
+{
+  "recorded_utc": "2026-09-14T01:20:31.612295+00:00",
+  "result": "Degree four, signature (0,2) and absolute field discriminant 576 imply V4 and exactly two fields. A certified distinguishing aggregate zero count selects the field and its Euler coefficient formula; all 604 tracked coefficients are checked independently.",
+  "metadata_classifier_input": [
+    "degree four",
+    "absolute field discriminant 576",
+    "zero real places",
+    "two complex places"
+  ],
+  "metadata_classifier_excludes": [
+    "supplied Galois-group label",
+    "candidate catalogue",
+    "defining polynomial",
+    "spectrum",
+    "arithmetic coefficient seed"
+  ],
+  "count_decoder_input": "Derived complete field class, certified quadratic-factor and zeta root intervals through height 20, and an observation height/count with an externally justified completeness and error contract. The selector receives no label or individual ordinate.",
+  "exact_count_gate": "The complete positive-zero count through height 20 is 23 for A and 22 for B.",
+  "robust_count_gate": "The positive-zero count below 7/3 distinguishes the two fields for independent ordinate displacements of absolute size at most 1/3. Completeness through 20 prevents omitted higher roots entering this interior gate.",
+  "negative_control": "At radius 1/2 this count statistic is ambiguous: each field admits counts zero and one, with explicit uniform-displacement witnesses. This does not prove ambiguity of full spectra.",
+  "prior_information": "Metadata alone fixes 456/604 coefficients and 12/17 targets; the count distinguishes the remaining 148 coefficients and target indices 3,7,19,27,31.",
+  "new_roots_computed": 0,
+  "new_measurement_rows": 0,
+  "tracked_coefficients": 604,
+  "target_count": 17,
+  "derived_results": {
+    "Galois_group_derived": "V4",
+    "complete_quartic_candidate_count": 2,
+    "candidate_quadratic_discriminants": [
+      [
+        -24,
+        -3,
+        8
+      ],
+      [
+        -8,
+        -3,
+        24
+      ]
+    ],
+    "exhausted_A4_subsets": 2048,
+    "sign_functions_tested": 256,
+    "quadratic_characters": 8,
+    "character_planes": 7,
+    "actual_A4_control_discriminants": [
+      3136,
+      5184
+    ],
+    "projective_maximality_checks": 470,
+    "nonzero_residue_cosets_covered": 2510,
+    "count_decoding_cases": 20,
+    "uniquely_decoded_cases": 16,
+    "metadata_only_unique_coefficients": 456,
+    "coefficients_resolved_by_distinguishing_count": 148,
+    "differing_targets": [
+      3,
+      7,
+      19,
+      27,
+      31
+    ],
+    "independent_polynomial_factorizations": 1128,
+    "coefficient_comparisons": 1208,
+    "exact_complete_T20_counts": [
+      23,
+      22
+    ],
+    "robust_count_gate": {
+      "height": "7/3",
+      "ordinate_radius": "1/3",
+      "all_604_coefficients_determined": true
+    },
+    "half_radius_ambiguity_controls": 8,
+    "actual_component_mutations_rejected": 13
+  },
+  "number_theoretic_proof_formalized_in_Lean": false,
+  "scope": "The complete classification concerns only fields with the stated metadata. General ramification and discriminant arguments are source-backed written mathematics. Independent finite enumerations, actual maximal-order controls and exact arithmetic audits check their implementations and finite components, not the full theorem in Lean.",
+  "next_gate": "Construct actual-field benchmarks matching degree, signature, discriminant and finite zero counts, or state explicit restrictions on prior information and decoder. Preserve earlier restricted Gaussian recovery results without interpreting their sufficient radii as optimal information limits."
+}

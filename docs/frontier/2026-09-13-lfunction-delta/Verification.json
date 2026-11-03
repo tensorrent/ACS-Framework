@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-13T14:24:27.293753+00:00",
+  "scope": "Archived identities and exact transcript consistency; no L-function reevaluation.",
+  "preceding_checkpoint_integrity": "passed",
+  "manifest_files": 25,
+  "distinct_certified_zeros": 794,
+  "characters": 7,
+  "original_contour_segments": 193811,
+  "replay_contour_segments": 290145,
+  "supplied_ordinates_audited": 654,
+  "outside_displayed_rounding_cells": 352,
+  "missing_mod7_ordinates": 3,
+  "independent_mpmath_roots": 14,
+  "ledger_events": 341,
+  "preserved_event_prefix": 335,
+  "research_branches": 115,
+  "ledger_head_sha256": "3ed874f0c310362d8d94078e8ca64e0ecc441da89646222b612adae68953a1b5",
+  "local_links": 31
+}

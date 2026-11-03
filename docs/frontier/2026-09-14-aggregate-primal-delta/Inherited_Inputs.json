@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-09-14T00:30:46.895728+00:00",
+  "files_sha256": {
+    "docs/frontier/2026-09-13-aggregate-delta/Aggregate_Inputs.zip": "76ce78bfbd5757bbb66faf6e01ea6b1b1453b94c249ba4ee8898555e685b0b09",
+    "docs/frontier/2026-09-13-aggregate-delta/Measurements_Recovery.zip": "fdec85cf88d86ba5782d6347861a7d95fa6253a1cee09c831ea84aadd4434bc1",
+    "docs/frontier/2026-09-13-aggregate-delta/Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "docs/frontier/2026-09-13-aggregate-delta/Input_Provenance.json": "acf6c62260582724441d12b5817fbcfbe9d6317fdd86dd3926c7faea2bc8cb42",
+    "docs/frontier/2026-09-13-aggregate-delta/Primary_Sources.json": "d35199c6a3b501ca80c7a64e1ed7f2f47bf4bf040cc460f9d99f48e5a20cef8b",
+    "docs/frontier/2026-09-13-aggregate-nested-delta/Nested_Feedback.zip": "847d47122af80a9e733bcd16608ba1a577b5676540d6fd0a67608b2ba109b2dc",
+    "docs/frontier/2026-09-13-aggregate-nested-delta/Nested_Closure.json": "32efe8f9c44bd2a8119b501e29097f51564bde1376a6765994cb088d06c9adfe",
+    "docs/frontier/2026-09-13-aggregate-nested-delta/Manifest.json": "b5b56551d754bc9ec20c6f7aa4080a042cbc2c5625c40f73bc105f63f4a47286",
+    "docs/frontier/2026-09-13-aggregate-nested-delta/Verification.json": "6cc0410bfeca5916780beea2ae2eea889e75c0455bb2653a439735f62488755e",
+    "docs/frontier/2026-09-13-aggregate-adaptive-delta/Adaptive_Feedback.zip": "e38ddc8fc0f44f93645cb6110b6295a6b8b99557ad86c5d364d0226ee9bd65dc",
+    "docs/frontier/2026-09-13-aggregate-optimized-delta/Proposals.json": "bc2124199dac798e7d08aa0e73691a1c7dfdf1ca1b574759d3a8390edc8c7ed5",
+    "docs/frontier/2026-09-13-aggregate-moment-delta/Moment_Proposals.json": "0fce20097d84f57f5d34a5f4fc579c5d9e23706ce56c523713cc97d07d5b6ebd"
+  },
+  "scope": "Old vectors supply directions only; fresh uncertainty budgets are recalculated. Prior same-radius domains retain recursively checked numerical and local proofs. Baseline explicit-formula sources and input provenance remain inherited."
+}

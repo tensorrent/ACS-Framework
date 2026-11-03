@@ -1,0 +1,111 @@
+{
+  "recorded_utc": "2026-09-13T15:04:17.026851+00:00",
+  "baseline_commit": "3a1d8fbe5c6da7679be62b411a474aa535d44006",
+  "scope": "Immutable checkpoint artifacts and instruments; live application sources are bound through the before/after archive.",
+  "files": {
+    "docs/frontier/2026-09-13-dedekind-delta/Branch_Events.jsonl": {
+      "bytes": 335828,
+      "sha256": "c8e07bf7472e7d3fc7705900c38e5cbb52c09b18ff3b01f8a8681d5c21bf8fe1"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Euler_Audit.json": {
+      "bytes": 37416,
+      "sha256": "a78f4d89864bd32044a72369b86052e36726b625ae8939bdc2df8c0623d8d14f"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Execution_Artifacts.zip": {
+      "bytes": 848041,
+      "sha256": "e569823a058cff64495d6449d0be69be5d478e489842addd7ecf1355ec6ca74a"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Execution_Receipts.json": {
+      "bytes": 13198,
+      "sha256": "e77c02ea19c3e6d5724e7f53322e57252a7d9874eab2d765430779d38c63da12"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Factor_Certificates.zip": {
+      "bytes": 7840344,
+      "sha256": "0d68e07973176ba48ecab0f1316046415889792104077fce5e5799b1c45a7b16"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Finite_Witness_Audit.json": {
+      "bytes": 2443109,
+      "sha256": "48da43becbe4fdce6dfdd7aeb598fc2bd3154676a2629020cd6c4a24b644d6dd"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Historical_Input_Gates.json": {
+      "bytes": 869,
+      "sha256": "ab414d0a9e3c1ed27c058a758ddb543220ad128e0e6c28db5bba9bb1034e3b3d"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Independent_Root_Audit.json": {
+      "bytes": 53221,
+      "sha256": "a46e741e7c212b99a3554bcba1aeacfdd72620c48d0d6f61ae66abd2e8cf5ece"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Primary_Sources.json": {
+      "bytes": 1749,
+      "sha256": "d8d3d5e08f56c892d9790ea0224b0c9aa6de62998fdc2fd008c93a5562ad75b1"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/README.md": {
+      "bytes": 8676,
+      "sha256": "f9172a259a9a9ed3f0031f732be95d7b18c4d95b7c64e10c2b0feb86454ba0e7"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Research_Queue.json": {
+      "bytes": 185854,
+      "sha256": "cbd4eac2336e383fb72f291843f8c2e7636c9fb91251e02ea34edb26930b40f8"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Runtime.json": {
+      "bytes": 227,
+      "sha256": "c1d52609513ff7fded75840c1aebada84e34f5fb8eaed9f25dfe20873e5a44af"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Scope_Corrections.json": {
+      "bytes": 1646,
+      "sha256": "56d8d0b3ae06784b4eed0306bf6780bfb5f18cfa75c26cf573ffb2b2029c6441"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Source_Changes.json": {
+      "bytes": 4074,
+      "sha256": "5d807ce501664c50dbe2edc999defe0a36474d31b73bc3aaf9bcc4255955e36f"
+    },
+    "docs/frontier/2026-09-13-dedekind-delta/Source_Snapshot.zip": {
+      "bytes": 101163,
+      "sha256": "2b5478513456cdf84c6dc73141bd9820b9aa84ca0f6b1b8bc9409d0e7f70faf7"
+    },
+    "code/frontier_verification/DEDEKIND_README.md": {
+      "bytes": 6774,
+      "sha256": "09fa8c2d586a494ddfc962b8391101801ba82ac8c48defa1178f4d6fc579291e"
+    },
+    "code/frontier_verification/dedekind_euler_audit.py": {
+      "bytes": 5153,
+      "sha256": "15acb9ba3c3e5815875924bfae73690d24a640fa154a53355a2825bb3ca2fe61"
+    },
+    "code/frontier_verification/dedekind_export.py": {
+      "bytes": 2394,
+      "sha256": "2c795a495406d4f16fddcd1026c60cec6d8fdd1348a9102f88574ab754420898"
+    },
+    "code/frontier_verification/dedekind_factor_certificate.py": {
+      "bytes": 6133,
+      "sha256": "ee3708c7470eba2ab41511ee54e4a1333c24ae9f48aa4fbc34ba795f035a051a"
+    },
+    "code/frontier_verification/dedekind_independent_roots.py": {
+      "bytes": 3212,
+      "sha256": "7ad3a86d172e40af4aa12258c4283461e273460f63d7306d8d5e52fb3eda9b60"
+    },
+    "code/frontier_verification/dedekind_inputs.py": {
+      "bytes": 2666,
+      "sha256": "b9ac10976dc202085b8471945cacbc41b828628b011e35cfe4964d920b080701"
+    },
+    "code/frontier_verification/dedekind_witness_audit.py": {
+      "bytes": 8851,
+      "sha256": "fb95a264e0b2e1bb573c842ab8604d5528c3735ac45be52f30c8cee488f53135"
+    },
+    "code/frontier_verification/verify_dedekind_delta.py": {
+      "bytes": 12804,
+      "sha256": "5e7a9ca0790de9805c9fb690a0b108ff4c92875be8e01c73506292ad55251ad6"
+    },
+    "code/frontier_verification/lfunction_zero_certificate.py": {
+      "bytes": 8603,
+      "sha256": "02e90ef9b0fa4b58ef466dab821dd07b0be40847204654cc1bab6fd9f0e997cd"
+    },
+    "code/frontier_verification/verify_lfunction_delta.py": {
+      "bytes": 13787,
+      "sha256": "0479ac7c149a4f067b244eac912b72d2452db03012e0620ba9db4192c3e95b88"
+    },
+    "code/frontier_verification/source_requirements.txt": {
+      "bytes": 89,
+      "sha256": "d6738fcf8cb80aeeb31667852c155316790a9255371c857e990fa93b180b7c3f"
+    }
+  }
+}

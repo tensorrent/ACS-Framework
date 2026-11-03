@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-09-13T16:57:10.510651+00:00",
+  "recorded_commands": 11,
+  "unsuccessful_recorded_commands": 0,
+  "retained_noncertified_trials": "Exact_Audit.json retains seven attempted target pairs whose nuisance coordinates were held at independent arithmetic values. Only the correct target pair passed this restricted construction; this did not establish infeasibility. The later MILP search found two strict feasible models after nuisance coordinates were allowed to vary.",
+  "precision_method": "Exact dyadic midpoint/radius serialization is used for critical intervals. Independent replay rounds outward to 2^-192 and uses integer arithmetic.",
+  "solver_scope": "HiGHS results propose rational multipliers or integer vectors. Strict interval or integer checks decide every published bound, exclusion and feasible witness.",
+  "noise_scope": "The added-radius test widens already certified root enclosures, preserving cutoff membership. It uses a conservative global derivative bound and recomputes the zero moment with enlarged intervals; it does not model zeros of a perturbed field."
+}

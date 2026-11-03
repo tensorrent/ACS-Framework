@@ -1,0 +1,109 @@
+{
+  "marginal-duals224": {
+    "started_utc": "2026-09-13T17:34:20.967678+00:00",
+    "elapsed_seconds": 2.798694,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_ordinate.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-uncertainty-delta",
+      "--precision",
+      "224",
+      "--top",
+      "2000",
+      "--delta",
+      "5e-3",
+      "--modes",
+      "marginal",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/shared-audit/Marginal_224.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_ordinate.py": "c827c04e09e65c6eb5e6c0a64c72ae693522e32c256ce8904acd81f5f973786e"
+    },
+    "stdout_sha256": "61be1fe1a28dc0d8a37cdae6e3b9c8ba2e507c6182b4abd6703019dc8763b8dd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-exact-audit": {
+    "started_utc": "2026-09-13T17:46:35.564365+00:00",
+    "elapsed_seconds": 82.82843,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_audit.py",
+      "--directory",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/shared-audit",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-uncertainty-delta",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/shared-audit/Shared_Audit.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_audit.py": "3251308058a7b147d055817b7eaac0073bf61803b60cb5e7ae365b661569cf0d"
+    },
+    "stdout_sha256": "17a7757c0b22f9d6ff13a05fcd601aad4fdfa8c52402dc7d59e5022e45b40d51",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-probe160": {
+    "started_utc": "2026-09-13T17:34:22.122605+00:00",
+    "elapsed_seconds": 216.822365,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_ordinate.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-uncertainty-delta",
+      "--precision",
+      "160",
+      "--top",
+      "2000",
+      "--delta",
+      "5e-3",
+      "--modes",
+      "shared",
+      "--targets",
+      "32",
+      "361",
+      "--max-rounds",
+      "1",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/shared-audit/Shared_Probe160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_ordinate.py": "c827c04e09e65c6eb5e6c0a64c72ae693522e32c256ce8904acd81f5f973786e"
+    },
+    "stdout_sha256": "724c0da83f677c4db8299356c9749f8d653f3ef96b13a9767d8f519b6e98ff3e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shared-recovery160": {
+    "started_utc": "2026-09-13T17:39:41.411317+00:00",
+    "elapsed_seconds": 177.481623,
+    "cwd": "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo",
+    "command": [
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/.venv/bin/python",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_recovery.py",
+      "--prior",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/docs/frontier/2026-09-13-uncertainty-delta",
+      "--precision",
+      "160",
+      "--time-limit",
+      "15",
+      "--output",
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-research/shared-audit/Shared_160.json"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "input_sources_sha256": {
+      "/Users/coo-koba42/Documents/Codex/2026-09-12/github-plugin-github-openai-curated-remote/work/acs-repo/code/frontier_verification/dedekind_shared_recovery.py": "eaf75d498ead142be7d85d82a042f88dde7211d06ccca96d6bf3a73df42e7e4f"
+    },
+    "stdout_sha256": "808d76731c9b5d07ff63229d2fbc65ebc9d39f126cac38189151f0c7e51fccfe",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

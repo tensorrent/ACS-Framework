@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-09-13T19:52:44.971299+00:00",
+  "recorded_commands": 5,
+  "successful_commands": 4,
+  "failed_commands": 1,
+  "failure": "The first urllib download received HTTP 406. Its exact source and traceback are retained. Ordinary curl retrieved all six public PDFs successfully without changing authentication or circumventing an access gate.",
+  "web_limitations": "The LMFDB field page displayed a reCAPTCHA, so no database verification is claimed. Web PDF screenshot calls were unavailable. Local Poppler renders were inspected for the Minkowski bound, tame orbit formula and independent published uniqueness statement.",
+  "logical_audit": "The proof eliminates D4 by a quadratic unramified quotient and S4 by a cubic discriminant-five subfield; it then identifies the cyclic quartic through a compositum. It does not assume inertia normal in S4, linear disjointness of quartics, a Galois property of the input field, or correctness of a solver.",
+  "independence": "Generator-closure enumeration is checked by exhaustive subsets. Perfect matchings are checked by cosets. Cyclotomic residue orders are checked by finite-field polynomial factorization, and discriminants by trace Gram determinants. Symbolic factorization and irreducibility checks share SymPy. The number-field premises are cited and reviewed but not formally mechanized.",
+  "freeze_boundary": "The prior-only producer completed before the independent audit read the old arithmetic vector and local ambiguities. Recorded mathematical instruments were not subsequently modified. An initial package verifier compared Python tuples against JSON lists; its source and failure are retained, and the verifier now compares canonical serialization.",
+  "history_policy": "All earlier dated packages and pinned instruments remain byte-identical. Preserve 116 branches and the 373-event prefix, add R15 and five events. The ongoing goal remains active."
+}

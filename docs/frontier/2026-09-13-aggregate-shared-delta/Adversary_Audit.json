@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "source_sha256": "ed90f401d97bd599be1d9ab493901b8657a23f5baf7cefb66a3991b1c529954e",
+  "inputs_sha256": {
+    "Shared320.json": "8fe40cd46c5698be5a6e10d836b22aca7bdde03de7a83d46c99d2e90345e87d5",
+    "Local224.json": "0dee64866a3f351e80d80829def7fdbcf7bf3d02ec4b6d432d0bba8e6a7a918f",
+    "Measurements224.json": "7774a247329fd39d54cd668a38fb932ee5a2428caaf4fc15fcf2f2fc090e0d12",
+    "Integer_Audit.json": "50cb787b8d8b5d5e3d8141146163adf61a59be99744f0205b5febb762d484e52",
+    "S1_224.json": "525c6d45ac6f398c658dd38fc5cb80f64fb774469a508419351d93bdeec28eaa",
+    "S2_224.json": "0f3bd29eee5e168c38a287ece2aa838a11a2dd78189de037349f7ea0a3921f77"
+  },
+  "actual_component_mutations_rejected": 10,
+  "controls": [
+    {
+      "name": "reverse_one_signed_multiplier",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The signed row coefficient must equal lambda_upper minus lambda_lower.",
+      "original_component_sha256": "61b39533455e84990a6f67492fdc5ef39895131daa70cc1b132907d55591e88a",
+      "mutated_component_sha256": "8222a0bc7aca61e5919e8582a8cdc8284574238fe29b4198f0daf255a6275d1b"
+    },
+    {
+      "name": "omit_unknown_zero_tail",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "A fresh moment and nonnegative sigma-weighted tail remain necessary after finite-root cancellation.",
+      "original_component_sha256": "309ab25edc3b112d568d6181d21c3b47eaab4491837cdce71513953db524fb77",
+      "mutated_component_sha256": "3530ca8181fa657c5182c2834c37150252c8982d0c919a35308c256fdc5ceb78"
+    },
+    {
+      "name": "drop_one_finite_root",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Finite root count, multiplicity indices and all widened intervals must match the inherited population.",
+      "original_component_sha256": "e5e0029fde73c176ddd6dee95ea5a2e2e12f50cc4713d073b88d6c9d124e3e02",
+      "mutated_component_sha256": "d12370dc83ade42f47b3564c8d7574b9e399e5acfa26c8f77c13ac9d09fd467b"
+    },
+    {
+      "name": "drop_one_cover_leaf",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Consecutive rational leaf endpoints must cover the entire widened root interval without a gap.",
+      "original_component_sha256": "fc267f3225ae94097c0acd504cf06380f35f6e690407a418e7b8be9b06c1e07f",
+      "mutated_component_sha256": "ab9dc98033bbfe50aa5bfbbbe2bb5161ee769e1d0171161e6fcf33dd40ee2382"
+    },
+    {
+      "name": "forge_zero_derivative_enclosure",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Complex-exponential evaluation at the actual leaf midpoint must lie in the submitted derivative enclosure.",
+      "original_component_sha256": "e7c5e01f9450bf80ec706d9b0f134153a2c2c3b1a8a81b1c9df03e5284ceba51",
+      "mutated_component_sha256": "b54306e1181e14438a638813caf9d5f51b759689981b1b83fe959d91527426ba"
+    },
+    {
+      "name": "omit_box_residual_support",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "With no multipliers, the positive coefficient objective still has box support four; the zero certificate is invalid.",
+      "original_component_sha256": "1fbbec856866a7d9f17819b52bda6917e738e667cdc4d4688df3b86f4f7d8cd7",
+      "mutated_component_sha256": "48b1f166b5083c67f0cbdf47dc07639f45ebc6deb8e189d8121c9e2e69e34894"
+    },
+    {
+      "name": "drop_one_generic_local_model",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "Independent integer partitions of degree four and divisor pairs must reproduce the complete eleven-model catalogue.",
+      "original_component_sha256": "cbcf0d7f111da676835aebe2c8f5ef12df917687d196b94882693ac2e998a46a",
+      "mutated_component_sha256": "6c01cb577401e9604426bc07412f1dd0ba13b089711a164b5e51a44f913ccd6a"
+    },
+    {
+      "name": "admit_ramified_model_at_unramified_prime",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "At prime 5, which does not divide 576, all ramification indices must be one; the inserted model otherwise fits input coefficient domains.",
+      "original_component_sha256": "164e9f16094acf39ffb4e3f6217edbfd3d503aff975fb64795141cdb3058d6cd",
+      "mutated_component_sha256": "66ef5876331d0c3741e477ba72feaf18edb4fa45039976eee085074f1ccf0040"
+    },
+    {
+      "name": "eliminate_held_out_true_coefficient",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The exact integer strict-gap predicate must reject elimination of the independently established true coefficient.",
+      "original_component_sha256": "07a6a0ee55652b8341da667a2d0ed6587b05aacefde491d20b1fc85a284d57a6",
+      "mutated_component_sha256": "e40c385da039957443c24aa3ea40fe157070f79b68e7eeee773958d6f32359bf"
+    },
+    {
+      "name": "discard_local_prerequisites_for_spectral_step",
+      "baseline_passed": true,
+      "mutation_rejected": true,
+      "predicate": "The recorded new spectral exclusion needs the preceding local-domain reductions; reverting to baseline domains destroys its strict gap.",
+      "original_component_sha256": "97cb63c2a9a65bebc71b960447beaa812fa456c88fc337b5bb63ae8c6797c5fb",
+      "mutated_component_sha256": "f51561d1f06cad338eeb9c33742740140ffb0184a981276777af1b1d19268bda"
+    }
+  ],
+  "scope": "Each control alters an actual proof component, first passes its intact component through a semantic predicate, and then requires rejection of the mutation. These targeted predicates supplement the full independent audit; they are not exhaustive fuzzing or a claim that every mutation changes a final recovered coefficient."
+}
